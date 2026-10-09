@@ -7,6 +7,8 @@
 
 from datetime import datetime
 
+from typing_extensions import override
+
 from juriscraper.opinions.united_states.state import okla
 
 
@@ -20,7 +22,8 @@ class Site(okla.Site):
         self.status = "Published"
         self.expected_content_types = ["text/html"]
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         for row in self.html.xpath("//div/p['@class=document']")[::-1]:
             if "OK" not in row.text_content() or "EMAIL" in row.text_content():
                 continue

@@ -7,6 +7,8 @@ Date created: 04/27/2014
 
 from datetime import date
 
+from typing_extensions import override
+
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -22,7 +24,8 @@ class Site(OpinionSiteLinear):
         year = date.today().year
         return f"https://www.courts.mo.gov/page.jsp?id=12086&dist=Opinions%20{self.court}&date=all&year={year}#all"
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         for row in self.html.xpath("//div[@class='margin-bottom-15']"):
             date = row.xpath(".//input")[0].value
             for opinion in row.xpath(".//div[@class='list-group-item-text']"):

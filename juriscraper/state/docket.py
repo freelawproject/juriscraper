@@ -205,8 +205,8 @@ class DocketType(Enum):
 
 
 _DocketDocketTransfer = TypeVar("_DocketDocketTransfer", bound=DocketTransfer)
-_DocketDocketEntry = TypeVar("_DocketDocketEntry", bound=DocketEntry)
-_DocketParty = TypeVar("_DocketParty", bound=Party)
+_DocketDocketEntry = TypeVar("_DocketDocketEntry", bound=DocketEntry[Document])
+_DocketParty = TypeVar("_DocketParty", bound=Party[Representative])
 
 
 class Docket(

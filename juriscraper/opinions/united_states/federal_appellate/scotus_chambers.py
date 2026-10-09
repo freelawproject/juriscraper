@@ -43,7 +43,6 @@ class Site(OpinionSite):
         self.path_row = f"{self.path_table}/tr[position() > 1]"
         self.precedential = "In-chambers"
         self.court = "in-chambers"
-        self.headers = False
         self.url = False
         self.headers = []
         self.cases = []

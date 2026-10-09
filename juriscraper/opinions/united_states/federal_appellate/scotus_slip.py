@@ -2,7 +2,10 @@
 Court Contact: https://www.supremecourt.gov/contact/contact_webmaster.aspx
 """
 
+import re
 from datetime import date, datetime
+
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -58,7 +61,8 @@ class Site(OpinionSiteLinear):
         # Return the previous year if we haven't reached the cutoff
         return year - 1 if date_of_interest < term_cutoff else year
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         for row in self.html.xpath("//tr"):
             cells = row.xpath(".//td")
             if len(cells) != 6:
@@ -68,14 +72,28 @@ class Site(OpinionSiteLinear):
                 continue
             self.cases.append(
                 {
-                    "citation": citation.text_content(),
+                    "citation": self.clean_citation(citation.text_content()),
                     "date": date.text_content(),
                     "url": link.xpath(".//a/@href")[0],
-                    "name": link.text_content(),
+                    "name": link.xpath("string(.//a[1])"),
                     "docket": docket.text_content(),
                     "judge": self.justices[justice.text_content()],
                 }
             )
+
+    @staticmethod
+    def clean_citation(citation: str) -> str:
+        """Return the citation if it is "volume U.S. page", or "" otherwise
+
+        Until an opinion is paginated, the citation column only shows its
+        volume and part, such as "609/2".
+
+        :param citation: the text of the citation column
+        :return: the citation, or an empty string
+        """
+        if re.fullmatch(r"\d+\s*U\.\s*S\.?\s*\d+", citation.strip()):
+            return citation.strip()
+        return ""
 
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Use the default make_backscrape_iterable to parse input

@@ -14,6 +14,8 @@ import re
 from datetime import datetime
 from urllib.parse import urlencode
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.ClusterSite import ClusterSite
 from juriscraper.lib.type_utils import OpinionType
@@ -32,6 +34,7 @@ class Site(ClusterSite, mich.Site):
         params = self.filters + (("aAppellateCourt", self.court),)
         self.url = f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseOpinions?{urlencode(params)}"
 
+    @override
     async def _process_html(self) -> None:
         """Process the html and extract out the opinions
 

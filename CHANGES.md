@@ -18,14 +18,89 @@ Features:
 -
 
 Changes:
-- Improve type of `Deserializable.deserialize()` to conserve the subject type.
+- `PacerSession` now authenticates ACMS requests with per-court cookie sessions
+  instead of a bearer token, restoring ACMS auth after their HTMX refactor.
+  freelawproject/courtlistener#5921
 
 Fixes:
 - `ca9_p` and `ca9_u`: read the court's `opinions` and `memoranda` tables instead of the 25 item RSS feeds, and order them by the court's upload timestamp instead of the filing date. Adds backscraping. #2120
+- Fix `or`, `orctapp` and `ortc` crash when the search API leaves out a field; rows with no docket or date are now skipped.
+- `harmonize()` no longer removes "et al" from inside longer words in case names, such as "Mat Et Aliasing" #202
+- Fix `scotus_slip`: return an empty citation for "volume/part" values such as "609/2". #2166
+- `nev`/`nevapp`: resolve panel judge initials to full names, and keep the full panel when it has a "Before:" prefix or spaced slashes #2049
+- Fix `nev`/`nevapp` backscrape crash on the empty page after the last one
+-
+
+## 3.0.44 - 2026-09-30
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
+- Strip the "(PDF)" suffix from `nytrial` case names of rows that link directly to a PDF. #2243
+
+## 3.0.43 - 2026-09-29
+
+Features:
+-
+
+Changes:
+-
+
+Fixes:
+-
+
+## 3.0.42 - 2026-09-29
+
+Features:
+-
+
+Changes:
+- Add `AbstractSite.chrome_user_agent` / `chrome_sec_ch_ua`, built from a single `chrome_version` attribute, and use them in every scraper that spoofs a browser User-Agent, so stale-version blocks are a one-line fix. #2132
+- Correct contributor and install docs that were out of date with the repo: required Python is 3.10+, scraper templates live on `main`, the sample caller example now points at `ca1`, and the leftover nosetests debugger instructions are replaced with tox/pytest. #749
+- Delete the unused selenium machinery: `WebDriven` classes, `uses_selenium` attribute and the `selenium` dependency. Fixes #2141
+- Adopt strict type checks in `lib`, `scotus`, `state`.
+- Adopt comprehensive checking in `pacer`.
+- Upgrade Pyrefly to v1.3.1
+- Refactor `lactapp_5` to scrape the latest decisions window. #1390
+- Upgrade GitHub Actions (and also pin versions).
+- Improve typing in `pacer` with `@overload`.
+
+Fixes:
+- Fix `nytrial` scrapers and `nysupct_commercial`: use the new `current/index` pages, parse the new opinion template, raise on the "404 ERROR" page, get the judge and docket number of "30000"-type decisions from their stub pages, parse NYSCEF stamp and caption docket numbers from PDFs, and the Misc3d citation and full case name of corrected, officially reported opinions. #2243, #2242
+- Fix TAMES (Texas). Remove WAF poison string.
+- Replace indirect `urllib3` imports (via `requests.packages.urllib3`) with direct imports.
+- Correct type annotations in `alaska`, `bap9`, `cafc`, `idaho_civil`, `miss`, `texapp`, and `wyo`.
+- Correct type annotations in `lib`, `pacer`, `scotus` and `state`. All internal, but for `SCOTUSEmailData.email_datetime`, which could be none but was not marked as optional. #2210
+- Corrections to docstrings across files.
+- Fix `nmariana` scraper selectors and switch to `use_urllib=True` due to Cloudflare. #2202
+- Add generics and test utility functions in `lib`.
+- Take consistent approach to unparsed data in `state` and `scotus`.
+- Correct more type annotations in `pacer`
+- Fix inheritance in the `TexasCommonScraper` cluster.
+- Fix handling of meta redirects with url-relative destinations
+- Address `no-any-return-*` in `lib.html_utils`.
+- Fix "no changes" label handling for `CHANGES.md`
+
+## 3.0.41 - 2026-09-14
+
+Features:
+-
+
+Changes:
+- Improve type of `Deserializable.deserialize()` to conserve the subject type.
+- Introduce Phyrefly static type checking configuration for all files outside of tests.
+
+Fixes:
+- Accept `audio/mp3` content type for ca9 scraper. #2168
 - Fix `bap1` backscraper: fixed a missing `await` that made it return zero results. #2136
 - Fix `mich` backscraper: fixed a missing `await` that made it return zero results. #2136
 - Fix `michctapp` backscraper: fixed a missing `await` that would lead to cases getting the title "Placeholder name".
 - Fix `fla` (and the inheriting `fladistctapp_*` scrapers) now paginate the search results. #2150
+- Fix `ariz` (and the inheriting `arizctapp_div_1` scraper) now accept Word documents, which the court publishes for some decisions. #2167
 
 ## 3.0.40 - 2026-08-19
 

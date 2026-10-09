@@ -15,6 +15,8 @@ import re
 from datetime import datetime, timedelta
 from urllib.parse import urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import generate_aws_sigv4_headers
 from juriscraper.lib.exceptions import JuriscraperException
@@ -182,6 +184,7 @@ class Site(OpinionSiteLinear):
 
         return all_items
 
+    @override
     def _process_html(self) -> None:
         """Parse the table rows into cases, newest upload first
 
@@ -189,6 +192,9 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
+        if self.html is None:
+            return
+
         records = sorted(
             self.html,
             key=lambda record: (

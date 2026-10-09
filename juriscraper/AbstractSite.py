@@ -7,6 +7,7 @@ import os
 import ssl
 import urllib.parse
 import urllib.request
+from collections.abc import Awaitable
 from datetime import datetime
 
 import certifi
@@ -56,7 +57,28 @@ class AbstractSite:
     # Useful for sites that block httpx via TLS fingerprinting.
     use_urllib = False
 
-    def __init__(self, cnt=None, user_agent="Juriscraper", **kwargs):
+    # Some courts' bot management blocks the "Juriscraper" User-Agent, and
+    # some also block browser User-Agents that have gone stale. Scrapers that
+    # need to look like a browser should use `self.chrome_user_agent` instead
+    # of hardcoding a string, so a single bump here updates all of them.
+    # Keep in sync with the current stable Chrome release.
+    chrome_version = "151"
+    chrome_user_agent = (
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+        f"(KHTML, like Gecko) Chrome/{chrome_version}.0.0.0 Safari/537.36"
+    )
+    # Client hints matching `chrome_user_agent`, for sites that check them
+    chrome_sec_ch_ua = (
+        f'"Google Chrome";v="{chrome_version}", '
+        f'"Chromium";v="{chrome_version}", "Not)A;Brand";v="24"'
+    )
+
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs,
+    ):
         super().__init__()
 
         # Computed metadata
@@ -120,7 +142,6 @@ class AbstractSite:
         self.court_id = None
         self.url = None
         self.parameters = None
-        self.uses_selenium = None
         self._opt_attrs = []
         self._req_attrs = []
         self._all_attrs = []
@@ -194,10 +215,9 @@ class AbstractSite:
             self.html = await self._download()
 
             # Process the available html (optional)
-            if inspect.iscoroutinefunction(self._process_html):
-                await self._process_html()
-            else:
-                self._process_html()
+            maybe_awaitable = self._process_html()
+            if isinstance(maybe_awaitable, Awaitable):
+                await maybe_awaitable
 
         # Set the attribute to the return value from _get_foo()
         # e.g., this does self.case_names = _get_case_names()
@@ -483,7 +503,7 @@ class AbstractSite:
 
         return content
 
-    def _process_html(self):
+    def _process_html(self) -> None | Awaitable[None]:
         """Hook for processing available self.html after it's been downloaded.
         This step is completely optional, but is useful if you want to transform
         the html before running the data getters (_get_*), or if its easier to

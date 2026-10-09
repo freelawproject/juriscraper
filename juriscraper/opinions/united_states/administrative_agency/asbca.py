@@ -11,6 +11,8 @@ History:
 from datetime import datetime
 from urllib.parse import urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -30,7 +32,7 @@ class Site(OpinionSiteLinear):
             "accept-encoding": "gzip, deflate, br, zstd",
             "accept-language": "en-US,en;q=0.9",
             "priority": "u=0, i",
-            "sec-ch-ua": '"Google Chrome";v="149", "Chromium";v="149", "Not)A;Brand";v="24"',
+            "sec-ch-ua": self.chrome_sec_ch_ua,
             "sec-ch-ua-mobile": "?0",
             "sec-ch-ua-platform": '"Linux"',
             "sec-fetch-dest": "document",
@@ -38,11 +40,12 @@ class Site(OpinionSiteLinear):
             "sec-fetch-user": "?1",
             "sec-fetch-site": "cross-site",
             "upgrade-insecure-requests": "1",
-            "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+            "user-agent": self.chrome_user_agent,
         }
         self.needs_special_headers = True
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         # Exclude headers and rows that only have the month name
         if self.test_mode_enabled():
             self.year = "2026"

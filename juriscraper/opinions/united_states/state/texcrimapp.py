@@ -5,6 +5,8 @@
 # Reviewer: None
 # Date: 2015-09-02
 
+from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.type_utils import OpinionType
@@ -17,11 +19,15 @@ class Site(texapp.Site):
         self.court_id = self.__module__
         self.checkbox = 1
 
-    def get_opinions(self, html, _) -> tuple[list[dict], str]:
+    @override
+    def get_opinions(
+        self, html: HtmlElement, op_date: str
+    ) -> tuple[list[dict], str]:
         """Override from texapp.py. See docstring there for more info
 
         :param html: page's HTML object
-        :return List of opinions
+        :param op_date: date to identify related opinions of a case
+        :return: List of opinions
         """
         opinions = []
         opinion_xpath = "//div[div[contains(text(), 'Case Events')]]//tr[td[text()='OPINION ISSD']]"

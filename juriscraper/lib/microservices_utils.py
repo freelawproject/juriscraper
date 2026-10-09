@@ -52,7 +52,7 @@ async def test_for_meta_redirections(
             url = text[4:]
             if not url.startswith("http"):
                 # Relative URL, adapt
-                url = urljoin(r.url, url)
+                url = urljoin(str(r.url), url)
             return True, url
     except IndexError:
         return False, None
@@ -76,7 +76,7 @@ async def get_extension(content: bytes) -> str:
     """
     Get the extension of a file using a microservice.
 
-    :param r: The item to get the extension for
+    :param content: The item to get the extension for
     :return extension: The extension of the file, e.g. ".pdf", ".html", etc.
     """
     # Get the file type from the document's raw content
