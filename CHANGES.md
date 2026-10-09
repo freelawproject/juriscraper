@@ -35,6 +35,7 @@ Fixes:
 - `nev`/`nevapp`: resolve panel judge initials to full names, and keep the full panel when it has a "Before:" prefix or spaced slashes #2049
 - Fix `nev`/`nevapp` backscrape crash on the empty page after the last one
 - Fix `mass` and `massappct`: retry the 403 that mass.gov's WAF serves when it rate-limits our document downloads. #2169
+- Fix `fla` and `fladistctapp_*` crash when a search result has no opinion file; those rows are now skipped instead of stopping the whole page. #2274 #2286
 -
 
 ## 3.0.44 - 2026-09-30
