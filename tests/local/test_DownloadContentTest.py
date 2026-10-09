@@ -164,7 +164,7 @@ class ScraperDownloadConfigTest(unittest.IsolatedAsyncioTestCase):
     """What the scrapers that rely on these checks ask for"""
 
     def test_mass_retries_the_waf_block(self):
-        """mass.gov blocks a share of requests, but not for long. See #2169"""
+        """mass.gov rate-limits us with a 403, for ~30s at a time."""
         self.assertEqual(mass.Site.retry_codes, frozenset({403}))
 
     async def test_justice_dot_gov_challenge_is_still_solved(self):

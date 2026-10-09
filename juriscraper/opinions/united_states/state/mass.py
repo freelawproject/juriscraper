@@ -27,7 +27,8 @@ class Site(OpinionSiteLinear):
     Backscraper is implemented on `united_states_backscrapers.state.mass.py`
     """
 
-    # mass.gov's WAF blocks a small share of our requests with a 403
+    # mass.gov rate-limits our document downloads with a 403. The block
+    # clears on its own, so the inherited waits are long enough.
     retry_codes = frozenset({403})
 
     def __init__(self, *args, **kwargs):

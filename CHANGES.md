@@ -34,7 +34,7 @@ Fixes:
 - Fix `scotus_slip`: return an empty citation for "volume/part" values such as "609/2". #2166
 - `nev`/`nevapp`: resolve panel judge initials to full names, and keep the full panel when it has a "Before:" prefix or spaced slashes #2049
 - Fix `nev`/`nevapp` backscrape crash on the empty page after the last one
-- Fix `mass` and `massappct`: retry the transient 403 that mass.gov's WAF serves for a share of the document downloads. #2169
+- Fix `mass` and `massappct`: retry the 403 that mass.gov's WAF serves when it rate-limits our document downloads. #2169
 -
 
 ## 3.0.44 - 2026-09-30

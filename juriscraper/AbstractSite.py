@@ -79,9 +79,9 @@ class AbstractSite:
     # An empty `retry_codes` disables the retry, which is the default.
     retry_codes: frozenset[int] = frozenset()
     max_retries = 2
-    backoff = 2.0
+    backoff = 15.0
     backoff_growth = 2.0
-    backoff_max = 16.0
+    backoff_max = 60.0
 
     def __init__(
         self,
