@@ -51,6 +51,13 @@ pdf_stamp_regex = re.compile(
 pdf_caption_regex = re.compile(
     r"\b(Index|Claim|File|Docket) No\.:?\s*(L&T )?[A-Z]*-?\d[\w/-]*"
 )
+# The PDF layout may mix up overlapping stamps, leaving the number right after an "INDEX".
+# Some Monroe County PDFs have an "Index #: E2019012159" stamp on top of the NYSCEF stamp,
+# as in "INDEX     : E2019012159" or "INDEX  #: E2019012159".
+# Some PDFs have two NYSCEF stamps, as in "INDEX NO.\n INDEX     605773/2023\n NO. 605773/2023"
+pdf_mixed_stamp_regex = re.compile(
+    r"\bINDEX\s+((#\s*:?|:)\s*)?(?P<number>[A-Z]*-?\d[\w/-]*)"
+)
 
 
 class Site(OpinionSiteLinear):
@@ -283,6 +290,9 @@ class Site(OpinionSiteLinear):
                 metadata["Docket"]["docket_number"] = f"{kind} No. {number}"
             elif pdf_docket := pdf_caption_regex.search(target_text):
                 metadata["Docket"]["docket_number"] = pdf_docket.group()
+            elif pdf_docket := pdf_mixed_stamp_regex.search(target_text):
+                number = pdf_docket.group("number")
+                metadata["Docket"]["docket_number"] = f"Index No. {number}"
             else:
                 logger.error(
                     "nytrial: unable to extract_from_text docket number",

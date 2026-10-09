@@ -243,6 +243,24 @@ class ScraperExtractFromText(unittest.TestCase):
                 {"Docket": {"docket_number": "Index No. E2020010270"}},
             ),
             (
+                # https://www.nycourts.gov/reporter/pdfs/2022/2022_35476.pdf
+                # The "Index #:" county stamp and the NYSCEF stamp are mixed up.
+                # First page, as extracted by CourtListener. See #2273
+                "202204011046   Index #\n   INDEX     : E2019012159\n   NO.   E2019012159\nFILED:     MONROE COUNTY CLERK 04/01/2022 03:26 PM\nNYSCEF DOC. NO. 197   RECEIVED NYSCEF: 04/01/2022\n",
+                {"Docket": {"docket_number": "Index No. E2019012159"}},
+            ),
+            (
+                # Second page of the same PDF
+                "202204011046   IndexNO.\n   INDEX  #: E2019012159\n   E2019012159\nFILED:     MONROE COUNTY CLERK 04/01/2022 03:26 PM\nNYSCEF DOC. NO. 197   RECEIVED NYSCEF: 04/01/2022\n",
+                {"Docket": {"docket_number": "Index No. E2019012159"}},
+            ),
+            (
+                # https://www.nycourts.gov/reporter/pdfs/2023/2023_35538.pdf
+                # Two NYSCEF stamps overlap and are mixed up
+                "FILED: NASSAU COUNTY CLERK 12/22/2023 11:09 AM   INDEX NO.\n   INDEX     605773/2023\n   NO. 605773/2023\nNYSCEF DOC.\n   DOC. NO.\n   NO. 22   RECEIVED NYSCEF:\n   RECEIVED NYSCEF: 12/15/2023\n",
+                {"Docket": {"docket_number": "Index No. 605773/2023"}},
+            ),
+            (
                 # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51324.shtml
                 "<!DOCTYPE html><html><body><div>\n<div>\n<h1>MJ v MJ</h1>\n<p>2026 NY Slip Op 51324(U) [89 Misc 3d 1248(A)]</p>\n<p>August 18, 2026</p>\n<p>Supreme Court, Nassau County</p>\n<p>Edmund M. Dane, J.</p>\n<p>Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</p>\n<p>This opinion is uncorrected and will not be published in the printed Official Reports.</p>\n</div>\n<div><b>Digest-Index Classification: </b>Dismissal and Nonsuit—Failure to Appear—Deliberate Violation of Court Rules. Husband and Wife and Other Domestic Relationships—Counsel Fees—Party's Obstructionist Tactics</div>\n<div>\n<p>MJ, Plaintiff,</p>\n<p>v</p>\n<p>MJ, Defendant.</p>\n</div>\n<p>Supreme Court, Nassau County</p>\n<p>Decided on August 18, 2026</p>\n<p>Index No. XXXXXX/2020</p>\n<p>Edmund M. Dane, J.</p>\n",
                 {
