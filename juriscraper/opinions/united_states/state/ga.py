@@ -55,8 +55,12 @@ class Site(OpinionSiteLinear):
             # - "October 19, 2021—SUMMARIES for NOTEWORTHY OPINIONS"
             # - "July 7, 2021"
             # - "February 15, 2021 – SUMMARIES for NOTEWORTHY OPINIONS"
+            # The date heading sits right before the <ul>: a <p> in older
+            # sections, an <h3> since mid 2026. Month-only headings
+            # ("September") have no digits and are skipped.
             summary = link.xpath(
-                ".//parent::li/parent::ul/preceding-sibling::h3[1]/following-sibling::p"
+                ".//parent::li/parent::ul/preceding-sibling::*[self::p or self::h3]"
+                "[contains(translate(., '0123456789', '##########'), '#')][1]"
             )[0].text_content()
             # Character separator for dates from summary text could be:
             # - dash: "-"
