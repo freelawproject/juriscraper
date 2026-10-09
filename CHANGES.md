@@ -15,7 +15,13 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- `AbstractSite.download_content` now checks the response status before the
+  content type, and raises the new `DownloadStatusError` (a `BadContentError`)
+  when the server answers with an error status so blocks or removed pages
+  are no longer reported as an unexpected content type. #2169
+- Scrapers can list statuses worth another attempt in `retry_codes`, tuned
+  by `max_retries`, `backoff`, `backoff_growth` and `backoff_max`. The names
+  follow `state.RequestManager.ExponentialBackoff`. #2169
 
 Changes:
 - `PacerSession` now authenticates ACMS requests with per-court cookie sessions
@@ -28,6 +34,7 @@ Fixes:
 - Fix `scotus_slip`: return an empty citation for "volume/part" values such as "609/2". #2166
 - `nev`/`nevapp`: resolve panel judge initials to full names, and keep the full panel when it has a "Before:" prefix or spaced slashes #2049
 - Fix `nev`/`nevapp` backscrape crash on the empty page after the last one
+- Fix `mass` and `massappct`: retry the 403 that mass.gov's WAF serves when it rate-limits our document downloads. #2169
 - Fix `fla` and `fladistctapp_*` crash when a search result has no opinion file; those rows are now skipped instead of stopping the whole page. #2274 #2286
 -
 

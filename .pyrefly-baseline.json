@@ -15,13 +15,6 @@
       "severity": "error"
     },
     {
-      "column": 46,
-      "path": "juriscraper/AbstractSite.py",
-      "name": "unbound-name",
-      "concise_description": "`s` may be uninitialized",
-      "severity": "error"
-    },
-    {
       "column": 59,
       "path": "juriscraper/AbstractSite.py",
       "name": "bad-specialization",
@@ -40,27 +33,6 @@
       "path": "juriscraper/lasc/http.py",
       "name": "bad-override",
       "concise_description": "Class member `LASCSession.post` overrides parent class `Session` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "column": 12,
-      "path": "juriscraper/lib/auth_utils.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `group`",
-      "severity": "error"
-    },
-    {
-      "column": 18,
-      "path": "juriscraper/lib/auth_utils.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `group`",
-      "severity": "error"
-    },
-    {
-      "column": 18,
-      "path": "juriscraper/lib/auth_utils.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `group`",
       "severity": "error"
     },
     {
