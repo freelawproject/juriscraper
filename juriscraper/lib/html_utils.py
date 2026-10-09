@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import re
 from copy import deepcopy
+from typing import cast
 from urllib.parse import urlsplit, urlunsplit
 
 import nh3
@@ -14,7 +15,7 @@ try:
     # Use charset-normalizer for performance to detect the character encoding.
     import charset_normalizer as chardet
 except ImportError:
-    import chardet  # type: ignore
+    import chardet
 
 ALLOWED_ATTRIBUTES = deepcopy(nh3.ALLOWED_ATTRIBUTES)
 ALLOWED_ATTRIBUTES["a"].update({"id", "onclick"})
@@ -77,11 +78,12 @@ def get_table_column_text(
     cell_num: int,
     path_base: str | None = None,
     table_id: str = "",
-) -> list:
+) -> list[str]:
     table = f"table[@id='{table_id}']" if table_id else "table"
     path_cell = "//%s//tr/td[%d]" % (table, cell_num)
     path = path_base + path_cell if path_base is not None else path_cell
-    return [cell.text_content().strip() for cell in html.xpath(path)]
+    cells = cast(list[HtmlElement], html.xpath(path))
+    return [cell.text_content().strip() for cell in cells]
 
 
 def get_table_column_links(
@@ -89,24 +91,25 @@ def get_table_column_links(
     cell_num: int,
     path_base: str | None = None,
     table_id: str = "",
-) -> list:
+) -> list[str]:
     table = f"table[@id='{table_id}']" if table_id else "table"
     path_cell = "//%s//tr/td[%d]//a/@href" % (table, cell_num)
     path = path_base + path_cell if path_base else path_cell
-    return html.xpath(path)
+    return cast(list[str], html.xpath(path))
 
 
-def get_row_column_text(row, cell_num):
+def get_row_column_text(row: HtmlElement, cell_num: int) -> str:
     """Return string cell value for specified column.
 
     :param row: HtmlElement
     :param cell_num: int
     :return: string
     """
-    return row.xpath(".//td[%d]" % cell_num)[0].text_content().strip()
+    cells = cast(list[HtmlElement], row.xpath(".//td[%d]" % cell_num))
+    return cells[0].text_content().strip()
 
 
-def get_row_column_links(row, cell_num):
+def get_row_column_links(row: HtmlElement, cell_num: int) -> str:
     """Return string href value for link in specified column.
 
     NOTE: if there are multiple links in the column, you might
@@ -116,11 +119,11 @@ def get_row_column_links(row, cell_num):
     :param cell_num: int
     :return: string
     """
-    return row.xpath(".//td[%d]//a/@href" % cell_num)[0]
+    return cast(list[str], row.xpath(".//td[%d]//a/@href" % cell_num))[0]
 
 
 def strip_bad_html_tags_insecure(
-    text: str, remove_scripts=True
+    text: str, remove_scripts: bool = True
 ) -> HtmlElement:
     """Remove bad HTML that isn't used by our parsers.
 
@@ -157,13 +160,16 @@ def strip_bad_html_tags_insecure(
     )
 
 
-def get_visible_text(html_content):
+def get_visible_text(html_content: str) -> str:
     html_tree = html.fromstring(html_content)
-    text = html_tree.xpath(
-        """//text()[normalize-space() and not(parent::style |
+    text = cast(
+        list[str],
+        html_tree.xpath(
+            """//text()[normalize-space() and not(parent::style |
                                                                  parent::link |
                                                                  parent::head |
                                                                  parent::script)]"""
+        ),
     )
     return " ".join(text)
 
@@ -231,15 +237,16 @@ def clean_html(text: str) -> str:
     return text
 
 
-def fix_links_but_keep_anchors(link):
+def fix_links_but_keep_anchors(link: str) -> str:
     # Wrap the function below so that we have one that can be passed to
     # lxml's rewrite_links method, which doesn't accept any parameters.
     return fix_links_in_lxml_tree(link, keep_anchors=True)
 
 
-def fix_links_in_lxml_tree(link, keep_anchors=False):
-    """Fix links in an lxml tree.
+def fix_links_in_lxml_tree(link: str, keep_anchors: bool = False) -> str:
+    """Fix links in a lxml tree.
 
+    :param link: the link to rewrite
     :param keep_anchors: Whether to nuke anchors at the ends of links.
 
     This function is called by the rewrite_links method of an lxml tree, and is
@@ -313,7 +320,8 @@ def parse_table(table: HtmlElement) -> dict[str, list[HtmlElement]]:
     #  but that is a relatively large project and I'm not sure how often it
     #  would be useful.
     headers = [
-        clean_string(th.text_content()) for th in table.xpath(".//thead//th")
+        clean_string(th.text_content())
+        for th in cast(list[HtmlElement], table.xpath(".//thead//th"))
     ]
     if len(headers) == 0:
         headers = list(
@@ -325,7 +333,7 @@ def parse_table(table: HtmlElement) -> dict[str, list[HtmlElement]]:
     columns = {header: [] for header in headers}
 
     for row in rows:
-        cells = row.xpath("./td")
+        cells = cast(list[HtmlElement], row.xpath("./td"))
         for header, cell in zip(headers, cells):
             columns[header].append(cell)
 
@@ -340,4 +348,4 @@ def get_all_text(element: HtmlElement) -> str:
 
     :returns: Text content of the element and its children.
     """
-    return "".join(element.xpath(".//text()"))
+    return "".join(cast(list[str], element.xpath(".//text()")))

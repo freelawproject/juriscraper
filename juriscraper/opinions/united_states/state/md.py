@@ -9,6 +9,8 @@ Court Support: webmaster@mdcourts.gov, mdlaw.library@mdcourts.gov
 
 from datetime import date
 
+from typing_extensions import override
+
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -28,6 +30,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.make_backscrape_iterable(kwargs)
 
+    @override
     def _process_html(self) -> None:
         """Parse HTML into case dictionaries
 

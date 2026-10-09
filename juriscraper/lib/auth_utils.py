@@ -8,7 +8,7 @@ from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
 
 
-def get_justice_dot_gov_auth_cookies(html_text: str) -> dict | None:
+def get_justice_dot_gov_auth_cookies(html_text: str) -> dict[str, str] | None:
     """Extract auth cookies values from challenge HTML page
 
     This may happen when downloading a document from a justice.gov site
@@ -49,8 +49,8 @@ def set_api_token_header(site: OpinionSite) -> None:
     Creates the Site.headers attribute, copying the
     scraper_site.request[headers]
 
-    :param scraper_site: a Site Object
-    :returns: None
+    :param site: a Site Object
+    :return: None
     """
     if site.test_mode_enabled():
         return
@@ -73,7 +73,7 @@ def generate_aws_sigv4_headers(
     target: str = "DynamoDB_20120810.Scan",
     service: str = "dynamodb",
     region: str = "us-west-2",
-):
+) -> dict[str, str]:
     """Generate AWS Signature Version 4 headers for a DynamoDB Scan request.
 
     This function builds the necessary SigV4 signing information and returns

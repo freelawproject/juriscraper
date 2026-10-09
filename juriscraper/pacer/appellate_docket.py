@@ -1,11 +1,13 @@
+import datetime
 import pprint
 import re
 import sys
 from collections import OrderedDict
-from typing import Any
+from typing import Any, Literal, overload
 
 from lxml import html
 from lxml.etree import _ElementUnicodeResult
+from lxml.html import HtmlElement
 from requests import Response
 
 from juriscraper.lib.judge_parsers import normalize_judge_string
@@ -719,7 +721,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             view_multiple_documents = True
         docket_entries = []
         for row in docket_entry_rows:
-            de = {}
+            de: dict = {}
             cells = row.xpath("./td")
             if len(cells) == 0:
                 continue
@@ -933,7 +935,26 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                 ogc_info["date_received_coa"] = convert_date_string(date)
         return ogc_info
 
-    def _get_tail_by_regex(self, regex, cast_to_date=False, node=None):
+    @overload
+    def _get_tail_by_regex(
+        self,
+        regex: str,
+        cast_to_date: Literal[True],
+        node: HtmlElement | None = ...,
+    ) -> datetime.date | None: ...
+    @overload
+    def _get_tail_by_regex(
+        self,
+        regex: str,
+        cast_to_date: Literal[False] = ...,
+        node: HtmlElement | None = ...,
+    ) -> str: ...  # Note: empty string is sent instead of `None`
+    def _get_tail_by_regex(
+        self,
+        regex: str,
+        cast_to_date: bool = False,
+        node: HtmlElement | None = None,
+    ) -> str | datetime.date | None:
         """Search all text nodes for a string that matches the regex, then
         return the `tail`ing text.
 

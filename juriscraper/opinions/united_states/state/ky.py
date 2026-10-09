@@ -20,6 +20,8 @@ import re
 from datetime import date, datetime, timedelta
 from urllib.parse import urlencode
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.judge_parsers import normalize_judge_string
 from juriscraper.lib.string_utils import titlecase
@@ -79,6 +81,7 @@ class Site(OpinionSiteLinear):
         }
         self.url = f"{self.api_url}{urlencode(params)}"
 
+    @override
     async def _process_html(self) -> None:
         """Parse API JSON response into case dictionaries
 

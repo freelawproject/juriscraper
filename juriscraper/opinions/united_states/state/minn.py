@@ -12,6 +12,8 @@ import re
 from datetime import date, datetime, timezone
 from urllib.parse import urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import BotChallengeError
 from juriscraper.lib.network_utils import add_delay
@@ -51,6 +53,10 @@ class Site(OpinionSiteLinear):
             "Accept-Language": "en-US,en;q=0.9",
             "Sec-Fetch-Mode": "navigate",
             "Host": "mn.gov",
+            # Radware Bot Manager blocks a bare Chrome User-Agent here:
+            # httpx's TLS/HTTP2 fingerprint does not match the browser the
+            # UA claims to be. A non-Chrome UA passes, so this scraper must
+            # NOT use `self.chrome_user_agent`
             "User-Agent": "Juriscraper/3.0 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15",
             "Referer": "https://mn.gov/law-library/search/?v%3Asources=mn-law-library-opinions&query=+%28url%3A%2Farchive%2Fsupct%29+&citation=&qt=&sortby=&docket=&case=&v=&p=&start-date=&end-date=",
             "Connection": "keep-alive",
@@ -58,6 +64,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
         self.needs_special_headers = True
 
+    @override
     async def _process_html(self) -> None:
         """Process the html and extract out the opinions
 

@@ -1,10 +1,9 @@
-import inspect
 import re
 import traceback
-from collections.abc import Callable
+from collections.abc import Callable, Hashable, Iterable
 from datetime import date, datetime, timedelta
 from itertools import chain, islice, tee
-from typing import Any
+from typing import Any, Protocol, TypeVar, cast
 
 from httpx import HTTPError
 
@@ -29,7 +28,9 @@ from .string_utils import (
 logger = make_default_logger()
 
 
-def sanity_check_dates(dates_and_names: list[tuple], court_id: str) -> None:
+def sanity_check_dates(
+    dates_and_names: list[tuple[object, object, object]], court_id: str
+) -> None:
     """Checks that dates are datetime.date objects and that they are not in the future
 
     :param dates_and_names: a 3 member tuple (case_date, case_name, date_is_approximate)
@@ -76,7 +77,9 @@ def sanity_check_case_names(case_names: list[str]) -> None:
         prior_case_name = name
 
 
-def sanity_check_opinion_types(sub_opinions: list[dict]) -> None:
+def sanity_check_opinion_types(
+    sub_opinions: list[dict[Hashable, object]],
+) -> None:
     """Check opinion type assignment rules within a cluster
 
     :param sub_opinions: list of sub_opinion dictionaries
@@ -144,7 +147,15 @@ def clean_attribute(name: str, value: Any) -> Any:
     return value
 
 
-def previous_and_next(some_iterable):
+# TODO[Python3.12]: Replace with use of nice synta
+_IterableObjectT = TypeVar("_IterableObjectT")
+
+
+def previous_and_next(
+    some_iterable: Iterable[_IterableObjectT],
+) -> Iterable[
+    tuple[_IterableObjectT | None, _IterableObjectT, _IterableObjectT | None]
+]:
     """Provide previous and next values while iterating a list.
 
     This is from: http://stackoverflow.com/a/1012089/64911
@@ -152,13 +163,21 @@ def previous_and_next(some_iterable):
     This will allow you to lazily iterate a list such that as you iterate, you
     get a tuple containing the previous, current, and next value.
     """
+    prevs: Iterable[_IterableObjectT | None]
+    items: Iterable[_IterableObjectT]
+    nexts: Iterable[_IterableObjectT | None]
+
     prevs, items, nexts = tee(some_iterable, 3)
     prevs = chain([None], prevs)
     nexts = chain(islice(nexts, 1, None), [None])
     return zip(prevs, items, nexts)
 
 
-def clean_court_object(obj):
+# TODO[Python3.12]: Replace with use of nice syntax
+_CourtObjectT = TypeVar("_CourtObjectT")
+
+
+def clean_court_object(obj: _CourtObjectT) -> _CourtObjectT:
     """Clean a list or dict that is part of a scraping response.
 
     Court data is notoriously horrible, so this function attempts to clean up
@@ -176,21 +195,45 @@ def clean_court_object(obj):
     :return: A dict or list with the string values cleaned.
     """
     if isinstance(obj, list):
-        items = []
-        for i in obj:
-            items.append(clean_court_object(i))
-        return items
+        # type checker cannot infer correctness, so we help it along with
+        # erasure here and a `cast` below
+        obj_list: list[object] = obj
+        cleaned_list = [clean_court_object(i) for i in obj_list]
+        return cast(_CourtObjectT, cleaned_list)
     elif isinstance(obj, dict):
-        d = {}
-        for k, v in obj.items():
-            d[k] = clean_court_object(v)
-        return d
+        # type checker cannot infer correctness, so we help it along with
+        # erasure here and a `cast` below
+        obj_dict: dict[Hashable, object] = obj
+        cleaned_dict = {k: clean_court_object(v) for k, v in obj_dict.items()}
+        return cast(_CourtObjectT, cleaned_dict)
     elif isinstance(obj, str):
         s = " ".join(obj.strip().split())
         s = force_unicode(s)
-        return re.sub(r"\s+,", ",", s)
+        s = re.sub(r"\s+,", ",", s)
+        # type checker cannot infer correctness, so we help it along with
+        # this `cast`.
+        return cast(_CourtObjectT, s)
     else:
         return obj
+
+
+_DownloadT = TypeVar("_DownloadT")
+
+
+class PaginatedHtmlBackscrapeSite(Protocol[_DownloadT]):
+    court_id: str
+    url: str
+    cases: list[dict[str, Any]]
+    html: _DownloadT | None  # TODO: Fix this to `HtmlElement`
+
+    async def _download(self) -> _DownloadT: ...
+
+    async def _process_html(self) -> None: ...
+
+
+_PaginatedHtmlBackscrapeSiteT = TypeVar(
+    "_PaginatedHtmlBackscrapeSiteT", bound=PaginatedHtmlBackscrapeSite[Any]
+)
 
 
 async def backscrape_over_paginated_results(
@@ -199,10 +242,11 @@ async def backscrape_over_paginated_results(
     start_date: date,
     end_date: date,
     date_fmt: str,
-    site,
-    prepare_request_fn: Callable | None = None,
+    site: _PaginatedHtmlBackscrapeSiteT,
+    prepare_request_fn: Callable[[int, _PaginatedHtmlBackscrapeSiteT], None]
+    | None = None,
     url_template: str = "",
-) -> list[dict]:
+) -> list[dict[str, Any]]:
     """
     Iterates over consecutive pages, looking for cases in a specific date range
     Of use when the page offers no date filters, so one must look through all
@@ -214,7 +258,7 @@ async def backscrape_over_paginated_results(
     :param end_date: cases with a date lesses than this value will be collected
     :param date_fmt: date format to parse case dates
     :param site: the site object
-    :prepare_request_fn: a function that takes as arguments the page number
+    :param prepare_request_fn: a function that takes as arguments the page number
         and the site object, and modifies the site's attribute to prepare
         the request before `site._download()` is called.
         If not passed, it will try to use the url_template argument
@@ -240,10 +284,7 @@ async def backscrape_over_paginated_results(
 
         try:
             site.html = await site._download()
-            if inspect.iscoroutinefunction(site._process_html):
-                await site._process_html()
-            else:
-                site._process_html()
+            await site._process_html()
         except HTTPError:
             # if the request returned and error, take advantage of the cases
             # already downloaded. This may also be a case when the last page

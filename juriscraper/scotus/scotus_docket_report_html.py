@@ -3,14 +3,16 @@ from collections import defaultdict
 from dataclasses import dataclass
 from typing import Any
 
-import lxml.html
 from lxml import html
 from lxml.html import HtmlElement
+from typing_extensions import override
 
-from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import clean_html, strip_bad_html_tags_insecure
+from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.scotus import SCOTUSDocketReport
+
+logger = make_default_logger()
 
 
 @dataclass
@@ -37,8 +39,9 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
     def __init__(self, court_id: str = "scotus"):
         """Initialize the HTML report parser."""
         super().__init__(court_id=court_id)
-        self.tree: lxml.html.HtmlElement | None = None
+        self.tree: HtmlElement | None = None
 
+    @override
     def _parse_text(self, text: str) -> None:
         """Parse raw HTML and store a lxml tree.
 
@@ -48,6 +51,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         text = clean_html(text)
         self.tree = html.fromstring(text or "")
 
+    @override
     @property
     def metadata(self) -> dict[str, Any]:
         """Return normalized docket metadata extracted from HTML.
@@ -144,7 +148,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         }
 
     @staticmethod
-    def _parse_description_html(td) -> str:
+    def _parse_description_html(td: HtmlElement) -> str:
         """Parse the cell content up to the first <br>, excluding
         .documentlinks.
 
@@ -239,6 +243,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
             "attachments": attachments,
         }
 
+    @override
     @property
     def docket_entries(self) -> list[dict[str, Any]]:
         """Return docket entries from 'Proceedings and Orders'.
@@ -308,6 +313,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
 
         return entries
 
+    @override
     @property
     def parties(self) -> list[dict[str, Any]]:
         """Return parties grouped under Contacts (Petitioner/Respondent/Other).
@@ -335,7 +341,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
             ("Other Attorneys", "Other"),
         ]
 
-        parties: list[dict] = []
+        parties: list[dict[str, Any]] = []
 
         for heading_text, type_key in sections:
             section_root = self._section_by_heading(heading_text)
@@ -378,11 +384,15 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
 
         :return: List of dicts containing parties data.
         """
+        if self.tree is None:
+            return []
         table = next(iter(self.tree.xpath("//table[@id='Contacts']")), None)
         if table is None:
             return []
 
-        parties_by_key: dict[tuple[str, str], list] = defaultdict(list)
+        parties_by_key: dict[tuple[str, str], list[dict[str, Any]]] = (
+            defaultdict(list)
+        )
         current_type = None
         rows = table.xpath(".//tr[td]")
         for i, tr in enumerate(rows):
@@ -482,7 +492,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         if cleaned:
             lines.append(cleaned)
 
-    def _parse_address_title(self, lines) -> tuple[str | None, int]:
+    def _parse_address_title(self, lines: list[str]) -> tuple[str | None, int]:
         """Extract the party title from address lines and determine where the address begins.
 
         :param lines: A list of text lines containing the party title and address.
@@ -505,7 +515,9 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         title = ", ".join(title_parts) or None
         return title, start_add_idx
 
-    def _parse_address_lines(self, lines, start_add_idx) -> ContactAddress:
+    def _parse_address_lines(
+        self, lines: list[str], start_add_idx: int
+    ) -> ContactAddress:
         """Parse the address components starting from a given index.
 
         :param lines: A list of text lines containing the address data.
@@ -513,7 +525,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         :return: A ContactAddress object.
         """
 
-        address_lines = (
+        address_lines: list[str] = (
             lines[start_add_idx:] if start_add_idx < len(lines) else []
         )
 

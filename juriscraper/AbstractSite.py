@@ -8,6 +8,7 @@ import os
 import ssl
 import urllib.parse
 import urllib.request
+from collections.abc import Awaitable
 from datetime import datetime
 
 import certifi
@@ -58,6 +59,22 @@ class AbstractSite:
     # Useful for sites that block httpx via TLS fingerprinting.
     use_urllib = False
 
+    # Some courts' bot management blocks the "Juriscraper" User-Agent, and
+    # some also block browser User-Agents that have gone stale. Scrapers that
+    # need to look like a browser should use `self.chrome_user_agent` instead
+    # of hardcoding a string, so a single bump here updates all of them.
+    # Keep in sync with the current stable Chrome release.
+    chrome_version = "151"
+    chrome_user_agent = (
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+        f"(KHTML, like Gecko) Chrome/{chrome_version}.0.0.0 Safari/537.36"
+    )
+    # Client hints matching `chrome_user_agent`, for sites that check them
+    chrome_sec_ch_ua = (
+        f'"Google Chrome";v="{chrome_version}", '
+        f'"Chromium";v="{chrome_version}", "Not)A;Brand";v="24"'
+    )
+
     # Retry for document downloads, for the statuses named in `retry_codes`.
     # An empty `retry_codes` disables the retry, which is the default.
     retry_codes: frozenset[int] = frozenset()
@@ -66,7 +83,12 @@ class AbstractSite:
     backoff_growth = 2.0
     backoff_max = 16.0
 
-    def __init__(self, cnt=None, user_agent="Juriscraper", **kwargs):
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs,
+    ):
         super().__init__()
 
         # Computed metadata
@@ -130,7 +152,6 @@ class AbstractSite:
         self.court_id = None
         self.url = None
         self.parameters = None
-        self.uses_selenium = None
         self._opt_attrs = []
         self._req_attrs = []
         self._all_attrs = []
@@ -204,10 +225,9 @@ class AbstractSite:
             self.html = await self._download()
 
             # Process the available html (optional)
-            if inspect.iscoroutinefunction(self._process_html):
-                await self._process_html()
-            else:
-                self._process_html()
+            maybe_awaitable = self._process_html()
+            if isinstance(maybe_awaitable, Awaitable):
+                await maybe_awaitable
 
         # Set the attribute to the return value from _get_foo()
         # e.g., this does self.case_names = _get_case_names()
@@ -456,9 +476,9 @@ class AbstractSite:
         if not self.retry_codes:
             return await self._get_download_url(download_url, headers)
 
-        error = None
+        # Every pass but the last one is a retry, so it ends with a wait.
         response = None
-        for attempt in range(max(self.max_retries, 0) + 1):
+        for attempt in range(max(self.max_retries, 0)):
             try:
                 r = await self._get_download_url(download_url, headers)
                 if r.status_code not in self.retry_codes:
@@ -468,26 +488,28 @@ class AbstractSite:
                 response = r
                 reason = f"HTTP {r.status_code}"
             except httpx.HTTPError as exc:
-                error = exc
                 reason = repr(exc)
 
-            if attempt < self.max_retries:
-                wait = min(
-                    self.backoff * self.backoff_growth**attempt,
-                    self.backoff_max,
-                )
-                logger.info(
-                    "%s: %s for %s, retrying in %ss",
-                    self.court_id,
-                    reason,
-                    download_url,
-                    wait,
-                )
-                await asyncio.sleep(wait)
+            wait = min(
+                self.backoff * self.backoff_growth**attempt,
+                self.backoff_max,
+            )
+            logger.info(
+                "%s: %s for %s, retrying in %ss",
+                self.court_id,
+                reason,
+                download_url,
+                wait,
+            )
+            await asyncio.sleep(wait)
 
-        if response is not None:
+        # The last attempt stands, whatever it answers.
+        try:
+            return await self._get_download_url(download_url, headers)
+        except httpx.HTTPError:
+            if response is None:
+                raise
             return response
-        raise error
 
     async def download_content(
         self,
@@ -558,7 +580,7 @@ class AbstractSite:
 
         return content
 
-    def _process_html(self):
+    def _process_html(self) -> None | Awaitable[None]:
         """Hook for processing available self.html after it's been downloaded.
         This step is completely optional, but is useful if you want to transform
         the html before running the data getters (_get_*), or if its easier to

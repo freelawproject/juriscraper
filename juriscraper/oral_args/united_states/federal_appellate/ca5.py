@@ -10,6 +10,8 @@ History:
 
 from html import unescape
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
@@ -23,7 +25,8 @@ class Site(OralArgumentSiteLinear):
         # holds items even when the court is in recess
         self.should_have_results = True
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         for item in self.html.xpath("//item"):
             # The feed escapes the `<br/>` separators, so the whole record
             # reaches us as a single text node. Ex:

@@ -15,6 +15,7 @@ from urllib.parse import urljoin
 
 from dateutil import parser
 from dateutil.parser import ParserError
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -44,6 +45,7 @@ class Site(OpinionSiteLinear):
         self._year = date.today().year
         self.make_backscrape_iterable(kwargs)
 
+    @override
     def _process_html(self) -> None:
         """Process the current-year opinions page (#2004)
 
