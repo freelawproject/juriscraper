@@ -45,7 +45,7 @@ class Site(OpinionSiteLinear):
                     # reporters-db expect spaces (e.g. "2022 MP 09"). #1947
                     "citation": cells[1].text_content().replace("-", " "),
                     "date": cells[2].text_content(),
-                    "judge": ", ".join(judge_list),
+                    "judge": ", ".join([j.strip("*") for j in judge_list]),
                     "author": author,
                     "per_curiam": not author,
                     "url": urljoin(
@@ -84,7 +84,7 @@ class Site(OpinionSiteLinear):
             )
         if not authors:
             return ""
-        return authors[-1]
+        return authors[-1].strip("*")
 
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Pass scraped text into function and return data as a dictionary
