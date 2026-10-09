@@ -5,9 +5,13 @@ History:
     - 2026-06-04: Audio files moved from www.ca9.uscourts.gov to
       cdn.ca9.uscourts.gov after the site redesign; same migration that
       moved the opinion feeds (#1987).
+    - 2026-09-21: Skip Bankruptcy Appellate Panel rows, scraped by `bap9`
+      (#2113).
 """
 
 import json
+import re
+from collections import Counter
 from datetime import datetime, timedelta
 from urllib.parse import urljoin
 
@@ -17,8 +21,37 @@ from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import generate_aws_sigv4_headers
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
+RECORD_TYPE_COURTS = {"ora": "ca9", "bap": "bap9"}
+BAP_LEGACY_DOCKET = re.compile(r"\d{2}-\d{4}")
+
+
+def get_record_court(record: dict) -> str | None:
+    """Get the court of a `media` table row
+
+    Rows from before mid 2021 have no `record_type`; back then, only BAP
+    dockets had 4 digits after the dash
+
+    :param record: a DynamoDB item
+    :return: "ca9", "bap9", or None for an unknown `record_type`
+    """
+    record_type = record.get("record_type", {}).get("S")
+    if not record_type:
+        docket = record.get("case_num", {}).get("S") or ""
+        return "bap9" if BAP_LEGACY_DOCKET.fullmatch(docket.strip()) else "ca9"
+
+    court = RECORD_TYPE_COURTS.get(record_type)
+    if not court:
+        logger.error(
+            "ca9 media table: skipping row with unknown record_type %r "
+            "for docket %s",
+            record_type,
+            record.get("case_num", {}).get("S"),
+        )
+    return court
+
 
 class Site(OralArgumentSiteLinear):
+    record_court = "ca9"
     query_url = "https://dynamodb.us-west-2.amazonaws.com/"
     # Lookback for the regular scrape, in `created_date` terms. The cron runs
     # hourly, so this only needs to cover a scraper outage. Widening it is
@@ -170,16 +203,25 @@ class Site(OralArgumentSiteLinear):
     @override
     def _process_html(self) -> None:
         """Process the json response"""
+        skipped = Counter()
 
         for record in self.html:
             date_str = record.get("hearing_date", {}).get("S")
             docket = record.get("case_num", {}).get("S")
+
+            court = get_record_court(record)
+            if court != self.record_court:
+                if court:
+                    skipped[court] += 1
+                continue
+
             try:
                 # validate ISO date
                 datetime.strptime(date_str, "%Y-%m-%d")
             except Exception:
                 logger.warning(
-                    "ca9: skipping row with bad hearing_date %s for docket %s",
+                    "%s: skipping row with bad hearing_date %s for docket %s",
+                    self.record_court,
                     date_str,
                     docket,
                 )
@@ -189,7 +231,17 @@ class Site(OralArgumentSiteLinear):
                 audio = record["audio_file_name"]["S"]
             except KeyError:
                 logger.warning(
-                    "ca9: skipping row with no audio_file_name for docket %s",
+                    "%s: skipping row with no audio_file_name for docket %s",
+                    self.record_court,
+                    docket,
+                )
+                continue
+
+            name = record.get("case_name", {}).get("S")
+            if not name:
+                logger.warning(
+                    "%s: skipping row with no case_name for docket %s",
+                    self.record_court,
                     docket,
                 )
                 continue
@@ -198,8 +250,8 @@ class Site(OralArgumentSiteLinear):
                 {
                     "date": date_str,
                     "docket": docket,
-                    "judge": record["case_panel"]["S"],
-                    "name": record["case_name"]["S"],
+                    "judge": record.get("case_panel", {}).get("S", ""),
+                    "name": name,
                     "url": urljoin(self.base_url, audio),
                     # Only used for ordering below; it has no getter, so it
                     # never reaches the scraped output
@@ -207,6 +259,16 @@ class Site(OralArgumentSiteLinear):
                         "S", ""
                     ),
                 }
+            )
+
+        if skipped:
+            logger.info(
+                "%s: skipped %s",
+                self.record_court,
+                ", ".join(
+                    f"{count} {court} rows"
+                    for court, count in sorted(skipped.items())
+                ),
             )
 
         # CourtListener walks these cases top down and stops at the first
