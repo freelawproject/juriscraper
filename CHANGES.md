@@ -15,7 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add a backscraper to `nmariana`. #1946
 
 Changes:
 - `PacerSession` now authenticates ACMS requests with per-court cookie sessions
@@ -28,6 +28,7 @@ Fixes:
 - Fix `scotus_slip`: return an empty citation for "volume/part" values such as "609/2". #2166
 - `nev`/`nevapp`: resolve panel judge initials to full names, and keep the full panel when it has a "Before:" prefix or spaced slashes #2049
 - Fix `nev`/`nevapp` backscrape crash on the empty page after the last one
+- Fix `nmariana` judge and author parsing: keep "Torres,Jr." as one judge, remove "?" characters and empty names, and take the last judge marked with "*" as the author. #1946
 -
 
 ## 3.0.44 - 2026-09-30
