@@ -19,6 +19,20 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+-
+
+## 4.0.0 - 2026-10-12
+
+Features:
+-
+
+Changes:
+- **Breaking:** Migrate HTTP client from `requests` to `httpx` `AsyncClient`;
+  remaining sync calls are now async. `requests` and `tldextract` are no
+  longer dependencies. #739
 - `PacerSession` now authenticates ACMS requests with per-court cookie sessions
   instead of a bearer token, restoring ACMS auth after their HTMX refactor.
   freelawproject/courtlistener#5921
@@ -31,7 +45,7 @@ Fixes:
 - Stop `ca9` oral argument scraper from ingesting Bankruptcy Appellate Panel arguments #2113
 - `nev`/`nevapp`: resolve panel judge initials to full names, and keep the full panel when it has a "Before:" prefix or spaced slashes #2049
 - Fix `nev`/`nevapp` backscrape crash on the empty page after the last one
--
+- Fix `fla` and `fladistctapp_*` crash when a search result has no opinion file; those rows are now skipped instead of stopping the whole page. #2274 #2286
 
 ## 3.0.44 - 2026-09-30
 

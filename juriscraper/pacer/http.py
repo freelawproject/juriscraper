@@ -2,13 +2,12 @@ import gzip
 import json
 import re
 from collections.abc import Iterator
-from http.cookiejar import Cookie, CookieJar
+from contextvars import ContextVar
+from http.cookiejar import Cookie
 from typing import Any
 
-import requests
-import urllib3
-from requests.cookies import RequestsCookieJar
-from urllib3 import exceptions
+import httpx
+from httpx import Cookies
 
 from juriscraper.lib.exceptions import PacerLoginException
 from juriscraper.lib.html_utils import (
@@ -20,8 +19,6 @@ from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.pacer.utils import is_pdf, is_text
 
 logger = make_default_logger()
-
-urllib3.disable_warnings(exceptions.InsecureRequestWarning)
 
 # Compile the regex pattern once for efficiency.
 # This pattern captures the court_id (e.g., 'ca9', 'ca2') from the URL.
@@ -35,14 +32,13 @@ ACMS_URL_PATTERN = re.compile(
 ACMS_AUTH_COOKIE_PREFIX = ".AspNetCore.saml2"
 
 
-def _iter_cookies(jar: CookieJar) -> Iterator[Cookie]:
+def _iter_cookies(jar: Cookies) -> Iterator[Cookie]:
     """Iterate over the Cookie objects in a jar.
 
-    RequestsCookieJar's stubs type it as MutableMapping[str, str], so plain
-    iteration looks like it yields names. At runtime it uses
-    CookieJar.__iter__, which yields Cookie objects.
+    HTTPX's Cookies wrapper iterates over names; its underlying jar yields
+    Cookie objects.
     """
-    return CookieJar.__iter__(jar)
+    return iter(jar.jar)
 
 
 def check_if_logged_in_page(content: bytes) -> bool:
@@ -111,9 +107,9 @@ def check_if_logged_in_page(content: bytes) -> bool:
     )
 
 
-class PacerSession(requests.Session):
+class PacerSession(httpx.AsyncClient):
     """
-    Extension of requests.Session to handle PACER oddities making it easier
+    Extension of httpx.AsyncClient to handle PACER oddities making it easier
     for folks to just POST data to PACER endpoints/apis.
 
     Also includes utilities for logging into PACER and re-logging in when
@@ -129,19 +125,27 @@ class PacerSession(requests.Session):
         password=None,
         client_code=None,
         get_acms_tokens=False,
+        user_agent="Juriscraper",
+        **kwargs,
     ):
         """
         Instantiate a new PACER API Session with some Juriscraper defaults
-        :param cookies: an optional RequestsCookieJar object with cookies for the session
+        :param cookies: an optional httpx.Cookies object with cookies for the session
         :param username: a PACER account username
         :param password: a PACER account password
         :param client_code: an optional PACER client code for the session
         :param get_acms_tokens: boolean flag to enable ACMS authentication during login.
         """
-        super().__init__()
-        self.headers["User-Agent"] = "Juriscraper"
+        self._anonymous_cookies: ContextVar[Cookies | None] = ContextVar(
+            "pacer_anonymous_cookies", default=None
+        )
+        kwargs.setdefault("http2", True)
+        kwargs.setdefault("follow_redirects", True)
+        kwargs.setdefault("verify", False)
+        super().__init__(**kwargs)
+        self.user_agent = user_agent
+        self.headers["User-Agent"] = self.user_agent
         self.headers["Referer"] = "https://external"  # For CVE-001-FLP.
-        self.verify = False
 
         if cookies:
             assert not isinstance(cookies, str), (
@@ -160,14 +164,47 @@ class PacerSession(requests.Session):
         self.acms_user_data = {}
         self.acms_tokens = {}
         # Per-court ACMS auth cookies
-        self.acms_cookies: dict[str, RequestsCookieJar] = {}
+        self.acms_cookies: dict[str, Cookies] = {}
+
+    @property
+    def cookies(self) -> Cookies:
+        cookies = self._anonymous_cookies.get()
+        return super().cookies if cookies is None else cookies
+
+    @cookies.setter
+    def cookies(self, cookies) -> None:
+        if self._anonymous_cookies.get() is None:
+            httpx.AsyncClient.cookies.__set__(self, cookies)
+        else:
+            self._anonymous_cookies.set(Cookies(cookies))
+
+    async def get_anonymous(
+        self, url: str | httpx.URL, *, params=None, timeout=300
+    ) -> httpx.Response:
+        """GET without session headers, cookies, HTTP auth, or PACER login.
+
+        Reuse this client's transport with fresh cookies for each call.
+        Cookies set during redirects stay local to that call.
+        """
+        request = httpx.Request(
+            "GET",
+            url,
+            params=params,
+            extensions={"timeout": httpx.Timeout(timeout).as_dict()},
+        )
+        # HTTPX reads and updates self.cookies throughout the redirect chain.
+        token = self._anonymous_cookies.set(Cookies())
+        try:
+            return await self.send(request, auth=httpx.Auth())
+        finally:
+            self._anonymous_cookies.reset(token)
 
     def _acms_court_for_url(self, url: str) -> str | None:
         """Return the ACMS court_id if `url` targets an ACMS host, else None."""
         match = ACMS_URL_PATTERN.match(url)
         return match.group(1) if match else None
 
-    def _ensure_acms_session(self, court_id: str) -> None:
+    async def _ensure_acms_session(self, court_id: str) -> None:
         """
         Ensure an authenticated ACMS cookie session exists for the given court.
 
@@ -175,7 +212,7 @@ class PacerSession(requests.Session):
         establishes ACMS authentication cookies only.
         """
         if court_id not in self.acms_cookies:
-            self.establish_acms_session(court_id)
+            await self.establish_acms_session(court_id)
 
     def _acms_bearer_headers(self, court_id: str) -> dict[str, str]:
         """
@@ -188,7 +225,7 @@ class PacerSession(requests.Session):
             return {}
         return {"Authorization": f"Bearer {token['Token']}"}
 
-    def _prepare_acms_request(
+    async def _prepare_acms_request(
         self,
         url: str,
         kwargs: dict[str, Any],
@@ -207,7 +244,7 @@ class PacerSession(requests.Session):
         if not court_id:
             return None
 
-        self._ensure_acms_session(court_id)
+        await self._ensure_acms_session(court_id)
 
         kwargs.setdefault("cookies", self.acms_cookies[court_id])
 
@@ -246,8 +283,8 @@ class PacerSession(requests.Session):
         if user_data:
             self.acms_user_data = user_data
 
-    def get(self, url, auto_login=True, **kwargs):
-        """Overrides request.Session.get with session retry logic.
+    async def get(self, url, auto_login=True, **kwargs):
+        """Overrides httpx.AsyncClient.get with session retry logic.
 
         For ACMS endpoints, this method automatically establishes and reuses
         court-specific authentication cookies. For PACER endpoints, it can
@@ -256,14 +293,14 @@ class PacerSession(requests.Session):
 
         :param url: url string to GET
         :param auto_login: Whether the auto-login procedure should happen.
-        :return: requests.Response
+        :return: httpx.Response
         """
-        court_id = self._prepare_acms_request(url, kwargs)
+        court_id = await self._prepare_acms_request(url, kwargs)
 
         if "timeout" not in kwargs:
             kwargs.setdefault("timeout", 300)
 
-        r = super().get(url, **kwargs)
+        r = await super().get(url, **kwargs)
         self._update_acms_cookies(court_id)
 
         if b"This user has no access privileges defined." in r.content:
@@ -274,19 +311,19 @@ class PacerSession(requests.Session):
             # The solution when this error shows up is to simply re-run the get
             # request, so that's what we do here. PACER needs some frustrating
             # and inelegant hacks sometimes.
-            r = super().get(url, **kwargs)
+            r = await super().get(url, **kwargs)
         if auto_login and not court_id:
-            updated = self._login_again(r)
+            updated = await self._login_again(r)
             if updated:
                 # Re-do the request with the new session.
-                r = super().get(url, **kwargs)
+                r = await super().get(url, **kwargs)
                 # Do an additional check of the content returned.
-                self._login_again(r)
+                await self._login_again(r)
         return r
 
-    def post(self, url, data=None, json=None, auto_login=True, **kwargs):
+    async def post(self, url, data=None, json=None, auto_login=True, **kwargs):
         """
-        Overrides requests.Session.post with PACER-specific fun.
+        Overrides httpx.AsyncClient.post with PACER-specific fun.
 
         For ACMS endpoints, this method automatically establishes and reuses
         court-specific authentication cookies. For PACER endpoints, it can
@@ -304,9 +341,9 @@ class PacerSession(requests.Session):
         :param json: json object to post
         :param auto_login: Whether the auto-login procedure should happen.
         :param kwargs: assorted keyword arguments
-        :return: requests.Response
+        :return: httpx.Response
         """
-        court_id = self._prepare_acms_request(url, kwargs)
+        court_id = await self._prepare_acms_request(url, kwargs)
 
         kwargs.setdefault("timeout", 300)
 
@@ -316,26 +353,26 @@ class PacerSession(requests.Session):
         else:
             kwargs.update({"data": data, "json": json})
 
-        r = super().post(url, **kwargs)
+        r = await super().post(url, **kwargs)
         self._update_acms_cookies(court_id)
 
         if auto_login and not court_id:
-            updated = self._login_again(r)
+            updated = await self._login_again(r)
             if updated:
                 # Re-do the request with the new session.
-                return super().post(url, **kwargs)
+                return await super().post(url, **kwargs)
         return r
 
-    def head(self, url, **kwargs):
+    async def head(self, url, **kwargs):
         """
-        Overrides request.Session.head with a default timeout parameter.
+        Overrides httpx.AsyncClient.head with a default timeout parameter.
 
         :param url: url string upon which to do a HEAD request
         :param kwargs: assorted keyword arguments
-        :return: requests.Response
+        :return: httpx.Response
         """
         kwargs.setdefault("timeout", 300)
-        return super().head(url, **kwargs)
+        return await super().head(url, **kwargs)
 
     @staticmethod
     def _prepare_multipart_form_data(data):
@@ -351,25 +388,25 @@ class PacerSession(requests.Session):
         return output
 
     @staticmethod
-    def _desecure_acms_cookies(jar: RequestsCookieJar) -> None:
+    def _desecure_acms_cookies(jar: Cookies) -> None:
         """Clear Secure on ACMS cookies so webhook-sentry's https->http downgrade
         doesn't strip them. See freelawproject/courtlistener#5921."""
         for cookie in _iter_cookies(jar):
             cookie.secure = False
 
-    def _take_acms_cookies(self) -> RequestsCookieJar:
+    def _take_acms_cookies(self) -> Cookies:
         """Move ACMS cookies out of the main PACER jar into a new jar.
 
-        requests stores every response's cookies (redirects included) in
+        HTTPX stores every response's cookies (redirects included) in
         self.cookies. ACMS cookies are pulled out right away so they live only
         in the per-court jars and can't leak between courts.
         """
-        jar = RequestsCookieJar()
+        jar = Cookies()
         # Copy to a list first: we remove cookies from the jar while iterating.
         for cookie in list(_iter_cookies(self.cookies)):
             if cookie.domain.endswith("azurewebsites.us"):
-                jar.set_cookie(cookie)
-                self.cookies.clear(cookie.domain, cookie.path, cookie.name)
+                jar.jar.set_cookie(cookie)
+                self.cookies.delete(cookie.name, cookie.domain, cookie.path)
         return jar
 
     @staticmethod
@@ -387,7 +424,7 @@ class PacerSession(requests.Session):
                id="j_id1:javax.faces.ViewState:0"
                value="some-long-value-here">
 
-        :param r: A request.Response object
+        :param r: A httpx.Response object
         :return The value of the "value" attribute of the ViewState input
         element.
         """
@@ -423,7 +460,9 @@ class PacerSession(requests.Session):
         xpath = "//update[@id='j_id1:javax.faces.ViewState:0']/text()"
         return tree.xpath(xpath)[0]
 
-    def _prepare_login_request(self, url, data, headers, *args, **kwargs):
+    async def _prepare_login_request(
+        self, url, content=None, data=None, headers=None, *args, **kwargs
+    ):
         """Prepares and sends a POST request for login purposes.
 
         This internal helper function constructs a POST request to the provided URL
@@ -431,22 +470,24 @@ class PacerSession(requests.Session):
         request.
 
         :param url: The URL of the login endpoint.
+        :param content: A string containing login credentials.
         :param data: A dictionary containing login credentials.
         :param headers: Additional headers to include in the request.
         :param *args: Additional arguments to be passed to the underlying POST
                request.
         :param **kwargs: Additional keyword arguments to be passed to the
                underlying POST request.
-        :return: requests.Response: The response object from the login request.
+        :return: httpx.Response: The response object from the login request.
         """
-        return super().post(
+        return await super().post(
             url,
+            content=content,
+            data=data,
             headers=headers,
             timeout=60,
-            data=data,
         )
 
-    def login(self, url=None):
+    async def login(self, url=None):
         """Attempt to log into the PACER site.
         The first step is to get an authentication token using a PACER
         username and password.
@@ -484,16 +525,16 @@ class PacerSession(requests.Session):
             data["clientCode"] = self.client_code
 
         headers = {
-            "User-Agent": "Juriscraper",
+            "User-Agent": self.user_agent,
             "Content-type": "application/json",
             "Accept": "application/json",
         }
-        login_post_r = self._prepare_login_request(
-            url, data=json.dumps(data), headers=headers
+        login_post_r = await self._prepare_login_request(
+            url, content=json.dumps(data), headers=headers
         )
 
-        if login_post_r.status_code != requests.codes.ok:
-            message = f"Unable connect to PACER site: '{login_post_r.status_code}: {login_post_r.reason}'"
+        if login_post_r.status_code != httpx.codes.OK:
+            message = f"Unable connect to PACER site: '{login_post_r.status_code}: {login_post_r.reason_phrase}'"
             logger.warning(message)
             raise PacerLoginException(message)
 
@@ -518,7 +559,7 @@ class PacerSession(requests.Session):
                 "Did not get NextGenCSO cookie when attempting PACER login."
             )
         # Set up cookie with 'nextGenCSO' token (128-byte string of characters)
-        session_cookies = requests.cookies.RequestsCookieJar()
+        session_cookies = Cookies()
         session_cookies.set(
             "NextGenCSO",
             response_json.get("nextGenCSO"),
@@ -550,15 +591,15 @@ class PacerSession(requests.Session):
             # obtained later as part of the ACMS request flow and are not fetched
             # during session initialization.
             for court_id in ["ca2", "ca9"]:
-                self.establish_acms_session(court_id)
+                await self.establish_acms_session(court_id)
 
-    def _do_additional_request(self, r: requests.Response) -> bool:
+    def _do_additional_request(self, r: httpx.Response) -> bool:
         """Check if we should do an additional request to PACER, sometimes
         PACER returns the login page even though cookies are still valid.
         Do an additional GET request if we haven't done it previously.
         See https://github.com/freelawproject/courtlistener/issues/2160.
 
-        :param r: The requests Response object.
+        :param r: The httpx Response object.
         :return: True if an additional request should be done, otherwise False.
         """
         if r.request.method == "GET" and self.additional_request_done is False:
@@ -566,7 +607,7 @@ class PacerSession(requests.Session):
             return True
         return False
 
-    def _login_again(self, r):
+    async def _login_again(self, r):
         """Log into PACER if the session has credentials and the session has
         expired.
 
@@ -589,7 +630,7 @@ class PacerSession(requests.Session):
             logger.info(
                 "Invalid/expired PACER session. Establishing new session."
             )
-            self.login()
+            await self.login()
             return True
         else:
             if self._do_additional_request(r):
@@ -616,7 +657,7 @@ class PacerSession(requests.Session):
                 f"Docket sheet URL not implemented for court_id: {court_id}"
             )
 
-    def _get_saml_auth_request_parameters(
+    async def _get_saml_auth_request_parameters(
         self, court_id: str
     ) -> dict[str, str]:
         """
@@ -637,7 +678,9 @@ class PacerSession(requests.Session):
         logger.info(f"Attempting to get SAML credentials for {court_id}")
         # Base URL for retrieving SAML credentials.
         url = self._get_docket_sheet_url(court_id)
-        response = self._prepare_login_request(url, data={}, headers=headers)
+        response = await self._prepare_login_request(
+            url, data={}, headers=headers
+        )
         result_parts = response.text.split("\r\n")
         # Handle gzip decoding
         js_screen = result_parts[-1]
@@ -659,7 +702,7 @@ class PacerSession(requests.Session):
             for input_element in hidden_inputs
         }
 
-    def establish_acms_session(self, court_id: str) -> None:
+    async def establish_acms_session(self, court_id: str) -> None:
         """Establish ACMS auth cookies for `court_id` via the SAML flow.
 
         The handshake runs on this session through ``_prepare_login_request``
@@ -677,7 +720,7 @@ class PacerSession(requests.Session):
         # Discard leftover ACMS cookies so they don't end up in this court's jar.
         self._take_acms_cookies()
 
-        auth_params = self._get_saml_auth_request_parameters(court_id)
+        auth_params = await self._get_saml_auth_request_parameters(court_id)
         # An expired PACER session lands on PACER's login form instead of the
         # SAML form. Its hidden inputs would pass a plain emptiness check.
         if not auth_params.get("SAMLResponse"):
@@ -688,7 +731,7 @@ class PacerSession(requests.Session):
 
         logger.info(f"Establishing ACMS session for {court_id}")
         saml_url = f"https://{court_id}-showdoc.azurewebsites.us/Saml2/Acs"
-        response = self._prepare_login_request(
+        response = await self._prepare_login_request(
             saml_url,
             data=auth_params,
             headers={"Content-Type": "application/x-www-form-urlencoded"},
