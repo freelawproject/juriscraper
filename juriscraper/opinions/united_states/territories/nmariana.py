@@ -122,7 +122,7 @@ class Site(OpinionSiteLinear):
             curiam status, only for the values found in the text. A per
             curiam opinion also clears the author from the listing table
         """
-        metadata = {}
+        metadata: dict[str, dict[str, Any]] = {}
         if docket_number := self._extract_docket_number(scraped_text):
             metadata["Docket"] = {"docket_number": docket_number}
         if self._is_per_curiam(scraped_text):
