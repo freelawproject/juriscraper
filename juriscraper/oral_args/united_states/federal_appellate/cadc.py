@@ -10,21 +10,29 @@ Updated: 2024-10-10
 from datetime import date, datetime
 from urllib.parse import urljoin
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
 from juriscraper.lib.date_utils import unique_year_month
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import BackscrapeOptions
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
-class Site(OralArgumentSiteLinear):
+class Site(OralArgumentSiteLinear[date]):
     days_interval = 28  # ensure monthly backscraper ticks
     first_opinion_date = datetime(2007, 9, 10)
     base_url = "https://media.cadc.uscourts.gov/recordings/bydate/{}"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[date]],
+    ) -> None:
         kwargs.setdefault("verify", False)
-        super().__init__(*args, **kwargs)
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         today = date.today()
         self.url = self.base_url.format(today.strftime("%Y/%-m"))
@@ -33,16 +41,23 @@ class Site(OralArgumentSiteLinear):
     @override
     def _process_html(self) -> None:
         anchor_xpath = "a[contains(@href, '/recordings/docs/') and contains(@href, '.mp3')]"
-        for row in self.html.xpath(f"//div[div[div[div[{anchor_xpath}]]]]"):
-            ahref = row.xpath(f".//{anchor_xpath}")
-            url = ahref[0].xpath("@href")[0]
-            docket = ahref[0].xpath("text()")[0]
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(
+            f"//div[div[div[div[{anchor_xpath}]]]]"
+        )
+        for row in rows:
+            ahref: list[HtmlElement] = row.xpath(f".//{anchor_xpath}")
+            url = ahref[0].attrib["href"]
+            docket: str = ahref[0].xpath("text()")[0]
 
             if "mp3" not in url:
                 logger.info("Not a mp3 URL? %s", url)
                 continue
 
-            cells = row.xpath("div[2]/div")
+            cells = row.findall("div[2]/div")
 
             # From: "Judges: Tatel, Griffith, Sentelle"
             # To: "Tatel; Griffith; Sentelle"
@@ -60,6 +75,7 @@ class Site(OralArgumentSiteLinear):
                 }
             )
 
+    @override
     async def _download_backwards(self, target_date: date) -> None:
         """Download historical data
 
@@ -75,12 +91,14 @@ class Site(OralArgumentSiteLinear):
         self.html = await self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs: dict) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """Use base function to generate a range, then pick
         unique year-month combinations to build the backscrape
         URLS
         """
-        super().make_backscrape_iterable(kwargs)
-        self.back_scrape_iterable = unique_year_month(
-            self.back_scrape_iterable
-        )
+        date_ranges = self._get_backscrape_date_ranges(kwargs)
+        if not bool(date_ranges):
+            self.back_scrape_iterable = []
+            return
+        self.back_scrape_iterable = unique_year_month(date_ranges)

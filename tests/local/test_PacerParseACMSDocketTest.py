@@ -2,6 +2,8 @@ import os
 import re
 import sys
 
+from typing_extensions import override
+
 from juriscraper.pacer import ACMSDocketReport
 from tests import TESTS_ROOT_EXAMPLES_PACER
 from tests.local.PacerParseTestCase import PacerParseTestCase
@@ -10,14 +12,15 @@ from tests.local.PacerParseTestCase import PacerParseTestCase
 class PacerParseAppellateDocketTest(PacerParseTestCase):
     """Can we parse the appellate dockets effectively?"""
 
-    def setUp(self):
+    @override
+    def setUp(self) -> None:
         self.maxDiff = 200000
 
-    def test_parsing_appellate_dockets(self):
+    def test_parsing_appellate_dockets(self) -> None:
         path_root = os.path.join(TESTS_ROOT_EXAMPLES_PACER, "dockets", "acms")
         self.parse_files(path_root, "*.acms_json", ACMSDocketReport)
 
-    def test_acms_datatypes(self):
+    def test_acms_datatypes(self) -> None:
         """Ensure the proper types are returned for a faked-up docket.
 
         In particular, the standard tests compare JSON output but do

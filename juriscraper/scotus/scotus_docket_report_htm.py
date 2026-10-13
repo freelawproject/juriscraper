@@ -2,7 +2,7 @@ import re
 from collections import defaultdict
 from datetime import date
 from enum import Enum
-from typing import Any, TypedDict
+from typing import TypedDict
 
 from lxml import html
 from lxml.html import HtmlElement
@@ -14,6 +14,12 @@ from juriscraper.lib.html_utils import (
 )
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import clean_string, harmonize
+from juriscraper.scotus.types import (
+    SCOTUSAttorney,
+    SCOTUSDocketEntry,
+    SCOTUSMetadata,
+    SCOTUSParty,
+)
 
 from .scotus_docket_report_html import SCOTUSDocketReportHTML
 
@@ -33,18 +39,6 @@ class _CurrentAttorney(TypedDict):
     _email: str | None
 
 
-class _Attorney(TypedDict):
-    name: str | None
-    is_counsel_of_record: bool
-    phone: str | None
-    title: str | None
-    address: str | None
-    city: str | None
-    state: str | None
-    zip: str | None
-    email: str | None
-
-
 class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
     """Parse SCOTUS docket HTM pages."""
 
@@ -59,7 +53,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         "and td[3][contains(normalize-space(.), '~~Phone')]]"
     )
 
-    def __init__(self, court_id: str = "scotus"):
+    def __init__(self, court_id: str = "scotus") -> None:
         """Initialize the HTM report parser.
 
         :param court_id: The court ID.
@@ -72,7 +66,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
 
     @override
     @property
-    def metadata(self) -> dict[str, Any]:
+    def metadata(self) -> SCOTUSMetadata:
         """Return normalized metadata extracted from the HTM docket.
 
         :return: A dict with the SCOTUS docket metadata.
@@ -85,7 +79,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             logger.error("Could not find case metadata table.")
             return {}
         self._case_data_table = table_to_array2d(case_data_table_element)
-        docket_entry_table_elements = self.tree.xpath(
+        docket_entry_table_elements: list[HtmlElement] = self.tree.xpath(
             ".//td[title]/table[.//tr[contains(normalize-space(.), '~~Date~~')]]"
         )
         if len(docket_entry_table_elements) == 0:
@@ -105,11 +99,11 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
                 (i, j)
                 for i, row in enumerate(self._case_data_table)
                 for j, e in enumerate(row)
-                if e.text and e.text.strip().lower().startswith("vide")
+                if (bool(e.text) and e.text.strip().lower().startswith("vide"))
             ),
             None,
         )
-        if vide_cell:
+        if bool(vide_cell):
             logger.info("Found vide field. Ignoring.")
             self._case_data_table.pop(vide_cell[0])
 
@@ -118,7 +112,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
                 (i, j)
                 for i, row in enumerate(self._case_data_table)
                 for j, e in enumerate(row)
-                if e.text and e.text.startswith("Title:")
+                if (bool(e.text) and e.text.startswith("Title:"))
             ),
             None,
         )
@@ -136,12 +130,15 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         m = re.search(
             self.DOCKET_NUMBER_RE, self._case_data_table[0][0].text_content()
         )
-        docket_number = m.group(1).strip() if m else None
+        docket_number = m.group(1).strip() if m is not None else None
 
         # Lower court data
-        lower_court_raw = (self.lower_court_case_numbers_raw or "").strip()
+        raw_case_numbers = self.lower_court_case_numbers_raw
+        lower_court_raw = (
+            raw_case_numbers.strip() if raw_case_numbers is not None else ""
+        )
         lower_court_cleaned = None
-        if lower_court_raw:
+        if bool(lower_court_raw):
             lower_court_cleaned = self.clean_lower_court_cases(
                 lower_court_raw.strip("()")
             )
@@ -161,12 +158,12 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             lower_court_rehearing_denied_date = None
 
         linked_with_label = "string(//tr[td[1][starts-with(normalize-space(.), 'Linked with')]])"
-        linked_with_val = self.tree.xpath(linked_with_label).replace(
-            "Linked with", ""
-        )
-        links = (linked_with_val or "").strip()
+        linked_with_text: str = self.tree.xpath(linked_with_label)
+        linked_with_val = linked_with_text.replace("Linked with", "")
+        links = linked_with_val.strip()
 
         case_name = self.case_name
+        lower_court = self.lower_court
 
         return {
             "docket_number": docket_number,
@@ -174,8 +171,10 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             "date_filed": self.date_filed,
             "case_name": case_name,
             "links": links,
-            "lower_court": self.lower_court or None,
-            "lower_court_case_numbers_raw": lower_court_raw or None,
+            "lower_court": lower_court if bool(lower_court) else None,
+            "lower_court_case_numbers_raw": (
+                lower_court_raw if bool(lower_court_raw) else None
+            ),
             "lower_court_case_numbers": lower_court_cleaned,
             "lower_court_decision_date": lower_court_decision_date,
             "lower_court_rehearing_denied_date": lower_court_rehearing_denied_date,
@@ -234,7 +233,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         return self._get_case_data_text(5, 2)
 
     @property
-    def case_name(self) -> str | None:
+    def case_name(self) -> str:
         if self._page_format == HTMPageFormat.New:
             title_parts = [
                 self._clean_whitespace(node.text_content())
@@ -246,19 +245,20 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
                 self._get_case_data_text(2, 2),
                 self._get_case_data_text(3, 2),
             ]
-        name = harmonize(clean_string(" ".join(p for p in title_parts if p)))
+        name = harmonize(
+            clean_string(" ".join(p for p in title_parts if bool(p)))
+        )
         # Strip trailing dangling "v." when there is no respondent name.
         name = re.sub(r",?\s*v\.\s*$", "", name).strip()
         return name
 
-    @override
-    def _build_docket_entry(
+    def _build_htm_docket_entry(
         self,
         date_str: str,
         description_td: list[HtmlElement],
         attachment_path: str,
         table_layout: bool = False,
-    ) -> dict[str, Any]:
+    ) -> SCOTUSDocketEntry:
         """Build a normalized docket entry dict.
 
         :param date_str: Raw date string from the date cell.
@@ -269,16 +269,20 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         """
         # Select content up to first <br> and excluding .documentlinks;
         # fallback to whole cell. Filter out empty tds.
-        all_fragments = [
-            self._parse_description_html(dtd).strip()
-            or html.tostring(dtd, encoding="unicode").strip()
-            for dtd in description_td
-        ]
+        all_fragments = []
+        for dtd in description_td:
+            fragment = self._parse_description_html(dtd).strip()
+            if not bool(fragment):
+                fragment = html.tostring(dtd, encoding="unicode").strip()
+            all_fragments.append(fragment)
         fragments = [
             fragment
             for fragment in all_fragments
-            if fragment
-            and not re.fullmatch(r"<td\b[^>]*>\s*</td>", fragment, flags=re.I)
+            if (
+                bool(fragment)
+                and re.fullmatch(r"<td\b[^>]*>\s*</td>", fragment, flags=re.I)
+                is None
+            )
         ]
         description_html = "\n".join(fragments)
 
@@ -288,8 +292,8 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             logger.error("SCOTUS HTM docket entry contains attachments.")
 
         description = ""
-        raw = (description_html or "").strip()
-        if raw:
+        raw = (description_html).strip()
+        if bool(raw):
             node = strip_bad_html_tags_insecure(raw)
             description = self._clean_whitespace(node.text_content())
 
@@ -303,7 +307,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
 
     @override
     @property
-    def docket_entries(self) -> list[dict[str, Any]]:
+    def docket_entries(self) -> list[SCOTUSDocketEntry]:
         """Return docket entries from the HTM 'Proceedings and Orders' table.
 
         :return: List of dicts with date_filed, description, description_html, attachments.
@@ -315,29 +319,29 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         row_i = 1
 
         while row_i < len(self._docket_entry_table):
-            if not self._docket_entry_table[row_i]:
+            if not bool(self._docket_entry_table[row_i]):
                 row_i += 1
                 continue
             date_str = self._clean_whitespace(
                 self._docket_entry_table[row_i][0].text_content()
             )
             end_row = row_i + 1
-            while end_row < len(
-                self._docket_entry_table
-            ) and not self._get_docket_entry_table_text(end_row, 0):
+            while end_row < len(self._docket_entry_table) and not bool(
+                self._get_docket_entry_table_text(end_row, 0)
+            ):
                 end_row += 1
             desc_tds = [
                 row[1] for row in self._docket_entry_table[row_i:end_row]
             ]
             while (
-                not desc_tds[-1].text_content()
+                not bool(desc_tds[-1].text_content())
                 or "*****" in desc_tds[-1].text_content()
             ):
                 desc_tds = desc_tds[:-1]
 
             # Build the entry
             entries.append(
-                self._build_docket_entry(
+                self._build_htm_docket_entry(
                     date_str=date_str,
                     description_td=desc_tds,
                     attachment_path=".//a[@href]",
@@ -351,7 +355,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
     def _build_htm_attorney(
         self,
         current_attorney: _CurrentAttorney,
-    ) -> _Attorney:
+    ) -> SCOTUSAttorney:
         """Complete an attorney dict from the HTM Contacts table.
 
         :param current_attorney: The in-progress attorney dict with initial values.
@@ -366,12 +370,12 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         for ln in lines:
             if email is None:
                 m = self.EMAIL_RE.search(ln)
-                if m:
+                if m is not None:
                     email = m.group(0)
                     continue
-            if self.ID_RE.search(ln):
+            if self.ID_RE.search(ln) is not None:
                 continue
-            if ln:
+            if bool(ln):
                 filtered_lines.append(ln)
 
         title, start_add_idx = self._parse_address_title(filtered_lines)
@@ -385,7 +389,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             "is_counsel_of_record": current_attorney["is_counsel_of_record"],
             "phone": current_attorney["phone"],
             "title": title,
-            "address": ", ".join(addr_lines) if addr_lines else None,
+            "address": ", ".join(addr_lines) if bool(addr_lines) else None,
             "city": partial_address.city,
             "state": partial_address.state,
             "zip": partial_address.zip_code,
@@ -394,7 +398,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
 
     @override
     @property
-    def parties(self) -> list[dict[str, Any]]:
+    def parties(self) -> list[SCOTUSParty]:
         """Return parties grouped by type for HTM pages.
 
         :return: List of dicts containing parties data.
@@ -403,18 +407,22 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             return []
 
         # Locate the contacts table.
-        contacts_tbl = next(
-            iter(self.tree.xpath(self.CONTACTS_TABLE_XPATH)), None
+        contact_tables: list[HtmlElement] = self.tree.xpath(
+            self.CONTACTS_TABLE_XPATH
         )
+        contacts_tbl = next(iter(contact_tables), None)
         if contacts_tbl is None:
             return []
 
-        header_tr = next(iter(contacts_tbl.xpath(self.HEADER_ROW_XPATH)), None)
+        header_rows: list[HtmlElement] = contacts_tbl.xpath(
+            self.HEADER_ROW_XPATH
+        )
+        header_tr = next(iter(header_rows), None)
         if header_tr is None:
             return []
 
-        parties_by_key: dict[tuple[str, str], list[_Attorney]] = defaultdict(
-            list
+        parties_by_key: dict[tuple[str, str], list[SCOTUSAttorney]] = (
+            defaultdict(list)
         )
         current_type = None
         current_attorney: _CurrentAttorney | None = None
@@ -422,30 +430,32 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         def _flush_attorney(party_name: str = "") -> None:
             """Finalize current_attorney and add to parties_by_key."""
             nonlocal current_attorney
-            if current_attorney:
+            if bool(current_attorney):
                 attorney = self._build_htm_attorney(current_attorney)
-                type_key = (current_type or "Other", party_name)
+                type_key = (
+                    (current_type if bool(current_type) else "Other"),
+                    party_name,
+                )
                 parties_by_key[type_key].append(attorney)
                 current_attorney = None
 
         for tr in header_tr.itersiblings(tag="tr"):
-            tds = tr.xpath("./td")
-            if not tds:
+            tds: list[HtmlElement] = tr.xpath("./td")
+            if not bool(tds):
                 continue
 
             # Match table header e.g: "Attorneys for Petitioner:"
             # New format wraps in <B>; old format uses plain text.
             first_td_text = self._clean_whitespace(tds[0].text_content())
-            header_text = self._clean_whitespace(
-                "".join(tr.xpath("./td[1]//b/text()"))
-            )
-            if not header_text and re.match(
-                r"Attorneys for \w+", first_td_text
+            header_parts: list[str] = tr.xpath("./td[1]//b/text()")
+            header_text = self._clean_whitespace("".join(header_parts))
+            if not bool(header_text) and bool(
+                re.match(r"Attorneys for \w+", first_td_text)
             ):
                 header_text = first_td_text
-            if header_text:
+            if bool(header_text):
                 mapped = self._map_contacts_header_to_type(header_text)
-                if mapped:
+                if bool(mapped):
                     # Flush any pending attorney without a "Party name:" row.
                     _flush_attorney()
                     current_type = mapped
@@ -454,7 +464,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             # Party name row. Finish previous attorney.
             party_name_re = r"^Party name:\s*"
             party_line = self._clean_whitespace(tr.text_content())
-            if re.search(party_name_re, party_line, flags=re.I):
+            if re.search(party_name_re, party_line, flags=re.I) is not None:
                 current_party_name = re.sub(
                     party_name_re, "", party_line, flags=re.I
                 ).strip()
@@ -479,45 +489,52 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             )
 
             # Skip spacing rows (only &nbsp; / whitespace).
-            if not name_col and not address_col:
+            if not bool(name_col) and not bool(address_col):
                 _flush_attorney()
                 continue
 
             # Email-only row appears in the address column.
             if (
-                not name_col
-                and address_col
-                and self.EMAIL_RE.search(address_col)
+                not bool(name_col)
+                and bool(address_col)
+                and bool(self.EMAIL_RE.search(address_col))
             ):
-                if current_attorney:
+                if bool(current_attorney):
                     email_search = self.EMAIL_RE.search(address_col)
-                    if email_search:
+                    if email_search is not None:
                         current_attorney["_email"] = email_search.group(0)
                 continue
 
             # "Counsel of Record" marker row.
-            if re.search(r"\bcounsel\s+of\s+record\b", name_col, re.I):
-                if current_attorney:
+            if (
+                re.search(r"\bcounsel\s+of\s+record\b", name_col, re.I)
+                is not None
+            ):
+                if bool(current_attorney):
                     current_attorney["is_counsel_of_record"] = True
-                    if address_col:
+                    if bool(address_col):
                         current_attorney["_raw_lines"].append(address_col)
                 continue
 
             # Beginning of a new attorney row.
-            if name_col:
+            if bool(name_col):
                 current_attorney = {
-                    "name": name_col or None,
+                    "name": (name_col if bool(name_col) else None),
                     "is_counsel_of_record": False,
-                    "phone": phone_col or None,
+                    "phone": (phone_col if bool(phone_col) else None),
                     "_raw_lines": [],
                     "_email": None,
                 }
-                if address_col:
+                if bool(address_col):
                     current_attorney["_raw_lines"].append(address_col)
                 continue
 
             # Address parsing continuation for the current attorney.
-            if not name_col and address_col and current_attorney:
+            if (
+                not bool(name_col)
+                and bool(address_col)
+                and bool(current_attorney)
+            ):
                 current_attorney["_raw_lines"].append(address_col)
                 continue
 
@@ -563,7 +580,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         tr = self._htm_row_for_label(label, allow_indent=allow_indent)
         if tr is None:
             return None
-        val_td = next(iter(tr.xpath("./td[2]")), None)
+        val_td = tr.find("./td[2]")
         return (
             self._clean_whitespace(val_td.text_content())
             if val_td is not None
@@ -571,7 +588,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         )
 
 
-def _main():
+def _main() -> None:
     """Parse a local HTML file and pretty-print normalized data.
 
     :return: None

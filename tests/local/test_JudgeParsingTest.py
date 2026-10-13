@@ -2,6 +2,7 @@
 
 
 import unittest
+from typing import TypedDict
 
 from juriscraper.lib.judge_parsers import (
     normalize_judge_names,
@@ -10,9 +11,14 @@ from juriscraper.lib.judge_parsers import (
 from juriscraper.pacer.docket_utils import normalize_party_types
 
 
+class _JudgeExample(TypedDict):
+    q: str
+    a: tuple[str, str]
+
+
 class JudgeParsingTest(unittest.TestCase):
-    def test_title_name_splitter(self):
-        pairs = [
+    def test_title_name_splitter(self) -> None:
+        pairs: list[_JudgeExample] = [
             {
                 "q": "Magistrate Judge George T. Swartz",
                 "a": ("George T. Swartz", "mag"),
@@ -30,7 +36,7 @@ class JudgeParsingTest(unittest.TestCase):
         for pair in pairs:
             self.assertEqual(pair["a"], normalize_judge_string(pair["q"]))
 
-    def test_name_normalization(self):
+    def test_name_normalization(self) -> None:
         pairs = [
             {
                 "q": "Michael J Lissner",
@@ -56,7 +62,7 @@ class JudgeParsingTest(unittest.TestCase):
         for pair in pairs:
             self.assertEqual(pair["a"], normalize_judge_names(pair["q"]))
 
-    def test_party_type_normalization(self):
+    def test_party_type_normalization(self) -> None:
         pairs = [
             {
                 "q": "Defendant                                 (1)",

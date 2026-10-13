@@ -43,7 +43,7 @@ class TamesEmail(AbstractParser[TamesEmailData | None]):
     """Parse TAMES case notification emails from Texas courts."""
 
     def __init__(self, court_id: str = "") -> None:
-        self.court_id: str = court_id
+        super().__init__(court_id)
         self.tree: HtmlElement | None = None
         self.message: email.message.Message | None = None
         self._court_id: str | None = None

@@ -20,19 +20,21 @@
 import os
 import re
 from datetime import date, datetime, timedelta
+from typing import Literal
 from urllib.parse import urlparse
 
 from dateutil import parser
 from lxml import html as lxmlHTML
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
 from juriscraper.ClusterSite import ClusterSite
-from juriscraper.lib.string_utils import titlecase
-from juriscraper.lib.type_utils import OpinionType
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import OpinionType, RawOpinion
 
 
-class Site(ClusterSite):
+class Site(ClusterSite[tuple[date, date]]):
     param_date_format = "%-m/%-d/%Y"
     first_opinion_date = datetime(2002, 1, 24, 0, 0, 0)
     # Interval for default scrape and backscrape iterable generation
@@ -42,7 +44,15 @@ class Site(ClusterSite):
     # days
     max_days_to_cluster = 10
 
-    oci_mapper = {
+    oci_mapper: dict[
+        str,
+        Literal[
+            "lower_court_number",
+            "lower_court",
+            "lower_court_judge",
+            "court_reporter",
+        ],
+    ] = {
         # Court of Appeals Information
         "COA Case": "lower_court_number",
         "COA District": "lower_court",
@@ -60,8 +70,13 @@ class Site(ClusterSite):
         "//table[@class='rgMasterTable']/tbody/tr[not(@class='rgNoRecords')]"
     )
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.checkbox = 0
         self.court_number = "0"
@@ -69,7 +84,7 @@ class Site(ClusterSite):
         self.url = "https://search.txcourts.gov/CaseSearch.aspx?coa=cossup"
         self.make_backscrape_iterable(kwargs)
 
-        self.next_page = None
+        self.next_page: list[lxmlHTML.HtmlElement] = []
         self.current_page = 1
         # Default scrape range if not doing a backscrape
         self.end_date = date.today()
@@ -103,9 +118,17 @@ class Site(ClusterSite):
         to_date_param = self.make_date_param(self.end_date, end_date_str)
 
         self.parameters = {}
-        for hidden in self.html.xpath("//input[@type='hidden']"):
-            value = hidden.xpath("@value")[0] if hidden.xpath("@value") else ""
-            self.parameters[hidden.xpath("@name")[0]] = value
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        hidden_inputs: list[HtmlElement] = self.html.xpath(
+            "//input[@type='hidden']"
+        )
+        for hidden in hidden_inputs:
+            value = hidden.get("value", "")
+            name: str = hidden.xpath("@name")[0]
+            self.parameters[name] = value
 
         self.parameters.update(
             {
@@ -133,8 +156,9 @@ class Site(ClusterSite):
         # "ctl00$ContentPlaceHolder1$grdDocuments$ctl00$ctl02$ctl00$ctl18"
         # Couldn't get pagination working when using the numbered page anchors,
         # whose id goes into __EVENTTARGET
-        if self.next_page:
-            self.parameters[self.next_page[0].xpath("@name")[0]] = ""
+        if bool(self.next_page):
+            name: str = self.next_page[0].xpath("@name")[0]
+            self.parameters[name] = ""
 
     @override
     async def _process_html(self) -> None:
@@ -148,43 +172,49 @@ class Site(ClusterSite):
             self._set_parameters()
             self.html = await super()._download()
 
-        for row in self.html.xpath(self.rows_xpath):
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(self.rows_xpath)
+        for row in rows:
             # `Document search` page returns OpinionClusters separated,
             # each opinion in a single row. We keep track to skip if we already
             # parsed the case
-            case_url = row.xpath(".//a")[2].get("href")
+            case_url = row.findall(".//a")[2].attrib["href"]
             if case_url in self.seen_case_urls:
                 continue
             self.seen_case_urls.add(case_url)
 
-            op_date = row.xpath("td[2]")[0].text_content()
+            op_date = row.findall("td[2]")[0].text_content()
             case_dict = await self.parse_case_page(case_url, op_date)
             case_dict["date"] = op_date
-            case_dict["docket"] = row.xpath("td[5]")[0].text_content().strip()
+            docket = row.findall("td[5]")[0].text_content().strip()
+            case_dict["docket"] = docket
 
             judges = [
-                op["author"]
-                for op in case_dict["sub_opinions"]
-                if op.get("author")
+                author
+                for op in case_dict.get("sub_opinions", [])
+                if (bool(author := op.get("author")))
             ]
             case_dict["judge"] = "; ".join(judges)
 
             if (
                 self.checkbox >= 2  # only checking for COA's not crim
                 and self.court_number
-                != case_dict["docket"][
+                != docket[
                     :2
                 ]  # first to docket numbers indicate the court (03-26-00075-CV)
             ):
                 logger.warning(
                     "Skipping docket %s - belongs to court %s, not %s",
-                    case_dict["docket"],
-                    case_dict["docket"][:2],
+                    docket,
+                    docket[:2],
                     self.court_number,
                 )
                 continue
 
-            if not case_dict["sub_opinions"]:
+            if not bool(case_dict.get("sub_opinions")):
                 # Some cases have opinion documents mislabeled on the
                 # court website (e.g. labeled as "Notice" or "Judgment"
                 # instead of "Opinion"), so get_opinions() returns an
@@ -192,7 +222,7 @@ class Site(ClusterSite):
                 # downstream when download_urls is missing. #1852
                 logger.error(
                     "Skipping docket %s - no opinion documents found",
-                    case_dict["docket"],
+                    docket,
                 )
                 continue
 
@@ -203,12 +233,14 @@ class Site(ClusterSite):
             "//input[@title='Next Page' and not(@onclick='return false;')]"
         )
         self.next_page = self.html.xpath(next_page_xpath)
-        if self.next_page and not self.test_mode_enabled():
+        if bool(self.next_page) and not self.test_mode_enabled():
             self.current_page += 1
             logger.info(f"Paginating to page {self.current_page}")
             await self._process_html()
 
-    async def parse_case_page(self, link: str, opinion_date: str) -> dict:
+    async def parse_case_page(
+        self, link: str, opinion_date: str
+    ) -> RawOpinion:
         """Parses the case page
 
         Usually we would defer getting extra data until dup checking
@@ -218,7 +250,7 @@ class Site(ClusterSite):
         :param link: url of the case page
         :return: parsed case dictionary
         """
-        parsed = {}
+        parsed: RawOpinion = {}
         if self.test_mode_enabled():
             # Support "sub" pages on test_ScraperExampleTest by modifying
             # the href attribute of the case page, to point to the proper local file
@@ -228,14 +260,16 @@ class Site(ClusterSite):
             )
             await self._request_url_mock(link)
             html = self._return_response_text_object()
+            if not isinstance(html, HtmlElement):
+                raise TypeError("Expected a downloaded HTML document")
         else:
             html = await self._get_html_tree_by_url(link)
 
         parsed["name"] = self.get_name(html, link)
 
         start_date = self.get_by_label_from_case_page(html, "Date Filed:")
-        if start_date:
-            parsed["other_dates"] = (
+        if bool(start_date):
+            parsed["other_date"] = (
                 f"Date case began in court of appeals: {start_date}"
             )
 
@@ -255,10 +289,10 @@ class Site(ClusterSite):
         )
 
         # Prioritize the "higher" (COA) lower court
-        oci = {}
+        oci: RawOpinion = {}
         if self.checkbox in [0, 1]:
             oci = self.parse_originating_court_info(html, coa_id)
-        if not oci:
+        if not bool(oci):
             oci = self.parse_originating_court_info(html, trial_id)
         parsed.update(oci)
 
@@ -266,7 +300,7 @@ class Site(ClusterSite):
 
     def parse_originating_court_info(
         self, html: lxmlHTML.HtmlElement, table_id: str
-    ) -> dict:
+    ) -> RawOpinion:
         """Parses Originating Court Information section
 
         Some Supreme Court or texcrimapp cases have OCI for both Appeals
@@ -280,41 +314,31 @@ class Site(ClusterSite):
 
         :return: dict with parsed OCI data
         """
-        labels = html.xpath(
+        labels: list[str] = html.xpath(
             f"//div[@id='{table_id}']//div[@class='span2']/label/text()"
         )
-        values = html.xpath(f"//div[@id='{table_id}']//div[@class='span4']")
+        values: list[HtmlElement] = html.xpath(
+            f"//div[@id='{table_id}']//div[@class='span4']"
+        )
 
-        data = {}
+        data: RawOpinion = {}
         for lab, val in zip(labels, values):
             key = self.oci_mapper.get(lab.strip())
-            val = (
+            value: str = (
                 val.xpath("div/a/text()")[0]
-                if val.xpath("div/a")
+                if bool(val.findall("div/a"))
                 else val.xpath("text()[last()]")[0]
             )
-            if not key or not val.strip():
+            if not bool(key) or not bool(value.strip()):
                 continue
-            data[key] = val.strip()
-
-        if "COA" in table_id:
-            citation = data.pop("citation", "")
-            if "," in citation:
-                _, data["date_judgment"] = citation.split(",")
-            elif "-" in citation or "/" in citation:
-                try:
-                    data["date_judgment"] = parser.parse(citation).date()
-                except parser.ParserError:
-                    pass
+            data[key] = value.strip()
 
         # delete placeholder names
-        if data.get("lower_court_judge") and re.search(
-            "County|District", data["lower_court_judge"]
-        ):
+        judge = data.get("lower_court_judge")
+        if bool(judge) and bool(re.search("County|District", judge)):
             data["lower_court_judge"] = ""
-        if data.get("court_reporter") and re.search(
-            "Court Reporter", data["court_reporter"]
-        ):
+        reporter = data.get("court_reporter")
+        if bool(reporter) and bool(re.search("Court Reporter", reporter)):
             data["court_reporter"] = ""
 
         return data
@@ -328,7 +352,7 @@ class Site(ClusterSite):
             # In many cases the court leaves off the plaintiff (The State of Texas).  But
             # in some of these cases the appellant is ex parte.  So we need to
             # add the state of texas in some cases but not others.
-            if defendant:
+            if bool(defendant):
                 return titlecase(f"{plaintiff} v. {defendant}")
             elif "WR-" not in link:
                 return titlecase(f"{plaintiff} v. The State of Texas")
@@ -340,7 +364,7 @@ class Site(ClusterSite):
 
     def get_opinions(
         self, html: lxmlHTML.HtmlElement, op_date: str
-    ) -> tuple[list[dict], str]:
+    ) -> tuple[list[RawOpinion], str]:
         """Get opinions belonging to this cluster from the case page
 
         Use the search interface date to look for clusters around that date,
@@ -360,7 +384,7 @@ class Site(ClusterSite):
         :param op_date: date to identify related opinions of a case
         :return: List of opinions
         """
-        opinions = []
+        opinions: list[RawOpinion] = []
         disposition = ""
         opinion_xpath = "//div[div[contains(text(), 'Case Events')]]//tr[td[contains(text(), 'pinion issued')]]"
         link_xpath = ".//tr[td[1]/a and td[2][contains(translate(text(), 'PINION', 'pinion'), 'pinion') or normalize-space(text())='CCA']]"
@@ -369,15 +393,16 @@ class Site(ClusterSite):
         except ValueError:
             search_date = parser.parse(op_date).date()
 
-        for opinion in html.xpath(opinion_xpath):
-            op = {}
-            link = opinion.xpath(link_xpath)
-            if not link:
+        opinion_matches: list[HtmlElement] = html.xpath(opinion_xpath)
+        for opinion in opinion_matches:
+            op: RawOpinion = {}
+            link: list[HtmlElement] = opinion.xpath(link_xpath)
+            if not bool(link):
                 logger.warning("No link for this opinion")
                 continue
 
+            date_string: str = opinion.xpath(".//td[1]/text()")[0]
             try:
-                date_string = opinion.xpath(".//td[1]/text()")[0]
                 opinion_date = datetime.strptime(
                     date_string, "%m/%d/%Y"
                 ).date()
@@ -396,12 +421,12 @@ class Site(ClusterSite):
             op["url"] = link[0].xpath("td/a/@href")[0]
 
             # Check both document type (td[2]) and disposition (td[3]) for opinion type
-            op_type = link[0].xpath("td[2]/text()")[0].strip().lower()
+            op_type: str = link[0].xpath("td[2]/text()")[0].strip().lower()
 
             # Get disposition text
-            op_disposition_raw = (
+            op_disposition_raw: str = (
                 opinion.xpath(".//td[3]/text()")[0].strip()
-                if opinion.xpath(".//td[3]/text()")
+                if bool(opinion.xpath(".//td[3]/text()"))
                 else ""
             )
             op_disposition_lower = op_disposition_raw.lower()
@@ -432,12 +457,14 @@ class Site(ClusterSite):
     ) -> str:
         """Helper to get text following a label on the case page"""
         try:
-            return html.xpath(
+            text: str = html.xpath(
                 f'//label[contains(text(), "{label}")]/parent::div/following-sibling::div/text()'
             )[0].strip()
+            return text
         except IndexError:
             return ""
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Overrides present scraper start_date and end_date
 

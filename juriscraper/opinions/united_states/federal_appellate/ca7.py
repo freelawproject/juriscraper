@@ -5,15 +5,34 @@
 import re
 
 import feedparser
-from typing_extensions import override
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
+class _Entry(TypedDict):
+    summary: str
+    published: str
+    link: str
+
+
+_entry_adapter = TypeAdapter(_Entry)
+
+
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    year: int
+
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.url = "https://media.ca7.uscourts.gov/cgi-bin/OpinionsWeb/processWebInputExternal.pl?Time=month&startDate=&endDate=&Author=any&AuthorName=&Case=any&CaseYear=&CaseNum=&Rubmit=RssRecent&RssJudgeName=Sykes&OpsOnly=yes"
         self.should_have_results = True
         self.court_id = self.__module__
@@ -22,11 +41,15 @@ class Site(OpinionSiteLinear):
     def _process_html(self) -> None:
         if self.test_mode_enabled():
             self.year = 2022
-        feed = feedparser.parse(self.request["response"].content)
-        for item in feed["entries"]:
-            if item.get("published_parsed", None) is None:
+        response = self.request.get("response")
+        if response is None:
+            raise ValueError("Download a response before accessing it.")
+        feed = feedparser.parse(response.content)
+        for raw_item in feed.entries:
+            if raw_item.get("published_parsed") is None:
                 logger.warning("Skipping item with no published date")
                 continue
+            item = _entry_adapter.validate_python(raw_item, strict=True)
             parts = item["summary"].split()
             docket = parts[parts.index("case#") + 1]
             name = item["summary"].split(docket)[1].split("(")[0]
@@ -50,7 +73,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract lower court from the scraped text.
 
         :param scraped_text: The text to extract from.
@@ -69,12 +93,12 @@ class Site(OpinionSiteLinear):
         )
 
         lower_court = ""
-        if match := pattern.search(scraped_text):
+        if (match := pattern.search(scraped_text)) is not None:
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
 
-        if lower_court:
+        if bool(lower_court):
             return {
                 "Docket": {
                     "appeal_from_str": lower_court,

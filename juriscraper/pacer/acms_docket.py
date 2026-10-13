@@ -1,30 +1,51 @@
-import json
 import pprint
 import re
 import sys
 from collections import OrderedDict
+from datetime import datetime
+from typing import TYPE_CHECKING
 
 from httpx import Response
+from lxml.html import HtmlElement
+from typing_extensions import TypedDict, override
 
+from juriscraper.lib.acms_types import DOCKET_PAYLOAD, AcmsDocketPayload
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.network_utils import AcmsApiClient
 from juriscraper.lib.string_utils import convert_date_string
 
-from .appellate_docket import AppellateDocketReport
+from .appellate_docket import AppellateParty, AppellatePartyParser
+from .docket_report import DocketAttorney
 
 logger = make_default_logger()
 
+if TYPE_CHECKING:
+    from .http import PacerSession
 
-class ACMSDocketReport(AppellateDocketReport):
+
+class AcmsDocketResult(TypedDict):
+    document_number: int
+    description_html: str
+    description: str
+    date_entered: datetime | None
+    date_filed: datetime | None
+    pacer_doc_id: str
+    page_count: int
+
+
+class ACMSDocketReport(AppellatePartyParser):
     """Parse ACMS docket JSON."""
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(
+        self, court_id: str, pacer_session: "PacerSession | None" = None
+    ) -> None:
         super().__init__(court_id, pacer_session)
-        self._acms_json = None
+        self._acms_json: AcmsDocketPayload | None = None
         self.api_client = AcmsApiClient(pacer_session, court_id)
 
-    def _parse_text(self, text):
+    @override
+    def _parse_text(self, text: str) -> None:
         """Store the ACMS JSON
 
         This does not, in fact, actually *parse* the data, it
@@ -34,17 +55,21 @@ class ACMSDocketReport(AppellateDocketReport):
         :param text: A unicode object
         :return: None
         """
-        self._acms_json = json.loads(text)
+        self._acms_json = None
+        self.is_valid = False
+        self._acms_json = DOCKET_PAYLOAD.validate_json(text, strict=True)
+        self.is_valid = True
 
-    async def query(self, case_id: str):
+    async def query(self, case_id: str) -> None:
         """
         Queries the court API for case and docket details for a given case ID.
 
         :param case_id: The unique identifier of the case to query.
         """
-        assert self.session is not None, (
-            "session attribute of AppellateDocketReport cannot be None."
-        )
+        if self.session is None:
+            raise ValueError(
+                "session attribute of AppellateDocketReport cannot be None."
+            )
         # Fetch Case Details
         case_data = await self.api_client.get_case_details(case_id)
 
@@ -56,6 +81,7 @@ class ACMSDocketReport(AppellateDocketReport):
             "caseDetails": case_data,
             "docketInfo": entry_details,
         }
+        self.is_valid = True
 
     async def download_pdf(
         self, entry_id: str, doc_id: str
@@ -81,11 +107,11 @@ class ACMSDocketReport(AppellateDocketReport):
         attachment_list = await self.api_client.get_attachments(
             entry_id, False, False
         )
-        if not attachment_list:
+        if not bool(attachment_list):
             return None, "No documents found for the given entry."
 
         # Case: multiple documents found but no document ID provided
-        if not doc_id and len(attachment_list) > 1:
+        if not bool(doc_id) and len(attachment_list) > 1:
             error_message = (
                 "Multiple documents found for this entry. Please "
                 "provide a document ID."
@@ -93,7 +119,7 @@ class ACMSDocketReport(AppellateDocketReport):
             return None, error_message
 
         # Determine which document data to use
-        if not doc_id:
+        if not bool(doc_id):
             doc_data = attachment_list[0]
         else:
             doc_data = next(
@@ -103,37 +129,50 @@ class ACMSDocketReport(AppellateDocketReport):
                 ),
                 None,
             )
-            if not doc_data:
+            if not bool(doc_data):
                 return None, f"Document ID '{doc_id}' not found in this entry."
 
+        document_url = doc_data.get("documentUrl")
+        page_count = doc_data.get("pageCount")
+        if not bool(document_url) or page_count is None:
+            return None, "Document is missing its download URL or page count."
         r = await self.api_client.download_pdf(
             doc_data["docketDocumentDetailsId"],
-            doc_data["pageCount"],
-            doc_data["documentUrl"],
+            page_count,
+            document_url,
         )
         return r, ""
 
     @property
-    def metadata(self):
+    def metadata(self) -> dict[str, object]:
         """Metadata is the basis returned by BaseDocketReport's data property.
 
         That function then supplements it with parties and docket entries.
         """
 
+        if self._acms_json is None:
+            raise ValueError(
+                "Parse an ACMS docket before accessing its contents."
+            )
         caseDetails = self._acms_json["caseDetails"]
+        court = (
+            court_value
+            if bool(court_value := caseDetails.get("court"))
+            else {}
+        )
 
-        data = {
+        data: dict[str, object] = {
             "court_id": self.court_id,
             "pacer_case_id": caseDetails["caseId"],
             "docket_number": caseDetails["caseNumber"],
             "case_name": caseDetails["name"],
             "date_filed": convert_date_string(caseDetails["caseOpened"]),
-            "appeal_from": caseDetails["court"]["name"],
+            "appeal_from": court.get("name"),
             "fee_status": caseDetails["feeStatus"],
         }
 
         # originating_court_infomation, see AppellateDocketReport
-        ogc_info = {}
+        ogc_info: dict[str, str | None] = {}
 
         # Surprisingly, we lack the lower court docket number. (!)
 
@@ -149,24 +188,30 @@ class ACMSDocketReport(AppellateDocketReport):
         #          identifier: "S.D.N.Y. (NEW YORK CITY)" }
         # districtCourtName: "San Francisco Northern California"
         # districtCourtName: "Los Angeles Central California"
-        if caseDetails["court"]:
-            court = caseDetails["court"]
+        if bool(court):
             if "name" in court:
                 ogc_info["name"] = court["name"]
             if "identifier" in court:
                 ogc_info["identifier"] = court["identifier"]
-        if caseDetails["districtCourtName"]:
+        if bool(caseDetails["districtCourtName"]):
             ogc_info["name"] = caseDetails["districtCourtName"]
 
-        if caseDetails["aNumber"]:
+        if bool(caseDetails["aNumber"]):
             ogc_info["RESTRICTED_ALIEN_NUMBER"] = caseDetails["aNumber"]
 
-        if ogc_info:
+        if bool(ogc_info):
             data["originating_court_information"] = ogc_info
 
         # Comma-seperated list of non-null case types, subtypes, &c.
-        case_type_keys = ["caseType", "caseSubType", "caseSubSubType"]
-        case_types = [caseDetails[_] for _ in case_type_keys if caseDetails[_]]
+        case_types = [
+            value
+            for value in (
+                caseDetails["caseType"],
+                caseDetails["caseSubType"],
+                caseDetails["caseSubSubType"],
+            )
+            if bool(value)
+        ]
         data["case_type_information"] = ", ".join(case_types)
 
         # This is unwise and unreasonably general, cf. lib/utils.py
@@ -175,7 +220,7 @@ class ACMSDocketReport(AppellateDocketReport):
         return data
 
     @property
-    def parties(self):
+    def parties(self) -> list[AppellateParty]:
         """Parse and return a dict of party/atty info.
 
         This parses the HTML embeded in the docket entry JSON provided
@@ -335,40 +380,43 @@ class ACMSDocketReport(AppellateDocketReport):
         # The second <td> is the atty list.
         # Within the atty list, there is one <div> per attorney.
 
+        if self._acms_json is None:
+            raise ValueError(
+                "Parse an ACMS docket before accessing its contents."
+            )
         parties_html = self._acms_json["caseDetails"]["partyAttorneyList"]
         tree = strip_bad_html_tags_insecure(parties_html)
-        party_rows = tree.xpath(".//tr")
-        parties = []
+        party_rows: list[HtmlElement] = tree.xpath(".//tr")
+        parties: list[AppellateParty] = []
+        all_attorneys: list[DocketAttorney] = []
         for row in party_rows:
-            party = OrderedDict()
+            party: AppellateParty = OrderedDict()
 
-            (party_left, attorneys_block) = row.xpath(".//td")
+            cells: list[HtmlElement] = row.xpath(".//td")
+            (party_left, attorneys_block) = cells
 
             party.update(self._parse_party_left(party_left))
 
-            attorneys = []
+            attorneys: list[DocketAttorney] = []
             for attorney in attorneys_block:
-                _ = self._parse_attorney(attorney)
+                parsed_attorney = self._parse_attorney(attorney)
                 # Sometimes there are empty padding lines, e.g.:
                 #   <div><p>&nbsp;</p></div>
                 # Ignore them.
-                attorneys.append(_) if _ else None
+                if bool(parsed_attorney):
+                    attorneys.append(parsed_attorney)
 
             party["attorneys"] = attorneys
 
             parties.append(party)
+            all_attorneys.extend(attorneys)
 
-        # Assert there is no "SEE ABOVE" in ACMS text, so no need
-        # to call `self.normalalize_see_above_attorneys()`
-        for party in parties:
-            for attorney in party.get("attorneys", []):
-                if re.search(r"see\s+above", attorney.get("attorneys", "")):
-                    assert "Unexpected SEE ABOVE found in ACMS attorney list"
+        self._normalize_see_above_attorneys(all_attorneys)
 
         return parties
 
     @property
-    def docket_entries(self):
+    def docket_entries(self) -> list[AcmsDocketResult]:
         """Return a dictionary of docket entries
 
         Format this for courtlistener's `DocketEntry` class
@@ -385,7 +433,11 @@ class ACMSDocketReport(AppellateDocketReport):
 
         """
 
-        docket_entries = []
+        docket_entries: list[AcmsDocketResult] = []
+        if self._acms_json is None:
+            raise ValueError(
+                "Parse an ACMS docket before accessing its contents."
+            )
         for row in self._acms_json["docketInfo"]["docketEntries"]:
             _ = """Here's what we have to work with:
 {
@@ -403,16 +455,9 @@ class ACMSDocketReport(AppellateDocketReport):
   "selected": false
 },"""
 
-            de = {}
-            de["document_number"] = row["entryNumber"]
-
-            # Return HTML, currently unused.
-            de["description_html"] = row["docketEntryText"]
-
             # Convert to plain text
             tree = strip_bad_html_tags_insecure(row["docketEntryText"])
             docket_text = tree.text_content()
-            de["description"] = docket_text
 
             # "...[Entered: 09/27/2023 03:30 PM]"
             # "...[Entered: 10/05/2023 03:56 PM] [Edited: 10/06/2023 10:51 AM]"
@@ -437,25 +482,32 @@ class ACMSDocketReport(AppellateDocketReport):
             # by the superclass, which can be told to parse `date`s
             # but not `datetime`s. So we have to do it ourselves.
             datetime_str = self._get_value(datetime_entered_regex, docket_text)
-            de["date_entered"] = (
+            date_entered = (
                 convert_date_string(datetime_str, datetime=True)
-                if datetime_str
+                if bool(datetime_str)
                 else None
             )
 
-            de["date_filed"] = convert_date_string(
+            date_filed = convert_date_string(
                 row["endDateFormatted"], datetime=True
             )
 
-            de["pacer_doc_id"] = row["docketEntryId"]
-            de["page_count"] = row["pageCount"]
-
-            docket_entries.append(de)
+            docket_entries.append(
+                {
+                    "document_number": row["entryNumber"],
+                    "description_html": row["docketEntryText"],
+                    "description": docket_text,
+                    "date_entered": date_entered,
+                    "date_filed": date_filed,
+                    "pacer_doc_id": row["docketEntryId"],
+                    "page_count": row["pageCount"],
+                }
+            )
 
         return docket_entries
 
 
-def _main():
+def _main() -> None:
     if len(sys.argv) != 2:
         print("Usage: python -m juriscraper.pacer.acms_docket filepath")
         print("Please provide a path to a JSON file to parse.")

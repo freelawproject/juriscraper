@@ -1,20 +1,27 @@
 from datetime import date, datetime
 from urllib.parse import urlencode
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[tuple[date, date]]):
     # This URL will show most recent opinions
     base_url = "https://www.ca1.uscourts.gov/opn/aci"
     days_interval = 5
     first_opinion_date = datetime(2003, 3, 23)
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = self.base_url
         self.make_backscrape_iterable(kwargs)
@@ -22,14 +29,19 @@ class Site(OpinionSiteLinear):
 
     @override
     def _process_html(self) -> None:
-        for row in self.html.xpath("//tr[not(th)]"):
-            title = row.xpath("td[2]/a/text()")[0]
-            url = row.xpath("td[2]/a/@href")[0]
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath("//tr[not(th)]")
+        for row in rows:
+            title: str = row.xpath("td[2]/a/text()")[0]
+            url: str = row.xpath("td[2]/a/@href")[0]
             status = self.get_status_from_opinion_title(title)
-            docket = row.xpath("td[3]/a/text()")[0]
-            date_filed = row.xpath("td[1]/span/text()")[0]
-            name = row.xpath("td[4]/text()")[0]
-            lower_court = row.xpath("td[4]/span/text()")[0]
+            docket: str = row.xpath("td[3]/a/text()")[0]
+            date_filed: str = row.xpath("td[1]/span/text()")[0]
+            name: str = row.xpath("td[4]/text()")[0]
+            lower_court: str = row.xpath("td[4]/span/text()")[0]
             self.cases.append(
                 {
                     "name": name.strip(),
@@ -58,6 +70,7 @@ class Site(OpinionSiteLinear):
             status = "Unknown"
         return status
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Change URL to backscraping date range
 

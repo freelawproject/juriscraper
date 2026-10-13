@@ -15,21 +15,28 @@ import re
 from datetime import date, datetime
 from urllib.parse import urlencode
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[tuple[date, date]]):
     base_url = "https://www.vermontjudiciary.org/opinions-decisions"
     days_interval = 30
     first_opinion_date = datetime(2000, 1, 1)
     division = 7
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         if self.division == 7:
             self.first_opinion_date = datetime(1999, 5, 26)
@@ -49,18 +56,22 @@ class Site(OpinionSiteLinear):
 
         :return None
         """
-        for case in self.html.xpath(".//article"):
-            name_url_span = case.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        for case in self.html.findall(".//article"):
+            name_url_span: HtmlElement = case.xpath(
                 ".//div[contains(@class, 'views-field-name')]"
             )[0]
-            date_filed = (
+            date_filed: str = (
                 case.xpath(
                     ".//div[contains(@class, 'views-field-field-document-expiration')]"
                 )[0]
                 .text_content()
                 .strip()
             )
-            docket = (
+            docket: str = (
                 case.xpath(
                     ".//div[contains(@class, 'views-field-field-document-number')]"
                 )[0]
@@ -76,6 +87,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
         :param dates: (start_date, end_date) tuple
@@ -110,13 +122,15 @@ class Site(OpinionSiteLinear):
             "facet_to_date": "",
             "f[0]": f"court_division_opinions_library_:{self.division}",  # filter by court
         }
-        if start:
+        if start is not None:
             params["facet_from_date"] = start.strftime("%m/%d/%Y")
+        if end is not None:
             params["facet_to_date"] = end.strftime("%m/%d/%Y")
 
         self.url = f"{self.base_url}?{urlencode(params)}"
 
-    def extract_from_text(self, scraped_text: str):
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract a neutral citation if it exists, and update court and status
 
         Some documents have this heading:
@@ -132,10 +146,10 @@ class Site(OpinionSiteLinear):
         > This opinion is subject to motions for reargument under V.R.A.P. 40
         > as well as formal revision before publication in the Vermont Reports.
         """
-        metadata = {}
+        metadata: ExtractedMetadata = {}
         cite_regex = r"\n\s*\d{4} VT \d+\s*\n"
         match = re.search(cite_regex, scraped_text[:1000])
-        if match:
+        if match is not None:
             metadata = {
                 "Citation": match.group(0).strip(),
                 "OpinionCluster": {"precedential_status": "Published"},
@@ -144,7 +158,9 @@ class Site(OpinionSiteLinear):
             # update court_id for opinions that have a VT citation, that are
             # marked on the source as belonging to one of the superior court
             # divisions. Check test_ScraperExtractFromTextTest examples
-            if "vtsuperct" in self.court_id:
+            if "vtsuperct" in (
+                self.court_id if self.court_id is not None else ""
+            ):
                 metadata["Docket"] = {"court_id": "vt"}
 
         non_precedential_heading = (
@@ -182,7 +198,7 @@ class Site(OpinionSiteLinear):
             re.IGNORECASE | re.DOTALL,
         )
         match = pattern.search(cleaned_text)
-        if match:
+        if match is not None:
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
@@ -192,11 +208,11 @@ class Site(OpinionSiteLinear):
             originating_court_info = metadata.setdefault(
                 "OriginatingCourtInformation", {}
             )
-            if lower_court:
+            if bool(lower_court):
                 docket["appeal_from_str"] = lower_court
-            if lower_court_number:
+            if bool(lower_court_number):
                 originating_court_info["docket_number"] = lower_court_number
-            if lower_court_judge:
+            if bool(lower_court_judge):
                 originating_court_info["assigned_to_str"] = (
                     lower_court_judge.strip()
                 )
@@ -206,7 +222,7 @@ class Site(OpinionSiteLinear):
                 re.X | re.DOTALL,
             )
             match = fall_back_pattern.search(scraped_text[:1000])
-            if match:
+            if match is not None:
                 lower_court = re.sub(
                     r"\s+", " ", match.group("lower_court")
                 ).strip()

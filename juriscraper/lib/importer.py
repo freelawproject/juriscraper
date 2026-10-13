@@ -1,13 +1,14 @@
 import os
 import traceback
-from collections.abc import AsyncGenerator, Iterable
+from collections.abc import AsyncGenerator, Callable, Iterable
 from logging import getLogger
 from types import ModuleType
-from typing import cast
 
 from httpx import HTTPError
+from typing_extensions import Unpack
 
-from juriscraper.AbstractSite import AbstractSite
+from juriscraper.AbstractSite import AbstractSite, SiteOptions
+from juriscraper.lib.type_utils import AsyncClientOptions
 
 logger = getLogger()
 
@@ -61,7 +62,9 @@ def build_module_list(court_id: str) -> list[str]:
     return module_strings
 
 
-def get_module_by_name(name: str) -> AbstractSite | None:
+def get_module_by_name(
+    name: str, **kwargs: Unpack[SiteOptions]
+) -> AbstractSite | None:
     db_root = os.path.abspath(
         os.path.join(os.path.dirname(__file__), "..", "opinions")
     )
@@ -69,7 +72,9 @@ def get_module_by_name(name: str) -> AbstractSite | None:
         for fname in fileList:
             if f"{name}.py" == fname:
                 package, module = (
-                    dirName.split("/juriscraper/", 1)[1].replace("/", "."),
+                    os.path.relpath(dirName, os.path.dirname(db_root)).replace(
+                        os.sep, "."
+                    ),
                     fname[:-3],
                 )
                 juriscraper_module = __import__(
@@ -78,25 +83,38 @@ def get_module_by_name(name: str) -> AbstractSite | None:
                     locals(),
                     [module],
                 )
-                site_class = cast(type[AbstractSite], juriscraper_module.Site)
-                return site_class()
+                site_class: object = getattr(juriscraper_module, "Site", None)
+                if not isinstance(site_class, type) or not issubclass(
+                    site_class, AbstractSite
+                ):
+                    raise TypeError(
+                        f"{juriscraper_module.__name__}.Site must subclass AbstractSite"
+                    )
+                return site_class(**kwargs)
     return None
 
 
 async def site_yielder(
     iterable: Iterable[object],
     mod: ModuleType,
-    save_response_fn=None,
+    save_response_fn: Callable[[AbstractSite], None] | None = None,
+    **kwargs: Unpack[AsyncClientOptions],
 ) -> AsyncGenerator[AbstractSite, None]:
     """Yield sites whose sessions stay open until iteration advances.
 
     Use ``contextlib.aclosing`` when consuming this generator so early exits
     also close the current site.
     """
-    site_class = cast(type[AbstractSite], mod.Site)
+    site_class: object = getattr(mod, "Site", None)
+    if not isinstance(site_class, type) or not issubclass(
+        site_class, AbstractSite
+    ):
+        raise TypeError(f"{mod.__name__}.Site must subclass AbstractSite")
 
     for i in iterable:
-        async with site_class(save_response_fn=save_response_fn) as site:
+        async with site_class(
+            save_response_fn=save_response_fn, **kwargs
+        ) as site:
             # Empty pages are expected during historical backscrapes, so don't
             # let no_results_warning log an error for this court.
             site.should_have_results = False

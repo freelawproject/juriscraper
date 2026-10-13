@@ -4,6 +4,8 @@
 import datetime
 import unittest
 
+from typing_extensions import TypedDict
+
 from juriscraper.lib.date_utils import (
     fix_future_year_typo,
     make_date_range_tuples,
@@ -12,8 +14,19 @@ from juriscraper.lib.date_utils import (
 from juriscraper.lib.string_utils import convert_date_string
 
 
+class _DateRangeParameters(TypedDict, closed=True):
+    start: datetime.date
+    end: datetime.date
+    gap: int
+
+
+class _DateRangeExample(TypedDict):
+    q: _DateRangeParameters
+    a: list[tuple[datetime.date, datetime.date]]
+
+
 class DateTest(unittest.TestCase):
-    def test_fix_future_year_typo(self):
+    def test_fix_future_year_typo(self) -> None:
         correct = str(datetime.date.today().year)
         transposed = correct[0] + correct[2] + correct[1] + correct[3]
         expectations = {
@@ -23,12 +36,14 @@ class DateTest(unittest.TestCase):
             "12/01/2886": "12/01/2886",  # Should not change
         }
         for before, after in expectations.items():
-            fixed_date = fix_future_year_typo(convert_date_string(before))
+            parsed_date = convert_date_string(before)
+            assert parsed_date is not None
+            fixed_date = fix_future_year_typo(parsed_date)
             with self.subTest("Future years", before=before):
                 self.assertEqual(fixed_date, convert_date_string(after))
 
-    def test_date_range_creation(self):
-        q_a = (
+    def test_date_range_creation(self) -> None:
+        q_a: tuple[_DateRangeExample, ...] = (
             {
                 # Five days (though it looks like four)
                 "q": {
@@ -83,7 +98,7 @@ class DateTest(unittest.TestCase):
             with self.subTest("Checking dates", test=test["q"]):
                 self.assertEqual(result, test["a"])
 
-    def test_unique_year_month(self):
+    def test_unique_year_month(self) -> None:
         q_a = (
             {
                 # base case

@@ -8,15 +8,53 @@ History:
 
 import asyncio
 import re
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
+from typing import NotRequired
 
-from typing_extensions import override
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class _MetadataField(TypedDict):
+    field: str
+    value: str
+
+
+class _DetailField(TypedDict):
+    key: str
+    value: str
+
+
+class _Parent(TypedDict):
+    fields: list[_DetailField]
+
+
+class _Detail(TypedDict):
+    fields: list[_DetailField]
+    parent: _Parent | None
+
+
+class _Item(TypedDict):
+    collectionAlias: str
+    itemId: str
+    metadataFields: list[_MetadataField]
+    detailJson: NotRequired[_Detail]
+
+
+class _Search(TypedDict):
+    items: list[_Item]
+
+
+_search_adapter = TypeAdapter(_Search)
+_detail_adapter = TypeAdapter(_Detail)
+
+
+class Site(OpinionSiteLinear[tuple[date, date]]):
     court_code = "p17027coll3"
     citation_field = "cita"
     base_url = "https://cdm17027.contentdm.oclc.org/digital/api/search/collection/{}/searchterm/{}-{}/field/dated/mode/exact/conn/and/maxRecords/200"
@@ -24,8 +62,13 @@ class Site(OpinionSiteLinear):
     first_opinion_date = datetime(1997, 8, 12)
     days_interval = 15
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         today = datetime.today()
         self.url = self.format_url(today - timedelta(15), today)
@@ -33,10 +76,11 @@ class Site(OpinionSiteLinear):
 
     @override
     async def _process_html(self) -> None:
-        for i, row in enumerate(self.html["items"]):
+        data = _search_adapter.validate_python(self.html, strict=True)
+        for i, row in enumerate(data["items"]):
             # Honor robots.txt Crawl-Delay: 1 advertised by
             # cdm17027.contentdm.oclc.org. # 1968
-            if i and not self.test_mode_enabled():
+            if bool(i) and not self.test_mode_enabled():
                 await asyncio.sleep(1)
 
             fields = {
@@ -45,11 +89,11 @@ class Site(OpinionSiteLinear):
             }
             docket = fields.get("title")
             date = fields.get("dated")
-            if not docket or not date:
+            if not bool(docket) or not bool(date):
                 logger.warning("Skipping row with no docket or date: %s", row)
                 continue
 
-            if not (name := fields.get("subjec")):
+            if not (bool(name := fields.get("subjec"))):
                 # Happens on rows like:
                 # "Miscellaneous Supreme Court dispositions, June 10 and 13, 2024"
                 logger.info("Skipping row '%s'", docket)
@@ -62,7 +106,9 @@ class Site(OpinionSiteLinear):
                 lower_court_number,
             ) = await self.get_details(row)
             per_curiam = False
-            if judge and judge == "PC" or "per curiam" in judge.lower():
+            if (
+                bool(judge) and judge == "PC"
+            ) or "per curiam" in judge.lower():
                 per_curiam = True
                 judge = ""
 
@@ -81,7 +127,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    async def get_details(self, row: dict) -> tuple[str, str, str, str]:
+    async def get_details(self, row: _Item) -> tuple[str, str, str, str]:
         """Makes a secondary request to get details for a single
         opinion
 
@@ -94,7 +140,8 @@ class Site(OpinionSiteLinear):
             - lower court number (only for `or`)
         """
         if self.test_mode_enabled():
-            if not row.get("detailJson"):
+            json = row.get("detailJson")
+            if json is None:
                 return (
                     "placeholder judge",
                     "placeholder disposition",
@@ -102,15 +149,23 @@ class Site(OpinionSiteLinear):
                     "placeholder lower court number",
                 )
             # Some test cases have their detail data manually copy pasted
-            json = row["detailJson"]
         else:
             item_id = row["itemId"]
             url = f"https://cdm17027.contentdm.oclc.org/digital/api/collections/{self.court_code}/items/{item_id}/false"
             logger.debug("Getting detail JSON from %s", url)
             await self._request_url_get(url)
-            json = self.request["response"].json()
+            response = self.request.get("response")
+            if response is None:
+                raise ValueError("Download a response before accessing it.")
+            json = _detail_adapter.validate_python(
+                response.json(), strict=True
+            )
 
         if len(json["fields"]) == 1:
+            if json["parent"] is None:
+                raise ValueError(
+                    "The compound opinion is missing parent metadata"
+                )
             fields = json["parent"]["fields"]
         else:
             fields = json["fields"]
@@ -133,30 +188,32 @@ class Site(OpinionSiteLinear):
                 field["key"] == "relhapt"
                 # For orctapp this field may be populated with consolidated docket
                 # numbers
-                and self.court_id.endswith("or")
+                and (
+                    self.court_id if self.court_id is not None else ""
+                ).endswith("or")
                 and not field["value"].startswith("S")
             ):
                 lower_court_number = field["value"]
 
         return judge, disposition, status, lower_court_number
 
-    async def _download_backwards(
-        self, dates: tuple[datetime, datetime]
-    ) -> None:
+    @override
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         logger.info("Backscraping for range %s %s", *dates)
         self.url = self.format_url(*dates)
         self.html = await self._download()
         await self._process_html()
 
-    def format_url(self, start_date: datetime, end_date: datetime) -> str:
+    def format_url(self, start_date: date, end_date: date) -> str:
         """
         Creates a date range URL by formatting input dates
         """
-        start = datetime.strftime(start_date, "%Y%m%d")
-        end = datetime.strftime(end_date, "%Y%m%d")
+        start = start_date.strftime("%Y%m%d")
+        end = end_date.strftime("%Y%m%d")
         return self.base_url.format(self.court_code, start, end)
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract citations from text
 
         Be careful with citations referring to other opinions that are
@@ -178,8 +235,8 @@ class Site(OpinionSiteLinear):
         )
         regex = r"\n\s+(?P<cite>\d+ P3d \d+)\s+\n"
 
-        result = {}
-        if match := pattern.search(scraped_text):
+        result: ExtractedMetadata = {}
+        if (match := pattern.search(scraped_text)) is not None:
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
@@ -187,7 +244,7 @@ class Site(OpinionSiteLinear):
                 lower_court = "Oregon " + lower_court
             result["Docket"] = {"appeal_from_str": lower_court}
 
-        if match := re.search(regex, scraped_text[:1000]):
+        if (match := re.search(regex, scraped_text[:1000])) is not None:
             result["Citation"] = match.group("cite")
 
         return result

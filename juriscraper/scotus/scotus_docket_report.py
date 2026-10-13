@@ -3,14 +3,70 @@ import pprint
 import re
 import sys
 from collections import defaultdict
-from collections.abc import Hashable
 from datetime import date, datetime
-from typing import Any
+from typing import Literal
+
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict
 
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.scotus.types import (
+    SCOTUSAttachment,
+    SCOTUSAttorney,
+    SCOTUSDocket,
+    SCOTUSDocketEntry,
+    SCOTUSMetadata,
+    SCOTUSParty,
+)
 
 logger = make_default_logger()
+
+
+class _DocumentLink(TypedDict, total=False):
+    Description: str
+    DocumentUrl: str | None
+
+
+class _Proceeding(TypedDict, total=False):
+    Date: str | None
+    Text: str
+    Links: list[_DocumentLink]
+
+
+class _Attorney(TypedDict, total=False):
+    Attorney: str | None
+    IsCounselofRecord: bool | None
+    Title: str | None
+    Phone: str | None
+    Address: str
+    City: str | None
+    State: str | None
+    Zip: str | None
+    Email: str | None
+    PartyName: str
+
+
+class _Docket(TypedDict, total=False):
+    CaseNumber: str
+    bCapitalCase: bool | None
+    DocketedDate: str | None
+    RespondentTitle: str | None
+    PetitionerTitle: str | None
+    LowerCourt: str | None
+    LowerCourtCaseNumbers: str | None
+    LowerCourtDecision: str | None
+    LowerCourtRehearingDenied: str | None
+    Links: str
+    QPLink: str
+    DiscretionaryCourtDecision: str | None
+    ProceedingsandOrder: list[_Proceeding]
+    Petitioner: list[_Attorney] | None
+    Respondent: list[_Attorney] | None
+    Other: list[_Attorney] | None
+
+
+_DOCKET = TypeAdapter(_Docket)
 
 
 class SCOTUSDocketReport:
@@ -40,21 +96,21 @@ class SCOTUSDocketReport:
 
     SCOTUS_BASE_URL = "https://www.supremecourt.gov"
 
-    def __init__(self, court_id: str = "scotus"):
-        self._scotus_json: dict[Hashable, Any] | None = None
+    def __init__(self, court_id: str = "scotus") -> None:
+        self._scotus_json: _Docket | None = None
 
     @property
-    def data(self) -> dict[str, Any]:
+    def data(self) -> SCOTUSDocket:
         """Get all the data back from this endpoint."""
-        metadata = self.metadata or {}
-        if not metadata:
+        metadata = self.metadata
+        if not bool(metadata):
             return {}
         case_name = metadata.get("case_name")
-        if not case_name:
+        if not bool(case_name):
             logger.error("Failed to extract SCOTUS docket number.")
             return {}
         docket_number = metadata.get("docket_number")
-        if not docket_number:
+        if not bool(docket_number):
             logger.error("Failed to extract SCOTUS docket number.")
             return {}
         return {
@@ -69,20 +125,21 @@ class SCOTUSDocketReport:
         :param text: The raw JSON unicode object
         :return: None
         """
-        json_object = json.loads(text or "{}")
+        self._scotus_json = None
+        json_object = json.loads(text if bool(text) else "{}")
         # Perform minimal validation to guarantee dictionary type.
         if not isinstance(json_object, dict):
             raise ValueError("`text` is not a JSON object.")
-        self._scotus_json = json_object
+        self._scotus_json = _DOCKET.validate_python(json_object, strict=True)
 
     @property
-    def metadata(self) -> dict[str, Any]:
+    def metadata(self) -> SCOTUSMetadata:
         """Return normalized docket metadata.
         That function then supplements it with parties and docket entries.
 
         :return: Dict with case_number, docket_date, case_title, lower_court, etc.
         """
-        if not self._scotus_json:
+        if not bool(self._scotus_json):
             logger.error("_parse_text() must be called first.")
             return {}
 
@@ -90,7 +147,7 @@ class SCOTUSDocketReport:
         docket_number = (scotus_data.get("CaseNumber", "")).strip()
         docket_number = (
             docket_number.replace("*** CAPITAL CASE ***", "").strip()
-            if docket_number
+            if bool(docket_number)
             else None
         )
         docket_date = scotus_data.get("DocketedDate", "")
@@ -98,7 +155,7 @@ class SCOTUSDocketReport:
         petitioner_title = scotus_data.get("PetitionerTitle", "")
         case_name = (
             f"{petitioner_title} v. {respondent_title}"
-            if respondent_title
+            if bool(respondent_title)
             else petitioner_title
         )
         lower_court = scotus_data.get("LowerCourt", "")
@@ -119,16 +176,16 @@ class SCOTUSDocketReport:
             "docket_number": docket_number,
             "capital_case": scotus_data.get("bCapitalCase"),
             "date_filed": self.normalize_date(docket_date),
-            "case_name": case_name.strip() if case_name else "",
+            "case_name": case_name.strip() if bool(case_name) else "",
             "links": links,
-            "lower_court": lower_court.strip() if lower_court else None,
+            "lower_court": lower_court.strip() if bool(lower_court) else None,
             "lower_court_case_numbers_raw": lower_court_case_numbers_raw.strip()
-            if lower_court_case_numbers_raw
+            if bool(lower_court_case_numbers_raw)
             else None,
             "lower_court_case_numbers": self.clean_lower_court_cases(
                 lower_court_case_numbers_raw
             )
-            if lower_court_case_numbers_raw
+            if bool(lower_court_case_numbers_raw)
             else None,
             "lower_court_decision_date": self.normalize_date(
                 lower_court_decision_date
@@ -136,14 +193,16 @@ class SCOTUSDocketReport:
             "lower_court_rehearing_denied_date": self.normalize_date(
                 lower_court_rehearing_denied_date
             ),
-            "questions_presented": questions_presented or None,
+            "questions_presented": (
+                questions_presented if bool(questions_presented) else None
+            ),
             "discretionary_court_decision": self.normalize_date(
                 scotus_data.get("DiscretionaryCourtDecision", "")
             ),
         }
 
     @property
-    def docket_entries(self) -> list[dict[str, Any]]:
+    def docket_entries(self) -> list[SCOTUSDocketEntry]:
         """Return a dictionary of docket entries from ProceedingsandOrder
 
         [
@@ -162,21 +221,23 @@ class SCOTUSDocketReport:
 
         :return: List of docket entry dicts
         """
-        if not self._scotus_json:
+        if not bool(self._scotus_json):
             logger.error("_parse_text() must be called first.")
             return []
 
-        entries = []
+        entries: list[SCOTUSDocketEntry] = []
         for row in self._scotus_json.get("ProceedingsandOrder", []):
             links = row.get("Links", [])
             document_number = None
-            if links and (
-                match := re.search(
-                    self.DOC_NUM_RE, links[0].get("DocumentUrl") or ""
+            if bool(links):
+                document_url = links[0].get("DocumentUrl")
+                match = re.search(
+                    self.DOC_NUM_RE,
+                    document_url if document_url is not None else "",
                 )
-            ):
-                document_number = int(match.group(1))
-            attachments = [
+                if match is not None:
+                    document_number = int(match.group(1))
+            attachments: list[SCOTUSAttachment] = [
                 {
                     "description": link.get("Description", "").strip(),
                     "document_url": link.get("DocumentUrl"),
@@ -187,7 +248,7 @@ class SCOTUSDocketReport:
 
             description_html = row.get("Text", "")
             description = strip_bad_html_tags_insecure(description_html)
-            de = {
+            de: SCOTUSDocketEntry = {
                 "date_filed": self.normalize_date(row.get("Date")),
                 "document_number": document_number,
                 "description": description.text_content(),
@@ -198,7 +259,7 @@ class SCOTUSDocketReport:
         return entries
 
     @staticmethod
-    def _build_attorney(att: dict[str, Any]) -> dict[str, Any]:
+    def _build_attorney(att: _Attorney) -> SCOTUSAttorney:
         """Build a normalized attorney dictionary from a raw SCOTUS JSON record.
 
         :param att: dictionary containing attorney information from the SCOTUS JSON.
@@ -217,7 +278,9 @@ class SCOTUSDocketReport:
             "email": att.get("Email"),
         }
 
-    def _build_parties_for_type(self, type_key: str) -> list[dict[str, Any]]:
+    def _build_parties_for_type(
+        self, type_key: Literal["Petitioner", "Respondent", "Other"]
+    ) -> list[SCOTUSParty]:
         """Group attorneys by party name for a party type.
 
         Preserves the order of first appearance of each party name and assigns all
@@ -230,15 +293,21 @@ class SCOTUSDocketReport:
             - name: Party name (from `PartyName`)
             - attorneys: List of attorney dictionaries.
         """
-        if not self._scotus_json:
+        if not bool(self._scotus_json):
             logger.error("_parse_text() must be called first.")
             return []
 
-        type_parties = self._scotus_json.get(type_key, [])
-        if not type_parties:
+        match type_key:
+            case "Petitioner":
+                type_parties = self._scotus_json.get("Petitioner", [])
+            case "Respondent":
+                type_parties = self._scotus_json.get("Respondent", [])
+            case "Other":
+                type_parties = self._scotus_json.get("Other", [])
+        if not bool(type_parties):
             return []
 
-        grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
+        grouped: dict[str, list[SCOTUSAttorney]] = defaultdict(list)
         for party in type_parties:
             party_name = party.get("PartyName", "").strip()
             grouped[party_name].append(self._build_attorney(party))
@@ -253,7 +322,7 @@ class SCOTUSDocketReport:
         ]
 
     @property
-    def parties(self) -> list[dict[str, Any]]:
+    def parties(self) -> list[SCOTUSParty]:
         """Return parties with their attorneys from Petitioner/Respondent arrays.
 
             [
@@ -291,7 +360,7 @@ class SCOTUSDocketReport:
         :param date_str: Raw date string (e.g., "July 3, 2024", "Jul 03 2024", "08/16/2024")
         :return: A date python object or None
         """
-        if not date_str:
+        if not bool(date_str):
             return None
         s = date_str.strip()
         for date_format in cls.DATE_FORMATS:
@@ -320,12 +389,15 @@ class SCOTUSDocketReport:
         # Case Slash-separated numbers with the same prefix: "98-35309/35509" or  "96-C-235/239/240/241"
         # Negative prefix-separated numbers: "99-1845,-1846,-1847,-197" or "98-60240,-60454,-60467,-"
         # "98-4033;-4214;-4246"
-        if self.LOWER_COURT_PATTERNS["common_prefix"].match(raw_text):
+        if (
+            self.LOWER_COURT_PATTERNS["common_prefix"].match(raw_text)
+            is not None
+        ):
             # slash case
-            if "/" in raw_text and not re.search(r"[;,]", raw_text):
+            if "/" in raw_text and re.search(r"[;,]", raw_text) is None:
                 parts = raw_text.split("/")
                 prefix_match = re.match(r"(.*-)(\d+)$", parts[0])
-                if not prefix_match:
+                if prefix_match is None:
                     return raw_text.split(",")
                 prefix = prefix_match.group(1)
                 return self._apply_prefix(
@@ -335,7 +407,7 @@ class SCOTUSDocketReport:
             # Mixed or negative-prefix (commas/semicolons and possibly slashes after the first number)
             # Supports optional letter segment, e.g. "96-C-235"
             prefix_match = re.match(r"(\d+(?:-[A-Za-z]+)?-)(\d+)", raw_text)
-            if not prefix_match:
+            if prefix_match is None:
                 return raw_text.split(",")
 
             prefix = prefix_match.group(1)
@@ -343,10 +415,17 @@ class SCOTUSDocketReport:
             numbers = [suffix] + re.split(
                 r"[;,/]", raw_text[len(prefix_match.group(0)) :]
             )
-            return [f"{prefix}{n.strip('-')}" for n in numbers if n.strip("-")]
+            return [
+                f"{prefix}{n.strip('-')}"
+                for n in numbers
+                if bool(n.strip("-"))
+            ]
 
         # Case Comma-separated items with prefixes already correct: "33094-CW, 33095-CW"
-        if self.LOWER_COURT_PATTERNS["comma_correct_prefix"].match(raw_text):
+        if (
+            self.LOWER_COURT_PATTERNS["comma_correct_prefix"].match(raw_text)
+            is not None
+        ):
             return raw_text.split(",")
 
         # Case Ampersand-separated with prefixes or 'See also'-separated with prefixes: "95-56639 & 96-55194" or "95-56639 See also 96-55194"
@@ -361,7 +440,7 @@ class SCOTUSDocketReport:
             return raw_text.split(",")
 
         # Case Range expansion: "97-1715/98-1111 to 1115" or "97-1715/1111 to 1115"
-        if re.search(r"\d+/\d+(-\d+)? to \d+", raw_text):
+        if re.search(r"\d+/\d+(-\d+)? to \d+", raw_text) is not None:
             parts = raw_text.split("/")
             cleaned = [parts[0]]
             range_part = parts[1]
@@ -369,9 +448,13 @@ class SCOTUSDocketReport:
             if " to " in range_part:
                 start, end = range_part.split(" to ")
                 if "-" in start:
-                    sprefix, snum = re.match(r"(\d+)-(\d+)", start).groups()
+                    start_match = re.fullmatch(r"(\d+)-(\d+)", start)
+                    end_match = re.fullmatch(r"(\d+-)?(\d+)", end)
+                    if start_match is None or end_match is None:
+                        return [raw_text]
+                    sprefix, snum = start_match.groups()
                     cleaned.append(f"{sprefix}-{snum}")
-                    end_num = int(re.match(r"(\d+-)?(\d+)", end).groups()[-1])
+                    end_num = int(end_match.group(2))
                     cleaned.extend(
                         f"{sprefix}-{i}"
                         for i in range(int(snum) + 1, end_num + 1)
@@ -391,11 +474,11 @@ class SCOTUSDocketReport:
         return [
             p.strip()
             for p in re.sub(r"[;&\n]", ",", raw_text).split(",")
-            if p.strip()
+            if bool(p.strip())
         ]
 
 
-def _main():
+def _main() -> None:
     if len(sys.argv) != 2:
         print("Usage: python -m juriscraper.scotus_docket_report <filepath>")
         print("Please provide a path to a JSON file to parse.")

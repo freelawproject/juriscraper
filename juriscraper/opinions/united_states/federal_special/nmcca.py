@@ -9,28 +9,71 @@ History:
 from datetime import date, datetime
 from urllib.parse import urlencode
 
-from typing_extensions import override
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class _Document(TypedDict):
+    download_url: str
+
+
+class _Attachment(TypedDict):
+    document: _Document
+
+
+_OpinionFields = TypedDict(
+    "_OpinionFields",
+    {
+        "6e61b248-ef67-423e-b321-f2ed8ad05728": str,
+        "80dedfc1-74a9-4372-a36f-8736c6baf754": str,
+        "9152980f-7bd6-4b48-8130-10500cda8cca": str,
+        "9a84d8ce-017d-4a4b-821f-2fa33b700b0c": str,
+    },
+)
+
+
+class _Opinion(TypedDict):
+    data: _OpinionFields
+    documents: list[_Attachment]
+
+
+class _Search(TypedDict):
+    results: list[_Opinion]
+
+
+_search_adapter = TypeAdapter(_Search)
+
+
+class Site(OpinionSiteLinear[tuple[date, date]]):
     base_url = "https://www.jag.navy.mil/api/tables/decisions-opinions/data/"
     days_interval = 60
     first_opinion_date = datetime(2004, 1, 8)
 
-    def __init__(self, *args, **kwargs):
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
         kwargs.setdefault("verify", False)
-        super().__init__(*args, **kwargs)
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = self.base_url
         self.make_backscrape_iterable(kwargs)
 
     @override
     def _process_html(self) -> None:
-        for row in self.html["results"]:
-            date, docket, notes, name = list(row["data"].values())
+        response = _search_adapter.validate_python(self.html, strict=True)
+        for row in response["results"]:
+            fields = row["data"]
+            date = fields["6e61b248-ef67-423e-b321-f2ed8ad05728"]
+            docket = fields["80dedfc1-74a9-4372-a36f-8736c6baf754"]
+            notes = fields["9152980f-7bd6-4b48-8130-10500cda8cca"]
+            name = fields["9a84d8ce-017d-4a4b-821f-2fa33b700b0c"]
             url = row["documents"][0]["document"]["download_url"]
             if notes == "Unpublished":
                 status = "Unpublished"
@@ -46,6 +89,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
 

@@ -4,7 +4,11 @@ import re
 import unittest
 from datetime import date
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import (
+    DownloadedContent,
+    RequestParameters,
+    logger,
+)
 from juriscraper.opinions.united_states.state import nev, nevapp
 
 
@@ -13,7 +17,7 @@ class ScraperSpotTest(unittest.TestCase):
     without a full integration test.
     """
 
-    def test_mass(self):
+    def test_mass(self) -> None:
         strings = {
             "Massachusetts State Automobile Dealers Association, Inc. v. Tesla Motors MA, Inc. (SJC 11545) (September 15, 2014)": [
                 "Massachusetts State Automobile Dealers Association, Inc. v. Tesla Motors MA, Inc.",
@@ -70,10 +74,11 @@ class ScraperSpotTest(unittest.TestCase):
         }
         for s in strings.items():
             m = re.search(r"(.*?) \((.*?)\)( \((.*?)\))?", s[0])
+            assert m is not None
             name, docket, _, date = m.groups()
             self.assertEqual([name, docket], s[1])
 
-    def test_massappct(self):
+    def test_massappct(self) -> None:
         strings = {
             "Commonwealth v. Forbes (AC 13-P-730) (August 26, 2014)": [
                 "Commonwealth v. Forbes",
@@ -130,10 +135,11 @@ class ScraperSpotTest(unittest.TestCase):
         }
         for s in strings.items():
             m = re.search(r"(.*?) \((.*?)\)( \((.*?)\))?", s[0])
+            assert m is not None
             name, docket, _, date = m.groups()
             self.assertEqual([name, docket], s[1])
 
-    def test_nytrial_build_url(self):
+    def test_nytrial_build_url(self) -> None:
         from juriscraper.opinions.united_states.state import (
             nysupct,
             nysupct_commercial,
@@ -162,7 +168,7 @@ class ScraperSpotTest(unittest.TestCase):
                 site.build_url(target_date), f"{root}/{path}.shtml"
             )
 
-    def test_nytrial_page_not_found(self):
+    def test_nytrial_page_not_found(self) -> None:
         from lxml.html import fromstring
 
         from juriscraper.lib.exceptions import ParsingException
@@ -184,7 +190,7 @@ class ScraperSpotTest(unittest.TestCase):
         with self.assertRaises(ParsingException):
             asyncio.run(site._process_html())
 
-    def test_nytrial_metadata_from_stub(self):
+    def test_nytrial_metadata_from_stub(self) -> None:
         from lxml.html import fromstring
 
         from juriscraper.opinions.united_states.state import nytrial
@@ -248,7 +254,7 @@ class ScraperSpotTest(unittest.TestCase):
                 nytrial.Site.get_docket_from_header(header), docket
             )
 
-    def test_nev_judge_initials(self):
+    def test_nev_judge_initials(self) -> None:
         """Panel initials resolve by court and filed date"""
         supreme, appeals = nev.Site(), nevapp.Site()
 
@@ -265,9 +271,9 @@ class ScraperSpotTest(unittest.TestCase):
             metadata = supreme.parse_description(
                 "Majority: Stiglich/ZZ/Lee.", "2026-06-18"
             )
-        self.assertEqual(metadata["judge"], "Stiglich, Lee")
+        self.assertEqual(metadata.get("judge"), "Stiglich, Lee")
 
-    def test_nev_majority_panel(self):
+    def test_nev_majority_panel(self) -> None:
         """Panel parsing tolerates a "Before:" prefix and spaced slashes"""
         site = nev.Site()
         tests = [
@@ -296,9 +302,9 @@ class ScraperSpotTest(unittest.TestCase):
         for description, judges in tests:
             with self.subTest(description=description):
                 metadata = site.parse_description(description, "2026-06-18")
-                self.assertEqual(metadata["judge"], judges)
+                self.assertEqual(metadata.get("judge"), judges)
 
-    def test_nev_backscrape_past_last_page(self):
+    def test_nev_backscrape_past_last_page(self) -> None:
         """A backscrape stops on the empty page after the last one"""
         result = {
             "docketEntryHeader": {
@@ -318,11 +324,16 @@ class ScraperSpotTest(unittest.TestCase):
             {"page": {"size": 100, "totalElements": 1, "number": 1}},
         ]
 
-        async def download():
+        async def download(
+            request_dict: RequestParameters | None = None,
+        ) -> DownloadedContent:
             return pages.pop(0)
 
         site = nev.Site(backscrape_start="2000/01/01")
         site._download = download
-        asyncio.run(site._download_backwards(site.back_scrape_iterable[0]))
+        assert site.back_scrape_iterable is not None
+        asyncio.run(
+            site._download_backwards(next(iter(site.back_scrape_iterable)))
+        )
         self.assertEqual(len(site.cases), 1)
         self.assertEqual(pages, [])

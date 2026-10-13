@@ -33,9 +33,11 @@ import httpx
 import pydantic_core
 from pydantic import BaseModel, RootModel, ValidationError
 from pydantic_core import PydanticCustomError
+from typing_extensions import Unpack
 
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.type_utils import AsyncClientOptions
 from juriscraper.state.florida import FloridaCaseListParser
 from juriscraper.state.florida.arguments import FloridaCaseArgumentsParser
 from juriscraper.state.florida.cases import (
@@ -156,6 +158,7 @@ class FloridaScraper:
         rps: float = 2.5,
         retry: RetryHandler | None = None,
         handlers: list[RequestHandler] | None = None,
+        **kwargs: Unpack[AsyncClientOptions],
     ) -> None:
         """Create a new :class:`FloridaScraper` instance.
 
@@ -167,13 +170,14 @@ class FloridaScraper:
             retry = ExponentialBackoff(
                 max_retries=3, backoff=2.0, backoff_growth=2.0
             )
+        kwargs.setdefault("base_url", FLORIDA_API_BASE)
         self.manager: RequestManager = RequestManager(
             handlers=[
                 RateLimit(rps=rps),
             ]
-            + (handlers or []),
+            + (handlers if bool(handlers) else []),
             retry=retry,
-            base_url=FLORIDA_API_BASE,
+            **kwargs,
         )
         self._courts_future: (
             asyncio.Future[dict[FloridaCourtID, CourtMetadata]] | None
@@ -337,7 +341,7 @@ class FloridaScraper:
                 endpoint,
                 params,
             )
-        if not totals:
+        if not bool(totals):
             if errors == 0:
                 logger.error(
                     "Paginated fetch returned no pages for %s with params=%s",
@@ -391,7 +395,7 @@ class FloridaScraper:
         }
 
         stack: list[tuple[date, date]] = [(start_date, end_date)]
-        while stack:
+        while bool(stack):
             start, end = stack.pop()
             params |= {
                 "caseHeader.filedDateFrom": datetime(
@@ -446,10 +450,13 @@ class FloridaScraper:
 
             i = 0
             total = max(response.page.total_elements, 1)
-            while response is not None:
-                match response:
+            page_response: (
+                FloridaPaginatedResults[FloridaCase] | PaginationFailed | None
+            ) = response
+            while page_response is not None:
+                match page_response:
                     case PaginationFailed():
-                        yield response
+                        yield page_response
                     case FloridaPaginatedResults(results=results):
                         for entry in results:
                             yield entry
@@ -464,7 +471,7 @@ class FloridaScraper:
                                     court_external_id,
                                     i / total * 100,
                                 )
-                response = await anext(pages_aiter, None)
+                page_response = await anext(pages_aiter, None)
 
     async def _flatten_enumerate_pages(
         self,
@@ -580,7 +587,7 @@ class FloridaScraper:
                     },
                 )
 
-                if attachment_errors:
+                if bool(attachment_errors):
                     logger.error(
                         "Failed to fetch document access records for docket entry %s: %r",
                         entry.docket_entry_uuid,
@@ -624,10 +631,10 @@ class FloridaScraper:
                 for every case in every court in the date range. Otherwise, only
                 fetches the case list.
         """
-        _ = await self.courts
+        courts = await self.courts
 
         if court_ids is None:
-            court_ids = list((await self.courts or {}).keys())
+            court_ids = list(courts)
 
         timespan = end - start
 
@@ -656,7 +663,7 @@ class FloridaScraper:
                                 case.case_uuid,
                                 e,
                             )
-                        case (_, errors) if errors:
+                        case (_, errors) if bool(errors):
                             logger.error(
                                 "Failed to fetch full case data for %s: %r",
                                 case.case_uuid,
@@ -692,12 +699,17 @@ async def get_cases(
     return (await scraper.courts), cases
 
 
-def _main():
+def _main() -> None:
     """Run the scraper on a given date range"""
 
     import argparse
     import sys
     from datetime import date
+
+    class Arguments(argparse.Namespace):
+        start: date
+        end: date
+        output: str | None
 
     parser = argparse.ArgumentParser(
         prog="Florida Scraper",
@@ -710,11 +722,12 @@ def _main():
     )
     parser.add_argument("--output")
 
-    args = parser.parse_args(sys.argv[1:])
+    args = Arguments()
+    parser.parse_args(sys.argv[1:], namespace=args)
 
     courts, cases = asyncio.run(get_cases(args.start, args.end))
 
-    if args.output:
+    if bool(args.output):
         with open(args.output, "wb") as f:
             f.write(
                 pydantic_core.to_json(

@@ -18,17 +18,18 @@ History:
 from datetime import date, datetime, timedelta
 from urllib.parse import urljoin
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
 from juriscraper.opinions.united_states.federal_appellate.ca2_p import (
     Site as Ca2OpinionSite,
 )
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
-class Site(OralArgumentSiteLinear):
+class Site(OralArgumentSiteLinear[tuple[date, date]]):
     base_url = "https://ww3.ca2.uscourts.gov"
     search_url = urljoin(base_url, "/dtSearch/dtisapi6.dll")
     # The dtSearch index ID for Oral Argument audio (see ca2_p for the
@@ -40,8 +41,13 @@ class Site(OralArgumentSiteLinear):
     first_opinion_date = datetime(2016, 1, 1)
     days_interval = 15
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = self.search_url
         self.method = "POST"
@@ -81,19 +87,30 @@ class Site(OralArgumentSiteLinear):
 
     @override
     def _process_html(self) -> None:
-        for row in self.html.xpath('//table[@class="ResultsTable"]/tr'):
-            anchor = row.xpath('.//td[@class="ResultsItemLeft"]/a')
-            if not anchor:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(
+            '//table[@class="ResultsTable"]/tr'
+        )
+        for row in rows:
+            anchor: list[HtmlElement] = row.xpath(
+                './/td[@class="ResultsItemLeft"]/a'
+            )
+            if not bool(anchor):
                 logger.warning("ca2: row without anchor, skipping")
                 continue
             url = urljoin(self.base_url, anchor[0].get("href", "").strip())
             docket = Ca2OpinionSite._clean(anchor[0].text_content())
 
-            right = row.xpath('.//td[@class="ResultsItemRight"]')[0]
+            right = row.findall('.//td[@class="ResultsItemRight"]')[0]
             fields = Ca2OpinionSite._parse_right_cell(right)
             argued = fields.get("Date Argued")
             caption = fields.get("Caption")
-            if not (url and docket and argued and caption):
+            if not (
+                bool(url) and bool(docket) and bool(argued) and bool(caption)
+            ):
                 logger.warning(
                     "ca2: incomplete row docket=%r url=%r argued=%r caption=%r",
                     docket,
@@ -112,6 +129,7 @@ class Site(OralArgumentSiteLinear):
                 }
             )
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         self.start_date, self.end_date = dates
         self._update_parameters()

@@ -3,6 +3,8 @@ import os
 import sys
 import time
 import unittest
+from collections.abc import Callable
+from typing import Protocol
 
 import jsondate3 as json
 import pydantic_core
@@ -11,10 +13,22 @@ from pydantic import BaseModel
 from juriscraper.lib.test_utils import warn_or_crash_slow_parser
 
 
+class _Report(Protocol):
+    def _parse_text(self, text: str) -> None: ...
+
+    @property
+    def data(self) -> object: ...
+
+
 class PacerParseTestCase(unittest.TestCase):
     """A mixin to add a parsing test."""
 
-    def parse_files(self, path_root, file_ext, test_class):
+    def parse_files(
+        self,
+        path_root: str | os.PathLike[str],
+        file_ext: str,
+        test_class: Callable[[str], _Report],
+    ) -> None:
         """Can we do a simple query and parse?"""
         paths = []
         for root, _, filenames in os.walk(path_root):
@@ -43,15 +57,11 @@ class PacerParseTestCase(unittest.TestCase):
 
             # Does the metadata function work too? It usually, but not always,
             # gets called by report.data
-            try:
-                _ = report.metadata
-            except AttributeError:
-                # Some reports don't have this method.
-                pass
+            _ = getattr(report, "metadata", None)
             data = report.data
             if isinstance(data, BaseModel) or (
                 isinstance(data, list)
-                and data
+                and bool(data)
                 and isinstance(data[0], BaseModel)
             ):
                 data = pydantic_core.to_jsonable_python(data)

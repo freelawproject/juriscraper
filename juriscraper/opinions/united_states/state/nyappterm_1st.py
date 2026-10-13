@@ -4,9 +4,11 @@
 
 import re
 from datetime import date
-from typing import Any
+
+from typing_extensions import override
 
 from juriscraper.lib.string_utils import clean_string
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.opinions.united_states.state import ny
 
 
@@ -18,7 +20,8 @@ class Site(ny.Site):
 
     court = "Appellate Term, 1st Dept"
 
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Can we extract the docket number from the text?
 
         Examples
@@ -36,9 +39,11 @@ class Site(ny.Site):
             re.compile(r"<br>[\s\n]*(?P<docket_number>\d+/\d+)[\s\n]*<br>"),
         ]
         for regex in regexes:
-            if match := regex.search(clean_string(scraped_text[:2500])):
+            if (
+                match := regex.search(clean_string(scraped_text[:2500]))
+            ) is not None:
                 cleaned_docket = self.clean_docket_match(match)
-                if cleaned_docket:
+                if bool(cleaned_docket):
                     return {"Docket": {"docket_number": cleaned_docket}}
 
         return {}

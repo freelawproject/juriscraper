@@ -10,16 +10,48 @@ History:
 
 import re
 from datetime import date, datetime
+from typing import NotRequired
 from urllib.parse import urlencode
 
-from typing_extensions import override
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import BackscrapeOptions, RawOpinion
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class _DocketEntry(TypedDict):
+    filedDate: str
+    securedDocument: NotRequired[bool]
+    docketEntryDescription: NotRequired[str]
+
+
+class _Case(TypedDict):
+    caseTitle: str
+    caseNumber: str
+    caseInstanceUUID: str
+
+
+class _Result(TypedDict):
+    docketEntryHeader: _DocketEntry
+    caseHeader: _Case
+    documentLinkUUID: str
+
+
+class _Embedded(TypedDict):
+    results: NotRequired[list[_Result]]
+
+
+class _Search(TypedDict):
+    _embedded: NotRequired[_Embedded]
+
+
+_search_adapter = TypeAdapter(_Search)
+
+
+class Site(OpinionSiteLinear[tuple[date, date]]):
     # Index https://nvcourts.gov/supreme/decisions
     base_url = "https://acis-api.nvcourts.gov/courts/cms/docketentrydocuments"
     document_url = "https://acis-api.nvcourts.gov/courts/{court}/cms/case/{case}/docketentrydocuments/{document}"
@@ -87,14 +119,19 @@ class Site(OpinionSiteLinear):
     days_interval = 30
     first_opinion_date = datetime(2000, 1, 1)
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.status = "Published"
         self.page_size = 25
         # Set during a backscrape to filter results to the requested window
-        self.start_date = None
-        self.end_date = None
+        self.start_date: date | None = None
+        self.end_date: date | None = None
         self.set_url()
         self.request["headers"].update(
             {
@@ -131,20 +168,23 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
-        for result in self.html["_embedded"]["results"]:
+        data = _search_adapter.validate_python(self.html, strict=True)
+        for result in data.get("_embedded", {}).get("results", []):
             entry = result["docketEntryHeader"]
             header = result["caseHeader"]
             date_filed = entry["filedDate"][:10]
 
             # During a backscrape, keep only rows in the requested window
-            if self.start_date:
+            if self.start_date is not None:
+                if self.end_date is None:
+                    raise ValueError("The backfill end date is missing")
                 filed = datetime.strptime(date_filed, "%Y-%m-%d").date()
                 if not (self.start_date <= filed <= self.end_date):
                     continue
 
             # Secured documents can't be downloaded; skip rather than ingest
             # an opinion with an unreachable URL
-            if entry.get("securedDocument"):
+            if bool(entry.get("securedDocument")):
                 logger.warning(
                     "%s: skipping secured (non-downloadable) document for docket %s",
                     self.court_id,
@@ -154,10 +194,10 @@ class Site(OpinionSiteLinear):
 
             name, consolidated = self.clean_name(header["caseTitle"])
             docket = header["caseNumber"]
-            if consolidated:
+            if bool(consolidated):
                 docket = f"{docket} c/w {consolidated}"
 
-            case = {
+            case: RawOpinion = {
                 "name": name,
                 "docket": docket,
                 "date": date_filed,
@@ -185,14 +225,19 @@ class Site(OpinionSiteLinear):
         :return: (titlecased name, "c/w"-joined consolidated docket numbers)
         """
         consolidated = ""
-        if match := self.consolidated_regex.search(title):
-            consolidated = " c/w ".join(re.findall(r"\d+", match.group(1)))
+        if (match := self.consolidated_regex.search(title)) is not None:
+            consolidated = " c/w ".join(
+                number.group(0)
+                for number in re.finditer(r"\d+", match.group(1))
+            )
             title = title[: match.start()]
 
         title = self.case_type_regex.sub("", title)
         return titlecase(title.strip()), consolidated
 
-    def parse_description(self, description: str, date_filed: str) -> dict:
+    def parse_description(
+        self, description: str, date_filed: str
+    ) -> RawOpinion:
         """Extract opinion metadata from the docket entry description
 
         Always returns the same keys (with empty/False defaults) so every
@@ -202,7 +247,7 @@ class Site(OpinionSiteLinear):
         :param date_filed: the filed date, to resolve judge initials
         :return: dict with citation, disposition, author, per_curiam and judge
         """
-        metadata = {
+        metadata: RawOpinion = {
             "citation": "",
             "disposition": "",
             "author": "",
@@ -210,30 +255,30 @@ class Site(OpinionSiteLinear):
             "judge": "",
         }
 
-        if match := self.citation_regex.search(description):
+        if (match := self.citation_regex.search(description)) is not None:
             # The source abbreviates the reporter as "Opn.", but official guidelines
             # https://nvsctlawlib.libguides.com/nvcitationguide/case-law
             # (and reporters-db) use "Op." ("Nev. Adv. Op. No."), so normalize
             metadata["citation"] = match.group(0).replace("Opn.", "Op.")
 
-        if match := self.disposition_regex.search(description):
+        if (match := self.disposition_regex.search(description)) is not None:
             metadata["disposition"] = match.group(1)
 
         if "per curiam" in description.lower():
             metadata["per_curiam"] = True
-        elif match := self.author_regex.search(description):
+        elif (match := self.author_regex.search(description)) is not None:
             metadata["author"] = match.group(1)
 
-        if match := self.majority_regex.search(description):
+        if (match := self.majority_regex.search(description)) is not None:
             # Some entries list judge initials, e.g. "MG/BB/DW"
             judges = []
             for name in re.split(r"[\s/]+", match.group(1)):
-                if self.initials_regex.fullmatch(name):
-                    if judge := self.resolve_initials(name, date_filed):
+                if self.initials_regex.fullmatch(name) is not None:
+                    if bool(judge := self.resolve_initials(name, date_filed)):
                         judges.append(judge)
                 elif len(name) >= 3:
                     judges.append(name)
-            if judges:
+            if bool(judges):
                 metadata["judge"] = ", ".join(judges)
 
         return metadata
@@ -263,7 +308,8 @@ class Site(OpinionSiteLinear):
         )
         return ""
 
-    def make_backscrape_iterable(self, kwargs: dict) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """Collapse the default per-interval windows into a single range
 
         The ACIS API has no server-side date filter, so a backscrape pages
@@ -273,11 +319,15 @@ class Site(OpinionSiteLinear):
         :param kwargs: backscrape arguments
         :return: None
         """
-        super().make_backscrape_iterable(kwargs)
-        start = self.back_scrape_iterable[0][0]
-        end = self.back_scrape_iterable[-1][1]
+        date_ranges = self._get_backscrape_date_ranges(kwargs)
+        if not bool(date_ranges):
+            self.back_scrape_iterable = []
+            return
+        start = date_ranges[0][0]
+        end = date_ranges[-1][1]
         self.back_scrape_iterable = [(start, end)]
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Page through the date-sorted feed for a backscrape window
 
@@ -296,8 +346,9 @@ class Site(OpinionSiteLinear):
             self.set_url(page)
             self.html = await self._download()
             # Pages past the last one have no "_embedded" key
-            results = self.html.get("_embedded", {}).get("results", [])
-            if not results:
+            data = _search_adapter.validate_python(self.html, strict=True)
+            results = data.get("_embedded", {}).get("results", [])
+            if not bool(results):
                 break
 
             await self._process_html()

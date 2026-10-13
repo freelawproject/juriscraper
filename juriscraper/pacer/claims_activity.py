@@ -1,7 +1,9 @@
 import re
 from datetime import date
+from typing import TYPE_CHECKING, Never
 
 from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import (
@@ -12,35 +14,43 @@ from juriscraper.lib.string_utils import (
 from juriscraper.lib.utils import clean_court_object
 from juriscraper.pacer.reports import BaseReport
 
-from .docket_report import BaseDocketReport
+from .docket_report import BaseDocketReport, DocketNumberComponents
 from .utils import get_pacer_case_id_from_doc1_url
 
 logger = make_default_logger()
 
+if TYPE_CHECKING:
+    from .http import PacerSession
 
-class ClaimsActivity(BaseDocketReport, BaseReport):
+
+class ClaimsActivity(
+    BaseDocketReport[list[dict[str, object]] | dict[str, Never]], BaseReport
+):
     """Query and parse the claims activity."""
 
     PATH = "cgi-bin/ClaimsActRpt.pl"
-    CACHE_ATTRS = ["claims", "metadata"]
+    CACHE_ATTRS = ["metadata"]
     ERROR_STRINGS = BaseReport.ERROR_STRINGS + [
         "No claims entries found",
         "Security violation: You do not have access rights to this program",
     ]
 
-    def __init__(self, court_id, pacer_session=None):
-        BaseDocketReport.__init__(self, court_id)
+    def __init__(
+        self, court_id: str, pacer_session: "PacerSession | None" = None
+    ) -> None:
+        super().__init__(court_id)
         BaseReport.__init__(self, court_id, pacer_session)
 
         self._clear_caches()
-        self._metadata = None
-        self._claims = None
-        assert court_id.endswith("b"), (
-            "Unable to create object. Must use bankruptcy court abbreviation."
-        )
+        self._metadata: list[dict[str, object]] | None = None
+        if not court_id.endswith("b"):
+            raise ValueError(
+                "Unable to create object. Must use bankruptcy court abbreviation."
+            )
 
     @property
-    def data(self):
+    @override
+    def data(self) -> list[dict[str, object]] | dict[str, Never]:
         """Get all the data back from this endpoint."""
         if self.is_valid is False:
             return {}
@@ -48,8 +58,13 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         data = self.metadata.copy()
         return data
 
+    @override
+    def _parse_text(self, text: str) -> None:
+        self._clear_caches()
+        super()._parse_text(text)
+
     @property
-    def metadata(self):
+    def metadata(self) -> list[dict[str, object]] | dict[str, Never]:
         """
         Each claim table looks like this:
 
@@ -71,7 +86,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         if self._metadata is not None:
             return self._metadata
 
-        data = []
+        data: list[dict[str, object]] = []
 
         field_mappings_case = {
             "title": "case_name",
@@ -100,14 +115,22 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
             "remarks": "remarks",
         }
 
-        claim_tables = self.tree.xpath('//table[@class="complexReport"]')
+        if self.tree is None:
+            raise ValueError("Parse a report before accessing its contents.")
+        if not isinstance(self.tree, HtmlElement):
+            raise TypeError("Expected an HTML tree for this report.")
+        claim_tables: list[HtmlElement] = self.tree.xpath(
+            '//table[@class="complexReport"]'
+        )
         for claim_table in claim_tables:
-            meta_data = {
+            meta_data: dict[str, object] = {
                 "court_id": self.court_id,
             }
-            claim = {}
+            claim: dict[str, object] = {}
 
-            label_nodes = claim_table.xpath("(.//tr)[1]/td[1]/text()")
+            label_nodes: list[str] = claim_table.xpath(
+                "(.//tr)[1]/td[1]/text()"
+            )
             # Parse case and claim data from row 1 column 1.
             for label_node in label_nodes:
                 meta_data.update(
@@ -123,7 +146,9 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
 
             self._parse_case_name_and_docket_number(meta_data, claim_table)
 
-            claim_anchor_nodes = claim_table.xpath("(.//tr)[1]/td[1]/b/a")
+            claim_anchor_nodes: list[HtmlElement] = claim_table.xpath(
+                "(.//tr)[1]/td[1]/b/a"
+            )
             claim.update(self._get_claim_data_from_anchors(claim_anchor_nodes))
 
             # Parse claim data from row 1 column 2.
@@ -175,9 +200,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
             self._fill_non_present_values_as_empty(
                 field_mappings_case, meta_data
             )
-            self._fill_non_present_values_as_empty(
-                field_mappings_claim, meta_data["claim"]
-            )
+            self._fill_non_present_values_as_empty(field_mappings_claim, claim)
 
         data = clean_court_object(data)
         self._metadata = data
@@ -186,7 +209,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
     def _fill_non_present_values_as_empty(
         self,
         field_mappings: dict[str, str],
-        meta_data: dict[str, str | date | None | list[dict[str, str]]],
+        meta_data: dict[str, object],
     ) -> None:
         """Fill claim missing values in meta_data with empty values if they are
         not present.
@@ -205,7 +228,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
 
     def _parse_case_name_and_docket_number(
         self,
-        meta_data: dict[str, str | date | None | list[dict[str, str]]],
+        meta_data: dict[str, object],
         claim_table: HtmlElement,
     ) -> None:
         """Parses the case name and docket number from the provided meta_data
@@ -218,7 +241,9 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         meta_data["case_name"] = harmonize(meta_data["case_name"])
 
         docket_number = meta_data.get("docket_number")
-        if docket_number:
+        if bool(docket_number):
+            if not isinstance(docket_number, str):
+                raise TypeError("A docket number must be a string.")
             docket_number, docket_number_components = (
                 self._parse_docket_number(docket_number)
             )
@@ -226,7 +251,10 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
             # Include the docket_number components.
             meta_data.update(docket_number_components)
         else:
-            docket_number = claim_table.xpath("(.//tr)[1]/td[1]/a//text()")[0]
+            docket_numbers: list[str] = claim_table.xpath(
+                "(.//tr)[1]/td[1]/a//text()"
+            )
+            docket_number = docket_numbers[0]
             docket_number, docket_number_components = (
                 self._parse_docket_number(docket_number)
             )
@@ -236,7 +264,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
 
     def _parse_docket_number(
         self, docket_number: str
-    ) -> tuple[str, dict[str, str | None]]:
+    ) -> tuple[str, DocketNumberComponents]:
         """Strip the judge initials off docket numbers, and do any other
         similar cleanup.
 
@@ -255,7 +283,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         ]
         for regex in regexes:
             match = regex.search(docket_number)
-            if match:
+            if match is not None:
                 docket_number_components = self._parse_dn_components(
                     docket_number
                 )
@@ -265,7 +293,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
 
     def _get_claim_data_from_anchors(
         self, anchor_nodes: list[HtmlElement]
-    ) -> dict[str, str | list[dict[str, str]]]:
+    ) -> dict[str, str | None | list[dict[str, str | None]]]:
         """Retrieves claim data from a list of HTML anchor elements.
 
         :param anchor_nodes: A list of HTML anchor elements that contain
@@ -274,12 +302,12 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         :return: A dict with the claim data and claim attachments.
         """
 
-        claim = {}
-        attachments = []
+        claim: dict[str, str | None | list[dict[str, str | None]]] = {}
+        attachments: list[dict[str, str | None]] = []
         for i, anchor in enumerate(anchor_nodes):
-            document_url = (
-                anchor.xpath("./@href")[0] if anchor is not None else None
-            )
+            document_url = anchor.get("href")
+            if document_url is None:
+                raise ValueError("A claim document link must have a URL.")
             if i == 0:
                 claim["pacer_case_id"] = get_pacer_case_id_from_doc1_url(
                     document_url
@@ -315,7 +343,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
     def get_pacer_claim_id_from_claim_url(url: str) -> str | None:
         """Extract the caseid from the doc1 URL."""
         match = re.search(r"claim_id=(\d+)", url)
-        if match:
+        if match is not None:
             return match.group(1)
         else:
             return None
@@ -324,7 +352,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
     def get_claim_number_from_claim_url(url: str) -> str | None:
         """Extract the caseid from the doc1 URL."""
         match = re.search(r"claim_num=(\d+-\d+)", url)
-        if match:
+        if match is not None:
             return match.group(1)
         else:
             return None
@@ -333,7 +361,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
     def get_claim_doc_seq_from_claim_url(url: str) -> str | None:
         """Extract the caseid from the doc1 URL."""
         match = re.search(r"claim_doc_seq=(\d+)", url)
-        if match:
+        if match is not None:
             return match.group(1)
         else:
             return None
@@ -370,13 +398,14 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         )
         label = field_mappings.get(label)
 
-        if not label:
+        if not bool(label):
             return {}
 
         value = value.strip()
         value = value.lstrip(":").strip()
+        data: dict[str, str | date | None]
         if label.startswith("date_") or label.startswith("last_date_"):
-            if value:
+            if bool(value):
                 data = {label: convert_date_string(value)}
             else:
                 data = {label: None}
@@ -391,7 +420,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         creditor_name: str,
         date_start: date | None = None,
         date_end: date | None = None,
-    ):
+    ) -> None:
         """Query the claims activity and return the results.
 
         :param pacer_case_id: The internal PACER ID for the case.
@@ -405,9 +434,10 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
 
         :return: request response object
         """
-        assert self.session is not None, (
-            "session attribute of ClaimsActivity cannot be None."
-        )
+        if self.session is None:
+            raise ValueError(
+                "session attribute of ClaimsActivity cannot be None."
+            )
 
         params = {
             "all_case_ids": pacer_case_id,
@@ -419,12 +449,12 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
             "case_num": docket_number,
             "creditor": creditor_name,
         }
-        if date_start:
+        if date_start is not None:
             params["entered_from"] = date_start.strftime("%m/%d/%Y")
         else:
             # Set the default
             params["entered_from"] = "1/1/1960"
-        if date_end:
+        if date_end is not None:
             params["entered_to"] = date_end.strftime("%m/%d/%Y")
 
         logger.info(

@@ -114,7 +114,7 @@ def coa_name_to_court_id(coa_name: str) -> CourtID:
     :return: The CourtID corresponding to the given Court of Appeals name.
     """
     coa_name_parts = coa_name.split()
-    if not coa_name_parts:
+    if not bool(coa_name_parts):
         return CourtID.UNKNOWN
     return COA_ORDINAL_MAP.get(coa_name_parts[0].lower(), CourtID.UNKNOWN)
 
@@ -151,7 +151,7 @@ def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
     container = tree.find(
         './/*[@id="ctl00_ContentPlaceHolder1_divCOAInfo"]/div/div/div[2]'
     )
-    if container:
+    if bool(container):
         info_container = container.find(
             './/*[@id="ctl00_ContentPlaceHolder1_pnlCOA"]'
         )
@@ -166,7 +166,10 @@ def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
 
     case_info_elements = [
         (row.find(".//*[1]"), row.find(".//*[2]"))
-        for row in (list(info_container or ()) + list(judge_container or ()))
+        for row in (
+            list(info_container if bool(info_container) else ())
+            + list(judge_container if bool(judge_container) else ())
+        )
         if row is not None
     ]
     case_info = {
@@ -179,10 +182,10 @@ def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
     case_url_nodes = case_info["COA Case"].findall(".//a")
     case_numbers = [clean_string(a.text_content()) for a in case_url_nodes]
     case_urls = [clean_url(a.get("href", "")) for a in case_url_nodes]
-    if not case_numbers:
+    if not bool(case_numbers):
         fallback = clean_string(case_info["COA Case"].text_content())
-        case_numbers: list[str] = [fallback] if fallback else []
-        case_urls: list[str] = [""] if fallback else []
+        case_numbers: list[str] = [fallback] if bool(fallback) else []
+        case_urls: list[str] = [""] if bool(fallback) else []
     district = clean_string(case_info["COA District"].text_content())
     return TexasAppealsCourt(
         case_number=case_numbers,
@@ -305,7 +308,7 @@ def _clean_court_name(name: str) -> str:
         .strip()
     )
     # Terminate early if the name was only whitespace
-    if not name:
+    if not bool(name):
         return name
     # Typos
     name = (
@@ -338,13 +341,13 @@ def _originating_court_name_to_type(name: str) -> CourtType:
     :param name: The trial court name from TAMES.
     :return: The type of the originating court."""
     name = _clean_court_name(name)
-    if not name:
+    if not bool(name):
         return CourtType.UNKNOWN
-    if DISTRICT_COURT_RE.match(name):
+    if DISTRICT_COURT_RE.match(name) is not None:
         return CourtType.DISTRICT
-    if BUSINESS_COURT_RE.match(name):
+    if BUSINESS_COURT_RE.match(name) is not None:
         return CourtType.BUSINESS
-    if APPELLATE_COURT_RE.match(name):
+    if APPELLATE_COURT_RE.match(name) is not None:
         return CourtType.APPELLATE
     if "county" in name:
         return CourtType.COUNTY
@@ -446,7 +449,7 @@ class TexasAppellateBrief(TexasDocketEntry):
     description: str
 
 
-class TexasCommonData(TypedDict):
+class TexasDocketMetadata(TypedDict):
     """
     Schema for data common to all Texas dockets.
 
@@ -480,6 +483,11 @@ class TexasCommonData(TypedDict):
     case_type: str
     parties: list[TexasCaseParty]
     originating_court: TexasOriginatingCourt
+
+
+class TexasCommonData(TexasDocketMetadata):
+    """Texas docket metadata with standard event and brief records."""
+
     case_events: list[TexasCaseEvent]
     appellate_briefs: list[TexasAppellateBrief]
 
@@ -636,7 +644,7 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
         removes all characters that are not whitespace or alphanumeric and
         converts to lowercase.
         """
-        name = "".join(get_all_text(name_element))
+        name = get_all_text(name_element)
         return re.sub(r"[^\s\w]", "", clean_string(name)).lower()
 
     def _extract_case_data(self) -> dict[str, str] | None:
@@ -724,19 +732,19 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
         expanded_parts = []
         for part in party_name_parts:
             expanded_parts.extend(
-                p.strip() for p in part.split(" and ") if p.strip()
+                p.strip() for p in part.split(" and ") if bool(p.strip())
             )
         party_name_parts = expanded_parts
         # Strip out acronyms like LLC, MD, and PA so they don't clutter things
         party_name_parts = [
             part
             for part in party_name_parts
-            if not self.BUSINESS_AND_TITLE_STRIP_RE.fullmatch(part)
+            if self.BUSINESS_AND_TITLE_STRIP_RE.fullmatch(part) is None
         ]
         party_name_parts = [
             part.removeprefix("the ").strip() for part in party_name_parts
         ]
-        if not party_name_parts:
+        if not bool(party_name_parts):
             start = self.case_name_full.lower().find(party_name.lower())
             end = start + len(party_name) if start >= 0 else len(party_name)
             return start, end
@@ -862,7 +870,7 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
         if docket_number in IGNORED_DOCKET_NUMBERS:
             return None
         for docket_number_regex in DOCKET_NUMBER_REGEXES:
-            if docket_number_regex.fullmatch(docket_number):
+            if docket_number_regex.fullmatch(docket_number) is not None:
                 return docket_number
         raise ValueError(
             f'Unrecognized docket number format: "{docket_number}"'
@@ -1037,8 +1045,16 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
         if table is None:
             return []
         documents = parse_table(table)
-        anchors = [parent.find(".//a") for parent in documents["0"]]
-        urls: list[str] = [clean_url(anchor.get("href")) for anchor in anchors]
+        if not bool(documents):
+            return []
+        anchors: list[HtmlElement] = []
+        urls: list[str] = []
+        for parent in documents["0"]:
+            anchor = parent.find(".//a")
+            if anchor is None or (href := anchor.get("href")) is None:
+                raise ValueError("Case document is missing its download link")
+            anchors.append(anchor)
+            urls.append(clean_url(href))
         query_dicts: list[dict[str, list[str]]] = [
             parse_qs(urlparse(url).query) for url in urls
         ]

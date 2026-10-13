@@ -20,22 +20,33 @@ History:
 import re
 from datetime import date
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
 from juriscraper.lib.judge_parsers import normalize_judge_names
-from juriscraper.lib.string_utils import convert_date_string, titlecase
+from juriscraper.lib.string_utils import (
+    CaseNameTweaker,
+    convert_date_string,
+    titlecase,
+)
+from juriscraper.lib.type_utils import BackscrapeOptions, ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[int]):
     url_template = (
         "https://www.courts.maine.gov/courts/sjc/lawcourt/{}/index.html"
     )
     first_opinion_year = 2017
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[int]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.courts.maine.gov/courts/sjc/opinions.html"
         self.path_root = '//table[contains(.//th[1], "Opinion")]//tr[td]'
@@ -44,8 +55,13 @@ class Site(OpinionSiteLinear):
 
     @override
     def _process_html(self) -> None:
-        for row in self.html.xpath(self.path_root):
-            cite, name, date = row.xpath("./td")
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(self.path_root)
+        for row in rows:
+            cite, name, date = row.findall("./td")
 
             # handle the one typo
             date_str = date.text_content().replace("Aguust", "August")
@@ -59,12 +75,13 @@ class Site(OpinionSiteLinear):
                     "citation": cite.text_content(),
                     "date": date_str,
                     "name": case_name,
-                    "url": name.xpath(".//a")[0].attrib["href"],
+                    "url": name.findall(".//a")[0].attrib["href"],
                     "docket": "",
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract out lots of data from Maine
 
         :param scraped_text: The first page of content
@@ -81,7 +98,7 @@ class Site(OpinionSiteLinear):
 
         author = r"(?P<author_str>.*)\n+(\s+)?\[¶1\]"
         m = re.search(author, scraped_text, re.MULTILINE)
-        if m:
+        if m is not None:
             if m.group("author_str") == "PER CURIAM":
                 per_curiam = True
                 author_str = ""
@@ -92,16 +109,20 @@ class Site(OpinionSiteLinear):
             per_curiam = False
             author_str = ""
 
-        date_argued = extracted.get("On Briefs", "") or extracted.get(
-            "Argued", ""
+        date_argued = (
+            On_Briefs_value
+            if bool(On_Briefs_value := extracted.get("On Briefs", ""))
+            else extracted.get("Argued", "")
         )
         date_argued_str = ""
-        if date_argued:
+        if bool(date_argued):
             # Format date
             date_argued = convert_date_string(date_argued)
+            if date_argued is None:
+                raise ValueError("An argument date is required")
             date_argued_str = date_argued.strftime("%Y-%m-%d")
 
-        metadata = {
+        metadata: ExtractedMetadata = {
             "Opinion": {
                 "author_str": normalize_judge_names(author_str),
                 "per_curiam": per_curiam,
@@ -117,19 +138,21 @@ class Site(OpinionSiteLinear):
 
         return metadata
 
+    @override
     async def _download_backwards(self, year: int) -> None:
         self.url = self.url_template.format(year)
         logger.info("Backscraping for year %s %s", year, self.url)
         self.html = await self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs: dict):
-        if kwargs.get("backscrape_start"):
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
+        if bool(kwargs.get("backscrape_start")):
             start = int(kwargs["backscrape_start"])
         else:
             start = self.first_opinion_year
 
-        if kwargs.get("backscrape_end"):
+        if bool(kwargs.get("backscrape_end")):
             end = int(kwargs["backscrape_end"])
         else:
             end = date.today().year - 1

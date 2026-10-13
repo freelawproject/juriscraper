@@ -1,7 +1,10 @@
+from typing_extensions import override
+
 from .fisc import Site as FiscSite
 
 
 class Site(FiscSite):
+    @override
     def skip_record(self, docket: str, filename: str) -> bool:
         """Skips a record that belongs to FISC
 

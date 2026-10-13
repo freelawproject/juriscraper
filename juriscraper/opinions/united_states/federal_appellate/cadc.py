@@ -10,15 +10,23 @@ History:
 
 import re
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         # https://media.cadc.uscourts.gov/opinions/
         self.url = "https://media.cadc.uscourts.gov/opinions/bydate/recent"
@@ -27,7 +35,14 @@ class Site(OpinionSiteLinear):
     @override
     def _process_html(self) -> None:
         link_xpath = "a[contains(@href, '.pdf')]"
-        for row in self.html.xpath(f"//div[div[div[div[{link_xpath}]]]]"):
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(
+            f"//div[div[div[div[{link_xpath}]]]]"
+        )
+        for row in rows:
             self.cases.append(
                 {
                     "url": row.xpath(f".//{link_xpath}/@href")[0],
@@ -37,7 +52,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract lower court from the scraped text.
 
         :param scraped_text: The text to extract from.
@@ -57,12 +73,12 @@ class Site(OpinionSiteLinear):
         )
 
         lower_court = ""
-        if match := pattern.search(scraped_text):
+        if (match := pattern.search(scraped_text)) is not None:
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
 
-        if lower_court:
+        if bool(lower_court):
             return {
                 "Docket": {
                     "appeal_from_str": titlecase(lower_court),

@@ -10,15 +10,21 @@ from collections.abc import AsyncGenerator, Callable
 from datetime import date
 from types import TracebackType
 from typing import (
-    Any,
+    ClassVar,
     Self,
     TypedDict,
     TypeVar,
+    Unpack,
 )
 
 import httpx
 
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.type_utils import (
+    AsyncClientOptions,
+    GetRequestOptions,
+    PostRequestOptions,
+)
 
 logger = make_default_logger()
 
@@ -45,6 +51,7 @@ class ScraperRequestManager:
         self,
         session: httpx.AsyncClient | None = None,
         all_response_fn: ResponseCallback | None = None,
+        **kwargs: Unpack[AsyncClientOptions],
     ) -> None:
         """Initialize the request manager.
 
@@ -57,16 +64,23 @@ class ScraperRequestManager:
                 the request manager instance and the response object.
         """
         if session is not None:
+            if bool(kwargs):
+                raise ValueError(
+                    "Configure client options on the supplied session."
+                )
             self.session = session
         else:
-            self.session = httpx.AsyncClient(http2=True, follow_redirects=True)
-            self.session.headers.update(
-                {
-                    "User-Agent": "Juriscraper",
-                    "Cache-Control": "no-cache, max-age=0, must-revalidate",
-                    "Pragma": "no-cache",
-                }
+            kwargs.setdefault("http2", True)
+            kwargs.setdefault("follow_redirects", True)
+            kwargs.setdefault("timeout", 60)
+            headers = httpx.Headers(kwargs.get("headers"))
+            headers.setdefault("User-Agent", "Juriscraper")
+            headers.setdefault(
+                "Cache-Control", "no-cache, max-age=0, must-revalidate"
             )
+            headers.setdefault("Pragma", "no-cache")
+            kwargs["headers"] = headers
+            self.session = httpx.AsyncClient(**kwargs)
 
         self.all_response_fn = all_response_fn
 
@@ -89,7 +103,7 @@ class ScraperRequestManager:
         self,
         method: str,
         url: str,
-        **kwargs: Any,
+        **kwargs: Unpack[PostRequestOptions],
     ) -> httpx.Response:
         """Make an HTTP request using the internal session.
 
@@ -106,11 +120,9 @@ class ScraperRequestManager:
         Returns:
             The httpx Response object
         """
-        kwargs.setdefault("timeout", 60)
-
         response = await self.session.request(method, url, **kwargs)
 
-        if self.all_response_fn:
+        if self.all_response_fn is not None:
             self.all_response_fn(self, response)
 
         return response
@@ -125,11 +137,15 @@ class ScraperRequestManager:
         self.session.headers.update(headers)
 
     # Convenience methods that mirror requests library
-    async def get(self, url: str, **kwargs: Any) -> httpx.Response:
+    async def get(
+        self, url: str, **kwargs: Unpack[GetRequestOptions]
+    ) -> httpx.Response:
         """Make a GET request. See request() for details."""
         return await self.request("GET", url, **kwargs)
 
-    async def post(self, url: str, **kwargs: Any) -> httpx.Response:
+    async def post(
+        self, url: str, **kwargs: Unpack[PostRequestOptions]
+    ) -> httpx.Response:
         """Make a POST request. See request() for details."""
         return await self.request("POST", url, **kwargs)
 
@@ -154,12 +170,12 @@ class BaseStateScraper(ABC):
 
     # Override in subclasses to add custom headers to all requests
     ADDITIONAL_HEADERS: dict[str, str] | None = None
-    COURT_IDS: list[str] = []
+    COURT_IDS: ClassVar[list[str]] = []
 
     def __init__(
         self,
         request_manager: ScraperRequestManager | None = None,
-        **kwargs: Any,
+        **kwargs: Unpack[AsyncClientOptions],
     ) -> None:
         """Initialize the scraper.
 
@@ -167,15 +183,19 @@ class BaseStateScraper(ABC):
             request_manager: Optional ScraperRequestManager instance. If not
                 provided, a new one will be created with default settings.
                 Supplied managers remain caller-managed.
-            **kwargs: Additional keyword arguments for subclass customization.
+            **kwargs: HTTPX client options for a newly created request manager.
         """
         super().__init__()
 
         self._owns_request_manager = request_manager is None
         if request_manager is not None:
+            if bool(kwargs):
+                raise ValueError(
+                    "Configure client options on the supplied request manager."
+                )
             self.request_manager = request_manager
         else:
-            self.request_manager = ScraperRequestManager()
+            self.request_manager = ScraperRequestManager(**kwargs)
 
         # Merge additional headers if defined by subclass
         if self.ADDITIONAL_HEADERS is not None:

@@ -1,7 +1,9 @@
 import re
+from typing import TYPE_CHECKING
 from urllib.parse import urljoin
 
 from httpx import Response, Timeout
+from lxml import etree
 from lxml.html import HtmlElement
 
 from juriscraper.lib.html_utils import (
@@ -24,19 +26,23 @@ from .utils import (
 
 logger = make_default_logger()
 
+if TYPE_CHECKING:
+    from .http import PacerSession
 
-# Patch the HtmlElement class to add a function that can handle regular
-# expressions within XPath queries. See usages throughout AppellateDocketReport.
-def re_xpath(self, path):
-    return self.xpath(
+
+def re_xpath(node: HtmlElement, path: str) -> list[HtmlElement]:
+    """Select HTML elements using EXSLT regular expressions."""
+    result: object = node.xpath(
         path, namespaces={"re": "http://exslt.org/regular-expressions"}
     )
+    if not isinstance(result, list) or not all(
+        isinstance(item, HtmlElement) for item in result
+    ):
+        raise TypeError("Expected an element selection from regex XPath.")
+    return [item for item in result if isinstance(item, HtmlElement)]
 
 
-HtmlElement.re_xpath = re_xpath
-
-
-class BaseReport:
+class PacerReport:
     """A base report for working with pages on PACER."""
 
     # Subclasses should override PATH
@@ -51,40 +57,40 @@ class BaseReport:
         "Drumpf",
     ]
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(
+        self, court_id: str, pacer_session: "PacerSession | None" = None
+    ) -> None:
         self.court_id = court_id
         self.session = pacer_session
-        self.tree = None
-        self.response = None
-        self.is_valid = None
+        self.tree: etree._Element | None = None
+        self.response: Response | None = None
+        self.is_valid: bool | None = None
 
     @property
-    def doc_id_prefix(self):
+    def doc_id_prefix(self) -> str:
         return get_doc_id_prefix_from_court_id(self.court_id)
 
     @property
-    def url(self):
+    def url(self) -> str:
         if self.court_id == "psc":
             return f"https://dcecf.psc.uscourts.gov/{self.PATH}"
         else:
             return f"https://ecf.{self.court_id}.uscourts.gov/{self.PATH}"
 
-    async def query(self, *args, **kwargs):
-        """Query PACER and set self.response with the response."""
-        raise NotImplementedError(".query() must be overridden")
-
-    def parse(self):
+    def parse(self) -> None:
         """Parse the data provided in a httpx.Response object and set
         self.tree to be an lxml etree. In most cases, you won't need to call
         this since it will be automatically called by self.query, if needed.
 
         :return: None
         """
+        if self.response is None:
+            raise ValueError("A response is required before parsing a report.")
         self.response.raise_for_status()
         set_response_encoding(self.response)
         self._parse_text(self.response.text)
 
-    def _parse_text(self, text):
+    def _parse_text(self, text: str) -> None:
         """Parse the HTML as unicode text and set self.tree
 
         This is a particularly critical method when running tests, which pull
@@ -95,23 +101,22 @@ class BaseReport:
         :param text: A unicode object
         :return: None
         """
-        assert isinstance(text, str), (
-            f"Input must be unicode, not {type(text)}"
-        )
+        if not isinstance(text, str):
+            raise TypeError(f"Input must be unicode, not {type(text)}")
+        self.tree = None
         text = clean_html(text)
         self.check_validity(text)
-        if self.is_valid:
-            self._strip_bad_html_tags_insecure(text)
+        if bool(self.is_valid):
+            self.tree = self._strip_bad_html_tags_insecure(text)
             self.tree.rewrite_links(fix_links_in_lxml_tree, base_href=self.url)
 
-    def _strip_bad_html_tags_insecure(self, text: str) -> None:
+    def _strip_bad_html_tags_insecure(self, text: str) -> HtmlElement:
         """Remove bad tags from HTML
 
         :param text: The HTML string you wish to cleanup
-        Set self.tree to a cleaned lxml.html.HtmlElement
-        :return: None
+        :return: A cleaned lxml.html.HtmlElement
         """
-        self.tree = strip_bad_html_tags_insecure(text, remove_scripts=True)
+        return strip_bad_html_tags_insecure(text, remove_scripts=True)
 
     def check_validity(self, text: str) -> None:
         """Place sanity checks here to make sure that the returned text is
@@ -123,15 +128,10 @@ class BaseReport:
             error_string_re = re.compile(
                 r"\s+".join(error_string.split()), flags=re.I
             )
-            if error_string_re.search(text):
+            if error_string_re.search(text) is not None:
                 self.is_valid = False
                 return
         self.is_valid = True
-
-    @property
-    def data(self):
-        """Extract the data from the tree and return it."""
-        raise NotImplementedError(".data() must be overridden.")
 
     async def _query_pdf_download(
         self,
@@ -149,6 +149,8 @@ class BaseReport:
         get the PDF itself ('1').
         :return the Request.response object and the url queried
         """
+        if self.session is None:
+            raise ValueError("session attribute of BaseReport cannot be None.")
         url = make_doc1_url(self.court_id, pacer_doc_id, True)
         data = {
             "got_receipt": got_receipt,
@@ -183,7 +185,7 @@ class BaseReport:
         if pacer_magic_num is not None:
             data["magic_num"] = pacer_magic_num
 
-        if de_seq_num:
+        if bool(de_seq_num):
             data["de_seq_num"] = de_seq_num
 
         timeout = Timeout(60, read=300)
@@ -191,10 +193,41 @@ class BaseReport:
         r = await self.session.post(url, data=data, timeout=timeout)
         return r, url
 
+    async def is_pdf_sealed(
+        self,
+        pacer_case_id: str | None,
+        pacer_doc_id: str,
+        pacer_magic_num: str | None = None,
+    ) -> bool:
+        """Check if a PDF is sealed without trying to actually download
+        it.
+        """
+        r, url = await self._query_pdf_download(
+            pacer_case_id, pacer_doc_id, pacer_magic_num, got_receipt="0"
+        )
+        sealed = b"You do not have permission to view this document."
+        return sealed in r.content
+
+    async def is_entry_sealed(
+        self,
+        pacer_case_id: str,
+        pacer_doc_id: str,
+        pacer_magic_num: str | None = None,
+    ) -> bool:
+        """Check if a docket entry is sealed without trying to actually download
+        it.
+        """
+        r, url = await self._query_pdf_download(
+            pacer_case_id, pacer_doc_id, pacer_magic_num, got_receipt="0"
+        )
+        return b"could not retrieve dktentry for dlsid" in r.content
+
+
+class BaseReport(PacerReport):
     async def download_pdf(
         self,
         pacer_case_id: str | None = None,
-        pacer_doc_id: int | None = None,
+        pacer_doc_id: str | None = None,
         pacer_magic_num: str | None = None,
         appellate: bool = False,
         de_seq_num: str | None = None,
@@ -209,25 +242,35 @@ class BaseReport:
         the error message, if there is one or else an empty string.
         """
 
-        assert self.session is not None, (
-            "session attribute of BaseReport cannot be None."
-        )
-        assert acms or (pacer_case_id and pacer_doc_id), (
-            "pacer_case_id and pacer_doc_id can't be None for non-ACMS downloads."
-        )
+        if self.session is None:
+            raise ValueError("session attribute of BaseReport cannot be None.")
+        if acms:
+            if not bool(pacer_magic_num):
+                raise ValueError(
+                    "pacer_magic_num is required for ACMS magic-link downloads."
+                )
+        elif not bool(pacer_case_id) or not bool(pacer_doc_id):
+            raise ValueError(
+                "pacer_case_id and pacer_doc_id can't be None for non-ACMS downloads."
+            )
 
         req_timeout = Timeout(60, read=300)
-        if pacer_magic_num:
+        if bool(pacer_magic_num):
             # If magic_number is available try to download the
             # document anonymously by its magic link
 
             # Create PACER base url from court_id and pacer_doc_id
             # Magic link parameters
+            params: dict[str, str | None]
             if acms:
                 url = make_acms_free_doc_url(self.court_id, pacer_magic_num)
                 params = {}
+            elif pacer_doc_id is None:
+                raise ValueError(
+                    "pacer_doc_id is required for non-ACMS downloads."
+                )
             elif appellate:
-                url = make_docs1_url(self.court_id, str(pacer_doc_id), True)
+                url = make_docs1_url(self.court_id, pacer_doc_id, True)
                 # For appellate documents the magic_number is the uid param
                 params = {
                     "uid": pacer_magic_num,
@@ -240,7 +283,7 @@ class BaseReport:
                     "use_magic": "1",  # Bypass the free look confirmation.
                 }
 
-            if de_seq_num:
+            if bool(de_seq_num):
                 params["de_seq_num"] = de_seq_num
 
             # Add parameters to the PACER base url and make a GET request
@@ -257,12 +300,16 @@ class BaseReport:
                     f"caseid: {pacer_case_id}, magic_num: {pacer_magic_num}, "
                     f"URL: {url}"
                 )
-            if error:
+            if bool(error):
                 logger.warning(error)
                 return None, error
 
         else:
             # If no magic_number use normal method to fetch the document
+            if pacer_doc_id is None:
+                raise ValueError(
+                    "pacer_doc_id is required for non-ACMS downloads."
+                )
             r, url = await self._query_pdf_download(
                 pacer_case_id,
                 pacer_doc_id,
@@ -304,9 +351,12 @@ class BaseReport:
                     f"Document not available in case: "
                     f"{pacer_case_id=} at {url}"
                 )
-            if re.search(
-                rb"You do not have permission to view\s+this document.",
-                r.content,
+            if (
+                re.search(
+                    rb"You do not have permission to view\s+this document.",
+                    r.content,
+                )
+                is not None
             ):
                 error = (
                     f"Permission denied getting document. It's probably "
@@ -360,7 +410,7 @@ class BaseReport:
                     f"suit. {pacer_case_id=}, {url=}"
                 )
 
-            if error:
+            if bool(error):
                 logger.warning(error)
                 return None, error
 
@@ -387,7 +437,8 @@ class BaseReport:
         tree = get_html_parsed_text(text)
         tree.rewrite_links(fix_links_in_lxml_tree, base_href=str(r.url))
         try:
-            iframe_src = tree.xpath("//iframe/@src")[0]
+            iframe_sources: list[str] = tree.xpath("//iframe/@src")
+            iframe_src = iframe_sources[0]
         except IndexError:
             if "pdf:Producer" in text:
                 error = (
@@ -405,7 +456,7 @@ class BaseReport:
             logger.error(error)
             return None, error
 
-        if pacer_magic_num:
+        if bool(pacer_magic_num):
             # If magic_number is available try to download the
             # document anonymously from iframe_src
             r = await self.session.get_anonymous(
@@ -420,29 +471,3 @@ class BaseReport:
             )
 
         return r, ""
-
-    async def is_pdf_sealed(
-        self, pacer_case_id, pacer_doc_id, pacer_magic_num=None
-    ):
-        """Check if a PDF is sealed without trying to actually download
-        it.
-        """
-        r, url = await self._query_pdf_download(
-            pacer_case_id, pacer_doc_id, pacer_magic_num, got_receipt="0"
-        )
-        sealed = "You do not have permission to view this document."
-        return sealed in r.content
-
-    async def is_entry_sealed(
-        self,
-        pacer_case_id: str,
-        pacer_doc_id: str,
-        pacer_magic_num: str | None = None,
-    ):
-        """Check if a docket entry is sealed without trying to actually download
-        it.
-        """
-        r, url = await self._query_pdf_download(
-            pacer_case_id, pacer_doc_id, pacer_magic_num, got_receipt="0"
-        )
-        return b"could not retrieve dktentry for dlsid" in r.content

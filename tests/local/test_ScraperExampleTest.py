@@ -9,6 +9,10 @@ import sys
 import time
 import unittest
 
+from pydantic import TypeAdapter
+from typing_extensions import override
+
+from juriscraper.AbstractSite import AbstractSite
 from juriscraper.lib.importer import build_module_list
 from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.lib.test_utils import (
@@ -18,12 +22,14 @@ from juriscraper.lib.test_utils import (
 
 
 class ScraperExampleTest(unittest.IsolatedAsyncioTestCase):
-    def setUp(self):
+    @override
+    def setUp(self) -> None:
         self.maxDiff = 1000
         # Disable logging
         logging.disable(logging.CRITICAL)
 
-    def tearDown(self):
+    @override
+    def tearDown(self) -> None:
         # Re-enable logging
         logging.disable(logging.NOTSET)
 
@@ -89,14 +95,23 @@ class ScraperExampleTest(unittest.IsolatedAsyncioTestCase):
                 if path.endswith("~"):
                     # Text editor backup: Not interesting.
                     continue
-                site = mod.Site(cnt=cnt)
+                site_class: object = getattr(mod, "Site", None)
+                if not isinstance(site_class, type) or not issubclass(
+                    site_class, AbstractSite
+                ):
+                    raise TypeError(
+                        f"{mod.__name__}.Site must subclass AbstractSite"
+                    )
+                site = site_class(cnt=cnt)
                 site.mock_url = path
                 # Forces a local GET
                 site.enable_test_mode()
                 await site.parse()
                 # Now validate that the parsed result is as we expect
                 json_path = f"{path.rsplit('.', 1)[0]}{json_compare_extension}"
-                json_data = json.loads(site.to_json())
+                json_data = TypeAdapter(list[object]).validate_json(
+                    site.to_json()
+                )
                 if os.path.isfile(json_path):
                     # Compare result with corresponding json file
                     example_file = path.rsplit("/", 1)[1]
@@ -109,7 +124,9 @@ class ScraperExampleTest(unittest.IsolatedAsyncioTestCase):
                             module_string=module_string,
                         ),
                     ):
-                        fixture_json = json.load(input_file)
+                        fixture_json = TypeAdapter(list[object]).validate_json(
+                            input_file.read()
+                        )
                         self.assertEqual(
                             len(fixture_json),
                             len(json_data),
@@ -138,7 +155,7 @@ class ScraperExampleTest(unittest.IsolatedAsyncioTestCase):
             t2 = time.time()
             duration = t2 - t1
             warning_msg = warn_or_crash_slow_parser(t2 - t1)
-            if warning_msg:
+            if bool(warning_msg):
                 num_warnings += 1
 
             print(f"({num_tests} test(s) in {duration:0.1f} seconds)")
@@ -148,14 +165,14 @@ class ScraperExampleTest(unittest.IsolatedAsyncioTestCase):
             f"{num_example_files} example files, with {num_warnings} "
             "speed warnings."
         )
-        if json_compare_files_generated:
+        if bool(json_compare_files_generated):
             msg = (
                 "Generated compare file(s) during test, please review before proceeding. "
                 "If the data looks good, run tests again, then be sure to include "
                 "the new compare file(s) in your commit: %s"
             )
             self.fail(msg % ", ".join(json_compare_files_generated))
-        if num_warnings:
+        if bool(num_warnings):
             print(
                 "\nAt least one speed warning was triggered during the "
                 "tests. If this is due to a slow scraper you wrote, we "
@@ -171,40 +188,40 @@ class ScraperExampleTest(unittest.IsolatedAsyncioTestCase):
                 "good work!"
             )
 
-    async def test_scrape_opinion_admin_example_files(self):
+    async def test_scrape_opinion_admin_example_files(self) -> None:
         await self.run_tests_on_module_str(
             "juriscraper.opinions.united_states.administrative_agency"
         )
 
-    async def test_scrape_opinion_fed_app_example_files(self):
+    async def test_scrape_opinion_fed_app_example_files(self) -> None:
         await self.run_tests_on_module_str(
             "juriscraper.opinions.united_states.federal_appellate"
         )
 
-    async def test_scrape_opinion_fed_bankr_example_files(self):
+    async def test_scrape_opinion_fed_bankr_example_files(self) -> None:
         await self.run_tests_on_module_str(
             "juriscraper.opinions.united_states.federal_bankruptcy"
         )
 
-    async def test_scrape_opinion_fed_dist_example_files(self):
+    async def test_scrape_opinion_fed_dist_example_files(self) -> None:
         await self.run_tests_on_module_str(
             "juriscraper.opinions.united_states.federal_district"
         )
 
-    async def test_scrape_opinion_fed_special_example_files(self):
+    async def test_scrape_opinion_fed_special_example_files(self) -> None:
         await self.run_tests_on_module_str(
             "juriscraper.opinions.united_states.federal_special"
         )
 
-    async def test_scrape_opinion_state_example_files(self):
+    async def test_scrape_opinion_state_example_files(self) -> None:
         await self.run_tests_on_module_str(
             "juriscraper.opinions.united_states.state"
         )
 
-    async def test_scrape_oral_arg_example_files(self):
+    async def test_scrape_oral_arg_example_files(self) -> None:
         await self.run_tests_on_module_str("juriscraper.oral_args")
 
-    async def test_scrape_opinion_territories_example_files(self):
+    async def test_scrape_opinion_territories_example_files(self) -> None:
         await self.run_tests_on_module_str(
             "juriscraper.opinions.united_states.territories"
         )

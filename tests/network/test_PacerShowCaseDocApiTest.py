@@ -3,6 +3,8 @@
 
 import unittest
 
+from typing_extensions import override
+
 from juriscraper.pacer import ShowCaseDocApi
 from tests.network import (
     SKIP_IF_NO_PACER_LOGIN,
@@ -12,14 +14,15 @@ from tests.network import (
 
 
 class PacerShowCaseDocApiTest(unittest.IsolatedAsyncioTestCase):
-    async def asyncSetUp(self):
+    @override
+    async def asyncSetUp(self) -> None:
         if pacer_credentials_are_defined():
             self.session = get_pacer_session()
             self.addAsyncCleanup(self.session.aclose)
             self.report = ShowCaseDocApi("dcd", self.session)
 
     @SKIP_IF_NO_PACER_LOGIN
-    async def test_queries(self):
+    async def test_queries(self) -> None:
         """Can we do basic queries?"""
         tests = (
             # A regular document

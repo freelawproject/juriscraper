@@ -8,22 +8,47 @@ Type: Precedential
 from datetime import date, datetime
 from urllib.parse import urljoin
 
-from typing_extensions import override
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class _Decision(TypedDict, total=False):
+    partyName: str
+    issueDateStr: str | None
+    proceedingNumberDisplay: str | None
+    panelMember: str
+    decisionWriter: str
+    decision: str | None
+    issue: str | None
+
+
+class _Search(TypedDict, total=False):
+    results: list[dict[str, object]]
+    recordTotalQuantity: int
+
+
+_search_adapter = TypeAdapter(_Search)
+_decision_adapter = TypeAdapter(_Decision)
+
+
+class Site(OpinionSiteLinear[tuple[date, date]]):
     first_opinion_date = datetime(1986, 12, 23)
     days_interval = 30
     TTAB_RR_BASE = "https://ttab-reading-room.uspto.gov"
     TTAB_RR_API = urljoin(TTAB_RR_BASE, "ttab-efoia-api/decision/search")
     TTAB_RR_PDF_BASE = urljoin(TTAB_RR_BASE, "/cms/rest/")
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = self.TTAB_RR_API
         self.method = "POST"
@@ -43,17 +68,21 @@ class Site(OpinionSiteLinear):
 
     @override
     def _process_html(self) -> None:
-        results = self.html.get("results", [])
+        response = _search_adapter.validate_python(self.html, strict=True)
+        results = response.get("results", [])
         seen_docs = set()
-        for r in results:
-            doc_id = r.get("documentId", "")
-            if not doc_id:
+        for result in results:
+            doc_id = result.get("documentId", "")
+            if not bool(doc_id):
                 logger.warning("Skipping result: no doc_id")
                 continue
+            if not isinstance(doc_id, str):
+                raise TypeError("The document ID must be a string")
             if doc_id in seen_docs:
                 logger.warning(f"Skipping result: duplicate doc_id = {doc_id}")
                 continue
             seen_docs.add(doc_id)
+            r = _decision_adapter.validate_python(result, strict=True)
             self.cases.append(
                 {
                     "name": r.get("partyName", "").strip(),
@@ -69,6 +98,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         logger.info("Backscraping for range %s %s", *dates)
         self._search_payload["dateRangeData"] = {
@@ -79,7 +109,9 @@ class Site(OpinionSiteLinear):
         }
         self._search_payload["recordStartNumber"] = 0
         self.html = await self._download()
-        total = self.html.get("recordTotalQuantity", 0)
+        total = _search_adapter.validate_python(self.html, strict=True).get(
+            "recordTotalQuantity", 0
+        )
         self._process_html()
 
         page_size = 25

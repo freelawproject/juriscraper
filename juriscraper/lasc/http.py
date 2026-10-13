@@ -1,7 +1,13 @@
 import httpx
-from lxml.html import fromstring
+from lxml.html import HtmlElement, fromstring
+from typing_extensions import Unpack, override
 
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.type_utils import (
+    AsyncClientOptions,
+    GetRequestOptions,
+    PostRequestOptions,
+)
 
 logger = make_default_logger()
 
@@ -13,8 +19,12 @@ class LASCSession(httpx.AsyncClient):
     """
 
     def __init__(
-        self, username=None, password=None, user_agent="Juriscraper", **kwargs
-    ):
+        self,
+        username: str | None = None,
+        password: str | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[AsyncClientOptions],
+    ) -> None:
         """
         Instantiate a new LASC HTTP Session with some Juriscraper defaults.
         This method requires credentials from the media access portal.
@@ -25,9 +35,10 @@ class LASCSession(httpx.AsyncClient):
         """
         kwargs.setdefault("http2", True)
         kwargs.setdefault("follow_redirects", True)
+        self._request_timeout = kwargs.get("timeout", 30)
         super().__init__(**kwargs)
 
-        self.html = None
+        self.html: HtmlElement | None = None
 
         # Los Angeles Superior Court MAP urls and paths
         la_url = "https://media.lacourt.org"
@@ -59,32 +70,44 @@ class LASCSession(httpx.AsyncClient):
             "User-Agent": self.user_agent,
         }
 
-    async def get(self, url, auto_login=False, **kwargs):
+    @override
+    async def get(
+        self,
+        url: httpx.URL | str,
+        auto_login: bool = False,
+        **kwargs: Unpack[GetRequestOptions],
+    ) -> httpx.Response:
         """Overrides httpx.AsyncClient.get with session retry logic.
 
         :param url: url string to GET
         :param auto_login: Whether the auto-login procedure should happen.
         :return: httpx.Response
         """
-        kwargs.setdefault("timeout", 30)
         kwargs.setdefault("params", {"p": "B2C_1_Media-LASC-SUSI"})
+        kwargs.setdefault("timeout", self._request_timeout)
 
         return await super().get(url, **kwargs)
 
-    async def post(self, url, auto_login=False, **kwargs):
+    @override
+    async def post(
+        self,
+        url: httpx.URL | str,
+        auto_login: bool = False,
+        **kwargs: Unpack[PostRequestOptions],
+    ) -> httpx.Response:
         """Overrides httpx.AsyncClient.post with session retry logic.
 
         :param url: url string to GET
         :param auto_login: Whether the auto-login procedure should happen.
         :return: httpx.Response
         """
-        kwargs.setdefault("timeout", 30)
         kwargs.setdefault("params", {"p": "B2C_1_Media-LASC-SUSI"})
+        kwargs.setdefault("timeout", self._request_timeout)
 
-        return await super().post(url, **kwargs)
+        return await self.request("POST", url, **kwargs)
 
     @staticmethod
-    def _parse_new_html_for_keys(r):
+    def _parse_new_html_for_keys(r: httpx.Response) -> dict[str, str]:
         """Parse the current page for new key data
 
         This method parses the HTML after the first login page and identifies
@@ -94,14 +117,16 @@ class LASCSession(httpx.AsyncClient):
         :return: A dict containing the needed keys
         """
         html = fromstring(r.text)
-        return {
-            "code": html.xpath('//*[@id="code"]')[0].value,
-            "id_token": html.xpath('//*[@id="id_token"]')[0].value,
-            "state": html.xpath('//*[@id="state"]')[0].value,
-        }
+        keys: dict[str, str] = {}
+        for key in ("code", "id_token", "state"):
+            values: list[str] = html.xpath(f'//*[@id="{key}"]/@value')
+            if not bool(values):
+                raise LASCLoginException(f"Login response is missing {key}")
+            keys[key] = values[0]
+        return keys
 
     @staticmethod
-    def _check_login(r):
+    def _check_login(r: httpx.Response) -> None:
         """Check that the login succeeded
 
         :param r: A httpx.Response object
@@ -111,18 +136,24 @@ class LASCSession(httpx.AsyncClient):
         if r.status_code == 200:
             return
 
-        message = r.json["message"]
+        payload: object = r.json()
+        if not isinstance(payload, dict):
+            raise LASCLoginException("Invalid login response")
+        message: object = payload.get("message")
+        if not isinstance(message, str):
+            raise LASCLoginException("Login response is missing a message")
         if "Your password is incorrect" in message:
             logger.info("Password was incorrect")
             raise LASCLoginException("Invalid username/password")
         if "We can't seem to find your account" in message:
             logger.info("Invalid Email Address")
             raise LASCLoginException("Invalid Email Address")
+        raise LASCLoginException(message)
 
-    def _update_header_token(self, r):
+    def _update_header_token(self, r: httpx.Response) -> None:
         self.headers["X-CSRF-TOKEN"] = r.text.split("csrf")[1].split('"')[2]
 
-    async def login(self):
+    async def login(self) -> None:
         """Log into the LASC Media Access Portal
         The process is tricky, requiring two GET requests, each of which
         returns HTML or JSON that is parsed for values to send in a subsequent
@@ -350,5 +381,5 @@ class LASCLoginException(Exception):
     Raised when the system cannot authenticate with LASC MAP
     """
 
-    def __init__(self, message):
-        Exception.__init__(self, message)
+    def __init__(self, message: str) -> None:
+        super().__init__(message)

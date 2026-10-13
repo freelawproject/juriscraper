@@ -3,6 +3,8 @@ Scraper for Florida 1st District Court of Appeals
 CourtID: fladistctapp1
 """
 
+from typing_extensions import override
+
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.opinions.united_states.state import fla
 
@@ -13,6 +15,7 @@ class Site(fla.Site):
     scopes = "first_district_court_of_appeal"
     site_access = "1dca"
 
+    @override
     def get_docket_number(self, raw_docket_number: str) -> str:
         """Prepend the district code to a docket number
 
@@ -29,6 +32,7 @@ class Site(fla.Site):
 
         return f"{court_code}{raw_docket_number.strip()}"
 
+    @override
     def get_disposition(self, raw_disposition: str, note: str) -> str:
         """Get a valid disposition value from raw values
 

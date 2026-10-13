@@ -5,44 +5,75 @@ from datetime import datetime
 
 from dateutil import parser
 from lxml import html
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OpinionSite import OpinionSite
 
 
-class Site(OpinionSite):
-    def __init__(self):
-        super().__init__()
-        self.year = 0
+class Site(OpinionSite[int]):
+    status: int
+    year: int
+    download_url_path: str
+    case_name_path: str
+    case_dates_path: str
+    case_dates_path_day: str
+    case_dates_path_month: str
+    precedential_statuses_path: str
+    docket_numbers_path: str
+
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[int]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = ""
         self.url_base = "http://www.illinoiscourts.gov/Opinions/SupremeCourt/{year}/default.asp"
         self.back_scrape_iterable = list(range(1996, 2015))
-        self.download_url_path = None
-        self.case_name_path = None
-        self.case_dates_path = None
-        self.case_dates_path_day = None
-        self.case_dates_path_month = None
-        self.precedential_statuses_path = None
-        self.docket_numbers_path = None
-        self.neutral_citations_path = None
+        self.neutral_citations_path: str | None = None
+        self.__set_paths(1996)
 
-    def _get_download_urls(self):
-        return list(self.html.xpath(self.download_url_path))
+    @override
+    def _get_download_urls(self) -> list[str]:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        texts: list[str] = self.html.xpath(self.download_url_path)
+        return texts
 
-    def _get_case_names(self):
-        case_names = [
-            " ".join(i.strip() for i in e.xpath(".//text()")).strip()
-            for e in self.html.xpath(self.case_name_path)
-        ]
+    @override
+    def _get_case_names(self) -> list[str]:
+        case_names = []
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        elements: list[HtmlElement] = self.html.xpath(self.case_name_path)
+        for e in elements:
+            texts: list[str] = e.xpath(".//text()")
+            case_names.append(" ".join(i.strip() for i in texts).strip())
         return case_names
 
-    def _get_case_dates(self):
+    @override
+    def _get_case_dates(self) -> list[datetime]:
+        case_dates = []
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        elements: list[HtmlElement] = self.html.xpath(self.case_dates_path)
         if self.year <= 2006:
-            case_dates = []
-            for e in self.html.xpath(self.case_dates_path):
-                month = "".join(e.xpath(self.case_dates_path_month)).strip()
-                day = "".join(e.xpath(self.case_dates_path_day)).strip()
+            for e in elements:
+                month: str = "".join(
+                    e.xpath(self.case_dates_path_month)
+                ).strip()
+                day: str = "".join(e.xpath(self.case_dates_path_day)).strip()
                 month = month.replace("Decemberr", "December")
                 try:
                     case_dates.append(
@@ -54,19 +85,25 @@ class Site(OpinionSite):
                 except ValueError:
                     raise
         else:
-            case_dates = [
-                parser.parse(
-                    "".join(i.strip() for i in d.xpath(".//text()")),
-                    fuzzy=True,
+            for d in elements:
+                texts: list[str] = d.xpath(".//text()")
+                case_dates.append(
+                    parser.parse("".join(i.strip() for i in texts), fuzzy=True)
                 )
-                for d in self.html.xpath(self.case_dates_path)
-            ]
 
         return case_dates
 
-    def _get_precedential_statuses(self):
+    @override
+    def _get_precedential_statuses(self) -> list[str]:
         statuses = []
-        for e in self.html.xpath(self.precedential_statuses_path):
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        elements: list[HtmlElement] = self.html.xpath(
+            self.precedential_statuses_path
+        )
+        for e in elements:
             s = html.tostring(e, method="text", encoding="unicode")
             if "NRel" in s:
                 statuses.append("Unpublished")
@@ -74,26 +111,43 @@ class Site(OpinionSite):
                 statuses.append("Published")
         return statuses
 
-    def _get_docket_numbers(self):
+    @override
+    def _get_docket_numbers(self) -> list[str]:
         docket_numbers = []
-        for e in self.html.xpath(self.docket_numbers_path):
-            nums = " ".join(i.strip() for i in e.xpath(".//text()"))
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        elements: list[HtmlElement] = self.html.xpath(self.docket_numbers_path)
+        for e in elements:
+            texts: list[str] = e.xpath(".//text()")
+            nums = " ".join(i.strip() for i in texts)
             nums = nums.replace("Official Reports", "")
             docket_numbers.append(nums)
         return docket_numbers
 
-    def _get_citations(self):
+    @override
+    def _get_citations(self) -> list[str] | None:
         neutral_citations = None
-        if self.neutral_citations_path:
+        if bool(self.neutral_citations_path):
             neutral_citations = []
-            for e in self.html.xpath(self.neutral_citations_path):
+            if not isinstance(self.html, HtmlElement):
+                raise ValueError(
+                    "An HTML document must be downloaded before parsing."
+                )
+            elements: list[HtmlElement] = self.html.xpath(
+                self.neutral_citations_path
+            )
+            for e in elements:
+                texts: list[str] = e.xpath(".//text()")
                 neutral_citations.append(
-                    " ".join(i.strip() for i in e.xpath(".//text()")).strip()
+                    " ".join(i.strip() for i in texts).strip()
                 )
 
         return neutral_citations
 
-    async def _download_backwards(self, d):
+    @override
+    async def _download_backwards(self, d: int) -> None:
         self.__set_paths(d)
 
         self.url = self.url_base.format(year=self.year)
@@ -104,7 +158,7 @@ class Site(OpinionSite):
             # function from being run a second time by the parse method.
             self.status = 200
 
-    def __set_paths(self, year):
+    def __set_paths(self, year: int) -> None:
         self.year = year
         if year < 2006:
             base_path = "//tr/td[4][a]"

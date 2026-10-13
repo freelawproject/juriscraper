@@ -19,14 +19,46 @@ import re
 from datetime import date, datetime
 from urllib.parse import urlencode, urljoin
 
-from typing_extensions import override
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import (
+    BackscrapeOptions,
+    ExtractedMetadata,
+    RawOpinion,
+)
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class _Block(TypedDict, total=False):
+    component_name: str
+    content: dict[str, object] | None
+
+
+class _Document(TypedDict, total=False):
+    content: list[_Block] | None
+
+
+class _Result(TypedDict, total=False):
+    id: int
+    entry_date: str | None
+    seo_description: str | None
+    detail_json: _Document | None
+
+
+class _Search(TypedDict, total=False):
+    results: list[_Result] | None
+    hasMore: bool
+    nextCursor: str | None
+
+
+_search_adapter = TypeAdapter(_Search)
+_document_adapter = TypeAdapter(_Document)
+
+
+class Site(OpinionSiteLinear[tuple[date, date]]):
     base_url = "https://isc.idaho.gov"
     list_path = "/api/cms-content-search"
     doc_path = "/api/cms-document"
@@ -44,8 +76,13 @@ class Site(OpinionSiteLinear):
     days_interval = 30
     first_opinion_date = datetime(2010, 1, 1)
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.status = self.default_status
         self.url = self._build_list_url("DESC")
@@ -66,7 +103,7 @@ class Site(OpinionSiteLinear):
             ("sort_direction", direction),
             ("limit", str(self.page_size)),
         ]
-        if cursor:
+        if bool(cursor):
             params.append(("cursor", cursor))
 
         return urljoin(self.base_url, f"{self.list_path}?{urlencode(params)}")
@@ -77,14 +114,22 @@ class Site(OpinionSiteLinear):
             logger.info("Unexpected response type %s", self.html)
             return
 
-        for result in self.html.get("results") or []:
+        data = _search_adapter.validate_python(self.html, strict=True)
+        results = data.get("results")
+        if results is None:
+            return
+        for result in results:
             doc_id = result.get("id")
-            entry_date = (result.get("entry_date") or "")[:10]
+            entry_date = (
+                entry_date_value
+                if (entry_date_value := result.get("entry_date")) is not None
+                else ""
+            )[:10]
 
             # Backscrape: stop emitting once we cross the start_date
             if (
-                self._back_start
-                and entry_date
+                self._back_start is not None
+                and bool(entry_date)
                 and entry_date < self._back_start.isoformat()
             ):
                 self._back_done = True
@@ -92,9 +137,22 @@ class Site(OpinionSiteLinear):
 
             doc = await self._fetch_doc_detail(result)
             content = self._extract_opinion_content(doc)
-            opinion_file = (content.get("opinion_file") or {}).get("value")
-            url = (opinion_file or {}).get("url")
-            if not url:
+            opinion_field = content.get("opinion_file")
+            if opinion_field is not None and not isinstance(
+                opinion_field, dict
+            ):
+                raise TypeError("An opinion file field must be an object.")
+            opinion_file = (
+                opinion_field.get("value")
+                if opinion_field is not None
+                else None
+            )
+            url = (
+                opinion_file.get("url")
+                if isinstance(opinion_file, dict)
+                else None
+            )
+            if not isinstance(url, str) or not bool(url):
                 logger.error(
                     "%s: missing opinion_file URL for document id %s",
                     self.court_id,
@@ -103,13 +161,14 @@ class Site(OpinionSiteLinear):
                 continue
 
             release_date = self._field(content, "release_date")
-            title = self._field(content, "title") or self._fallback_name(
-                result
-            )
-            case = {
-                "date": release_date or entry_date,
+            title = self._field(content, "title")
+            if not bool(title):
+                title = self._fallback_name(result)
+            name = self._build_full_name(content)
+            case: RawOpinion = {
+                "date": (release_date if bool(release_date) else entry_date),
                 "docket": self._field(content, "docket_number"),
-                "name": self._build_full_name(content) or title,
+                "name": name if bool(name) else title,
                 "url": url,
                 "summary": self._field(content, "summary"),
             }
@@ -119,56 +178,69 @@ class Site(OpinionSiteLinear):
             self._case_name_shorts.append(title)
 
     @staticmethod
-    def _extract_opinion_content(doc: dict) -> dict:
+    def _extract_opinion_content(doc: _Document) -> dict[str, object]:
         """Pull the Opinion component's content out of a cms-document
         response.
         """
-        for block in doc.get("content") or []:
+        content = doc.get("content")
+        if content is None:
+            return {}
+        for block in content:
             if block.get("component_name") == "Opinion":
-                return block.get("content") or {}
+                fields = block.get("content")
+                return fields if bool(fields) else {}
         return {}
 
     @staticmethod
-    def _field(content: dict, key: str) -> str:
-        value = (content.get(key) or {}).get("value")
+    def _field(content: dict[str, object], key: str) -> str:
+        field = content.get(key)
+        if field is not None and not isinstance(field, dict):
+            raise TypeError(f"Opinion field {key!r} must be an object.")
+        value: object = field.get("value") if field is not None else None
         return str(value).strip() if value is not None else ""
 
-    def _build_full_name(self, content: dict) -> str:
+    def _build_full_name(self, content: dict[str, object]) -> str:
         """Join plaintiff and defendant from the doc detail into a long
         case name, titlecased. Returns "" if either side is missing.
         """
         plaintiff = self._field(content, "plaintiff").rstrip(",;. ").strip()
         defendant = self._field(content, "defendant").rstrip(",;. ").strip()
-        if plaintiff and defendant:
+        if bool(plaintiff) and bool(defendant):
             return titlecase(f"{plaintiff} vs. {defendant}")
         return ""
 
-    def _get_case_name_shorts(self):
+    @override
+    def _get_case_name_shorts(self) -> list[str]:
         # Use the source's polished `title` field instead of the default
         # CaseNameTweaker heuristic, which can't handle Idaho's long
         # all-caps party names.
         return list(self._case_name_shorts)
 
     @staticmethod
-    def _fallback_name(result: dict) -> str:
+    def _fallback_name(result: _Result) -> str:
         # Listing's seo_description is "Case Name\nSummary..."
-        desc = (result.get("seo_description") or "").strip()
-        return desc.split("\n", 1)[0] if desc else ""
+        description = result.get("seo_description")
+        desc = description.strip() if description is not None else ""
+        return desc.split("\n", 1)[0] if bool(desc) else ""
 
-    async def _fetch_doc_detail(self, result: dict) -> dict:
+    async def _fetch_doc_detail(self, result: _Result) -> _Document:
         # In test mode, the cms-document response is embedded inside each
         # listing result under "detail_json" to keep example files
         # consolidated.
         if self.test_mode_enabled():
-            return result.get("detail_json") or {}
+            detail = result.get("detail_json")
+            return detail if bool(detail) else {}
 
         doc_id = result.get("id")
         url = urljoin(self.base_url, f"{self.doc_path}?id={doc_id}")
         await self._request_url_get(url)
         self._post_process_response()
         doc = self._return_response_text_object()
-        return doc or {}
+        return _document_adapter.validate_python(
+            (doc if bool(doc) else {}), strict=True
+        )
 
+    @override
     async def _download_backwards(self, d: tuple[date, date]) -> None:
         start, _ = d
         self._back_start = start
@@ -179,21 +251,24 @@ class Site(OpinionSiteLinear):
         while not self._back_done:
             self.url = self._build_list_url("DESC", cursor)
             self.html = await self._download()
-            if not isinstance(self.html, dict) or not self.html.get("results"):
+            data = _search_adapter.validate_python(self.html, strict=True)
+            if not bool(data.get("results")):
                 logger.info("No results")
                 break
 
             await self._process_html()
-            if self._back_done or not self.html.get("hasMore"):
+            if self._back_done or not bool(data.get("hasMore")):
                 logger.info("Backscrape done")
                 break
 
-            cursor = self.html.get("nextCursor") or ""
-            if not cursor:
+            next_cursor = data.get("nextCursor")
+            if not bool(next_cursor):
                 logger.info("No cursor")
                 break
+            cursor = next_cursor
 
-    def make_backscrape_iterable(self, kwargs: dict) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """Build a single (start, end) tuple from kwargs.
 
         We paginate by cursor inside _download_backwards rather than by
@@ -203,17 +278,18 @@ class Site(OpinionSiteLinear):
         end_str = kwargs.get("backscrape_end")
         start = (
             datetime.strptime(start_str, "%Y/%m/%d").date()
-            if start_str
+            if bool(start_str)
             else self.first_opinion_date.date()
         )
         end = (
             datetime.strptime(end_str, "%Y/%m/%d").date()
-            if end_str
+            if bool(end_str)
             else date.today()
         )
         self.back_scrape_iterable = [(start, end)]
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract lower court from the scraped text.
 
         :param scraped_text: The text to extract from.
@@ -232,8 +308,8 @@ class Site(OpinionSiteLinear):
             r"County[.,]\s*(?P<judge>.+?), (?:Senior )?District Judge"
         )
 
-        result = {}
-        if match := pattern.search(scraped_text):
+        result: ExtractedMetadata = {}
+        if (match := pattern.search(scraped_text)) is not None:
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
@@ -244,7 +320,7 @@ class Site(OpinionSiteLinear):
                 "appeal_from_str": lower_court,
             }
 
-            if match := judge_pattern.search(scraped_text):
+            if (match := judge_pattern.search(scraped_text)) is not None:
                 lower_court_judge = re.sub(
                     r"\s+", " ", match.group("judge")
                 ).strip()

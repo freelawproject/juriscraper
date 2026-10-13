@@ -13,24 +13,30 @@ History:
 """
 
 from datetime import date
-from typing import Any
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import BackscrapeOptions, RawOpinion
 from juriscraper.lib.utils import (
-    PaginatedHtmlBackscrapeSite,
     backscrape_over_paginated_results,
 )
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
+class Site(OpinionSiteLinear[tuple[date, date]]):
     days_interval = 50 * 365  # get the formatted input dates
     first_opinion_date = date(1992, 1, 1)
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
 
         # to be used as POST data
@@ -57,32 +63,38 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
             self.html = await self._download()
             self.is_first_request = False
 
-        for row in self.html.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(
             ".//table[@id='MainContent_gvResults']//tr[not(.//a[contains(@href, 'javascript')])]"
-        ):
+        )
+        for row in rows:
             # Filter out the case announcements and rulings (ie non-opinions)
-            docket = row.xpath(".//td[2]//text()")[0].strip()
-            name = row.xpath(".//a/text()")[0]
-            if not docket:
+            docket: str = row.xpath(".//td[2]//text()")[0].strip()
+            name: str = row.xpath(".//a/text()")[0]
+            if not bool(docket):
                 logger.debug("Skipping row with name '%s'", name.strip())
                 continue
 
-            judge = row.xpath(".//td[4]//text()")[0]
+            judge: str = row.xpath(".//td[4]//text()")[0]
             per_curiam = False
             if "per curiam" in judge.lower():
                 judge = ""
                 per_curiam = True
 
-            citation_or_county = row.xpath(".//td[5]//text()")[0].strip()
-            web_cite = row.xpath(".//td[8]//text()")[0]
-            case = {
+            citation_or_county: str = row.xpath(".//td[5]//text()")[0].strip()
+            web_cite: str = row.xpath(".//td[8]//text()")[0]
+            url = row.findall(".//a")[0].attrib["href"]
+            case: RawOpinion = {
                 "docket": docket,
                 "name": name,
                 "judge": judge,
                 "per_curiam": per_curiam,
                 "summary": row.xpath(".//td[3]//text()")[0],
                 "date": row.xpath(".//td[6]//text()")[0].strip(),
-                "url": row.xpath(".//a")[0].get("href"),
+                "url": url,
                 "citation": web_cite,
                 "status": "Published",
             }
@@ -94,14 +106,16 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
                 if web_cite not in citation_or_county:
                     citation = citation_or_county
                 case["parallel_citation"] = citation
-            elif "ohioctapp" in self.court_id:
+            elif "ohioctapp" in (
+                self.court_id if self.court_id is not None else ""
+            ):
                 # For ohioctapp cases. This will be important to disambiguate
                 # docket numbers, which may be repeated across districts
                 case["lower_court"] = f"{citation_or_county} County Court"
 
             if (
                 f"https://www.supremecourt.ohio.gov/rod/docs/pdf/{self.court_index}/"
-                not in case["url"]
+                not in url
             ):
                 logger.warning("Wrong appellate page detected.")
                 continue
@@ -112,7 +126,13 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
 
         :return: None
         """
-        view_state = self.html.xpath("//input[@id='__VIEWSTATE']")
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        view_state: list[HtmlElement] = self.html.xpath(
+            "//input[@id='__VIEWSTATE']"
+        )
         self.parameters = {
             "__VIEWSTATEENCRYPTED": "",
             "ctl00$MainContent$ddlCourt": f"{self.court_index}",
@@ -125,13 +145,15 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
 
         # The site stopped emitting __EVENTVALIDATION around 2026-06-29;
         # send it only when present so both variants work
-        event_validation = self.html.xpath("//input[@id='__EVENTVALIDATION']")
-        if event_validation:
+        event_validation: list[HtmlElement] = self.html.xpath(
+            "//input[@id='__EVENTVALIDATION']"
+        )
+        if bool(event_validation):
             self.parameters["__EVENTVALIDATION"] = event_validation[0].get(
                 "value"
             )
 
-        if page_number:
+        if bool(page_number):
             self.parameters.update(
                 {
                     "__EVENTARGUMENT": f"Page${page_number}",
@@ -143,6 +165,7 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
 
         self.method = "POST"
 
+    @override
     async def _download_backwards(self, d: tuple[date, date]) -> None:
         """Filter site to get older records
 
@@ -153,7 +176,9 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
         logger.info("Backscraping date range %s %s", *d)
         start_date, end_date = d
         self.rows_per_page = "200"
-        self.year = str(start_date.year)
+        self.year = start_date.year
+        if self.url is None:
+            raise ValueError("A search URL is required for backfilling")
         self.url = self.url.replace(
             "PageSize=50", f"PageSize={self.rows_per_page}"
         )
@@ -188,12 +213,16 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
             return
         site.set_parameters(str(page))
 
-    def make_backscrape_iterable(self, kwargs: dict) -> None:
-        super().make_backscrape_iterable(kwargs)
-        start_date = self.back_scrape_iterable[0][0]
-        end_date = self.back_scrape_iterable[0][-1]
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
+        date_ranges = self._get_backscrape_date_ranges(kwargs)
+        if not bool(date_ranges):
+            self.back_scrape_iterable = []
+            return
+        start_date = date_ranges[0][0]
+        end_date = date_ranges[0][-1]
 
-        self.back_scrape_iterable = []
+        year_ranges: list[tuple[date, date]] = []
         # Generate a tuple for each year
         current_date = start_date
 
@@ -205,5 +234,6 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
             range_start = max(current_date, year_start)
             range_end = min(end_date, year_end)
 
-            self.back_scrape_iterable.append((range_start, range_end))
+            year_ranges.append((range_start, range_end))
             current_date = date(current_year + 1, 1, 1)
+        self.back_scrape_iterable = year_ranges

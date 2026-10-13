@@ -2,19 +2,36 @@ import time
 from datetime import date
 
 from lxml import html
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.opinions.united_states.federal_special import cit
 
 
 class Site(cit.Site):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.url = "http://www.cit.uscourts.gov/SlipOpinions/SlipOps-2010.html"
         self.court_id = self.__module__
 
-    def _get_case_dates(self):
+    @override
+    def _get_case_dates(self) -> list[date]:
         case_dates = []
-        for e in self.html.xpath("//table[3]/tr/td[3][../td/a]"):
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        elements: list[HtmlElement] = self.html.xpath(
+            "//table[3]/tr/td[3][../td/a]"
+        )
+        for e in elements:
             date_string = html.tostring(
                 e, method="text", encoding="unicode"
             ).strip()
@@ -28,16 +45,36 @@ class Site(cit.Site):
             )
         return case_dates
 
-    def _get_download_urls(self):
-        return list(self.html.xpath("//table[3]//tr/td[1]/a/@href"))
+    @override
+    def _get_download_urls(self) -> list[str]:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        texts: list[str] = self.html.xpath("//table[3]//tr/td[1]/a/@href")
+        return texts
 
-    def _get_citations(self):
-        return list(self.html.xpath("//table[3]//tr/td[1]/a/text()"))
+    @override
+    def _get_citations(self) -> list[str]:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        texts: list[str] = self.html.xpath("//table[3]//tr/td[1]/a/text()")
+        return texts
 
-    def _get_case_names(self):
+    @override
+    def _get_case_names(self) -> list[str]:
         # Exclude confidential rows
         case_names = []
-        for e in self.html.xpath("//table[3]/tr[position() > 1]/td[2]"):
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        elements: list[HtmlElement] = self.html.xpath(
+            "//table[3]/tr[position() > 1]/td[2]"
+        )
+        for e in elements:
             s = html.tostring(e, method="text", encoding="unicode")
             if "confidential" in s:
                 continue
@@ -50,11 +87,17 @@ class Site(cit.Site):
             case_names.append(s[:index] if index > -1 else s)
         return case_names
 
-    def _get_precedential_statuses(self):
+    @override
+    def _get_precedential_statuses(self) -> list[str]:
         statuses = []
-        for e in self.html.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        elements: list[HtmlElement] = self.html.xpath(
             "//table[3]//tr[position() > 1]/td[2][../td/a]"
-        ):
+        )
+        for e in elements:
             s = (
                 html.tostring(e, method="text", encoding="unicode")
                 .lower()
@@ -66,24 +109,44 @@ class Site(cit.Site):
                 statuses.append("Published")
         return statuses
 
-    def _get_docket_numbers(self):
+    @override
+    def _get_docket_numbers(self) -> list[str]:
         docket_numbers = []
-        for e in self.html.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        elements: list[HtmlElement] = self.html.xpath(
             "//table[3]//tr[position() > 1]/td[4][../td/a]"
-        ):
+        )
+        for e in elements:
             docket_numbers.append(
                 html.tostring(e, method="text", encoding="unicode").strip()
             )
         return docket_numbers
 
-    def _get_judges(self):
+    @override
+    def _get_judges(self) -> list[str]:
         judges = []
-        for e in self.html.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        elements: list[HtmlElement] = self.html.xpath(
             "//table[3]//tr[position() > 1]/td[5][../td/a]"
-        ):
+        )
+        for e in elements:
             s = html.tostring(e, method="text", encoding="unicode")
             judges.append(s)
         return judges
 
-    def _get_nature_of_suit(self):
-        return list(self.html.xpath("//table[3]//tr/td[6][../td/a]/text()"))
+    @override
+    def _get_nature_of_suit(self) -> list[str] | None:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        texts: list[str] = self.html.xpath(
+            "//table[3]//tr/td[6][../td/a]/text()"
+        )
+        return texts

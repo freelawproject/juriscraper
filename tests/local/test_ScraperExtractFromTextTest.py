@@ -2,7 +2,9 @@ import logging
 import unittest
 from datetime import date, datetime
 
+from juriscraper.AbstractSite import AbstractSite
 from juriscraper.lib.importer import build_module_list
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.OpinionSite import OpinionSite
 
 
@@ -11,7 +13,7 @@ class ScraperExtractFromText(unittest.TestCase):
     without a full integration test.
     """
 
-    test_data = {
+    test_data: dict[str, list[tuple[str, ExtractedMetadata]]] = {
         "juriscraper.opinions.united_states.administrative_agency.bia": [
             (
                 """Matter of Emmanuel LAGUERRE, Respondent \nDecided January 20, 2022 and more """,
@@ -144,11 +146,15 @@ class ScraperExtractFromText(unittest.TestCase):
                         "judges": "Patricia J. DeVaney, Steven R. Jensen",
                     },
                 },
+            ),
+            (
                 """#30354-SRJ\n2024 S.D. 58\nIN THE SUPREME COURT\nOF THE""",
                 {
                     "Docket": {"docket_number": "30354"},
                     "OpinionCluster": {"judges": "Steven R. Jensen"},
                 },
+            ),
+            (
                 # https://www.courtlistener.com/opinion/9406747/estate-of-beadle/?q=court_id%3Asd&page=8
                 """#30086, #30094-r-SPM\n2023 S.D. 26\nIN THE SUPREME COURT\nOF THE\nSTATE OF SOUTH DAKOTA""",
                 {
@@ -1900,7 +1906,7 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
     }
 
-    def test_extract_from_text(self):
+    def test_extract_from_text(self) -> None:
         """Test that extract_from_text returns the expected data."""
         # prevent logger.error calls to be triggered
         logging.disable(logging.CRITICAL)
@@ -1909,7 +1915,15 @@ class ScraperExtractFromText(unittest.TestCase):
             mod = __import__(
                 f"{package}.{module}", globals(), locals(), [module]
             )
-            site = mod.Site()
+            site_class: object = getattr(mod, "Site", None)
+            if not isinstance(site_class, type) or not issubclass(
+                site_class, AbstractSite
+            ):
+                raise TypeError(
+                    f"{mod.__name__}.Site must subclass AbstractSite"
+                )
+            assert issubclass(site_class, OpinionSite)
+            site = site_class()
 
             # ensure that if no data is parsed, a dict is returned
             # also, this ensures that there are no uncontrolled exceptions
@@ -1924,7 +1938,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 )
         logging.disable(logging.NOTSET)
 
-    def test_extract_from_text_properly_implemented(self):
+    def test_extract_from_text_properly_implemented(self) -> None:
         """Ensure that extract_from_text is properly implemented."""
 
         module_strings = build_module_list(
@@ -1935,7 +1949,15 @@ class ScraperExtractFromText(unittest.TestCase):
             mod = __import__(
                 f"{package}.{module}", globals(), locals(), [module]
             )
-            if mod.Site.extract_from_text == OpinionSite.extract_from_text:
+            site_class: object = getattr(mod, "Site", None)
+            if not isinstance(site_class, type) or not issubclass(
+                site_class, AbstractSite
+            ):
+                raise TypeError(
+                    f"{mod.__name__}.Site must subclass AbstractSite"
+                )
+            assert issubclass(site_class, OpinionSite)
+            if site_class.extract_from_text == OpinionSite.extract_from_text:
                 # Method is not overridden, so skip it.
                 continue
             self.assertIn(
@@ -1944,7 +1966,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 msg=f"{module_string} not yet added to extract_from_text test data.",
             )
 
-    def test_valid_date_format(self):
+    def test_valid_date_format(self) -> None:
         """Is the returned date format valid for a Django model date field?
 
         Django models will accept date objects and strings. If a string is not

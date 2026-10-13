@@ -1,6 +1,8 @@
 import unittest
 from datetime import date
 
+from typing_extensions import override
+
 from juriscraper.pacer import ACMSAttachmentPage
 from tests.network import SKIP_IF_NO_PACER_LOGIN, get_pacer_session
 
@@ -8,7 +10,8 @@ from tests.network import SKIP_IF_NO_PACER_LOGIN, get_pacer_session
 class AcmsAttachmentPageTest(unittest.IsolatedAsyncioTestCase):
     """A test of basic info for the Case Query"""
 
-    async def asyncSetUp(self):
+    @override
+    async def asyncSetUp(self) -> None:
         self.session = get_pacer_session()
         self.addAsyncCleanup(self.session.aclose)
         await self.session.login()
@@ -19,34 +22,36 @@ class AcmsAttachmentPageTest(unittest.IsolatedAsyncioTestCase):
         )
 
     @SKIP_IF_NO_PACER_LOGIN
-    async def test_queries(self):
+    async def test_queries(self) -> None:
         """Do a variety of queries work?"""
         await self.report.query(self.pacer_case_id, self.docket_doc_id)
         data = self.report.data
 
         self.assertEqual(
             7,
-            data["entry_number"],
+            data.get("entry_number"),
             msg="entry number query failed",
         )
         self.assertIn(
             "MOTION, to be relieved as counsel, on behalf of Appellant Ibukun Ogunbekun",
-            data["description"],
+            data.get("description", ""),
             msg="description query failed",
         )
         self.assertEqual(
             date(2025, 6, 23),
-            data["date_filed"],
+            data.get("date_filed"),
             msg="date_filed query failed",
         )
         self.assertEqual(
             date(2025, 6, 23),
-            data["date_end"],
+            data.get("date_end"),
             msg="appeal_from query failed",
         )
         self.assertIsNotNone(
-            data["attachments"], msg="attachments query failed"
+            data.get("attachments"), msg="attachments query failed"
         )
         self.assertEqual(
-            3, len(data["attachments"]), msg="attachments count query failed"
+            3,
+            len(data.get("attachments")),
+            msg="attachments count query failed",
         )

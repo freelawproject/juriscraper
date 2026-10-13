@@ -13,19 +13,34 @@ History:
 from datetime import date, timedelta
 from urllib.parse import urljoin
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
-class Site(OralArgumentSiteLinear):
+class _Search(TypedDict):
+    data: list[list[str]]
+
+
+_search_adapter = TypeAdapter(_Search)
+
+
+class Site(OralArgumentSiteLinear[tuple[date, date]]):
     days_interval = 15
     first_opinion_date = date(2003, 2, 4)
 
-    def __init__(self, *args, **kwargs):
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
         kwargs.setdefault("verify", False)
-        super().__init__(*args, **kwargs)
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.expected_content_types = ["audio/mpeg3"]
         self.url = "https://www.cafc.uscourts.gov/home/oral-argument/listen-to-oral-arguments/"
@@ -37,8 +52,8 @@ class Site(OralArgumentSiteLinear):
             }
         )
 
-        self.start_date = None
-        self.end_date = None
+        self.start_date: date | None = None
+        self.end_date: date | None = None
         self.make_backscrape_iterable(kwargs)
 
     @override
@@ -62,17 +77,24 @@ class Site(OralArgumentSiteLinear):
             self._set_parameters()
             await self._request_url_post(self.data_url)
 
-        for row in self.request["response"].json()["data"]:
+        response = self.request.get("response")
+        if response is None:
+            raise ValueError("Download a response before accessing it.")
+        response = _search_adapter.validate_json(response.content, strict=True)
+        for row in response["data"]:
             _, name, _, url, _ = row[2].split('"')
             self.cases.append(
                 {
                     "date": row[0],
                     "docket": row[1],
                     "name": name,
-                    "url": urljoin(self.url, url),
+                    "url": urljoin(
+                        (self.url if self.url is not None else ""), url
+                    ),
                 }
             )
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Download a months' worth of oral arguments.
 
@@ -89,7 +111,11 @@ class Site(OralArgumentSiteLinear):
 
         :return:None
         """
-        wdt_nonce = self.html.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        wdt_nonce: list[str] = self.html.xpath(
             ".//input[@id='wdtNonceFrontendServerSide_8']/@value"
         )
 
@@ -124,8 +150,9 @@ class Site(OralArgumentSiteLinear):
 
     def get_date_filter(self) -> str:
         """Format date filter using backscraping attributes; or defaults"""
-        if not self.start_date:
+        if self.end_date is None:
             self.end_date = date.today()
+        if self.start_date is None:
             self.start_date = self.end_date - timedelta(days=30)
 
         return f"{self.start_date.strftime('%m/%d/%Y')}|{self.end_date.strftime('%m/%d/%Y')}"

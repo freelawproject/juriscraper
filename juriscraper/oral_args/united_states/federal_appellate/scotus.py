@@ -6,47 +6,81 @@ History:
  - 2017-10-09 - Updated by MLR.
 """
 
-from datetime import datetime
+from datetime import date, datetime
 
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
+
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OralArgumentSite import OralArgumentSite
 
 
-class Site(OralArgumentSite):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+class Site(OralArgumentSite[int]):
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[int]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = (
             "http://www.supremecourt.gov/oral_arguments/argument_audio.aspx"
         )
         self.back_scrape_iterable = list(range(2010, 2015))
 
-    def _get_download_urls(self):
+    @override
+    def _get_download_urls(self) -> list[str]:
         path = "id('list')//tr//a/text()"
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
         return list(map(self._return_download_url, self.html.xpath(path)))
 
     @staticmethod
-    def _return_download_url(d):
+    def _return_download_url(d: str) -> str:
         file_type = "mp3"  # or 'wma' is also available for any case.
         download_url = f"http://www.supremecourt.gov/media/audio/{file_type}files/{d}.{file_type}"
         return download_url
 
-    def _get_case_names(self):
+    @override
+    def _get_case_names(self) -> list[str]:
         path = "id('list')//tr/td/span/text()"
-        return [s.lstrip(". ") for s in self.html.xpath(path)]
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        names: list[str] = self.html.xpath(path)
+        return [s.lstrip(". ") for s in names]
 
-    def _get_case_dates(self):
+    @override
+    def _get_case_dates(self) -> list[date]:
         path = "id('list')//tr/td[2]//text()"
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        dates: list[str] = self.html.xpath(path)
         return [
             datetime.strptime(s, "%m/%d/%y").date()
-            for s in self.html.xpath(path)
+            for s in dates
             if "Date" not in s
         ]
 
-    def _get_docket_numbers(self):
+    @override
+    def _get_docket_numbers(self) -> list[str]:
         path = "id('list')//tr//a/text()"
-        return list(self.html.xpath(path))
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        texts: list[str] = self.html.xpath(path)
+        return texts
 
-    async def _download_backwards(self, year):
+    @override
+    async def _download_backwards(self, year: int) -> None:
         self.url = (
             f"http://www.supremecourt.gov/oral_arguments/argument_audio/{year}"
         )

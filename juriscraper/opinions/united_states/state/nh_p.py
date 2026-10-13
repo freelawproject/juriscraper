@@ -20,15 +20,61 @@ History:
 
 import re
 from datetime import datetime
+from typing import Required
 from urllib.parse import urlencode, urljoin
 
-from typing_extensions import override
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import BackscrapeOptions
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class _FileFields(TypedDict):
+    uri: list[str]
+
+
+class _File(TypedDict):
+    fields: _FileFields
+
+
+_FileMap = TypedDict("_FileMap", {"0": _File}, total=False)
+_Description = TypedDict("_Description", {"#text": str})
+
+
+class _LinkedFields(TypedDict):
+    field_document_file: _FileMap
+
+
+class _LinkedDocument(TypedDict):
+    fields: _LinkedFields
+
+
+class _Fields(TypedDict, total=False):
+    field_document_file: _FileMap | None
+    field_document: list[_LinkedDocument] | None
+    field_date_filed: list[str] | None
+    field_date_posted: list[str] | None
+    field_description: list[_Description] | None
+
+
+class _Document(TypedDict):
+    title: str
+    fields: _Fields
+
+
+class _Search(TypedDict, total=False):
+    data: Required[list[_Document]]
+    total: int
+    last_page: int
+
+
+_search_adapter = TypeAdapter(_Search)
+
+
+class Site(OpinionSiteLinear[int]):
     """
     Regular site:
     https://www.courts.nh.gov/our-courts/supreme-court/orders-and-opinions/opinions
@@ -60,8 +106,13 @@ class Site(OpinionSiteLinear):
     cite_regex = re.compile(r"\d{4}\sN\.H\.\s\d+")
     docket_regex = re.compile(r"(?P<docket>\d{4}-\d{1,4})[\s,]*")
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[int]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.status = "Published"
         self.base_url = "https://www.courts.nh.gov/content/api/documents"
@@ -72,32 +123,36 @@ class Site(OpinionSiteLinear):
 
     @override
     async def _process_html(self) -> None:
-        json_response = self.html
+        json_response = _search_adapter.validate_python(self.html, strict=True)
 
         for case in json_response["data"]:
             fields = case["fields"]
+            document_file = fields.get("field_document_file")
+            documents = fields.get("field_document")
 
-            if fields["field_document_file"]:
-                url_object = fields["field_document_file"]
-            elif fields["field_document"]:
+            if bool(document_file):
+                url_object = document_file
+            elif bool(documents):
                 # seen on withdrawn opinions. Ex: 2020-0268
                 # Hampstead School Board & a. v. School Administrative Unit No. 5
-                url_object = fields["field_document"][0]["fields"][
-                    "field_document_file"
-                ]
+                url_object = documents[0]["fields"]["field_document_file"]
             else:
                 logger.warning(
                     "Skipping row '%s', can't find document link",
                     case["title"],
                 )
                 continue
+            if "0" not in url_object:
+                raise KeyError("0")
             url = url_object["0"]["fields"]["uri"][0].split("//")[1]
 
-            if fields["field_date_filed"]:
-                case_date = fields["field_date_filed"][0]
-            elif fields["field_date_posted"]:
+            date_filed = fields.get("field_date_filed")
+            date_posted = fields.get("field_date_posted")
+            if bool(date_filed):
+                case_date = date_filed[0]
+            elif bool(date_posted):
                 # usually this is the only populated field
-                case_date = fields["field_date_posted"][0]
+                case_date = date_posted[0]
             else:
                 logger.warning(
                     "Skipping row '%s'. No date found", case["title"]
@@ -110,7 +165,7 @@ class Site(OpinionSiteLinear):
 
             citation = ""
             cite_match = self.cite_regex.search(case["title"])
-            if cite_match:
+            if cite_match is not None:
                 citation = cite_match.group(0)
                 name = re.sub(self.cite_regex, " ", name)
 
@@ -120,9 +175,13 @@ class Site(OpinionSiteLinear):
                     for match in self.docket_regex.finditer(case["title"])
                 ]
             )
-            if not docket and fields.get("field_description"):
-                docket_str = fields["field_description"][0]["#text"]
-                docket = self.docket_regex.search(docket_str).group(0)
+            description = fields.get("field_description")
+            if not bool(docket) and bool(description):
+                docket_str = description[0]["#text"]
+                if (
+                    docket_match := self.docket_regex.search(docket_str)
+                ) is not None:
+                    docket = docket_match.group(0)
 
             name = re.sub(self.docket_regex, " ", name)
             # delete traces of multiple docket numbers
@@ -146,11 +205,15 @@ class Site(OpinionSiteLinear):
             return
         self.paginate = False  # prevent recursion
 
+        if "total" not in json_response or "last_page" not in json_response:
+            raise ValueError("Missing pagination metadata in document search")
         logger.info(
             "Found %s results, will paginate through", json_response["total"]
         )
         for page in range(2, json_response["last_page"] + 1):
             logger.info("Paginating to page %s", page)
+            if self.url is None:
+                raise ValueError("The search URL is not configured")
             self.url = self.url.replace(f"page={page - 1}", f"page={page}")
             self.html = await self._download()
             await self._process_html()
@@ -164,7 +227,9 @@ class Site(OpinionSiteLinear):
         :param year: full year integer
         """
         year_filter = (
-            "" if not self.back_scrape_iterable else self.year_to_filter[year]
+            ""
+            if not bool(self.back_scrape_iterable)
+            else self.year_to_filter[year]
         )
         params = {
             "iterate_nodes": "true",
@@ -190,6 +255,7 @@ class Site(OpinionSiteLinear):
             "X-Requested-With": "XMLHttpRequest",
         }
 
+    @override
     async def _download_backwards(self, year: int) -> None:
         self.paginate = True
         self.set_request_parameters(year)
@@ -197,12 +263,21 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         await self._process_html()
 
-    def make_backscrape_iterable(self, kwargs: dict) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """The API exposes no date filter, so we must query a year
         and then paginate the results.
         """
-        start = int(kwargs.get("backscrape_start") or self.start_year)
-        end = int(kwargs.get("backscrape_end") or self.end_year)
+        start = int(
+            backscrape_start_value
+            if bool(backscrape_start_value := kwargs.get("backscrape_start"))
+            else self.start_year
+        )
+        end = int(
+            backscrape_end_value
+            if bool(backscrape_end_value := kwargs.get("backscrape_end"))
+            else self.end_year
+        )
 
         if start == end:
             self.back_scrape_iterable = [start]

@@ -7,8 +7,8 @@ from juriscraper.state.texas.common import (
     TexasAppealsCourt,
     TexasAppellateBrief,
     TexasCaseEvent,
-    TexasCommonData,
     TexasCommonScraper,
+    TexasDocketMetadata,
     _parse_appeals_court,
 )
 
@@ -37,7 +37,7 @@ class TexasSupremeCourtAppellateBrief(TexasAppellateBrief):
     remarks: str
 
 
-class TexasSupremeCourtDocket(TexasCommonData):
+class TexasSupremeCourtDocket(TexasDocketMetadata):
     """
     Extension of the `TexasCommonData` schema with data specific to Texas
     Supreme Court dockets.
@@ -64,7 +64,7 @@ class TexasSupremeCourtScraper(TexasCommonScraper[TexasSupremeCourtDocket]):
     - Remarks on case events and appellate briefs.
     """
 
-    def __init__(self, court_id: str = "texas_sc"):
+    def __init__(self, court_id: str = "texas_sc") -> None:
         super().__init__(court_id)
 
     @override

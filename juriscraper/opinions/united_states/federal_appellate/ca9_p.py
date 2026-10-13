@@ -12,16 +12,33 @@ History:
 import re
 
 import feedparser
-from lxml.html import tostring
-from typing_extensions import override
+from lxml.html import HtmlElement, tostring
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import ExtractedMetadata, RawOpinion
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
+class _Entry(TypedDict):
+    title: str
+    link: str
+    published: str
+
+
+_entries_adapter = TypeAdapter(list[_Entry])
+
+
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.ca9.uscourts.gov/decisions/opinions/index.xml"
         self.status = "Published"
@@ -29,9 +46,15 @@ class Site(OpinionSiteLinear):
 
     @override
     def _process_html(self) -> None:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
         feed = feedparser.parse(tostring(self.html))
-        for item in feed["entries"]:
-            case = {
+        for item in _entries_adapter.validate_python(
+            feed.entries, strict=True
+        ):
+            case: RawOpinion = {
                 "name": titlecase(item["title"]),
                 "url": item["link"],
                 "date": item["published"],
@@ -42,7 +65,8 @@ class Site(OpinionSiteLinear):
             if case not in self.cases:
                 self.cases.append(case)
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract lower court from the scraped text.
 
         :param scraped_text: The text to extract from.
@@ -61,12 +85,12 @@ class Site(OpinionSiteLinear):
         )
 
         lower_court = ""
-        if match := pattern.search(scraped_text):
+        if (match := pattern.search(scraped_text)) is not None:
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
 
-        if lower_court:
+        if bool(lower_court):
             return {
                 "Docket": {
                     "appeal_from_str": lower_court,

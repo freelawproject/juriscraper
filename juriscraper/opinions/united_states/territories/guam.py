@@ -15,13 +15,16 @@ from urllib.parse import urljoin
 
 from dateutil import parser
 from dateutil.parser import ParserError
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import BackscrapeOptions
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[int]):
     # Current-year opinions are published here; the legacy endpoint below
     # lags behind and stops getting updated mid-year (#2004)
     base_url = "https://guamcourts.gov/courts-council/supreme-court/opinions"
@@ -36,8 +39,13 @@ class Site(OpinionSiteLinear):
     first_opinion_date = date(1996, 1, 1)
     days_interval = 365
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[int]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = self.base_url
         self.status = "Published"
@@ -58,30 +66,44 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
-        anchors = self.html.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        anchors: list[HtmlElement] = self.html.xpath(
             '//div[contains(@class, "field--name-body")]'
             '//p//a[contains(@href, ".pdf")]'
         )
         for anchor in anchors:
             name = anchor.text_content().strip(" ,\r\n")
-            url = urljoin(self.url, anchor.get("href"))
+            url = urljoin(
+                (self.url if self.url is not None else ""), anchor.get("href")
+            )
 
             # The metadata trails the anchor; \xc2\xa0 is mojibake for a
             # non-breaking space that breaks the date and citation regexes
-            text = re.sub(r"[\xa0\xc2]+", " ", anchor.tail or "")
+            text = re.sub(
+                r"[\xa0\xc2]+",
+                " ",
+                (anchor.tail if anchor.tail is not None else ""),
+            )
 
             citation = ""
-            if citation_match := re.search(r"\d{4}\s+Guam\s+\d+", text):
+            if (
+                citation_match := re.search(r"\d{4}\s+Guam\s+\d+", text)
+            ) is not None:
                 citation = citation_match.group(0)
                 text = text.replace(citation, " ")
 
             docket = ""
-            if docket_match := re.search(r"[A-Z]{3}\d{2}-\d{3}", text):
+            if (
+                docket_match := re.search(r"[A-Z]{3}\d{2}-\d{3}", text)
+            ) is not None:
                 docket = docket_match.group(0)
                 text = text.replace(docket, " ")
 
             row_date = self.find_date(text)
-            if not row_date:
+            if not bool(row_date):
                 logger.warning("guam: no date found for '%s'", name)
 
             self.cases.append(
@@ -89,7 +111,9 @@ class Site(OpinionSiteLinear):
                     "url": url,
                     "name": name,
                     "docket": docket,
-                    "date": row_date or f"{self._year}/07/13",
+                    "date": (
+                        row_date if bool(row_date) else f"{self._year}/07/13"
+                    ),
                     "date_filed_is_approximate": row_date is None,
                     "citation": citation,
                 }
@@ -107,13 +131,18 @@ class Site(OpinionSiteLinear):
         """
         middle_of_the_year = f"{self._year}/07/13"
 
-        for item in self.html.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        items: list[HtmlElement] = self.html.xpath(
             '//div[contains(@class, "item_for_list")]'
-        ):
-            anchor = item.xpath(".//h4/a")[0]
+        )
+        for item in items:
+            anchor: HtmlElement = item.xpath(".//h4/a")[0]
             name = anchor.text_content().strip()
-            url = anchor.get("href")
-            text = " ".join(item.xpath(".//p//text()")).strip()
+            url = anchor.attrib["href"]
+            text: str = " ".join(item.xpath(".//p//text()")).strip()
             # Some entries arrive double-encoded; \xc2\xa0 is mojibake for
             # a non-breaking space and breaks both the citation and date
             # regexes when it sits between tokens
@@ -122,19 +151,21 @@ class Site(OpinionSiteLinear):
             # Seen formats: 2021-Guam 3, 2021 Guam 29, 2020 Guam15
             # Edge cases left empty: "Guam 7", "014 Guam 31"
             citation = ""
-            if citation_match := re.search(
-                r"\d{4}[\s-]*Guam[\s-]*\d{1,2}", text
-            ):
+            if (
+                citation_match := re.search(
+                    r"\d{4}[\s-]*Guam[\s-]*\d{1,2}", text
+                )
+            ) is not None:
                 text = text.replace(citation_match.group(0), " ")
                 citation = citation_match.group(0)
 
             row_date = self.find_date(text)
-            docket = text.replace(row_date, "") if row_date else text
+            docket = text.replace(row_date, "") if bool(row_date) else text
             docket = docket.replace(" filed ", "").strip(" .,\r\n")
 
             # If the docket is not in the free text, sometimes it is at the end
             # of the case name. Sometimes, it does not exist
-            if not docket and (
+            if not bool(docket) and bool(
                 docket_match := re.search(r"[A-Z]{3}\d{2}-\d{3}", name)
             ):
                 docket = docket_match.group(0)
@@ -144,7 +175,9 @@ class Site(OpinionSiteLinear):
                     "url": url,
                     "name": name,
                     "docket": docket,
-                    "date": row_date or middle_of_the_year,
+                    "date": (
+                        row_date if bool(row_date) else middle_of_the_year
+                    ),
                     "date_filed_is_approximate": row_date is None,
                     "citation": citation,
                 }
@@ -167,17 +200,22 @@ class Site(OpinionSiteLinear):
                 logger.warning("Unable to find date %s", text)
                 pass
 
-    def make_backscrape_iterable(self, kwargs):
-        super().make_backscrape_iterable(kwargs)
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
+        date_ranges = self._get_backscrape_date_ranges(kwargs)
+        if not bool(date_ranges):
+            self.back_scrape_iterable = []
+            return
 
         # keep unique years
         iterable = []
-        for d, _ in self.back_scrape_iterable:
+        for d, _ in date_ranges:
             if d.year not in iterable:
                 iterable.append(d.year)
 
         self.back_scrape_iterable = iterable
 
+    @override
     async def _download_backwards(self, year: int) -> None:
         """Sets up the download of past records from the legacy endpoint
 

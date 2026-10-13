@@ -14,16 +14,17 @@ import asyncio
 import re
 from collections.abc import AsyncGenerator, Generator
 from datetime import date, datetime
-from typing import Any, Final, cast
+from typing import ClassVar
 from urllib.parse import urljoin
 
 from lxml import html
 from lxml.html import HtmlElement
-from typing_extensions import override
+from typing_extensions import Unpack, override
 
 from juriscraper.lib.aspnet_utils import breakup_hex_substrings
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.type_utils import AsyncClientOptions
 from juriscraper.state.BaseStateScraper import (
     BaseStateScraper,
     HasCaseUrl,
@@ -147,20 +148,19 @@ class TAMESScraper(BaseStateScraper):
         "sec-fetch-dest": "document",
     }
 
-    COURT_IDS: Final[list[str]] = [c.value for c in CourtID]
+    COURT_IDS: ClassVar[list[str]] = [c.value for c in CourtID]
 
     MAX_RESULTS_PER_SEARCH: int = 1000
 
     def __init__(
         self,
         request_manager: ScraperRequestManager | None = None,
-        **kwargs: Any,
+        **kwargs: Unpack[AsyncClientOptions],
     ) -> None:
         """Initialize the TAMES scraper.
 
         Args:
             request_manager: Optional ScraperRequestManager instance.
-            days_interval: Number of days per backscrape chunk.
             **kwargs: Additional arguments passed to parent.
         """
         super().__init__(request_manager=request_manager, **kwargs)
@@ -172,7 +172,7 @@ class TAMESScraper(BaseStateScraper):
         self._form_bar_number: str = ""
         self._result_bar_number: str = ""
 
-    def scrape(self):
+    def scrape(self) -> None:
         pass
 
     @override
@@ -225,7 +225,8 @@ class TAMESScraper(BaseStateScraper):
 
             # First yield is always the result count (int)
             first_value = await search_gen.__anext__()
-            assert isinstance(first_value, int)
+            if not isinstance(first_value, int):
+                raise TypeError("Expected a result count before search rows")
             result_count: int = first_value
 
             received_count = 0
@@ -233,12 +234,15 @@ class TAMESScraper(BaseStateScraper):
 
             async for item in search_gen:
                 # All subsequent yields are TamesSearchRow
-                assert not isinstance(item, int)
+                if isinstance(item, int):
+                    raise TypeError(
+                        "Expected a search row after the result count"
+                    )
                 case: TamesSearchRow = item
                 received_count += 1
 
                 case_date_str = case.get("date_filed", None)
-                if case_date_str:
+                if bool(case_date_str):
                     try:
                         case_date = datetime.strptime(
                             case_date_str, "%m/%d/%Y"
@@ -337,7 +341,7 @@ class TAMESScraper(BaseStateScraper):
         tree: HtmlElement = html.fromstring(response.content)
         self._hidden_fields = self._extract_hidden_fields(tree)
         self._form_bar_number = self._bar_number_value(tree)
-        if self._form_bar_number:
+        if bool(self._form_bar_number):
             logger.warning(
                 "Search form arrived with bar number %s pre-filled; "
                 "posting it blank.",
@@ -442,8 +446,12 @@ class TAMESScraper(BaseStateScraper):
         # filtered down to one attorney, whether that left us with zero rows or
         # with that attorney's handful, so take one more run at it with a fresh
         # form. Row count says nothing about whether the filter applied.
-        stray_bar = self._form_bar_number or self._result_bar_number
-        if stray_bar:
+        stray_bar = (
+            self._form_bar_number
+            if bool(self._form_bar_number)
+            else self._result_bar_number
+        )
+        if bool(stray_bar):
             logger.warning(
                 "%d results for %s to %s with bar number %s on the search "
                 "form; resubmitting with a blank bar number.",
@@ -455,7 +463,7 @@ class TAMESScraper(BaseStateScraper):
             tree, result_count, form_data = await self._search_once(
                 start_date, end_date, court_ids
             )
-            if self._result_bar_number:
+            if bool(self._result_bar_number):
                 logger.error(
                     "Results page still reports bar number %s; the %d results "
                     "for %s to %s are filtered by attorney and can't be "
@@ -492,29 +500,25 @@ class TAMESScraper(BaseStateScraper):
     ) -> Generator[TamesSearchRow, None, None]:
         """Parse search results and yield TamesSearchRow objects."""
         # Find result rows
-        rows = cast(
-            list[HtmlElement],
-            tree.xpath(
-                "//table[@id='ctl00_ContentPlaceHolder1_grdCases_ctl00']"
-                "//tr[contains(@class, 'rgRow') or contains(@class, 'rgAltRow')]"
-            ),
+        rows: list[HtmlElement] = tree.xpath(
+            "//table[@id='ctl00_ContentPlaceHolder1_grdCases_ctl00']"
+            "//tr[contains(@class, 'rgRow') or contains(@class, 'rgAltRow')]"
         )
 
         for row in rows:
-            cells = cast(list[HtmlElement], row.xpath("./td"))
+            cells = row.findall("./td")
             if len(cells) < 11:
                 continue
 
             # Extract case link and number from first cell
-            case_link = cast(
-                list[HtmlElement],
-                cells[0].xpath(".//a[contains(@href, 'Case')]"),
+            case_link: list[HtmlElement] = cells[0].xpath(
+                ".//a[contains(@href, 'Case')]"
             )
-            if not case_link:
+            if not bool(case_link):
                 continue
 
             case_url = case_link[0].get("href", "")
-            if not case_url:
+            if not bool(case_url):
                 continue
 
             # Normalize URL - handle both absolute and relative URLs
@@ -538,21 +542,19 @@ class TAMESScraper(BaseStateScraper):
 
     def _has_next_page(self, tree: HtmlElement) -> bool:
         """Check if there are more result pages."""
-        next_button = cast(
-            list[HtmlElement],
-            tree.xpath("//input[contains(@class, 'rgPageNext')]"),
+        next_button: list[HtmlElement] = tree.xpath(
+            "//input[contains(@class, 'rgPageNext')]"
         )
         current_page_has_next = tree.cssselect(".rgCurrentPage + a")
-        return bool(next_button and current_page_has_next)
+        return bool(next_button) and bool(current_page_has_next)
 
     async def _fetch_next_page(
         self, tree: HtmlElement, form_data: dict[str, str]
-    ):
+    ) -> HtmlElement:
         """Fetch the next page of results."""
 
-        next_button = cast(
-            list[HtmlElement],
-            tree.xpath("//input[contains(@class, 'rgPageNext')]"),
+        next_button: HtmlElement = tree.xpath(
+            "//input[contains(@class, 'rgPageNext')]"
         )[0]
         submit_name = next_button.get("name", "")
         submit_val = next_button.get("value", "")
@@ -590,12 +592,11 @@ class TAMESScraper(BaseStateScraper):
     def _extract_hidden_fields(tree: HtmlElement) -> dict[str, str]:
         """Form submission relies on some hidden fields."""
         hidden_fields = {}
-        for input_elem in cast(
-            list[HtmlElement], tree.xpath("//input[@type='hidden']")
-        ):
+        input_elems: list[HtmlElement] = tree.xpath("//input[@type='hidden']")
+        for input_elem in input_elems:
             name = input_elem.get("name", "")
             value = input_elem.get("value", "")
-            if name:
+            if bool(name):
                 hidden_fields[name] = value
         return hidden_fields
 
@@ -605,11 +606,10 @@ class TAMESScraper(BaseStateScraper):
 
         Empty string when the box came back clean, which is the normal case.
         """
-        field = cast(
-            list[HtmlElement],
-            tree.xpath(f"//input[@name='{ATTORNEY_BAR_FIELD}']"),
+        field: list[HtmlElement] = tree.xpath(
+            f"//input[@name='{ATTORNEY_BAR_FIELD}']"
         )
-        if not field:
+        if not bool(field):
             return ""
         return field[0].get("value", "").strip()
 
@@ -630,17 +630,14 @@ class TAMESScraper(BaseStateScraper):
     @staticmethod
     def _get_result_count(tree: HtmlElement) -> int:
         """Extract result count from search results."""
-        info_div = cast(
-            list[HtmlElement],
-            tree.xpath(
-                "//div[contains(@class, 'rgWrap') and contains(@class, 'rgInfoPart')]"
-            ),
+        info_div: list[HtmlElement] = tree.xpath(
+            "//div[contains(@class, 'rgWrap') and contains(@class, 'rgInfoPart')]"
         )
-        if info_div:
+        if bool(info_div):
             info_text = info_div[0].text_content().strip()
             match = re.search(
                 r"(\d+)\s+items?\s+in\s+\d+\s+pages?", info_text, re.IGNORECASE
             )
-            if match:
+            if match is not None:
                 return int(match.group(1))
         return 0

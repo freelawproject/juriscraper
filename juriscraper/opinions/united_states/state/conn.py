@@ -17,15 +17,22 @@ import re
 from datetime import date
 
 from dateutil.parser import parse
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
 from juriscraper.ClusterSite import ClusterSite
-from juriscraper.lib.string_utils import clean_string
-from juriscraper.lib.type_utils import OpinionType
+from juriscraper.lib.string_utils import CaseNameTweaker, clean_string
+from juriscraper.lib.type_utils import (
+    BackscrapeOptions,
+    ExtractedCluster,
+    ExtractedMetadata,
+    OpinionType,
+    RawOpinion,
+)
 
 
-class Site(ClusterSite):
+class Site(ClusterSite[int]):
     court_abbv = "sup"
     start_year = 2000
     base_url = "https://www.jud.ct.gov/external/supapp/archiveARO{}{}.htm"
@@ -33,10 +40,15 @@ class Site(ClusterSite):
         r"(\b\d{1,2}/\d{1,2}/\d{2,4}\b)|(\b(?:January|February|March|April|May|June|July|August|September|October|November|December) \d{1,2}, \d{4}\b)"
     )
 
-    def __init__(self, *args, **kwargs):
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[int]],
+    ) -> None:
         cipher = "AES256-SHA256"
         kwargs.setdefault("verify", self.set_custom_adapter(cipher))
-        super().__init__(*args, **kwargs)
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.status = "Published"
 
@@ -55,26 +67,26 @@ class Site(ClusterSite):
             m = cls.date_filed_regex.search(
                 date_str,
             )
-            if not m:
+            if m is None:
                 continue
 
-            return m.groups()[0] if m.groups()[0] else m.groups()[1]
+            return m.groups()[0] if bool(m.groups()[0]) else m.groups()[1]
         return ""
 
-    def extract_metadata(self, row) -> tuple[str, str, str]:
+    def extract_metadata(self, row: HtmlElement) -> tuple[str, str, str]:
         """Extract the docket, case name and opinion type from each row
 
         :param row: Row to process
         :return: Docket(s), Case Name, opinion type
         """
-        text = " ".join(row.xpath("ancestor::li[1]//text()"))
-        if not text:
+        text: str = " ".join(row.xpath("ancestor::li[1]//text()"))
+        if not bool(text):
             # bad/unusual HTML, when there is no external <li>
             # get the floating texts in the same "level", these should contain
             # the case name and docket number
-            prev = row.xpath("preceding-sibling::text()[1]")
-            next = row.xpath("following-sibling::text()[1]")
-            text = f"{prev[0] if prev else ''}{row.xpath('string(.)')}{next[0] if next else ''}"
+            prev: list[str] = row.xpath("preceding-sibling::text()[1]")
+            next: list[str] = row.xpath("following-sibling::text()[1]")
+            text = f"{prev[0] if bool(prev) else ''}{row.text_content()}{next[0] if bool(next) else ''}"
 
         clean_text = re.sub(r"[\n\r\t\s]+", " ", text).replace("–", "-")
 
@@ -108,6 +120,10 @@ class Site(ClusterSite):
                 clean_text,
             )
 
+        if match is None:
+            raise ValueError(
+                f"Could not parse opinion metadata: {clean_text!r}"
+            )
         return match.group("dockets"), match.group("case_name"), op_type.value
 
     @override
@@ -116,13 +132,19 @@ class Site(ClusterSite):
 
         :return: None
         """
-        for row in self.html.xpath(".//*[contains(@href, '.pdf')]"):
-            pub = row.xpath('preceding::*[contains(., "Published")][1]/text()')
-            date_filed_is_approximate = True
-            if pub:
-                date_filed = self.find_published_date(pub)
-                if date_filed:
-                    date_filed_is_approximate = False
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(
+            ".//*[contains(@href, '.pdf')]"
+        )
+        for row in rows:
+            pub: list[str] = row.xpath(
+                'preceding::*[contains(., "Published")][1]/text()'
+            )
+            date_filed = self.find_published_date(pub)
+            date_filed_is_approximate = not bool(date_filed)
 
             if date_filed_is_approximate:
                 # May happen on most recent opinions, which have a header like
@@ -130,8 +152,8 @@ class Site(ClusterSite):
                 date_filed = f"{self.current_year}-07-01"
 
             dockets, name, op_type = self.extract_metadata(row)
-            case_dict = {
-                "url": row.get("href"),
+            case_dict: RawOpinion = {
+                "url": row.attrib["href"],
                 "name": name.strip("- "),
                 "docket": dockets.strip(),
                 "date": date_filed,
@@ -141,7 +163,7 @@ class Site(ClusterSite):
 
             # try to cluster the current opinion with any of the previously
             # seen cases
-            if not self.cluster_opinions(case_dict, self.cases):
+            if not bool(self.cluster_opinions(case_dict, self.cases)):
                 # if we can't, append it as a standalone
                 self.cases.append(case_dict)
 
@@ -155,7 +177,8 @@ class Site(ClusterSite):
         year_str = str(year % 2000).zfill(2)
         return self.base_url.format(self.court_abbv, year_str)
 
-    def extract_from_text(self, scraped_text: str):
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """
         If possible, extract Opinion Cluster values:
             - date_filed
@@ -166,7 +189,8 @@ class Site(ClusterSite):
         :param scraped_text: Text extracted from the PDF
         :returns: metadata object expected by Courtlistener
         """
-        metadata: dict[str, dict] = {"OpinionCluster": {}}
+        cluster: ExtractedCluster = {}
+        metadata: ExtractedMetadata = {"OpinionCluster": cluster}
 
         # initial value for end index for judges
         judges_end = 1_000_000
@@ -174,10 +198,10 @@ class Site(ClusterSite):
         # it may not exist on secondary opinions, like a Dissent attached to the
         # main cluster
         regex_date = r"Argued.+officially\sreleased\s(?P<date>[JFMASOND]\w+\s\d{1,2},\s\d{4})"
-        if date_match := re.search(regex_date, scraped_text):
+        if (date_match := re.search(regex_date, scraped_text)) is not None:
             try:
                 date_filed = parse(date_match.group("date")).date()
-                metadata["OpinionCluster"].update(
+                cluster.update(
                     {
                         "date_filed": date_filed,
                         "date_filed_is_approximate": False,
@@ -197,8 +221,8 @@ class Site(ClusterSite):
                 procedural_history = scraped_text[
                     ph_start_index + 18 : end_index
                 ]
-                metadata["OpinionCluster"]["procedural_history"] = (
-                    clean_extracted_text(procedural_history)
+                cluster["procedural_history"] = clean_extracted_text(
+                    procedural_history
                 )
 
             judges_end = min(judges_end, ph_start_index)
@@ -207,17 +231,15 @@ class Site(ClusterSite):
         # If it does, it is before the Procedural History
         sy_start_index = scraped_text.find("Syllabus")
         if sy_start_index != -1:
-            if ph_start_index:
+            if bool(ph_start_index):
                 syllabus = scraped_text[sy_start_index + 8 : ph_start_index]
-                metadata["OpinionCluster"]["syllabus"] = clean_extracted_text(
-                    syllabus
-                )
+                cluster["syllabus"] = clean_extracted_text(syllabus)
 
             judges_end = min(judges_end, sy_start_index)
 
         # Judges string is in the first page after the docket number,
         # before the following section, which may be Syllabus or Procedural History
-        if judges_end != 1_000_000 and (
+        if judges_end != 1_000_000 and bool(
             docket_match := list(
                 re.finditer(r"[AS]C\s\d{5}", scraped_text[:judges_end])
             )
@@ -227,14 +249,19 @@ class Site(ClusterSite):
             for judge in (
                 judges.strip("\n )(").replace(" and ", ",").split(",")
             ):
-                if not judge.strip() or "Js." in judge or "C. J." in judge:
+                if (
+                    not bool(judge.strip())
+                    or "Js." in judge
+                    or "C. J." in judge
+                ):
                     continue
                 clean_judges.append(judge.strip("\n "))
 
-            metadata["OpinionCluster"]["judges"] = "; ".join(clean_judges)
+            cluster["judges"] = "; ".join(clean_judges)
 
         return metadata
 
+    @override
     async def _download_backwards(self, year: int) -> None:
         """Build URL with year input and scrape
 
@@ -246,7 +273,8 @@ class Site(ClusterSite):
         self.html = await self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs: dict) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """Checks if backscrape start and end arguments have been passed
         by caller, and parses them accordingly
         :param kwargs: passed when initializing the scraper, may or
@@ -256,8 +284,8 @@ class Site(ClusterSite):
         start = kwargs.get("backscrape_start")
         end = kwargs.get("backscrape_end")
 
-        start = int(start) if start else self.start_year
-        end = int(end) + 1 if end else self.current_year
+        start = int(start) if bool(start) else self.start_year
+        end = int(end) + 1 if bool(end) else self.current_year
 
         self.back_scrape_iterable = range(start, end)
 
@@ -275,7 +303,10 @@ def clean_extracted_text(text: str) -> str:
         if skip_next_line:
             skip_next_line = False
             continue
-        if re.search(r"CONNECTICUT LAW JOURNAL|0\sConn\.\s(App\.\s)?1", line):
+        if (
+            re.search(r"CONNECTICUT LAW JOURNAL|0\sConn\.\s(App\.\s)?1", line)
+            is not None
+        ):
             skip_next_line = True
             # following line for one of these regexes is the case name
             continue

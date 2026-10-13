@@ -22,7 +22,13 @@ from juriscraper.lib.string_utils import (
     harmonize,
     normalize_dashes,
 )
+from juriscraper.lib.type_utils import (
+    AsyncClientOptions,
+    GetRequestOptions,
+    TimeoutTypes,
+)
 from juriscraper.scotus import SCOTUSDocketReportHTML
+from juriscraper.scotus.types import SCOTUSDocket
 
 logger = make_default_logger()
 
@@ -80,7 +86,7 @@ class SCOTUSEmailHandlingResult(TypedDict):
     """
 
     email_type: str
-    data: dict[str, str] | str
+    data: SCOTUSDocket | str
 
 
 class SCOTUSConfirmationResult(Enum):
@@ -124,7 +130,7 @@ class _SCOTUSConfirmationPageScraper:
     :ivar tree: Parsed HTML tree.
     """
 
-    def __init__(self, court_id: str = "scotus"):
+    def __init__(self, court_id: str = "scotus") -> None:
         self.court_id = court_id
         self.tree: HtmlElement | None = None
 
@@ -202,7 +208,7 @@ class SCOTUSEmail:
         r"^Supreme Court Case Notification .+$"
     )
 
-    def __init__(self, court_id: str = "scotus"):
+    def __init__(self, court_id: str = "scotus") -> None:
         self.court_id: str = court_id
         self.tree: HtmlElement | None = None
         self.message: Message | None = None
@@ -241,7 +247,11 @@ class SCOTUSEmail:
         )
 
     async def handle_email(
-        self, timeout: float = 10.0
+        self,
+        timeout: TimeoutTypes = 10.0,
+        *,
+        client_options: AsyncClientOptions | None = None,
+        request_options: GetRequestOptions | None = None,
     ) -> SCOTUSEmailHandlingResult:
         """
         Handle next steps in email processing.
@@ -253,6 +263,8 @@ class SCOTUSEmail:
         subscription and return the parsed result.
 
         :param timeout: Timeout for the HTTP request in seconds.
+        :param client_options: HTTPX client options; take precedence over timeout.
+        :param request_options: Per-request overrides for the follow-up request.
 
         :return: Result of handling the email.
         """
@@ -261,13 +273,21 @@ class SCOTUSEmail:
 
         # The `followup_url` property is guaranteed to be present if the
         # email type is valid.
-        async with httpx.AsyncClient(
-            http2=True, follow_redirects=True
-        ) as client:
+        kwargs: AsyncClientOptions = (
+            client_options.copy() if client_options is not None else {}
+        )
+        kwargs.setdefault("http2", True)
+        kwargs.setdefault("follow_redirects", True)
+        kwargs.setdefault("timeout", timeout)
+        headers = httpx.Headers(kwargs.get("headers"))
+        headers.setdefault("User-Agent", "Free Law Project")
+        kwargs["headers"] = headers
+        if request_options is None:
+            request_options = {}
+        async with httpx.AsyncClient(**kwargs) as client:
             response = await client.get(
                 self.data["followup_url"],
-                headers={"User-Agent": "Free Law Project"},
-                timeout=timeout,
+                **request_options,
             )
         response.raise_for_status()
 
@@ -397,7 +417,11 @@ class SCOTUSEmail:
         if match is None:
             return ""
 
-        return normalize_dashes(clean_string(match.group(1) or ""))
+        return normalize_dashes(
+            clean_string(
+                group_value if bool(group_value := match.group(1)) else ""
+            )
+        )
 
     def _parse_case_name(self) -> str:
         """Extract the case name from the first `<a>` tag in the email body
@@ -423,7 +447,7 @@ class SCOTUSEmail:
             for link, href in links_with_href
             if href is not None
         )
-        if not links_with_url:
+        if not bool(links_with_url):
             raise ValueError("No links found in SCOTUS email body")
         links_with_query = (
             (link, url, parse_qs(url.query)) for link, url in links_with_url
@@ -434,7 +458,7 @@ class SCOTUSEmail:
             for (link, url, query) in links_with_query
             if "filename" in query
         ]
-        if not links_with_filenames:
+        if not bool(links_with_filenames):
             raise ValueError(
                 "No URLs with 'filename' query parameter found in SCOTUS email body"
             )
@@ -472,7 +496,7 @@ class SCOTUSEmail:
         return anchor.get("href")
 
 
-def _main():
+def _main() -> None:
     """Parse a local email file and pretty print extracted data.
 
     :return: None

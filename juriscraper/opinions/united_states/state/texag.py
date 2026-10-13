@@ -7,14 +7,22 @@ History:
     2023-01-28: Updated by William E. Palin
 """
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = "https://texasattorneygeneral.gov/opinions"
         self.expected_content_types = ["application/pdf"]
@@ -22,13 +30,19 @@ class Site(OpinionSiteLinear):
 
     @override
     def _process_html(self) -> None:
-        cases = self.html.xpath("//div[@class='sidebar-ag-opinion-content']")
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        cases: list[HtmlElement] = self.html.xpath(
+            "//div[@class='sidebar-ag-opinion-content']"
+        )
         for case in cases:
-            docket = case.xpath(".//h4")[0].text_content().strip()
-            summary = case.xpath(".//p")[0].text_content().strip()
-            url = case.xpath(".//a[contains(@href, '.pdf')]/@href")[0]
+            docket = case.findall(".//h4")[0].text_content().strip()
+            summary = case.findall(".//p")[0].text_content().strip()
+            url: str = case.xpath(".//a[contains(@href, '.pdf')]/@href")[0]
             name = f"Untitled Texas Attorney General Opinion: {docket}"
-            date = case.xpath(
+            date: str = case.xpath(
                 ".//div[@class='sidebar-ag-opinion-casedate']/text()"
             )[0].strip()
             self.cases.append(

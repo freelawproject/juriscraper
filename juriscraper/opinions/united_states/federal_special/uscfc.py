@@ -7,22 +7,42 @@ Notes:
     2024-10-23, grossir: implemented new site
 """
 
-import json
 import re
 from urllib.parse import urljoin
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import RawOpinion
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+
+
+class _Opinion(TypedDict):
+    title: str
+    text: str
+    judge: str
+    criteria: str
+    link: str
+    date: str
+
+
+_opinions_adapter = TypeAdapter(list[_Opinion])
 
 
 class Site(OpinionSiteLinear):
     judge_regex = re.compile(r"Signed by[\w\s]+(Master|Judge)(?P<judge>.+?)\(")
     other_date_regex = re.compile(r"\([Oo]riginally filed:?[\d\s/]+\)")
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.url = "https://ecf.cofc.uscourts.gov/cgi-bin/CFC_RecentOpinionsOfTheCourt.pl"
         self.court_id = self.__module__
         self.is_vaccine = "uscfc_vaccine" in self.court_id
@@ -33,14 +53,19 @@ class Site(OpinionSiteLinear):
         The opinions are inside a <script> tag, as a Javascript constant
         that will be parsed using json.loads
         """
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        options: list[HtmlElement] = self.html.xpath(
+            "//select[@name='judge']//option"
+        )
         judges_mapper = {
-            option.get("value"): option.text_content()
-            for option in self.html.xpath("//select[@name='judge']//option")
+            option.get("value"): option.text_content() for option in options
         }
         judges_mapper.pop("UNKNOWN", "")
         judges_mapper.pop("all", "")
-
-        raw_data = (
+        raw_data: str = (
             self.html.xpath("//script")[0]
             .text_content()
             .strip()
@@ -48,11 +73,11 @@ class Site(OpinionSiteLinear):
             .split("= ", 1)[1]
         )
 
-        for opinion in json.loads(raw_data):
+        for opinion in _opinions_adapter.validate_json(raw_data, strict=True):
             docket, name = opinion["title"].split(" &bull; ", 1)
 
             summary = opinion["text"]
-            if judge_match := self.judge_regex.search(summary):
+            if (judge_match := self.judge_regex.search(summary)) is not None:
                 judge = judge_match.group("judge").strip(" .()")
                 # Remove: "Signed by ... . Service on parties made"
                 summary = summary[: judge_match.start()].strip(", .()")
@@ -60,7 +85,9 @@ class Site(OpinionSiteLinear):
                 judge = judges_mapper.get(opinion["judge"], "")
 
             other_date = ""
-            if other_date_match := self.other_date_regex.search(summary):
+            if (
+                other_date_match := self.other_date_regex.search(summary)
+            ) is not None:
                 other_date = other_date_match.group(0).strip("() ")
                 summary = re.sub(self.other_date_regex, "", summary)
 
@@ -71,10 +98,12 @@ class Site(OpinionSiteLinear):
             else:
                 status = "Unknown"
 
-            parsed_case = {
+            parsed_case: RawOpinion = {
                 # Some opinions have relative links,
                 # e.g. "/cofc/opinions/25-11281-parks-....pdf"
-                "url": urljoin(self.url, opinion["link"]),
+                "url": urljoin(
+                    (self.url if self.url is not None else ""), opinion["link"]
+                ),
                 "date": opinion["date"],
                 "other_date": other_date,
                 "status": status,

@@ -10,6 +10,10 @@ History:
 
 """
 
+from typing_extensions import Unpack
+
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.opinions.united_states.federal_appellate import cadc
 from juriscraper.OpinionSite import OpinionSite
 
@@ -17,7 +21,12 @@ from juriscraper.OpinionSite import OpinionSite
 class Site(cadc.Site):
     extract_from_text = OpinionSite.extract_from_text
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         # https://media.cadc.uscourts.gov/orders/
         self.url = "https://media.cadc.uscourts.gov/orders/bydate/recent"

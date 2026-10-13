@@ -13,21 +13,28 @@ History:
 import re
 from datetime import date, datetime
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
-class Site(OralArgumentSiteLinear):
+class Site(OralArgumentSiteLinear[tuple[date, date]]):
     days_interval = 10000  # force a single interval
     first_opinion_date = datetime(2012, 12, 1)
     # check the first 100 records; Otherwise, it will try to download more
     # than 1000 every time
     limit = 100
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = (
             "https://www.opn.ca6.uscourts.gov/internet/court_audio/aud1.php"
@@ -41,10 +48,17 @@ class Site(OralArgumentSiteLinear):
         Parsing the URL helps simplifying the backscraper which has a different
         HTML structure than the regular page
         """
-        for link in self.html.xpath("//a[text()='Play']/@href")[: self.limit]:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        links: list[str] = self.html.xpath("//a[text()='Play']/@href")[
+            : self.limit
+        ]
+        for link in links:
             *_, date_str, case = link.split("/")
             docket_match = re.search(r"(\d{2}-\d{4}\s?)+", case)
-            if not docket_match:
+            if docket_match is None:
                 logger.warning("Skipping row %s", link)
                 continue
 
@@ -59,6 +73,7 @@ class Site(OralArgumentSiteLinear):
                 }
             )
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Downloads and parses older records according to input dates"""
         logger.info("Backscraping for range %s", *dates)

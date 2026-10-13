@@ -72,8 +72,8 @@ def titlecase(text: str, DEBUG: bool = False) -> str:
         for word in words:
             if DEBUG:
                 print(f"Word: {word}")
-            if all_caps:
-                if UC_INITIALS.match(word):
+            if all_caps is not None:
+                if UC_INITIALS.match(word) is not None:
                     if DEBUG:
                         print(f"  UC_INITIALS match for: {word}")
                     tc_line.append(word)
@@ -83,7 +83,7 @@ def titlecase(text: str, DEBUG: bool = False) -> str:
                         print(f"  Not initials. Lowercasing: {word}")
                     word = word.lower()
 
-            if APOS_SECOND.match(word):
+            if APOS_SECOND.match(word) is not None:
                 # O'Reiley, L'Oreal, D'Angelo
                 if DEBUG:
                     print(f"  APOS_SECOND matched. Fixing it: {word}")
@@ -91,7 +91,7 @@ def titlecase(text: str, DEBUG: bool = False) -> str:
                 tc_line.append(word)
                 continue
 
-            if INLINE_PERIOD.search(word):
+            if INLINE_PERIOD.search(word) is not None:
                 if DEBUG:
                     print(
                         "  INLINE_PERIOD matched. Uppercasing if == 1 char: "
@@ -110,7 +110,7 @@ def titlecase(text: str, DEBUG: bool = False) -> str:
                 tc_line.append(word)
                 continue
 
-            if INLINE_SLASH.search(word):
+            if INLINE_SLASH.search(word) is not None:
                 # This repeats INLINE_PERIOD. Could be more elegant.
                 if DEBUG:
                     print(
@@ -131,7 +131,7 @@ def titlecase(text: str, DEBUG: bool = False) -> str:
                 continue
 
             amp_match = INLINE_AMPERSAND.match(word)
-            if amp_match:
+            if amp_match is not None:
                 if DEBUG:
                     print(f"  INLINE_AMPERSAND matched. Uppercasing: {word}")
                 tc_line.append(
@@ -139,26 +139,26 @@ def titlecase(text: str, DEBUG: bool = False) -> str:
                 )
                 continue
 
-            if UC_ELSEWHERE.match(word):
+            if UC_ELSEWHERE.match(word) is not None:
                 if DEBUG:
                     print(f"  UC_ELSEWHERE matched. Leaving unchanged: {word}")
                 tc_line.append(word)
                 continue
 
-            if SMALL_WORDS.match(word):
+            if SMALL_WORDS.match(word) is not None:
                 if DEBUG:
                     print(f"  SMALL_WORDS matched. Lowercasing: {word}")
                 tc_line.append(word.lower())
                 continue
 
-            if BIG_WORDS.match(word):
+            if BIG_WORDS.match(word) is not None:
                 if DEBUG:
                     print(f"  BIG_WORDS matched. Uppercasing: {word}")
                 tc_line.append(word.upper())
                 continue
 
             match = MAC_MC.match(word)
-            if match:
+            if match is not None:
                 if DEBUG:
                     print(f"  MAC_MAC matched. Capitalizing: {word}")
                 tc_line.append(
@@ -214,6 +214,8 @@ def _uppercase_word(word: str) -> str:
 def fix_camel_case(s: str) -> str:
     """Sometimes courts provide nasty camel-cased content instead of real
     words. This code attempts to fix that."""
+    if not bool(s):
+        return s
     if " " in s:
         s_out = s
     else:
@@ -236,19 +238,10 @@ def fix_camel_case(s: str) -> str:
                     s_out += s[i]
             elif s[i - 1].islower() and s[i].isupper():
                 # A pattern like 'McLaughlin'
-                try:
-                    mac_or_mc = (s[i - 2] == "a" and s[i - 3] == "M") or s[
-                        i - 2
-                    ] == "M"
-                except KeyError:
-                    s_out += f" {s[i]}"
-                if s[i - 1] == "c" and mac_or_mc:
+                if s[max(0, i - 3) : i].endswith(("Mac", "Mc")):
                     s_out += s[i]
                 else:
                     s_out += f" {s[i]}"
-            elif s[i].isupper() and s[i - 1].islower():
-                # Uppercase letter preceded by a lowercase one. Add a space then the letter.
-                s_out += f" {s[i]}"
             else:
                 s_out += s[i]
         # Fix v.'s that don't have spaces. These come in two forms:
@@ -290,7 +283,7 @@ BW = (
 BAD_WORDS = re.compile(r"^(%s)(,|\.)?$" % BW, re.I)
 
 
-def harmonize(text) -> str:
+def harmonize(text: object) -> str:
     """Fixes case names so they are cleaner.
 
     Using a bunch of regex's, this function cleans up common data problems in
@@ -326,7 +319,7 @@ def harmonize(text) -> str:
     parties = text.split(" v. ")
     for party in parties:
         party = party.strip()
-        if UNITED_STATES.match(party):
+        if UNITED_STATES.match(party) is not None:
             harmonized_parts.append("United States")
         elif party.lower() == "the state":
             harmonized_parts.append("State")
@@ -349,7 +342,7 @@ def harmonize(text) -> str:
     return clean_string(result)
 
 
-def clean_string(s) -> str:
+def clean_string(s: object) -> str:
     """Clean up strings.
 
     Accomplishes the following:
@@ -410,58 +403,28 @@ def clean_string(s) -> str:
 
 
 def force_unicode(
-    s, encoding="utf-8", strings_only=False, errors="strict"
+    s: object,
+    encoding: str = "utf-8",
+    strings_only: bool = False,
+    errors: str = "strict",
 ) -> str:
-    # Borrows heavily from django.utils.encoding.force_unicode.
-    # This should be applied to *input* not *output*!
-    # Handle the common case first, saves 30-40% in performance when s
-    # is an instance of unicode. This function gets called often in that
-    # setting.
+    """Decode bytes or convert an object to text.
+
+    ``strings_only`` is retained for compatibility; all inputs become strings.
+    """
     if isinstance(s, str):
         return s
+    if isinstance(s, bytes):
+        return s.decode(encoding, errors)
     try:
-        if not isinstance(s, str):
-            if hasattr(s, "__unicode__"):
-                s = str(s)
-            else:
-                try:
-                    s = str(str(s), encoding, errors)
-                except UnicodeEncodeError:
-                    if not isinstance(s, Exception):
-                        raise
-                    # If we get to here, the caller has passed in an Exception
-                    # subclass populated with non-ASCII data without special
-                    # handling to display as a string. We need to handle this
-                    # without raising a further exception. We do an
-                    # approximation to what the Exception's standard str()
-                    # output should be.
-                    s = " ".join(
-                        [
-                            force_unicode(arg, encoding, strings_only, errors)
-                            for arg in s
-                        ]
-                    )
-        elif not isinstance(s, str):
-            # Note: We use .decode() here, instead of unicode(s, encoding,
-            # errors), so that if s is a SafeString, it ends up being a
-            # SafeUnicode at the end.
-            s = s.decode(encoding, errors)
-    except UnicodeDecodeError:
+        return str(s)
+    except (UnicodeEncodeError, UnicodeDecodeError):
         if not isinstance(s, Exception):
             raise
-        else:
-            # If we get to here, the caller has passed in an Exception
-            # subclass populated with non-ASCII bytestring data without a
-            # working unicode method. Try to handle this without raising a
-            # further exception by individually forcing the exception args
-            # to unicode.
-            s = " ".join(
-                [
-                    force_unicode(arg, encoding, strings_only, errors)
-                    for arg in s
-                ]
-            )
-    return s
+        return " ".join(
+            force_unicode(arg, encoding, strings_only, errors)
+            for arg in s.args
+        )
 
 
 def trunc(s: str, length: int, ellipsis: str | None = None) -> str:
@@ -473,7 +436,7 @@ def trunc(s: str, length: int, ellipsis: str | None = None) -> str:
     If an ellipsis is provided, the right most space is used that allows the
     addition of the ellipsis without being longer than length.
     """
-    if ellipsis:
+    if bool(ellipsis):
         ellipsis_length = len(ellipsis)
     else:
         ellipsis_length = 0
@@ -490,7 +453,7 @@ def trunc(s: str, length: int, ellipsis: str | None = None) -> str:
             # no spaces found, just use max position
             end = length - ellipsis_length
         s = s[0:end]
-        if ellipsis:
+        if bool(ellipsis):
             s = f"{s}{ellipsis}"
         return s
 
@@ -568,7 +531,7 @@ def normalize_dashes(raw_string: str) -> str:
 
 
 class CaseNameTweaker:
-    def __init__(self):
+    def __init__(self) -> None:
         self._bad_words: list[str] | None = None
         super().__init__()
 
@@ -838,7 +801,7 @@ def size_string_to_bytes(size: str) -> int:
     n_bytes = float(size_group)
     units = {"B": 1, "KB": 10**3, "MB": 10**6, "GB": 10**9, "TB": 10**12}
     size_unit = units.get(size_unit_group, 0)
-    return int(round(n_bytes * size_unit))
+    return round(n_bytes * size_unit)
 
 
 def clean_url(url: str) -> str:

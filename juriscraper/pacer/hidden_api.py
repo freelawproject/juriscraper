@@ -1,14 +1,20 @@
+from typing import TYPE_CHECKING
+
 from lxml import etree
+from pydantic import ConfigDict, TypeAdapter, with_config
+from typing_extensions import TypedDict, override
 
 from juriscraper.lib.diff_tools import get_closest_match_index
 from juriscraper.lib.exceptions import ParsingException
 from juriscraper.lib.log_tools import make_default_logger
-from juriscraper.lib.string_utils import force_unicode
 
 from .reports import BaseReport
 from .utils import get_pacer_doc_id_from_doc1_url
 
 logger = make_default_logger()
+
+if TYPE_CHECKING:
+    from .http import PacerSession
 
 
 class PossibleCaseNumberApi(BaseReport):
@@ -24,15 +30,16 @@ class PossibleCaseNumberApi(BaseReport):
 
     PATH = "cgi-bin/possible_case_numbers.pl"
 
-    async def query(self, docket_number):
+    async def query(self, docket_number: str) -> None:
         """Query the "possible case numbers" endpoint and return the results.
 
         :param docket_number: A string representing a docket number
         :return: a request response object
         """
-        assert self.session is not None, (
-            "session attribute of PossibleCaseNUmberApi cannot be None."
-        )
+        if self.session is None:
+            raise ValueError(
+                "session attribute of PossibleCaseNUmberApi cannot be None."
+            )
         url = f"{self.url}?{docket_number.lower()}"
         logger.info(
             f"Querying the possible case number endpoint at URL: {url}"
@@ -40,16 +47,21 @@ class PossibleCaseNumberApi(BaseReport):
         self.response = await self.session.get(url)
         self.parse()
 
-    def _parse_text(self, text):
+    @override
+    def _parse_text(self, text: str) -> None:
         """Parse the text of the response object and put it in self.tree.
 
         Use an XML parser instead of the normal HTML one.
         """
+        self.tree = None
         self.tree = etree.fromstring(text)
 
     def data(
-        self, case_name=None, office_number=None, docket_number_letters=None
-    ):
+        self,
+        case_name: str | None = None,
+        office_number: str | None = None,
+        docket_number_letters: str | None = None,
+    ) -> dict[str, str] | None:
         """Get data back from this query for the matching case.
 
         :param case_name: This endpoint can return multiple cases for a given
@@ -78,11 +90,14 @@ class PossibleCaseNumberApi(BaseReport):
          - bk - Bankruptcy
         There are others too, feel free to add them if you know them.
         """
-        case_count = self.tree.xpath("count(//case)")
-        nodes = self.tree.xpath("//case")
+        if self.tree is None:
+            raise ValueError("Parse a response before selecting a case.")
+        nodes: list[etree._Element] = self.tree.xpath("//case")
+        case_count = len(nodes)
         if case_count == 0:
             try:
-                msg = self.tree.xpath("//message/@text")[0]
+                messages: list[str] = self.tree.xpath("//message/@text")
+                msg = messages[0]
             except IndexError:
                 pass
             else:
@@ -100,56 +115,69 @@ class PossibleCaseNumberApi(BaseReport):
             if office_number is not None:
                 # Remove items by docket number, if they lead with something
                 # other than the correct office number.
-                def correct_office_number(node):
-                    try:
-                        number = node.xpath("./@number")[0].split(":")[0]
-                    except IndexError:
+                def correct_office_number(node: etree._Element) -> bool:
+                    number = node.get("number")
+                    if number is None:
                         # Don't filter...something went wrong.
                         return True
-                    return number == office_number
+                    return number.split(":")[0] == office_number
 
                 nodes = list(filter(correct_office_number, nodes))
 
             if len(nodes) > 1 and docket_number_letters is not None:
                 # Remove items by docket number, if they have cv or cr.
-                nodes = [
-                    node
-                    for node in nodes
-                    if docket_number_letters in node.xpath("./@number")[0]
-                ]
+                filtered_nodes = []
+                for node in nodes:
+                    number = node.get("number")
+                    if number is None:
+                        raise ParsingException(
+                            "Case result is missing its 'number' attribute."
+                        )
+                    if docket_number_letters in number:
+                        filtered_nodes.append(node)
+                nodes = filtered_nodes
 
             if len(nodes) > 1:
                 # If we only have sequential defendant attributes, pick the
                 # lowest one. The lowest one tends to be the main case, and the
                 # others are additional dockets for specific defendants.
-                try:
-                    attribute = "@defendant"
-                    ids = sorted(
-                        int(x.xpath(f"./{attribute}")[0]) for x in nodes
-                    )
-                except IndexError:
+                attribute = "defendant"
+                if any(node.get(attribute) is None for node in nodes):
                     # No defendant attribute one of the nodes. Try by
                     # pacer_case_id instead. We used to do this by default,
                     # instead of defendant number, but it is not always
                     # sequential.
-                    attribute = "@id"
-                    ids = sorted(
-                        int(x.xpath(f"./{attribute}")[0]) for x in nodes
-                    )
+                    attribute = "id"
+                ids = []
+                for node in nodes:
+                    value = node.get(attribute)
+                    if value is None:
+                        raise ParsingException(
+                            f"Case result is missing its {attribute!r} attribute."
+                        )
+                    ids.append(int(value))
+                ids.sort()
 
                 missing_ids = set(range(ids[0], ids[-1] + 1)).difference(ids)
                 if len(missing_ids) > 0:
                     # The IDs are not sequential. Can't use this technique.
                     pass
                 else:
-                    nodes = self.tree.xpath(f"//case[{attribute}={ids[0]}]")
+                    nodes = self.tree.xpath(f"//case[@{attribute}={ids[0]}]")
 
             if len(nodes) > 1 and case_name is not None:
                 # Disambiguate the possible case nodes to find the best one.
                 # Initial strings take the form:
                 #    2:16-cr-01152-JZB USA v. Abuarar (closed 01/26/2017)
                 # Attempt to pull out just the case name.
-                title_attrs = [node.xpath("./@title")[0] for node in nodes]
+                title_attrs = []
+                for node in nodes:
+                    title = node.get("title")
+                    if title is None:
+                        raise ParsingException(
+                            "Case result is missing its 'title' attribute."
+                        )
+                    title_attrs.append(title)
                 strs = [
                     title.split(" ", 1)[1].split("(closed", 1)[0]
                     for title in title_attrs
@@ -170,14 +198,19 @@ class PossibleCaseNumberApi(BaseReport):
                     "docket_number_letters parameters?"
                 )
 
-        if nodes:
+        if bool(nodes):
             node = nodes[0]
+            for attribute in ("number", "id", "title"):
+                if node.get(attribute) is None:
+                    raise ParsingException(
+                        f"Case result is missing its {attribute!r} attribute."
+                    )
             return {
-                "docket_number": force_unicode(node.xpath("./@number")[0]),
-                "pacer_case_id": force_unicode(node.xpath("./@id")[0]),
+                "docket_number": node.attrib["number"],
+                "pacer_case_id": node.attrib["id"],
                 # This could be further post processed to pull out the date closed
                 # and a cleaner title.
-                "title": force_unicode(node.xpath("./@title")[0]),
+                "title": node.attrib["title"],
             }
         else:
             raise ParsingException("Unable to identify case.")
@@ -198,15 +231,19 @@ class ShowCaseDocApi(BaseReport):
 
     PATH = "cgi-bin/show_case_doc"
 
-    def __init__(self, court_id, pacer_session=None):
-        assert not court_id.endswith("b"), (
-            "This API is not available at bankruptcy courts."
-        )
+    def __init__(
+        self, court_id: str, pacer_session: "PacerSession | None" = None
+    ) -> None:
+        if court_id.endswith("b"):
+            raise ValueError("This API is not available at bankruptcy courts.")
         super().__init__(court_id, pacer_session)
 
     async def query(
-        self, pacer_case_id, document_number, attachment_number=""
-    ):
+        self,
+        pacer_case_id: str | int,
+        document_number: str | int,
+        attachment_number: str | int = "",
+    ) -> None:
         """Query the show_case_doc endpoint and return the normalized doc1
         number.
 
@@ -215,9 +252,10 @@ class ShowCaseDocApi(BaseReport):
         :param attachment_number: The attachment number of the item on the
         attachment page.
         """
-        assert self.session is not None, (
-            "session attribute of ShowCaseDocApi cannot be None."
-        )
+        if self.session is None:
+            raise ValueError(
+                "session attribute of ShowCaseDocApi cannot be None."
+            )
         url = (
             f"{self.url}?"
             f"{document_number},"
@@ -230,13 +268,18 @@ class ShowCaseDocApi(BaseReport):
         self.response = await self.session.get(url, follow_redirects=True)
         self.parse()
 
-    def _parse_text(self, text):
+    @override
+    def _parse_text(self, text: str) -> None:
         """Just a stub. No parsing needed here."""
         pass
 
     @property
-    def data(self):
+    def data(self) -> str:
         """Get the URL out of the response object."""
+        if self.response is None:
+            raise ValueError(
+                "A response is required to retrieve a document URL."
+            )
         url = str(self.response.url)
         if "doc1" in url:
             return get_pacer_doc_id_from_doc1_url(url)
@@ -246,15 +289,21 @@ class ShowCaseDocApi(BaseReport):
             )
 
 
+@with_config(ConfigDict(extra="allow"))
+class AcmsCaseSearchResult(TypedDict, total=False):
+    pcx_caseid: str | None
+
+
 class AcmsCaseSearch(BaseReport):
     """
     Looks up an ACMS case by its docket number using the CaseSearch API.
     """
 
-    async def query(self, docket_number):
-        assert self.session is not None, (
-            "session attribute of AcmsCaseSearch cannot be None."
-        )
+    async def query(self, docket_number: str) -> None:
+        if self.session is None:
+            raise ValueError(
+                "session attribute of AcmsCaseSearch cannot be None."
+            )
         url = f"https://{self.court_id}-showdocservices.azurewebsites.us/api/CaseSearch/{docket_number}"
         logger.info(f"Querying the CaseSearch endpoint with URL: {url}")
         self.response = await self.session.get(
@@ -262,12 +311,13 @@ class AcmsCaseSearch(BaseReport):
         )
         self.parse()
 
-    def _parse_text(self, text):
+    @override
+    def _parse_text(self, text: str) -> None:
         """Just a stub. No parsing needed here."""
         pass
 
     @property
-    def data(self):
+    def data(self) -> AcmsCaseSearchResult:
         """
         Retrieves the parsed case data from the API response.
 
@@ -282,7 +332,11 @@ class AcmsCaseSearch(BaseReport):
                  if no data is found, the response is malformed, or an error
                  occurred.
         """
-        case_data = self.response.json()
-        if not case_data:
+        if self.response is None:
+            raise ValueError("A response is required to retrieve case data.")
+        case_data: object = self.response.json()
+        if not bool(case_data):
             return {}
-        return case_data[0]
+        return TypeAdapter(list[AcmsCaseSearchResult]).validate_python(
+            case_data, strict=True
+        )[0]

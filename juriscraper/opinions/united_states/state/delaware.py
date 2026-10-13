@@ -8,14 +8,23 @@ Reviewer: mlr
 import re
 from urllib.parse import urljoin
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import ExtractedMetadata, RawOpinion
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.url = (
             "https://courts.delaware.gov/opinions/List.aspx?ag=supreme%20court"
         )
@@ -30,24 +39,39 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
-        for row in self.html.xpath("//table//tr[not(th)]"):
-            case = {
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath("//table//tr[not(th)]")
+        for row in rows:
+            url: str = row.xpath("td[1]/a/@href")[0].strip()
+            case: RawOpinion = {
                 "name": row.xpath("td[1]/a/text()")[0].strip(),
                 "date": row.xpath("td[2]/span/text()")[0].strip(),
                 "docket": row.xpath("td[3]/span/text()")[0].strip(),
                 "url": urljoin(
-                    self.url, row.xpath("td[1]/a/@href")[0].strip()
+                    (self.url if self.url is not None else ""),
+                    url,
                 ),
                 "judge": " ".join(row.xpath("td[6]/text()")).strip(),
                 "per_curiam": False,
             }
-            if "per curiam" in case["judge"].lower():
+            if (
+                "per curiam"
+                in (
+                    judge_value
+                    if (judge_value := case.get("judge")) is not None
+                    else ""
+                ).lower()
+            ):
                 case["judge"] = ""
                 case["per_curiam"] = True
 
             self.cases.append(case)
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract lower court from the scraped text.
 
         :param scraped_text: The text to extract from.
@@ -69,15 +93,17 @@ class Site(OpinionSiteLinear):
             re.IGNORECASE,
         )
 
-        result = {}
+        result: ExtractedMetadata = {}
 
-        if match := pattern.search(cleaned_text):
+        if (match := pattern.search(cleaned_text)) is not None:
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
             result["Docket"] = {"appeal_from_str": lower_court}
 
-            if number_match := number_pattern.search(cleaned_text):
+            if (
+                number_match := number_pattern.search(cleaned_text)
+            ) is not None:
                 lower_court_number = number_match.group(
                     "lower_court_number"
                 ).strip()

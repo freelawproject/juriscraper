@@ -3,9 +3,13 @@ import json
 
 import httpx
 from lxml import etree, html
+from lxml.html import HtmlElement
+from typing_extensions import Unpack
+
+from juriscraper.lib.type_utils import AsyncClientOptions
 
 
-async def get_court_names(**kwargs):
+async def get_court_names(**kwargs: Unpack[AsyncClientOptions]) -> None:
     kwargs.setdefault("http2", True)
     async with httpx.AsyncClient(**kwargs) as client:
         response = await client.get(
@@ -13,35 +17,37 @@ async def get_court_names(**kwargs):
         )
     tree = html.fromstring(response.text)
 
-    data = {}
+    data: dict[str, str] = {}
 
-    for tr in tree.xpath("//tr"):
-        pre = tr.xpath("./td[5]/a/text()")
-        name = tr.xpath("./td[1]/text()")
-        if pre and name:
+    rows: list[HtmlElement] = tree.xpath("//tr")
+    for tr in rows:
+        pre: list[str] = tr.xpath("./td[5]/a/text()")
+        name: list[str] = tr.xpath("./td[1]/text()")
+        if bool(pre) and bool(name):
             data[pre[0].strip()] = name[0].strip()
 
     with open("./court_names.json", "w") as f:
         json.dump(data, f)
 
 
-async def get_fdsys_court_names(**kwargs):
+async def get_fdsys_court_names(**kwargs: Unpack[AsyncClientOptions]) -> None:
     kwargs.setdefault("http2", True)
     async with httpx.AsyncClient(**kwargs) as client:
         response = await client.get(
             "https://www.gpo.gov/smap/fdsys/sitemap_2014/2014_USCOURTS_sitemap.xml",
         )
-        tree = etree.parse(await response.aread())
+        tree = etree.fromstring(response.content)
 
-    data = {}
+    data: dict[str, str] = {}
 
-    for url in tree.xpath(
+    urls: list[str] = tree.xpath(
         "//m:loc/text()",
         namespaces={
             "m": "http://www.sitemaps.org/schemas/sitemap/0.9",
             "xlink": "http://www.w3.org/1999/xlink",
         },
-    ):
+    )
+    for url in urls:
         pre = url.split("-")[1]
         # if pre not in data and url:
         data[pre] = url

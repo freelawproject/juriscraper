@@ -1,11 +1,12 @@
 import re
-from typing import Any
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -22,15 +23,21 @@ class Site(OpinionSiteLinear):
         re.X | re.DOTALL,
     )
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = (
             "https://supremecourt.nebraska.gov/courts/supreme-court/opinions"
         )
         self.should_have_results = True
 
-    def _return_response_text_object(self):
+    @override
+    def _return_response_text_object(self) -> HtmlElement | None:
         """Remove faulty URLs from HTML
 
         Override _return_response_text_object in Abstract Site to remove any
@@ -42,14 +49,18 @@ class Site(OpinionSiteLinear):
 
         :return: The cleaned html tree of the site
         """
-        if self.request["response"]:
-            payload = self.request["response"].text
+        if "response" in self.request:
+            response = self.request.get("response")
+            if response is None:
+                raise ValueError("Download a response before accessing it.")
+            payload = response.text
             text = self._clean_text(payload)
             html_tree = self._make_html_tree(text)
 
-            for tag in html_tree.xpath(
+            tags: list[HtmlElement] = html_tree.xpath(
                 "//a[contains(@href, 'site:url-brief')]"
-            ):
+            )
+            for tag in tags:
                 parent = tag.getparent()
                 if parent is not None:
                     parent.remove(tag)
@@ -62,22 +73,26 @@ class Site(OpinionSiteLinear):
 
     @override
     def _process_html(self) -> None:
-        for table in self.html.xpath(".//table"):
-            date_tags = table.xpath("preceding::time[1]/text()")
-            if not date_tags:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        for table in self.html.findall(".//table"):
+            date_tags: list[str] = table.xpath("preceding::time[1]/text()")
+            if not bool(date_tags):
                 continue
             date = date_tags[0]
 
-            for row in table.xpath(".//tr[td]"):
-                c1, c2, c3 = row.xpath(".//td")
-                docket = c1.xpath(".//text()")[0].strip()
-                if "A-XX-XXXX" in docket or not c3.xpath(".//a"):
+            for row in table.findall(".//tr[td]"):
+                c1, c2, c3 = row.findall(".//td")
+                docket: str = c1.xpath(".//text()")[0].strip()
+                if "A-XX-XXXX" in docket or not bool(c3.findall(".//a")):
                     logger.info("Skip row %s", row.text_content())
                     continue
 
-                citation = c2.xpath(".//text()")[0].strip()
-                name = c3.xpath(".//a/text()")[0].strip()
-                url = c3.xpath(".//a")[0].get("href")
+                citation: str = c2.xpath(".//text()")[0].strip()
+                name: str = c3.xpath(".//a/text()")[0].strip()
+                url = c3.findall(".//a")[0].attrib["href"]
                 # This URL location is used for unpublished opinions
                 if "/sites/default/files" in url:
                     status = "Unpublished"
@@ -95,16 +110,17 @@ class Site(OpinionSiteLinear):
                     }
                 )
 
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Get the state citation and lower court info from the document's text."""
-        result = {}
+        result: ExtractedMetadata = {}
 
         match = self.citation_regex.search(scraped_text[:1000])
-        if match:
+        if match is not None:
             result["Citation"] = match.group("citation")
 
         match = self.lower_court_regex.search(scraped_text)
-        if match:
+        if match is not None:
             result["Docket"] = {
                 "appeal_from_str": re.sub(
                     r"\s+", " ", match.group("lower_court")

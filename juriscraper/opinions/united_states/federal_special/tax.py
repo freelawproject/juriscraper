@@ -6,22 +6,53 @@
 # Neutral Citation Format (Summary opinions: T.C. Summary Opinion 2012-1
 import asyncio
 from datetime import date, datetime, timedelta
+from typing import NotRequired
 
-from typing_extensions import override
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.AbstractSite import RequestParameters, SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class _Case(TypedDict):
+    docketNumber: str
+    docketEntryId: str
+    documentType: str
+    filingDate: str
+    caseCaption: str
+    signedJudgeName: NotRequired[str | None]
+    judge: NotRequired[str | None]
+
+
+class _Search(TypedDict):
+    results: NotRequired[list[_Case]]
+
+
+class _DownloadURL(TypedDict):
+    url: str
+
+
+_search_adapter = TypeAdapter(_Search)
+_url_adapter = TypeAdapter(_DownloadURL)
+
+
+class Site(OpinionSiteLinear[tuple[date, date]]):
+    json: _Search
+
     first_opinion_date = datetime(1986, 5, 1)
     days_interval = 10
     base_url = "https://public-api-green.dawson.ustaxcourt.gov/public-api"
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.set_blue_green = None
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
+        self.set_blue_green = False
         self.url = f"{self.base_url}/opinion-search"
         self.court_id = self.__module__
         self.method = "GET"
@@ -37,7 +68,10 @@ class Site(OpinionSiteLinear):
         }
         self.make_backscrape_iterable(kwargs)
 
-    async def _download(self, request_dict=None):
+    @override
+    async def _download(
+        self, request_dict: RequestParameters | None = None
+    ) -> _Search:
         """Download from api
 
         The tax court switches between blue and green deploys so we need to
@@ -48,8 +82,11 @@ class Site(OpinionSiteLinear):
         """
         if request_dict is None:
             request_dict = {}
+        self.url = f"{self.base_url}/opinion-search"
         if self.test_mode_enabled():
-            return await super()._download()
+            return _search_adapter.validate_python(
+                await super()._download(request_dict), strict=True
+            )
 
         if not self.set_blue_green:
             check = await self.request["session"].get(self.url)
@@ -60,7 +97,9 @@ class Site(OpinionSiteLinear):
                 self.url = f"{self.base_url}/opinion-search"
             self.set_blue_green = True
 
-        return await super()._download()
+        return _search_adapter.validate_python(
+            await super()._download(request_dict), strict=True
+        )
 
     @override
     async def _process_html(self) -> None:
@@ -69,7 +108,7 @@ class Site(OpinionSiteLinear):
         Iterate over each item on the page collecting our data.
         return: None
         """
-        self.json = self.html
+        self.json = _search_adapter.validate_python(self.html, strict=True)
 
         for case in self.json.get("results", []):
             url = await self._get_url(
@@ -107,9 +146,10 @@ class Site(OpinionSiteLinear):
             return self.url
 
         html = await super()._download()
-        pdf_url = html["url"]
+        pdf_url = _url_adapter.validate_python(html, strict=True)["url"]
         return pdf_url
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request to the API
 
@@ -121,16 +161,17 @@ class Site(OpinionSiteLinear):
         """
         self.params["startDate"] = dates[0].strftime("%m/%d/%Y")
         self.params["endDate"] = dates[1].strftime("%m/%d/%Y")
-        await self._download()
+        self.html = await self._download()
+        await self._process_html()
+        result_count = len(self.json.get("results", []))
         logger.info(
             "Backscraping for range %s %s\n%s cases found",
             *dates,
-            len(self.json),
+            result_count,
         )
-        await self._process_html()
 
         # Using time.sleep to prevent rate limiting
         # {'message': 'you are only allowed 15 requests in a 60 second window time', 'type': 'ip-limiter'}
-        if len(self.json) > 0:
+        if result_count > 0:
             logger.info("Sleeping for 61 seconds to prevent rate limit")
             await asyncio.sleep(61)

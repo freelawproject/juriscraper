@@ -15,9 +15,13 @@ She's super responsive.
 """
 
 import re
-from datetime import datetime
+from datetime import date, datetime
 from urllib.parse import urlencode
 
+from typing_extensions import Unpack
+
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.opinions.united_states.state import pasuperct
 from juriscraper.OpinionSite import OpinionSite
 
@@ -31,7 +35,12 @@ class Site(pasuperct.Site):
     extract_from_text = OpinionSite.extract_from_text
     post_type_key = "PostingTypeId"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
         """About postTypes
         complete = Complete Opinion
         mo = majority opinion
@@ -39,7 +48,7 @@ class Site(pasuperct.Site):
         pn = Previous Non-reported Opinion
         sjo = single judge opinion
         """
-        super().__init__(*args, **kwargs)
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.regex = re.compile(r"(.*)(?:- |et al.\s+)(\d+.*\d{4})")
         self.params["postTypes"] = "complete,mo,opc,pn,sjo"

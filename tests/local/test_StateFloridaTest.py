@@ -1,5 +1,7 @@
 import json
 
+from typing_extensions import override
+
 from juriscraper.state.florida.arguments import FloridaCaseArgumentsParser
 from juriscraper.state.florida.cases import (
     FloridaCase,
@@ -21,44 +23,45 @@ FLORIDA_ROOT = TESTS_ROOT_EXAMPLES_STATES / "florida"
 class FloridaParseTest(PacerParseTestCase):
     """Test parsing of Florida court API data"""
 
-    def setUp(self):
+    @override
+    def setUp(self) -> None:
         self.maxDiff = 200000
 
-    def test_parties(self):
+    def test_parties(self) -> None:
         path_root = FLORIDA_ROOT / "parties"
         self.parse_files(path_root, "*.compare.json", FloridaPartyListParser)
 
-    def test_courts(self):
+    def test_courts(self) -> None:
         path_root = FLORIDA_ROOT / "courts"
         self.parse_files(path_root, "*.compare.json", FloridaCourtsParser)
 
-    def test_cases(self):
+    def test_cases(self) -> None:
         path_root = FLORIDA_ROOT / "cases"
         self.parse_files(path_root, "*.compare.json", FloridaCaseListParser)
 
-    def test_case_info(self):
+    def test_case_info(self) -> None:
         path_root = FLORIDA_ROOT / "case_info"
         self.parse_files(path_root, "*.compare.json", FloridaCaseInfoParser)
 
-    def test_docket_entries(self):
+    def test_docket_entries(self) -> None:
         path_root = FLORIDA_ROOT / "docket_entries"
         self.parse_files(
             path_root, "*.compare.json", FloridaDocketEntryListParser
         )
 
-    def test_documents(self):
+    def test_documents(self) -> None:
         path_root = FLORIDA_ROOT / "documents"
         self.parse_files(
             path_root, "*.compare.json", FloridaDocumentAccessParser
         )
 
-    def test_hearings(self):
+    def test_hearings(self) -> None:
         path_root = FLORIDA_ROOT / "hearings"
         self.parse_files(
             path_root, "*.compare.json", FloridaCaseArgumentsParser
         )
 
-    def test_deserialization_idempotency(self):
+    def test_deserialization_idempotency(self) -> None:
         path_root = FLORIDA_ROOT / "serialized"
         for file in path_root.glob("*.json"):
             with self.subTest(file=file):

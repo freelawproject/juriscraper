@@ -11,17 +11,54 @@ History:
 
 import re
 from datetime import date, datetime, timedelta
+from typing import NotRequired
 from urllib.parse import quote, urlencode, urljoin
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import (
+    DownloadedContent,
+    RequestParameters,
+    SiteOptions,
+    logger,
+)
 from juriscraper.lib.html_utils import get_visible_text
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class _Judge(TypedDict, total=False):
+    DecisionInvolvementType: str
+    FirstName: str | None
+    MiddleName: str | None
+    LastName: str | None
+    Suffix: str | None
+
+
+class _Opinion(TypedDict):
+    DecisionType: str
+    FileUrl: str
+    Summary: str | None
+    Title: str
+    CaseNumber: str
+    FilingDate: str
+    OpinionJudges: NotRequired[list[_Judge]]
+
+
+class _Search(TypedDict, total=False):
+    TotalCount: int
+    PageIndex: int
+    PageSize: int
+    Opinions: list[_Opinion]
+
+
+_search_adapter = TypeAdapter(_Search)
+
+
+class Site(OpinionSiteLinear[tuple[date, date]]):
     base_url = "https://www.azcourts.gov"
     court_param = "Supreme"
     search_page_path = "/opinions/SearchOpinionsMemoDecs"
@@ -55,8 +92,13 @@ class Site(OpinionSiteLinear):
         "Memo": "Unpublished",
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.end_date = date.today()
         self.start_date = self.end_date - timedelta(days=7)
@@ -72,8 +114,8 @@ class Site(OpinionSiteLinear):
 
     def _build_api_url(
         self,
-        start_date: date | None,
-        end_date: date | None,
+        start_date: date,
+        end_date: date,
         page: int = 0,
     ) -> str:
         """Build the API URL with query parameters.
@@ -97,9 +139,15 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
-        tab_script = self.html.xpath(self.tab_xp)[0]
-        tab_id = re.search(r'"tabId":(\d+)', tab_script).group(1)
-
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        tab_script: str = self.html.xpath(self.tab_xp)[0]
+        match = re.search(r'"tabId":(\d+)', tab_script)
+        if match is None:
+            raise ValueError("Search page is missing its tab ID")
+        tab_id = match.group(1)
         self.request["headers"].update(
             {
                 "ModuleId": self.html.xpath(self.module_xp)[0],
@@ -108,7 +156,10 @@ class Site(OpinionSiteLinear):
             }
         )
 
-    async def _download(self, request_dict=None):
+    @override
+    async def _download(
+        self, request_dict: RequestParameters | None = None
+    ) -> DownloadedContent:
         """Override download to add authentication headers.
 
         First fetches the search page to get the verification token,
@@ -135,7 +186,7 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
-        json_response = self.html
+        json_response = _search_adapter.validate_python(self.html, strict=True)
 
         total_count = json_response.get("TotalCount", 0)
         page_index = json_response.get("PageIndex", 0)
@@ -156,7 +207,7 @@ class Site(OpinionSiteLinear):
 
             html_summary = opinion["Summary"]
             summary = ""
-            if html_summary:
+            if bool(html_summary):
                 summary = get_visible_text(html_summary).strip()
             # Normalize whitespace in summary
             summary = " ".join(summary.split())
@@ -183,7 +234,7 @@ class Site(OpinionSiteLinear):
             if page_index + 1 < total_pages:
                 await self._fetch_next_page(page_index + 1)
 
-    def _extract_author(self, judges: list) -> str:
+    def _extract_author(self, judges: list[_Judge]) -> str:
         """Extract the author judge from the list of opinion judges.
 
         :param judges: List of judge dictionaries from API
@@ -197,11 +248,11 @@ class Site(OpinionSiteLinear):
             ),
             None,
         )
-        if not author:
+        if not bool(author):
             return ""
         name = f"{author.get('FirstName', '')} {author.get('MiddleName', '')} {author.get('LastName', '')}".strip()
         name = " ".join(name.split())  # Normalize whitespace
-        if author.get("Suffix"):
+        if bool(author.get("Suffix")):
             name = f"{name}, {author['Suffix']}"
         return name
 
@@ -217,6 +268,7 @@ class Site(OpinionSiteLinear):
         self.html = await super()._download()
         await self._process_html()
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request for backscraping.
 
@@ -233,7 +285,8 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         await self._process_html()
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract lower court and judge from the scraped text.
 
         :param scraped_text: The text to extract from.
@@ -248,9 +301,9 @@ class Site(OpinionSiteLinear):
             re.X | re.MULTILINE | re.DOTALL,
         )
 
-        result = {}
+        result: ExtractedMetadata = {}
 
-        if match := lower_court_pattern.search(scraped_text):
+        if (match := lower_court_pattern.search(scraped_text)) is not None:
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
@@ -258,13 +311,13 @@ class Site(OpinionSiteLinear):
             lower_court_judge = match.group("lower_court_judge").strip()
             lower_court_number = match.group("lower_court_number").strip()
 
-            if lower_court:
+            if bool(lower_court):
                 result["Docket"] = {"appeal_from_str": lower_court}
-            if lower_court_judge:
+            if bool(lower_court_judge):
                 result.setdefault("OriginatingCourtInformation", {})[
                     "assigned_to_str"
                 ] = lower_court_judge
-            if lower_court_number:
+            if bool(lower_court_number):
                 result.setdefault("OriginatingCourtInformation", {})[
                     "docket_number"
                 ] = lower_court_number

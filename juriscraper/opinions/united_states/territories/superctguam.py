@@ -10,9 +10,11 @@ import re
 from datetime import date
 from urllib.parse import urljoin
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.opinions.united_states.territories import guam
 
 
@@ -25,8 +27,13 @@ class Site(guam.Site):
     # Normalize mojibake whitespace before parsing
     mojibake_re = re.compile(r"[\xa0\xc2]+")
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[int]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.status = "Unknown"
 
     @override
@@ -52,31 +59,43 @@ class Site(guam.Site):
 
         :return: None
         """
-        paragraphs = self.html.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        paragraphs: list[HtmlElement] = self.html.xpath(
             '//div[contains(@class, "field--name-body")]'
             '//p[.//a[contains(@href, ".pdf")]]'
         )
         for paragraph in paragraphs:
-            anchor = paragraph.xpath('.//a[contains(@href, ".pdf")]')[0]
+            anchor: HtmlElement = paragraph.xpath(
+                './/a[contains(@href, ".pdf")]'
+            )[0]
             name = anchor.text_content().strip(" ,\r\n")
-            url = urljoin(self.url, anchor.get("href"))
+            url = urljoin(
+                (self.url if self.url is not None else ""), anchor.get("href")
+            )
 
-            docket_spans = paragraph.xpath(
+            docket_spans: list[HtmlElement] = paragraph.xpath(
                 './/span[contains(@class, "CaseNumber")]'
             )
-            docket = docket_spans[0].text_content() if docket_spans else ""
+            docket = (
+                docket_spans[0].text_content() if bool(docket_spans) else ""
+            )
             docket = self.mojibake_re.sub(" ", docket).strip()
 
-            posted_spans = paragraph.xpath(
+            posted_spans: list[HtmlElement] = paragraph.xpath(
                 './/span[contains(@class, "juryNote")]'
             )
             posted_date = (
-                posted_spans[0].text_content().strip() if posted_spans else ""
+                posted_spans[0].text_content().strip()
+                if bool(posted_spans)
+                else ""
             )
 
             description_parts = []
             for sibling in anchor.itersiblings():
-                if sibling.tag == "br" and sibling.tail:
+                if sibling.tag == "br" and bool(sibling.tail):
                     description_parts.append(sibling.tail.strip())
                 elif sibling.tag != "br":
                     description_parts.append(sibling.text_content().strip())
@@ -84,10 +103,12 @@ class Site(guam.Site):
                 " ", " ".join(description_parts)
             ).strip(" .,\r\n")
 
-            row_date = self.find_date(description) or self.find_date(
-                posted_date
+            row_date = (
+                find_date_value
+                if bool(find_date_value := self.find_date(description))
+                else self.find_date(posted_date)
             )
-            if not row_date:
+            if not bool(row_date):
                 logger.warning("superctguam: no date found for '%s'", name)
 
             self.cases.append(
@@ -95,11 +116,14 @@ class Site(guam.Site):
                     "url": url,
                     "name": name,
                     "docket": docket,
-                    "date": row_date or f"{self._year}/07/13",
+                    "date": (
+                        row_date if bool(row_date) else f"{self._year}/07/13"
+                    ),
                     "date_filed_is_approximate": row_date is None,
                 }
             )
 
+    @override
     def _process_legacy_html(self) -> None:
         """Process the legacy ``get_items`` API HTML, used for backscraping
 
@@ -119,11 +143,16 @@ class Site(guam.Site):
         """
         middle_of_the_year = f"{self._year}/07/13"
 
-        for item in self.html.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        items: list[HtmlElement] = self.html.xpath(
             '//div[contains(@class, "item_for_list")]'
-        ):
-            anchors = item.xpath(".//h4/a")
-            if not anchors:
+        )
+        for item in items:
+            anchors: list[HtmlElement] = item.xpath(".//h4/a")
+            if not bool(anchors):
                 logger.warning(
                     "superctguam: legacy row without PDF link, skipping"
                 )
@@ -131,17 +160,16 @@ class Site(guam.Site):
 
             anchor = anchors[0]
             name = anchor.text_content().strip()
-            url = anchor.get("href")
+            url = anchor.attrib["href"]
 
-            docket_divs = item.xpath(
+            docket_divs: list[HtmlElement] = item.xpath(
                 './/div[contains(@style, "font-weight: bold")]'
             )
-            docket = docket_divs[0].text_content() if docket_divs else ""
+            docket = docket_divs[0].text_content() if bool(docket_divs) else ""
             docket = self.mojibake_re.sub(" ", docket).strip()
 
-            description = self.mojibake_re.sub(
-                " ", " ".join(item.xpath(".//p//text()")).strip()
-            )
+            description: str = " ".join(item.xpath(".//p//text()")).strip()
+            description = self.mojibake_re.sub(" ", description)
             row_date = self.find_date(description)
 
             self.cases.append(
@@ -149,7 +177,9 @@ class Site(guam.Site):
                     "url": url,
                     "name": name,
                     "docket": docket,
-                    "date": row_date or middle_of_the_year,
+                    "date": (
+                        row_date if bool(row_date) else middle_of_the_year
+                    ),
                     "date_filed_is_approximate": row_date is None,
                 }
             )

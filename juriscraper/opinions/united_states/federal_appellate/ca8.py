@@ -2,13 +2,16 @@ import re
 from datetime import date, datetime
 
 from dateutil.rrule import MONTHLY, rrule
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import BackscrapeOptions
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[date]):
     lower_court_regexes = [
         re.compile(r"(?P<lower_court>U\.S\. District Court.+)"),
         re.compile(r"(?P<lower_court>Board of Immigration Appeals)"),
@@ -20,9 +23,14 @@ class Site(OpinionSiteLinear):
     base_url = "https://media.ca8.uscourts.gov/cgi-bin/opnByMM.pl?theMM=%02d&theYY=%s&A1=Get+Opinions"
     is_bap_scraper = False
 
-    def __init__(self, *args, **kwargs):
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[date]],
+    ) -> None:
         kwargs.setdefault("verify", False)
-        super().__init__(*args, **kwargs)
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
 
         today = date.today()
@@ -32,9 +40,16 @@ class Site(OpinionSiteLinear):
 
     @override
     def _process_html(self) -> None:
-        for link in self.html.xpath('//a[contains(@href, "opndir")]'):
-            url = link.get("href")
-            text = link.xpath("following-sibling::text()")[0].strip()
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        links: list[HtmlElement] = self.html.xpath(
+            '//a[contains(@href, "opndir")]'
+        )
+        for link in links:
+            url = link.attrib["href"]
+            text: str = link.xpath("following-sibling::text()")[0].strip()
 
             lower_court, is_bap_opinion = self.get_lower_court(text)
             if is_bap_opinion:
@@ -47,7 +62,9 @@ class Site(OpinionSiteLinear):
 
             first_line = text.split("\n")[0]
             date_filed, case_name = first_line.strip().split(" ", 1)
-            docket_number = ", ".join(re.findall(r"\d{2}-\d{4}", text))
+            docket_number = ", ".join(
+                match.group() for match in re.finditer(r"\d{2}-\d{4}", text)
+            )
 
             doc_name = link.text_content().split(".")[0].lower()
             if "p" in doc_name:
@@ -76,24 +93,29 @@ class Site(OpinionSiteLinear):
             court)
         """
         for pattern in self.lower_court_regexes:
-            if match := pattern.search(text):
+            if (match := pattern.search(text)) is not None:
                 court = match.group("lower_court").strip()
                 return court, "Bankruptcy Court" in court
 
         return "", False
 
-    def make_backscrape_iterable(self, kwargs) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """Parse the input dates, and create a tick for each month"""
-        super().make_backscrape_iterable(kwargs)
+        date_ranges = self._get_backscrape_date_ranges(kwargs)
+        if not bool(date_ranges):
+            self.back_scrape_iterable = []
+            return
         self.back_scrape_iterable = [
             i.date()
             for i in rrule(
                 MONTHLY,
-                dtstart=self.back_scrape_iterable[0][0],
-                until=self.back_scrape_iterable[0][1],
+                dtstart=date_ranges[0][0],
+                until=date_ranges[0][1],
             )
         ]
 
+    @override
     async def _download_backwards(self, d: date) -> None:
         """
         If an updated backscraper is needed in the future, this court

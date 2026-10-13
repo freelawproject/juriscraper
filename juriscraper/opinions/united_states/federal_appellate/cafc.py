@@ -14,16 +14,37 @@ import re
 
 import feedparser
 from lxml.html import fromstring
-from typing_extensions import override
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
+class _Content(TypedDict):
+    value: str
+
+
+class _Entry(TypedDict):
+    content: list[_Content]
+    title: str
+    published: str
+
+
+_entries_adapter = TypeAdapter(list[_Entry])
+
+
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
         kwargs.setdefault("verify", False)
-        super().__init__(*args, **kwargs)
+        super().__init__(cnt, user_agent, **kwargs)
         self.url = "https://cafc.uscourts.gov/category/opinion-order/feed/"
         self.court_id = self.__module__
         self.needs_special_headers = True
@@ -42,11 +63,16 @@ class Site(OpinionSiteLinear):
         the date, case name, docket number, and status and pdf URL.
         Return: None
         """
-        feed = feedparser.parse(self.request["response"].content)
-        for item in feed["entries"]:
+        response = self.request.get("response")
+        if response is None:
+            raise ValueError("Download a response before accessing it.")
+        feed = feedparser.parse(response.content)
+        for item in _entries_adapter.validate_python(
+            feed.entries, strict=True
+        ):
             value = item["content"][0]["value"]
             docket, title = item["title"].split(" [")[0].split(": ", 1)
-            slug = fromstring(value).xpath(".//a/@href")[0]
+            slug: str = fromstring(value).xpath(".//a/@href")[0]
             self.cases.append(
                 {
                     "date": item["published"],
@@ -70,7 +96,8 @@ class Site(OpinionSiteLinear):
             status = "Unknown"
         return status
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract lower court from the scraped text.
 
         :param scraped_text: The text to extract from.
@@ -91,12 +118,12 @@ class Site(OpinionSiteLinear):
         )
 
         lower_court = ""
-        if match := pattern.search(scraped_text):
+        if (match := pattern.search(scraped_text)) is not None:
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
 
-        if lower_court:
+        if bool(lower_court):
             return {
                 "Docket": {
                     "appeal_from_str": lower_court,

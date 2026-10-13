@@ -12,18 +12,33 @@ History:
 import time
 from datetime import date
 
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
+
+from juriscraper.AbstractSite import BackscrapeItem, SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OpinionSite import OpinionSite
 
 
-class Site(OpinionSite):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+class Site(OpinionSite[BackscrapeItem]):
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[BackscrapeItem]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.url = "http://www.in.gov/judiciary/opinions/archsup.html"
         self.court_id = self.__module__
         self.my_precedential_statuses = []
 
-    def _get_case_names(self):
-        raw_case_names = self.html.xpath(
+    @override
+    def _get_case_names(self) -> list[str]:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        raw_case_names: list[str] = self.html.xpath(
             "//table/tr/td[3]/table/tr[4]//table/tr[position() > 1]/td[2]//a/text()"
         )
         case_names = []
@@ -37,18 +52,28 @@ class Site(OpinionSite):
                 self.my_precedential_statuses.append("Published")
         return case_names
 
-    def _get_download_urls(self):
-        return list(
-            self.html.xpath(
-                "//table/tr/td[3]/table/tr[4]//table/tr[position() > 1]/td[2]//a/@href"
+    @override
+    def _get_download_urls(self) -> list[str]:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
             )
+        texts: list[str] = self.html.xpath(
+            "//table/tr/td[3]/table/tr[4]//table/tr[position() > 1]/td[2]//a/@href"
         )
+        return texts
 
-    def _get_case_dates(self):
-        dates = []
-        for date_string in self.html.xpath(
+    @override
+    def _get_case_dates(self) -> list[date | str]:
+        dates: list[date | str] = []
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        date_strings: list[str] = self.html.xpath(
             "//table/tr/td[3]/table/tr[4]//table/tr[position() > 1]/td[1]//font/text()"
-        ):
+        )
+        for date_string in date_strings:
             val = date_string.strip()
             if val == "":
                 dates.append("")
@@ -60,20 +85,28 @@ class Site(OpinionSite):
                 )
         return dates
 
-    def _get_docket_numbers(self):
-        return list(
-            self.html.xpath(
-                "//table/tr/td[3]/table/tr[4]//table/tr[position() > 1]/td[4]//font/text()"
+    @override
+    def _get_docket_numbers(self) -> list[str]:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
             )
+        texts: list[str] = self.html.xpath(
+            "//table/tr/td[3]/table/tr[4]//table/tr[position() > 1]/td[4]//font/text()"
         )
+        return texts
 
-    def _get_lower_court_numbers(self):
-        return [
-            e if e.strip() != "N/A" else ""
-            for e in self.html.xpath(
-                "//table/tr/td[3]/table/tr[4]//table/tr[position() > 1]/td[3]//font/text()"
+    @override
+    def _get_lower_court_numbers(self) -> list[str]:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
             )
-        ]
+        numbers: list[str] = self.html.xpath(
+            "//table/tr/td[3]/table/tr[4]//table/tr[position() > 1]/td[3]//font/text()"
+        )
+        return [e if e.strip() != "N/A" else "" for e in numbers]
 
-    def _get_precedential_statuses(self):
+    @override
+    def _get_precedential_statuses(self) -> list[str]:
         return self.my_precedential_statuses

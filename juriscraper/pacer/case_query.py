@@ -7,6 +7,11 @@ presents some more information for BK cases.
 import pprint
 import re
 import sys
+from datetime import date
+from typing import TYPE_CHECKING
+
+from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import clean_string, force_unicode, harmonize
@@ -17,8 +22,11 @@ from .reports import BaseReport
 
 logger = make_default_logger()
 
+if TYPE_CHECKING:
+    from .http import PacerSession
 
-class CaseQuery(BaseDocketReport, BaseReport):
+
+class CaseQuery(BaseDocketReport[dict[str, str | date | None]], BaseReport):
     """Parse the iquery.pl ("Query" menu) result.
 
     This is pretty limited metadata about the case, although it
@@ -37,20 +45,28 @@ class CaseQuery(BaseDocketReport, BaseReport):
         r"Control F",
     ]
 
-    def __init__(self, court_id, pacer_session=None):
-        BaseDocketReport.__init__(self, court_id)
+    def __init__(
+        self, court_id: str, pacer_session: "PacerSession | None" = None
+    ) -> None:
+        super().__init__(court_id)
         BaseReport.__init__(self, court_id, pacer_session)
 
         # Initialize the empty cache properties
         self._clear_caches()
-        self._metadata = None
+        self._metadata: dict[str, str | date | None] | None = None
 
-    def parse(self):
+    @override
+    def parse(self) -> None:
         self._clear_caches()
         super().parse()
 
+    @override
+    def _parse_text(self, text: str) -> None:
+        self._clear_caches()
+        super()._parse_text(text)
+
     @property
-    def metadata(self):
+    def metadata(self) -> dict[str, str | date | None]:
         if self.is_valid is False:
             return {}
 
@@ -124,7 +140,14 @@ class CaseQuery(BaseDocketReport, BaseReport):
         # delimited by <br>s. This approach is more structured:
         center_path = './/div[@id="cmecfMainContent"]//center'
         try:
-            center = self.tree.xpath(center_path)[0]
+            if self.tree is None:
+                raise ValueError(
+                    "Parse a report before accessing its contents."
+                )
+            if not isinstance(self.tree, HtmlElement):
+                raise TypeError("Expected an HTML tree for this report.")
+            centers: list[HtmlElement] = self.tree.xpath(center_path)
+            center = centers[0]
         except IndexError:
             # Can happen for sealed cases? We have at least one test case here.
             self._metadata = {}
@@ -136,24 +159,31 @@ class CaseQuery(BaseDocketReport, BaseReport):
         #   <B><FONT SIZE=+1>18-11572</FONT></B><B></B>Nancy Jean Stevens
         # We take the docket number from the <font> tag (the innermost tag),
         # although we could but have chosen the first <b> tag.
-        docket_number, docket_number_components = (
-            self._parse_docket_number_strs(
-                [rows[0].find(".//font").text_content()]
+        font = rows[0].find(".//font")
+        if font is None:
+            raise ValueError(
+                "Case query is missing its docket number element."
             )
+        docket_number, docket_number_components = (
+            self._parse_docket_number_strs([font.text_content()])
         )
         # And case caption following the final <b></b> pair.
-        case_name_raw = force_unicode(rows[0].find(".//b[last()]").tail or "")
-        if not case_name_raw:
+        bold = rows[0].find(".//b[last()]")
+        case_name_raw = force_unicode(
+            (bold.tail if bold.tail is not None else "")
+            if bold is not None
+            else ""
+        )
+        if not bool(case_name_raw):
             # In some courts, such as INSB, the case name is within a font tag.
             # <b><font size="+1">13-07422-RLM-7A</font></b><font size="+1">
             #  Cedric Morris and Kateen Nicklondra Morris
             # </font>
             try:
-                case_name_raw = force_unicode(
-                    rows[0].xpath(
-                        ".//b[last()]/following-sibling::font[1]/text()"
-                    )[0]
+                case_names: list[str] = rows[0].xpath(
+                    ".//b[last()]/following-sibling::font[1]/text()"
                 )
+                case_name_raw = force_unicode(case_names[0])
             except IndexError:
                 case_name_raw = ""
 
@@ -169,7 +199,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
         #   Mark L. Wolf, presiding
         #   <B>Date filed:</B> 02/10/2011
         #   <B>Date filed:</B> 04/30/2018<B>Date of last filing:</B> 06/06/2018
-        data: dict = {}
+        data: dict[str, str | date | None] = {}
         field_names = {
             "date_of_last_filing": "date_last_filing",
             "judge": "assigned_to_str",
@@ -180,12 +210,12 @@ class CaseQuery(BaseDocketReport, BaseReport):
         }
         for i in range(1, len(rows) - 1):
             bolds = rows[i].findall(".//b")
-            if not bolds:
+            if not bool(bolds):
                 line = force_unicode(rows[i].text_content())
-                if not line:
+                if not bool(line):
                     continue
 
-                if re.search(r"(panel [2-3]$|Probation)", line):
+                if re.search(r"(panel [2-3]$|Probation)", line) is not None:
                     # Skip panelists after the first, skip probation
                     # assignments
                     continue
@@ -195,11 +225,11 @@ class CaseQuery(BaseDocketReport, BaseReport):
                     presiding_re = re.compile(", (presiding|panel 1)$")
                     referral_re = re.compile(", referral$")
                     related_re = re.search("Related case: (.*)", line)
-                    if presiding_re.search(line):
+                    if presiding_re.search(line) is not None:
                         data["assigned_to_str"] = presiding_re.sub("", line)
-                    elif referral_re.search(line):
+                    elif referral_re.search(line) is not None:
                         data["referred_to_str"] = referral_re.sub("", line)
-                    elif related_re:
+                    elif related_re is not None:
                         data["related_cases_str"] = related_re.group(1)
                     else:
                         raise AssertionError(
@@ -228,7 +258,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
         self._metadata = data
         return data
 
-    async def query(self, pacer_case_id):
+    async def query(self, pacer_case_id: str | int) -> None:
         """Use a district court's PACER query function with a known case ID
 
         At the top of every district PACER court, there's a button that says,
@@ -274,12 +304,14 @@ class CaseQuery(BaseDocketReport, BaseReport):
          - The case_num parameter needs a value; any value will do.
          - As usual, the ?1-L_1_0-1 business in the URL is needed
         """
-        assert self.session is not None, (
-            "session attribute of CaseQuery report cannot be None."
-        )
-        assert bool(pacer_case_id), (
-            f"pacer_case_id must be truthy, not '{pacer_case_id}'"
-        )
+        if self.session is None:
+            raise ValueError(
+                "session attribute of CaseQuery report cannot be None."
+            )
+        if not bool(pacer_case_id):
+            raise ValueError(
+                f"pacer_case_id must be truthy, not '{pacer_case_id}'"
+            )
         params = {
             "UserType": "",
             "all_case_ids": pacer_case_id,
@@ -304,7 +336,8 @@ class CaseQuery(BaseDocketReport, BaseReport):
         self.parse()
 
     @property
-    def data(self):
+    @override
+    def data(self) -> dict[str, str | date | None]:
         """Get all the data back from this endpoint.
 
         Don't attempt to return parties or docket_entries like the superclass
@@ -317,7 +350,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
         return data
 
 
-def _main():
+def _main() -> None:
     if len(sys.argv) != 2:
         print("Usage: python -m juriscraper.pacer.case_query filepath")
         print("Please provide a path to an HTML file to parse.")

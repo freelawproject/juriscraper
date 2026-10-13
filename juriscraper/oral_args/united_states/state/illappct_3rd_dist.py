@@ -8,12 +8,21 @@ History:
 * 2022-05-18: Updated by William E. Palin
 """
 
+from typing_extensions import Unpack
+
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.oral_args.united_states.state import illappct_1st_dist
 
 
 class Site(illappct_1st_dist.Site):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.district = "3rd"
         self._set_parameters()

@@ -1,15 +1,26 @@
 import time
+from collections.abc import Sequence
 from datetime import date
 
 from lxml import html
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import RequestParameters, SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OpinionSite import OpinionSite
 
 
-class Site(OpinionSite):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+class Site(OpinionSite[int]):
+    status: int
+
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[int]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.base_url = (
             "http://digitalcommons.law.villanova.edu/thirdcircuit_{year}/"
         )
@@ -19,36 +30,45 @@ class Site(OpinionSite):
         self.case_xpath = "//p[@class='article-listing']/a/@href"
         self.next_page_xpath = "//div[@class='adjacent-pagination']//li[@class='active']//following-sibling::li/a/@href"
 
-    async def _download(self, request_dict=None):
+    @override
+    async def _download(
+        self, request_dict: RequestParameters | None = None
+    ) -> list[HtmlElement]:
         if request_dict is None:
             request_dict = {}
+        html_l = await super()._download(request_dict)
+        if not isinstance(html_l, HtmlElement):
+            raise TypeError("Expected an HTML case listing")
         if self.test_mode_enabled():
             # Note that this is returning a list of HTML trees.
             html_trees = [
-                await super()._download(request_dict=request_dict),
+                html_l,
             ]
         else:
-            html_l = await super()._download(request_dict)
-            html_trees = await self._get_case_html_page(
-                [], html_l, request_dict
-            )
+            html_trees = await self._get_case_html_page(html_l, request_dict)
 
             # handle the next page data
-            if html_l.xpath(self.next_page_xpath):
+            if bool(html_l.xpath(self.next_page_xpath)):
                 self.url = html_l.xpath(self.next_page_xpath)[0]
                 html_next_trees = await self._download(request_dict)
                 html_trees.extend(html_next_trees)
         return html_trees
 
-    async def _get_case_html_page(self, html_trees, html_l, request_dict):
+    async def _get_case_html_page(
+        self, html_l: HtmlElement, request_dict: RequestParameters
+    ) -> list[HtmlElement]:
         """Gets each of the individual case pages"""
         s = self.request["session"]
-        for case_url in html_l.xpath(self.case_xpath):
+        request_dict = request_dict.copy()
+        request_dict.setdefault("headers", {"User-Agent": self.user_agent})
+        request_dict.setdefault("timeout", self._request_timeout)
+        html_trees: list[HtmlElement] = []
+        case_urls: list[str] = html_l.xpath(self.case_xpath)
+        for case_url in case_urls:
             logger.info(f"  Getting sub-page at: {case_url}")
-            r = await s.get(
+            r = await s.request(
+                "GET",
                 case_url,
-                headers={"User-Agent": self.user_agent},
-                timeout=60,
                 **request_dict,
             )
 
@@ -61,35 +81,52 @@ class Site(OpinionSite):
             # Grab the content
             text = self._clean_text(r.text)
             html_tree = html.fromstring(text)
-            html_tree.make_links_absolute(self.url)
+            html_tree.make_links_absolute(str(r.url))
 
             html_tree.rewrite_links(lambda url: url.split("#")[0])
             html_trees.append(html_tree)
         return html_trees
 
-    def _get_case_names(self):
+    @override
+    def _get_case_names(self) -> list[str]:
         data = []
+        if not isinstance(self.html, list):
+            raise TypeError("Expected downloaded HTML documents")
         for html_tree in self.html:
+            if not isinstance(html_tree, HtmlElement):
+                raise TypeError("Expected a downloaded HTML document")
             try:
-                data.append(html_tree.xpath("//div[@id='title']//a/text()")[0])
+                name: str = html_tree.xpath("//div[@id='title']//a/text()")[0]
+                data.append(name)
             except IndexError:
                 data.append("")
         return data
 
-    def _get_download_urls(self):
+    @override
+    def _get_download_urls(self) -> list[str]:
         data = []
+        if not isinstance(self.html, list):
+            raise TypeError("Expected downloaded HTML documents")
         for html_tree in self.html:
+            if not isinstance(html_tree, HtmlElement):
+                raise TypeError("Expected a downloaded HTML document")
             try:
-                data.append(html_tree.xpath("//div[@id='title']//a/@href")[0])
+                url: str = html_tree.xpath("//div[@id='title']//a/@href")[0]
+                data.append(url)
             except IndexError:
                 data.append("")
         return data
 
-    def _get_case_dates(self):
-        data = []
+    @override
+    def _get_case_dates(self) -> list[date | str]:
+        data: list[date | str] = []
+        if not isinstance(self.html, list):
+            raise TypeError("Expected downloaded HTML documents")
         for html_tree in self.html:
+            if not isinstance(html_tree, HtmlElement):
+                raise TypeError("Expected a downloaded HTML document")
             try:
-                date__ = html_tree.xpath(
+                date__: str = html_tree.xpath(
                     "//div[@id='publication_date']/p/text()"
                 )[0]
                 data.append(
@@ -101,24 +138,35 @@ class Site(OpinionSite):
                 data.append("")
         return data
 
-    def _get_docket_numbers(self):
+    @override
+    def _get_docket_numbers(self) -> list[str]:
         data = []
+        if not isinstance(self.html, list):
+            raise TypeError("Expected downloaded HTML documents")
         for html_tree in self.html:
+            if not isinstance(html_tree, HtmlElement):
+                raise TypeError("Expected a downloaded HTML document")
             try:
-                data.append(
-                    html_tree.xpath("//div[@id='comments']//p/text()")[0]
-                    .replace("No.", "")
-                    .strip()
-                )
+                docket: str = html_tree.xpath(
+                    "//div[@id='comments']//p/text()"
+                )[0]
+                data.append(docket.replace("No.", "").strip())
             except IndexError:
                 data.append("")
         return data
 
-    def _get_precedential_statuses(self):
+    @override
+    def _get_precedential_statuses(self) -> list[str]:
         data = []
+        if not isinstance(self.html, list):
+            raise TypeError("Expected downloaded HTML documents")
         for html_tree in self.html:
+            if not isinstance(html_tree, HtmlElement):
+                raise TypeError("Expected a downloaded HTML document")
             try:
-                status = html_tree.xpath("//div[@id='precedent']//p/text()")[0]
+                status: str = html_tree.xpath(
+                    "//div[@id='precedent']//p/text()"
+                )[0]
                 if "non" in status.lower():
                     data.append("Unpublished")
                 else:
@@ -127,18 +175,25 @@ class Site(OpinionSite):
                 data.append("Unknown")
         return data
 
-    def _get_lower_courts(self):
+    @override
+    def _get_lower_courts(self) -> list[str]:
         data = []
+        if not isinstance(self.html, list):
+            raise TypeError("Expected downloaded HTML documents")
         for html_tree in self.html:
+            if not isinstance(html_tree, HtmlElement):
+                raise TypeError("Expected a downloaded HTML document")
             try:
-                data.append(
-                    html_tree.xpath("//div[@id='abstract']//p/text()")[0]
-                )
+                lower_court: str = html_tree.xpath(
+                    "//div[@id='abstract']//p/text()"
+                )[0]
+                data.append(lower_court)
             except IndexError:
                 data.append("")
         return data
 
-    async def _download_backwards(self, d):
+    @override
+    async def _download_backwards(self, d: int) -> None:
         self.url = self.base_url.format(year=d)
         self.html = await self._download()
         if self.html is not None:
@@ -146,22 +201,29 @@ class Site(OpinionSite):
             # function from being run a second time by the parse method.
             self.status = 200
 
-    def _post_parse(self):
+    @override
+    def _post_parse(self) -> None:
         """This will remove the cases without a case name"""
+        if self.case_names is None:
+            raise ValueError(
+                "Case names must be populated before filtering them."
+            )
         to_be_removed = [
             index
             for index, case_name in enumerate(self.case_names)
-            if not case_name
+            if not bool(case_name)
         ]
 
         for attr in self._all_attrs:
-            item = getattr(self, attr)
+            item: Sequence[object] | None = getattr(self, attr)
             if item is not None:
                 new_item = self.remove_elements(item, to_be_removed)
                 self.__setattr__(attr, new_item)
 
     @staticmethod
-    def remove_elements(list_, indexes_to_be_removed):
+    def remove_elements(
+        list_: Sequence[object], indexes_to_be_removed: Sequence[int]
+    ) -> list[object]:
         return [
             i for j, i in enumerate(list_) if j not in indexes_to_be_removed
         ]

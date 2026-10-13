@@ -4,6 +4,8 @@
 import unittest
 from datetime import date
 
+from typing_extensions import override
+
 from juriscraper.pacer import CaseQuery
 from tests.network import SKIP_IF_NO_PACER_LOGIN, get_pacer_session
 
@@ -11,7 +13,8 @@ from tests.network import SKIP_IF_NO_PACER_LOGIN, get_pacer_session
 class PacerCaseQueryTest(unittest.IsolatedAsyncioTestCase):
     """A test of basic info for the Case Query"""
 
-    async def asyncSetUp(self):
+    @override
+    async def asyncSetUp(self) -> None:
         self.session = get_pacer_session()
         self.addAsyncCleanup(self.session.aclose)
         await self.session.login()
@@ -19,9 +22,10 @@ class PacerCaseQueryTest(unittest.IsolatedAsyncioTestCase):
         self.pacer_case_id = "186730"  # 4:06-cv-07294 Foley v. Bates
 
     @SKIP_IF_NO_PACER_LOGIN
-    async def test_query(self):
+    async def test_query(self) -> None:
         """Can we get the basic info?"""
         await self.report.query(self.pacer_case_id)
+        assert self.report.response is not None
         self.assertIn(
             "Foley v. Bates",
             self.report.response.text,
@@ -29,9 +33,11 @@ class PacerCaseQueryTest(unittest.IsolatedAsyncioTestCase):
         )
 
         metadata = self.report.metadata
+        case_name = metadata["case_name_raw"]
+        assert isinstance(case_name, str)
         self.assertIn(
             "Foley v. Bates et al",
-            metadata["case_name_raw"],
+            case_name,
             msg="case_name_raw query failed",
         )
         self.assertEqual(

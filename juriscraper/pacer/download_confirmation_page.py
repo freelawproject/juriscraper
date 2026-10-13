@@ -1,5 +1,8 @@
 import re
 from datetime import datetime
+from typing import TYPE_CHECKING
+
+from lxml.html import HtmlElement
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import (
@@ -8,10 +11,13 @@ from juriscraper.lib.string_utils import (
     force_unicode,
 )
 
-from .reports import BaseReport
+from .reports import BaseReport, re_xpath
 from .utils import is_pdf, make_doc1_url, make_docs1_url
 
 logger = make_default_logger()
+
+if TYPE_CHECKING:
+    from .http import PacerSession
 
 
 class DownloadConfirmationPage(BaseReport):
@@ -19,7 +25,9 @@ class DownloadConfirmationPage(BaseReport):
     download page.
     """
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(
+        self, court_id: str, pacer_session: "PacerSession | None" = None
+    ) -> None:
         super().__init__(court_id, pacer_session)
 
         self.is_appellate = False
@@ -30,7 +38,7 @@ class DownloadConfirmationPage(BaseReport):
         ]:
             self.is_appellate = True
 
-    async def query(self, pacer_doc_id):
+    async def query(self, pacer_doc_id: str) -> None:
         """Query the "confirmation download page" endpoint and set the results
         to self.response.
 
@@ -38,9 +46,10 @@ class DownloadConfirmationPage(BaseReport):
         :return: a request response object
         """
 
-        assert self.session is not None, (
-            "session attribute of DownloadConfirmationPage cannot be None."
-        )
+        if self.session is None:
+            raise ValueError(
+                "session attribute of DownloadConfirmationPage cannot be None."
+            )
 
         if self.is_appellate:
             # Make the appellate document URL
@@ -59,7 +68,7 @@ class DownloadConfirmationPage(BaseReport):
         self.parse()
 
     @property
-    def data(self):
+    def data(self) -> dict[str, str | datetime | None]:
         """Get data back from the query for the matching document entry.
 
         :return: If lookup fails, an empty dict. Else, a dict containing the
@@ -97,13 +106,13 @@ class DownloadConfirmationPage(BaseReport):
         :return: True if is a valid page, otherwise False.
         """
 
-        try:
-            self.tree.re_xpath('//*[re:match(text(), "Transaction Receipt")]')[
-                0
-            ]
-        except IndexError:
-            return False
-        return True
+        if self.tree is None:
+            raise ValueError("Parse a report before accessing its contents.")
+        if not isinstance(self.tree, HtmlElement):
+            raise TypeError("Expected an HTML tree for this report.")
+        return bool(
+            re_xpath(self.tree, '//*[re:match(text(), "Transaction Receipt")]')
+        )
 
     def _get_document_number(self) -> str | None:
         """Get the document number for an item.
@@ -112,15 +121,22 @@ class DownloadConfirmationPage(BaseReport):
         """
 
         try:
-            document_and_case_number = self.tree.xpath(
+            if self.tree is None:
+                raise ValueError(
+                    "Parse a report before accessing its contents."
+                )
+            if not isinstance(self.tree, HtmlElement):
+                raise TypeError("Expected an HTML tree for this report.")
+            nodes: list[HtmlElement] = self.tree.xpath(
                 '//strong[contains(., "Document: PDF Document")]'
-            )[0].text_content()
+            )
+            document_and_case_number = nodes[0].text_content()
         except IndexError:
             return None
 
         regex = r", Document:([^\)]*)"
         document_number = re.findall(regex, document_and_case_number)
-        if document_number:
+        if bool(document_number):
             return clean_string(document_number[0])
         return None
 
@@ -130,14 +146,21 @@ class DownloadConfirmationPage(BaseReport):
         :return: The PACER document cost if available, otherwise None.
         """
         try:
-            cost_str = self.tree.re_xpath(
+            if self.tree is None:
+                raise ValueError(
+                    "Parse a report before accessing its contents."
+                )
+            if not isinstance(self.tree, HtmlElement):
+                raise TypeError("Expected an HTML tree for this report.")
+            cost_str = re_xpath(
+                self.tree,
                 '//*[re:match(text(), "Cost:")]/'
-                "/ancestor::th[1]/following-sibling::td[1]/font[1]"
+                "/ancestor::th[1]/following-sibling::td[1]/font[1]",
             )[0].text_content()
         except IndexError:
             return None
 
-        if cost_str:
+        if bool(cost_str):
             return clean_string(cost_str)
         return None
 
@@ -147,25 +170,29 @@ class DownloadConfirmationPage(BaseReport):
         :return: The PACER docket number if available, otherwise None.
         """
 
+        if self.tree is None:
+            raise ValueError("Parse a report before accessing its contents.")
+        if not isinstance(self.tree, HtmlElement):
+            raise TypeError("Expected an HTML tree for this report.")
         try:
             if self.is_appellate:
-                document_and_case_number = self.tree.xpath(
+                nodes: list[HtmlElement] = self.tree.xpath(
                     '//strong[contains(., "Document: PDF Document")]'
-                )[0].text_content()
+                )
+                document_and_case_number = nodes[0].text_content()
+                match = re.search(r"Case:([^\,]*)", document_and_case_number)
+                docket_number = match.group(1) if match is not None else ""
             else:
-                docket_number = self.tree.re_xpath(
+                docket_number = re_xpath(
+                    self.tree,
                     '//*[re:match(text(), "Case Number:")]/'
-                    "/ancestor::th[1]/following-sibling::td[1]/font[1]"
+                    "/ancestor::th[1]/following-sibling::td[1]/font[1]",
                 )[0].text_content()
 
         except IndexError:
             return None
 
-        if self.is_appellate:
-            regex = r"Case:([^\,]*)"
-            docket_number = re.findall(regex, document_and_case_number)[0]
-
-        if docket_number:
+        if bool(docket_number):
             return clean_string(docket_number)
         return None
 
@@ -175,14 +202,21 @@ class DownloadConfirmationPage(BaseReport):
         :return: The document billable pages if available, otherwise None.
         """
         try:
-            billable_pages_str = self.tree.re_xpath(
+            if self.tree is None:
+                raise ValueError(
+                    "Parse a report before accessing its contents."
+                )
+            if not isinstance(self.tree, HtmlElement):
+                raise TypeError("Expected an HTML tree for this report.")
+            billable_pages_str = re_xpath(
+                self.tree,
                 '//*[re:match(text(), "Billable Pages:")]/'
-                "/ancestor::th[1]/following-sibling::td[1]/font[1]"
+                "/ancestor::th[1]/following-sibling::td[1]/font[1]",
             )[0].text_content()
         except IndexError:
             return None
 
-        if billable_pages_str:
+        if bool(billable_pages_str):
             return clean_string(billable_pages_str)
         return None
 
@@ -192,14 +226,21 @@ class DownloadConfirmationPage(BaseReport):
         :return: The PACER document description if available, otherwise None.
         """
         try:
-            document_description_str = self.tree.re_xpath(
+            if self.tree is None:
+                raise ValueError(
+                    "Parse a report before accessing its contents."
+                )
+            if not isinstance(self.tree, HtmlElement):
+                raise TypeError("Expected an HTML tree for this report.")
+            document_description_str = re_xpath(
+                self.tree,
                 '//*[re:match(text(), "Description:")]/'
-                "/ancestor::th[1]/following-sibling::td[1]/font[1]"
+                "/ancestor::th[1]/following-sibling::td[1]/font[1]",
             )[0].text_content()
         except IndexError:
             return None
 
-        if document_description_str:
+        if bool(document_description_str):
             return clean_string(document_description_str)
         return None
 
@@ -210,9 +251,16 @@ class DownloadConfirmationPage(BaseReport):
         """
 
         try:
-            transaction_date_str = self.tree.re_xpath(
+            if self.tree is None:
+                raise ValueError(
+                    "Parse a report before accessing its contents."
+                )
+            if not isinstance(self.tree, HtmlElement):
+                raise TypeError("Expected an HTML tree for this report.")
+            transaction_date_str = re_xpath(
+                self.tree,
                 '//*[re:match(text(), "Transaction Receipt")]/'
-                "/ancestor::tr[1]/following-sibling::tr[3]"
+                "/ancestor::tr[1]/following-sibling::tr[3]",
             )[0].text_content()
         except IndexError:
             return None

@@ -10,17 +10,24 @@ History:
 import datetime
 import re
 from datetime import date
-from typing import Any
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.url = "http://www.uscourts.cavc.gov/opinions.php"
         self.court_id = self.__module__
         self.last_month = date.today() - datetime.timedelta(weeks=4)
@@ -34,7 +41,13 @@ class Site(OpinionSiteLinear):
         """
         if self.test_mode_enabled():
             self.last_month = datetime.datetime(2022, 12, 27).date()
-        cases = self.html.xpath(".//tbody/tr/td/a/parent::td/parent::tr")
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        cases: list[HtmlElement] = self.html.xpath(
+            ".//tbody/tr/td/a/parent::td/parent::tr"
+        )
         for case in cases:
             try:
                 _, date = case.xpath(".//td/text()")
@@ -53,7 +66,8 @@ class Site(OpinionSiteLinear):
                 # The table has a malformed row
                 continue
 
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Can we extract the case name and clean it up?
 
         This method is a bit ... ugly.  Mostly due to bad PDFs that occur
@@ -67,7 +81,7 @@ class Site(OpinionSiteLinear):
         start = False
         for row in scraped_text.split("\n"):
             check_row = re.sub(r"\s", "", row.upper())
-            if re.findall(r"NOS?\.?\d+-\d+", check_row):
+            if bool(re.findall(r"NOS?\.?\d+-\d+", check_row)):
                 start = True
                 continue
             if not start:
@@ -76,14 +90,14 @@ class Site(OpinionSiteLinear):
                 break
             if "Before" in row:
                 break
-            if not row.strip():
+            if not bool(row.strip()):
                 continue
             if "JR" not in row:
                 keepers.append(row.split(",", 1)[0].strip())
             else:
                 keepers.append(row[: row.index("JR.") + 3].strip())
         case_name = titlecase(" ".join(keepers))
-        metadata = {
+        metadata: ExtractedMetadata = {
             "OpinionCluster": {
                 "case_name": case_name,
             },

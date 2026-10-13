@@ -11,31 +11,51 @@ import time
 from datetime import date
 
 from lxml import html
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
 from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = "https://ecf.dcd.uscourts.gov/cgi-bin/Opinions.pl?2013"
 
-    def _get_download_urls(self):
+    @override
+    def _get_download_urls(self) -> list[str]:
         # There are often multiple documents and hence urls for each case.
         # This requires us to pad every other metadata field to match the
         # number of urls we find here.
         path = "//table[2]//tr[position()>0]/td[3]/a/@href"
-        return list(self.html.xpath(path))
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        texts: list[str] = self.html.xpath(path)
+        return texts
 
-    def _get_case_names(self):
+    @override
+    def _get_case_names(self) -> list[str]:
         casenames = []
         rowpath = "//table[2]//tr[position()>0]"
         cnpath = "./td[2]//text()[preceding-sibling::br]"
         urlpath = "./td[3]/a/@href"
-        for row in self.html.xpath(rowpath):
-            case_list = row.xpath(cnpath)
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(rowpath)
+        for row in rows:
+            case_list: list[str] = row.xpath(cnpath)
             for rough_case_name in case_list:
                 case_name = titlecase(rough_case_name.lower())
                 # Determine the number of urls in each row and pad the case
@@ -44,13 +64,19 @@ class Site(OpinionSite):
                 casenames.extend([case_name] * count)
         return casenames
 
-    def _get_case_dates(self):
+    @override
+    def _get_case_dates(self) -> list[date]:
         dates = []
         rowpath = "//table[2]//tr[position()>0]"
         datepath = "./td[1]/text()"
         urlpath = "./td[3]/a/@href"
-        for row in self.html.xpath(rowpath):
-            date_string = row.xpath(datepath)
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(rowpath)
+        for row in rows:
+            date_string: list[str] = row.xpath(datepath)
             for d in date_string:
                 date_object = date.fromtimestamp(
                     time.mktime(time.strptime(d, "%m/%d/%Y"))
@@ -61,68 +87,96 @@ class Site(OpinionSite):
                 dates.extend([date_object] * count)
         return dates
 
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
+    @override
+    def _get_precedential_statuses(self) -> list[str]:
+        return ["Published"] * len(self)
 
-    def _get_docket_numbers(self):
+    @override
+    def _get_docket_numbers(self) -> list[str]:
         docket_numbers = []
         rowpath = "//table[2]//tr[position()>0]"
         dktpath = "./td[2]//text()[following-sibling::br]"
         urlpath = "./td[3]/a/@href"
-        for row in self.html.xpath(rowpath):
-            docket_number = row.xpath(dktpath)
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(rowpath)
+        for row in rows:
+            docket_number: list[str] = row.xpath(dktpath)
             # Determine the number of urls in each row and pad the docket
             # numbers list sufficiently
             count = len(row.xpath(urlpath))
             docket_numbers.extend(docket_number * count)
         return docket_numbers
 
-    def _get_docket_document_numbers(self):
+    @override
+    def _get_docket_document_numbers(self) -> list[str]:
         document_numbers = []
         regex = re.compile(r"(\?)(\d+)([a-z]+)(\d+)(-)(.*)")
-        for url in self.html.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        urls: list[str] = self.html.xpath(
             "//table[2]//tr[position()>0]/td[3]/a/@href"
-        ):
+        )
+        for url in urls:
             # Because we are acting directly on the entire url list, no padding
             # of the docket number field is required.
             doc_no = regex.search(url)
             # In 2012 (and perhaps elsewhere) they have a few weird urls.
-            if re.search(regex, url) is not None:
+            if doc_no is not None:
                 document_numbers.append(doc_no.group(6))
             else:
                 document_numbers.append(url)
         return document_numbers
 
-    def _get_judges(self):
+    @override
+    def _get_judges(self) -> list[str]:
         judges = []
         rowpath = "//table[2]//tr[position()>0]"
         urlpath = "./td[3]/a/@href"
         judgepath = "./td[3]"
-        for row in self.html.xpath(rowpath):
-            for judge_element in row.xpath(judgepath):
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(rowpath)
+        for row in rows:
+            judge_elements: list[HtmlElement] = row.xpath(judgepath)
+            for judge_element in judge_elements:
                 judge_string = html.tostring(
                     judge_element, method="text", encoding="unicode"
                 )
-                judge = re.search(
-                    r"(by\s)(.*)", judge_string, re.MULTILINE
-                ).group(2)
+                match = re.search(r"(by\s)(.*)", judge_string, re.MULTILINE)
+                if match is None:
+                    raise ValueError(
+                        f"Could not parse opinion judge: {judge_string!r}"
+                    )
+                judge = match.group(2)
                 # Determine the number of urls in each row and pad the judges
                 # list sufficiently
                 count = len(row.xpath(urlpath))
                 judges.extend([judge] * count)
         return judges
 
-    def _get_nature_of_suit(self):
+    @override
+    def _get_nature_of_suit(self) -> list[str]:
         nos = []
-        for url in self.html.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        urls: list[str] = self.html.xpath(
             "//table[2]//tr[position()>0]/td[3]/a/@href"
-        ):
+        )
+        for url in urls:
             # Because we are acting directly on the entire url list, no padding
             # of the nature of suit field is required.
-            regex = r"(\?)(\d+)([a-z]+)(\d+)(\-)(.*)"
             url_str = re.search(r"(\?)(\d+)([a-z]+)(\d+)(-)(.*)", url)
             # In 2012 (and perhaps elsewhere) they have a few weird urls.
-            if re.search(regex, url) is not None:
+            if url_str is not None:
                 nature_code = url_str.group(3)
                 if nature_code == "cv":
                     nos.append("Civil")

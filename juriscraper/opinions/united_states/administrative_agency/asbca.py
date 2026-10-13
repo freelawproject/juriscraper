@@ -11,17 +11,24 @@ History:
 from datetime import datetime
 from urllib.parse import urljoin
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
     base_url = "https://www.asbca.mil/"
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.year = str(datetime.today().year)
         self.url = urljoin(self.base_url, f"Decisions/{self.year}/")
@@ -50,21 +57,24 @@ class Site(OpinionSiteLinear):
         if self.test_mode_enabled():
             self.year = "2026"
 
-        rows = self.html.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(
             "//tr[not(th) and not(.//span[@style='background-color:#F8C100;']) and descendant::a]"
         )
         for row in rows:
-            if len(row.xpath(".//td")) != 4:
+            if len(row.findall(".//td")) != 4:
                 logger.warning(
                     "Row does not have expected number of cells %s",
                     row.text_content().strip(),
                 )
                 continue
 
-            url = row.xpath(".//a/@href")
-            url = url[0]
+            url: str = row.xpath(".//a/@href")[0]
             date, docket, name, judge = (
-                cell.text_content().strip() for cell in row.xpath(".//td")
+                cell.text_content().strip() for cell in row.findall(".//td")
             )
 
             if self.year not in date:

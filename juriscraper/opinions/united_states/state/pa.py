@@ -6,27 +6,71 @@ Court Short Name: pa
 
 import re
 from datetime import date, datetime, timedelta
+from typing import Literal, NotRequired, Required
 from urllib.parse import urlencode
 
-from typing_extensions import override
+from pydantic import TypeAdapter
+from typing_extensions import (
+    TypedDict,
+    Unpack,
+    override,
+)
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
 from juriscraper.ClusterSite import ClusterSite
-from juriscraper.lib.type_utils import OpinionType
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import (
+    ExtractedMetadata,
+    OpinionType,
+    RawOpinion,
+)
 
 
-class Site(ClusterSite):
+class _PublicationType(TypedDict, total=False):
+    Description: str | None
+
+
+class Posting(TypedDict):
+    PostType: NotRequired[dict[str, object]]
+    Author: dict[str, object] | None
+    FileName: str
+    PublicationType: NotRequired[_PublicationType | None]
+
+
+class _Cluster(TypedDict):
+    Caption: str
+    DispositionDate: str
+    Postings: list[Posting]
+
+
+class _Search(TypedDict, total=False):
+    Items: Required[list[_Cluster]]
+    HasNext: bool | None
+    PageNumber: int | None
+
+
+_search_adapter = TypeAdapter(_Search)
+
+
+class Site(ClusterSite[tuple[date, date]]):
     court = "Supreme"
     base_url = "https://www.pacourts.us/api/opinion?"
     document_url = "https://www.pacourts.us/assets/opinions/{}/out/{}"
     days_interval = 1
     api_dt_format = "%Y-%m-%dT00:00:00-05:00"
     first_opinion_date = datetime(1998, 4, 27)
-    judge_key = "AuthorCode"
+    judge_key: Literal["AuthorCode", "AuthorName"] = "AuthorCode"
     regional_cite_regex = re.compile(r"\d{1,3} A\.3d \d+")
-    post_type_key = "PostingTypeId"
+    post_type_key: Literal["PostingTypeId", "PostingTypeCode"] = (
+        "PostingTypeId"
+    )
 
-    def __init__(self, *args, **kwargs):
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
         """About postTypes values in self.params
 
 
@@ -41,7 +85,7 @@ class Site(ClusterSite):
         rv = Evenly Divided Court, Reversal
         dedc = Dismissal, Evenly Divided Court
         """
-        super().__init__(*args, **kwargs)
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.regex = re.compile(r"(.*)(?:[,-]?\s+Nos?\.)(.*)")
         self.status = "Published"
@@ -66,22 +110,26 @@ class Site(ClusterSite):
 
         :return: None
         """
-        json_response = self.html
+        json_response = _search_adapter.validate_python(self.html, strict=True)
 
         for cluster in json_response["Items"]:
             title = cluster["Caption"]
             name, docket = self.parse_case_title(title)
             # A.3d cites seem to exist only for pasuperct
             cite = ""
-            if cite_match := self.regional_cite_regex.search(title):
+            if (
+                cite_match := self.regional_cite_regex.search(title)
+            ) is not None:
                 cite = cite_match.group(0)
 
-            parsed_cluster = {
+            sub_opinions: list[RawOpinion] = []
+            judges = ""
+            parsed_cluster: RawOpinion = {
                 "date": cluster["DispositionDate"].split("T")[0],
                 "name": name,
                 "docket": docket,
                 "citation": cite,
-                "sub_opinions": [],
+                "sub_opinions": sub_opinions,
                 "judge": "",
             }
 
@@ -90,26 +138,31 @@ class Site(ClusterSite):
                 opinion_type = self.get_type(post_type, cluster)
 
                 status = self.get_status(op)
-                if not parsed_cluster.get("status"):
+                if not bool(parsed_cluster.get("status")):
                     parsed_cluster["status"] = status
 
                 per_curiam = False
                 author_str = ""
-                if op["Author"]:
-                    author_str = self.clean_judge(op["Author"][self.judge_key])
+                if bool(op["Author"]):
+                    author = op["Author"][self.judge_key]
+                    if author is not None and not isinstance(author, str):
+                        raise TypeError("The author must be a string or null")
+                    author_str = self.clean_judge(
+                        author if author is not None else ""
+                    )
                     if author_str.lower() == "per curiam":
                         author_str = ""
                         per_curiam = True
                     else:
-                        if author_str not in parsed_cluster["judge"]:
-                            parsed_cluster["judge"] += f"; {author_str}"
+                        if author_str not in judges:
+                            judges += f"; {author_str}"
 
                 if opinion_type == OpinionType.UNANIMOUS:
                     per_curiam = True
                     author_str = ""
 
                 url = self.document_url.format(self.court, op["FileName"])
-                parsed_cluster["sub_opinions"].append(
+                sub_opinions.append(
                     {
                         "url": url,
                         "author": author_str,
@@ -118,12 +171,18 @@ class Site(ClusterSite):
                     }
                 )
 
+            parsed_cluster["judge"] = judges
             self.cases.append(parsed_cluster)
 
-        if not self.test_mode_enabled() and json_response.get("HasNext"):
-            next_page = json_response["PageNumber"] + 1
+        if not self.test_mode_enabled() and bool(json_response.get("HasNext")):
+            page_number = json_response.get("PageNumber")
+            if page_number is None:
+                raise ValueError(
+                    "Missing current page number in opinion search"
+                )
+            next_page = page_number + 1
             logger.info("Paginating to page %s", next_page)
-            self.params["pageNumber"] = next_page
+            self.params["pageNumber"] = str(next_page)
             self.url = f"{self.base_url}{urlencode(self.params)}"
             self.html = await self._download()
             await self._process_html()
@@ -136,7 +195,7 @@ class Site(ClusterSite):
         :return: A tuple with the case name and docket number
         """
         search = self.regex.search(title)
-        if search:
+        if search is not None:
             name = search.group(1)
             docket = search.group(2)
         else:
@@ -144,13 +203,15 @@ class Site(ClusterSite):
             docket = ""
         return name, docket
 
-    def get_status(self, op: dict) -> str:
+    def get_status(self, op: Posting) -> str:
         """Get status from opinion json.
         Inheriting classes have status data
 
         :param op: opinion json
         :return: parsed status
         """
+        if self.status is None:
+            raise ValueError("A default precedential status is required.")
         return self.status
 
     def clean_judge(self, author_str: str) -> str:
@@ -159,7 +220,7 @@ class Site(ClusterSite):
         """
         return author_str
 
-    def get_type(self, post_type: str, cluster: dict) -> OpinionType:
+    def get_type(self, post_type: object, cluster: _Cluster) -> OpinionType:
         """Parse the PostingType into one of our Opinion.type values
 
         :param post_type: type as returned by the source
@@ -214,7 +275,8 @@ class Site(ClusterSite):
 
         return type
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract citations from text
 
         Be careful with citations referring to other opinions that are
@@ -240,8 +302,8 @@ class Site(ClusterSite):
                     """,
             re.X | re.DOTALL,
         )
-        result = {}
-        if match := pattern.search(cleaned_text):
+        result: ExtractedMetadata = {}
+        if (match := pattern.search(cleaned_text)) is not None:
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
@@ -253,6 +315,7 @@ class Site(ClusterSite):
 
         return result
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Modify GET querystring for desired date range
 

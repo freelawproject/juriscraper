@@ -11,7 +11,6 @@ from __future__ import annotations
 import unittest
 from collections.abc import Callable
 from datetime import date
-from typing import Any
 
 import httpx
 
@@ -31,17 +30,19 @@ from juriscraper.state.florida.scraper import (
 
 
 def _paginated_body(
-    results: list[dict[str, Any]] | None = None,
+    results: list[dict[str, object]] | None = None,
     page: int = 0,
     total_elements: int | None = None,
     page_size: int = PAGE_SIZE,
-) -> dict[str, Any]:
+) -> dict[str, object]:
     """Build a minimal Florida paginated response body."""
-    results = list(results or [])
+    results = list(results if bool(results) else [])
     if total_elements is None:
         total_elements = len(results)
     total_pages = (
-        (total_elements + page_size - 1) // page_size if total_elements else 0
+        (total_elements + page_size - 1) // page_size
+        if bool(total_elements)
+        else 0
     )
     return {
         "_embedded": {"results": results},
@@ -67,7 +68,7 @@ DOC_LINK_UUID = "1b6a8f72-d404-44e4-8742-5b7e7d38e096"
 USER_DOC_STATE_UUID = "b64d1d1e-f926-4c87-ab6b-df5c96d3b186"
 
 
-def _courts_body() -> dict[str, Any]:
+def _courts_body() -> dict[str, object]:
     """Two courts: Supreme Court (external_id=1) and the 4th DCA (5)."""
     return _paginated_body(
         [
@@ -95,7 +96,7 @@ def _courts_body() -> dict[str, Any]:
     )
 
 
-def _case_party_subtypes_body() -> list[dict[str, Any]]:
+def _case_party_subtypes_body() -> list[dict[str, object]]:
     return [
         {
             "participantSubTypeID": 1000005,
@@ -115,7 +116,7 @@ def _case_party_subtypes_body() -> list[dict[str, Any]]:
     ]
 
 
-def _case_categories_body() -> list[dict[str, Any]]:
+def _case_categories_body() -> list[dict[str, object]]:
     return [
         {
             "caseCategoryID": 10008,
@@ -125,7 +126,7 @@ def _case_categories_body() -> list[dict[str, Any]]:
     ]
 
 
-def _docket_entry_subtypes_body() -> list[dict[str, Any]]:
+def _docket_entry_subtypes_body() -> list[dict[str, object]]:
     return [
         {
             "docketEntrySubTypeID": 1000074,
@@ -145,7 +146,7 @@ def _case_listing_entry(
     case_number: str,
     *,
     court_external_id: str = "5",
-) -> dict[str, Any]:
+) -> dict[str, object]:
     """Minimal payload that satisfies :class:`FloridaCase` validation.
 
     The case-listing endpoint returns the same envelope as the case-detail
@@ -169,7 +170,7 @@ def _case_listing_entry(
     }
 
 
-def _docket_entry_body(uuid: str) -> dict[str, Any]:
+def _docket_entry_body(uuid: str) -> dict[str, object]:
     """Minimal payload that satisfies :class:`FloridaDocketEntry` validation."""
     return {
         "docketEntryHeader": {
@@ -197,7 +198,7 @@ def _docket_entry_body(uuid: str) -> dict[str, Any]:
     }
 
 
-def _party_body(uuid: str = PARTY_UUID) -> dict[str, Any]:
+def _party_body(uuid: str = PARTY_UUID) -> dict[str, object]:
     """Minimal payload that satisfies :class:`FloridaParty` validation."""
     return {
         "partyHeader": {
@@ -222,7 +223,7 @@ def _party_body(uuid: str = PARTY_UUID) -> dict[str, Any]:
     }
 
 
-def _document_body(docket_entry_uuid: str) -> dict[str, Any]:
+def _document_body(docket_entry_uuid: str) -> dict[str, object]:
     """Minimal payload that satisfies :class:`FloridaDocument` validation."""
     return {
         "docketEntryUUID": docket_entry_uuid,
@@ -245,7 +246,7 @@ def _document_body(docket_entry_uuid: str) -> dict[str, Any]:
     }
 
 
-def _hearings_body() -> dict[str, Any]:
+def _hearings_body() -> dict[str, object]:
     return _paginated_body(
         [
             {
@@ -339,7 +340,7 @@ def _register_court_and_metadata_handlers(recorder: _Recorder) -> None:
 
 
 class FetchCourtsTest(unittest.IsolatedAsyncioTestCase):
-    async def test_fetches_courts_and_metadata(self):
+    async def test_fetches_courts_and_metadata(self) -> None:
         recorder = _Recorder()
         _register_court_and_metadata_handlers(recorder)
 
@@ -364,7 +365,7 @@ class FetchCourtsTest(unittest.IsolatedAsyncioTestCase):
             meta.docket_entry_subtypes[0].name, "Notice of Appeal"
         )
 
-    async def test_repeated_calls_hit_api_once(self):
+    async def test_repeated_calls_hit_api_once(self) -> None:
         """fetch_courts should cache for the scraper's lifetime."""
         recorder = _Recorder()
         _register_court_and_metadata_handlers(recorder)
@@ -397,7 +398,7 @@ class FetchCourtsTest(unittest.IsolatedAsyncioTestCase):
                 f"Expected {expected} request(s) to {path}, got {actual}",
             )
 
-    async def test_unknown_external_id_is_skipped(self):
+    async def test_unknown_external_id_is_skipped(self) -> None:
         """Courts whose external_identifier isn't in the map are logged and
         skipped instead of raising."""
         recorder = _Recorder()
@@ -457,7 +458,7 @@ class FetchCourtsTest(unittest.IsolatedAsyncioTestCase):
 
 
 class EnumerateCasesTest(unittest.IsolatedAsyncioTestCase):
-    async def test_yields_parsed_cases_for_range(self):
+    async def test_yields_parsed_cases_for_range(self) -> None:
         recorder = _Recorder()
         _register_court_and_metadata_handlers(recorder)
 
@@ -498,12 +499,13 @@ class EnumerateCasesTest(unittest.IsolatedAsyncioTestCase):
 
         self.assertEqual(len(cases), 2)
         self.assertIsInstance(cases[0], FloridaCase)
+        assert all(isinstance(c, FloridaCase) for c in cases)
         self.assertEqual(
-            [c.docket_number for c in cases],
+            [c.docket_number for c in cases if isinstance(c, FloridaCase)],
             ["4D2026-0001", "4D2026-0002"],
         )
 
-    async def test_splits_range_when_total_hits_cap(self):
+    async def test_splits_range_when_total_hits_cap(self) -> None:
         recorder = _Recorder()
         _register_court_and_metadata_handlers(recorder)
 
@@ -566,14 +568,17 @@ class EnumerateCasesTest(unittest.IsolatedAsyncioTestCase):
                 )
             ]
 
+        assert all(isinstance(c, FloridaCase) for c in cases)
         self.assertEqual(
-            sorted(c.docket_number for c in cases),
+            sorted(
+                c.docket_number for c in cases if isinstance(c, FloridaCase)
+            ),
             ["4D2026-0001", "4D2026-0002"],
         )
         # Three first-page queries: the full month, then each half.
         self.assertEqual(len(page_zero_ranges), 3)
 
-    async def test_single_day_overflow_raises(self):
+    async def test_single_day_overflow_raises(self) -> None:
         """A single-day query that hits the cap can't be subdivided."""
         recorder = _Recorder()
         _register_court_and_metadata_handlers(recorder)
@@ -602,7 +607,7 @@ class EnumerateCasesTest(unittest.IsolatedAsyncioTestCase):
                     )
                 ]
 
-    async def test_unknown_court_raises(self):
+    async def test_unknown_court_raises(self) -> None:
         """Calling enumerate_cases for a court not in the cache raises."""
         recorder = _Recorder()
         _register_court_and_metadata_handlers(recorder)
@@ -635,7 +640,7 @@ class FetchCaseDataTest(unittest.IsolatedAsyncioTestCase):
             )
         )
 
-    async def test_populates_extra(self):
+    async def test_populates_extra(self) -> None:
         recorder = _Recorder()
         _register_court_and_metadata_handlers(recorder)
 
@@ -689,9 +694,11 @@ class FetchCaseDataTest(unittest.IsolatedAsyncioTestCase):
         async with _make_scraper(recorder) as scraper:
             await scraper.courts
             case = self._parse_case(CASE_UUID, "4D2026-0606")
-            populated, errors = await scraper.fetch_case_data(
+            result = await scraper.fetch_case_data(
                 str(case.case_uuid), case.court_id
             )
+            assert not isinstance(result, Exception)
+            populated, errors = result
 
         # Returned object is a populated copy of the case we passed in.
         self.assertEqual(len(errors), 0)
@@ -716,7 +723,7 @@ class FetchCaseDataTest(unittest.IsolatedAsyncioTestCase):
 
 
 class BackfillTest(unittest.IsolatedAsyncioTestCase):
-    async def test_yields_cases_for_each_court_in_range(self):
+    async def test_yields_cases_for_each_court_in_range(self) -> None:
         """``backfill`` should drive courts → enumerate → yield cases.
 
         Uses ``full_scrape=False`` so the test doesn't depend on the
@@ -763,7 +770,7 @@ class BackfillTest(unittest.IsolatedAsyncioTestCase):
         self.assertIsInstance(cases[0], FloridaCase)
         self.assertEqual(cases[0].docket_number, "4D2026-0606")
 
-    async def test_full_scrape_false_skips_case_detail_fetch(self):
+    async def test_full_scrape_false_skips_case_detail_fetch(self) -> None:
         """``full_scrape=False`` should yield list-level cases without
         hitting the per-case endpoints."""
         recorder = _Recorder()
@@ -822,7 +829,7 @@ class BackfillTest(unittest.IsolatedAsyncioTestCase):
 
 
 class LifecycleTest(unittest.IsolatedAsyncioTestCase):
-    async def test_async_context_manager_closes(self):
+    async def test_async_context_manager_closes(self) -> None:
         recorder = _Recorder()
         recorder.register(
             lambda r: True,
@@ -833,7 +840,7 @@ class LifecycleTest(unittest.IsolatedAsyncioTestCase):
             self.assertFalse(scraper.manager.is_closed)
         self.assertTrue(scraper.manager.is_closed)
 
-    async def test_close_is_idempotent(self):
+    async def test_close_is_idempotent(self) -> None:
         async with FloridaScraper(rps=1000.0) as scraper:
             self.assertFalse(scraper.manager.is_closed)
         self.assertTrue(scraper.manager.is_closed)

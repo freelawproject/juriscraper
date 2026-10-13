@@ -12,16 +12,33 @@ import re
 from urllib.parse import urljoin
 
 import httpx
-from typing_extensions import override
+from lxml.html import HtmlElement
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import RequestParameters, SiteOptions, logger
 from juriscraper.lib.exceptions import ParsingException
 from juriscraper.lib.html_utils import get_html_parsed_text
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 # SignalR record separator (used between text frames such as the handshake)
 RECORD_SEPARATOR = b"\x1e"
+
+
+class _ComponentMarker(TypedDict):
+    type: str
+    sequence: int
+    descriptor: str
+
+
+class _Negotiation(TypedDict):
+    connectionToken: str
+
+
+_marker_adapter = TypeAdapter(_ComponentMarker)
+_negotiation_adapter = TypeAdapter(_Negotiation)
 
 
 class Site(OpinionSiteLinear):
@@ -49,8 +66,13 @@ class Site(OpinionSiteLinear):
     # only needs the latest handful; CL dedupes already-seen opinions.
     max_subpages = 5
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.status = "Published"
         self.url = self.rss_url
@@ -61,10 +83,16 @@ class Site(OpinionSiteLinear):
         # User-Agent the 521/empty shell more often; a browser UA is stabler.
         self.request["headers"]["User-Agent"] = self.chrome_user_agent
 
-    async def _download(self, request_dict=None):
+    @override
+    async def _download(
+        self, request_dict: RequestParameters | None = None
+    ) -> list[HtmlElement]:
         if self.test_mode_enabled():
             # The example file is a single rendered news-release fragment.
-            return [await OpinionSiteLinear._download(self, request_dict)]
+            tree = await OpinionSiteLinear._download(self, request_dict)
+            if not isinstance(tree, HtmlElement):
+                raise TypeError("Expected a downloaded HTML document")
+            return [tree]
 
         self.rendered_pages = []
         for url in await self._get_recent_opinion_subpages():
@@ -75,9 +103,14 @@ class Site(OpinionSiteLinear):
     @override
     def _process_html(self) -> None:
         xpath = "//a[contains(@href, 'opinions') and contains(@href, 'pdf')]"
+        if not isinstance(self.html, list):
+            raise TypeError("Expected downloaded HTML documents")
         for html in self.html:
+            if not isinstance(html, HtmlElement):
+                raise TypeError("Expected a downloaded HTML document")
             date_string = self._get_date_for_opinions(html)
-            for anchor in html.xpath(xpath):
+            anchors: list[HtmlElement] = html.xpath(xpath)
+            for anchor in anchors:
                 text = anchor.text_content()
                 parts = text.split(None, 1)
                 if len(parts) < 2:
@@ -88,7 +121,7 @@ class Site(OpinionSiteLinear):
 
                 judge = self._get_judge_above_anchor(anchor)
                 per_curiam = False
-                if judge and "per curiam" in judge.lower():
+                if bool(judge) and "per curiam" in judge.lower():
                     per_curiam = True
                     judge = ""
 
@@ -96,7 +129,7 @@ class Site(OpinionSiteLinear):
                     {
                         "date": date_string,
                         "docket": parts[0],
-                        "judge": judge or "",
+                        "judge": (judge if judge is not None else ""),
                         "per_curiam": per_curiam,
                         "name": titlecase(parts[1]),
                         "disposition": self._get_disposition(anchor, text),
@@ -106,7 +139,7 @@ class Site(OpinionSiteLinear):
 
         self._compile_response()
 
-    def _get_disposition(self, anchor, anchor_text: str) -> str:
+    def _get_disposition(self, anchor: HtmlElement, anchor_text: str) -> str:
         """Extract and tidy the disposition that follows the opinion link.
 
         The link's paragraph reads like
@@ -118,9 +151,12 @@ class Site(OpinionSiteLinear):
             surrounding text nodes
         :return: the cleaned disposition, e.g. "Affirmed and Remanded"
         """
-        text = " ".join(anchor.getparent().xpath("./text()")).replace(
-            anchor_text, ""
-        )
+        parent = anchor.getparent()
+        if parent is None:
+            raise ParsingException(
+                "The opinion link has no containing paragraph"
+            )
+        text: str = " ".join(parent.xpath("./text()")).replace(anchor_text, "")
         text = re.sub(r"\(Parish of [^)]*\)", "", text)
         text = re.sub(r"\bSEE\b.*$", "", text, flags=re.S)
         return titlecase(" ".join(text.split()))
@@ -136,8 +172,10 @@ class Site(OpinionSiteLinear):
         ourselves so the scrape still yields a single response for
         auditing/debugging on S3 (#1983).
         """
-        if self.test_mode_enabled() or not self.rendered_pages:
+        if self.test_mode_enabled() or not bool(self.rendered_pages):
             return
+        if self.url is None:
+            raise ValueError("The source URL is not configured")
 
         document = "\n".join(
             f"<!-- {url} -->\n{fragment}"
@@ -153,7 +191,7 @@ class Site(OpinionSiteLinear):
 
         # The base class only calls this from its own request methods, which
         # the circuit bypasses, so trigger it here.
-        if self.save_response:
+        if self.save_response is not None:
             self.save_response(self)
 
     async def _get_recent_opinion_subpages(self) -> list[str]:
@@ -182,7 +220,7 @@ class Site(OpinionSiteLinear):
             re.S,
         )
         matches = list(item_re.finditer(raw))
-        if not matches:
+        if not bool(matches):
             # <item> entries exist but the title/link layout changed
             raise ParsingException(
                 f"la: RSS feed {self.rss_url} has <item> entries but none "
@@ -194,7 +232,7 @@ class Site(OpinionSiteLinear):
             for match in matches
             if match.group("title").strip().startswith("Opinions")
         ]
-        if not urls:
+        if not bool(urls):
             # Could be a quiet stretch with only non-opinion news, so warn
             # rather than crash; recurring warnings mean the titles changed
             logger.warning(
@@ -213,7 +251,7 @@ class Site(OpinionSiteLinear):
         """
         session = self.request["session"]
         markers, app_state = await self._get_blazor_shell(url)
-        if not markers:
+        if not bool(markers):
             raise ParsingException(
                 f"la: no Blazor components in shell for {url}"
             )
@@ -226,7 +264,9 @@ class Site(OpinionSiteLinear):
         )
         # Surface a clear HTTP error instead of a JSONDecodeError below
         negotiate.raise_for_status()
-        token = negotiate.json()["connectionToken"]
+        token = _negotiation_adapter.validate_python(
+            negotiate.json(), strict=True
+        )["connectionToken"]
         conn_url = urljoin(self.base_url, f"/_blazor?id={token}")
 
         # SignalR handshake (always JSON, even for the blazorpack protocol)
@@ -256,31 +296,31 @@ class Site(OpinionSiteLinear):
 
         raise ParsingException(f"la: no rendered opinion content for {url}")
 
-    async def _get_blazor_shell(self, url: str) -> tuple[list[dict], str]:
+    async def _get_blazor_shell(
+        self, url: str
+    ) -> tuple[list[_ComponentMarker], str]:
         """Load the Blazor shell and extract its component markers and state.
 
         :param url: the page URL whose shell to load
         :return: (server component markers, serialized application state)
         """
         raw = await self._get_with_retries(url)
-        markers = []
-        for marker in re.findall(r"<!--Blazor:(\{.*?\})-->", raw, re.S):
+        markers: list[_ComponentMarker] = []
+        for marker in re.finditer(r"<!--Blazor:(\{.*?\})-->", raw, re.S):
             try:
-                data = json.loads(marker)
+                data: object = json.loads(marker.group(1))
             except json.JSONDecodeError:
                 continue
-            if data.get("type") == "server":
+            if isinstance(data, dict) and data.get("type") == "server":
                 markers.append(
-                    {
-                        "type": data["type"],
-                        "sequence": data["sequence"],
-                        "descriptor": data["descriptor"],
-                    }
+                    _marker_adapter.validate_python(data, strict=True)
                 )
         state_match = re.search(
             r"<!--Blazor-Server-Component-State:(.*?)-->", raw, re.S
         )
-        app_state = state_match.group(1).strip() if state_match else ""
+        app_state = (
+            state_match.group(1).strip() if state_match is not None else ""
+        )
         return markers, app_state
 
     async def _get_with_retries(self, url: str, retries: int = 8) -> str:
@@ -321,11 +361,11 @@ class Site(OpinionSiteLinear):
         :param render_bytes: accumulated bytes from the circuit
         :return: the news-release HTML fragment, or None
         """
-        printable = re.findall(
+        printable = re.finditer(
             rb"[\x09\x0a\x0d\x20-\x7e\x80-\xff]{4,}", render_bytes
         )
         for chunk in printable:
-            text = chunk.decode("utf-8", "replace")
+            text = chunk.group(0).decode("utf-8", "replace")
             if ".pdf" in text.lower() and (
                 "nrbody" in text.lower() or "/opinions" in text.lower()
             ):
@@ -380,20 +420,22 @@ class Site(OpinionSiteLinear):
         while True:
             byte = length & 0x7F
             length >>= 7
-            if length:
+            if bool(length):
                 prefix.append(byte | 0x80)
             else:
                 prefix.append(byte)
                 break
         return bytes(prefix) + payload
 
-    def _get_date_for_opinions(self, html) -> str:
+    def _get_date_for_opinions(self, html: HtmlElement) -> str:
         """Parse the hand-down date, e.g. "1st day of June, 2026".
 
         :param html: the parsed news-release fragment
         :return: a date string like "June 1st 2026"
         """
-        spans = html.xpath("//span[@class='nrdate']") or html.xpath("//span")
+        spans: list[HtmlElement] = html.xpath("//span[@class='nrdate']")
+        if not bool(spans):
+            spans = html.xpath("//span")
         element_date_text = spans[0].text_content().strip()
         parts = element_date_text.split("day of")
         day = parts[0].split()[-1]
@@ -401,17 +443,18 @@ class Site(OpinionSiteLinear):
         year = parts[1].split()[1].strip(",")
         return " ".join([month, day, year])
 
-    def _get_judge_above_anchor(self, anchor) -> str | None:
+    def _get_judge_above_anchor(self, anchor: HtmlElement) -> str | None:
         path = (
             "./preceding::*[starts-with(., 'BY ') or contains(., 'CURIAM:')]"
         )
         try:
-            text = anchor.xpath(path)[-1].text_content()
+            text: str = anchor.xpath(path)[-1].text_content()
         except IndexError:
             return None
         return text.rstrip(":").lstrip("BY").strip()
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract lower court from the scraped text.
 
         :param scraped_text: The text to extract from.
@@ -429,12 +472,12 @@ class Site(OpinionSiteLinear):
         )
 
         lower_court = ""
-        if match := pattern.search(scraped_text):
+        if (match := pattern.search(scraped_text)) is not None:
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
 
-        if lower_court:
+        if bool(lower_court):
             return {
                 "Docket": {
                     "appeal_from_str": lower_court,

@@ -1,14 +1,22 @@
+from datetime import date
 from urllib.parse import urljoin
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.opinions.united_states.state import wis
 
 
 class Site(wis.Site):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.base_url = "https://www.wicourts.gov/other/appeals/caopin.jsp"
         self.set_url()
@@ -24,7 +32,9 @@ class Site(wis.Site):
         :return: True if opinion already in self.cases
         """
         for case in self.cases:
-            if case["url"] == url:
+            if case.get("url") == url:
+                if "docket" not in case:
+                    raise KeyError("docket")
                 case["docket"] = f"{case['docket']}, {docket_number}"
                 case["docket"] = ", ".join(sorted(case["docket"].split(", ")))
                 return True
@@ -36,14 +46,19 @@ class Site(wis.Site):
 
         :return: None
         """
-        for row in self.html.xpath(".//table/tbody/tr"):
-            date, docket, caption, district, county, link = row.xpath("./td")
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(".//table/tbody/tr")
+        for row in rows:
+            date, docket, caption, district, county, link = row.findall("./td")
             long_caption = caption.text_content()
             if "[Decision/Opinion withdrawn" in long_caption:
                 logger.debug("Skipping withdrawn opinion: %s", long_caption)
                 continue
 
-            captions = caption.xpath(".//text()")
+            captions: list[str] = caption.xpath(".//text()")
             if "Errata" in captions[0]:
                 status, name = "Errata", captions[1]
             elif "Recommended for Publication" in captions[-1]:
@@ -52,9 +67,10 @@ class Site(wis.Site):
                 status, name = "Unpublished", captions[0]
 
             url = urljoin(
-                "https://www.wicourts.gov", link.xpath("./input")[0].name
+                "https://www.wicourts.gov",
+                link.findall("./input")[0].attrib["name"],
             )
-            docket_number = docket.text
+            docket_number = docket.text_content()
             if self.combine_opinions(url, docket_number):
                 logger.debug("Duplicate row: %s", name)
                 continue

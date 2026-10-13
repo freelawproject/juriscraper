@@ -14,23 +14,30 @@ History:
 import re
 from datetime import date, datetime
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
 from juriscraper.lib.html_utils import (
     get_row_column_links,
     get_row_column_text,
 )
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[tuple[date, date]]):
     days_interval = 200
     first_opinion_date = datetime(1996, 5, 22)
     court_filter = "Supreme Court"
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.docket_re = r"\d{4} IL (?P<docket>\d+)"
         self.url = (
@@ -79,10 +86,16 @@ class Site(OpinionSiteLinear):
 
         Return: None
         """
-        rows = self.html.xpath("//table[@id='ctl04_gvDecisions']/tr")[1:]
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(
+            "//table[@id='ctl04_gvDecisions']/tr"
+        )[1:]
         for row in rows:
             # Don't parse rows for pagination, headers, footers or announcements
-            if len(row.xpath(".//td")) != 7 or row.xpath(".//table"):
+            if len(row.findall(".//td")) != 7 or bool(row.findall(".//table")):
                 continue
 
             name = get_row_column_text(row, 1)
@@ -101,7 +114,7 @@ class Site(OpinionSiteLinear):
             # For illappct: From 2010 to the past, most rows have no
             # citation string. We would have to implement extract_from_text
             # to get it. However, document formats are different
-            if not match:
+            if match is None:
                 logger.warning("Opinion '%s' has no docket.", citation)
                 continue
 
@@ -124,6 +137,7 @@ class Site(OpinionSiteLinear):
                 "This source paginates at 150 results. There are 150 results for this page. Some opinions may be lost"
             )
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range POST request
 
@@ -164,6 +178,10 @@ class Site(OpinionSiteLinear):
         # Due to the `site_yielder` used when backscraping, each backscrape
         # iterable seed uses a new scraper object, so we can't reuse viewstates
         for _ in range(2):
-            vs = self.html.xpath("//input[@name='__VIEWSTATE']/@value")[0]
+            if not isinstance(self.html, HtmlElement):
+                raise ValueError(
+                    "An HTML document must be downloaded before parsing."
+                )
+            vs: str = self.html.xpath("//input[@name='__VIEWSTATE']/@value")[0]
             self.parameters["__VIEWSTATE"] = vs
             self.html = await self._download()
