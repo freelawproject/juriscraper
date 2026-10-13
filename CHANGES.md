@@ -29,6 +29,7 @@ Fixes:
 - `nev`/`nevapp`: resolve panel judge initials to full names, and keep the full panel when it has a "Before:" prefix or spaced slashes #2049
 - Fix `nev`/`nevapp` backscrape crash on the empty page after the last one
 - Fix `nmariana` judge and author parsing: keep "Torres,Jr." as one judge, name "Torres" as "Torres Jr.", remove "?" characters and empty names, and take the last judge marked with "*" as the author. #1946
+- Fix `nmariana` marking every opinion without a "*" author as per curiam. `extract_from_text` now sets per curiam from the opinion's "PER CURIAM" heading; otherwise the "*" author is kept. #1946
 -
 
 ## 3.0.44 - 2026-09-30

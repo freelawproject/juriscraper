@@ -6,7 +6,7 @@ History:
   2023-01-21: Created by William Palin
   2026-09-24: Site moved to cnmilaw.gov; use urllib to pass Cloudflare
   2026-10-08: Implement backscraper (#1946)
-  2026-10-13: Fix judge names (#1946)
+  2026-10-13: Fix judge names and per curiam (#1946)
 """
 
 import re
@@ -38,6 +38,11 @@ class Site(OpinionSiteLinear):
         # leaves out the "Jr."
         "TORRES": "Torres Jr.",
     }
+    # `extract_from_text` looks for a "PER CURIAM" heading in the first
+    # `per_curiam_text_limit` characters. Some opinions start after a
+    # judgment or an order (2001 MP 11), so the heading can be far down
+    per_curiam_text_limit = 6000
+    per_curiam_regex = re.compile(r"^[ \t\d\\)|]*PER\s+CURIAM\b", re.MULTILINE)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -61,7 +66,10 @@ class Site(OpinionSiteLinear):
                     "date": cells[2].text_content(),
                     "judge": ", ".join([j.strip("*") for j in judge_list]),
                     "author": author,
-                    "per_curiam": not author,
+                    # The site doesn't mark every author with "*", so a
+                    # missing one doesn't mean per curiam. `extract_from_text`
+                    # sets it from the opinion's "PER CURIAM" heading
+                    "per_curiam": False,
                     "url": urljoin(
                         self.url, s.xpath(".//a[@class='pdf-link']/@href")[0]
                     ),
@@ -111,7 +119,8 @@ class Site(OpinionSiteLinear):
         """Pass scraped text into function and return data as a dictionary
 
         :param scraped_text: Text of scraped content
-        :return: metadata containing the docket number
+        :return: metadata containing the docket number, and the opinion's
+            per curiam status when the text has a "PER CURIAM" heading
         """
         normalized_content = normalize_dashes(scraped_text)
         match = re.findall(r"Case No\.: (.*)", normalized_content)
@@ -121,7 +130,20 @@ class Site(OpinionSiteLinear):
                 "docket_number": docket_number,
             },
         }
+        if self._is_per_curiam(scraped_text):
+            # The text is more reliable than the listing table, which leaves
+            # many authors unmarked and sometimes stars a per curiam opinion
+            metadata["Opinion"] = {"author_str": "", "per_curiam": True}
         return metadata
+
+    def _is_per_curiam(self, scraped_text: str) -> bool:
+        """Check if the opinion has a "PER CURIAM" heading
+
+        :param scraped_text: Text of the opinion
+        :return: True if the opinion is per curiam
+        """
+        text = scraped_text[: self.per_curiam_text_limit]
+        return bool(self.per_curiam_regex.search(text))
 
     @classmethod
     def _normalize_judge_name(cls, name: str) -> str:

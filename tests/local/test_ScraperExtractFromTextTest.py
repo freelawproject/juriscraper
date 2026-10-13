@@ -165,6 +165,35 @@ class ScraperExtractFromText(unittest.TestCase):
                 """#E-FILED\nCNMI SUPREME COURT\nE-filed: Apr 18 2022 06:53AM\nClerk Review: Apr 18 2022 06:54AM Filing ID: 67483376\nCase No.: 2021-SCC-0017-CIV\nJudy Aldan""",
                 {"Docket": {"docket_number": "2021-SCC-0017-CIV"}},
             ),
+            (
+                # 2025 MP 10: starred in the listing, but per curiam
+                """Case No.: 2024-SCC-0004-CRM\n                         SLIP OPINION\nPER CURIAM:\n¶1      Defendant-Appellant""",
+                {
+                    "Docket": {"docket_number": "2024-SCC-0004-CRM"},
+                    "Opinion": {"author_str": "", "per_curiam": True},
+                },
+            ),
+            (
+                # 2006 MP 3: pleading paper line numbers before the heading
+                """               ) 12   \\3      PER CURIAM:  14\n""",
+                {
+                    "Docket": {"docket_number": ""},
+                    "Opinion": {"author_str": "", "per_curiam": True},
+                },
+            ),
+            (
+                # 3 N.M.I. 400: a "(per curiam)" citation isn't the heading
+                """VILLAGOMEZ, Justice:\n     See Sablan v. Iginoef, 1 N.M.I. 190 (1990) (per curiam).""",
+                {"Docket": {"docket_number": ""}},
+            ),
+            (
+                # 2005 MP 20: a PER CURIAM order appended after an authored
+                # opinion, past `per_curiam_text_limit`
+                """     Associate Justice Castro delivered the opinion of the Court.\n"""
+                + " the judgment.\n" * 500
+                + """     PER CURIAM:""",
+                {"Docket": {"docket_number": ""}},
+            ),
         ],
         "juriscraper.opinions.united_states.federal_special.cavc": [
             (
