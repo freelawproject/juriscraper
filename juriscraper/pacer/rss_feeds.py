@@ -1,4 +1,5 @@
 import argparse
+import asyncio
 import os
 import pprint
 import re
@@ -6,7 +7,7 @@ import sys
 from html import unescape
 
 import feedparser
-from requests import Session
+from httpx import AsyncClient, Timeout
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import clean_string, harmonize
@@ -132,11 +133,13 @@ class PacerRssFeed(DocketReport):
 
     CACHE_ATTRS = ["data"]
 
-    def __init__(self, court_id):
+    def __init__(self, court_id, **kwargs):
         super().__init__(court_id)
         self._clear_caches()
         self._data = None
-        self.session = Session()
+        kwargs.setdefault("http2", True)
+        kwargs.setdefault("follow_redirects", True)
+        self.session = AsyncClient(**kwargs)
         self.is_valid = True
         self.is_appellate = False
         if self.court_id[-1].isdigit() or self.court_id in [
@@ -150,9 +153,14 @@ class PacerRssFeed(DocketReport):
         else:
             self.is_bankruptcy = False
 
-    def __del__(self):
-        if self.session:
-            self.session.close()
+    async def __aenter__(self):
+        assert self.session is not None
+        await self.session.__aenter__()
+        return self
+
+    async def __aexit__(self, exc_type, exc_value, traceback):
+        assert self.session is not None
+        await self.session.__aexit__(exc_type, exc_value, traceback)
 
     @property
     def url(self):
@@ -174,10 +182,10 @@ class PacerRssFeed(DocketReport):
         else:
             return f"https://ecf.{self.court_id}.uscourts.gov/{self.PATH}"
 
-    def query(self):
+    async def query(self):
         """Query the RSS feed for a given court ID
 
-        Note that we use requests here, and so we forgo some of the
+        Note that we use httpx here, and so we forgo some of the
         useful features that feedparser offers around the Etags and
         Last-Modified headers. This is fine for now because no PACER
         site seems to support these headers, but eventually we'll
@@ -190,13 +198,14 @@ class PacerRssFeed(DocketReport):
         For a good summary of this issue, see:
         https://github.com/freelawproject/juriscraper/issues/195#issuecomment-385848344
         """
+        assert self.session is not None
         logger.info(f"Querying the RSS feed for {self.court_id}")
         # The timeout here is a bit tricky. Too long, and national PACER
         # outages cause us grief. Too short and slow courts don't get done.
         # Previously, this value has been (60, 300), then 5. Hopefully the
         # below is a reasonable middle ground.
-        timeout = (5, 20)
-        self.response = self.session.get(self.url, timeout=timeout)
+        timeout = Timeout(5, read=20)
+        self.response = await self.session.get(self.url, timeout=timeout)
 
     def parse(self):
         self._clear_caches()
@@ -383,7 +392,7 @@ class PacerRssFeed(DocketReport):
         return case_name
 
 
-def _main():
+async def _main():
     # For help: python -m juriscraper.pacer.rss_feeds -h
     parser = argparse.ArgumentParser(
         prog="python -m %s.%s"
@@ -412,7 +421,8 @@ sorry if that was your filename.""",
     if 3 <= arg_len <= 4:
         feed = PacerRssFeed(args.court_or_file)
         print(f"Querying RSS feed at: {feed.url}")
-        feed.query()
+        async with feed:
+            await feed.query()
         print(f"Parsing RSS feed for {feed.court_id}")
         feed.parse()
     else:
@@ -439,4 +449,4 @@ sorry if that was your filename.""",
 
 
 if __name__ == "__main__":
-    _main()
+    asyncio.run(_main())
