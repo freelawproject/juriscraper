@@ -6,6 +6,7 @@ History:
   2023-01-21: Created by William Palin
   2026-09-24: Site moved to cnmilaw.gov; use urllib to pass Cloudflare
   2026-10-08: Implement backscraper (#1946)
+  2026-10-13: Fix judge names (#1946)
 """
 
 import re
@@ -16,7 +17,7 @@ from urllib.parse import urljoin
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
-from juriscraper.lib.string_utils import normalize_dashes
+from juriscraper.lib.string_utils import normalize_dashes, titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -24,6 +25,19 @@ class Site(OpinionSiteLinear):
     use_urllib = True  # Use urllib to pass Cloudflare
     base_url = "https://cnmilaw.gov/documents?type=case&court=Supreme"
     first_opinion_date = date(1989, 11, 14)
+
+    # Names misspelled or written differently in the listing table.
+    # Checked against each opinion's panel in its PDF
+    judge_name_fixes = {
+        "BELLA": "Bellas",  # 4 N.M.I. 295
+        "CABULLIDO": "Carbullido",  # 2014 MP 13
+        "CASRTO": "Castro",  # 2002 MP 13
+        "CASTRP": "Castro",  # 2001 MP 2
+        # The only Torres on the court's panels is Robert J. Torres, Jr. (a
+        # Guam justice sitting pro tem, 2005 onward); the listing usually
+        # leaves out the "Jr."
+        "TORRES": "Torres Jr.",
+    }
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -55,20 +69,27 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    @staticmethod
-    def _cleanup_judge_names(judges: str) -> list[str]:
+    @classmethod
+    def _cleanup_judge_names(cls, judges: str) -> list[str]:
         """Clean up the judge panel
 
         Joins "Jr." to the name it belongs to ("Torres,Jr." -> "Torres Jr."),
-        so it isn't split into its own judge, and removes the "?" characters
-        the source renders in place of unknown ones. The "*" marking the
-        author is kept.
+        so it isn't split into its own judge, removes the "?" characters
+        the source renders in place of unknown ones, and normalizes each name
+        with `_normalize_judge_name`. The "*" marking the author is kept, in
+        front of the name.
 
         :param judges: Content of the panel cell
         :return: Judge names list
         """
         judges = re.sub(r"\s*,\s*Jr\.", " Jr.", judges.replace("?", ""))
-        return [j.strip() for j in judges.split(",") if j.strip()]
+        names = []
+        for judge in judges.split(","):
+            if not (name := judge.strip().strip("*").strip()):
+                continue
+            marker = "*" if "*" in judge else ""
+            names.append(f"{marker}{cls._normalize_judge_name(name)}")
+        return names
 
     @staticmethod
     def _fetch_author(judge_names: list[str]) -> str:
@@ -101,6 +122,17 @@ class Site(OpinionSiteLinear):
             },
         }
         return metadata
+
+    @classmethod
+    def _normalize_judge_name(cls, name: str) -> str:
+        """Normalize a judge name from the listing table
+
+        :param name: The judge name, without the "*" author marker
+        :return: The name from `judge_name_fixes`, or the title cased name
+        """
+        return cls.judge_name_fixes.get(name.upper()) or titlecase(
+            name.lower()
+        )
 
     @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
