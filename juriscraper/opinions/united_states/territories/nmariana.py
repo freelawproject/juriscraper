@@ -38,11 +38,14 @@ class Site(OpinionSiteLinear):
         # leaves out the "Jr."
         "TORRES": "Torres Jr.",
     }
-    # `extract_from_text` looks for a "PER CURIAM" heading in the first
-    # `per_curiam_text_limit` characters. Some opinions start after a
-    # judgment or an order (2001 MP 11), so the heading can be far down
+    # Far enough to reach headings after a judgment or order (2001 MP 11)
     per_curiam_text_limit = 6000
     per_curiam_regex = re.compile(r"^[ \t\d\\)|]*PER\s+CURIAM\b", re.MULTILINE)
+    # The docket label always ends before char 2,400 (2006 MP 25)
+    docket_text_limit = 2500
+    docket_regex = re.compile(
+        r"Supreme\s+Court\s+(?:Appeal\s+)?Nos?\.(.*)", re.I
+    )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -66,10 +69,6 @@ class Site(OpinionSiteLinear):
                     "date": cells[2].text_content(),
                     "judge": ", ".join([j.strip("*") for j in judge_list]),
                     "author": author,
-                    # The site doesn't mark every author with "*", so a
-                    # missing one doesn't mean per curiam. `extract_from_text`
-                    # sets it from the opinion's "PER CURIAM" heading
-                    "per_curiam": False,
                     "url": urljoin(
                         self.url, s.xpath(".//a[@class='pdf-link']/@href")[0]
                     ),
@@ -119,22 +118,30 @@ class Site(OpinionSiteLinear):
         """Pass scraped text into function and return data as a dictionary
 
         :param scraped_text: Text of scraped content
-        :return: metadata containing the docket number, and the opinion's
-            per curiam status when the text has a "PER CURIAM" heading
+        :return: metadata with the docket number and the opinion's per
+            curiam status, only for the values found in the text. A per
+            curiam opinion also clears the author from the listing table
         """
-        normalized_content = normalize_dashes(scraped_text)
-        match = re.findall(r"Case No\.: (.*)", normalized_content)
-        docket_number = match[0] if match else ""
-        metadata = {
-            "Docket": {
-                "docket_number": docket_number,
-            },
-        }
+        metadata = {}
+        if docket_number := self._extract_docket_number(scraped_text):
+            metadata["Docket"] = {"docket_number": docket_number}
         if self._is_per_curiam(scraped_text):
             # The text is more reliable than the listing table, which leaves
-            # many authors unmarked and sometimes stars a per curiam opinion
+            # many authors unmarked and sometimes stars a per curiam opinion.
+            # The empty `author_str` is on purpose, to clear that star
             metadata["Opinion"] = {"author_str": "", "per_curiam": True}
         return metadata
+
+    def _extract_docket_number(self, scraped_text: str) -> str:
+        """Extract the docket number from the opinion's header
+
+        :param scraped_text: Text of the opinion
+        :return: The docket number, or an empty string if none was found
+        """
+        text = scraped_text[: self.docket_text_limit]
+        if not (match := self.docket_regex.search(text)):
+            return ""
+        return normalize_dashes(match.group(1)).strip()
 
     def _is_per_curiam(self, scraped_text: str) -> bool:
         """Check if the opinion has a "PER CURIAM" heading

@@ -23,6 +23,7 @@ Changes:
 Fixes:
 - Fix `nmariana` judge names and authors parsed from the panel. #1946
 - Fix `nmariana` per curiam: set it from the opinion's "PER CURIAM" heading, not from a missing "*" author. #1946
+- Fix `nmariana` docket numbers: take them from the opinion header's "Supreme Court No." label, not the e-filing stamp, and leave them out when not found. #1946
 
 ## 4.0.0 - 2026-10-12
 
