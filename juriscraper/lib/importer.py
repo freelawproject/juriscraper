@@ -88,16 +88,21 @@ async def site_yielder(
     mod: ModuleType,
     save_response_fn=None,
 ) -> AsyncGenerator[AbstractSite, None]:
+    """Yield sites whose sessions stay open until iteration advances.
+
+    Use ``contextlib.aclosing`` when consuming this generator so early exits
+    also close the current site.
+    """
     site_class = cast(type[AbstractSite], mod.Site)
 
     for i in iterable:
-        site = site_class(save_response_fn=save_response_fn)
-        # Empty pages are expected during historical backscrapes, so don't
-        # let no_results_warning log an error for this court.
-        site.should_have_results = False
-        try:
-            await site._download_backwards(i)
+        async with site_class(save_response_fn=save_response_fn) as site:
+            # Empty pages are expected during historical backscrapes, so don't
+            # let no_results_warning log an error for this court.
+            site.should_have_results = False
+            try:
+                await site._download_backwards(i)
+            except HTTPError:
+                logger.debug("%s", traceback.format_exc())
+                continue
             yield site
-        except HTTPError:
-            logger.debug("%s", traceback.format_exc())
-            continue
