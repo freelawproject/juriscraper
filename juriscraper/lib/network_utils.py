@@ -1,13 +1,31 @@
 import asyncio
 import random
+from collections.abc import Mapping
 from datetime import datetime
-from typing import Any
+from typing import TYPE_CHECKING
 
-from httpx import AsyncClient
+from httpx import Response
+from pydantic import TypeAdapter
 
+from juriscraper.lib.acms_types import (
+    CASE_DETAILS,
+    DOCKET_INFO,
+    DOCUMENTS,
+    MERGE_REQUEST,
+    MERGE_STATUS,
+    AcmsCaseDetails,
+    AcmsDocketInfo,
+    AcmsDocument,
+)
 from juriscraper.lib.log_tools import make_default_logger
 
+if TYPE_CHECKING:
+    from juriscraper.pacer.http import PacerSession
+
 logger = make_default_logger()
+
+_API_OBJECT = TypeAdapter(dict[str, object])
+_API_OBJECTS = TypeAdapter(list[dict[str, object]])
 
 
 async def add_delay(delay: int = 0, deviation: int = 0) -> None:
@@ -38,14 +56,14 @@ class AcmsApiClient:
     MERGE_PDF_ENDPOINT = "MergePDFFiles/"
     GET_PDF_ENDPOINT = "GetMergedFile/"
 
-    def __init__(self, session: AsyncClient, court_id: str):
+    def __init__(self, session: "PacerSession | None", court_id: str) -> None:
         self.session = session
         self.court_id = court_id
         self.base_url = self.BASE_URL_TEMPLATE.format(court_id=self.court_id)
 
     def _map_case_details_response(
-        self, raw_data: dict[str, Any]
-    ) -> dict[str, Any]:
+        self, raw_data: Mapping[str, object]
+    ) -> AcmsCaseDetails:
         """
         Maps the raw API response for case details to a standardized dictionary
         format.
@@ -57,6 +75,17 @@ class AcmsApiClient:
         :param raw_data: The raw dictionary response from the case details API.
         :return: A dictionary containing the mapped case details.
         """
+        raw_byte_count = raw_data.get("byteCount")
+        if (
+            raw_byte_count is None
+            or raw_byte_count == ""
+            or raw_byte_count == 0
+        ):
+            byte_count = None
+        elif isinstance(raw_byte_count, str | int | float):
+            byte_count = int(raw_byte_count)
+        else:
+            raise ValueError("ACMS byte count must be numeric")
         case_details = {
             "caseId": raw_data.get("pcx_caseid"),
             "caseNumber": raw_data.get("pcx_casenumber"),
@@ -69,56 +98,37 @@ class AcmsApiClient:
             "decisionDate": raw_data.get("acms_decisiondate"),
             "partyAttorneyList": raw_data.get("acms_partyattorneylist"),
             "shortCaption": raw_data.get("acms_raw_html"),
-            "caseType": (
-                raw_data["pcx_casetype"].get("pcx_casetypename")
-                if raw_data.get("pcx_casetype")
-                else None
-            ),
-            "caseSubType": (
-                raw_data["pcx_casesubtype"].get("pcx_casesubtypename")
-                if raw_data.get("pcx_casesubtype")
-                else None
-            ),
-            "caseSubSubType": (
-                raw_data["pcx_casesubsubtype"].get("pcx_casesubsubtypename")
-                if raw_data.get("pcx_casesubsubtype")
-                else None
-            ),
-            "districtCourtName": (
-                raw_data["acms_DistrictCourt"].get("pcx_districtname")
-                if raw_data.get("acms_DistrictCourt")
-                else None
-            ),
-            "feeStatus": (
-                raw_data["acms_feestatusid"].get("acms_feestatusname")
-                if raw_data.get("acms_feestatusid")
-                else None
-            ),
-            "byteCount": (
-                int(raw_data.get("byteCount"))
-                if raw_data.get("byteCount")
-                else None
-            ),
-            "natureOfSuit": (
-                raw_data["acms_NatureofSuit"].get("acms_name")
-                if raw_data.get("acms_NatureofSuit")
-                else None
-            ),
+            "byteCount": byte_count,
         }
+        for name, key, field in (
+            ("caseType", "pcx_casetype", "pcx_casetypename"),
+            ("caseSubType", "pcx_casesubtype", "pcx_casesubtypename"),
+            ("caseSubSubType", "pcx_casesubsubtype", "pcx_casesubsubtypename"),
+            ("districtCourtName", "acms_DistrictCourt", "pcx_districtname"),
+            ("feeStatus", "acms_feestatusid", "acms_feestatusname"),
+            ("natureOfSuit", "acms_NatureofSuit", "acms_name"),
+        ):
+            value = raw_data.get(key)
+            case_details[name] = (
+                _API_OBJECT.validate_python(value, strict=True).get(field)
+                if value is not None
+                else None
+            )
 
-        if raw_data.get("pcx_court"):
+        if bool(raw_data.get("pcx_court")):
+            court = _API_OBJECT.validate_python(
+                raw_data["pcx_court"], strict=True
+            )
             case_details["court"] = {
-                "name": raw_data["pcx_court"].get("pcx_name"),
-                "abbreviatedName": raw_data["pcx_court"].get(
-                    "acms_abbreviatedname"
-                ),
+                "name": court.get("pcx_name"),
+                "abbreviatedName": court.get("acms_abbreviatedname"),
             }
 
-        return case_details
+        return CASE_DETAILS.validate_python(case_details, strict=True)
 
     def _map_docket_entries_response(
-        self, raw_data: dict[str, Any]
-    ) -> dict[str, Any]:
+        self, raw_data: Mapping[str, object]
+    ) -> AcmsDocketInfo:
         """
         Maps the raw API response for docket entry details to a standardized
         format.
@@ -126,22 +136,34 @@ class AcmsApiClient:
         :param raw_data: The raw dictionary response from the docket entries API
         :return: A dictionary containing the mapped data for entries.
         """
+        raw_byte_count = raw_data.get("byteCount")
+        if (
+            raw_byte_count is None
+            or raw_byte_count == ""
+            or raw_byte_count == 0
+        ):
+            byte_count = None
+        elif isinstance(raw_byte_count, str | int | float):
+            byte_count = int(raw_byte_count)
+        else:
+            raise ValueError("ACMS byte count must be numeric")
         docket_info = {
             "isCaseSealed": raw_data.get("isCaseSealed"),
             "isUserCaseParticipant": raw_data.get("isUserCaseParticipant"),
-            "byteCount": (
-                int(raw_data.get("byteCount"))
-                if raw_data.get("byteCount")
-                else None
-            ),
+            "byteCount": byte_count,
         }
 
         entries = []
-        for row in raw_data.get("matchingDocketEntries", []):
+        for row in _API_OBJECTS.validate_python(
+            raw_data.get("matchingDocketEntries", []), strict=True
+        ):
+            end_date: object = row.get("pcx_enddate")
+            if not isinstance(end_date, str):
+                raise ValueError("An ACMS docket entry must have an end date.")
             entry_data = {
                 "endDate": row.get("pcx_enddate"),
                 "endDateFormatted": datetime.strptime(
-                    row.get("pcx_enddate"), "%Y-%m-%d"
+                    end_date, "%Y-%m-%d"
                 ).strftime("%m/%d/%Y"),
                 "entryNumber": row.get("pcx_entrynumber"),
                 "docketEntryText": row.get("pcx_eventdescription"),
@@ -158,11 +180,11 @@ class AcmsApiClient:
             entries.append(entry_data)
 
         docket_info["docketEntries"] = entries
-        return docket_info
+        return DOCKET_INFO.validate_python(docket_info, strict=True)
 
     def _map_docket_entry_document(
-        self, raw_doc_data: dict[str, Any]
-    ) -> dict[str, Any]:
+        self, raw_doc_data: Mapping[str, object]
+    ) -> dict[str, object]:
         """
         Maps a raw dictionary representing a docket entry document to a
         standardized format.
@@ -173,7 +195,7 @@ class AcmsApiClient:
         :return: A dictionary containing the mapped document details.
                 Returns an empty dictionary if raw_doc_data is None or empty.
         """
-        if not raw_doc_data:
+        if not bool(raw_doc_data):
             return {}
 
         return {
@@ -196,7 +218,7 @@ class AcmsApiClient:
             "searchTransaction": raw_doc_data.get("searchTransaction"),
         }
 
-    async def get_case_details(self, case_id: str) -> dict[str, Any]:
+    async def get_case_details(self, case_id: str) -> AcmsCaseDetails:
         """
         Fetches and maps case details for a given case ID.
 
@@ -206,11 +228,13 @@ class AcmsApiClient:
         path = self.CASE_DETAILS_ENDPOINT.format(case_id=case_id)
         url = f"{self.base_url}{path}"
         logger.info(f"Fetching case details from: {url}")
+        if self.session is None:
+            raise ValueError("A PACER session is required for ACMS API calls.")
         response = await self.session.get(url)
         response.raise_for_status()
         return self._map_case_details_response(response.json())
 
-    async def get_docket_entries(self, case_id: str) -> dict[str, Any]:
+    async def get_docket_entries(self, case_id: str) -> AcmsDocketInfo:
         """
         Fetches and maps docket entry details for a given case ID.
 
@@ -220,11 +244,14 @@ class AcmsApiClient:
         path = self.DOCKET_ENTRIES_ENDPOINT.format(case_id=case_id)
         url = f"{self.base_url}{path}"
         logger.info(f"Fetching docket entries from: {url}")
-        response = await self.session.post(
+        session = self.session
+        if session is None:
+            raise ValueError("A PACER session is required for ACMS API calls.")
+        response = await session.post(
             url,
             json={
-                "csoId": self.session.acms_user_data["CsoId"],
-                "contactType": self.session.acms_user_data["ContactType"],
+                "csoId": session.acms_user_data["CsoId"],
+                "contactType": session.acms_user_data["ContactType"],
             },
         )
         response.raise_for_status()
@@ -235,7 +262,7 @@ class AcmsApiClient:
         docket_entry_id: str,
         is_case_participant: bool,
         is_restricted_party_filing_entry: bool,
-    ) -> list[dict[str, Any]]:
+    ) -> list[AcmsDocument]:
         """
         Fetches and maps attachments for a specific docket entry.
 
@@ -251,6 +278,8 @@ class AcmsApiClient:
         path = self.ATTACHMENTS_ENDPOINT.format(entry_id=docket_entry_id)
         url = f"{self.base_url}{path}"
         logger.info(f"Fetching attachment from: {url}")
+        if self.session is None:
+            raise ValueError("A PACER session is required for ACMS API calls.")
         response = await self.session.post(
             url,
             json={
@@ -263,10 +292,11 @@ class AcmsApiClient:
         if not raw_attachments:
             return []
 
-        return [
+        documents = [
             self._map_docket_entry_document(attachment)
             for attachment in raw_attachments
         ]
+        return DOCUMENTS.validate_python(documents, strict=True)
 
     async def download_pdf(
         self,
@@ -275,7 +305,7 @@ class AcmsApiClient:
         document_url: str,
         max_attempts: int = 90,
         poll_interval: float = 1.0,
-    ):
+    ) -> Response:
         """
         Requests generation and download of a merged PDF from the remote API.
 
@@ -308,22 +338,29 @@ class AcmsApiClient:
             ],
         }
         # Step 1: Request PDF merge operation
-        response = await self.session.post(merge_pdf_path, json=body)
+        session = self.session
+        if session is None:
+            raise ValueError("A PACER session is required for ACMS API calls.")
+        response = await session.post(merge_pdf_path, json=body)
         response.raise_for_status()
-        data = response.json()
+        data = MERGE_REQUEST.validate_json(response.content, strict=True)
 
         # Extract URL to check merge job status
         status_url = data["statusQueryGetUri"]
 
         # Step 2: Poll until the merge job is completed or timeout
         for _ in range(max_attempts):
-            response = await self.session.get(status_url)
+            response = await session.get(status_url)
             response.raise_for_status()
-            data = response.json()
-            status = data["runtimeStatus"].lower()
+            job = MERGE_STATUS.validate_json(response.content, strict=True)
+            status = job["runtimeStatus"].lower()
 
             if status == "completed":
-                pdf_id = data["output"]
+                pdf_id = job.get("output")
+                if not bool(pdf_id):
+                    raise ValueError(
+                        "Completed ACMS merge job has no file ID."
+                    )
                 break
 
             await asyncio.sleep(poll_interval)
@@ -334,6 +371,6 @@ class AcmsApiClient:
             )
 
         # Step 3: Retrieve the merged PDF by its file ID
-        response = await self.session.get(f"{get_pdf_path}?fileGuid={pdf_id}")
+        response = await session.get(f"{get_pdf_path}?fileGuid={pdf_id}")
         response.raise_for_status()
         return response

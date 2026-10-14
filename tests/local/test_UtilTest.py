@@ -7,9 +7,9 @@ from juriscraper.lib.utils import clean_court_object, previous_and_next
 
 
 class UtilTest(unittest.TestCase):
-    def test_clean_court_object(self):
+    def test_clean_court_object(self) -> None:
         unclean_str = "1,  2, 3,4  ,5  ,  6 "
-        unclean_dict: dict = {
+        unclean_dict: dict[str, object] = {
             "string": unclean_str,
             "array": [
                 unclean_str,
@@ -26,7 +26,7 @@ class UtilTest(unittest.TestCase):
             },
             "other": 1,
         }
-        unclean_list: list = [
+        unclean_list: list[object] = [
             unclean_str,
             {
                 "string": unclean_str,
@@ -35,7 +35,7 @@ class UtilTest(unittest.TestCase):
         ]
 
         clean_str = "1, 2, 3,4,5, 6"
-        clean_dict: dict = {
+        clean_dict: dict[str, object] = {
             "string": clean_str,
             "array": [
                 clean_str,
@@ -52,7 +52,7 @@ class UtilTest(unittest.TestCase):
             },
             "other": 1,
         }
-        clean_list: list = [
+        clean_list: list[object] = [
             clean_str,
             {
                 "string": clean_str,
@@ -65,7 +65,7 @@ class UtilTest(unittest.TestCase):
         self.assertEqual(clean_court_object(unclean_list), clean_list)
         self.assertEqual(clean_court_object(1234), 1234)
 
-    def test_previous_and_next(self):
+    def test_previous_and_next(self) -> None:
         input = [1, 2, 3, 4]
 
         expected = [

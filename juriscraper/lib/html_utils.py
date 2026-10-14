@@ -1,7 +1,8 @@
 #!/usr/bin/env python
+from __future__ import annotations
+
 import re
 from copy import deepcopy
-from typing import cast
 from urllib.parse import urlsplit, urlunsplit
 
 import nh3
@@ -41,15 +42,17 @@ ALLOWED_TAGS.add("input")
 ALLOWED_TAGS.add("script")
 
 
-def get_xml_parsed_text(text):
+def get_xml_parsed_text(text: str | bytes) -> etree._Element:
     return etree.fromstring(text)
 
 
-def get_html_parsed_text(text):
+def get_html_parsed_text(text: str | bytes) -> HtmlElement:
     return html.fromstring(text)
 
 
-def get_html_from_element(element):
+def get_html_from_element(
+    element: HtmlElement | etree._ElementTree[HtmlElement],
+) -> bytes:
     return tostring(element)
 
 
@@ -79,10 +82,10 @@ def get_table_column_text(
     path_base: str | None = None,
     table_id: str = "",
 ) -> list[str]:
-    table = f"table[@id='{table_id}']" if table_id else "table"
+    table = f"table[@id='{table_id}']" if bool(table_id) else "table"
     path_cell = "//%s//tr/td[%d]" % (table, cell_num)
     path = path_base + path_cell if path_base is not None else path_cell
-    cells = cast(list[HtmlElement], html.xpath(path))
+    cells: list[HtmlElement] = html.xpath(path)
     return [cell.text_content().strip() for cell in cells]
 
 
@@ -92,10 +95,11 @@ def get_table_column_links(
     path_base: str | None = None,
     table_id: str = "",
 ) -> list[str]:
-    table = f"table[@id='{table_id}']" if table_id else "table"
+    table = f"table[@id='{table_id}']" if bool(table_id) else "table"
     path_cell = "//%s//tr/td[%d]//a/@href" % (table, cell_num)
-    path = path_base + path_cell if path_base else path_cell
-    return cast(list[str], html.xpath(path))
+    path = path_base + path_cell if bool(path_base) else path_cell
+    texts: list[str] = html.xpath(path)
+    return texts
 
 
 def get_row_column_text(row: HtmlElement, cell_num: int) -> str:
@@ -105,7 +109,7 @@ def get_row_column_text(row: HtmlElement, cell_num: int) -> str:
     :param cell_num: int
     :return: string
     """
-    cells = cast(list[HtmlElement], row.xpath(".//td[%d]" % cell_num))
+    cells: list[HtmlElement] = row.xpath(".//td[%d]" % cell_num)
     return cells[0].text_content().strip()
 
 
@@ -119,7 +123,8 @@ def get_row_column_links(row: HtmlElement, cell_num: int) -> str:
     :param cell_num: int
     :return: string
     """
-    return cast(list[str], row.xpath(".//td[%d]//a/@href" % cell_num))[0]
+    link: str = row.xpath(".//td[%d]//a/@href" % cell_num)[0]
+    return link
 
 
 def strip_bad_html_tags_insecure(
@@ -137,9 +142,8 @@ def strip_bad_html_tags_insecure(
     :return: the cleaned HTML tree
     """
 
-    assert isinstance(text, str), (
-        f"`text` must be of type str, but is of type {type(text)}."
-    )
+    if not isinstance(text, str):
+        raise TypeError(f"`text` must be str, not {type(text)}")
 
     clean_content_tags = {"style"}
     if remove_scripts:
@@ -162,42 +166,29 @@ def strip_bad_html_tags_insecure(
 
 def get_visible_text(html_content: str) -> str:
     html_tree = html.fromstring(html_content)
-    text = cast(
-        list[str],
-        html_tree.xpath(
-            """//text()[normalize-space() and not(parent::style |
+    text: list[str] = html_tree.xpath(
+        """//text()[normalize-space() and not(parent::style |
                                                                  parent::link |
                                                                  parent::head |
-                                                                 parent::script)]"""
-        ),
+                                                                 parent::script)]""",
     )
     return " ".join(text)
 
 
-def set_response_encoding(request):
+def set_response_encoding(request: Response | None) -> None:
     """Set the encoding if it isn't set already.
 
     Use charset-normalizer for added performance.
     """
-    if request:
+    if bool(request):
         # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
         if request.encoding == "ISO-8859-1":
             request.encoding = "cp1252"
 
         if request.encoding is None:
-            # Requests detects the encoding when the item is GET'ed using
-            # HTTP headers, and then when r.text is accessed, if the
-            # encoding hasn't been set by that point. By setting the
-            # encoding here, we ensure that it's done by charset-normalizer,
-            # if it hasn't been done with HTTP headers. This way it is done
-            # before r.text is accessed (which would do it with vanilla
-            # chardet). This is a big performance boon, and can be removed
-            # once requests is upgraded
-            if isinstance(request.content, str):
-                as_bytes = request.content.encode()
-                request.encoding = chardet.detect(as_bytes)["encoding"]
-            else:
-                request.encoding = chardet.detect(request.content)["encoding"]
+            encoding = chardet.detect(request.content)["encoding"]
+            if encoding is not None:
+                request.encoding = encoding
 
 
 def clean_html(text: str) -> str:
@@ -285,7 +276,10 @@ def fix_links_in_lxml_tree(link: str, keep_anchors: bool = False) -> str:
 def is_html(response: Response) -> bool:
     """Determines whether the item downloaded is an HTML document or something
     else."""
-    return "text/html" in response.headers.get("content-type", "")
+    return (
+        "content-type" in response.headers
+        and "text/html" in response.headers["content-type"]
+    )
 
 
 def table_to_array2d(table: HtmlElement) -> list[list[HtmlElement]]:
@@ -298,7 +292,9 @@ def table_to_array2d(table: HtmlElement) -> list[list[HtmlElement]]:
     """
 
     # Use direct children only to avoid picking up nested tables.
-    rows = table.findall("./tr") or table.findall("./tbody/tr")
+    rows = table.findall("./tr")
+    if not bool(rows):
+        rows = table.findall("./tbody/tr")
 
     out = []
     for row in rows:
@@ -321,19 +317,14 @@ def parse_table(table: HtmlElement) -> dict[str, list[HtmlElement]]:
     #  would be useful.
     headers = [
         clean_string(th.text_content())
-        for th in cast(list[HtmlElement], table.xpath(".//thead//th"))
+        for th in table.findall("./thead/tr/th")
     ]
-    if len(headers) == 0:
-        headers = list(
-            map(str, range(len(table.find(".//tr").findall(".//td"))))
-        )
-        rows = table.findall("./tr")
-    else:
-        rows = table.findall("./tbody/tr")
-    columns = {header: [] for header in headers}
+    rows = table_to_array2d(table)
+    if not bool(headers) and bool(rows):
+        headers = [str(i) for i in range(len(rows[0]))]
+    columns: dict[str, list[HtmlElement]] = {header: [] for header in headers}
 
-    for row in rows:
-        cells = cast(list[HtmlElement], row.xpath("./td"))
+    for cells in rows:
         for header, cell in zip(headers, cells):
             columns[header].append(cell)
 
@@ -348,4 +339,4 @@ def get_all_text(element: HtmlElement) -> str:
 
     :returns: Text content of the element and its children.
     """
-    return "".join(cast(list[str], element.xpath(".//text()")))
+    return element.text_content()

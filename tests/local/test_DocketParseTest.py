@@ -3,8 +3,11 @@ import os
 import sys
 import time
 import unittest
+from collections.abc import Sequence
 
 import jsondate3 as json
+from pydantic import TypeAdapter
+from typing_extensions import override
 
 from juriscraper.lib.test_utils import warn_or_crash_slow_parser
 from juriscraper.pacer import DocketReport
@@ -18,14 +21,19 @@ TESTS_ROOT_EXAMPLES_PACER_DOCKET = os.path.join(
 class DocketParseTest(unittest.TestCase):
     """Lots of docket parsing tests."""
 
-    def setUp(self):
+    @override
+    def setUp(self) -> None:
         self.maxDiff = 200000
 
     def run_parsers_on_path(
         self,
-        path_root,
-        required_fields=("date_filed", "case_name", "docket_number"),
-    ):
+        path_root: str | os.PathLike[str],
+        required_fields: Sequence[str] = (
+            "date_filed",
+            "case_name",
+            "docket_number",
+        ),
+    ) -> None:
         """Test all the parsers, faking the network query."""
         paths = []
         for root, _, filenames in os.walk(path_root):
@@ -46,6 +54,7 @@ class DocketParseTest(unittest.TestCase):
                 with open(path, "rb") as f:
                     report._parse_text(f.read().decode("utf-8"))
                 data = report.data
+                assert isinstance(data, dict)
 
                 if data != {}:
                     # If the docket is a valid docket, make sure some required
@@ -60,15 +69,20 @@ class DocketParseTest(unittest.TestCase):
                     self.assertEqual(data["court_id"], court)
 
                     # Party-specific tests...
-                    for party in data["parties"]:
+                    parties = data["parties"]
+                    assert isinstance(parties, list)
+                    for party in parties:
+                        assert isinstance(party, dict)
+                        name: object = party.get("name")
+                        assert isinstance(name, str)
                         self.assertTrue(
-                            party.get("name", False),
+                            name,
                             msg="Every party must have a name attribute. Did not "
                             "get a value for:\n\n%s" % party,
                         )
                         # Protect against effed up adversary proceedings cases that
                         # don't parse properly. See: cacb, 2:08-ap-01570-BB
-                        self.assertNotIn("----", party["name"])
+                        self.assertNotIn("----", name)
 
                 if not os.path.isfile(json_path):
                     bar = "*" * 50
@@ -84,7 +98,9 @@ class DocketParseTest(unittest.TestCase):
                         continue
 
                 with open(json_path) as f:
-                    j = json.load(f)
+                    j = TypeAdapter(dict[str, object]).validate_python(
+                        json.load(f), strict=True
+                    )
                     if j != {}:
                         # Compare docket entries and parties first, for easier
                         # debugging, then compare whole objects to be sure.
@@ -99,17 +115,17 @@ class DocketParseTest(unittest.TestCase):
                 warn_or_crash_slow_parser(duration, max_duration=1)
                 sys.stdout.write(f"✓ - {t2 - t1:0.1f}s\n")
 
-    def test_bankruptcy_court_dockets(self):
+    def test_bankruptcy_court_dockets(self) -> None:
         path_root = os.path.join(
             TESTS_ROOT_EXAMPLES_PACER_DOCKET, "bankruptcy"
         )
         self.run_parsers_on_path(path_root)
 
-    def test_district_court_dockets(self):
+    def test_district_court_dockets(self) -> None:
         path_root = os.path.join(TESTS_ROOT_EXAMPLES_PACER_DOCKET, "district")
         self.run_parsers_on_path(path_root)
 
-    def test_fakerss_court_dockets(self):
+    def test_fakerss_court_dockets(self) -> None:
         path_root = os.path.join(TESTS_ROOT_EXAMPLES_PACER_DOCKET, "fake-rss")
         self.run_parsers_on_path(
             path_root,
@@ -119,11 +135,11 @@ class DocketParseTest(unittest.TestCase):
             ],
         )
 
-    def test_specialty_court_dockets(self):
+    def test_specialty_court_dockets(self) -> None:
         path_root = os.path.join(TESTS_ROOT_EXAMPLES_PACER_DOCKET, "special")
         self.run_parsers_on_path(path_root)
 
-    def test_not_docket_dockets(self):
+    def test_not_docket_dockets(self) -> None:
         path_root = os.path.join(
             TESTS_ROOT_EXAMPLES_PACER_DOCKET, "not_dockets"
         )

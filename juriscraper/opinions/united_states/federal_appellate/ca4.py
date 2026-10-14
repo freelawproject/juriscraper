@@ -1,19 +1,48 @@
 import re
 from datetime import date, datetime
+from typing import Literal
 
 from dateutil.relativedelta import relativedelta
-from typing_extensions import override
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import BackscrapeOptions, RawOpinion
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class _Fields(TypedDict):
+    teaser: str | None
+    title: str
+    url: str
+
+
+class _Result(TypedDict):
+    line1: str
+    line2: str
+    fieldMap: _Fields
+
+
+class _Search(TypedDict):
+    resultSet: list[dict[str, object]]
+
+
+_search_adapter = TypeAdapter(_Search)
+_result_adapter = TypeAdapter(_Result)
+
+
+class Site(OpinionSiteLinear[str]):
     oldest_opinion = "2002-03-20"
     court_name = "United States Court of Appeals for the Fourth Circuit"
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[str]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.url = "https://www.govinfo.gov/wssearch/search"
         self.court_id = self.__module__
         self.method = "POST"
@@ -28,14 +57,23 @@ class Site(OpinionSiteLinear):
         self.update_parameters()
         self.make_backscrape_iterable(kwargs)
 
-    def make_backscrape_iterable(self, kwargs: dict[str, str]) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """Make back scrape iterable
 
         :param kwargs: the back scraping params
         :return: None
         """
-        start_str = kwargs.get("backscrape_start", self.oldest_opinion)
-        end_str = kwargs.get("backscrape_end", self.end)
+        start_str = (
+            backscrape_start_value
+            if bool(backscrape_start_value := kwargs.get("backscrape_start"))
+            else self.oldest_opinion
+        )
+        end_str = (
+            backscrape_end_value
+            if bool(backscrape_end_value := kwargs.get("backscrape_end"))
+            else self.end
+        )
 
         start_date = datetime.strptime(start_str, "%Y-%m-%d").date()
         end_date = datetime.strptime(end_str, "%Y-%m-%d").date()
@@ -56,8 +94,13 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
-        for row in self.html["resultSet"]:
-            line2 = row.get("line2")
+        response = _search_adapter.validate_python(self.html, strict=True)
+        for result in response["resultSet"]:
+            line2 = result["line2"]
+            if not isinstance(line2, str):
+                raise TypeError(
+                    "The search result description must be a string"
+                )
             if (
                 "OPINION" not in line2
                 or "day, " not in line2
@@ -66,13 +109,14 @@ class Site(OpinionSiteLinear):
                 logger.debug("Skipping %s", line2)
                 continue
 
-            teaser = row.get("fieldMap").get("teaser")
+            row = _result_adapter.validate_python(result, strict=True)
+            teaser = row["fieldMap"]["teaser"]
             metadata = self.extract_metadata(teaser)
             is_published = " PUBLISHED" in line2
-            case = {
+            case: RawOpinion = {
                 "docket": row["line1"].split()[0],
-                "name": row.get("fieldMap").get("title"),
-                "url": row.get("fieldMap").get("url"),
+                "name": row["fieldMap"]["title"],
+                "url": row["fieldMap"]["url"],
                 "date": row["line2"].split("day, ")[1].strip("."),
                 "status": "Published" if is_published else "Unpublished",
                 "per_curiam": "PER CURIAM" in line2,
@@ -80,7 +124,7 @@ class Site(OpinionSiteLinear):
             case.update(metadata)
             self.cases.append(case)
 
-    def extract_metadata(self, teaser: str) -> dict[str, str]:
+    def extract_metadata(self, teaser: str | None) -> RawOpinion:
         """Extract out various metadata fields
 
         Method leaves in a few regex patterns that we do not currently support
@@ -89,9 +133,11 @@ class Site(OpinionSiteLinear):
         :param teaser: The teaser line provided in some opinions
         :return: Extracted data
         """
-        if not teaser:
+        if not bool(teaser):
             return {"lower_court": "", "lower_court_number": ""}
-        patterns = {
+        patterns: dict[
+            Literal["lower_court", "lower_court_number"], re.Pattern[str]
+        ] = {
             "lower_court": re.compile(
                 r"""
                 (?:
@@ -119,10 +165,10 @@ class Site(OpinionSiteLinear):
             #     r"Amended:\s*(?P<amended_date>[A-Z][a-z]+ \d{1,2}, \d{4})"),
             # "panel_str": re.compile(r"Before\s+(?P<panel_str>[^.]+)"),
         }
-        metadata: dict[str, str] = {}
+        metadata: RawOpinion = {}
         for name, pat in patterns.items():
             m = pat.search(teaser)
-            match = m.group(name) if m else ""
+            match = m.group(name) if m is not None else ""
             if (
                 match.strip()
                 == "United States District Court for the Southern District of West"
@@ -131,7 +177,7 @@ class Site(OpinionSiteLinear):
             metadata[name] = match
         return metadata
 
-    def update_parameters(self):
+    def update_parameters(self) -> None:
         """Update the date range parameter"""
 
         self.request["parameters"]["json"] = {
@@ -142,7 +188,8 @@ class Site(OpinionSiteLinear):
             "sortBy": "2",  # 2 -> newest to oldest
         }
 
-    async def _download_backwards(self, date_range) -> None:
+    @override
+    async def _download_backwards(self, date_range: str) -> None:
         """Download backward
 
         :param date_range: the date range as a string

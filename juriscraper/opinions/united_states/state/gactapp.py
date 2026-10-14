@@ -8,19 +8,26 @@
 from datetime import date, datetime, timedelta
 
 from dateutil.relativedelta import relativedelta
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import BackscrapeOptions
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[str]):
     first_opinion_date = date(2012, 3, 30)
     days_interval = 7
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[str]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         today = date.today()
         last_week = today - timedelta(days=7)
@@ -37,9 +44,16 @@ class Site(OpinionSiteLinear):
 
     @override
     def _process_html(self) -> None:
-        for row in self.html.xpath("//tr")[::-1][:-1]:
-            docket, name, date_el, disposition, _, url_el = row.xpath(".//td")
-            url = url_el.xpath(".//a")[0].get("href")
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath("//tr")[::-1][:-1]
+        for row in rows:
+            docket, name, date_el, disposition, _, url_el = row.findall(
+                ".//td"
+            )
+            url = url_el.findall(".//a")[0].attrib["href"]
             if url == "https://efast.gaappeals.gov/download?filingId=":
                 logger.error("Skipping doc with empty filingId: %s", url)
                 continue
@@ -53,6 +67,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     async def _download_backwards(self, date_range: str) -> None:
         """Backscrape one weekly date range (start,end)."""
         start, end = date_range.split(",")
@@ -64,12 +79,13 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs: dict[str, str]) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """Generate weekly date ranges from backscrape_start → backscrape_end."""
         start_str = kwargs.get("backscrape_start")
         end_str = kwargs.get("backscrape_end")
 
-        if not start_str or not end_str:
+        if not bool(start_str) or not bool(end_str):
             # Default: scrape past 6 months
             end_date = date.today()
             start_date = end_date - relativedelta(months=6)

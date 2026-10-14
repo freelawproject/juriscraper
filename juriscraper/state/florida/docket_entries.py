@@ -1,5 +1,6 @@
+from collections.abc import Mapping
 from datetime import date, datetime
-from typing import Annotated, Any, ClassVar
+from typing import Annotated, ClassVar
 
 from pydantic import (
     UUID4,
@@ -63,7 +64,7 @@ FLORIDA_DOCKET_ENTRY_TYPE_MAP: dict[str, DocketEntryType] = {
 
 
 def florida_entry_type_validator(
-    value: Any, info: ValidationInfo
+    value: object, info: ValidationInfo
 ) -> DocketEntryType:
     """
     Validates and converts a Florida docket entry type string to a
@@ -74,8 +75,10 @@ def florida_entry_type_validator(
 
     :return: The corresponding DocketEntryType enum value.
     """
-    if info.context and info.context.get("deserialize"):
-        return value
+    if isinstance(info.context, Mapping) and bool(
+        info.context.get("deserialize")
+    ):
+        return DocketEntryType(value)
     s = str(value).lower()
     if s not in FLORIDA_DOCKET_ENTRY_TYPE_MAP:
         logger.error("Unrecognized Florida docket entry type: %s", s)

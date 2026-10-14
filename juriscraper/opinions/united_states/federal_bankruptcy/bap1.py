@@ -13,19 +13,19 @@ History:
 import calendar
 import re
 from datetime import date
-from typing import Any
 from urllib.parse import urlencode
 
 from lxml.html import HtmlElement
-from typing_extensions import override
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
 from juriscraper.lib.exceptions import SkipRowError
-from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.lib.string_utils import CaseNameTweaker, convert_date_string
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[tuple[date, date]]):
     days_interval = 7
     lower_court_to_abbreviation = {
         "USBC - District of New Hampshire": "NH",
@@ -46,14 +46,20 @@ class Site(OpinionSiteLinear):
     }
     # See issue #828 for mapper extraction reference
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.url = "https://www.bap1.uscourts.gov/bapopn"
         self.first_opinion_date = date(2001, 9, 7)
         self.make_backscrape_iterable(kwargs)
         self.court_id = self.__module__
         self.should_have_results = True
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Method used by backscraper to download historical records
 
@@ -84,7 +90,12 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
-        for row in self.html.xpath("//tr[td]")[::-1]:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath("//tr[td]")[::-1]
+        for row in rows:
             docket_string = self.get_text_by_xpath(row, "td[1]")
 
             try:
@@ -95,7 +106,11 @@ class Site(OpinionSiteLinear):
             partial_docket_number = self.get_text_by_xpath(row, "td[2]")
             date_placeholder = self.get_text_by_xpath(row, "td[3]")
             lower_court = self.get_text_by_xpath(row, "td[4]/span")
-            name = row.xpath("td[4]")[0].text.strip()
+            name = (
+                text_value
+                if (text_value := row.findall("td[4]")[0].text) is not None
+                else ""
+            ).strip()
 
             docket = self.build_full_docket_number(
                 partial_docket_number, lower_court
@@ -161,9 +176,11 @@ class Site(OpinionSiteLinear):
         :param xpath: xpath string
         :return: stripped text content
         """
-        return html_element.xpath(xpath)[0].text_content().strip()
+        text: str = html_element.xpath(xpath)[0].text_content().strip()
+        return text
 
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract Date Filed from text
 
         :param scraped_text: Text of scraped content
@@ -172,14 +189,17 @@ class Site(OpinionSiteLinear):
         """
         months = "|".join(calendar.month_name[1:])
         date_pattern = re.compile(rf"({months})\s+\d{{1,2}}\s?,?\s+\d{{4}}")
-        if match := re.search(date_pattern, scraped_text):
+        if (match := re.search(date_pattern, scraped_text)) is not None:
             date_filed = re.sub(r"\s+", " ", match.group(0)).strip()
         else:
             return {}
 
-        metadata = {
+        parsed_date = convert_date_string(date_filed)
+        if parsed_date is None:
+            return {}
+        metadata: ExtractedMetadata = {
             "OpinionCluster": {
-                "date_filed": convert_date_string(date_filed),
+                "date_filed": parsed_date,
             },
         }
         return metadata

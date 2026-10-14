@@ -12,13 +12,16 @@ import re
 from datetime import datetime
 
 from lxml import html
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import BackscrapeOptions
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[int]):
     start_year = 1998
     current_year = datetime.today().year
     court = "sc"
@@ -31,8 +34,13 @@ class Site(OpinionSiteLinear):
     )
     pattern = r"(?P<name>.*?)(?:[\s,]+\s*(?P<cite>\d+\s+NC(?:\s+App)?\s+\d+))?\s*\(\s*(?P<docket>[^\s]+)\s*-\s*(?P<status>[^)]+)\s*\)"
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[int]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.base_url = (
             "https://appellate.nccourts.org/opinion-filings/?c={}&year={}"
@@ -46,17 +54,29 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
-        for row in self.html.xpath(self.row_xpath):
-            title = row.xpath("string(span[@class='title'])")
-            links = row.xpath("span[@class='title']/@onclick")
-            summary = row.xpath("string(span[@class='desc'])")
-            if not links:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(self.row_xpath)
+        for row in rows:
+            title = row.find("span[@class='title']")
+            title = title.text_content() if title is not None else ""
+            links: list[str] = row.xpath("span[@class='title']/@onclick")
+            summary = row.find("span[@class='desc']")
+            summary = summary.text_content() if summary is not None else ""
+            if not bool(links):
                 logger.warning("No link for row %s", title)
                 continue
             url = links[0][13:-2].replace("http:", "https:")
             m = re.search(self.pattern, title)
+            if m is None:
+                raise ValueError(f"Could not parse opinion title: {title!r}")
             name, citation, docket, status = m.groups()
-            author = row.xpath("string(span[@class='author']/i)").strip()
+            author = row.find("span[@class='author']/i")
+            author = (
+                author.text_content().strip() if author is not None else ""
+            )
             per_curiam = author == "Per Curiam"
             date = self.extract_date(row)
             self.cases.append(
@@ -69,7 +89,7 @@ class Site(OpinionSiteLinear):
                     "url": url,
                     "date": date,
                     "summary": summary,
-                    "citation": citation or "",
+                    "citation": (citation if bool(citation) else ""),
                 }
             )
 
@@ -79,12 +99,16 @@ class Site(OpinionSiteLinear):
         :param row: row to process
         :return: date string
         """
-        date_block = row.xpath(self.date_xpath)[-1].text_content()
-        if match := re.search(self.date_regex, date_block):
+        date_block: str = row.xpath(self.date_xpath)[-1].text_content()
+        if (match := re.search(self.date_regex, date_block)) is not None:
             return match.group("date")
         # Second pattern for ncctapp unpublished opinions
-        return self.coa_rgx.search(date_block).group("date")
+        match = self.coa_rgx.search(date_block)
+        if match is None:
+            raise ValueError(f"Could not parse opinion date: {date_block!r}")
+        return match.group("date")
 
+    @override
     async def _download_backwards(self, year: int) -> None:
         """Build year URL and scrape
 
@@ -95,7 +119,8 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs: dict) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """Checks if backscrape start and end arguments have been passed
         by caller, and parses them accordingly
 
@@ -107,7 +132,7 @@ class Site(OpinionSiteLinear):
         start = kwargs.get("backscrape_start")
         end = kwargs.get("backscrape_end")
 
-        start = int(start) if start else self.start_year
-        end = int(end) + 1 if end else self.current_year
+        start = int(start) if bool(start) else self.start_year
+        end = int(end) + 1 if bool(end) else self.current_year
 
         self.back_scrape_iterable = range(start, end)

@@ -9,9 +9,15 @@ History:
     2021-12-10: URL changed to recent opinions page, satsuki-chan
 """
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.lib.string_utils import clean_if_py3, titlecase
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import (
+    CaseNameTweaker,
+    clean_if_py3,
+    titlecase,
+)
 from juriscraper.opinions.united_states.state import ariz
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -19,8 +25,13 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     extract_from_text = ariz.Site.extract_from_text
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         # Feeling down and tired of of your regular life? Check out this website.
         self.url = "https://www.appeals2.az.gov/ODSPlus/recentOpinionsHTML.cfm"
@@ -30,17 +41,24 @@ class Site(OpinionSiteLinear):
     @override
     def _process_html(self) -> None:
         path = "//table//a[contains(@href, '.pdf')]"
-        for item in self.html.xpath(path):
-            docket = item.xpath("./text()")[0]
-            url = item.xpath("./@href")[0]
-            names = item.xpath("./following::td[1]/*/text()")
-            if not names:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        items: list[HtmlElement] = self.html.xpath(path)
+        for item in items:
+            docket: str = item.xpath("./text()")[0]
+            url: str = item.xpath("./@href")[0]
+            names: list[str] = item.xpath("./following::td[1]/*/text()")
+            if not bool(names):
                 continue
             name = names[0]
             # Expected: "Opinion Filed: 10/13/2021"
-            date_string = item.xpath("./following::td[2]/text()")[0].strip()
+            date_string: str = item.xpath("./following::td[2]/text()")[
+                0
+            ].strip()
             date = clean_if_py3(date_string).rsplit(":", 1)[1].strip()
-            summary_list = item.xpath("./following::tr[1]//text()")
+            summary_list: list[str] = item.xpath("./following::tr[1]//text()")
             summary = "".join(summary_list).strip()
             self.cases.append(
                 {

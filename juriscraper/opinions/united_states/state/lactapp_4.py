@@ -10,23 +10,36 @@ import re
 from datetime import date, datetime
 
 from lxml.html import HtmlElement
-from typing_extensions import override
+from typing_extensions import Unpack, override
 
+from juriscraper.AbstractSite import RequestParameters, SiteOptions
 from juriscraper.lib.date_utils import unique_year_month
-from juriscraper.lib.string_utils import titlecase
-from juriscraper.lib.type_utils import OpinionType
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import (
+    BackscrapeOptions,
+    ExtractedCluster,
+    ExtractedDocket,
+    ExtractedMetadata,
+    ExtractedOpinion,
+    OpinionType,
+)
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[date]):
     first_opinion_date = datetime(1992, 1, 1)
     days_interval = 1
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[date]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.la4th.org/Default.aspx"
-        self.search_date = datetime.today()
+        self.search_date = date.today()
         self.make_backscrape_iterable(kwargs)
         self.status = "Published"
         self.parameters = {
@@ -42,23 +55,27 @@ class Site(OpinionSiteLinear):
 
         # XPath for the opinion results
         opinion_results_xpath = "//div[contains(@class, 'opinion-result')]"
-        results = self.html.xpath(opinion_results_xpath)
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        results: list[HtmlElement] = self.html.xpath(opinion_results_xpath)
 
         self.cases = []
         for result in results:
-            docket = result.xpath(".//strong/text()")[0]
-            name = (
+            docket: str = result.xpath(".//strong/text()")[0]
+            name: str = (
                 result.xpath(".//p[not(strong)]/text()")[0]
                 .replace(" VS. .", ".")
                 .strip()
             )
-            decree = result.xpath(
+            decree: str = result.xpath(
                 ".//p[strong[contains(text(), 'Decree')]]/text()"
             )[0]
-            date = result.xpath(
+            date: str = result.xpath(
                 ".//p[strong[contains(text(), 'Opinion Date')]]/text()"
             )[0]
-            download_url = result.xpath(
+            download_url: str = result.xpath(
                 ".//p/a[contains(text(), 'View Document')]/@href"
             )[0]
 
@@ -79,6 +96,8 @@ class Site(OpinionSiteLinear):
 
         :return None
         """
+        if not isinstance(self.parameters, dict):
+            raise TypeError("Search parameters must be a dictionary.")
         self.parameters.update(
             {
                 "ctl00$Main$ddlOpMonth": self.search_date.strftime("%B"),
@@ -86,12 +105,20 @@ class Site(OpinionSiteLinear):
             }
         )
 
-        for input in self.html.xpath('//input[@type="hidden"][@name]'):
-            name = input.get("name")
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        inputs: list[HtmlElement] = self.html.xpath(
+            '//input[@type="hidden"][@name]'
+        )
+        for input in inputs:
+            name = input.attrib["name"]
             value = input.get("value", "")
 
             self.parameters[name] = value
 
+    @override
     async def _download_backwards(self, search_date: date) -> None:
         """Download and process HTML for a given target date.
 
@@ -103,41 +130,53 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """Make back scrape iterable
 
         :param kwargs: the back scraping params
         :return: None
         """
-        super().make_backscrape_iterable(kwargs)
-        self.back_scrape_iterable = unique_year_month(
-            self.back_scrape_iterable
-        )
+        date_ranges = self._get_backscrape_date_ranges(kwargs)
+        if not bool(date_ranges):
+            self.back_scrape_iterable = []
+            return
+        self.back_scrape_iterable = unique_year_month(date_ranges)
 
-    async def _download(self, request_dict=None) -> HtmlElement:
+    @override
+    async def _download(
+        self, request_dict: RequestParameters | None = None
+    ) -> HtmlElement:
         """Download the HTML content for the current search state.
 
         :param request_dict (dict, optional): Additional request parameters.
         :return lxml.html.HtmlElement: The downloaded HTML content.
         """
         if not self.test_mode_enabled():
-            if not self.html:
+            if not bool(self.html):
                 self.html = await super()._download()
 
             self.update_parameters()
             self.method = "POST"
-        return await super()._download()
+        tree = await super()._download(request_dict)
+        if not isinstance(tree, HtmlElement):
+            raise TypeError("Expected a downloaded HTML document")
+        return tree
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extracts structured metadata from the provided opinion text.
 
         :param scraped_text: The content of the document downloaded
         :return Metadata to be added to the case
         """
-        metadata: dict[str, dict] = {
-            "OpinionCluster": {},
-            "Opinion": {},
-            "Docket": {},
+        cluster: ExtractedCluster = {}
+        opinion: ExtractedOpinion = {}
+        docket: ExtractedDocket = {}
+        metadata: ExtractedMetadata = {
+            "OpinionCluster": cluster,
+            "Opinion": opinion,
+            "Docket": docket,
         }
         pattern = r"^\s+[*]{6,}\n(?P<judge>.*)\s+[*]{6,}$"
         pattern2 = r"\s+\*{5,}(?:.*\n)*?\s+(\s+(?P<judge>.*)[,.] J\..*(RESULT|REASON|CONCUR))"
@@ -147,30 +186,30 @@ class Site(OpinionSiteLinear):
         m2 = re.search(pattern2, scraped_text, flags=re.MULTILINE)
         m3 = re.search(pattern3, scraped_text, flags=re.DOTALL)
 
-        if m:
-            metadata["Opinion"]["author_str"] = titlecase(
+        if m is not None:
+            opinion["author_str"] = titlecase(
                 m.groups()[0].strip().replace("\n", "").capitalize()
             )
-            metadata["Opinion"]["type"] = OpinionType.MAJORITY.value
+            opinion["type"] = OpinionType.MAJORITY.value
 
-        elif m2:
-            metadata["Opinion"]["author_str"] = titlecase(
+        elif m2 is not None:
+            opinion["author_str"] = titlecase(
                 m2.group("judge").split(" ")[-1].strip()
             )
 
             match = re.search(r"\*{7,}\s*(.*)", scraped_text, flags=re.DOTALL)
 
-            text = match.group(1).lower() if match else ""
+            text = match.group(1).lower() if match is not None else ""
             if "in part" in text:
-                metadata["Opinion"]["type"] = (
+                opinion["type"] = (
                     OpinionType.CONCURRING_IN_PART_AND_DISSENTING_IN_PART.value
                 )
             elif "concurs" in text or "concurring" in text:
-                metadata["Opinion"]["type"] = OpinionType.CONCURRENCE.value
+                opinion["type"] = OpinionType.CONCURRENCE.value
             elif "dissents" in text or "dissenting" in text:
-                metadata["Opinion"]["type"] = OpinionType.DISSENT.value
+                opinion["type"] = OpinionType.DISSENT.value
 
-        if m3:
+        if m3 is not None:
             judges = (
                 m3.groups()[0]
                 .strip()
@@ -179,7 +218,7 @@ class Site(OpinionSiteLinear):
                 .replace(",", "; ")
             )
 
-            metadata["OpinionCluster"]["judges"] = judges
-            metadata["Docket"]["panel_str"] = judges
+            cluster["judges"] = judges
+            docket["panel_str"] = judges
 
         return metadata

@@ -4,14 +4,20 @@ import re
 from urllib.parse import urljoin
 
 from dateutil import parser
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
 from juriscraper.ClusterSite import ClusterSite
-from juriscraper.lib.type_utils import OpinionType
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import (
+    BackscrapeOptions,
+    OpinionType,
+    RawOpinion,
+)
 
 
-class Site(ClusterSite):
+class Site(ClusterSite[int]):
     """
     About decision types
 
@@ -81,8 +87,13 @@ class Site(ClusterSite):
     base_url = "https://www.courtswv.gov"
     opinions_path = "/appellate-courts/supreme-court-of-appeals/opinions"
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[int]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.url = urljoin(self.base_url, self.opinions_path)
         self.court_id = self.__module__
         self.cluster_by_date_max_days = 15
@@ -91,11 +102,16 @@ class Site(ClusterSite):
 
     @override
     def _process_html(self) -> None:
-        for row in self.html.xpath("//tr[td[@headers]]"):
-            name_cell = row.xpath("td[3]")[0]
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath("//tr[td[@headers]]")
+        for row in rows:
+            name_cell = row.findall("td[3]")[0]
             # Replace <br> with space to avoid merged words
             for br in name_cell.iter("br"):
-                br.tail = " " + (br.tail or "")
+                br.tail = " " + (br.tail if br.tail is not None else "")
             name = name_cell.text_content().strip()
             # Strip "et al." early so names match for clustering
             name = re.sub(r",?\s+et\.?\s*al\.?", "", name)
@@ -103,16 +119,16 @@ class Site(ClusterSite):
             # Strip "(Separate Included)" from case name
             name = name.replace("(Separate Included)", "").strip()
 
-            decision_type = row.xpath("td[5]/text()")[0]
+            decision_type: str = row.xpath("td[5]/text()")[0]
             case_dict = self.get_metadata(name, decision_type)
 
-            url = row.xpath("td[3]/a/@href")[0]
+            url: str = row.xpath("td[3]/a/@href")[0]
             # Skip duplicates from pagination overlap
             if url in self.seen_urls:
                 continue
             self.seen_urls.add(url)
 
-            case_type = row.xpath("td[4]/text()")[0].strip()
+            case_type: str = row.xpath("td[4]/text()")[0].strip()
             case_dict.update(
                 {
                     "date": row.xpath("td[1]/text()")[0].strip(),
@@ -121,31 +137,41 @@ class Site(ClusterSite):
                     "nature_of_suit": self.codes.get(case_type, ""),
                 }
             )
-            if cluster := self.cluster_opinions(case_dict, self.cases):
+            if bool(cluster := self.cluster_opinions(case_dict, self.cases)):
                 # accumulate judges
-                if case_dict.get("judge"):
-                    cluster["judge"] += f"; {case_dict['judge']}"
+                if bool(judge := case_dict.get("judge")):
+                    cluster["judge"] = (
+                        f"{(judge_value if (judge_value := cluster.get('judge')) is not None else '')}; {judge}"
+                    )
 
                 # Date corrections. See 'Todd Jarell' case on example files
-                if case_dict["date"] == cluster["date"]:
+                case_date_value = case_dict.get("date")
+                cluster_date_value = cluster.get("date")
+                if case_date_value == cluster_date_value:
                     continue
 
-                cluster_date = parser.parse(cluster["date"])
-                case_date = parser.parse(case_dict["date"])
+                if not isinstance(cluster_date_value, str) or not isinstance(
+                    case_date_value, str
+                ):
+                    raise TypeError(
+                        "Expected date strings from the opinion table."
+                    )
+                cluster_date = parser.parse(cluster_date_value)
+                case_date = parser.parse(case_date_value)
 
                 if cluster_date > case_date:
                     cluster["other_date"] = (
-                        f"Some opinions were filed on {cluster['date']};"
+                        f"Some opinions were filed on {cluster_date_value};"
                     )
-                    cluster["date"] = case_dict["date"]
+                    cluster["date"] = case_date_value
                 else:
                     cluster["other_date"] = (
-                        f"Some opinions were filed on {case_dict['date']};"
+                        f"Some opinions were filed on {case_date_value};"
                     )
             else:
                 self.cases.append(case_dict)
 
-    def get_metadata(self, name: str, decision_type: str) -> dict[str, str]:
+    def get_metadata(self, name: str, decision_type: str) -> RawOpinion:
         """Parses Opinion and Cluster values out of the raw data
 
         Gets opinion type, status, per curiam, author, judges, joined by, and may modify the name
@@ -173,7 +199,7 @@ class Site(ClusterSite):
             op_type = OpinionType.UNANIMOUS
         elif "SEP" in decision_type:
             # try to get the op type
-            if match := self.author_and_type_regex.search(name):
+            if (match := self.author_and_type_regex.search(name)) is not None:
                 name = name[: match.start()].strip(", .")
                 value = match.group("author_and_type")
                 dissent = "dissent" in value.lower()
@@ -188,8 +214,10 @@ class Site(ClusterSite):
                 elif concurrence:
                     op_type = OpinionType.CONCURRENCE
 
-                if matches := re.finditer(
-                    r"(Justice|Judge) (?P<judge>[A-Z][a-z]+)", value
+                if bool(
+                    matches := re.finditer(
+                        r"(Justice|Judge) (?P<judge>[A-Z][a-z]+)", value
+                    )
                 ):
                     judges = [i.group("judge") for i in matches]
                     author = judges[0]
@@ -216,7 +244,8 @@ class Site(ClusterSite):
             "name": name,
         }
 
-    def make_backscrape_iterable(self, kwargs: dict) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """The prior-terms page only filters by year. We iterate
         by year and paginate through all pages for each year.
 
@@ -225,18 +254,19 @@ class Site(ClusterSite):
         start = kwargs.get("backscrape_start")
         end = kwargs.get("backscrape_end")
 
-        if start:
+        if bool(start):
             start = datetime.datetime.strptime(start, "%Y/%m/%d").date()
         else:
             start = self.first_opinion_date
 
-        if end:
+        if bool(end):
             end = datetime.datetime.strptime(end, "%Y/%m/%d").date()
         else:
             end = datetime.date.today()
 
         self.back_scrape_iterable = list(range(start.year, end.year + 1))
 
+    @override
     async def _download_backwards(self, year: int) -> None:
         logger.info("Backscraping %s for year %s", self.court_id, year)
         self.url = urljoin(self.base_url, self.prior_terms_path)
@@ -247,10 +277,17 @@ class Site(ClusterSite):
         self.html = await self._download()
 
         # Get total opinion count to compute page count
-        total_text = self.html.xpath(
-            "string(//div[contains(@class, 'view-header')]//h5)"
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        totals: list[HtmlElement] = self.html.xpath(
+            "//div[contains(@class, 'view-header')]//h5"
         )
-        if match := re.search(r"Total Opinions:\s*(\d+)", total_text):
+        total_text = totals[0].text_content() if bool(totals) else ""
+        if (
+            match := re.search(r"Total Opinions:\s*(\d+)", total_text)
+        ) is not None:
             total = int(match.group(1))
         else:
             logger.warning(

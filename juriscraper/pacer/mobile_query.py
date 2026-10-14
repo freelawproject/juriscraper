@@ -5,6 +5,10 @@ This provides the total number of docket entries, which is useful for alerts
 
 import pprint
 import sys
+from typing import TYPE_CHECKING
+
+from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.utils import clean_court_object
@@ -14,8 +18,11 @@ from .reports import BaseReport
 
 logger = make_default_logger()
 
+if TYPE_CHECKING:
+    from .http import PacerSession
 
-class MobileQuery(BaseDocketReport, BaseReport):
+
+class MobileQuery(BaseDocketReport[dict[str, str | int | float]], BaseReport):
     """Parse the mobile_query.pl ("Mobile Query" menu) result.
 
     This provides the total number of docket entries, which is useful for alerts
@@ -25,20 +32,28 @@ class MobileQuery(BaseDocketReport, BaseReport):
 
     CACHE_ATTRS = ["metadata"]
 
-    def __init__(self, court_id, pacer_session=None):
-        BaseDocketReport.__init__(self, court_id)
+    def __init__(
+        self, court_id: str, pacer_session: "PacerSession | None" = None
+    ) -> None:
+        super().__init__(court_id)
         BaseReport.__init__(self, court_id, pacer_session)
 
         # Initialize the empty cache properties
         self._clear_caches()
-        self._metadata = None
+        self._metadata: dict[str, str | int | float] | None = None
 
-    def parse(self):
+    @override
+    def parse(self) -> None:
         self._clear_caches()
         super().parse()
 
+    @override
+    def _parse_text(self, text: str) -> None:
+        self._clear_caches()
+        super()._parse_text(text)
+
     @property
-    def metadata(self):
+    def metadata(self) -> dict[str, str | int | float]:
         if self.is_valid is False:
             return {}
 
@@ -56,16 +71,29 @@ class MobileQuery(BaseDocketReport, BaseReport):
         # Pages: 1,
         # Cost: 0.10
 
-        ui_title = self.tree.xpath('.//div[@class="ui-title"]')[0]
+        if self.tree is None:
+            raise ValueError("Parse a report before accessing its contents.")
+        if not isinstance(self.tree, HtmlElement):
+            raise TypeError("Expected an HTML tree for this report.")
+        titles: list[HtmlElement] = self.tree.xpath(
+            './/div[@class="ui-title"]'
+        )
+        ui_title = titles[0]
         cost_raw = ui_title.text_content().strip()
         if (
             "Cost:" in cost_raw
         ):  # bad: means we were charged. Return immediately with bad news.
             cost = float(cost_raw.split("Cost: ", 1)[1])
-            data = {"cost": cost, "cost_raw": cost_raw}
+            data: dict[str, str | int | float] = {
+                "cost": cost,
+                "cost_raw": cost_raw,
+            }
             self._metadata = data
             return data
-        span = self.tree.xpath('.//a[@id="entriesLink"]//span')[0]
+        spans: list[HtmlElement] = self.tree.xpath(
+            './/a[@id="entriesLink"]//span'
+        )
+        span = spans[0]
         entry_count = int(span.text_content().strip())
         data = {
             "court_id": self.court_id,
@@ -78,7 +106,7 @@ class MobileQuery(BaseDocketReport, BaseReport):
         self._metadata = data
         return data
 
-    async def query(self, pacer_case_id):
+    async def query(self, pacer_case_id: str | int) -> None:
         """Use a district court's PACER mobile query function with a known case id
 
         At the top of every district PACER court, there's a button that says,
@@ -110,12 +138,14 @@ class MobileQuery(BaseDocketReport, BaseReport):
         The important notes, from testing:
          - The CASE_NUM cookie isn't needed.
          """
-        assert self.session is not None, (
-            "session attribute of MobileQuery cannot be None."
-        )
-        assert bool(pacer_case_id), (
-            f"pacer_case_id must be truthy, not '{pacer_case_id}'"
-        )
+        if self.session is None:
+            raise ValueError(
+                "session attribute of MobileQuery cannot be None."
+            )
+        if not bool(pacer_case_id):
+            raise ValueError(
+                f"pacer_case_id must be truthy, not '{pacer_case_id}'"
+            )
         logger.info(
             "Running mobile query for case id '%s' in court '%s'",
             pacer_case_id,
@@ -127,7 +157,8 @@ class MobileQuery(BaseDocketReport, BaseReport):
         self.parse()
 
     @property
-    def data(self):
+    @override
+    def data(self) -> dict[str, str | int | float]:
         """Get all the data back from this endpoint.
 
         Don't attempt to return parties or docket_entries like the superclass
@@ -140,7 +171,7 @@ class MobileQuery(BaseDocketReport, BaseReport):
         return data
 
 
-def _main():
+def _main() -> None:
     if len(sys.argv) != 2:
         print("Usage: python -m juriscraper.pacer.mobile_query filepath")
         print("Please provide a path to an HTML file to parse.")

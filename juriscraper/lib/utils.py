@@ -1,11 +1,11 @@
 import re
 import traceback
-from collections.abc import Callable, Hashable, Iterable
+from collections.abc import Callable, Hashable, Iterable, Mapping, Sequence
 from datetime import date, datetime, timedelta
 from itertools import chain, islice, tee
-from typing import Any, Protocol, TypeVar, cast
+from typing import TYPE_CHECKING, Protocol, TypeVar, overload
 
-from httpx import HTTPError
+from httpx import HTTPError, Response
 
 from juriscraper.lib.exceptions import (
     EmptyFileError,
@@ -14,7 +14,7 @@ from juriscraper.lib.exceptions import (
     UnexpectedContentTypeError,
 )
 from juriscraper.lib.log_tools import make_default_logger
-from juriscraper.lib.type_utils import OpinionType
+from juriscraper.lib.type_utils import OpinionType, RawOpinion
 
 from .date_utils import fix_future_year_typo
 from .string_utils import (
@@ -24,11 +24,18 @@ from .string_utils import (
     harmonize,
 )
 
+if TYPE_CHECKING:
+    from juriscraper.AbstractSite import (
+        AbstractSite,
+        BackscrapeItem,
+        DownloadedContent,
+    )
+
 logger = make_default_logger()
 
 
 def sanity_check_dates(
-    dates_and_names: list[tuple[object, object, object]], court_id: str
+    dates_and_names: Iterable[tuple[object, object, object]], court_id: str
 ) -> None:
     """Checks that dates are datetime.date objects and that they are not in the future
 
@@ -47,7 +54,7 @@ def sanity_check_dates(
         # If a date is approximate, then it may be set in the future until
         # half of the year has passed. Ignore this case
         # dates should not be in the future. Tolerate a week
-        if not date_is_approximate and case_date > (
+        if not bool(date_is_approximate) and case_date > (
             date.today() + timedelta(days=7)
         ):
             future_date_count += 1
@@ -61,14 +68,14 @@ def sanity_check_dates(
                 )
 
 
-def sanity_check_case_names(case_names: list[str]) -> None:
+def sanity_check_case_names(case_names: Iterable[str]) -> None:
     """Check that no name is an empty string
 
     :param case_names: ordered list of case names
     """
     prior_case_name = None
     for i, name in enumerate(case_names):
-        if not name.strip():
+        if not bool(name.strip()):
             raise InsanityException(
                 "Item with index %s has an empty case name. The prior "
                 "item had case name of: %s" % (i, prior_case_name)
@@ -77,14 +84,14 @@ def sanity_check_case_names(case_names: list[str]) -> None:
 
 
 def sanity_check_opinion_types(
-    sub_opinions: list[dict[Hashable, object]],
+    sub_opinions: Sequence[Mapping[str, object]],
 ) -> None:
     """Check opinion type assignment rules within a cluster
 
     :param sub_opinions: list of sub_opinion dictionaries
     :raises InsanityException: if any rule is violated
     """
-    if not sub_opinions:
+    if not bool(sub_opinions):
         return
 
     # Rule 1: At most 1 MAJORITY opinion per cluster
@@ -110,15 +117,15 @@ def sanity_check_opinion_types(
 
     # Rule 3: UNANIMOUS requires per_curiam=True
     for op in sub_opinions:
-        if op.get("types") == OpinionType.UNANIMOUS.value and not op.get(
-            "per_curiam"
+        if op.get("types") == OpinionType.UNANIMOUS.value and not bool(
+            op.get("per_curiam")
         ):
             raise InsanityException(
                 "UNANIMOUS opinion must have per_curiam=True"
             )
 
 
-def clean_attribute(name: str, value: Any) -> Any:
+def clean_attribute(name: str, value: object) -> object:
     """Performs standard cleaning by type; and some specific cleaning by name
 
     :param name: attribute standard name
@@ -126,8 +133,12 @@ def clean_attribute(name: str, value: Any) -> Any:
     :return: cleaned value
     """
     if name == "download_urls":
+        if not isinstance(value, str):
+            raise TypeError("Download URLs must be strings")
         return value.strip()
     elif name == "case_dates" and not isinstance(value, datetime | date):
+        if not isinstance(value, str):
+            raise TypeError("Case dates must be dates or date strings")
         value = convert_date_string(value)
 
     if isinstance(value, str):
@@ -173,10 +184,29 @@ def previous_and_next(
 
 
 # TODO[Python3.12]: Replace with use of nice syntax
-_CourtObjectT = TypeVar("_CourtObjectT")
+_CourtValueT = TypeVar("_CourtValueT")
+_CourtKeyT = TypeVar("_CourtKeyT", bound=Hashable)
 
 
-def clean_court_object(obj: _CourtObjectT) -> _CourtObjectT:
+@overload
+def clean_court_object(obj: str) -> str: ...
+
+
+@overload
+def clean_court_object(obj: list[_CourtValueT]) -> list[_CourtValueT]: ...
+
+
+@overload
+def clean_court_object(
+    obj: dict[_CourtKeyT, _CourtValueT],
+) -> dict[_CourtKeyT, _CourtValueT]: ...
+
+
+@overload
+def clean_court_object(obj: object) -> object: ...
+
+
+def clean_court_object(obj: object) -> object:
     """Clean a list or dict that is part of a scraping response.
 
     Court data is notoriously horrible, so this function attempts to clean up
@@ -194,44 +224,32 @@ def clean_court_object(obj: _CourtObjectT) -> _CourtObjectT:
     :return: A dict or list with the string values cleaned.
     """
     if isinstance(obj, list):
-        # type checker cannot infer correctness, so we help it along with
-        # erasure here and a `cast` below
         obj_list: list[object] = obj
-        cleaned_list = [clean_court_object(i) for i in obj_list]
-        return cast(_CourtObjectT, cleaned_list)
+        return [clean_court_object(i) for i in obj_list]
     elif isinstance(obj, dict):
-        # type checker cannot infer correctness, so we help it along with
-        # erasure here and a `cast` below
         obj_dict: dict[Hashable, object] = obj
-        cleaned_dict = {k: clean_court_object(v) for k, v in obj_dict.items()}
-        return cast(_CourtObjectT, cleaned_dict)
+        return {k: clean_court_object(v) for k, v in obj_dict.items()}
     elif isinstance(obj, str):
         s = " ".join(obj.strip().split())
         s = force_unicode(s)
         s = re.sub(r"\s+,", ",", s)
-        # type checker cannot infer correctness, so we help it along with
-        # this `cast`.
-        return cast(_CourtObjectT, s)
+        return s
     else:
         return obj
 
 
-_DownloadT = TypeVar("_DownloadT")
+class PaginatedHtmlBackscrapeSite(Protocol):
+    url: str | None
+    cases: list[RawOpinion]
+    html: "DownloadedContent"
 
-
-class PaginatedHtmlBackscrapeSite(Protocol[_DownloadT]):
-    court_id: str
-    url: str
-    cases: list[dict[str, Any]]
-    html: _DownloadT | None  # TODO: Fix this to `HtmlElement`
-
-    async def _download(self) -> _DownloadT: ...
+    async def _download(self) -> "DownloadedContent": ...
 
     async def _process_html(self) -> None: ...
 
 
 _PaginatedHtmlBackscrapeSiteT = TypeVar(
-    "_PaginatedHtmlBackscrapeSiteT", bound=PaginatedHtmlBackscrapeSite[Any]
+    "_PaginatedHtmlBackscrapeSiteT", bound=PaginatedHtmlBackscrapeSite
 )
 
 
@@ -245,7 +263,7 @@ async def backscrape_over_paginated_results(
     prepare_request_fn: Callable[[int, _PaginatedHtmlBackscrapeSiteT], None]
     | None = None,
     url_template: str = "",
-) -> list[dict[str, Any]]:
+) -> list[RawOpinion]:
     """
     Iterates over consecutive pages, looking for cases in a specific date range
     Of use when the page offers no date filters, so one must look through all
@@ -266,7 +284,7 @@ async def backscrape_over_paginated_results(
 
     :return: the list of cases between the dates
     """
-    cases = []
+    cases: list[RawOpinion] = []
 
     if isinstance(start_date, datetime):
         start_date = start_date.date()
@@ -276,7 +294,7 @@ async def backscrape_over_paginated_results(
     for page in range(first_page, last_page):
         site.cases = []  # reset results container
 
-        if prepare_request_fn:
+        if prepare_request_fn is not None:
             prepare_request_fn(page, site)
         else:
             site.url = url_template.format(page)
@@ -294,13 +312,22 @@ async def backscrape_over_paginated_results(
             logger.debug("%s", traceback.format_exc())
             break
 
-        if not site.cases:
+        if not bool(site.cases):
             logger.info("No cases in this page; breaking the loop")
             break
 
         # results are ordered by desceding date
-        earliest = datetime.strptime(site.cases[-1]["date"], date_fmt).date()
-        latest = datetime.strptime(site.cases[0]["date"], date_fmt).date()
+        boundary_dates = []
+        for case in (site.cases[-1], site.cases[0]):
+            value = case.get("date")
+            if isinstance(value, datetime):
+                value = value.date()
+            elif isinstance(value, str):
+                value = datetime.strptime(value, date_fmt).date()
+            if not isinstance(value, date):
+                raise ValueError("A case date is required for pagination.")
+            boundary_dates.append(value)
+        earliest, latest = boundary_dates
         logger.info(
             "Results page %s has date range %s to %s", page, earliest, latest
         )
@@ -321,34 +348,38 @@ async def backscrape_over_paginated_results(
         # if there is an intersection, test every case and
         # collect the matching cases
         for case in site.cases:
-            case_date = datetime.strptime(case["date"], date_fmt).date()
-            if case_date < end_date and case_date > start_date:
+            parsed_date = case.get("date")
+            if isinstance(parsed_date, datetime):
+                parsed_date = parsed_date.date()
+            elif isinstance(parsed_date, str):
+                parsed_date = datetime.strptime(parsed_date, date_fmt).date()
+            if not isinstance(parsed_date, date):
+                raise ValueError("A case date is required for pagination.")
+            if start_date < parsed_date < end_date:
                 cases.append(case)
 
     return cases
 
 
 def check_expected_content_types(
-    site: Any, response: Any, download_url: str
+    site: "AbstractSite[BackscrapeItem]",
+    response: Response,
+    download_url: str,
 ) -> None:
     """Raise UnexpectedContentTypeError if response Content-Type is not allowed.
 
     :param site: scraper instance
-    :param response: httpx Response or urllib HTTPResponse
+    :param response: buffered HTTP response
     :param download_url: URL that was fetched
     """
     expected_content_types = site.expected_content_types
-    court_id = site.court_id
+    court_id = str(site.court_id)
 
     # test for expected content type (thanks mont for nil)
-    if not expected_content_types:
+    if not bool(expected_content_types):
         return
 
-    # Support both httpx (headers.get) and urllib (getheader) responses
-    if hasattr(response, "getheader"):
-        raw_ct = response.getheader("Content-Type", "")
-    else:
-        raw_ct = response.headers.get("Content-Type", "")
+    raw_ct: str = response.headers.get("Content-Type", "")
 
     # Clean up content types like "application/pdf;charset=utf-8"
     # and 'application/octet-stream; charset=UTF-8'
@@ -366,12 +397,12 @@ def check_expected_content_types(
 
 def check_download_url(download_url: str) -> None:
     """Raise NoDownloadUrlError if download_url is empty or falsy."""
-    if not download_url:
+    if not bool(download_url):
         raise NoDownloadUrlError(download_url)
 
 
 def check_empty_downloaded_file(
-    response: bytes | Any, download_url: str
+    response: bytes | Response, download_url: str
 ) -> None:
     """Raise EmptyFileError if the downloaded content is empty.
 

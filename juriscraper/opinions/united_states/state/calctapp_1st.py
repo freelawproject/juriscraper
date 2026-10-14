@@ -4,6 +4,9 @@
 
 import re
 
+from typing_extensions import override
+
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.opinions.united_states.state import cal
 
 
@@ -11,7 +14,8 @@ class Site(cal.Site):
     court_code = "A"
     division = "1st App. Dist."
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract lower court from the scraped text.
 
         :param scraped_text: The text to extract from.
@@ -36,14 +40,14 @@ class Site(cal.Site):
         )
 
         lower_court = ""
-        if (match := pattern.search(scraped_text)) or (
+        if (match := pattern.search(scraped_text)) is not None or (
             match := fall_back_pattern.search(scraped_text)
-        ):
+        ) is not None:
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
 
-        if lower_court:
+        if bool(lower_court):
             return {
                 "Docket": {
                     "appeal_from_str": lower_court,

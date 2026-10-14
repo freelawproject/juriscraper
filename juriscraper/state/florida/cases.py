@@ -1,5 +1,6 @@
+from collections.abc import Mapping
 from datetime import date, datetime
-from typing import Annotated, Any, ClassVar
+from typing import Annotated, ClassVar
 
 from pydantic import (
     UUID4,
@@ -87,7 +88,9 @@ def florida_docket_type_validator(i: str, info: ValidationInfo) -> DocketType:
 
     :return: The corresponding DocketType enum value.
     """
-    if info.context and info.context.get("deserialize"):
+    if isinstance(info.context, Mapping) and bool(
+        info.context.get("deserialize")
+    ):
         return DocketType(i)
     # None of the middle components in classification strings contained dashes
     # when this scraper was created.
@@ -106,7 +109,7 @@ def florida_docket_type_validator(i: str, info: ValidationInfo) -> DocketType:
 
 
 def florida_docket_type_raw_validator(
-    i: Any, info: ValidationInfo
+    i: object, info: ValidationInfo
 ) -> tuple[str, str, str]:
     """
     Splits a Florida "caseClassification" string into a category, type, sub type
@@ -117,8 +120,18 @@ def florida_docket_type_raw_validator(
 
     :return: The split tuple.
     """
-    if info.context and info.context.get("deserialize"):
-        return tuple(i)
+    if isinstance(info.context, Mapping) and bool(
+        info.context.get("deserialize")
+    ):
+        match i:
+            case [str() as category, str() as case_type, str() as subtype]:
+                return category, case_type, subtype
+            case _:
+                raise ValueError(
+                    "Docket classification must contain three strings"
+                )
+    if not isinstance(i, str):
+        raise ValueError("Case classification must be a string")
     parts = i.split(" - ", maxsplit=2)
     # No need to log error here because `florida_docket_type_validator` already
     # does.
@@ -139,7 +152,9 @@ def florida_originating_court_id_validator(
 
     :return: The corresponding CourtID enum value.
     """
-    if info.context and info.context.get("deserialize"):
+    if isinstance(info.context, Mapping) and bool(
+        info.context.get("deserialize")
+    ):
         return FloridaCourtID(i)
     court_name = i.lower().strip()
     if court_name.startswith("circuit court"):
@@ -212,7 +227,9 @@ def florida_external_id_to_js_id_validator(
 
     :return: Value on the FloridaCourtID enum.
     """
-    if info.context and info.context.get("deserialize"):
+    if isinstance(info.context, Mapping) and bool(
+        info.context.get("deserialize")
+    ):
         return i
     if i not in FLORIDA_COURT_EXTERNAL_ID_MAP:
         raise PydanticCustomError(
@@ -376,7 +393,7 @@ class FloridaCaseInfoParser(LegacyParser[FloridaCase]):
     @staticmethod
     def populate_transfers(case: FloridaCase) -> None:
         """Populates the ``transfers`` field of a case inplace."""
-        case.transfers = [
+        case.transfers[:] = [
             DocketTransfer(
                 direction=TransferDirection.INBOUND,
                 reason=TransferReason.APPEAL,

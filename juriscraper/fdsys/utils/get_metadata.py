@@ -3,28 +3,25 @@ import argparse
 import glob
 import json
 import pprint
+from collections.abc import Sequence
+from typing import TypeAlias, TypeVar
 
 from lxml import etree
 
+from juriscraper.fdsys.FDSysSite import NAMESPACES
+
 __author__ = "mlissner"
 
-
-def xpath(tree, query):
-    return tree.xpath(
-        query,
-        namespaces={
-            "m": "http://www.loc.gov/mods/v3",
-            "xlink": "http://www.w3.org/1999/xlink",
-        },
-    )
+_DataT = TypeVar("_DataT")
+XMLTree: TypeAlias = "etree._ElementTree[etree._Element] | etree._Element"
 
 
-def get_court_id(fdsys_court):
+def get_court_id(fdsys_court: list[str]) -> list[str]:
     """Map the fdsys_court string to a CourtListener string"""
     return fdsys_court
 
 
-def clean_up_rough_data(data):
+def clean_up_rough_data(data: _DataT) -> _DataT:
     """Clean up the data so it's good.
 
     - [ ] Strip extra spaces from all nodes.
@@ -36,7 +33,9 @@ def clean_up_rough_data(data):
     return data
 
 
-def get_unique_nodes(node_list):
+def get_unique_nodes(
+    node_list: Sequence[etree._Element],
+) -> list[etree._Element]:
     """Lots of duplication in the XML. Nuke duplicates."""
     good_nodes = []
     nodes_as_txt = []
@@ -51,61 +50,89 @@ def get_unique_nodes(node_list):
     return good_nodes
 
 
-def get_parties(tree):
+def get_parties(tree: XMLTree) -> list[dict[str, list[str]]]:
     """Extract the parties from the XML into a nice object."""
-    party_nodes = xpath(tree, "//m:party")
+    party_nodes: list[etree._Element] = tree.xpath(
+        "//m:party", namespaces=NAMESPACES
+    )
     party_nodes = get_unique_nodes(party_nodes)
 
-    parties = []
+    parties: list[dict[str, list[str]]] = []
     for party_node in party_nodes:
         parties.append(
             {
-                "name_first": xpath(party_node, "@m:firstName"),
-                "name_last": xpath(party_node, "@m:lastName"),
-                "name_middle": xpath(party_node, "@m:middleName"),
-                "name_suffix": xpath(party_node, "@m:generation"),
-                "role": xpath(party_node, "@m:role"),
+                "name_first": party_node.xpath(
+                    "@m:firstName", namespaces=NAMESPACES
+                ),
+                "name_last": party_node.xpath(
+                    "@m:lastName", namespaces=NAMESPACES
+                ),
+                "name_middle": party_node.xpath(
+                    "@m:middleName", namespaces=NAMESPACES
+                ),
+                "name_suffix": party_node.xpath(
+                    "@m:generation", namespaces=NAMESPACES
+                ),
+                "role": party_node.xpath("@m:role", namespaces=NAMESPACES),
             }
         )
     return parties
 
 
-def get_documents(tree):
+def get_documents(tree: XMLTree) -> list[dict[str, list[str]]]:
     """Get the documents from the XML into a nice object."""
-    document_nodes = xpath(tree, "//m:mods/m:relatedItem")
-    documents = []
+    document_nodes: list[etree._Element] = tree.xpath(
+        "//m:mods/m:relatedItem", namespaces=NAMESPACES
+    )
+    documents: list[dict[str, list[str]]] = []
     for document_node in document_nodes:
         documents.append(
             {
-                "download_url": xpath(
-                    document_node, "m:relatedItem/@xlink:href"
+                "download_url": document_node.xpath(
+                    "m:relatedItem/@xlink:href", namespaces=NAMESPACES
                 ),
-                "description": xpath(document_node, "//m:subTitle"),
-                "date_filed": xpath(document_node, "XXX"),
+                "description": document_node.xpath(
+                    ".//m:subTitle/text()", namespaces=NAMESPACES
+                ),
+                "date_filed": document_node.xpath(
+                    "./m:originInfo/m:dateIssued/text()", namespaces=NAMESPACES
+                ),
             }
         )
+    return documents
 
 
-def print_xpath_results():
+def print_xpath_results() -> None:
     for f in glob.glob("../examples/*.xml"):
         tree = etree.parse(f)
         rough_data = {
-            "download_url": xpath(
-                tree, "(//m:identifier[@type='uri'])[1]/text()"
+            "download_url": tree.xpath(
+                "(//m:identifier[@type='uri'])[1]/text()",
+                namespaces=NAMESPACES,
             ),
-            "fdsys_id": xpath(tree, "(//m:accessId/text())[1]"),
-            "court_id": get_court_id(xpath(tree, "(//m:courtCode/text())[1]")),
-            "docket_number": xpath(tree, "(//m:caseNumber/text())[1]"),
-            "court_location": xpath(tree, "(//m:caseOffice/text())[1]"),
+            "fdsys_id": tree.xpath(
+                "(//m:accessId/text())[1]", namespaces=NAMESPACES
+            ),
+            "court_id": get_court_id(
+                tree.xpath("(//m:courtCode/text())[1]", namespaces=NAMESPACES)
+            ),
+            "docket_number": tree.xpath(
+                "(//m:caseNumber/text())[1]", namespaces=NAMESPACES
+            ),
+            "court_location": tree.xpath(
+                "(//m:caseOffice/text())[1]", namespaces=NAMESPACES
+            ),
             "parties": get_parties(tree),
-            "case_name": xpath(tree, "(//m:titleInfo/m:title/text())[1]"),
+            "case_name": tree.xpath(
+                "(//m:titleInfo/m:title/text())[1]", namespaces=NAMESPACES
+            ),
             "documents": get_documents(tree),
         }
         data = clean_up_rough_data(rough_data)
         pprint.pprint(data)
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(
         description="Get all the metadata from a mods file."
     )
@@ -114,19 +141,20 @@ def main():
     print_xpath_results()
 
 
-def get_fdsys_court_names():
+def get_fdsys_court_names() -> None:
     response = glob.glob("../examples/2015_USCOURTS_sitemap.xml")
     tree = etree.parse(response[0])
     # print(etree.tostring(tree, pretty_print=True))
     data = {}
 
-    for url in tree.xpath(
+    urls: list[str] = tree.xpath(
         "//m:loc/text()",
         namespaces={
             "m": "http://www.sitemaps.org/schemas/sitemap/0.9",
             "xlink": "http://www.w3.org/1999/xlink",
         },
-    ):
+    )
+    for url in urls:
         pre = url.split("-")[1]
         # if pre not in data and url:
         data[pre] = url

@@ -8,16 +8,23 @@
 
 
 from lxml import html
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.oscn.net/decisions/ok/30"
         self.status = "Published"
@@ -26,14 +33,24 @@ class Site(OpinionSiteLinear):
 
     @override
     def _process_html(self) -> None:
-        for row in self.html.xpath(".//li[@class='decision']"):
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        for row in self.html.findall(".//li[@class='decision']"):
             name, citation = row.xpath(".//a/text()")
-            url = row.xpath(".//a/@href")[0]
-            date_filed_raw = row.xpath(".//span[@class='decidedDate']/text()")
-            summary = row.xpath(".//p[@class='summaryParagraph']/text()")[0]
+            url: str = row.xpath(".//a/@href")[0]
+            date_filed_raw: list[str] = row.xpath(
+                ".//span[@class='decidedDate']/text()"
+            )
+            summary: str = row.xpath(".//p[@class='summaryParagraph']/text()")[
+                0
+            ]
 
-            docket = row.xpath(".//span[@class='caseNumber']/text()")
-            if not docket:
+            docket: list[str] = row.xpath(
+                ".//span[@class='caseNumber']/text()"
+            )
+            if not bool(docket):
                 logger.debug("Skipping row without docket number")
                 continue
             docket_number_raw = docket[0].strip()
@@ -49,8 +66,9 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     @staticmethod
-    def cleanup_content(content):
+    def cleanup_content(content: bytes) -> bytes:
         """Remove non-opinion HTML
 
         Oklahoma uses ISO-8859-1 formatting which we need to account for
@@ -63,8 +81,8 @@ class Site(OpinionSiteLinear):
         :param content: The scraped HTML
         :return: Cleaner HTML
         """
-        content = content.decode("ISO-8859-1")
-        tree = strip_bad_html_tags_insecure(content, remove_scripts=True)
+        text = content.decode("ISO-8859-1")
+        tree = strip_bad_html_tags_insecure(text, remove_scripts=True)
 
         # Remove unwanted elements using CSS selectors
         selectors_to_remove = [
@@ -84,20 +102,28 @@ class Site(OpinionSiteLinear):
 
         # Remove the a tags so we dont link around to broken places
         # Remove the <a> tags so we don't link around to broken places
-        for a_tag in tree.xpath("//a"):
+        a_tags: list[HtmlElement] = tree.xpath("//a")
+        for a_tag in a_tags:
             span = html.Element("span")
             span.text = a_tag.text
-            a_tag.getparent().replace(a_tag, span)
+            parent = a_tag.getparent()
+            if parent is not None:
+                parent.replace(a_tag, span)
 
-        opinions_navigation = tree.xpath("//div[@id='opinons-navigation']")
-        if opinions_navigation:
-            opinions_navigation = opinions_navigation[0]
+        navigation_elements: list[HtmlElement] = tree.xpath(
+            "//div[@id='opinons-navigation']"
+        )
+        if bool(navigation_elements):
+            opinions_navigation = navigation_elements[0]
             parent = opinions_navigation.getparent()
 
             # Remove all preceding siblings
-            for sibling in opinions_navigation.itersiblings(preceding=True):
-                parent.remove(sibling)
-            opinions_navigation.getparent().remove(opinions_navigation)
+            if parent is not None:
+                for sibling in opinions_navigation.itersiblings(
+                    preceding=True
+                ):
+                    parent.remove(sibling)
+                parent.remove(opinions_navigation)
 
         # remove comments that generate duplicates
         comments = tree.xpath("//comment()")
@@ -106,6 +132,6 @@ class Site(OpinionSiteLinear):
                 comment.getparent().remove(comment)
 
         # Find the core element with id 'oscn-content'
-        core_element = tree.xpath("//*[@id='oscn-content']")[0]
+        core_element: HtmlElement = tree.xpath("//*[@id='oscn-content']")[0]
         html_content = html.tostring(core_element).decode("ISO-8859-1").strip()
         return f"<html>{html_content}</html>".encode("ISO-8859-1")

@@ -23,14 +23,17 @@ Contact information:
 import re
 from datetime import date
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
 from juriscraper.lib.date_utils import unique_year_month
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import BackscrapeOptions, ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[date]):
     # Full URL example:
     # https://www.sccourts.org/opinions-orders/opinions/published-opinions/supreme-court/?term=2024-09
     base_url = (
@@ -47,8 +50,13 @@ class Site(OpinionSiteLinear):
         re.MULTILINE,
     )
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[date]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.make_backscrape_iterable(kwargs)
         self.url = self.make_url_from_date(date.today())
@@ -59,25 +67,36 @@ class Site(OpinionSiteLinear):
 
     @override
     def _process_html(self) -> None:
-        for row in self.html.xpath("//div[contains(@class,'case-result')]"):
-            date_filed = row.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(
+            "//div[contains(@class,'case-result')]"
+        )
+        for row in rows:
+            date_filed: str = row.xpath(
                 "preceding-sibling::div[contains(@class,'result-heading')]/h3/text()"
             )[-1]
-            docket = row.xpath(
+            docket: str = row.xpath(
                 ".//span[contains(@class, 'case-number')]/text()"
             )[0]
-            name = row.xpath(".//span[contains(@class, 'case-name')]/text()")[
-                0
-            ]
+            name: str = row.xpath(
+                ".//span[contains(@class, 'case-name')]/text()"
+            )[0]
 
-            summary = row.xpath(".//div[@class='result-info']/p/text()")
-            if summary:
-                summary = summary[0]
+            summaries: list[str] = row.xpath(
+                ".//div[@class='result-info']/p/text()"
+            )
+            if bool(summaries):
+                summary = summaries[0]
             else:
                 # Unpublished opinions don't have a summary
                 summary = ""
 
-            url = row.xpath(".//a[contains(@class,'download-link')]/@href")[0]
+            url: str = row.xpath(
+                ".//a[contains(@class,'download-link')]/@href"
+            )[0]
             self.cases.append(
                 {
                     "docket": docket,
@@ -88,16 +107,19 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def make_backscrape_iterable(self, kwargs: dict) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """Reuse base function to get a sequence of date objects for
         each month in the interval. Then, convert them to target URLs
         and replace the self.back_scrape_iterable
         """
-        super().make_backscrape_iterable(kwargs)
-        self.back_scrape_iterable = unique_year_month(
-            self.back_scrape_iterable
-        )
+        date_ranges = self._get_backscrape_date_ranges(kwargs)
+        if not bool(date_ranges):
+            self.back_scrape_iterable = []
+            return
+        self.back_scrape_iterable = unique_year_month(date_ranges)
 
+    @override
     async def _download_backwards(self, date_obj: date) -> None:
         """Downloads an older page, and parses it
 
@@ -111,7 +133,7 @@ class Site(OpinionSiteLinear):
         :param date_obj: date object to build the URL
         :return None
         """
-        if date_obj.year <= 2012:
+        if date_obj.year <= 2012 and self.expected_content_types is not None:
             self.expected_content_types.append("text/html")
 
         self.url = self.make_url_from_date(date_obj)
@@ -133,25 +155,26 @@ class Site(OpinionSiteLinear):
             str(date_obj.month).zfill(2),
         )
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract docket number from the scraped text.
 
         :param scraped_text: The text to extract from.
         :return: A dictionary with the metadata.
         """
-        results: dict[str, dict] = {}
-        if match := self.lower_court_regex.search(scraped_text):
+        results: ExtractedMetadata = {}
+        if (match := self.lower_court_regex.search(scraped_text)) is not None:
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
             results.setdefault("Docket", {})["appeal_from_str"] = lower_court
             judge = match.group("judge").strip()
-            if judge:
+            if bool(judge):
                 results["OriginatingCourtInformation"] = {
                     "assigned_to_str": judge
                 }
 
-        if match := re.search(self.docket_regex, scraped_text):
+        if (match := re.search(self.docket_regex, scraped_text)) is not None:
             results.setdefault("Docket", {})["docket_number"] = match.group(
                 "docket"
             )

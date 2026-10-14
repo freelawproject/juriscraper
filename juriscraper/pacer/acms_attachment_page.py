@@ -1,8 +1,16 @@
-import json
 import pprint
 import sys
 import unicodedata
+from datetime import date
+from typing import TYPE_CHECKING
 
+from pydantic import ValidationError
+from typing_extensions import TypedDict, override
+
+from juriscraper.lib.acms_types import (
+    ATTACHMENT_PAYLOAD,
+    AcmsAttachmentPayload,
+)
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.network_utils import AcmsApiClient
@@ -12,16 +20,44 @@ from .reports import BaseReport
 
 logger = make_default_logger()
 
+if TYPE_CHECKING:
+    from .http import PacerSession
+
+
+class AcmsAttachmentResult(TypedDict):
+    attachment_number: int
+    description: str
+    page_count: int | None
+    pacer_doc_id: str
+    acms_document_guid: str
+    cost: float | None
+    date_filed: date | None
+    permission: str | None
+    file_size: int | None
+
+
+class AcmsAttachmentPageData(TypedDict, total=False):
+    pacer_doc_id: str
+    pacer_case_id: str
+    entry_number: int
+    description: str
+    date_filed: date | None
+    date_end: date | None
+    attachments: list[AcmsAttachmentResult]
+
 
 class ACMSAttachmentPage(BaseReport):
     """Parse ACMS attachment pages' JSON."""
 
-    def __init__(self, court_id, pacer_session=None) -> None:
+    def __init__(
+        self, court_id: str, pacer_session: "PacerSession | None" = None
+    ) -> None:
         super().__init__(court_id, pacer_session)
-        self._acms_json: dict = {}
+        self._acms_json: AcmsAttachmentPayload | None = None
         self.api_client = AcmsApiClient(pacer_session, court_id)
 
-    def _parse_text(self, text):
+    @override
+    def _parse_text(self, text: str) -> None:
         """Store the ACMS JSON
 
         This does not, in fact, actually *parse* the data, it
@@ -31,14 +67,15 @@ class ACMSAttachmentPage(BaseReport):
         :param text: A unicode object
         :return: None
         """
-        self._acms_json = {}
+        self._acms_json = None
+        self.is_valid = False
         try:
-            attachment_json = json.loads(text)
-            self.check_validity(attachment_json)
-            if self.is_valid:
-                self._acms_json = attachment_json
-        except json.JSONDecodeError:
-            self.is_valid = False
+            self._acms_json = ATTACHMENT_PAYLOAD.validate_json(
+                text, strict=True
+            )
+        except ValidationError:
+            return
+        self.is_valid = True
 
     def _clean_attachment_description(self, text: str) -> str:
         """
@@ -94,21 +131,35 @@ class ACMSAttachmentPage(BaseReport):
             return int(attachment)
         return int(value)
 
-    def check_validity(self, parsed_json: dict) -> None:
+    @override
+    def check_validity(
+        self,
+        text: str | dict[str, object] | None = None,
+        *,
+        parsed_json: str | dict[str, object] | None = None,
+    ) -> None:
         """Place sanity checks here to make sure that the returned json is
         valid and not an error page or some other kind of problem.
 
         Set self.is_valid flag to True or False
         """
-        if not all(
-            x in parsed_json
-            for x in ["caseDetails", "docketEntry", "docketEntryDocuments"]
-        ):
+        if parsed_json is not None:
+            if text is not None:
+                raise TypeError(
+                    "Provide either parsed_json or text, not both."
+                )
+            text = parsed_json
+        try:
+            if isinstance(text, str):
+                ATTACHMENT_PAYLOAD.validate_json(text, strict=True)
+            else:
+                ATTACHMENT_PAYLOAD.validate_python(text, strict=True)
+        except ValidationError:
             self.is_valid = False
             return
         self.is_valid = True
 
-    async def query(self, case_id: str, entry_id: str):
+    async def query(self, case_id: str, entry_id: str) -> None:
         """
         Retrieves details for a specific docket entry and its attachments.
 
@@ -124,7 +175,11 @@ class ACMSAttachmentPage(BaseReport):
         # Attachment requests include user-specific data in the request body,
         # so the session must have the necessary authentication data
         # initialized beforehand.
-        if not self.session.acms_user_data:
+        if self.session is None:
+            raise ValueError(
+                "A PACER session is required to query attachments."
+            )
+        if not bool(self.session.acms_user_data):
             await self.session.get_acms_auth_object(self.court_id)
 
         # Fetch Docket Entry Details
@@ -139,34 +194,44 @@ class ACMSAttachmentPage(BaseReport):
             ),
             None,
         )
-        if not entry_data:
+        if not bool(entry_data):
             logger.warning(
                 "Docket entry with ID '%s' not found in case '%s'."
                 % (entry_id, case_id)
             )
             self.is_valid = False
-            self._acms_json = {}
+            self._acms_json = None
             return
 
-        is_case_participant = docket_info["isUserCaseParticipant"]
-        is_restricted_party_filing_entry = entry_data[
+        is_case_participant = docket_info.get("isUserCaseParticipant")
+        is_restricted_party_filing_entry = entry_data.get(
             "restrictedPartyFilingDocketEntry"
-        ]
+        )
+        if (
+            is_case_participant is None
+            or is_restricted_party_filing_entry is None
+        ):
+            raise ValueError(
+                "ACMS attachment query is missing participation or restriction flags."
+            )
 
         attachment_list = await self.api_client.get_attachments(
             entry_id, is_case_participant, is_restricted_party_filing_entry
         )
 
         # Store the processed data and mark as valid.
+        self._acms_json = ATTACHMENT_PAYLOAD.validate_python(
+            {
+                "caseDetails": {"caseId": case_id},
+                "docketEntry": entry_data,
+                "docketEntryDocuments": attachment_list,
+            },
+            strict=True,
+        )
         self.is_valid = True
-        self._acms_json = {
-            "caseDetails": {"caseId": case_id},
-            "docketEntry": entry_data,
-            "docketEntryDocuments": attachment_list,
-        }
 
     @property
-    def data(self) -> dict:
+    def data(self) -> AcmsAttachmentPageData:
         """Extract relevant information from the JSON payload
         provided by the extension.
 
@@ -182,26 +247,30 @@ class ACMSAttachmentPage(BaseReport):
                 - pacer_doc_id: The pacer doc id for the attachment (a str).
                 - acms_document_guid: The GUID of the document in ACMS.
         """
-        if not self.is_valid:
+        if not bool(self.is_valid) or self._acms_json is None:
             return {}
 
         case_details = self._acms_json["caseDetails"]
         docket_entry = self._acms_json["docketEntry"]
         de_text = strip_bad_html_tags_insecure(docket_entry["docketEntryText"])
-        result = {
+        created_on = docket_entry.get("createdOn")
+        attachments: list[AcmsAttachmentResult] = []
+        result: AcmsAttachmentPageData = {
             "pacer_doc_id": docket_entry["docketEntryId"],
             "pacer_case_id": case_details["caseId"],
             "entry_number": docket_entry["entryNumber"],
             "description": unicodedata.normalize(
                 "NFKD", de_text.text_content()
             ),
-            "date_filed": convert_date_string(docket_entry["createdOn"]),
+            "date_filed": convert_date_string(created_on)
+            if bool(created_on)
+            else None,
             "date_end": convert_date_string(docket_entry["endDate"]),
-            "attachments": [],
+            "attachments": attachments,
         }
 
         for row in self._acms_json["docketEntryDocuments"]:
-            result["attachments"].append(
+            attachments.append(
                 {
                     "attachment_number": self._parse_attachment_number(
                         row["documentNumber"]
@@ -222,7 +291,7 @@ class ACMSAttachmentPage(BaseReport):
         return result
 
 
-def main():
+def main() -> None:
     if len(sys.argv) != 2:
         print(
             "Usage: python -m juriscraper.pacer.acms_attachment_page filepath"

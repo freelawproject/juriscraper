@@ -57,7 +57,7 @@ class TexasCourtOfAppealsScraper(
     - Transfer information (if available).
     """
 
-    def __init__(self, court_id: str):
+    def __init__(self, court_id: str) -> None:
         super().__init__(court_id)
 
     @override
@@ -125,19 +125,19 @@ class TexasCourtOfAppealsScraper(
         transfer_from = None
         transfer_to = None
 
-        if transfer_from_court:
+        if bool(transfer_from_court):
             transfer_from = TexasAppealsCourtTransfer(
                 court_id=coa_name_to_court_id(transfer_from_court).value,
                 date=datetime.strptime(transfer_from_date, "%m/%d/%Y")
-                if transfer_from_date
+                if bool(transfer_from_date)
                 else None,
                 origin_docket=docket_number,
             )
-        if transfer_to_court:
+        if bool(transfer_to_court):
             transfer_to = TexasAppealsCourtTransfer(
                 court_id=coa_name_to_court_id(transfer_to_court).value,
                 date=datetime.strptime(transfer_to_date, "%m/%d/%Y")
-                if transfer_to_date
+                if bool(transfer_to_date)
                 else None,
                 origin_docket=self.docket_number,
             )

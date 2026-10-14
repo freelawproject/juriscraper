@@ -8,23 +8,34 @@ History:
 """
 
 import re
-from datetime import datetime
+from datetime import date, datetime
 from urllib.parse import urlencode, urljoin
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
 from juriscraper.lib.html_utils import (
     get_row_column_links,
     get_row_column_text,
 )
 from juriscraper.lib.judge_parsers import normalize_judge_string
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import BackscrapeOptions, ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+class Site(OpinionSiteLinear[tuple[date, date]]):
+    start_date: date
+    end_date: date
+
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.base_url = "https://www.la2nd.org/opinions/"
         self.year = datetime.now().year
@@ -37,7 +48,13 @@ class Site(OpinionSiteLinear):
     @override
     def _process_html(self) -> None:
         """Process the HTML and extract case information"""
-        rows = self.html.xpath('//table[@id="datatable"]/tbody/tr')
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(
+            '//table[@id="datatable"]/tbody/tr'
+        )
 
         for row in rows:
             author_str = get_row_column_text(row, 4)
@@ -69,7 +86,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def make_backscrape_iterable(self, kwargs):
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """Checks if backscrape start and end arguments have been passed
         by caller, and parses them accordingly
 
@@ -81,18 +99,19 @@ class Site(OpinionSiteLinear):
         start = kwargs.get("backscrape_start")
         end = kwargs.get("backscrape_end")
 
-        if start:
+        if bool(start):
             start = datetime.strptime(start, "%Y/%m/%d").date()
         else:
             start = self.first_opinion_date
-        if end:
+        if bool(end):
             end = datetime.strptime(end, "%Y/%m/%d").date()
         else:
             end = datetime.now().date()
 
         self.back_scrape_iterable = [(start, end)]
 
-    async def _download_backwards(self, dates):
+    @override
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Called when backscraping
 
         :param dates: (start_date, end_date) tuple
@@ -110,7 +129,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
-    def date_is_in_backscrape_range(self, case_date):
+    def date_is_in_backscrape_range(self, case_date: date) -> bool:
         """When backscraping, check if the case date is in
         the backscraping range
 
@@ -119,7 +138,8 @@ class Site(OpinionSiteLinear):
         """
         return self.start_date <= case_date <= self.end_date
 
-    def extract_from_text(self, scraped_text):
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract the following values from the opinion's pdf text. The information we need is in the first page
             - appeal_from_str
             - judges
@@ -127,7 +147,7 @@ class Site(OpinionSiteLinear):
         :param scraped_text: The text content of the pdf
         :return: Dictionary containing the extracted values that matches the courtlistener model objects
         """
-        metadata = {"Docket": {}}
+        metadata: ExtractedMetadata = {"Docket": {}}
 
         appeal_from_match = re.search(
             r"Appealed from the\s*(.*?\s*),\s*Louisiana",
@@ -137,20 +157,20 @@ class Site(OpinionSiteLinear):
         # Judges are in the format "Before [Judge1], [Judge2], and [Judge3], JJ."
         # Sometimes there are more than 3 judges, and other edge cases like "and" is in uppercase
         # or there is no comma between the last two judges
-        judges_match = re.findall(
+        judges_match = re.search(
             r"Before\s+(.+?)(?:,\s*|\s+)?(?:and|AND)\s+([A-Z]+),\s+JJ\.",
             scraped_text,
             re.DOTALL,
         )
-        if appeal_from_match:
+        if appeal_from_match is not None:
             appeal_from_result = re.sub(
                 r"\s+", " ", appeal_from_match.group(1).replace("\n", " ")
             ).strip()
             metadata["Docket"] = {
                 "appeal_from_str": appeal_from_result,
             }
-        if judges_match:
-            initial_judges, last_judge = judges_match[0]
+        if judges_match is not None:
+            initial_judges, last_judge = judges_match.group(1, 2)
             all_judges = initial_judges.split(",") + [last_judge]
             metadata["OpinionCluster"] = {
                 "judges": "; ".join(filter(None, map(str.strip, all_judges))),

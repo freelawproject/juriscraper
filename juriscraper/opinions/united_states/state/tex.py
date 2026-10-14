@@ -23,16 +23,20 @@ import re
 from datetime import date
 from datetime import datetime as dt
 
-from lxml import etree
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import RequestParameters, SiteOptions, logger
 from juriscraper.ClusterSite import ClusterSite
-from juriscraper.lib.string_utils import titlecase
-from juriscraper.lib.type_utils import OpinionType
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import (
+    BackscrapeOptions,
+    OpinionType,
+    RawOpinion,
+)
 
 
-class Site(ClusterSite):
+class Site(ClusterSite[tuple[int, date, date]]):
     base_url = "https://www.txcourts.gov/supreme/orders-opinions/{}/"
     # link_xp targets the year-index page's bullet list of dated order
     # subpages (one <li><a> per date); date_xp targets the "Orders
@@ -45,8 +49,13 @@ class Site(ClusterSite):
     judge_regex = r"(?:Chief\s)?Justice\s([A-Z][a-zA-Z]+)"
     days_interval = 365
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[int, date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.first_opinion_date = date(2014, 10, 3)
         self.current_year = date.today().year
@@ -55,7 +64,10 @@ class Site(ClusterSite):
         self.make_backscrape_iterable(kwargs)
         self.is_backscrape = False
 
-    async def _download(self, request_dict=None):
+    @override
+    async def _download(
+        self, request_dict: RequestParameters | None = None
+    ) -> HtmlElement | None:
         """Downloads the HTML content for the current opinion page.
 
         :param request_dict (dict, optional): Additional request parameters.
@@ -66,8 +78,12 @@ class Site(ClusterSite):
 
         if not self.is_backscrape and not self.test_mode_enabled():
             self.html = await super()._download(request_dict)
-            links = self.html.xpath(self.link_xp)
-            if not links:
+            if not isinstance(self.html, HtmlElement):
+                raise ValueError(
+                    "An HTML document must be downloaded before parsing."
+                )
+            links: list[str] = self.html.xpath(self.link_xp)
+            if not bool(links):
                 # No orders posted yet (common in early January)
                 self.html = None
                 logger.error("tex: no date list on opinions page")
@@ -75,6 +91,10 @@ class Site(ClusterSite):
             self.url = links[-1]
 
         self.html = await super()._download(request_dict)
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
         return self.html
 
     @override
@@ -86,12 +106,16 @@ class Site(ClusterSite):
         if self.html is None:
             return
 
-        date_strings = self.html.xpath(self.date_xp)
-        if not date_strings:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        date_strings: list[str] = self.html.xpath(self.date_xp)
+        if not bool(date_strings):
             logger.error("tex: no 'Orders Pronounced' header on order page")
             return
         date_match = re.search(self.date_regex, date_strings[0])
-        if not date_match:
+        if date_match is None:
             logger.error(
                 "tex: unable to parse date from 'Orders Pronounced' header"
             )
@@ -102,11 +126,12 @@ class Site(ClusterSite):
         # <span class="a79"> (separate opinion cell — concurrence /
         # dissent) belong to an opinion. Everything else (orders PDF,
         # case summaries, admin docs) gets filtered out below.
-        links = self.html.xpath('//a[contains(@href, ".pdf")]')
+        links: list[HtmlElement] = self.html.xpath(
+            '//a[contains(@href, ".pdf")]'
+        )
         for link in links:
-            if link.getparent() is None or link.getparent().get(
-                "class"
-            ) not in ["a79", "a70"]:
+            parent = link.getparent()
+            if parent is None or parent.get("class") not in ["a79", "a70"]:
                 logger.info(
                     "Skipping row with link %s", link.attrib.get("href")
                 )
@@ -117,26 +142,26 @@ class Site(ClusterSite):
             # before each opinion row. Walk back from the opinion's row
             # to find the most recent header row — its last entry is
             # the docket+title pair belonging to this opinion.
-            precedingTRs = link.xpath(
+            precedingTRs: list[HtmlElement] = link.xpath(
                 'ancestor::tr/preceding-sibling::tr[td[@class="a50cl"]]'
-            ) or link.xpath(
-                'ancestor::tr/preceding-sibling::tr[td[@class="a54cl"]]'
             )
+            if not bool(precedingTRs):
+                precedingTRs = link.xpath(
+                    'ancestor::tr/preceding-sibling::tr[td[@class="a54cl"]]'
+                )
 
+            tr_texts: list[str] = precedingTRs[-1].xpath(".//text()")
             docket, title, *_ = [
-                tr_text
-                for tr_text in precedingTRs[-1].xpath(".//text()")
-                if tr_text.strip()
+                tr_text for tr_text in tr_texts if bool(tr_text.strip())
             ]
 
-            parent = link.getparent()
             # When the first element under <span class="a70"> is the
             # link itself, the cell has no disposition prose — the
             # parent's .text is the judge intro, not the disposition.
             has_disposition = (
                 parent.get("class") == "a70" and parent[0].tag != "a"
             )
-            disposition = (
+            disposition: str = (
                 parent.xpath(".//text()")[0] if has_disposition else ""
             )
 
@@ -146,7 +171,7 @@ class Site(ClusterSite):
             previous = link.getprevious()
             leading = previous.tail if previous is not None else parent.text
             judge_str = (
-                "".join(x for x in [leading, link.text, link.tail] if x)
+                "".join(x for x in [leading, link.text, link.tail] if bool(x))
                 if parent.get("class") == "a70"
                 else ""
             )
@@ -155,8 +180,11 @@ class Site(ClusterSite):
             joined_by = ""
             judge = ""
 
-            judges = re.findall(self.judge_regex, judge_str)
-            if judges:
+            judges = [
+                match.group(1)
+                for match in re.finditer(self.judge_regex, judge_str)
+            ]
+            if bool(judges):
                 author = judges[0]
                 judge = "; ".join(judges)
             if len(judges) > 1:
@@ -170,12 +198,14 @@ class Site(ClusterSite):
 
             title_regex = r"^(?P<name>.*?)(?=; from|(?=\([^)]*\)$))"
             title_match = re.search(title_regex, title, flags=re.MULTILINE)
-            case_dict = {
+            case_dict: RawOpinion = {
                 "name": titlecase(
-                    title_match.group("name") if title_match else title
+                    title_match.group("name")
+                    if title_match is not None
+                    else title
                 ),
                 "disposition": disposition,
-                "url": link.get("href"),
+                "url": link.attrib["href"],
                 "docket": docket,
                 "date": date,
                 "type": self.extract_type(link),
@@ -188,8 +218,10 @@ class Site(ClusterSite):
                 "lower_court_id": lower_court_id,
             }
 
-            if cluster := self.cluster_opinions(case_dict, self.cases):
-                cluster["judge"] += f"; {case_dict['judge']}"
+            if bool(cluster := self.cluster_opinions(case_dict, self.cases)):
+                cluster["judge"] = (
+                    f"{(judge_value if (judge_value := cluster.get('judge')) is not None else '')}; {judge}"
+                )
             else:
                 self.cases.append(case_dict)
 
@@ -211,7 +243,7 @@ class Site(ClusterSite):
         # "(BODA Cause No. 67623)"
         other_courts_regex = r"\((?P<lower_court>(BODA|U\.S\. (Fif|5)th Circuit))\s(?P<lower_number>(Cause No. )?[\d-]+)\)$"
 
-        if match := re.search(texapp_regex, title):
+        if (match := re.search(texapp_regex, title)) is not None:
             lower_court = match.group("lower_court")
             # When the parenthetical holds only the case number, e.g.
             # "(15-25-00231-CV)", there is no comma to split on and the
@@ -221,7 +253,7 @@ class Site(ClusterSite):
             )
             return lower_court, lower_court_number, "texapp"
 
-        elif match := re.search(other_courts_regex, title):
+        elif (match := re.search(other_courts_regex, title)) is not None:
             lower_court = match.group("lower_court")
             lower_court_number = match.group("lower_number")
 
@@ -238,14 +270,14 @@ class Site(ClusterSite):
         return "", "", ""
 
     @staticmethod
-    def extract_type(link: etree.Element) -> str:
+    def extract_type(link: HtmlElement) -> str:
         """Determines the opinion type
 
         :param link: (etree.Element) The anchor element containing the PDF link.
         :return str: The opinion type as a string.
         """
-        text = link.text.lower()
-        url = link.get("href")
+        text = (link.text if link.text is not None else "").lower()
+        url = link.attrib["href"]
         if "per curiam" in text or url.endswith("pc.pdf"):
             op_type = OpinionType.UNANIMOUS
         elif "in part" in text or url.endswith("cd.pdf"):
@@ -265,7 +297,8 @@ class Site(ClusterSite):
             op_type = OpinionType.MAJORITY
         return str(op_type.value)
 
-    def make_backscrape_iterable(self, kwargs) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """Checks if backscrape start and end arguments have been passed
 
         Texas opinions page returns all opinions for a year (pagination is not needed),
@@ -273,17 +306,21 @@ class Site(ClusterSite):
 
         :return None
         """
-        super().make_backscrape_iterable(kwargs)
+        date_ranges = self._get_backscrape_date_ranges(kwargs)
+        if not bool(date_ranges):
+            self.back_scrape_iterable = []
+            return
 
         # use the parsed values to compute the actual iterable
-        start = self.back_scrape_iterable[0][0]
-        end = self.back_scrape_iterable[-1][-1]
+        start = date_ranges[0][0]
+        end = date_ranges[-1][-1]
 
         dates = []
         for year in list(range(start.year, end.year + 1)):
             dates.append((year, start, end))
         self.back_scrape_iterable = dates
 
+    @override
     async def _download_backwards(
         self, analysis_window: tuple[int, date, date]
     ) -> None:
@@ -296,8 +333,15 @@ class Site(ClusterSite):
         year, start, end = analysis_window
         self.url = self.base_url.format(year)
         await self._download()
+        if self.html is None:
+            return
 
-        for path in self.html.xpath(self.link_xp):
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        paths: list[str] = self.html.xpath(self.link_xp)
+        for path in paths:
             if "historical" in path:
                 # in 2014 they have an extra link for pre-2014 ops
                 continue

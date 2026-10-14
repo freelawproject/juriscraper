@@ -4,7 +4,7 @@ import datetime
 from collections.abc import Iterable
 from itertools import zip_longest
 from math import ceil
-from typing import TypeVar, cast
+from typing import TypeVar, overload
 
 from dateutil.parser import parser, parserinfo
 from dateutil.rrule import DAILY, rrule
@@ -64,7 +64,7 @@ class BetterInfo(parserinfo):
         "th",
     ]
 
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
 
 
@@ -98,10 +98,10 @@ def quarter(month: int) -> int:
     :param month: Any month, as an int.
     :return: The quarter of the year during which that month occurs (1-4)
     """
-    return int(ceil(float(month) / 3))
+    return ceil(float(month) / 3)
 
 
-def is_first_month_in_quarter(month: int) -> int:
+def is_first_month_in_quarter(month: int) -> bool:
     """
 
     :param month: Any month as an int.
@@ -124,9 +124,24 @@ def fix_future_year_typo(future_date: _SomeDateT) -> _SomeDateT:
     return future_date
 
 
+@overload
 def make_date_range_tuples(
-    start: _SomeDateT, end: _SomeDateT, gap: int
-) -> list[tuple[_SomeDateT, _SomeDateT]]:
+    start: datetime.datetime, end: datetime.datetime, gap: int
+) -> list[tuple[datetime.datetime, datetime.datetime]]: ...
+
+
+@overload
+def make_date_range_tuples(
+    start: datetime.date, end: datetime.date, gap: int
+) -> list[tuple[datetime.date, datetime.date]]: ...
+
+
+def make_date_range_tuples(
+    start: datetime.date, end: datetime.date, gap: int
+) -> (
+    list[tuple[datetime.date, datetime.date]]
+    | list[tuple[datetime.datetime, datetime.datetime]]
+):
     """Make an iterable of date tuples for use in iterating forms
 
     For example, a form might allow start and end dates and you want to iterate
@@ -145,40 +160,31 @@ def make_date_range_tuples(
     :returns: list of start, end tuples
     """
 
-    def to_any_date(dt: datetime.datetime) -> _SomeDateT:
-        # Python generics can't be reified; we must key off the input values
-        # and to infer the type manually.
-        if all(isinstance(d, datetime.datetime) for d in (start, end)):
-            # both start and end are `datetime`-> `_SomeDateT` is `datetime`
-            return cast(_SomeDateT, dt)
-        else:
-            return cast(_SomeDateT, dt.date())
-
     # We create a list of start dates and a list of end dates, then zip them
     # together. If end_dates is shorter than start_dates, fill the last value
     # with the original end date.
-    start_dates = [
-        to_any_date(d)
-        for d in rrule(DAILY, interval=gap, dtstart=start, until=end)
-    ]
+    start_dates = list(rrule(DAILY, interval=gap, dtstart=start, until=end))
     end_start = start + datetime.timedelta(days=gap - 1)
-    end_dates = [
-        to_any_date(d)
-        for d in rrule(DAILY, interval=gap, dtstart=end_start, until=end)
-    ]
-    if isinstance(end, datetime.datetime):
-        end_date = to_any_date(end)
-    else:
-        end_date = end
-    return list(zip_longest(start_dates, end_dates, fillvalue=end_date))
+    end_dates = list(rrule(DAILY, interval=gap, dtstart=end_start, until=end))
+    if isinstance(start, datetime.datetime) and isinstance(
+        end, datetime.datetime
+    ):
+        return list(zip_longest(start_dates, end_dates, fillvalue=end))
+    end_date = end.date() if isinstance(end, datetime.datetime) else end
+    return list(
+        zip_longest(
+            (d.date() for d in start_dates),
+            (d.date() for d in end_dates),
+            fillvalue=end_date,
+        )
+    )
 
 
 def unique_year_month(
-    date_list: list[_SomeDateT] | list[tuple[_SomeDateT]],
+    date_list: Iterable[_SomeDateT | tuple[_SomeDateT, ...]],
 ) -> list[_SomeDateT]:
     """Takes a list of dates or date tuples, and reduces it
     to date objects with unique year-months pairs
-    TODO: 1-tuple input is not correct; it should change to reflect usage.
     TODO: A `NamedTuple` may be the most appropriate return type. Setting aside
      `datetime.date` and `datetime.datetime` inheritance trouble, consumers are
      do not appear to use the day of the returned values - only year and month

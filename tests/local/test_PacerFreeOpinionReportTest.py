@@ -1,5 +1,7 @@
 import os
 
+from typing_extensions import override
+
 from juriscraper.pacer.free_documents import FreeOpinionReport
 from tests import TESTS_ROOT_EXAMPLES_PACER
 from tests.local.PacerParseTestCase import PacerParseTestCase
@@ -10,17 +12,18 @@ TESTS_ROOT_EXAMPLES_PACER_FREE_OPINION_REPORT = os.path.join(
 
 
 class PacerFreeOpinionReportTest(PacerParseTestCase):
-    def setUp(self):
+    @override
+    def setUp(self) -> None:
         self.maxDiff = 200000
 
-    def test_free_opinion_report(self):
+    def test_free_opinion_report(self) -> None:
         self.parse_files(
             TESTS_ROOT_EXAMPLES_PACER_FREE_OPINION_REPORT,
             "*.html",
             FreeOpinionReport,
         )
 
-    def test_reported_opinion_count(self):
+    def test_reported_opinion_count(self) -> None:
         """reported_opinion_count returns PACER's own "Total number of
         opinions reported", which is independent of how many rows we parse.
 

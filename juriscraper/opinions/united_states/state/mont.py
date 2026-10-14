@@ -4,11 +4,25 @@
 
 import re
 
-from typing_extensions import override
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
 from juriscraper.lib.exceptions import InvalidDocumentError
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+
+
+class _Order(TypedDict):
+    documentDescription: str
+    caseNumber: str
+    cTrackId: str
+    fileDate: str
+    title: str
+
+
+_orders_adapter = TypeAdapter(list[_Order])
 
 
 class Site(OpinionSiteLinear):
@@ -17,16 +31,21 @@ class Site(OpinionSiteLinear):
     download_base = f"{base_url}/getDocByCTrackId?DocId="
     cite_regex = r"((19|20)\d{2}\sMT\s\d{1,3}[A-Z]?)"
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = f"{self.base_url}/getDailyOrders"
-        self.expected_content_types = None
+        self.expected_content_types = []
         self.should_have_results = True
 
     @override
     def _process_html(self) -> None:
-        for row in self.html:
+        for row in _orders_adapter.validate_python(self.html, strict=True):
             description = row["documentDescription"]
             if not description.startswith("Opinion"):
                 # skip orders and just do opinions
@@ -52,11 +71,13 @@ class Site(OpinionSiteLinear):
             author = ""
             disposition = ""
             summary = ""
-            if author_match := re.search(
-                r"Justice (?P<author>.*?)\s*(?:author(ed)?|,|-|\.)",
-                description,
-                re.I,
-            ):
+            if (
+                author_match := re.search(
+                    r"Justice (?P<author>.*?)\s*(?:author(ed)?|,|-|\.)",
+                    description,
+                    re.I,
+                )
+            ) is not None:
                 author = author_match.group("author")
                 disposition = description[author_match.end() :].strip(" .,-")
                 disposition = disposition[:1].upper() + disposition[1:]
@@ -77,15 +98,16 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract citation, and OriginatingCourtInformation from text
 
         :param scraped_text: Text of scraped content
         :return: date filed
         """
-        result = {}
+        result: ExtractedMetadata = {}
         first_text = scraped_text[:400]
-        if match := re.search(self.cite_regex, first_text):
+        if (match := re.search(self.cite_regex, first_text)) is not None:
             result["Citation"] = match.group(0)
 
         lower_court_pattern = re.compile(
@@ -98,30 +120,31 @@ class Site(OpinionSiteLinear):
             re.X | re.DOTALL,
         )
 
-        if match := lower_court_pattern.search(scraped_text):
+        if (match := lower_court_pattern.search(scraped_text)) is not None:
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
             result.setdefault("Docket", {})["appeal_from_str"] = lower_court
             lower_court_judge = match.group("judge")
-            if lower_court_judge:
+            if bool(lower_court_judge):
                 result.setdefault("OriginatingCourtInformation", {})[
                     "assigned_to_str"
                 ] = lower_court_judge
             lower_court_docket = match.group("lower_court_docket")
-            if lower_court_docket:
+            if bool(lower_court_docket):
                 result.setdefault("OriginatingCourtInformation", {})[
                     "docket_number"
                 ] = lower_court_docket
 
         docket_number_pattern = re.compile(r"(DA|OP)\s[0-9]{2}-[0-9]{4}")
-        if match := docket_number_pattern.search(scraped_text):
+        if (match := docket_number_pattern.search(scraped_text)) is not None:
             result.setdefault("Docket", {})["docket_number"] = match.group(0)
 
         return result
 
+    @override
     @staticmethod
-    def cleanup_content(content: str | bytes) -> str:
+    def cleanup_content(content: str | bytes) -> str | bytes:
         """Raise an error if the content is invalid; otherwise just return it
 
         Not cleaning up in the common sense; but avoids ingesting error

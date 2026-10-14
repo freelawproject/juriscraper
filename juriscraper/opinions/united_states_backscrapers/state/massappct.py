@@ -1,5 +1,9 @@
 from datetime import datetime
 
+from typing_extensions import Unpack
+
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.opinions.united_states_backscrapers.state import mass
 
 
@@ -18,6 +22,11 @@ class Site(mass.Site):
         },
     ]
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[datetime, datetime, str]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__

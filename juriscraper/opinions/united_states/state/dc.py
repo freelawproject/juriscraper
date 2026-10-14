@@ -10,14 +10,23 @@ History:
 
 import re
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.dccourts.gov/court-of-appeals/opinions-and-memorandum-of-judgments"
         qualifier_no_opinions = (
@@ -38,13 +47,18 @@ class Site(OpinionSiteLinear):
         :return: None
         """
 
-        for row in self.html.xpath(self.base_path):
-            docket = row.xpath("./td[1]/a/text()")[0].strip()
-            url = row.xpath("./td[1]/a/@href")[0].strip()
-            name = row.xpath("./td[2]/text()")[0].strip()
-            date = row.xpath("./td[3]/text()")[0].strip()
-            disposition = "".join(row.xpath("./td[4]//text()")).strip()
-            judge = "".join(row.xpath("./td[5]//text()")).strip()
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(self.base_path)
+        for row in rows:
+            docket: str = row.xpath("./td[1]/a/text()")[0].strip()
+            url: str = row.xpath("./td[1]/a/@href")[0].strip()
+            name: str = row.xpath("./td[2]/text()")[0].strip()
+            date: str = row.xpath("./td[3]/text()")[0].strip()
+            disposition: str = "".join(row.xpath("./td[4]//text()")).strip()
+            judge: str = "".join(row.xpath("./td[5]//text()")).strip()
 
             # "Per Curiam" appears in the Judge column instead of an author
             per_curiam = "per curiam" in judge.lower()
@@ -63,7 +77,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract lower court from the scraped text.
 
         :param scraped_text: The text to extract from.
@@ -86,7 +101,7 @@ class Site(OpinionSiteLinear):
         )
 
         match = court_and_docket_pattern.search(scraped_text)
-        if match:
+        if match is not None:
             lower_court = re.sub(r"\s+", " ", match.group(1)).strip()
             lower_court_number = match.group(2).strip()
 

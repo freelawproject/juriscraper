@@ -10,20 +10,27 @@ import re
 from datetime import date, datetime
 
 from dateparser import parse
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import BackscrapeOptions
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[int]):
     first_opinion_date = "1998/01/01"
     base_url = "https://poderjudicial.pr/index.php/tribunal-supremo/decisiones-del-tribunal-supremo/decisiones-del-tribunal-supremo"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[int]],
+    ) -> None:
         kwargs.setdefault("verify", False)
-        super().__init__(*args, **kwargs)
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.year = date.today().year
         self.url = f"{self.base_url}-{self.year}/"
@@ -47,9 +54,16 @@ class Site(OpinionSiteLinear):
         )
         cells_in_td_xpath = "ancestor::td[1]/following-sibling::td"
 
-        for link in self.html.xpath("//a[contains(string(.), 'TSPR')]"):
-            url = link.xpath("@href")[0]
-            citation = link.xpath("string(.)").strip()
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        links: list[HtmlElement] = self.html.xpath(
+            "//a[contains(string(.), 'TSPR')]"
+        )
+        for link in links:
+            url: str = link.xpath("@href")[0]
+            citation = link.text_content().strip()
             sibling_td_count = len(link.xpath(cells_in_td_xpath))
 
             if sibling_td_count >= 5:
@@ -57,7 +71,7 @@ class Site(OpinionSiteLinear):
                 # TDs: [citation, materia, docket, name, date, ponente]
                 # >= 5 instead of == 5 because some rows on the source
                 # merge two cases into a single <tr> (e.g. 2013 TSPR 87)
-                cells = link.xpath(cells_in_td_xpath)
+                cells: list[HtmlElement] = link.xpath(cells_in_td_xpath)
                 docket = cells[1].text_content().strip()
                 name = cells[2].text_content().strip()
                 date_str = cells[3].text_content().strip()
@@ -68,23 +82,23 @@ class Site(OpinionSiteLinear):
                 # (with month from a preceding <h3>), sometimes a
                 # day-month string like "21-Nov", "7/AGOSTO",
                 # "26 ABRIL", or even a full date
-                cells = link.xpath(cells_in_td_xpath)
+                cells: list[HtmlElement] = link.xpath(cells_in_td_xpath)
                 docket = cells[0].text_content().strip()
                 name = cells[1].text_content().strip()
                 day_field = re.sub(
                     r"\s+", " ", cells[2].text_content()
                 ).strip()
                 if day_field.isdigit():
-                    month_h3 = link.xpath(
+                    month_h3: list[HtmlElement] = link.xpath(
                         "ancestor::table[1]/preceding::h3[1]"
                     )
                     month_name = (
                         month_h3[0].text_content().strip().lower()
-                        if month_h3
+                        if bool(month_h3)
                         else ""
                     )
                     date_str = f"{day_field} de {month_name} de {self.year}"
-                elif day_field:
+                elif bool(day_field):
                     # Append the year if not already present, so
                     # dateparser can resolve "21-Nov" → "21-Nov 2000"
                     date_str = day_field
@@ -95,10 +109,10 @@ class Site(OpinionSiteLinear):
             elif sibling_td_count == 0:
                 # Newest format (2023+): vertical layout with labeled rows
                 # Rows: [Núm., Partes, Ponente, Fecha, Materia]
-                cells = link.xpath(cells_in_tr_xpath)
+                cells: list[HtmlElement] = link.xpath(cells_in_tr_xpath)
                 docket = self.extract_cell(cells, 0)
                 name = self.extract_cell(cells, 1)
-                date_str = cells[3].xpath(".//td")[1].text_content().strip()
+                date_str = cells[3].findall(".//td")[1].text_content().strip()
             else:
                 # 1-3 siblings: false positive match — a link in a
                 # non-citation column whose text happens to contain
@@ -111,12 +125,16 @@ class Site(OpinionSiteLinear):
             date_obj = parse(date_str, languages=["es"])
 
             date_filed_is_approximate = False
-            if not date_obj:
+            if date_obj is None:
                 # E.g. 2022TSPR106 has the docket number in the date
                 # column instead of a date due to a website data error
                 date_filed_is_approximate = True
-                if self.cases:
-                    fallback = self.cases[-1]["date"]
+                if bool(self.cases):
+                    fallback = (
+                        date_value
+                        if bool(date_value := self.cases[-1].get("date"))
+                        else f"{self.year}-01-01"
+                    )
                 else:
                     fallback = f"{self.year}-01-01"
                 logger.info(
@@ -139,7 +157,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def extract_cell(self, cells, index) -> str:
+    def extract_cell(self, cells: list[HtmlElement], index: int) -> str:
         """Extract the value from a labeled table cell in the newest layout
 
         Each cell contains a label (e.g. "Núm.", "Partes") followed by the
@@ -153,11 +171,12 @@ class Site(OpinionSiteLinear):
         lines = [
             line.strip()
             for line in cells[index].text_content().split("\n")
-            if line.strip()
+            if bool(line.strip())
         ]
         return lines[1] if len(lines) > 1 else lines[0]
 
-    def make_backscrape_iterable(self, kwargs) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """Build the year range iterable used for back-scraping
 
         :param kwargs: Keyword arguments optionally containing backscrape_start
@@ -167,15 +186,20 @@ class Site(OpinionSiteLinear):
         start = kwargs.get("backscrape_start")
         end = kwargs.get("backscrape_end")
 
-        if not start:
+        if not bool(start):
             return
 
         start_date = datetime.strptime(start, "%Y/%m/%d")
-        end_date = datetime.strptime(end, "%Y/%m/%d")
+        end_date = (
+            datetime.strptime(end, "%Y/%m/%d")
+            if bool(end)
+            else datetime.today()
+        )
 
         self.back_scrape_iterable = range(start_date.year, end_date.year + 1)
 
-    async def _download_backwards(self, year) -> None:
+    @override
+    async def _download_backwards(self, year: int) -> None:
         """Download and parse opinions for a single back-scrape year
 
         :param year: The year to scrape

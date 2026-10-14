@@ -5,10 +5,13 @@ Court Short Name: Tenn.
 """
 
 import re
-from datetime import datetime
+from datetime import date, datetime
 
 from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.opinions.united_states.state import tenn
 from juriscraper.OpinionSite import OpinionSite
 
@@ -19,8 +22,13 @@ class Site(tenn.Site):
 
     extract_from_text = OpinionSite.extract_from_text
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.url = "https://www.tncourts.gov/courts/work-comp/opinions"
         self.section_selector = (
             "views-field views-field-field-opinions-case-brief"
@@ -29,6 +37,7 @@ class Site(tenn.Site):
         # docket will always contain WC in the docket number
         self.docket_xpath = "text()[contains(., 'WC')]"
 
+    @override
     def get_summary(self, section: HtmlElement) -> str:
         """Get the summary considering some XPath variations
 
@@ -41,14 +50,15 @@ class Site(tenn.Site):
             pass
 
         # last non empty floating text in the section
-        summary = section.xpath("text()[normalize-space()]")[-1]
+        summary: str = section.xpath("text()[normalize-space()]")[-1]
         # ensure we didn't pick up a judge field
         if " Judge:" not in summary:
             return summary
 
         # sometimes each line of the summary is inside a div
         # See 2022 case 'Sonney Summers v. RTR Transportation Services et al.'
-        if containers := section.xpath("div/text()"):
+        containers: list[str] = section.xpath("div/text()")
+        if bool(containers):
             return re.sub(r"\s+", " ", " ".join(containers))
 
         return ""

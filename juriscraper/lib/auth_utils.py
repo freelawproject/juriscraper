@@ -4,7 +4,10 @@ import hmac
 import os
 import re
 
-from juriscraper.AbstractSite import logger
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict
+
+from juriscraper.AbstractSite import BackscrapeItem, logger
 from juriscraper.OpinionSite import OpinionSite
 
 
@@ -18,13 +21,14 @@ def get_justice_dot_gov_auth_cookies(html_text: str) -> dict[str, str]:
     :param html_text: the HTML response
     :return: a dict with to populate Site.cookies with
     """
-    salt = re.search(r'let public_salt = "(?P<salt>.+)";', html_text).group(
-        "salt"
-    )
+    salt_match = re.search(r'let public_salt = "(?P<salt>.+)";', html_text)
     candidates = re.search(
         r'candidates = "(?P<candidate1>.+)/(?P<candidate2>.+)"\.split',
         html_text,
     )
+    if salt_match is None or candidates is None:
+        raise ValueError("Unable to extract justice.gov authentication values")
+    salt = salt_match.group("salt")
     candidate1 = candidates.group("candidate1")
     candidate2 = candidates.group("candidate2")
     auth_1 = (
@@ -40,7 +44,7 @@ def get_justice_dot_gov_auth_cookies(html_text: str) -> dict[str, str]:
     }
 
 
-def set_api_token_header(site: OpinionSite) -> None:
+def set_api_token_header(site: OpinionSite[BackscrapeItem]) -> None:
     """
     Puts the NY_API_TOKEN in the X-Api-Token header
     Creates the Site.headers attribute, copying the
@@ -52,7 +56,7 @@ def set_api_token_header(site: OpinionSite) -> None:
     if site.test_mode_enabled():
         return
     api_token = os.environ.get("NY_API_TOKEN", None)
-    if not api_token:
+    if not bool(api_token):
         logger.warning(
             "NY_API_TOKEN environment variable is not set. "
             f"It is required for scraping New York Court: {site.court_id}"
@@ -62,10 +66,23 @@ def set_api_token_header(site: OpinionSite) -> None:
     site.needs_special_headers = True
 
 
+class AwsCredentials(TypedDict):
+    AccessKeyId: str
+    SecretKey: str
+    SessionToken: str
+
+
+class _CognitoResponse(TypedDict):
+    Credentials: AwsCredentials
+
+
+COGNITO_RESPONSE = TypeAdapter(_CognitoResponse)
+
+
 def generate_aws_sigv4_headers(
     payload: str,
     table_name: str | None = None,
-    creds: dict | None = None,
+    creds: AwsCredentials | None = None,
     signed_headers: str = "host;x-amz-date;x-amz-security-token;x-amz-target",
     target: str = "DynamoDB_20120810.Scan",
     service: str = "dynamodb",
@@ -85,8 +102,11 @@ def generate_aws_sigv4_headers(
     :param region: the aws region
     :return: signed headers to use to query db
     """
+    if creds is None:
+        raise ValueError("AWS credentials are required to sign a request")
+
     # 1. Prepare SigV4 signing
-    now = datetime.datetime.utcnow()
+    now = datetime.datetime.now(datetime.UTC)
     amz_date = now.strftime("%Y%m%dT%H%M%SZ")
     date_stamp = now.strftime("%Y%m%d")
     payload_hash = hashlib.sha256(payload.encode()).hexdigest()
@@ -124,7 +144,7 @@ def generate_aws_sigv4_headers(
     )
 
     # Signing key derivation
-    def sign(key, msg):
+    def sign(key: bytes, msg: str) -> bytes:
         return hmac.new(key, msg.encode(), hashlib.sha256).digest()
 
     k_date = sign(("AWS4" + creds["SecretKey"]).encode(), date_stamp)

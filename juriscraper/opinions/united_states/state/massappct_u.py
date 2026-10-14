@@ -11,15 +11,22 @@ Date: 2020-02-27
 from datetime import date, timedelta
 from urllib.parse import urlencode
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.case_date = date.today()
         self.backwards_days = 14
         self.base = "https://128archive.com"
@@ -62,11 +69,17 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
-        for row in self.html.xpath("//div[@data-rowtype]"):
-            docket, name, date = row.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath("//div[@data-rowtype]")
+        for row in rows:
+            metadata: list[str] = row.xpath(
                 ".//div[@class='col-md-7 font-bold']/text()"
             )
-            path = row.xpath(".//div/div/a/@href")[0]
+            docket, name, date = metadata
+            path: str = row.xpath(".//div/div/a/@href")[0]
             self.cases.append(
                 {
                     "date": date.strip(),

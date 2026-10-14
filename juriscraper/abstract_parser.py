@@ -17,7 +17,7 @@ class Parser(ABC, Generic[_ParserInput, _ParserOutput]):
 
     output: _ParserOutput | None
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.output = None
 
     @final
@@ -65,9 +65,9 @@ class LegacyParser(Generic[_ParserOutput], Parser[str, _ParserOutput], ABC):
     inheriting from the Parser ABC (i.e. _parse_text and data).
     """
 
-    def __init__(self, court_id: str):
+    def __init__(self, court_id: str) -> None:
         self.court_id: str = court_id
-        Parser.__init__(self)
+        super().__init__()
 
     def _parse_text(self, text: str) -> None:
         """Ingest some arbitrary text and prepare it to be parsed by the data() method."""
@@ -84,7 +84,7 @@ class LegacyParser(Generic[_ParserOutput], Parser[str, _ParserOutput], ABC):
 class AbstractParser(Generic[_ParserOutput], ABC):
     """Abstract base class, which all scrapers should inherit from."""
 
-    def __init__(self, court_id: str):
+    def __init__(self, court_id: str) -> None:
         self.court_id: str = court_id
 
     def _parse_text(self, text: str) -> None:

@@ -34,7 +34,7 @@ def breakup_hex_substrings(form_data: dict[str, str]) -> dict[str, str]:
     for name, value in defanged.items():
         if name in BASE64_STATE_FIELDS:
             defanged[name] = WAF_SQLI_HEX_LITERAL_RE.sub("0\n", value)
-        elif WAF_SQLI_HEX_LITERAL_RE.search(value):
+        elif WAF_SQLI_HEX_LITERAL_RE.search(value) is not None:
             # A match in any other field is something we can't rewrite
             # without corrupting it. Log it so that an otherwise baffling
             # 403 has a trail.

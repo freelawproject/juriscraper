@@ -10,31 +10,42 @@ History:
 
 import re
 
+from typing_extensions import Unpack, override
+
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.opinions.united_states.state import ind
 
 
 class Site(ind.Site):
     page_court_id = "9550"
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.court_name = "Tax Court"
         self.status = "Unknown"
 
-    def extract_from_text(self, scraped_text: str):
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract publication status
 
         :param scraped_text: Text of scraped content
         :return: metadata
         """
-        if re.findall(r"\bNOT FOR PUBLICATION\b", scraped_text):
+        if bool(re.findall(r"\bNOT FOR PUBLICATION\b", scraped_text)):
             status = "Unpublished"
-        elif re.findall(r"\bFOR PUBLICATION\b", scraped_text):
+        elif bool(re.findall(r"\bFOR PUBLICATION\b", scraped_text)):
             status = "Published"
         else:
             status = "Unknown"
-        metadata = {
+        metadata: ExtractedMetadata = {
             "OpinionCluster": {
                 "precedential_status": status,
             },

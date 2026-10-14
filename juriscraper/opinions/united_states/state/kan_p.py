@@ -15,13 +15,15 @@ History:
 from datetime import date, timedelta
 from urllib.parse import urlencode, urljoin
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[tuple[date, date]]):
     base_url = "https://searchdro.kscourts.gov"
     court_string = "Supreme Court"
     court_filter = "10"
@@ -31,8 +33,13 @@ class Site(OpinionSiteLinear):
     days_interval = 30
     use_urllib = True
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         today = date.today()
         self.url = self._make_search_url(today - timedelta(days=30), today)
@@ -55,8 +62,13 @@ class Site(OpinionSiteLinear):
         Columns: Release Date, Case Number, Case Title, Court, Status, PDF
         """
 
-        for row in self.html.xpath("//table//tr[not(.//th)]"):
-            cells = row.xpath(".//td")
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath("//table//tr[not(.//th)]")
+        for row in rows:
+            cells = row.findall(".//td")
             if len(cells) < 6:
                 logger.warning("Skipping malformed row %s", cells)
                 continue
@@ -66,7 +78,7 @@ class Site(OpinionSiteLinear):
                 logger.warning("Skipping record from other court, %s", cells)
                 continue
 
-            url = cells[5].xpath(".//a/@href")
+            url: list[str] = cells[5].xpath(".//a/@href")
             self.cases.append(
                 {
                     "date": cells[0].text_content().strip(),
@@ -77,6 +89,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Backscrape using the /Documents/Search endpoint
 

@@ -29,28 +29,29 @@ class _TexasCommonTestScraper(TexasCommonScraper[TexasCommonData]):
 class TexasParseCommonDataTest(PacerParseTestCase):
     """Test parsing of data common to all Texas dockets"""
 
-    def setUp(self):
+    @override
+    def setUp(self) -> None:
         self.maxDiff = 200000
 
-    def test_common(self):
+    def test_common(self) -> None:
         path_root = TESTS_ROOT_EXAMPLES_STATES / "texas" / "common"
         self.parse_files(path_root, "*.html", _TexasCommonTestScraper)
 
-    def test_supreme(self):
+    def test_supreme(self) -> None:
         path_root = TESTS_ROOT_EXAMPLES_STATES / "texas" / "sc"
         self.parse_files(path_root, "*.html", TexasSupremeCourtScraper)
 
-    def test_coca(self):
+    def test_coca(self) -> None:
         path_root = TESTS_ROOT_EXAMPLES_STATES / "texas" / "coca"
         self.parse_files(
             path_root, "*.html", TexasCourtOfCriminalAppealsScraper
         )
 
-    def test_coa(self):
+    def test_coa(self) -> None:
         path_root = TESTS_ROOT_EXAMPLES_STATES / "texas" / "coa"
         self.parse_files(path_root, "*.html", TexasCourtOfAppealsScraper)
 
-    def test_docket_number_validation(self):
+    def test_docket_number_validation(self) -> None:
         cases: dict[str, str | None] = {
             "01-23-": None,
             "05-13-": None,
@@ -80,9 +81,10 @@ class TexasParseCommonDataTest(PacerParseTestCase):
 class TamesEmailParsingTest(PacerParseTestCase):
     """Tests for parsing TAMES notification emails."""
 
-    def setUp(self):
+    @override
+    def setUp(self) -> None:
         self.maxDiff = 200000
 
-    def test_email(self):
+    def test_email(self) -> None:
         path_root = TESTS_ROOT_EXAMPLES_STATES / "texas" / "email"
         self.parse_files(path_root, "*.txt", TamesEmail)

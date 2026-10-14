@@ -18,14 +18,15 @@ from datetime import date, datetime, timedelta
 from html import unescape
 from urllib.parse import urljoin
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[tuple[date, date]]):
     base_url = "https://ww3.ca2.uscourts.gov"
     search_url = urljoin(base_url, "/dtSearch/dtisapi6.dll")
     # The dtSearch index ID for Opinions. The companion ID for Summary
@@ -34,8 +35,13 @@ class Site(OpinionSiteLinear):
     first_opinion_date = datetime(2007, 1, 1)
     days_interval = 15
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = self.search_url
         self.method = "POST"
@@ -76,20 +82,35 @@ class Site(OpinionSiteLinear):
 
     @override
     def _process_html(self) -> None:
-        for row in self.html.xpath('//table[@class="ResultsTable"]/tr'):
-            anchor = row.xpath('.//td[@class="ResultsItemLeft"]/a')
-            if not anchor:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(
+            '//table[@class="ResultsTable"]/tr'
+        )
+        for row in rows:
+            anchor: list[HtmlElement] = row.xpath(
+                './/td[@class="ResultsItemLeft"]/a'
+            )
+            if not bool(anchor):
                 logger.warning("ca2: row without anchor, skipping")
                 continue
             url = urljoin(self.base_url, anchor[0].get("href", "").strip())
             docket = anchor[0].text_content().strip()
 
-            right = row.xpath('.//td[@class="ResultsItemRight"]')[0]
+            right = row.findall('.//td[@class="ResultsItemRight"]')[0]
             fields = self._parse_right_cell(right)
             # label renamed `Date Posted` -> `Date` on 2026-06-12 #2001
-            posted = fields.get("Date Posted") or fields.get("Date")
+            posted = (
+                Date_Posted_value
+                if bool(Date_Posted_value := fields.get("Date Posted"))
+                else fields.get("Date")
+            )
             caption = fields.get("Caption")
-            if not (url and docket and posted and caption):
+            if not (
+                bool(url) and bool(docket) and bool(posted) and bool(caption)
+            ):
                 logger.error(
                     "ca2: incomplete row docket=%r url=%r posted=%r caption=%r",
                     docket,
@@ -115,10 +136,10 @@ class Site(OpinionSiteLinear):
         remove U+FEFF, so handle it explicitly. Safe to use on opinion
         text too (no BOM there, just a no-op).
         """
-        return (text or "").strip().lstrip("﻿").strip()
+        return (text).strip().lstrip("﻿").strip()
 
     @classmethod
-    def _parse_right_cell(cls, cell) -> dict:
+    def _parse_right_cell(cls, cell: HtmlElement) -> dict[str, str]:
         """Pull labelled values out of a dtSearch result's right TD.
 
         Opinion cells look like:
@@ -138,31 +159,39 @@ class Site(OpinionSiteLinear):
         """
         out: dict[str, str] = {}
         for b in cell.iter("b"):
-            label = cls._clean(b.text or "").rstrip(":").strip()
-            value = cls._clean(b.tail or "")
-            if not value:
+            label = (
+                cls._clean(b.text if b.text is not None else "")
+                .rstrip(":")
+                .strip()
+            )
+            value = cls._clean(b.tail if b.tail is not None else "")
+            if not bool(value):
                 # value may be wrapped in an element following the label,
                 # e.g. the Caption anchor #1991
                 sibling = b.getnext()
                 if sibling is not None and sibling.tag == "a":
                     value = cls._clean(sibling.text_content())
-            if label:
+            if bool(label):
                 out[label] = value
 
-        if not out.get("Caption"):
+        if not bool(out.get("Caption")):
             for script in cell.iter("script"):
-                if match := re.search(
-                    r'captionStr\s*=\s*"(.*?)"', script.text or ""
-                ):
+                if (
+                    match := re.search(
+                        r'captionStr\s*=\s*"(.*?)"',
+                        (script.text if script.text is not None else ""),
+                    )
+                ) is not None:
                     # script text is CDATA, so HTML entities (&amp;) are
                     # not decoded by lxml: unescape them ourselves
                     caption = cls._clean(unescape(match.group(1)))
-                    if caption:
+                    if bool(caption):
                         out["Caption"] = caption
                         break
 
         return out
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         self.start_date, self.end_date = dates
         self._update_parameters()

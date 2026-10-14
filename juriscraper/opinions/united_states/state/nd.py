@@ -8,21 +8,28 @@
 
 import re
 from datetime import date, datetime
-from typing import Any
 from urllib.parse import urljoin
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from pydantic import InstanceOf, TypeAdapter
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.string_utils import normalize_dashes
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker, normalize_dashes
+from juriscraper.lib.type_utils import (
+    ExtractedCluster,
+    ExtractedDocket,
+    ExtractedMetadata,
+)
 from juriscraper.lib.utils import (
-    PaginatedHtmlBackscrapeSite,
     backscrape_over_paginated_results,
 )
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
+_backfill_adapter = TypeAdapter(tuple[InstanceOf[date], InstanceOf[date]])
 
-class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
+
+class Site(OpinionSiteLinear[tuple[date, date] | date]):
     base_url = "https://www.ndcourts.gov/"
     ordered_fields = [
         "citation",
@@ -37,8 +44,13 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
     days_interval = (datetime.today() - first_opinion_date).days + 2
     name_regex = re.compile(r"^(.*?)(\s*(\d{4}\sND\s\d+))\s*$")
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date] | date]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.ndcourts.gov/supreme-court/opinions?topic=&author=&searchQuery=&trialJudge=&pageSize=100&sortOrder=1"
         self.status = "Published"
@@ -58,9 +70,14 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
         # consecutive duplicates
         seen_urls = set()
 
-        for row in self.html.xpath('//table//div[@class="row"]'):
-            onclick = row.xpath(".//button[@onclick]/@onclick")
-            if not onclick:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath('//table//div[@class="row"]')
+        for row in rows:
+            onclick: list[str] = row.xpath(".//button[@onclick]/@onclick")
+            if not bool(onclick):
                 logger.info("Skipping row without a 'View Opinion' button")
                 continue
 
@@ -83,10 +100,10 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
             seen_urls.add(url)
 
             docket, date, nature, author = [
-                txt.split(":", 1)[1].strip() for txt in values if txt
+                txt.split(":", 1)[1].strip() for txt in values if bool(txt)
             ]
 
-            if match := self.name_regex.search(raw_name):
+            if (match := self.name_regex.search(raw_name)) is not None:
                 case_name = match.group(1).strip()
                 citation = match.group(2).strip()
                 raw_name = case_name
@@ -95,7 +112,7 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
 
             case_name, other_docket = self.clean_name(raw_name)
 
-            if other_docket:
+            if bool(other_docket):
                 docket = f"{docket}, {other_docket}"
 
             per_curiam = False
@@ -103,9 +120,7 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
                 author = ""
                 per_curiam = True
 
-            summary = ""
-            if summary_texts := row.xpath("./div[2]/p[1]/text()"):
-                summary = " ".join(summary_texts).strip()
+            summary: str = " ".join(row.xpath("./div[2]/p[1]/text()")).strip()
 
             self.cases.append(
                 {
@@ -133,14 +148,17 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
         """
         other_dockets = ""
         if "(consolidated w/" in name:
-            other_dockets = ",".join(re.findall(r"\d{8}", name))
+            other_dockets = ",".join(
+                match.group() for match in re.finditer(r"\d{8}", name)
+            )
             name = name.split("(consolidated w/")[0]
         if "(CONFIDENTIAL" in name:
             name = name.split("(CONFIDENTIAL")[0]
 
         return name.strip(), other_dockets
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract model fields from opinion's document text
 
         Most times, the citations are available in the HTML; sometimes, they
@@ -155,11 +173,11 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
         :return: Dict with keys of model's names, and values as dicts
         of models field - value pairs
         """
-        metadata = {}
+        metadata: ExtractedMetadata = {}
         regex = r"20\d{2}\sND\s\d+"
         citation_match = re.search(regex, scraped_text[:1000])
 
-        if citation_match:
+        if citation_match is not None:
             metadata["Citation"] = citation_match.group(0)
 
         # Most times, paragraphs are enumerated. The data we are interested
@@ -177,7 +195,7 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
         case_name, docket_number = "", ""
         reversed_lines = lines[:index][::-1]
         for index, line in enumerate(reversed_lines):
-            if re.search(r"\d{8}", line):
+            if re.search(r"\d{8}", line) is not None:
                 docket_number = line.strip()
                 case_name = reversed_lines[index + 1].strip()
                 break
@@ -189,7 +207,7 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
 
         lower_court = ""
         lower_court_judge = ""
-        if match := lower_court_pattern.search(scraped_text):
+        if (match := lower_court_pattern.search(scraped_text)) is not None:
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
@@ -197,30 +215,33 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
 
         # We only put keys into the objects when they exist
         # Otherwise, we would overwrite existing data with empty values
-        metadata.update({"OpinionCluster": {}, "Docket": {}})
-        if case_name:
-            metadata["Docket"]["case_name"] = case_name
-            metadata["OpinionCluster"]["case_name"] = case_name
-        if docket_number:
-            metadata["Docket"]["docket_number"] = normalize_dashes(
-                docket_number
-            )
-        if lower_court:
-            metadata["Docket"]["appeal_from_str"] = lower_court
-        if lower_court_judge:
-            metadata.update({"OriginatingCourtInformation": {}})
-            metadata["OriginatingCourtInformation"]["assigned_to_str"] = (
-                lower_court_judge
-            )
+        docket: ExtractedDocket = {}
+        cluster: ExtractedCluster = {}
+        metadata.update({"OpinionCluster": cluster, "Docket": docket})
+        if bool(case_name):
+            docket["case_name"] = case_name
+            cluster["case_name"] = case_name
+        if bool(docket_number):
+            docket["docket_number"] = normalize_dashes(docket_number)
+        if bool(lower_court):
+            docket["appeal_from_str"] = lower_court
+        if bool(lower_court_judge):
+            metadata["OriginatingCourtInformation"] = {
+                "assigned_to_str": lower_court_judge
+            }
 
         return metadata
 
-    async def _download_backwards(self, dates: tuple[date, date]) -> None:
+    @override
+    async def _download_backwards(
+        self, dates: tuple[date, date] | date
+    ) -> None:
         """Make custom date range request
 
         :param dates: (start_date, end_date) tuple
         :return None
         """
+        dates = _backfill_adapter.validate_python(dates, strict=True)
         logger.info("Backscraping for range %s %s", *dates)
         start, end = dates
         # last page is 118 (August 2024)

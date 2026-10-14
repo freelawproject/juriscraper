@@ -7,14 +7,43 @@ import re
 from datetime import date
 
 from dateutil import parser
-from typing_extensions import override
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
+class _Opinion(TypedDict):
+    Title: str
+    Year: str
+    Attachment: str
+    Summary: str
+
+
+class _Results(TypedDict):
+    results: list[_Opinion]
+
+
+class _Search(TypedDict):
+    d: _Results
+
+
+_search_adapter = TypeAdapter(_Search)
+
+
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    json: _Search
+
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = "https://oag.maryland.gov/resources-info/_api/web/lists/getbytitle('Search-Opinions')/items?$top=100&$select=Title,Year,Summary,Attachment,Created_x0020_Date&$orderby=Year desc"
         self.year = date.today().year
@@ -28,7 +57,7 @@ class Site(OpinionSiteLinear):
 
     @override
     def _process_html(self) -> None:
-        self.json = self.html
+        self.json = _search_adapter.validate_python(self.html, strict=True)
         for row in self.json["d"]["results"]:
             docket_number = row["Title"]
             title = "Maryland Attorney General Opinion " + docket_number
@@ -39,7 +68,9 @@ class Site(OpinionSiteLinear):
 
             citation = ""
             citation_pattern = r"(\d+)\s*OAG\s*(\d+)"
-            if match := re.search(citation_pattern, docket_number):
+            if (
+                match := re.search(citation_pattern, docket_number)
+            ) is not None:
                 citation = (
                     f"{match.group(1)} Op. Atty Gen. Md. {match.group(2)}"
                 )
@@ -56,11 +87,12 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract the exact date(s) from the scraped text."""
         pattern = r"([A-Z][a-z]+ \d{1,2}, \d{4})"
 
-        if matches := re.findall(pattern, scraped_text):
+        if bool(matches := re.findall(pattern, scraped_text)):
             date_string = parser.parse(matches[0]).strftime("%Y-%m-%d")
             return {
                 "OpinionCluster": {

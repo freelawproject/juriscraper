@@ -1,12 +1,14 @@
 import re
 from datetime import datetime
-from typing import Any, TypedDict
+from typing import TypedDict
 
 from dateutil import parser
-from lxml.html import fromstring
-from typing_extensions import override
+from lxml.html import HtmlElement, fromstring
+from typing_extensions import Unpack, override
 
-from juriscraper.lib.string_utils import clean_string
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker, clean_string
+from juriscraper.lib.type_utils import BackscrapeOptions, ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -16,7 +18,10 @@ class _BackscrapeDateRange(TypedDict):
     url: str
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[tuple[datetime, datetime, str]]):
+    start_date: datetime
+    end_date: datetime
+
     first_opinion_date = datetime(1931, 2, 26)
     docket_number_regex = r"SJC-\d+"
     # This mapper is missing older volumes
@@ -49,10 +54,15 @@ class Site(OpinionSiteLinear):
     ]
     # on the cl_scrape_opinions command in Courtlistener,
     # a headers variable is required for mass
-    headers: dict = {}
+    headers: dict[str, str] = {}
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[datetime, datetime, str]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.make_backscrape_iterable(kwargs)
         self.expected_content_types = ["text/html"]
@@ -63,14 +73,20 @@ class Site(OpinionSiteLinear):
 
         :return None
         """
-        for row in self.html.xpath("//tr[td/a]"):
-            _, date_filed_str, *name = row.xpath("td/text()")
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath("//tr[td/a]")
+        for row in rows:
+            texts: list[str] = row.xpath("td/text()")
+            _, date_filed_str, *name = texts
             # Edge case where date is a range "December 8, 2000 - January 3, 2001"
             date_filed_str = date_filed_str.partition(" - ")[0]
             date_filed = parser.parse(date_filed_str)
 
             if not (
-                self.start_date
+                bool(self.start_date)
                 and self.start_date <= date_filed
                 and date_filed <= self.end_date
             ):
@@ -79,8 +95,8 @@ class Site(OpinionSiteLinear):
             # Consolidated cases, for example 432 Mass. 489
             # on year 2000
             name = "; ".join(name).strip()
-            cite = row.xpath(".//a/text()")[0]
-            url = row.xpath(".//a/@href")[0]
+            cite: str = row.xpath(".//a/text()")[0]
+            url: str = row.xpath(".//a/@href")[0]
             self.cases.append(
                 {
                     "citation": cite,
@@ -92,7 +108,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extracts docket number from downloaded opinion HTML
 
         Possible on SJC. since `Records And Briefs` section cites
@@ -104,24 +121,31 @@ class Site(OpinionSiteLinear):
         The format on App Ct opinions is different
         """
         match = re.search(self.docket_number_regex, scraped_text[:2000])
-        docket = match.group(0) if match else ""
+        docket = match.group(0) if match is not None else ""
 
         headnotes, summary = "", ""
         html = fromstring(scraped_text)
-        headnote_section = html.xpath("//section[@class='headnote']")
-        synopsis_section = html.xpath("//section[@class='synopsis']")
+        headnote_section: list[HtmlElement] = html.xpath(
+            "//section[@class='headnote']"
+        )
+        synopsis_section: list[HtmlElement] = html.xpath(
+            "//section[@class='synopsis']"
+        )
 
-        if headnote_section:
+        if bool(headnote_section):
             # First line of the headnote might be the docket number
             headnotes = clean_string(
-                headnote_section.xpath("string()")[0].replace(docket, "")
+                headnote_section[0].text_content().replace(docket, "")
             )
-        if synopsis_section:
+        if bool(synopsis_section):
+            paragraphs: list[HtmlElement] = synopsis_section[0].xpath(
+                ".//p[not(@class)]"
+            )
             summary = "\n".join(
                 [
-                    clean_string(p.xpath("string()"))
+                    clean_string(p.text_content())
                     # avoid page numbers
-                    for p in synopsis_section.xpath(".//p[not(@class)]")
+                    for p in paragraphs
                 ]
             )
 
@@ -130,6 +154,7 @@ class Site(OpinionSiteLinear):
             "OpinionCluster": {"headnotes": headnotes, "summary": summary},
         }
 
+    @override
     async def _download_backwards(
         self, dates_and_url: tuple[datetime, datetime, str]
     ) -> None:
@@ -143,7 +168,8 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs: dict) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """Checks if backscrape start and end arguments have been passed
         by caller, and parses them accordingly
         :param kwargs: passed when initializing the scraper, may or
@@ -154,20 +180,23 @@ class Site(OpinionSiteLinear):
         end = kwargs.get("backscrape_end")
         now = datetime.now()
 
-        if start:
+        if bool(start):
             start = datetime.strptime(start, "%m/%d/%Y")
         else:
             start = self.first_opinion_date
-        if end:
+        if bool(end):
             end = datetime.strptime(end, "%m/%d/%Y")
         else:
             end = now
 
-        assert start < end, "Incorrect backscraper start / end inputs"
+        if start >= end:
+            raise ValueError("Incorrect backscraper start / end inputs")
 
         # If there is overlap between backscraping range and reports'
         # page range append the reports' page URL to the iterable
         self.back_scrape_iterable = []
         for item in self.backscrape_date_range_mapper:
-            if max(item["start"], start) < min(item["end"] or now, end):
+            if max(item["start"], start) < min(
+                (item["end"] if item["end"] is not None else now), end
+            ):
                 self.back_scrape_iterable.append((start, end, item["url"]))

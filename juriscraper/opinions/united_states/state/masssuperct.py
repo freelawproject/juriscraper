@@ -17,28 +17,36 @@ from datetime import date, datetime
 from urllib.parse import quote, urljoin
 
 from lxml import etree, html
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
+from juriscraper.AbstractSite import SiteOptions
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.exceptions import InvalidDocumentError
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.lib.log_tools import make_default_logger
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import BackscrapeOptions
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 logger = make_default_logger()
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[date]):
     court_name = "Superior Court"
     first_opinion_date = datetime(2017, 6, 20)
     use_urllib = True
     base_url = "https://www.socialaw.com/services/slip-opinions/"
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[date]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
-        self.search_date = datetime.today()
+        self.search_date = date.today()
         self.url = self._build_url()
         self.method = "POST"
         self.parameters = {}
@@ -62,33 +70,44 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
-        for item in self.html.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        items: list[HtmlElement] = self.html.xpath(
             "//div[contains(@class, 'slip-opinions-list')]"
             "//div[@class='accordion-item']"
-        ):
-            name = item.xpath(".//strong[contains(@class, 'title')]//text()")
-            name = name[0].strip() if name else ""
+        )
+        for item in items:
+            names: list[str] = item.xpath(
+                ".//strong[contains(@class, 'title')]//text()"
+            )
+            name = names[0].strip() if bool(names) else ""
 
-            date_str = item.xpath(
+            dates: list[str] = item.xpath(
                 ".//div[contains(@class, 'dates-section')]"
                 "//div[@class='rich-text rich-text-sm']//text()"
             )
-            date_str = date_str[0].strip() if date_str else ""
+            date_str = dates[0].strip() if bool(dates) else ""
 
-            docket = item.xpath(
+            dockets: list[str] = item.xpath(
                 ".//div[contains(@class, 'docket-section')]"
                 "//div[@class='section-header']"
                 "//div[@class='rich-text rich-text-sm']//text()"
             )
-            docket = docket[0].strip() if docket else ""
+            docket = dockets[0].strip() if bool(dockets) else ""
 
-            url = item.xpath(
+            urls: list[str] = item.xpath(
                 ".//div[contains(@class, 'docket-section')]"
                 "//a[contains(@class, 'btn')]/@href"
             )
-            url = urljoin("https://www.socialaw.com", url[0]) if url else ""
+            url = (
+                urljoin("https://www.socialaw.com", urls[0])
+                if bool(urls)
+                else ""
+            )
 
-            if not name or not url:
+            if not bool(name) or not bool(url):
                 logger.warning(
                     "masssuperct: missing name or URL for docket '%s', skipping",
                     docket,
@@ -104,8 +123,9 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     @staticmethod
-    def cleanup_content(content):
+    def cleanup_content(content: bytes) -> bytes:
         """Remove non-opinion HTML
 
         Cleanup HTML from Social Law page so we can properly display
@@ -114,26 +134,27 @@ class Site(OpinionSiteLinear):
         :param content: The scraped HTML
         :return: Cleaner HTML
         """
-        content = content.decode("utf-8")
-        tree = strip_bad_html_tags_insecure(content, remove_scripts=True)
-        content = tree.xpath(
+        text = content.decode("utf-8")
+        tree = strip_bad_html_tags_insecure(text, remove_scripts=True)
+        elements: list[HtmlElement] = tree.xpath(
             "//div[contains(@class, 'primary-content-rich-text')]"
         )
 
-        if not content:
-            content = tree.xpath(
+        if not bool(elements):
+            elements: list[HtmlElement] = tree.xpath(
                 "//div[contains(@class, 'primary-content-body')]"
             )
-        if not content:
+        if not bool(elements):
             raise InvalidDocumentError(
                 "masssuperct: no opinion content found in page"
             )
 
-        new_tree = etree.Element("html")
+        new_tree = html.Element("html")
         body = etree.SubElement(new_tree, "body")
-        body.append(content[0])
+        body.append(elements[0])
         return html.tostring(new_tree)
 
+    @override
     async def _download_backwards(self, search_date: date) -> None:
         """Download and process HTML for a given target date.
 
@@ -146,13 +167,15 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """Make back scrape iterable
 
         :param kwargs: the back scraping params
         :return: None
         """
-        super().make_backscrape_iterable(kwargs)
-        self.back_scrape_iterable = unique_year_month(
-            self.back_scrape_iterable
-        )
+        date_ranges = self._get_backscrape_date_ranges(kwargs)
+        if not bool(date_ranges):
+            self.back_scrape_iterable = []
+            return
+        self.back_scrape_iterable = unique_year_month(date_ranges)

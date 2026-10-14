@@ -1,6 +1,8 @@
 import os
 import unittest
 
+from typing_extensions import override
+
 from juriscraper.scotus import (
     SCOTUSDocketReport,
     SCOTUSDocketReportHTM,
@@ -13,18 +15,19 @@ from tests.local.PacerParseTestCase import PacerParseTestCase
 class ScotusParseDocketTest(PacerParseTestCase):
     """Can we parse the scotus dockets effectively?"""
 
-    def setUp(self):
+    @override
+    def setUp(self) -> None:
         self.maxDiff = 200000
 
-    def test_parsing_scotus_json_dockets(self):
+    def test_parsing_scotus_json_dockets(self) -> None:
         path_root = os.path.join(TESTS_ROOT_EXAMPLES_SCOTUS, "dockets", "json")
         self.parse_files(path_root, "*.compare.json", SCOTUSDocketReport)
 
-    def test_parsing_scotus_html_dockets(self):
+    def test_parsing_scotus_html_dockets(self) -> None:
         path_root = os.path.join(TESTS_ROOT_EXAMPLES_SCOTUS, "dockets", "html")
         self.parse_files(path_root, "*.html", SCOTUSDocketReportHTML)
 
-    def test_parsing_scotus_htm_dockets(self):
+    def test_parsing_scotus_htm_dockets(self) -> None:
         path_root = os.path.join(TESTS_ROOT_EXAMPLES_SCOTUS, "dockets", "htm")
         self.parse_files(path_root, "*.htm", SCOTUSDocketReportHTM)
 
@@ -32,10 +35,11 @@ class ScotusParseDocketTest(PacerParseTestCase):
 class LowerCourtCasesCleaningTest(unittest.TestCase):
     """Test the SCOTUSDocketReport clean_lower_court_cases method"""
 
-    def setUp(self):
+    @override
+    def setUp(self) -> None:
         self.parser = SCOTUSDocketReport()
 
-    def test_clean_lower_court_cases(self):
+    def test_clean_lower_court_cases(self) -> None:
         cases = {
             # Case 1: Slash-separated numbers with same prefix
             "98-35309/35509": ["98-35309", "98-35509"],

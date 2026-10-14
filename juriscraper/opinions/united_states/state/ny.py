@@ -13,20 +13,26 @@ History:
 
 import re
 from datetime import date, timedelta
-from typing import Any
 from urllib.parse import urljoin
 
 import nh3
-from lxml.html import fromstring, tostring
-from typing_extensions import override
+from lxml.html import HtmlElement, fromstring, tostring
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import (
+    DownloadedContent,
+    RequestParameters,
+    SiteOptions,
+    logger,
+)
 from juriscraper.lib.auth_utils import set_api_token_header
 from juriscraper.lib.judge_parsers import normalize_judge_string
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[tuple[date, date]]):
     first_opinion_date = date(2003, 9, 25)
     days_interval = 30
     court_id_map = {
@@ -43,8 +49,13 @@ class Site(OpinionSiteLinear):
     court = "Court of Appeals"
     empty_result_messages = {"No results found."}
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = self.base_url
         self._set_parameters()
@@ -69,8 +80,9 @@ class Site(OpinionSiteLinear):
         """
         self.method = "POST"
 
-        if not end_date:
+        if end_date is None:
             end_date = date.today()
+        if start_date is None:
             start_date = end_date - timedelta(days=30)
 
         self.parameters = {
@@ -92,7 +104,10 @@ class Site(OpinionSiteLinear):
             "btnSubmit": "",
         }
 
-    async def _download(self, request_dict=None):
+    @override
+    async def _download(
+        self, request_dict: RequestParameters | None = None
+    ) -> DownloadedContent:
         """Override to handle Wicket's session-based form submission.
 
         Wicket requires a GET to the search page first to establish a
@@ -104,10 +119,12 @@ class Site(OpinionSiteLinear):
         # Step 1: GET the search page to establish session
         self.method = "GET"
         html = await super()._download(request_dict)
+        if not isinstance(html, HtmlElement):
+            raise TypeError("Expected a downloaded HTML document")
 
         # Step 2: Extract the form action URL
-        form_action = html.xpath("//form/@action")
-        if not form_action:
+        form_action: list[str] = html.xpath("//form/@action")
+        if not bool(form_action):
             logger.warning("Could not find form action URL")
             return html
 
@@ -120,19 +137,25 @@ class Site(OpinionSiteLinear):
 
     @override
     def _process_html(self) -> None:
-        table = self.html.xpath('.//table[contains(@class, "table")]')
-        if not table:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        table: list[HtmlElement] = self.html.xpath(
+            './/table[contains(@class, "table")]'
+        )
+        if not bool(table):
             logger.warning("No results table found.")
             return
 
-        rows = table[0].xpath(".//tbody/tr")
+        rows: list[HtmlElement] = table[0].xpath(".//tbody/tr")
         # Empty-result responses render a single placeholder row whose only
         # cell contains one of the strings below. Treat as normal empty
         # result rather than logging an error per row. Wording is shared
         # across all NY courts using this backend; extend the set if the
         # site ever introduces a new variant.
         if len(rows) == 1:
-            only_cells = rows[0].xpath("./td")
+            only_cells = rows[0].findall("./td")
             if len(only_cells) == 1:
                 placeholder = only_cells[0].text_content().strip()
                 if placeholder in self.empty_result_messages:
@@ -140,22 +163,22 @@ class Site(OpinionSiteLinear):
                     return
 
         for row in rows:
-            cells = row.xpath("./td")
+            cells = row.findall("./td")
             if len(cells) < 9:
                 logger.error(
                     "%s: expected 9 cells, got %s", self.court_id, len(cells)
                 )
                 continue
 
-            url = cells[6].xpath(".//a/@href")
-            if not url:
+            url: list[str] = cells[6].xpath(".//a/@href")
+            if not bool(url):
                 logger.error("%s: no url found for row", self.court_id)
                 continue
 
-            slip_cite = cells[6].xpath(
+            slip_cites: list[str] = cells[6].xpath(
                 './/a/span[not(contains(@class, "visually-hidden"))]/text()'
             )
-            slip_cite = slip_cite[0].strip() if slip_cite else ""
+            slip_cite = slip_cites[0].strip() if bool(slip_cites) else ""
             official_citation = cells[4].text_content().strip()
             status = "Unpublished" if "(U)" in slip_cite else "Published"
             docket = cells[2].text_content().strip()
@@ -176,14 +199,15 @@ class Site(OpinionSiteLinear):
             pc = re.sub(r"\s", "", author.lower())
             if "percuriam" in pc:
                 case["per_curiam"] = True
-            elif author:
+            elif bool(author):
                 cleaned_author = normalize_judge_string(author)[0]
                 if cleaned_author.endswith(" J."):
                     cleaned_author = cleaned_author[:-3]
                 case["author"] = cleaned_author
             self.cases.append(case)
 
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Can we extract the docket number from the text?
 
         :param scraped_text: The content of the document downloaded
@@ -194,10 +218,13 @@ class Site(OpinionSiteLinear):
             scraped_text[:2000],
             re.MULTILINE,
         )
-        if dockets:
-            return {"Docket": dockets.groupdict()}
+        if dockets is not None:
+            return {
+                "Docket": {"docket_number": dockets.group("docket_number")}
+            }
         return {}
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
 
@@ -209,6 +236,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
+    @override
     @staticmethod
     def cleanup_content(content: bytes) -> bytes:
         """Keep only the opinion content, without hash altering elements
@@ -238,7 +266,8 @@ class Site(OpinionSiteLinear):
         # whole. This must run before nh3, which strips the id attribute.
         # #2058
         tree = fromstring(html_str)
-        if opinion_container := tree.xpath('//main[@id="main"]'):
+        opinion_container: list[HtmlElement] = tree.xpath('//main[@id="main"]')
+        if bool(opinion_container):
             html_str = tostring(
                 opinion_container[0], encoding="unicode", with_tail=False
             )
@@ -256,9 +285,7 @@ class Site(OpinionSiteLinear):
         cleaned = nh3.clean(html_str, tags=allowed)
 
         tree = fromstring(cleaned)
-        normalized_html = str(
-            tostring(tree, encoding="unicode", method="html")
-        )
+        normalized_html = tostring(tree, encoding="unicode", method="html")
 
         # nh3.clean strips <!DOCTYPE>/<html>/<body> (not in nh3.ALLOWED_TAGS),
         # which makes downstream content-based detectors (magika via doctor)
@@ -268,7 +295,7 @@ class Site(OpinionSiteLinear):
         ).encode()
 
     @staticmethod
-    def clean_docket_match(match: re.Match) -> str:
+    def clean_docket_match(match: re.Match[str]) -> str:
         """Clean a docket number extracted from text
 
         :param match: a Match object with a named group

@@ -12,7 +12,7 @@ def parse_email_html(text: str) -> HtmlElement | None:
 
     Finds the first text/html content part, decodes the payload, and
     returns a parsed lxml tree. Returns None if no HTML part is found
-    or decoding fails.
+    or decoding fails. Missing charsets default to UTF-8.
     """
     message = email.message_from_string(text)
 
@@ -34,11 +34,20 @@ def parse_email_html(text: str) -> HtmlElement | None:
         return None
 
     payload = content_part.get_payload(decode=True)
-    charset = content_part.get_content_charset(content_part.get_charset())
+    if not isinstance(payload, bytes):
+        logger.error("Unable to find a byte payload in the HTML email part")
+        return None
+    charset = (
+        get_content_charset_value
+        if bool(
+            get_content_charset_value := content_part.get_content_charset()
+        )
+        else "utf-8"
+    )
 
     try:
         body = payload.decode(charset)
-    except UnicodeDecodeError:
+    except (UnicodeDecodeError, LookupError):
         logger.error(
             "Unable to decode email payload with charset '%s'", charset
         )

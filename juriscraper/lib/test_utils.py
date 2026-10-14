@@ -1,8 +1,9 @@
 import os
 import sys
 import warnings
+from collections.abc import Mapping
 
-from httpx import Response
+from httpx import Request, Response
 
 from .exceptions import SlownessException
 
@@ -54,8 +55,13 @@ def warn_generated_compare_file(path_to_compare_file: str) -> None:
 class MockResponse(Response):
     """Mock a Request Response"""
 
-    def __init__(self, status_code, content=None, headers=None, request=None):
-        self.status_code = status_code
-        self._content = content
-        self.headers = headers
-        self.request = request
+    def __init__(
+        self,
+        status_code: int,
+        content: str | bytes | None = None,
+        headers: Mapping[str, str] | None = None,
+        request: Request | None = None,
+    ) -> None:
+        super().__init__(
+            status_code, content=content, headers=headers, request=request
+        )

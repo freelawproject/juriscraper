@@ -5,6 +5,7 @@ import time
 import unittest
 
 import jsondate3 as json
+from typing_extensions import override
 
 from juriscraper.lasc.fetch import LASCSearch
 from juriscraper.lib.test_utils import warn_or_crash_slow_parser
@@ -14,10 +15,11 @@ from tests import TESTS_ROOT_EXAMPLES_LASC
 class LASCParseTest(unittest.TestCase):
     """Can we parse LASC dockets?"""
 
-    def setUp(self):
+    @override
+    def setUp(self) -> None:
         self.maxDiff = 200000
 
-    def run_parsers_on_path(self, path):
+    def run_parsers_on_path(self, path: str) -> None:
         """Test all the parsers on a given local path
 
         :param path: The path where you can find the files
@@ -61,6 +63,6 @@ class LASCParseTest(unittest.TestCase):
             warn_or_crash_slow_parser(duration, max_duration=1)
             sys.stdout.write(f"✓ - {t2 - t1:0.1f}s\n")
 
-    def test_dockets(self):
+    def test_dockets(self) -> None:
         path = os.path.join(TESTS_ROOT_EXAMPLES_LASC, "dockets", "*CV.json")
         self.run_parsers_on_path(path)

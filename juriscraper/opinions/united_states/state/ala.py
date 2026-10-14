@@ -12,18 +12,64 @@ History:
 """
 
 import re
+from collections.abc import Mapping
 
-from typing_extensions import override
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
+from juriscraper.AbstractSite import RequestParameters, SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class _Document(TypedDict):
+    documentName: str
+    documentLinkUUID: str
+
+
+class _PublicationItem(TypedDict):
+    title: str
+    caseInstanceUUID: str
+    caseNumber: str
+    groupName: str
+
+
+class _Publication(TypedDict):
+    publicationDate: str
+    publicationItems: list[dict[str, object]]
+
+
+class _Release(TypedDict):
+    publicationUUID: str
+
+
+class _ReleaseResults(TypedDict):
+    results: list[_Release]
+
+
+class _Releases(TypedDict):
+    _embedded: _ReleaseResults
+
+
+_publication_adapter = TypeAdapter(_Publication)
+_publication_item_adapter = TypeAdapter(_PublicationItem)
+_document_adapter = TypeAdapter(_Document)
+_releases_adapter = TypeAdapter(_Releases)
+
+
+class Site(OpinionSiteLinear[int]):
+    json: _Publication
+
     court_str = "68f021c4-6a44-4735-9a76-5360b2e8af13"
     base_url = "https://publicportal-api.alappeals.gov"
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[int]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = f"{self.base_url}/courts/cms/publications"
         self.request["parameters"]["params"] = {
@@ -34,18 +80,25 @@ class Site(OpinionSiteLinear):
         }
         self.make_backscrape_iterable(kwargs)
 
-    async def _download(self, request_dict=None):
+    @override
+    async def _download(
+        self, request_dict: RequestParameters | None = None
+    ) -> None:
         """Download the publication list and then fetch detailed publication data.
 
         The initial API returns a list of publications, but we need to fetch
         the detailed publication endpoint to get full case information.
         """
         if self.test_mode_enabled():
-            self.json = await super()._download(request_dict)
+            self.json = _publication_adapter.validate_python(
+                await super()._download(request_dict), strict=True
+            )
             return
 
         # First, get the list of publications
-        resp = await super()._download(request_dict)
+        resp = _releases_adapter.validate_python(
+            await super()._download(request_dict), strict=True
+        )
 
         # Get the publicationUUID from the initial response
         releases = resp["_embedded"]["results"]
@@ -54,29 +107,44 @@ class Site(OpinionSiteLinear):
         # Fetch detailed publication data (no params needed for this endpoint)
         self.url = f"{self.base_url}/courts/{self.court_str}/cms/publication/{publication_uuid}"
         self.request["parameters"]["params"] = {}
-        self.json = await super()._download(request_dict)
+        self.json = _publication_adapter.validate_python(
+            await super()._download(request_dict), strict=True
+        )
 
     @override
     def _process_html(self) -> None:
         date_filed = self.json["publicationDate"][:10]
-        for publicationItem in self.json["publicationItems"]:
-            if not publicationItem.get("documents", []):
+        for item in self.json["publicationItems"]:
+            documents = item.get("documents", [])
+            if not bool(documents):
                 continue
+            if not isinstance(documents, list):
+                raise TypeError("Publication documents must be a list")
+            first_document: object = documents[0]
+            if not isinstance(first_document, dict):
+                raise TypeError("A publication document must be an object")
 
             # Only process actual opinions, skip orders
-            if publicationItem["documents"][0]["documentName"] not in [
+            document_name: object = first_document["documentName"]
+            if document_name not in [
                 "Opinion",
                 "Decision",
             ]:
                 continue
 
+            document = _document_adapter.validate_python(
+                first_document, strict=True
+            )
+            publicationItem = _publication_item_adapter.validate_python(
+                item, strict=True
+            )
             name = publicationItem["title"]
 
             url = "{}/courts/{}/cms/case/{}/docketentrydocuments/{}".format(
                 self.base_url,
                 self.court_str,
                 publicationItem["caseInstanceUUID"],
-                publicationItem["documents"][0]["documentLinkUUID"],
+                document["documentLinkUUID"],
             )
             docket = publicationItem["caseNumber"]
 
@@ -88,14 +156,14 @@ class Site(OpinionSiteLinear):
                 r"\(Appeal from (?P<lower_court>[^:]+):\s*(?P<lower_court_number>[^)]+)\)",
                 name,
             )
-            if match:
+            if match is not None:
                 lower_court = match.group("lower_court").strip()
                 lower_court_number = match.group("lower_court_number").strip()
                 name = name[: match.start()].rstrip()
 
             # For "In re:" cases, extract the actual case name from parenthetical
             in_re_match = re.search(r"\((In re: .*?)\)", name)
-            if in_re_match:
+            if in_re_match is not None:
                 name = in_re_match.group(1).strip()
 
             judge = publicationItem["groupName"]
@@ -121,7 +189,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    async def _download_backwards(self, d: int):
+    @override
+    async def _download_backwards(self, d: int) -> None:
         """Fetches a page of publications for backscraping."""
         self.url = f"{self.base_url}/courts/cms/publications"
         self.request["parameters"]["params"] = {
@@ -133,14 +202,15 @@ class Site(OpinionSiteLinear):
         await self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs: dict):
+    @override
+    def make_backscrape_iterable(self, kwargs: Mapping[str, object]) -> None:
         """Checks if backscrape start and end arguments have been passed"""
-        start = kwargs.get("backscrape_start")
-        end = kwargs.get("backscrape_end")
+        start = str(kwargs.get("backscrape_start"))
+        end = str(kwargs.get("backscrape_end"))
 
-        if start is None or not str(start).isdigit():
-            start = 0
-        if end is None or not str(end).isdigit():
-            end = 100  # good amount of pages
+        if not start.isdigit():
+            start = "0"
+        if not end.isdigit():
+            end = "100"  # good amount of pages
 
         self.back_scrape_iterable = range(int(start), int(end))

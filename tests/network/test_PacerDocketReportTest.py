@@ -4,6 +4,8 @@
 import unittest
 from datetime import date
 
+from typing_extensions import override
+
 from juriscraper.lib.html_utils import get_html_parsed_text
 from juriscraper.pacer import DocketReport
 from tests.network import SKIP_IF_NO_PACER_LOGIN, get_pacer_session
@@ -12,7 +14,8 @@ from tests.network import SKIP_IF_NO_PACER_LOGIN, get_pacer_session
 class PacerDocketReportTest(unittest.IsolatedAsyncioTestCase):
     """A variety of tests for the docket report"""
 
-    async def asyncSetUp(self):
+    @override
+    async def asyncSetUp(self) -> None:
         self.session = get_pacer_session()
         self.addAsyncCleanup(self.session.aclose)
         await self.session.login()
@@ -20,7 +23,7 @@ class PacerDocketReportTest(unittest.IsolatedAsyncioTestCase):
         self.pacer_case_id = "186730"  # 4:06-cv-07294 Foley v. Bates
 
     @staticmethod
-    def _count_rows(html):
+    def _count_rows(html: str) -> int:
         """Count the rows in the docket report.
 
         :param html: The HTML of the docket report.
@@ -30,9 +33,10 @@ class PacerDocketReportTest(unittest.IsolatedAsyncioTestCase):
         return len(tree.xpath("//table[./tr/td[3]]/tr")) - 1  # No header row
 
     @SKIP_IF_NO_PACER_LOGIN
-    async def test_queries(self):
+    async def test_queries(self) -> None:
         """Do a variety of queries work?"""
         await self.report.query(self.pacer_case_id)
+        assert self.report.response is not None
         self.assertIn(
             "Foley v. Bates",
             self.report.response.text,
@@ -42,6 +46,7 @@ class PacerDocketReportTest(unittest.IsolatedAsyncioTestCase):
         await self.report.query(
             self.pacer_case_id, date_start=date(2007, 11, 1)
         )
+        assert self.report.response is not None
         row_count = self._count_rows(self.report.response.text)
         self.assertEqual(
             2,
@@ -56,6 +61,7 @@ class PacerDocketReportTest(unittest.IsolatedAsyncioTestCase):
             date_start=date(2007, 11, 1),
             date_end=date(2007, 11, 28),
         )
+        assert self.report.response is not None
         row_count = self._count_rows(self.report.response.text)
         self.assertEqual(
             1,
@@ -68,6 +74,7 @@ class PacerDocketReportTest(unittest.IsolatedAsyncioTestCase):
         await self.report.query(
             self.pacer_case_id, doc_num_start=5, doc_num_end=5
         )
+        assert self.report.response is not None
         row_count = self._count_rows(self.report.response.text)
         self.assertEqual(
             1,
@@ -83,6 +90,7 @@ class PacerDocketReportTest(unittest.IsolatedAsyncioTestCase):
             date_end=date(2007, 11, 28),
             date_range_type="Entered",
         )
+        assert self.report.response is not None
         row_count = self._count_rows(self.report.response.text)
         self.assertEqual(
             1,
@@ -98,6 +106,7 @@ class PacerDocketReportTest(unittest.IsolatedAsyncioTestCase):
             doc_num_start=500,
             show_parties_and_counsel=True,
         )
+        assert self.report.response is not None
         self.assertIn(
             "Cheema",
             self.report.response.text,
@@ -108,6 +117,7 @@ class PacerDocketReportTest(unittest.IsolatedAsyncioTestCase):
             doc_num_start=500,
             show_parties_and_counsel=False,
         )
+        assert self.report.response is not None
         self.assertNotIn(
             "Cheema",
             self.report.response.text,
@@ -115,19 +125,25 @@ class PacerDocketReportTest(unittest.IsolatedAsyncioTestCase):
         )
 
     @SKIP_IF_NO_PACER_LOGIN
-    async def test_using_same_report_twice(self):
+    async def test_using_same_report_twice(self) -> None:
         """Do the caches get properly nuked between runs?
 
         See issue #187.
         """
         # Query the first one...
         await self.report.query(self.pacer_case_id)
-        d = self.report.data.copy()
+        assert self.report.response is not None
+        data = self.report.data
+        assert isinstance(data, dict)
+        d = data.copy()
 
         # Then the second one...
         second_pacer_case_id = "63111"  # 1:07-cv-00035-RJA-HKS Anson v. USA
         await self.report.query(second_pacer_case_id)
-        d2 = self.report.data.copy()
+        assert self.report.response is not None
+        data = self.report.data
+        assert isinstance(data, dict)
+        d2 = data.copy()
         self.assertNotEqual(
             d,
             d2,

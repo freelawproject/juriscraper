@@ -7,42 +7,77 @@ import time
 from datetime import date
 
 from lxml import html
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.url = "http://www.cit.uscourts.gov/SlipOpinions/index.html"
         self.court_id = self.__module__
         self.base = '//tr[../tr/th[contains(., "Caption")]]'
         self.should_have_results = True
 
-    def _get_download_urls(self):
-        return list(self.html.xpath(f"{self.base}/td[1]/a/@href"))
+    @override
+    def _get_download_urls(self) -> list[str]:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        texts: list[str] = self.html.xpath(f"{self.base}/td[1]/a/@href")
+        return texts
 
-    def _get_citations(self):
+    @override
+    def _get_citations(self) -> list[str]:
         neutral_citations = []
-        for t in self.html.xpath(f"{self.base}/td[1]/a/text()"):
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        texts: list[str] = self.html.xpath(f"{self.base}/td[1]/a/text()")
+        for t in texts:
             year, item_number = t.split("-")
             neutral_citations.append(f"20{year} CIT {item_number}")
         return neutral_citations
 
-    def _get_case_names(self):
+    @override
+    def _get_case_names(self) -> list[str]:
         # Exclude confidential rows by ensuring there is a sibling row that
         # contains an anchor (which confidential cases do not)
         case_names = []
         path = f"{self.base}/td[2][../td/a]"
-        for e in self.html.xpath(path):
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        elements: list[HtmlElement] = self.html.xpath(path)
+        for e in elements:
             text = e.text_content().strip()
             case_name = text.split("\n")[0]
             case_names.append(case_name)
         return case_names
 
-    def _get_precedential_statuses(self):
+    @override
+    def _get_precedential_statuses(self) -> list[str]:
         statuses = []
-        for e in self.html.xpath(f"{self.base}/td[2][../td/a]"):
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        elements: list[HtmlElement] = self.html.xpath(
+            f"{self.base}/td[2][../td/a]"
+        )
+        for e in elements:
             s = (
                 html.tostring(e, method="text", encoding="unicode")
                 .lower()
@@ -54,15 +89,21 @@ class Site(OpinionSite):
                 statuses.append("Published")
         return statuses
 
-    def _get_case_dates(self):
+    @override
+    def _get_case_dates(self) -> list[date]:
         # This does not capture the release dates for the errata documents.
         # The errata release date is listed in column 2. This will use the
         # original release date instead.
-        dates = []
+        dates: list[date] = []
         date_formats = ["%m/%d/%Y", "%m/%d/%y"]
-        for date_string in self.html.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        date_strings: list[str] = self.html.xpath(
             f"{self.base}/td[3][../td/a]//text()"
-        ):
+        )
+        for date_string in date_strings:
             for date_format in date_formats:
                 try:
                     d = date.fromtimestamp(
@@ -77,20 +118,44 @@ class Site(OpinionSite):
                     continue
         return dates
 
-    def _get_docket_numbers(self):
+    @override
+    def _get_docket_numbers(self) -> list[str]:
         docket_numbers = []
-        for e in self.html.xpath(f"{self.base}/td[4][../td/a]"):
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        elements: list[HtmlElement] = self.html.xpath(
+            f"{self.base}/td[4][../td/a]"
+        )
+        for e in elements:
             docket_numbers.append(
                 html.tostring(e, method="text", encoding="unicode").strip()
             )
         return docket_numbers
 
-    def _get_judges(self):
+    @override
+    def _get_judges(self) -> list[str]:
         judges = []
-        for e in self.html.xpath(f"{self.base}/td[5][../td/a]"):
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        elements: list[HtmlElement] = self.html.xpath(
+            f"{self.base}/td[5][../td/a]"
+        )
+        for e in elements:
             s = html.tostring(e, method="text", encoding="unicode")
             judges.append(s)
         return judges
 
-    def _get_nature_of_suit(self):
-        return list(self.html.xpath(f"{self.base}/td[6][../td/a]/text()"))
+    @override
+    def _get_nature_of_suit(self) -> list[str] | None:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        texts: list[str] = self.html.xpath(
+            f"{self.base}/td[6][../td/a]/text()"
+        )
+        return texts

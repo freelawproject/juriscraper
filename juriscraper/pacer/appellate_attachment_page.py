@@ -3,6 +3,8 @@ import re
 import sys
 
 from lxml import html
+from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.lib.log_tools import make_default_logger
@@ -12,6 +14,7 @@ from juriscraper.pacer.utils import (
     parse_sumDocSelected_from_row,
 )
 
+from .attachment_page import AttachmentPageData, PageAttachment
 from .reports import BaseReport
 
 logger = make_default_logger()
@@ -29,10 +32,7 @@ class AppellateAttachmentPage(BaseReport):
 
     PATH = "docs1/"
 
-    def __init__(self, court_id, pacer_session=None):
-        super().__init__(court_id, pacer_session)
-
-    async def query(self, document_number):
+    async def query(self, document_number: str) -> None:
         """Query the "attachment page" endpoint and set the results to self.response.
 
         The appellate attachment page uses the a variable called dls_id
@@ -42,9 +42,10 @@ class AppellateAttachmentPage(BaseReport):
         :param document_number: The internal PACER document ID for the item.
         :return: a request response object
         """
-        assert self.session is not None, (
-            "session attribute of DocketReport cannot be None."
-        )
+        if self.session is None:
+            raise ValueError(
+                "session attribute of DocketReport cannot be None."
+            )
 
         # Generate the document URL from the document number.
         document_number = f"{document_number[:3]}0{document_number[4:]}"
@@ -53,12 +54,13 @@ class AppellateAttachmentPage(BaseReport):
         self.response = await self.session.get(url)
         self.parse()
 
-    def _strip_bad_html_tags_insecure(self, text: str) -> None:
+    @override
+    def _strip_bad_html_tags_insecure(self, text: str) -> html.HtmlElement:
         """Override base function to include scripts."""
-        self.tree = strip_bad_html_tags_insecure(text, remove_scripts=False)
+        return strip_bad_html_tags_insecure(text, remove_scripts=False)
 
     @property
-    def data(self) -> dict:
+    def data(self) -> AttachmentPageData:
         """Get data back from the query for the matching document entry.
 
         Appellate attachments is different than the district court.  We have
@@ -86,20 +88,27 @@ class AppellateAttachmentPage(BaseReport):
             return {}
 
         # Find the table/tr/td containing a link and return the tr's
-        rows = self.tree.xpath("//tbody/tr/td/a/parent::td/parent::tr")
-        if not rows:
+        if self.tree is None:
+            raise ValueError("Parse a report before accessing its contents.")
+        if not isinstance(self.tree, HtmlElement):
+            raise TypeError("Expected an HTML tree for this report.")
+        rows: list[html.HtmlElement] = self.tree.xpath(
+            "//tbody/tr/td/a/parent::td/parent::tr"
+        )
+        if not bool(rows):
             logger.info("No documents found on attachment page.")
             return {}
 
-        result = {
+        attachments: list[PageAttachment] = []
+        result: AttachmentPageData = {
             "pacer_doc_id": self._get_main_pacer_doc_id(),
             "pacer_case_id": self._get_pacer_case_id(),
             "pacer_seq_no": self._get_pacer_seq_no(),
-            "attachments": [],
+            "attachments": attachments,
         }
 
         for row in rows:
-            attachment = {
+            attachment: PageAttachment = {
                 "attachment_number": self._get_attachment_number(row),
                 "description": self._get_description_from_tr(row),
                 "page_count": self._get_page_count_from_tr(row),
@@ -108,10 +117,10 @@ class AppellateAttachmentPage(BaseReport):
             file_size_bytes = self._get_file_size_bytes_from_tr(row)
             if file_size_bytes is not None:
                 attachment["file_size_bytes"] = file_size_bytes
-            result["attachments"].append(attachment)
+            attachments.append(attachment)
         return result
 
-    def _get_main_pacer_doc_id(self):
+    def _get_main_pacer_doc_id(self) -> str | None:
         """Extract the main pacer_doc_id.
 
         The DLS ID  This should be used to identify
@@ -121,7 +130,13 @@ class AppellateAttachmentPage(BaseReport):
         :return: main pacer_doc_id
         """
         try:
-            rows = self.tree.xpath("//tbody/tr/td/a/@href")
+            if self.tree is None:
+                raise ValueError(
+                    "Parse a report before accessing its contents."
+                )
+            if not isinstance(self.tree, HtmlElement):
+                raise TypeError("Expected an HTML tree for this report.")
+            rows: list[str] = self.tree.xpath("//tbody/tr/td/a/@href")
             pacer_doc_ids = []
             for url_row in rows:
                 pacer_doc_ids.append(get_pacer_doc_id_from_doc1_url(url_row))
@@ -135,7 +150,8 @@ class AppellateAttachmentPage(BaseReport):
         :param row: Table row as an lxml element
         :return: Attachment number for row
         """
-        number = int(row.xpath(".//td/text()")[0].strip())
+        numbers: list[str] = row.xpath(".//td/text()")
+        number = int(numbers[0].strip())
         return number
 
     def _get_description_from_tr(self, row: html.HtmlElement) -> str:
@@ -144,14 +160,14 @@ class AppellateAttachmentPage(BaseReport):
         :param row: Table row
         :return: Attachment description
         """
-        row_nodes = row.xpath(".//td")
-        if not row_nodes:
+        row_nodes: list[html.HtmlElement] = row.xpath(".//td")
+        if not bool(row_nodes):
             return ""
         desc_idx = -2
         if len(row_nodes) == 6:
             desc_idx = -3
-        description = row_nodes[desc_idx].xpath("text()")
-        if description:
+        description: list[str] = row_nodes[desc_idx].xpath("text()")
+        if bool(description):
             return force_unicode(description[0].strip())
         return ""
 
@@ -164,11 +180,14 @@ class AppellateAttachmentPage(BaseReport):
         :return: Attachment page count
         """
         sum_doc_selected_parts = parse_sumDocSelected_from_row(row)
-        if sum_doc_selected_parts and "page_count" in sum_doc_selected_parts:
+        if (
+            bool(sum_doc_selected_parts)
+            and "page_count" in sum_doc_selected_parts
+        ):
             return sum_doc_selected_parts["page_count"]
 
-        description_text_nodes = row.xpath(".//td/text()")
-        if not description_text_nodes:
+        description_text_nodes: list[str] = row.xpath(".//td/text()")
+        if not bool(description_text_nodes):
             return None
         return int(description_text_nodes[-1].strip())
 
@@ -179,7 +198,7 @@ class AppellateAttachmentPage(BaseReport):
         """
         sum_doc_selected_parts = parse_sumDocSelected_from_row(row)
         if (
-            sum_doc_selected_parts
+            bool(sum_doc_selected_parts)
             and "file_size_bytes" in sum_doc_selected_parts
         ):
             return sum_doc_selected_parts["file_size_bytes"]
@@ -194,7 +213,8 @@ class AppellateAttachmentPage(BaseReport):
         :return: Attachment pacer_doc_id
         """
         try:
-            url = row.xpath(".//a")[0]
+            urls: list[str] = row.xpath(".//a/@href")
+            doc1_url = urls[0]
         except IndexError:
             # Item exists, but cannot download document. Perhaps it's sealed
             # or otherwise unavailable in PACER. This is carried over from the
@@ -202,7 +222,6 @@ class AppellateAttachmentPage(BaseReport):
             # precaution.
             return None
         else:
-            doc1_url = url.xpath("./@href")[0]
             return get_pacer_doc_id_from_doc1_url(doc1_url)
 
     def _get_pacer_case_id(self) -> str | None:
@@ -210,9 +229,16 @@ class AppellateAttachmentPage(BaseReport):
 
         :returns str: The pacer_case_id value
         """
-        script_html = html.tostring(self.tree.xpath(".//script")[0]).decode()
+        if self.tree is None:
+            raise ValueError("Parse a report before accessing its contents.")
+        if not isinstance(self.tree, HtmlElement):
+            raise TypeError("Expected an HTML tree for this report.")
+        scripts: list[html.HtmlElement] = self.tree.xpath(".//script")
+        if not bool(scripts):
+            return None
+        script_html = html.tostring(scripts[0]).decode()
         m = re.search(r"[?&]caseid=(\d+)", script_html, flags=re.I)
-        if m:
+        if m is not None:
             return m.group(1)
         else:
             return None
@@ -223,15 +249,22 @@ class AppellateAttachmentPage(BaseReport):
 
         :return: The pacer_seq_no
         """
-        script_html = html.tostring(self.tree.xpath(".//script")[0]).decode()
+        if self.tree is None:
+            raise ValueError("Parse a report before accessing its contents.")
+        if not isinstance(self.tree, HtmlElement):
+            raise TypeError("Expected an HTML tree for this report.")
+        scripts: list[html.HtmlElement] = self.tree.xpath(".//script")
+        if not bool(scripts):
+            return None
+        script_html = html.tostring(scripts[0]).decode()
         m = re.search(r"[?&]d=(\d+)&outputForm", script_html, flags=re.I)
-        if m:
+        if m is not None:
             return m.group(1)
         else:
             return None
 
 
-def main():
+def main() -> None:
     if len(sys.argv) != 2:
         print(
             "Usage: python -m juriscraper.pacer.appellate_attachment_page filepath"

@@ -36,7 +36,7 @@ class TexasCourtOfCriminalAppealsScraper(
 
     def __init__(
         self, court_id: str = CourtID.COURT_OF_CRIMINAL_APPEALS.value
-    ):
+    ) -> None:
         super().__init__(court_id)
 
     @override

@@ -11,17 +11,26 @@ History:
 """
 
 import re
+from collections.abc import Mapping
 from urllib.parse import urljoin
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import RawOpinion
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+class Site(OpinionSiteLinear[int]):
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[int]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.citation_regex = r"(?P<MJ>[\(\[]?\d{2} M\.?J\.?\.?\s*\d+[\)\]]?)|(?P<WL>[\(\[]?\d{4} W\.?L\.?\.?\s*\d+[\)\]]?)"
         self.base_url = self.url = (
@@ -54,32 +63,39 @@ class Site(OpinionSiteLinear):
         :return: None
         """
         path = "//table[@class='Dashboard']/tbody/tr"
-        for item in self.html.xpath(path):
-            url = item.xpath(".//td/a/@href")[0]
-            first_cell = item.xpath(".//td/a/text()")[0]
-            tds = item.xpath(".//td")
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        items: list[HtmlElement] = self.html.xpath(path)
+        for item in items:
+            url: str = item.xpath(".//td/a/@href")[0]
+            first_cell: str = item.xpath(".//td/a/text()")[0]
+            tds = item.findall(".//td")
             summary = ""
             per_curiam = False
 
             # Different table structure for recent vs older opinions
             if len(tds) > 3:
-                docket = re.sub(r"Docket Nos?\.", "", tds[3].text)
-                summary = tds[2].text
+                docket = re.sub(r"Docket Nos?\.", "", tds[3].text_content())
+                summary = tds[2].text_content()
                 per_curiam = "per curiam" in summary.lower()
                 date_string = tds[5].text
             else:
-                docket = re.sub(r"Docket Nos?\.", "", tds[1].text)
+                docket = re.sub(r"Docket Nos?\.", "", tds[1].text_content())
                 date_string = tds[2].text
 
             m = re.search(self.citation_regex, first_cell)
-            if m:
-                mj = m.group("MJ").strip("()") if m.group("MJ") else ""
-                wl = m.group("WL").strip("()") if m.group("WL") else ""
+            if m is not None:
+                mj = m.group("MJ").strip("()") if bool(m.group("MJ")) else ""
+                wl = m.group("WL").strip("()") if bool(m.group("WL")) else ""
             else:
                 mj = ""
                 wl = ""
 
-            status = "Published" if m and mj else "Unpublished"
+            status = (
+                "Published" if (m is not None and bool(mj)) else "Unpublished"
+            )
 
             self.cases.append(
                 self.clean_case_name(
@@ -97,6 +113,7 @@ class Site(OpinionSiteLinear):
                 )
             )
 
+    @override
     async def _download_backwards(self, page_number: int) -> None:
         """Method used by backscraper to download historical records
 
@@ -106,19 +123,23 @@ class Site(OpinionSiteLinear):
         self.url = urljoin(self.base_url, f"?smdpage15701={page_number}")
 
     @staticmethod
-    def clean_case_name(case: dict) -> dict:
+    def clean_case_name(case: RawOpinion) -> RawOpinion:
         """Clean case name by removing citations and unnecessary text
 
         :param case: A dictionary containing case information
         :return dict: The updated case dictionary with a cleaned case name
         """
+        if "name" not in case:
+            raise KeyError("name")
         name = case["name"]
 
         for citation in [case.get("citation"), case.get("parallel_citation")]:
-            if citation and citation in name:
+            if bool(citation) and citation in name:
                 name = name.split(citation, 1)[0]
 
-        parts = re.split(r"[(-]| WITH | ONREMAND | PETITION FOR", name)
+        parts: list[str] = re.split(
+            r"[(-]| WITH | ONREMAND | PETITION FOR", name
+        )
         if len(parts) > 1 and parts[0].strip().lower() in [
             "order",
             "opinion",
@@ -139,16 +160,17 @@ class Site(OpinionSiteLinear):
         case["name"] = titlecase(name.strip(" -:"))
         return case
 
-    def make_backscrape_iterable(self, kwargs: dict) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: Mapping[str, object]) -> None:
         """Checks if backscrape start and end arguments have been passed"""
 
-        start = kwargs.get("backscrape_start")
-        end = kwargs.get("backscrape_end")
+        start = str(kwargs.get("backscrape_start"))
+        end = str(kwargs.get("backscrape_end"))
 
-        if start is None or not str(start).isdigit():
-            start = 1
-        if end is None or not str(end).isdigit():
+        if not start.isdigit():
+            start = "1"
+        if not end.isdigit():
             # There are 34 historical pages as of development in Jun 2025
-            end = 34
+            end = "34"
 
         self.back_scrape_iterable = range(int(end), int(start) - 1, -1)

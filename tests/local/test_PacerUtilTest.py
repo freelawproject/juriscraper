@@ -21,7 +21,7 @@ from juriscraper.pacer.utils import (
 class PacerUtilTest(unittest.TestCase):
     """A variety of tests of our simple utilities."""
 
-    def test_getting_case_id_from_urls(self):
+    def test_getting_case_id_from_urls(self) -> None:
         qa_pairs = (
             ("https://ecf.almd.uscourts.gov/cgi-bin/DktRpt.pl?56120", "56120"),
             (
@@ -36,14 +36,14 @@ class PacerUtilTest(unittest.TestCase):
         for q, a in qa_pairs:
             self.assertEqual(get_pacer_case_id_from_nonce_url(q), a)
 
-    def test_getting_court_id_from_url(self):
+    def test_getting_court_id_from_url(self) -> None:
         qa_pairs = (
             ("https://ecf.almd.uscourts.gov/cgi-bin/DktRpt.pl?56120", "almd"),
         )
         for q, a in qa_pairs:
             self.assertEqual(get_court_id_from_url(q), a)
 
-    def test_get_pacer_document_number_from_doc1_url(self):
+    def test_get_pacer_document_number_from_doc1_url(self) -> None:
         qa_pairs = (
             ("https://ecf.almd.uscourts.gov/doc1/01712427473", "01702427473"),
             ("/doc1/01712427473", "01702427473"),
@@ -55,7 +55,7 @@ class PacerUtilTest(unittest.TestCase):
         for q, a in qa_pairs:
             self.assertEqual(get_pacer_doc_id_from_doc1_url(q), a)
 
-    def test_get_pacer_seq_no_from_doc1_url(self):
+    def test_get_pacer_seq_no_from_doc1_url(self) -> None:
         qa_pairs = (
             (
                 "https://ecf.ilnd.uscourts.gov/doc1/067126041495?caseid=404197&de_seq_num=56&magic_num=83547811",
@@ -73,7 +73,7 @@ class PacerUtilTest(unittest.TestCase):
         for q, a in qa_pairs:
             self.assertEqual(get_pacer_seq_no_from_doc1_url(q), a)
 
-    def test_get_pacer_case_id_from_doc1_url(self):
+    def test_get_pacer_case_id_from_doc1_url(self) -> None:
         qa_pairs = (
             (
                 "https://ecf.ilnd.uscourts.gov/doc1/067126041495?caseid=404197&de_seq_num=56&magic_num=83547811",
@@ -91,7 +91,7 @@ class PacerUtilTest(unittest.TestCase):
         for q, a in qa_pairs:
             self.assertEqual(get_pacer_case_id_from_doc1_url(q), a)
 
-    def test_get_pacer_magic_num_from_doc1_url(self):
+    def test_get_pacer_magic_num_from_doc1_url(self) -> None:
         qa_pairs = (
             (
                 "https://ecf.ilnd.uscourts.gov/doc1/067126041495?caseid=404197&de_seq_num=56&magic_num=83547811",
@@ -109,7 +109,7 @@ class PacerUtilTest(unittest.TestCase):
         for q, a in qa_pairs:
             self.assertEqual(get_pacer_magic_num_from_doc1_url(q), a)
 
-    def test_reverse_dls_function(self):
+    def test_reverse_dls_function(self) -> None:
         """Can we parse the javascript correctly to get a good dict?"""
         qa_pairs = (
             (
@@ -129,7 +129,7 @@ class PacerUtilTest(unittest.TestCase):
         for q, a in qa_pairs:
             self.assertEqual(reverse_goDLS_function(q), a)
 
-    def test_make_doc1_url(self):
+    def test_make_doc1_url(self) -> None:
         """Can we make good doc1 urls?"""
         qa_pairs = (
             (
@@ -168,7 +168,7 @@ class PacerUtilTest(unittest.TestCase):
         for q, a in qa_pairs:
             self.assertEqual(make_doc1_url(*q), a)
 
-    def test_clean_pacer_objects(self):
+    def test_clean_pacer_objects(self) -> None:
         """Can we properly clean various types of data?"""
         tests = (
             {
@@ -210,7 +210,7 @@ class PacerUtilTest(unittest.TestCase):
         for test in tests:
             self.assertEqual(clean_court_object(test["q"]), test["a"])
 
-    def test_parse_datetime_for_us_timezone(self):
+    def test_parse_datetime_for_us_timezone(self) -> None:
         """Can we properly parse standard and DST datetimes for US timezones?"""
 
         datetime_tests = [

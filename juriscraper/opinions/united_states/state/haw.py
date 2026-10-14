@@ -4,22 +4,30 @@
 import re
 from datetime import date, datetime
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
+from juriscraper.AbstractSite import SiteOptions
 from juriscraper.ClusterSite import ClusterSite
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.log_tools import make_default_logger
-from juriscraper.lib.type_utils import OpinionType
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import BackscrapeOptions, OpinionType
 
 logger = make_default_logger()
 
 
-class Site(ClusterSite):
+class Site(ClusterSite[date]):
     first_opinion_date = datetime(2010, 1, 1)
     days_interval = 1
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[date]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.url = (
             "https://www.courts.state.hi.us/opinions_and_orders/opinions"
         )
@@ -35,7 +43,12 @@ class Site(ClusterSite):
 
         :return: None
         """
-        for row in self.html.xpath("//tr[@class='row-']"):
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath("//tr[@class='row-']")
+        for row in rows:
             (
                 date,
                 court,
@@ -43,12 +56,12 @@ class Site(ClusterSite):
                 name_container,
                 lower_court,
                 citation,
-            ) = row.xpath(".//td")
+            ) = row.findall(".//td")
             if court.text_content() != self.court_code:
                 logger.debug("Skipping row not matching %s", self.court_code)
                 continue
 
-            if not docket_container.xpath(".//a"):
+            if not bool(docket_container.findall(".//a")):
                 continue
 
             lower_court = lower_court.text_content()
@@ -63,7 +76,7 @@ class Site(ClusterSite):
             if "(" in name_text:
                 case_name = name_text.split("(", 1)[0].strip()
             else:
-                if v_match := re.search(r" v\. ", name_text):
+                if (v_match := re.search(r" v\. ", name_text)) is not None:
                     post_v = name_text[v_match.end() :]
                     case_name = (
                         name_text[: v_match.end()]
@@ -90,12 +103,12 @@ class Site(ClusterSite):
                 "citation": citation.text_content(),
             }
 
-            main_url = docket_container.xpath(".//a")[0].get("href")
+            main_url = docket_container.findall(".//a")[0].get("href")
             sub_opinions = []
             judges = ""
 
             # the text describing the opinion type will be inside the links
-            links = name_container.xpath(".//a")
+            links = name_container.findall(".//a")
             for link_index, link in enumerate(links):
                 link_text = link.text_content()
                 lower_link_text = link_text.strip().lower()
@@ -112,7 +125,7 @@ class Site(ClusterSite):
                 elif dissent:
                     op_type = OpinionType.DISSENT
 
-                if not op_type:
+                if not bool(op_type):
                     continue
 
                 author = ""
@@ -129,16 +142,20 @@ class Site(ClusterSite):
 
                 judges_text = name_text[start_text_index:end_text_index]
 
-                if author_match := re.search(
-                    r"by ([CJ.]+ )?(?P<author>\w+)", judges_text
-                ):
+                if (
+                    author_match := re.search(
+                        r"by ([CJ.]+ )?(?P<author>\w+)", judges_text
+                    )
+                ) is not None:
                     author = author_match.group("author")
                     judges += f"; {author}"
 
                 joined_by = ""
-                if joined_by_match := re.search(
-                    r"in which (?P<joined_by>.+)[jJ]oins", judges_text
-                ):
+                if (
+                    joined_by_match := re.search(
+                        r"in which (?P<joined_by>.+)[jJ]oins", judges_text
+                    )
+                ) is not None:
                     joined_by = joined_by_match.group("joined_by").strip()
                     judges += f"; {joined_by}"
 
@@ -151,19 +168,20 @@ class Site(ClusterSite):
                     }
                 )
 
-            if sub_opinions:
+            if bool(sub_opinions):
                 sub_opinions.append(
                     {"url": main_url, "type": OpinionType.MAJORITY.value}
                 )
                 case_dict["sub_opinions"] = sub_opinions
 
-                if judges:
+                if bool(judges):
                     case_dict["judge"] = judges.strip("; ")
             else:
                 case_dict["url"] = main_url
 
             self.cases.append(case_dict)
 
+    @override
     async def _download_backwards(self, search_date: date) -> None:
         """Download and process HTML for a given target date.
 
@@ -183,13 +201,15 @@ class Site(ClusterSite):
         self.html = await self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """Make back scrape iterable
 
         :param kwargs: the back scraping params
         :return: None
         """
-        super().make_backscrape_iterable(kwargs)
-        self.back_scrape_iterable = unique_year_month(
-            self.back_scrape_iterable
-        )
+        date_ranges = self._get_backscrape_date_ranges(kwargs)
+        if not bool(date_ranges):
+            self.back_scrape_iterable = []
+            return
+        self.back_scrape_iterable = unique_year_month(date_ranges)

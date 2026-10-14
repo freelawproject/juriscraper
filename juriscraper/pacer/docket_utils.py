@@ -3,7 +3,7 @@ import re
 from juriscraper.lib.string_utils import titlecase
 
 
-def normalize_party_types(t):
+def normalize_party_types(t: str) -> str:
     """Normalize various party types to as few as possible."""
     t = t.lower().strip()
 

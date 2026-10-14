@@ -54,7 +54,7 @@ class CourtVocabulary(str, Enum):
     label: str
 
     def __new__(cls, value: str, code: int, label: str) -> "CourtVocabulary":
-        member = str.__new__(cls, value)
+        member = super().__new__(cls, value)
         member._value_ = value
         member.code = code
         member.label = label
@@ -2505,7 +2505,7 @@ def filing_type_from_value(raw: str | None) -> FilingType | None:
     :return: The matching :class:`FilingType`, or ``None`` when the table
         printed nothing or printed a type this vocabulary does not cover.
     """
-    if not raw:
+    if not bool(raw):
         return None
     return _FILING_TYPES_BY_VALUE.get(" ".join(raw.split()))
 
@@ -2542,7 +2542,7 @@ def classify_issue(raw: str) -> IssueClassification:
     """
     category_part, _, subcategory_part = raw.partition("--")
     category = _ISSUE_CATEGORIES_BY_VALUE.get(category_part.strip())
-    if not subcategory_part.strip():
+    if not bool(subcategory_part.strip()):
         return IssueClassification(
             raw=raw, category=category, recognized=category is not None
         )

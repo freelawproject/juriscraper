@@ -1,14 +1,22 @@
 import re
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import BackscrapeItem, SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+class Site(OpinionSiteLinear[BackscrapeItem]):
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[BackscrapeItem]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.url = "https://legacy.utcourts.gov/opinions/supopin/"
         self.court_id = self.__module__
         self.status = "Published"
@@ -16,10 +24,15 @@ class Site(OpinionSiteLinear):
 
     @override
     def _process_html(self) -> None:
-        for row in self.html.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(
             "//div[@id='content']//p[a[contains(@href, '.pdf')]]"
-        ):
-            texts = row.xpath("text()")
+        )
+        for row in rows:
+            texts: list[str] = row.xpath("text()")
             if any("superseded" in t.lower() for t in texts):
                 # Superseding opinions are published in their own rows
                 logger.info("Skipping row with superseded opinion %s", texts)
@@ -28,6 +41,8 @@ class Site(OpinionSiteLinear):
             # pick longest text; if not, HTML comments may cause wrong indexing
             text = sorted(texts)[-1]
             neutral_cite_match = re.search(r"\d{4} UT( App)? \d{1,}", text)
+            if neutral_cite_match is None:
+                raise ValueError(f"Could not parse opinion citation: {text!r}")
             citation = neutral_cite_match.group(0)
 
             filed_index = text.find("Filed")
@@ -38,15 +53,16 @@ class Site(OpinionSiteLinear):
 
             self.cases.append(
                 {
-                    "url": row.xpath("a")[0].get("href"),
-                    "name": row.xpath("a")[0].text_content(),
+                    "url": row.findall("a")[0].attrib["href"],
+                    "name": row.findall("a")[0].text_content(),
                     "date": date_filed,
                     "citation": citation,
                     "docket": docket,
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract lower court from the scraped text.
 
         :param scraped_text: The text to extract from.
@@ -68,7 +84,7 @@ class Site(OpinionSiteLinear):
             re.MULTILINE | re.VERBOSE | re.IGNORECASE,
         )
 
-        if match := pattern.search(scraped_text):
+        if (match := pattern.search(scraped_text)) is not None:
             lower_court_str = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()

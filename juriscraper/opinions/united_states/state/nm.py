@@ -1,16 +1,17 @@
 import re
 from datetime import date, datetime, timedelta
-from typing import Any
 from urllib.parse import urlencode
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[tuple[date, date]]):
     """This site has an artificial limit of 50/1 minute and 100/5 minutes.
 
     To stay under that cap we are going to just request the first 10 opinions.  Judging on the number of opinions
@@ -24,8 +25,13 @@ class Site(OpinionSiteLinear):
     first_opinion_date = datetime(1900, 1, 1)
     days_interval = 15
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.set_url()
         self.make_backscrape_iterable(kwargs)
@@ -39,27 +45,33 @@ class Site(OpinionSiteLinear):
 
         :return None
         """
-        rows = self.html.xpath("//div[@class='info']")
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath("//div[@class='info']")
         if len(rows) >= 25:
             logger.info(
                 "25 results for this query, results may be lost in pagination"
             )
 
         for row in rows:
-            url = row.xpath(
+            url: str = row.xpath(
                 ".//a[contains(@title, 'Download the PDF version')]/@href"
             )[0]
-            name = row.xpath(".//span[@class='title']/a/text()")[0]
-            date_filed = row.xpath(".//span[@class='publicationDate']/text()")[
-                0
-            ]
+            name: str = row.xpath(".//span[@class='title']/a/text()")[0]
+            date_filed: str = row.xpath(
+                ".//span[@class='publicationDate']/text()"
+            )[0]
 
-            cite = row.xpath(".//span[@class='citation']/text()")
-            citation = cite[0] if cite else ""
+            cite: list[str] = row.xpath(".//span[@class='citation']/text()")
+            citation = cite[0] if bool(cite) else ""
 
             status = "Unknown"
-            metadata = row.xpath(".//div[@class='subMetadata']/span/text()")
-            if metadata:
+            metadata: list[str] = row.xpath(
+                ".//div[@class='subMetadata']/span/text()"
+            )
+            if bool(metadata):
                 if "Reported" in metadata[-1] or "Slip" in metadata[-1]:
                     status = "Published"
                 elif "Unreported" in metadata[-1]:
@@ -90,8 +102,9 @@ class Site(OpinionSiteLinear):
 
         :return None
         """
-        if not start:
+        if end is None:
             end = datetime.now() + timedelta(1)
+        if start is None:
             start = end - timedelta(7)
 
         params = {
@@ -110,6 +123,7 @@ class Site(OpinionSiteLinear):
         }
         self.url = f"{self.base_url}?{urlencode(params)}"
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
 
@@ -121,15 +135,16 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Pass scraped text into function and return data as a dictionary
 
         :param scraped_text: Text of scraped content
         :return: metadata
         """
-        metadata: dict[str, dict] = {}
+        metadata: ExtractedMetadata = {}
         docket_number = re.findall(r"N[oO]\.\s(.*)", scraped_text)
-        if docket_number:
+        if bool(docket_number):
             metadata.setdefault("OpinionCluster", {})["docket_number"] = (
                 docket_number[0]
             )
@@ -138,7 +153,7 @@ class Site(OpinionSiteLinear):
             r"APPEAL FROM THE (?P<lower_court>.+)\n\s*\d*\s*(?P<lower_court_judge>.+), District (?:Court )?Judge"
         )
 
-        if match := lower_court_regex.search(scraped_text):
+        if (match := lower_court_regex.search(scraped_text)) is not None:
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()

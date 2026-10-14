@@ -10,18 +10,25 @@ import re
 from datetime import date
 from urllib.parse import urlencode, urljoin
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[tuple[date, date]]):
     days_interval = 7
     use_urllib = True
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.nccourts.gov/documents/business-court-opinions"
         self.first_opinion_date = date(1996, 10, 24)
@@ -32,11 +39,16 @@ class Site(OpinionSiteLinear):
 
     @override
     def _process_html(self) -> None:
-        for row in self.html.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(
             ".//div[contains(@class,'list__items')]/article"
-        ):
+        )
+        for row in rows:
             # Extract case name and citation
-            case_string = (
+            case_string: str = (
                 row.xpath(".//*[contains(@class,'list__title')]/a")[0]
                 .text_content()
                 .strip()
@@ -44,9 +56,9 @@ class Site(OpinionSiteLinear):
             case_name, citation = self.extract_case_and_citation(case_string)
 
             # Extract other data
-            date_filed = row.xpath(".//time")[0].text_content().strip()
+            date_filed = row.findall(".//time")[0].text_content().strip()
             # In the same span we can find the docket number, the lower court and the author
-            span_text = (
+            span_text: str = (
                 row.xpath(".//div[@class='meta']/span[4]")[0]
                 .text_content()
                 .strip()
@@ -72,8 +84,8 @@ class Site(OpinionSiteLinear):
                 if len(parts) > 1:
                     author_str = parts[1].strip()
 
-            status = row.xpath(".//span[6]")[0].text_content().strip()
-            download_url = row.xpath(
+            status = row.findall(".//span[6]")[0].text_content().strip()
+            download_url: str = row.xpath(
                 ".//div[contains(@class,'file file--teaser')]/a/@href"
             )[0]
 
@@ -81,7 +93,10 @@ class Site(OpinionSiteLinear):
                 {
                     "name": titlecase(case_name),
                     "docket": docket_number,
-                    "url": urljoin(self.url, download_url),
+                    "url": urljoin(
+                        (self.url if self.url is not None else ""),
+                        download_url,
+                    ),
                     "date": date_filed,
                     "citation": citation,
                     "status": status,
@@ -90,7 +105,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def extract_case_and_citation(self, case_string):
+    def extract_case_and_citation(self, case_string: str) -> tuple[str, str]:
         """Extract citations and clean up case name
 
         Possible strings:
@@ -101,7 +116,7 @@ class Site(OpinionSiteLinear):
         case_string = case_string.strip()
         citation_match = re.search(r"(\d{4} NCBC \d+)$", case_string)
 
-        if citation_match:
+        if citation_match is not None:
             citation = citation_match.group(1)
             case_name = case_string[: citation_match.start()].strip()
             case_name = case_name.rstrip(", ").strip()
@@ -111,6 +126,7 @@ class Site(OpinionSiteLinear):
 
         return case_name, citation
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Build URL with year input and scrape
 

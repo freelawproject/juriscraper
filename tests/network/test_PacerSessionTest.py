@@ -1,6 +1,8 @@
 import unittest
 from unittest import mock
 
+from typing_extensions import override
+
 from juriscraper.pacer.utils import make_doc1_url
 from tests.network import (
     PACER_PASSWORD,
@@ -13,13 +15,14 @@ from tests.network import (
 class PacerSessionTest(unittest.IsolatedAsyncioTestCase):
     """Test the PacerSession wrapper class"""
 
-    def setUp(self):
+    @override
+    def setUp(self) -> None:
         self.session = get_pacer_session()
         self.addAsyncCleanup(self.session.aclose)
 
     @mock.patch("juriscraper.pacer.http.PacerSession.login")
     @SKIP_IF_NO_PACER_LOGIN
-    async def test_auto_login(self, mock_login):
+    async def test_auto_login(self, mock_login: mock.AsyncMock) -> None:
         """Do we automatically log in if needed?"""
         court_id = "ksd"
         pacer_doc_id = "07902639735"

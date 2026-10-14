@@ -7,15 +7,29 @@ History:
   YYYY-MM-DD: Created by XXX
 """
 
-from lxml import html
+from datetime import date
 
-from juriscraper.lib.string_utils import convert_date_string, titlecase
+from lxml import html
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
+
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import (
+    CaseNameTweaker,
+    convert_date_string,
+    titlecase,
+)
 from juriscraper.OpinionSite import OpinionSite
 
 
-class Site(OpinionSite):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+class Site(OpinionSite[str]):
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[str]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = "http://court-url.gov/some-path.html"
         # Complete this variable if you create a backscraper.
@@ -31,7 +45,8 @@ class Site(OpinionSite):
     Remove this comment before submission.
     """
 
-    def _get_download_urls(self):
+    @override
+    def _get_download_urls(self) -> list[str]:
         """
         This is an example of a basic piece of meta data accessible with a
         simple XPath query.
@@ -42,9 +57,15 @@ class Site(OpinionSite):
         object's cleanup routines, so doing so here is not needed.
         """
         path = "//path/to/text/text()"
-        return list(self.html.xpath(path))
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        texts: list[str] = self.html.xpath(path)
+        return texts
 
-    def _get_case_names(self):
+    @override
+    def _get_case_names(self) -> list[str]:
         """
         This example demonstrates how to extract text from an element that
         may contain other elements.
@@ -60,12 +81,18 @@ class Site(OpinionSite):
         cases where the name is provided in uppercase only.
         """
         case_names = []
-        for e in self.html.xpath("//path/to/an/element/p"):
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        elements: list[HtmlElement] = self.html.xpath("//path/to/an/element/p")
+        for e in elements:
             s = html.tostring(e, method="text", encoding="unicode")
             case_names.append(titlecase(s))
         return case_names
 
-    def _get_case_dates(self):
+    @override
+    def _get_case_dates(self) -> list[date | None]:
         """
         This is an example of a date field. Note that the format string
         will likely need to be updated to  match the date formats
@@ -73,19 +100,26 @@ class Site(OpinionSite):
         here: http://docs.python.org/2/library/datetime.html
         """
         path = "//path/to/text/text()"
-        return [
-            convert_date_string(date_string)
-            for date_string in self.html.xpath(path)
-        ]
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        dates: list[str] = self.html.xpath(path)
+        return [convert_date_string(date_string) for date_string in dates]
 
-    def _get_precedential_statuses(self):
+    @override
+    def _get_precedential_statuses(self) -> list[str]:
         """
         In most cases, this field should be normalized to either
         'Published' or 'Unpublished', as below.
         """
         statuses = []
-        for e in self.html.xpath("//path/to/text/text()"):
-            s = html.tostring(e, method="text", encoding="unicode")
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        texts: list[str] = self.html.xpath("//path/to/text/text()")
+        for s in texts:
             if "Opinion" in s:
                 statuses.append("Published")
             elif "Nonprecedential" in s:
@@ -100,31 +134,36 @@ class Site(OpinionSite):
       Remove this comment and any unused methods before submission
     """
 
-    def _get_docket_numbers(self):
+    @override
+    def _get_docket_numbers(self) -> None:
         """
         This is typically of the form ##-####
         """
         return None
 
-    def _get_citations(self):
+    @override
+    def _get_citations(self) -> None:
         """
         A citation for the case.
         """
         return None
 
-    def _get_parallel_citations(self):
+    @override
+    def _get_parallel_citations(self) -> None:
         """
         A second citation for the case.
         """
         return None
 
-    def _get_judges(self):
+    @override
+    def _get_judges(self) -> None:
         """
         For the name of the judge authoring the lead opinion
         """
         return None
 
-    def _get_lower_courts(self):
+    @override
+    def _get_lower_courts(self) -> None:
         """
         If the document is an opinion of an appellate court, then the court
         from which the case was appealed would go here. So, a 9th Circuit
@@ -132,14 +171,16 @@ class Site(OpinionSite):
         """
         return None
 
-    def _get_nature_of_suit(self):
+    @override
+    def _get_nature_of_suit(self) -> None:
         """
         Some courts provide a NOS code or phrase giving the subject matter
         of the case, such as 'Contract' 'Civil Rights' 'Immigration' etc.
         """
         return None
 
-    def _get_summaries(self):
+    @override
+    def _get_summaries(self) -> None:
         """
         Some courts provide a summary of the case or the opinion's holding.
         """
@@ -151,27 +192,31 @@ class Site(OpinionSite):
     Remove this comment and any unused methods before submission
     """
 
-    def _get_adversary_numbers(self):
+    @override
+    def _get_adversary_numbers(self) -> None:
         """
         Similar to a docket number, but found only in bankruptcy cases.
         """
         return None
 
-    def _get_causes(self):
+    @override
+    def _get_causes(self) -> None:
         """
         Some courts will give the plaintiff's or appellant's cause of action
         such as 'Employment' 'Trademark' etc.
         """
         return None
 
-    def _get_dispositions(self):
+    @override
+    def _get_dispositions(self) -> None:
         """
         Affirmed, Reversed, Vacated; if longer than a sentence, should
         probably use _get_summaries instead.
         """
         return None
 
-    def _get_docket_attachment_numbers(self):
+    @override
+    def _get_docket_attachment_numbers(self) -> None:
         """
         A document appears on a docket. Each line on the docket has a number.
         Item number 12, for example, might be a declaration with several
@@ -179,14 +224,16 @@ class Site(OpinionSite):
         """
         return None
 
-    def _get_docket_document_numbers(self):
+    @override
+    def _get_docket_document_numbers(self) -> None:
         """
         A document appears on a docket. Each line on the docket has a number.
         Those numbers go here.
         """
         return None
 
-    def _get_lower_court_judges(self):
+    @override
+    def _get_lower_court_judges(self) -> None:
         """
         If the document is an opinion of an appellate court, then the court
         from which the case was appealed is the lower court. So, a 9th Cir.
@@ -195,7 +242,8 @@ class Site(OpinionSite):
         """
         return None
 
-    def _get_lower_court_numbers(self):
+    @override
+    def _get_lower_court_numbers(self) -> None:
         """
         If the document is an opinion of an appellate court, then the court
         from which the case was appealed is the lower court. So, a 9th Cir.
@@ -208,8 +256,9 @@ class Site(OpinionSite):
     Optional methods for special purposes
     """
 
+    @override
     @staticmethod
-    def cleanup_content(content):
+    def cleanup_content(content: bytes) -> bytes:
         """
         Given the HTML from a page, this method is used to strip it down to
         its bare essentials.
@@ -224,7 +273,8 @@ class Site(OpinionSite):
         """
         return content
 
-    async def _download_backwards(self, date_str):
+    @override
+    async def _download_backwards(self, date_str: str) -> None:
         """
         This is a simple method that can be used to generate Site objects
         that can be used to paginate through a court's entire website.

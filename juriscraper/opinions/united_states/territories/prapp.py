@@ -10,22 +10,34 @@ from datetime import date, datetime
 
 from dateparser import parse
 from dateutil.relativedelta import relativedelta
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.AbstractSite import (
+    DownloadedContent,
+    RequestParameters,
+    SiteOptions,
+    logger,
+)
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import BackscrapeOptions
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[str]):
     first_opinion_date = "2015/01/01"
     today = today_str = datetime.now().strftime("%Y/%m/%d")
     base_url = "https://poderjudicial.pr/tribunal-apelaciones/decisiones-finales-del-tribunal-de-apelaciones"
     is_backscrape = False
 
-    def __init__(self, *args, **kwargs):
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[str]],
+    ) -> None:
         kwargs.setdefault("verify", False)
-        super().__init__(*args, **kwargs)
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.year = date.today().year
         self.current_month = self.format_spanish_month_year(datetime.now())
@@ -34,7 +46,10 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.make_backscrape_iterable(kwargs)
 
-    async def _download(self):
+    @override
+    async def _download(
+        self, request_dict: RequestParameters | None = None
+    ) -> DownloadedContent:
         """Download case pages
 
         If a backscrape ignore the need to find the correct page
@@ -43,26 +58,32 @@ class Site(OpinionSiteLinear):
         :return: HTML object
         """
         if self.test_mode_enabled():
-            return await super()._download()
-        if not self.html:
+            return await super()._download(request_dict)
+        if not bool(self.html):
             self.html = await super()._download()
 
         if not self.is_backscrape:
-            latest_url = self.html.xpath(
+            if not isinstance(self.html, HtmlElement):
+                raise ValueError(
+                    "An HTML document must be downloaded before parsing."
+                )
+            latest_url: list[str] = self.html.xpath(
                 f"(//a[contains(@href,'{self.year}') and contains(@href,'decisiones-del-tribunal-de-apelaciones')])[last()]/@href"
             )
-            if not latest_url:
+            if not bool(latest_url):
                 logger.debug(f"No opinions posted for {self.year}")
                 self.html = None
                 return
 
             self.url = latest_url[0]
-        if self.current_month not in self.url:
+        if self.current_month not in (
+            self.url if self.url is not None else ""
+        ):
             logger.debug(
                 f"No opinions yet posted for current month {self.current_month}, moving to most recent month."
             )
 
-        return await super()._download()
+        return await super()._download(request_dict)
 
     @override
     def _process_html(self) -> None:
@@ -77,30 +98,47 @@ class Site(OpinionSiteLinear):
             logger.warning("No opinions yet posted for year")
             return
 
-        for row in self.html.xpath("//table/tbody/tr/td[a]/.."):
-            cells = row.xpath("./td")
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath("//table/tbody/tr/td[a]/..")
+        for row in rows:
+            cells = row.findall("./td")
 
             raw_name = cells[1].text_content().strip()
             raw_date = cells[2].text_content().strip()
+            parsed_date = parse(raw_date, languages=["es"])
+            if parsed_date is None:
+                raise ValueError(f"Could not parse opinion date: {raw_date!r}")
 
             self.cases.append(
                 {
                     "name": titlecase(raw_name),
                     "url": row.xpath(".//a/@href")[0],
                     "docket": cells[0].text_content().strip(),
-                    "date": str(parse(raw_date, languages=["es"]).date()),
+                    "date": str(parsed_date.date()),
                 }
             )
 
-    def make_backscrape_iterable(self, kwargs):
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """Generate backscrape iterable
 
         Generate spanish language year month slug to be used in scraping
 
         :return None
         """
-        start = kwargs.get("backscrape_start") or self.first_opinion_date
-        end = kwargs.get("backscrape_end") or self.today
+        start = (
+            backscrape_start_value
+            if bool(backscrape_start_value := kwargs.get("backscrape_start"))
+            else self.first_opinion_date
+        )
+        end = (
+            backscrape_end_value
+            if bool(backscrape_end_value := kwargs.get("backscrape_end"))
+            else self.today
+        )
 
         start_date = datetime.strptime(start, "%Y/%m/%d").date()
         end_date = datetime.strptime(end, "%Y/%m/%d").date()
@@ -114,7 +152,8 @@ class Site(OpinionSiteLinear):
 
         self.back_scrape_iterable = months
 
-    async def _download_backwards(self, year_month: str):
+    @override
+    async def _download_backwards(self, year_month: str) -> None:
         """Download backwards
 
         :param year_month: spanish year month used to generate url
@@ -126,7 +165,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
-    def format_spanish_month_year(self, datetime_obj: datetime) -> str:
+    def format_spanish_month_year(self, datetime_obj: date) -> str:
         """Generate month year slug in spanish
 
         Use this method to avoid issues with changing locale to spanish

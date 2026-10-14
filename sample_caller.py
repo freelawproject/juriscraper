@@ -8,29 +8,62 @@ import signal
 import sys
 import webbrowser
 from collections import defaultdict
+from collections.abc import Mapping
 from contextlib import aclosing
 from datetime import datetime
-from optparse import OptionParser
-from typing import cast
+from optparse import OptionParser, Values
+from types import FrameType
 from urllib import parse
 
 import httpx
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack
 
-from juriscraper.AbstractSite import AbstractSite
+from juriscraper.AbstractSite import AbstractSite, BackscrapeItem
 from juriscraper.lib.exceptions import BadContentError
-from juriscraper.lib.importer import build_module_list, site_yielder
+from juriscraper.lib.importer import (
+    build_module_list,
+    site_yielder,
+)
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.microservices_utils import (
     MICROSERVICE_URLS,
     get_extension,
 )
 from juriscraper.lib.string_utils import trunc
+from juriscraper.lib.type_utils import (
+    AsyncClientOptions,
+    ExtractedMetadata,
+    PostRequestOptions,
+)
+from juriscraper.OpinionSite import OpinionSite
 
 logger = make_default_logger()
 die_now = False
+_SUB_OPINIONS = TypeAdapter(list[dict[str, object]])
 
 
-def signal_handler(signal, frame):
+class _Options(Values):
+    court_id: str | None
+    backscrape: bool
+    backscrape_start: str | None
+    backscrape_end: str | None
+    days_interval: int | None
+    binaries: bool
+    doctor_host: str
+    extract_content: bool
+    verbosity: int
+    save_responses: bool
+    test_hashes: bool
+    limit_per_scrape: int
+
+
+class _ScrapeResult(TypedDict):
+    count: int
+    exceptions: dict[str, list[Exception]]
+
+
+def signal_handler(signal: int, frame: FrameType | None) -> None:
     # Trigger this with CTRL+4
     logger.debug("**************")
     logger.debug("Signal caught. Finishing the current court, then exiting...")
@@ -40,7 +73,12 @@ def signal_handler(signal, frame):
 
 
 # Copied from django
-def force_bytes(s, encoding="utf-8", strings_only=False, errors="strict"):
+def force_bytes(
+    s: object,
+    encoding: str = "utf-8",
+    strings_only: bool = False,
+    errors: str = "strict",
+) -> bytes:
     """
     Similar to smart_bytes, except that lazy instances are resolved to
     strings, rather than kept as lazy objects.
@@ -59,7 +97,7 @@ def force_bytes(s, encoding="utf-8", strings_only=False, errors="strict"):
 
 
 # Copied from Courtlistener
-def sha1(s):
+def sha1(s: str | bytes) -> str:
     """Return the sha1sum of a string.
 
     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -78,26 +116,30 @@ def sha1(s):
     return sha1sum.hexdigest()
 
 
-def log_dict(dic: dict) -> None:
+def log_dict(dic: Mapping[str, object]) -> None:
     """Logs key-value pairs from a dictionary,
     truncating string values
     """
     for k, v in dic.items():
         if isinstance(v, str):
             v = trunc(v, 200, ellipsis="...")
-        elif isinstance(v, dict):
+        elif isinstance(v, Mapping):
             log_dict(v)
             continue
         logger.debug('    %s: "%s"', k, v)
 
 
 async def extract_doc_content(
-    data: bytes,
+    data: bytes | str,
     extract_from_text: bool,
-    site: AbstractSite,
+    site: AbstractSite[BackscrapeItem],
     doctor_host: str,
     filename: str,
-) -> tuple[bytes, dict]:
+    *,
+    request_options: PostRequestOptions | None = None,
+    extension_request_options: PostRequestOptions | None = None,
+    **kwargs: Unpack[AsyncClientOptions],
+) -> tuple[bytes | str, ExtractedMetadata]:
     """Extracts document's content using a local doctor host
 
     For complete and integrated testing, use the Courtlistener caller
@@ -118,14 +160,40 @@ async def extract_doc_content(
     if not extract_from_text:
         return data, {}
 
-    extension = await get_extension(data)
+    if not isinstance(site, OpinionSite):
+        raise TypeError("Text extraction requires an opinion scraper.")
+    if site.court_id is None:
+        raise ValueError("The scraper must define a court ID.")
 
-    files = {"file": (f"something.{extension}", data)}
+    data = force_bytes(data)
     url = MICROSERVICE_URLS["document-extract"].format(doctor_host)
-    async with httpx.AsyncClient(http2=True) as client:
-        extraction__response = await client.post(url, files=files, timeout=120)
+    extension_options: PostRequestOptions = (
+        extension_request_options.copy()
+        if extension_request_options is not None
+        else {}
+    )
+    extension_options.setdefault("timeout", kwargs.get("timeout", 30))
+    kwargs.setdefault("http2", True)
+    kwargs.setdefault("timeout", 120)
+    options: PostRequestOptions = (
+        request_options.copy() if request_options is not None else {}
+    )
+    async with httpx.AsyncClient(**kwargs) as client:
+        extension = await get_extension(
+            data, session=client, request_options=extension_options
+        )
+        if not any(
+            key in options for key in ("content", "data", "files", "json")
+        ):
+            options["files"] = {"file": (f"something.{extension}", data)}
+        extraction__response = await client.request("POST", url, **options)
     extraction__response.raise_for_status()
-    extracted_content = extraction__response.json()["content"]
+    extraction: object = extraction__response.json()
+    if not isinstance(extraction, dict):
+        raise TypeError("Doctor must return a JSON object.")
+    extracted_content: object = extraction["content"]
+    if not isinstance(extracted_content, str):
+        raise TypeError("Doctor must return extracted content as text.")
 
     # The extracted content is embedded for display in Courtlistener.
     # We save it into /tmp/ to have an idea how it would look. You can
@@ -164,7 +232,7 @@ async def extract_doc_content(
 
 
 async def check_hashes(
-    data: bytes, download_url: str, site: AbstractSite
+    data: bytes | str, download_url: str, site: AbstractSite[BackscrapeItem]
 ) -> None:
     """Detect timestamped content by downloading the same URL twice and
     comparing hashes
@@ -176,10 +244,11 @@ async def check_hashes(
     datas = [data, await site.download_content(download_url)]
     hashes = []
 
-    for data in datas:
-        sha_before = sha1(force_bytes(data))
-        data = site.cleanup_content(data)
-        sha_after = sha1(force_bytes(data))
+    for content in datas:
+        raw_content = force_bytes(content)
+        sha_before = sha1(raw_content)
+        cleaned_content = site.cleanup_content(raw_content)
+        sha_after = sha1(force_bytes(cleaned_content))
 
         # useful for double checking if a Site.cleanup_content is working
         # If implemented properly, the hash should change
@@ -201,8 +270,8 @@ async def check_hashes(
 
 
 async def process_an_opinion(
-    item: dict,
-    site: AbstractSite,
+    item: Mapping[str, object],
+    site: AbstractSite[BackscrapeItem],
     binaries: bool,
     extract_content: bool,
     test_hashes: bool,
@@ -210,6 +279,8 @@ async def process_an_opinion(
     is_cluster: bool = False,
 ) -> None:
     item_download_urls = item["download_urls"]
+    if not isinstance(item_download_urls, str):
+        raise TypeError("An opinion's download URL must be a string.")
     # Percent encode URLs (this is a Python wart)
     download_url = parse.quote(item_download_urls, safe="%/:=&?~#+!$,;'@()*[]")
 
@@ -232,7 +303,10 @@ async def process_an_opinion(
     if test_hashes:
         await check_hashes(data, download_url, site)
 
-    filename = item["case_names"].lower().replace(" ", "_")[:40]
+    case_name = item["case_names"]
+    if not isinstance(case_name, str):
+        raise TypeError("An opinion's case name must be a string.")
+    filename = case_name.lower().replace(" ", "_")[:40]
 
     data, metadata_from_text = await extract_doc_content(
         data, extract_content, site, doctor_host, filename
@@ -241,11 +315,11 @@ async def process_an_opinion(
         5, "\nShowing extracted document data (500 chars):\n%s", data[:500]
     )
 
-    if metadata_from_text:
+    if bool(metadata_from_text):
         logger.debug("\nValues obtained by Site.extract_from_text:")
         for object_type, value_dict in metadata_from_text.items():
             logger.debug(object_type)
-            if object_type != "Citation":
+            if isinstance(value_dict, Mapping):
                 log_dict(value_dict)
             else:
                 logger.debug(value_dict)
@@ -255,13 +329,13 @@ async def process_an_opinion(
 
 
 async def scrape_court(
-    site: AbstractSite,
-    binaries=False,
-    extract_content=False,
-    doctor_host="",
+    site: AbstractSite[BackscrapeItem],
+    binaries: bool = False,
+    extract_content: bool = False,
+    doctor_host: str = "",
     test_hashes: bool = False,
     limit: int = 1000,
-):
+) -> _ScrapeResult:
     """Calls the requested court(s), gets its binary content, and
     extracts the content if possible. See --extract-content option
 
@@ -273,12 +347,12 @@ async def scrape_court(
     Nonetheless, this caller is useful for testing, and for demonstrating some
     basic pitfalls that a caller will run into.
     """
-    exceptions = defaultdict(list)
+    exceptions: defaultdict[str, list[Exception]] = defaultdict(list)
     for index, item in enumerate(site):
         if index == limit:
             break
 
-        if item.get("download_urls"):
+        if bool(item.get("download_urls")):
             # OpinionSite case
             await process_an_opinion(
                 item, site, binaries, extract_content, test_hashes, doctor_host
@@ -287,15 +361,19 @@ async def scrape_court(
             # ClusterSite case
             logger.debug("\nAdding new cluster:")
             log_dict(item)
-            for index, sub_opinion in enumerate(item["sub_opinions"]):
+            sub_opinions = _SUB_OPINIONS.validate_python(
+                item.get("sub_opinions"), strict=True
+            )
+            for index, sub_opinion in enumerate(sub_opinions):
                 logger.info("\nAdding cluster entry %s", index)
                 await process_an_opinion(
-                    sub_opinion,
+                    {**item, **sub_opinion},
                     site,
                     binaries,
                     extract_content,
                     test_hashes,
                     doctor_host,
+                    is_cluster=True,
                 )
             logger.debug("====End of cluster====")
 
@@ -305,7 +383,7 @@ async def scrape_court(
     return {"count": len(site), "exceptions": exceptions}
 
 
-def save_response(site):
+def save_response(site: AbstractSite[BackscrapeItem]) -> None:
     """
     Save response content and headers into /tmp/
 
@@ -314,8 +392,12 @@ def save_response(site):
     optional flag was passed
     """
     now_str = datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
+    if site.court_id is None:
+        raise ValueError("The scraper must define a court ID.")
     court = site.court_id.split(".")[-1]
-    response = site.request["response"]
+    response = site.request.get("response")
+    if response is None:
+        raise ValueError("Download a response before accessing it.")
     directory = "/tmp/juriscraper/"
     os.makedirs(directory, exist_ok=True)
 
@@ -326,11 +408,11 @@ def save_response(site):
 
     try:
         # Brute force test to see if it's a JSON
-        json_data = json.loads(response.content)
+        json_data: object = json.loads(response.content)
     except Exception:
         json_data = None
 
-    if json_data:
+    if bool(json_data):
         filename = f"{directory}{court}_content_{now_str}.json"
         with open(filename, "w") as f:
             json.dump(json_data, f, indent=4)
@@ -341,14 +423,14 @@ def save_response(site):
 
     logger.info("Saved response to %s", filename)
 
-    if response.history:
+    if bool(response.history):
         logger.info("Response history: %s", response.history)
 
     # open the tmp file in the browser
     webbrowser.open(f"file://{filename}")
 
 
-async def main():
+async def main() -> None:
     global die_now
 
     # this line is used for handling SIGTERM (CTRL+4), so things can die safely
@@ -470,7 +552,8 @@ async def main():
         help="How many items to scrape per `scrape_court` call",
     )
 
-    (options, args) = parser.parse_args()
+    options = _Options(vars(parser.get_default_values()))
+    parser.parse_args(values=options)
 
     court_id = options.court_id
     backscrape = options.backscrape
@@ -492,7 +575,7 @@ async def main():
         binaries = True
         # If we are making the effort of downloading documents
         # we should force the user to actually see the outputs
-        verbosity = verbosity if verbosity else 1
+        verbosity = verbosity if verbosity != 0 else 1
 
     if verbosity == 0:
         # default level will only show that the scrapers are working
@@ -507,7 +590,7 @@ async def main():
     # use the easiest to read format
     logger.handlers[0].setFormatter(logging.Formatter("%(message)s"))
 
-    if not court_id:
+    if not bool(court_id):
         parser.error("You must specify a court as a package or module.")
     else:
         court_id = court_id.replace("/", ".")
@@ -532,38 +615,47 @@ async def main():
                 f"{package}.{module}", globals(), locals(), [module]
             )
 
-            site_kwargs = {}
-            if save_responses:
-                site_kwargs = {"save_response_fn": save_response}
+            save_response_fn = save_response if save_responses else None
 
-            site_class = cast(type[AbstractSite], mod.Site)
+            site_class: object = getattr(mod, "Site", None)
+            if not isinstance(site_class, type) or not issubclass(
+                site_class, AbstractSite
+            ):
+                raise TypeError(
+                    f"{mod.__name__}.Site must subclass AbstractSite"
+                )
             if backscrape:
-                async with (
-                    site_class(
-                        backscrape_start=backscrape_start,
-                        backscrape_end=backscrape_end,
-                        days_interval=days_interval,
-                    ) as initial_site,
-                    aclosing(
+                async with site_class(
+                    backscrape_start=backscrape_start,
+                    backscrape_end=backscrape_end,
+                    days_interval=days_interval,
+                ) as initial_site:
+                    iterable = initial_site.back_scrape_iterable
+                    if iterable is None:
+                        raise ValueError(
+                            f"No backscrape iterable configured for {module_string}."
+                        )
+                    async with aclosing(
                         site_yielder(
-                            initial_site.back_scrape_iterable,
+                            iterable,
                             mod,
-                            **site_kwargs,
+                            save_response_fn=save_response_fn,
                         )
-                    ) as sites,
-                ):
-                    async for site in sites:
-                        await site.parse()
-                        await scrape_court(
-                            site,
-                            binaries,
-                            extract_content,
-                            doctor_host,
-                            test_hashes,
-                            limit_per_scrape,
-                        )
+                    ) as sites:
+                        async for site in sites:
+                            await site.parse()
+                            await scrape_court(
+                                site,
+                                binaries,
+                                extract_content,
+                                doctor_host,
+                                test_hashes,
+                                limit_per_scrape,
+                            )
             else:
-                async with site_class(**site_kwargs) as site:
+                async with site_class(
+                    save_response_fn=save_response_fn
+                ) as site:
                     await site.parse()
                     await scrape_court(
                         site,

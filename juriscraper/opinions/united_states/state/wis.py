@@ -2,18 +2,26 @@ import re
 from datetime import date, datetime, timedelta
 from urllib.parse import urlencode, urljoin
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[tuple[date, date]]):
     days_interval = 15
     first_opinion_date = datetime(1995, 6, 1).date()
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.base_url = "https://www.wicourts.gov/supreme/scopin.jsp"
         self.status = "Published"
@@ -30,17 +38,15 @@ class Site(OpinionSiteLinear):
         :param end: end date
         :return None
         """
-        if not start:
-            start = datetime.today() - timedelta(days=15)
+        if end is None:
             end = datetime.today()
-
-        start = start.strftime("%m-%d-%Y")
-        end = end.strftime("%m-%d-%Y")
+        if start is None:
+            start = end - timedelta(days=15)
 
         params = {
             "range": "None",
-            "begin_date": start,
-            "end_date": end,
+            "begin_date": start.strftime("%m-%d-%Y"),
+            "end_date": end.strftime("%m-%d-%Y"),
             "sortBy": "date",
             "Submit": "Search",
         }
@@ -52,32 +58,39 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
-        for row in self.html.xpath(".//table/tbody/tr"):
-            date, docket, caption, link = row.xpath("./td")
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(".//table/tbody/tr")
+        for row in rows:
+            date, docket, caption, link = row.findall("./td")
             self.cases.append(
                 {
                     "date": date.text,
-                    "name": caption.text,
+                    "name": caption.text_content(),
                     "url": urljoin(
                         "https://www.wicourts.gov",
-                        link.xpath("./input")[0].name,
+                        link.findall("./input")[0].attrib["name"],
                     ),
                     "docket": docket.text,
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract citation from text
 
         :param scraped_text: Text of scraped content
         :return: date filed
         """
         first_line = scraped_text[:100].splitlines()[0]
-        if match := re.search(self.cite_regex, first_line):
+        if (match := re.search(self.cite_regex, first_line)) is not None:
             return {"Citation": match.group(0)}
 
         return {}
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Set date range from backscraping args and scrape
 

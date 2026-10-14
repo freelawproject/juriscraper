@@ -2,13 +2,24 @@ import time
 from datetime import date
 
 from dateutil.rrule import DAILY, rrule
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OpinionSite import OpinionSite
 
 
-class Site(OpinionSite):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+class Site(OpinionSite[date]):
+    status: int
+
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[date]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         today = date.today()
         self.url = "http://www.ca10.uscourts.gov/opinion/search/results?query=%20date%3A{}".format(
             today.strftime("%m/%d/%Y")
@@ -26,19 +37,39 @@ class Site(OpinionSite):
             "//table[contains(concat('', @class, ''), 'search-results')]//tr"
         )
 
-    def _get_case_names(self):
-        return list(
-            self.html.xpath(f"{self.base}/td[@class='case-name']/text()")
+    @override
+    def _get_case_names(self) -> list[str]:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        texts: list[str] = self.html.xpath(
+            f"{self.base}/td[@class='case-name']/text()"
         )
+        return texts
 
-    def _get_download_urls(self):
-        return list(self.html.xpath(f"{self.base}/td[@class='link']/a/@href"))
+    @override
+    def _get_download_urls(self) -> list[str]:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        texts: list[str] = self.html.xpath(
+            f"{self.base}/td[@class='link']/a/@href"
+        )
+        return texts
 
-    def _get_case_dates(self):
+    @override
+    def _get_case_dates(self) -> list[date]:
         dates = []
-        for date_string in self.html.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        date_strings: list[str] = self.html.xpath(
             f"{self.base}/td[@class='publish-date']/text()"
-        ):
+        )
+        for date_string in date_strings:
             # ex: Nov-02-1995
             dates.append(
                 date.fromtimestamp(
@@ -47,18 +78,34 @@ class Site(OpinionSite):
             )
         return dates
 
-    def _get_docket_numbers(self):
-        return list(
-            self.html.xpath(f"{self.base}/td[@class='case-no']/text()")
+    @override
+    def _get_docket_numbers(self) -> list[str]:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        texts: list[str] = self.html.xpath(
+            f"{self.base}/td[@class='case-no']/text()"
         )
+        return texts
 
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
+    @override
+    def _get_precedential_statuses(self) -> list[str]:
+        return ["Published"] * len(self)
 
-    def _get_lower_courts(self):
-        return list(self.html.xpath(f"{self.base}/td[@class='origin']/text()"))
+    @override
+    def _get_lower_courts(self) -> list[str]:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        texts: list[str] = self.html.xpath(
+            f"{self.base}/td[@class='origin']/text()"
+        )
+        return texts
 
-    async def _download_backwards(self, d):
+    @override
+    async def _download_backwards(self, d: date) -> None:
         self.url = "http://www.ca10.uscourts.gov/opinion/search/results?query=%20date%3A{}".format(
             d.strftime("%m/%d/%Y")
         )

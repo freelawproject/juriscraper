@@ -16,16 +16,65 @@
 
 import re
 from datetime import date
+from typing import NotRequired
 from urllib.parse import urljoin
 
-from typing_extensions import override
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.string_utils import convert_date_string, titlecase
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import (
+    CaseNameTweaker,
+    convert_date_string,
+    titlecase,
+)
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class _Document(TypedDict):
+    documentLinkUUID: str
+
+
+class _Item(TypedDict):
+    caseInstanceUUID: str
+    caseNumber: NotRequired[str | None]
+    groupName: NotRequired[str | None]
+    title: NotRequired[str | None]
+    decision: NotRequired[str | None]
+    orderBy: NotRequired[int | None]
+    documents: NotRequired[list[_Document] | None]
+
+
+class _Detail(TypedDict, total=False):
+    publicationItems: list[_Item] | None
+    publicationNote: str | None
+
+
+class _Publication(TypedDict):
+    publicationUUID: str
+    publicationName: str
+    publicationDate: str
+    detailJson: NotRequired[_Detail | None]
+
+
+class _Embedded(TypedDict, total=False):
+    results: list[_Publication]
+
+
+class _Page(TypedDict, total=False):
+    totalElements: int
+
+
+class _Search(TypedDict, total=False):
+    _embedded: _Embedded
+    page: _Page
+
+
+_search_adapter = TypeAdapter(_Search)
+_detail_adapter = TypeAdapter(_Detail | None)
+
+
+class Site(OpinionSiteLinear[tuple[date, date]]):
     # https://usvipublicportal.vicourts.org/portal/search/publication
     base_url = "https://usvipublicportal-api.vicourts.org"
     # USVI Superior Court. Supreme Court also available in this portal
@@ -60,8 +109,13 @@ class Site(OpinionSiteLinear):
         r"\bV\.?I\.?\s*Super\.?\s*\d+(?P<u>\s*U)?\b", re.I
     )
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = f"{self.base_url}/courts/cms/publications"
         self.request["parameters"]["params"] = {
@@ -79,13 +133,17 @@ class Site(OpinionSiteLinear):
 
         :return None
         """
-        for pub in self.html.get("_embedded", {}).get("results", []):
+        response = _search_adapter.validate_python(self.html, strict=True)
+        for pub in response.get("_embedded", {}).get("results", []):
             if self.test_mode_enabled() and "detailJson" in pub:
                 detail = pub["detailJson"]
             else:
                 detail = await self._get_detail(pub["publicationUUID"])
 
-            if not detail or not detail.get("publicationItems"):
+            publication_items = (
+                detail.get("publicationItems") if bool(detail) else None
+            )
+            if not bool(publication_items):
                 logger.warning(
                     "visuper: no detail for publication %s",
                     pub["publicationUUID"],
@@ -93,23 +151,29 @@ class Site(OpinionSiteLinear):
                 continue
 
             items = sorted(
-                detail["publicationItems"],
-                key=lambda it: it.get("orderBy") or 0,
+                publication_items,
+                key=lambda item: (
+                    order if (order := item.get("orderBy")) is not None else 0
+                ),
             )
             first = items[0]
-            if not first.get("documents"):
+            documents = first.get("documents")
+            if not bool(documents):
                 logger.error(
                     "visuper: no document for publication %s",
                     pub["publicationUUID"],
                 )
                 continue
 
-            note = detail.get("publicationNote") or ""
+            raw_note = (
+                detail.get("publicationNote") if detail is not None else None
+            )
+            note = raw_note if raw_note is not None else ""
             citation, name = self._split_citation_name(pub["publicationName"])
             date_filed, approximate = self._extract_date(
                 note, pub["publicationDate"]
             )
-            doc_link = first["documents"][0]["documentLinkUUID"]
+            doc_link = documents[0]["documentLinkUUID"]
             url = urljoin(
                 self.base_url,
                 f"/courts/{self.court_uuid}/cms/case/"
@@ -117,27 +181,33 @@ class Site(OpinionSiteLinear):
                 f"{doc_link}",
             )
 
+            if not bool(name):
+                title = first.get("title")
+                name = title if title is not None else ""
+            decision = first.get("decision")
             self.cases.append(
                 {
-                    "name": titlecase(name or first.get("title") or ""),
+                    "name": titlecase(name),
                     "date": date_filed,
                     "date_filed_is_approximate": approximate,
                     "docket": ", ".join(
-                        it["caseNumber"]
+                        case_number
                         for it in items
-                        if it.get("caseNumber")
+                        if (bool(case_number := it.get("caseNumber")))
                     ),
                     "url": url,
-                    "judge": self._clean_judge(first.get("groupName") or ""),
+                    "judge": self._clean_judge(first.get("groupName")),
                     "citation": citation,
-                    "disposition": (first.get("decision") or "").strip(" ,"),
+                    "disposition": decision.strip(" ,")
+                    if decision is not None
+                    else "",
                     "status": self._derive_status(
                         note, pub["publicationName"]
                     ),
                 }
             )
 
-    async def _get_detail(self, publication_uuid: str) -> dict:
+    async def _get_detail(self, publication_uuid: str) -> _Detail | None:
         """Fetch a publication detail document.
 
         :param publication_uuid: publicationUUID from the list response
@@ -150,8 +220,11 @@ class Site(OpinionSiteLinear):
         logger.debug("visuper: fetching detail %s", url)
         await self._request_url_get(url)
         self._post_process_response()
-        return self._return_response_text_object()
+        return _detail_adapter.validate_python(
+            self._return_response_text_object(), strict=True
+        )
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Filter the publication list by `publicationDate` and process the
         first page of results.
@@ -165,14 +238,17 @@ class Site(OpinionSiteLinear):
         """
         start, end = dates
         logger.info("visuper: backscrape %s to %s", start, end)
-        params = self.request["parameters"]["params"]
+        params = self.request["parameters"].get("params")
+        if not isinstance(params, dict):
+            raise TypeError("Search parameters must be a dictionary.")
         params["size"] = self.backscrape_page_size
         params["page"] = 0
         params["publicationDateFrom"] = f"{start.isoformat()}T00:00:00Z"
         params["publicationDateTo"] = f"{end.isoformat()}T23:59:59Z"
         self.html = await self._download()
 
-        total = (self.html or {}).get("page", {}).get("totalElements") or 0
+        response = _search_adapter.validate_python(self.html, strict=True)
+        total = response.get("page", {}).get("totalElements", 0)
         if total > self.backscrape_page_size:
             logger.warning(
                 "visuper: %s publications in %s..%s exceed page size %s; "
@@ -198,12 +274,12 @@ class Site(OpinionSiteLinear):
         :param publication_name: e.g. "2026 VI Super 15U- ..."
         :return: "Published", "Unpublished", or "Unknown"
         """
-        if match := cls.note_status_re.search(note):
+        if (match := cls.note_status_re.search(note)) is not None:
             word = match.group("status").lower()
             return "Unpublished" if word == "unpublished" else "Published"
 
-        if match := cls.name_status_re.search(publication_name):
-            return "Unpublished" if match.group("u") else "Published"
+        if (match := cls.name_status_re.search(publication_name)) is not None:
+            return "Unpublished" if bool(match.group("u")) else "Published"
 
         logger.warning(
             "visuper: could not derive status from note=%r name=%r",
@@ -219,7 +295,9 @@ class Site(OpinionSiteLinear):
         :param publication_name: e.g. "2026 VI Super 14 - People of..."
         :return: (citation, name); citation is "" if the format is unexpected
         """
-        if match := cls.citation_split_re.match(publication_name):
+        if (
+            match := cls.citation_split_re.match(publication_name)
+        ) is not None:
             return match.group("cite").strip(), match.group("name").strip()
         return "", publication_name.strip()
 
@@ -234,10 +312,10 @@ class Site(OpinionSiteLinear):
         :param publication_date: ISO timestamp of the upload
         :return: (date string, is_approximate)
         """
-        if match := cls.signed_date_re.search(note):
+        if (match := cls.signed_date_re.search(note)) is not None:
             try:
                 signed = convert_date_string(match.group("signed"))
-                if signed:
+                if signed is not None:
                     return signed.strftime("%Y-%m-%d"), False
             except (ValueError, TypeError):
                 pass
@@ -248,10 +326,12 @@ class Site(OpinionSiteLinear):
         return publication_date[:10], True
 
     @staticmethod
-    def _clean_judge(value: str) -> str:
+    def _clean_judge(value: str | None) -> str:
         """Strip the "Hon." prefix from groupName.
 
         :param value: raw judge string
         :return: cleaned judge string
         """
+        if value is None:
+            return ""
         return re.sub(r"^Hon\.?\s+", "", value).strip()

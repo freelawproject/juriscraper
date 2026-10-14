@@ -9,20 +9,27 @@ History:
 
 import re
 from datetime import date
-from typing import Any
 from urllib.parse import urljoin
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.lib.string_utils import normalize_dashes
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker, normalize_dashes
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
     use_urllib = True  # Use urllib to pass Cloudflare
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         year = date.today().year
         self.url = f"https://cnmilaw.gov/documents?type=case&court=Supreme&year={year}"
@@ -58,10 +65,18 @@ class Site(OpinionSiteLinear):
 
     @override
     def _process_html(self) -> None:
-        for s in self.html.xpath(".//a[@class='pdf-link']/ancestor::tr"):
-            cells = s.xpath(".//td")
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        elements: list[HtmlElement] = self.html.xpath(
+            ".//a[@class='pdf-link']/ancestor::tr"
+        )
+        for s in elements:
+            cells = s.findall(".//td")
             judge_text = cells[3].text_content()
             author = self._fetch_author(judge_text)
+            url: str = s.xpath(".//a[@class='pdf-link']/@href")[0]
             self.cases.append(
                 {
                     "name": cells[0].text_content(),
@@ -71,15 +86,17 @@ class Site(OpinionSiteLinear):
                     "date": cells[2].text_content(),
                     "judge": ", ".join(self._cleanup_judge_names(judge_text)),
                     "author": author,
-                    "per_curiam": not author,
+                    "per_curiam": not bool(author),
                     "url": urljoin(
-                        self.url, s.xpath(".//a[@class='pdf-link']/@href")[0]
+                        (self.url if self.url is not None else ""),
+                        url,
                     ),
                     "docket": "",
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Pass scraped text into function and return data as a dictionary
 
         :param scraped_text: Text of scraped content
@@ -87,8 +104,8 @@ class Site(OpinionSiteLinear):
         """
         normalized_content = normalize_dashes(scraped_text)
         match = re.findall(r"Case No\.: (.*)", normalized_content)
-        docket_number = match[0] if match else ""
-        metadata = {
+        docket_number = match[0] if bool(match) else ""
+        metadata: ExtractedMetadata = {
             "Docket": {
                 "docket_number": docket_number,
             },

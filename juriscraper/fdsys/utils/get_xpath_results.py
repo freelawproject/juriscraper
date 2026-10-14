@@ -8,11 +8,11 @@ from lxml.etree import _Element
 __author__ = "mlissner"
 
 
-def print_xpath_results(query):
+def print_xpath_results(query: str) -> None:
     total_result_count = 0
     total_file_count = 0
     equalities = 0
-    unique_items = set()
+    unique_items: set[str] = set()
     for f in glob.glob("../examples/**/*.xml"):
         total_file_count += 1
         indent = ""
@@ -52,7 +52,7 @@ def print_xpath_results(query):
     print(f"Unique items: {len(unique_items)}/{total_result_count}")
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(
         description="Apply an XPath query against all the example files, "
         "printing the results."

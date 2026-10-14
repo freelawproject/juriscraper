@@ -10,15 +10,22 @@ History:
 
 from html import unescape
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
 class Site(OralArgumentSiteLinear):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.ca5.uscourts.gov/feeds/oral-arguments"
         # The feed keeps a rolling window of the latest recordings, so it
@@ -27,13 +34,18 @@ class Site(OralArgumentSiteLinear):
 
     @override
     def _process_html(self) -> None:
-        for item in self.html.xpath("//item"):
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        items: list[HtmlElement] = self.html.xpath("//item")
+        for item in items:
             # The feed escapes the `<br/>` separators, so the whole record
             # reaches us as a single text node. Ex:
             # "19-40930<br/>USA v. Senegal<br/>Argued August 4, 2026<br/>
             #  <br/>Appearing:<br/>Kathryn Shephard — Appellant<br/>"
-            description = item.xpath("description/text()")
-            if not description:
+            description: list[str] = item.xpath("description/text()")
+            if not bool(description):
                 logger.error("ca5: item with no description")
                 continue
 
@@ -52,11 +64,16 @@ class Site(OralArgumentSiteLinear):
             docket, name, argued = fields[:3]
             # The lxml HTML parser treats `link` as a void element, so the
             # URL ends up as its tail rather than its text
-            url = item.xpath("link")[0].tail
+            url = item.findall("link")[0].tail
+            if not bool(url):
+                logger.warning("Skipping recording without a download URL")
+                continue
 
             # Each attorney is listed as "Name — Role", after an
             # "Appearing:" heading. Not every recording lists them
-            attorneys = [f for f in fields[3:] if f and f != "Appearing:"]
+            attorneys = [
+                f for f in fields[3:] if (bool(f) and f != "Appearing:")
+            ]
 
             self.cases.append(
                 {

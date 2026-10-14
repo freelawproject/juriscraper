@@ -59,7 +59,7 @@ def florida_docket_number_validator(dn: str) -> str:
     :return: Florida docket number unchanged
     """
 
-    if not FLORIDA_DN_RE.fullmatch(dn):
+    if FLORIDA_DN_RE.fullmatch(dn) is None:
         raise PydanticCustomError(
             "florida_docket_number_validator",
             "Unrecognized Florida docket number format: {dn}.",

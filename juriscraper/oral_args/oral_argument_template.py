@@ -7,15 +7,29 @@ History:
   YYYY-MM-DD: Created by XXX
 """
 
-from lxml import html
+from datetime import date
 
-from juriscraper.lib.string_utils import convert_date_string, titlecase
+from lxml import html
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
+
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import (
+    CaseNameTweaker,
+    convert_date_string,
+    titlecase,
+)
 from juriscraper.OralArgumentSite import OralArgumentSite
 
 
-class Site(OralArgumentSite):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+class Site(OralArgumentSite[str]):
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[str]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = "http://court-url.gov/some-path.html"
         self.method = "POST"
@@ -28,7 +42,8 @@ class Site(OralArgumentSite):
       Remove this comment before submission.
     """
 
-    def _get_download_urls(self):
+    @override
+    def _get_download_urls(self) -> list[str]:
         """This is an example of a basic piece of meta data accessible with a
         simple XPath query.
 
@@ -38,9 +53,15 @@ class Site(OralArgumentSite):
         object's cleanup routines, so doing so here is not needed.
         """
         path = "//path/to/text/text()"
-        return list(self.html.xpath(path))
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        texts: list[str] = self.html.xpath(path)
+        return texts
 
-    def _get_case_names(self):
+    @override
+    def _get_case_names(self) -> list[str]:
         """This example demonstrates how to extract text from an element that
         may contain other elements.
 
@@ -55,22 +76,30 @@ class Site(OralArgumentSite):
         cases where the name is provided in uppercase only.
         """
         case_names = []
-        for e in self.html.xpath("//path/to/an/element/p"):
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        elements: list[HtmlElement] = self.html.xpath("//path/to/an/element/p")
+        for e in elements:
             s = html.tostring(e, method="text", encoding="unicode")
             case_names.append(titlecase(s))
         return case_names
 
-    def _get_case_dates(self):
+    @override
+    def _get_case_dates(self) -> list[date | None]:
         """This is an example of a date field. Note that the format string
         will likely need to be updated to  match the date formats
         on the site you are scraping. The datetime formats can be found
         here: http://docs.python.org/2/library/datetime.html
         """
         path = "//path/to/text/text()"
-        return [
-            convert_date_string(date_string)
-            for date_string in self.html.xpath(path)
-        ]
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        dates: list[str] = self.html.xpath(path)
+        return [convert_date_string(date_string) for date_string in dates]
 
     """
       High priority fields
@@ -78,13 +107,15 @@ class Site(OralArgumentSite):
       Remove this comment and any unused methods before submission
     """
 
-    def _get_docket_numbers(self):
+    @override
+    def _get_docket_numbers(self) -> None:
         """
         This is typically of the form ##-####
         """
         return None
 
-    def _get_judges(self):
+    @override
+    def _get_judges(self) -> None:
         """
         For the name of the judge authoring the lead opinion
         """
@@ -94,7 +125,8 @@ class Site(OralArgumentSite):
       Optional method used for downloading multiple pages of a court site.
     """
 
-    async def _download_backwards(self, date_str):
+    @override
+    async def _download_backwards(self, date_str: str) -> None:
         """This is a simple method that can be used to generate Site objects
         that can be used to paginate through a court's entire website.
 

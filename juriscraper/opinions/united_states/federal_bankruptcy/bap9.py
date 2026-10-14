@@ -6,17 +6,33 @@ Court Short Name: 9th Cir. BAP
 
 import json
 import re
-from datetime import date, datetime, timedelta
+from datetime import datetime, timedelta
 from urllib.parse import urljoin
 
-from typing_extensions import override
+from pydantic import TypeAdapter
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.auth_utils import generate_aws_sigv4_headers
+from juriscraper.AbstractSite import RequestParameters, SiteOptions, logger
+from juriscraper.lib.auth_utils import (
+    COGNITO_RESPONSE,
+    generate_aws_sigv4_headers,
+)
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import (
+    BackscrapeOptions,
+    DynamoDBItem,
+    DynamoDBScan,
+    ExtractedMetadata,
+)
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
+_items_adapter = TypeAdapter(list[DynamoDBItem])
+_scan_adapter = TypeAdapter(DynamoDBScan)
 
-class Site(OpinionSiteLinear):
+
+class Site(OpinionSiteLinear[tuple[datetime, datetime, None]]):
+    payload: str
+
     query_url = "https://dynamodb.us-west-2.amazonaws.com/"
     days_interval = 31
     first_opinion_date = datetime(2005, 1, 6)
@@ -24,8 +40,13 @@ class Site(OpinionSiteLinear):
         r"Appeals? from the (?P<lower_court>.+\n.+)"
     )
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[datetime, datetime, None]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.base_url = "https://www.ca9.uscourts.gov/bap/"
 
@@ -43,7 +64,7 @@ class Site(OpinionSiteLinear):
         self.url = "https://cognito-identity.us-west-2.amazonaws.com/"
         self.make_backscrape_iterable(kwargs)
 
-    def build_payload(self):
+    def build_payload(self) -> None:
         """Build query
 
         :return: query dict
@@ -55,7 +76,7 @@ class Site(OpinionSiteLinear):
         filter_expression = (
             "#date_filed > :start_date and contains(#date_filed, :year)"
         )
-        if date.month != 12:
+        if self.start_date.month != 12:
             expression_values[":end_date"] = {
                 "S": self.end_date.strftime("%m")
             }
@@ -71,19 +92,30 @@ class Site(OpinionSiteLinear):
             }
         )
 
-    async def _download(self):
+    @override
+    async def _download(
+        self, request_dict: RequestParameters | None = None
+    ) -> list[DynamoDBItem]:
         """Download data from DynamoDB for oral arguments.
 
         :return: The JSON response from DynamoDB containing oral argument records.
         """
         if self.test_mode_enabled():
-            return json.load(open(self.mock_url))
+            with open(self.mock_url) as fixture:
+                return _items_adapter.validate_json(
+                    fixture.read(), strict=True
+                )
 
         sess = self.request["session"]
 
         # fetch for credentials
+        if self.url is None:
+            raise ValueError("The Cognito URL is not configured")
         res = await sess.post(self.url, headers=self.headers, json=self.params)
-        creds = res.json().get("Credentials")
+        res.raise_for_status()
+        creds = COGNITO_RESPONSE.validate_python(res.json(), strict=True)[
+            "Credentials"
+        ]
 
         # fetch signed headers
         sig = generate_aws_sigv4_headers(self.payload, self.table, creds)
@@ -95,14 +127,16 @@ class Site(OpinionSiteLinear):
 
         # fetch bap table
         self.request["response"] = await sess.post(
-            self.query_url, headers=sig, data=self.payload
+            self.query_url, headers=sig, content=self.payload
         )
 
-        if self.save_response:
+        if self.save_response is not None:
             self.save_response(self)
 
         self._post_process_response()
-        return self._return_response_text_object()["Items"]
+        return _scan_adapter.validate_python(
+            self._return_response_text_object(), strict=True
+        ).get("Items", [])
 
     @override
     def _process_html(self) -> None:
@@ -113,8 +147,10 @@ class Site(OpinionSiteLinear):
 
         :return: None; updates self.cases with extracted case details.
         """
-        for item in self.html:
-            date_str = item.get("date_filed").get("S")
+        for item in _items_adapter.validate_python(self.html, strict=True):
+            date_str = item["date_filed"].get("S")
+            if date_str is None:
+                raise KeyError("S")
             try:
                 d = datetime.strptime(date_str, "%m/%d/%Y")
                 if d < self.start_date:
@@ -125,29 +161,32 @@ class Site(OpinionSiteLinear):
                 logger.debug("Skipping row with bad date data %s", item)
                 continue
 
-            slug = item.get("file_name").get("S")
-            status = item.get("document_type").get("S")
+            slug = item["file_name"].get("S")
+            status = item["document_type"].get("S")
+            if slug is None or status is None:
+                raise KeyError("S")
             if status == "Unpublished Opinion":
                 status = "Unpublished"
             else:
                 status = "Published"
             self.cases.append(
                 {
-                    "name": f"In re: {item.get('debtor').get('S', '')}",
-                    "date": item.get("date_filed").get("S"),
+                    "name": f"In re: {item.get('debtor', {}).get('S', '')}",
+                    "date": date_str,
                     "url": urljoin("https://cdn.ca9.uscourts.gov", slug),
                     "docket": item.get("bap_num", {}).get("S"),
                     "status": status,
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract lower court from the scraped text.
 
         :param scraped_text: The text to extract from.
         :return: A dictionary with the metadata.
         """
-        if match := self.lower_court_regex.search(scraped_text):
+        if (match := self.lower_court_regex.search(scraped_text)) is not None:
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
@@ -159,29 +198,16 @@ class Site(OpinionSiteLinear):
 
         return {}
 
-    # TODO: the type of `dates` needs a reevaluation. If `backscrape_start` is
-    #  not given, `start_date` will be a datetime and `strptime` will raise an
-    #  exception. A 3-tuple is given, but there's no indication that the third
-    #  thing serves a purpose. See #2139
-    async def _download_backwards(self, dates) -> None:
+    @override
+    async def _download_backwards(
+        self, dates: tuple[datetime, datetime, None]
+    ) -> None:
         """Download cases for a specific date range.
 
         :param dates: A tuple containing start and end dates.
         :return: None; updates self.cases with cases from the specified date range.
         """
-        start_str, end_str, _ = dates
-
-        # Parse start date or fall back to first_opinion_date
-        if start_str:
-            self.start_date = datetime.strptime(start_str, "%Y/%m/%d")
-        else:
-            self.start_date = self.first_opinion_date
-
-        # Parse end date or fall back to now
-        if end_str:
-            self.end_date = datetime.strptime(end_str, "%Y/%m/%d")
-        else:
-            self.end_date = datetime.now()
+        self.start_date, self.end_date, _ = dates
 
         self.payload = json.dumps(
             {"TableName": self.table, "ReturnConsumedCapacity": "TOTAL"}
@@ -189,14 +215,21 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """Make back scrape iterable
 
         :param kwargs: the back scraping params
         :return: None
         """
-        self.start_date = kwargs.get(
-            "backscrape_start", self.first_opinion_date
+        start = kwargs.get("backscrape_start")
+        end = kwargs.get("backscrape_end")
+        self.start_date = (
+            datetime.strptime(start, "%Y/%m/%d")
+            if bool(start)
+            else self.first_opinion_date
         )
-        self.end_date = kwargs.get("backscrape_end", datetime.now())
+        self.end_date = (
+            datetime.strptime(end, "%Y/%m/%d") if bool(end) else datetime.now()
+        )
         self.back_scrape_iterable = [(self.start_date, self.end_date, None)]

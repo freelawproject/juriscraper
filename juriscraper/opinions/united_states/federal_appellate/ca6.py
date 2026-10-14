@@ -5,9 +5,11 @@ Court Contact:	WebSupport@ca6.uscourts.gov
 
 from urllib.parse import urljoin
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -49,17 +51,27 @@ class Site(OpinionSiteLinear):
     }
     bap_scraper = False
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.opn.ca6.uscourts.gov/opinions/opinions.php"
         self.should_have_results = True
 
     @override
     def _process_html(self) -> None:
-        for row in self.html.xpath("//table/tr[not(th)]"):
-            filename = row.xpath("td[1]/a/text()")[0].lower()
-            lower_court = row.xpath("td[4]/font/text()")[0]
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath("//table/tr[not(th)]")
+        for row in rows:
+            filename: str = row.xpath("td[1]/a/text()")[0].lower()
+            lower_court: str = row.xpath("td[4]/font/text()")[0]
 
             # other entities that appeal to `ca6`: FCC, BIA
             if "District" in lower_court:
@@ -87,12 +99,20 @@ class Site(OpinionSiteLinear):
             else:
                 status = "Unknown"
 
-            panel_initials = row.xpath("td[5]/text()")[0]
+            panel_initials: str = row.xpath("td[5]/text()")[0]
+            docket = row.find("td[2]")
+            docket = (
+                docket.text_content().strip() if docket is not None else ""
+            )
 
+            url: str = row.xpath("td[1]/a/@href")[0]
             self.cases.append(
                 {
-                    "url": urljoin(self.url, row.xpath("td[1]/a/@href")[0]),
-                    "docket": row.xpath("string(td[2])").strip(),
+                    "url": urljoin(
+                        (self.url if self.url is not None else ""),
+                        url,
+                    ),
+                    "docket": docket,
                     "date": row.xpath("td[3]/text()")[0],
                     "name": row.xpath("td[4]/text()")[0],
                     "lower_court": lower_court,
@@ -111,7 +131,7 @@ class Site(OpinionSiteLinear):
 
         for initial in initials.split(","):
             judge = self.initials_to_judges.get(initial.strip())
-            if not judge:
+            if not bool(judge):
                 logger.info("No judge name for initial %s", initial)
             else:
                 judges += f"{judge}; "

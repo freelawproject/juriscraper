@@ -1,5 +1,10 @@
-from httpx import AsyncClient, Timeout
+from datetime import date
+from types import TracebackType
+from typing import NotRequired, Self
+
+from httpx import AsyncClient, Response, Timeout
 from lxml import etree
+from typing_extensions import TypedDict, Unpack
 
 from juriscraper.lib.judge_parsers import normalize_judge_string
 from juriscraper.lib.log_tools import make_default_logger
@@ -8,13 +13,25 @@ from juriscraper.lib.string_utils import (
     convert_date_string,
     harmonize,
 )
+from juriscraper.lib.type_utils import AsyncClientOptions, GetRequestOptions
 from juriscraper.lib.utils import clean_court_object, previous_and_next
 
-from .docket_report import BaseDocketReport
+from .docket_report import BaseDocketReport, DocketAttorney, DocketParty
 from .docket_utils import normalize_party_types
 from .utils import get_docketxml_url, get_pdf_url, is_pdf
 
 logger = make_default_logger()
+
+
+class ArchiveDocument(TypedDict):
+    description: str
+    pacer_seq_no: str | None
+    pacer_doc_id: str | None
+    document_number: NotRequired[str]
+    attachment_number: NotRequired[str]
+    short_description: NotRequired[str]
+    date_filed: NotRequired[date | None]
+    attachments: NotRequired[list["ArchiveDocument"]]
 
 
 class InternetArchive(BaseDocketReport):
@@ -24,39 +41,50 @@ class InternetArchive(BaseDocketReport):
 
     CACHE_ATTRS = ["metadata", "parties", "docket_entries"]
 
-    def __init__(self, court_id, **kwargs):
+    def __init__(
+        self, court_id: str, **kwargs: Unpack[AsyncClientOptions]
+    ) -> None:
         super().__init__(court_id)
 
         # Initialize the empty cache properties.
         self._clear_caches()
-        self._metadata = None
-        self._parties = None
-        self._docket_entries = None
+        self._metadata: dict[str, str | date | None] | None = None
+        self._parties: list[DocketParty] | None = None
+        self._docket_entries: list[ArchiveDocument] | None = None
         kwargs.setdefault("http2", True)
         kwargs.setdefault("follow_redirects", True)
+        kwargs.setdefault("timeout", Timeout(60, read=300))
         self.session = AsyncClient(**kwargs)
-        self.response = None
-        self.tree = None
+        self.response: Response | None = None
+        self.tree: etree._Element | None = None
         self.parser = etree.XMLParser(recover=True)
         self.is_valid = True
 
-    async def __aenter__(self):
+    async def __aenter__(self) -> Self:
         await self.session.__aenter__()
         return self
 
-    async def __aexit__(self, exc_type, exc_value, traceback):
+    async def __aexit__(
+        self,
+        exc_type: type[BaseException] | None,
+        exc_value: BaseException | None,
+        traceback: TracebackType | None,
+    ) -> None:
         await self.session.__aexit__(exc_type, exc_value, traceback)
 
     async def download_pdf(
-        self, pacer_case_id, document_number, attachment_number
-    ):
+        self,
+        pacer_case_id: str | int,
+        document_number: str | int,
+        attachment_number: str | int | None,
+        **kwargs: Unpack[GetRequestOptions],
+    ) -> Response | None:
         """Download a PDF from the Internet Archive"""
-        timeout = Timeout(60, read=300)
         url = get_pdf_url(
             self.court_id, pacer_case_id, document_number, attachment_number
         )
-        logger.info("GETting PDF at URL: %s")
-        r = await self.session.get(url, timeout=timeout)
+        logger.info("GETting PDF at URL: %s", url)
+        r = await self.session.get(url, **kwargs)
         r.raise_for_status()
         if not is_pdf(r):
             logger.error(f"Got non-PDF data, but expected a PDF at: {url}")
@@ -64,36 +92,40 @@ class InternetArchive(BaseDocketReport):
         else:
             return r
 
-    async def query(self, pacer_case_id):
+    async def query(
+        self, pacer_case_id: str | int, **kwargs: Unpack[GetRequestOptions]
+    ) -> None:
         """Download a docket XML page from the Internet Archive"""
-        timeout = Timeout(60, read=300)
         url = get_docketxml_url(self.court_id, pacer_case_id)
-        logger.info("GETting docket XML at URL: %s")
-        r = await self.session.get(url, timeout=timeout)
+        logger.info("GETting docket XML at URL: %s", url)
+        r = await self.session.get(url, **kwargs)
         self.response = r
         self.parse()
 
-    def parse(self):
+    def parse(self) -> None:
         """Parse the item, but clear the cache before you do so."""
         self._clear_caches()
+        if self.response is None:
+            raise ValueError("A response is required before parsing a docket.")
         self.response.raise_for_status()
         self._parse_text(self.response.text)
 
-    def _parse_text(self, text):
-        assert isinstance(text, str), (
-            f"Input must be unicode, not {type(text)}"
-        )
+    def _parse_text(self, text: str) -> None:
+        self._clear_caches()
+        self.tree = None
+        if not isinstance(text, str):
+            raise TypeError(f"Input must be unicode, not {type(text)}")
         self.tree = etree.fromstring(text.encode("utf-8"), self.parser)
 
     @property
-    def metadata(self):
+    def metadata(self) -> dict[str, str | date | None]:
         if self.is_valid is False:
             return {}
 
         if self._metadata is not None:
             return self._metadata
 
-        data = {
+        data: dict[str, str | date | None] = {
             "court_id": self.court_id,
             "docket_number": self._get_str_from_tree("//docket_num"),
             "case_name": self._get_case_name(),
@@ -118,29 +150,33 @@ class InternetArchive(BaseDocketReport):
         return data
 
     @property
-    def parties(self):
+    def parties(self) -> list[DocketParty]:
         """Get the party info from the XML or return it if it's cached."""
         if self._parties is not None:
             return self._parties
 
-        party_nodes = self.tree.xpath("//party_list/party")
+        if self.tree is None:
+            raise ValueError("Parse a docket before accessing its parties.")
+        party_nodes: list[etree._Element] = self.tree.xpath(
+            "//party_list/party"
+        )
 
-        parties = []
+        parties: list[DocketParty] = []
         for _prev, party_node, _next in previous_and_next(party_nodes):
             pt = self._xpath_text_0(party_node, "./type")
             extra_info = self._xpath_text_0(party_node, "./extra_info")
             name = self._xpath_text_0(party_node, "./name")
-            if not name.strip():
+            if not bool(name.strip()):
                 # Happens in adversary proceedings? See cacb_1669936.xml.
                 continue
-            party = {
+            party: DocketParty = {
                 "type": normalize_party_types(pt),
                 "name": name,
                 "extra_info": extra_info,
             }
 
             m = self.date_terminated_regex.search(extra_info)
-            if m:
+            if m is not None:
                 party["date_terminated"] = convert_date_string(m.group(1))
             else:
                 party["date_terminated"] = None
@@ -151,22 +187,31 @@ class InternetArchive(BaseDocketReport):
                 # Sometimes there are dups in the docket. Avoid them.
                 parties.append(party)
 
-        parties = self._normalize_see_above_attorneys(parties)
+        self._normalize_see_above_attorneys(
+            attorney
+            for party in parties
+            for attorney in party.get("attorneys", [])
+        )
         self._parties = parties
         return parties
 
-    def _get_attorneys(self, party_node):
-        attorneys = []
-        for atty_node in party_node.xpath("./attorney_list/attorney"):
-            attorney = {
+    def _get_attorneys(
+        self, party_node: etree._Element
+    ) -> list[DocketAttorney]:
+        attorneys: list[DocketAttorney] = []
+        atty_nodes: list[etree._Element] = party_node.xpath(
+            "./attorney_list/attorney"
+        )
+        for atty_node in atty_nodes:
+            attorney: DocketAttorney = {
                 "name": self._xpath_text_0(atty_node, "./attorney_name"),
                 "contact": self._xpath_text_0(atty_node, "./contact"),
+                "roles": [],
             }
-            roles = []
             role_str = self._xpath_text_0(atty_node, "./attorney_role")
             for role in role_str.split("\n"):
                 role = role.strip()
-                if not role:
+                if not bool(role):
                     continue
                 if not any(
                     [
@@ -174,38 +219,48 @@ class InternetArchive(BaseDocketReport):
                         role.lower().startswith("designation"),
                     ]
                 ):
-                    roles.append(role)
-            attorney["roles"] = roles
+                    attorney["roles"].append(role)
             attorneys.append(attorney)
         return attorneys
 
     @property
-    def docket_entries(self):
+    def docket_entries(self) -> list[ArchiveDocument]:
         if self._docket_entries is not None:
             return self._docket_entries
 
-        de_nodes = self.tree.xpath("//document_list/document")
-        docket_entries = []
+        if self.tree is None:
+            raise ValueError("Parse a docket before accessing its entries.")
+        de_nodes: list[etree._Element] = self.tree.xpath(
+            "//document_list/document"
+        )
+        docket_entries: list[ArchiveDocument] = []
         for de_node in de_nodes:
-            de = {
-                "document_number": de_node.xpath("./@doc_num")[0],
-                "pacer_seq_no": self._xpath_text_0(
-                    de_node, "./pacer_de_seq_num"
-                )
-                or None,
+            document_number = de_node.get("doc_num", "")
+            if not document_number.isdigit():
+                continue
+            attachment_number = de_node.get("attachment_num", "0")
+            pacer_doc_id = self._xpath_text_0(de_node, "./pacer_doc_id")
+            pacer_seq_no = self._xpath_text_0(de_node, "./pacer_de_seq_num")
+            de: ArchiveDocument = {
+                "document_number": document_number,
+                "description": self._xpath_text_0(
+                    de_node,
+                    "./short_desc"
+                    if attachment_number != "0"
+                    else "./long_desc",
+                ),
+                "pacer_doc_id": pacer_doc_id if bool(pacer_doc_id) else None,
+                "pacer_seq_no": pacer_seq_no if bool(pacer_seq_no) else None,
             }
-            attachment_number = de_node.xpath("./@attachment_num")[0]
             if attachment_number != "0":
                 de["attachment_number"] = attachment_number
-                de["description"] = self._xpath_text_0(de_node, "./short_desc")
             else:
-                de["description"] = self._xpath_text_0(de_node, "./long_desc")
                 de["short_description"] = self._xpath_text_0(
                     de_node, "./short_desc"
                 )
 
             date_filed_str = self._xpath_text_0(de_node, "./date_filed")
-            if date_filed_str:
+            if bool(date_filed_str):
                 # Got a date. Set it, and save it for the next item.
                 try:
                     de["date_filed"] = convert_date_string(date_filed_str)
@@ -214,24 +269,17 @@ class InternetArchive(BaseDocketReport):
                     de["date_filed"] = None
             else:
                 # No date found.
-                if not de.get("attachment_number"):
+                if not bool(de.get("attachment_number")):
                     # If not an attachment, it's probably an old docket entry,
                     # which sometimes lack dates. Press on.
                     continue
 
-            de["pacer_doc_id"] = (
-                self._xpath_text_0(de_node, "./pacer_doc_id") or None
-            )
-
-            if not de["document_number"].isdigit():
-                # Some courts put weird stuff in this column.
-                continue
-            if de.get("attachment_number"):
+            if bool(de.get("attachment_number")):
                 try:
                     last_de = docket_entries[-1]
                 except IndexError:
                     continue
-                if last_de.get("document_number") == de["document_number"]:
+                if last_de.get("document_number") == document_number:
                     del de["document_number"]
                     attachments = last_de.get("attachments", [])
                     attachments.append(de)
@@ -243,14 +291,13 @@ class InternetArchive(BaseDocketReport):
         self._docket_entries = docket_entries
         return docket_entries
 
-    def _get_judge(self, path):
+    def _get_judge(self, path: str) -> str:
         judge_str = self._get_str_from_tree(path)
-        if judge_str is not None:
-            return normalize_judge_string(judge_str)[0]
+        return normalize_judge_string(judge_str)[0]
 
-    def _get_case_name(self):
+    def _get_case_name(self) -> str:
         case_name = self._get_str_from_tree("//case_name")
         case_name = clean_string(harmonize(case_name))
-        if not case_name:
+        if not bool(case_name):
             return "Unknown Case Title"
         return case_name

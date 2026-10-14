@@ -4,17 +4,59 @@
 
 from datetime import date, datetime, timedelta
 from math import ceil
-from typing import Any
+from typing import NotRequired
 from urllib.parse import urljoin
 
-from typing_extensions import override
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.AbstractSite import RequestParameters, SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class _Document(TypedDict):
+    uri: str
+
+
+class _DateValue(TypedDict):
+    date: str
+
+
+class _DispositionDate(TypedDict):
+    date: _DateValue
+
+
+class _Fields(TypedDict):
+    case_number: str
+    disposition_date: _DispositionDate
+    note: NotRequired[str | None]
+    disposition: NotRequired[str | None]
+    case_style: str
+    opinion: _Document
+
+
+class _Content(TypedDict):
+    fields: dict[str, object]
+
+
+class _Result(TypedDict):
+    content: _Content
+
+
+class _Search(TypedDict):
+    totalCount: int
+    searchResults: list[_Result]
+
+
+_search_adapter = TypeAdapter(_Search)
+_fields_adapter = TypeAdapter(_Fields)
+
+
+class Site(OpinionSiteLinear[tuple[date, date]]):
+    start_date: date
+    end_date: date
+
     days_interval = 20
     # Days to look back on a regular scrape, kept short to bound pagination
     scrape_interval = 30
@@ -27,16 +69,22 @@ class Site(OpinionSiteLinear):
     # Example built URL
     # "https://flcourts-media.flcourts.gov/_search/opinions/?limit=100&offset=0&query=&scopes[]=supreme_court&searchtype=opinions&siteaccess=supreme2&startdate=2025-07-01&enddate=2026-01-01"
 
-    def __init__(self, *args, **kwargs) -> None:
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.status = "Published"
         self.set_url()
         self.make_backscrape_iterable(kwargs)
 
+    @override
     async def _download(
-        self, request_dict: dict | None = None
-    ) -> dict[str, Any]:
+        self, request_dict: RequestParameters | None = None
+    ) -> _Search:
         """Download every page of results for the current date range
 
         The source returns results sorted by
@@ -45,7 +93,9 @@ class Site(OpinionSiteLinear):
         :param request_dict: passed through to the parent downloader
         :return: the first page's JSON, with all the pages' `searchResults`
         """
-        first_page = await super()._download(request_dict)
+        first_page = _search_adapter.validate_python(
+            await super()._download(request_dict), strict=True
+        )
         if self.test_mode_enabled():
             return first_page
 
@@ -55,9 +105,9 @@ class Site(OpinionSiteLinear):
 
         for page in range(1, ceil(total_count / self.page_size)):
             self.url = self.build_url(page * self.page_size)
-            page_results = (await super()._download(request_dict))[
-                "searchResults"
-            ]
+            page_results = _search_adapter.validate_python(
+                await super()._download(request_dict), strict=True
+            )["searchResults"]
             results.extend(page_results)
 
             if len(page_results) < self.page_size:
@@ -84,41 +134,44 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
-        json = self.html
+        json = _search_adapter.validate_python(self.html, strict=True)
         for row in json["searchResults"]:
-            fields = row["content"]["fields"]
-            # `note` and `disposition` may come back as JSON null, in which
-            # case `fields.get(..., "")` returns None instead of the default
-            note = fields.get("note", "") or ""
-            if note in ("Notice of Correction",):
-                logger.info("Skipping non-opinion document %s", fields)
+            raw_fields = row["content"]["fields"]
+            if raw_fields.get("note") in ("Notice of Correction",):
+                logger.info("Skipping non-opinion document %s", raw_fields)
                 continue
 
-            name = fields.get("case_style", "")
-            if not name:
+            if not bool(raw_fields.get("case_style")):
                 # These seem to be family - children related cases. See example
                 # in district 4 example file
                 # https://flcourts-media.ccplatform.net/content/download/2472477/28965542?version=5
-                logger.info("Skipping case with no name %s", fields)
+                logger.info("Skipping case with no name %s", raw_fields)
                 continue
 
-            opinion = fields.get("opinion")
-            if not opinion:
+            if not bool(raw_fields.get("opinion")):
                 # Some rows are orders by a clerk / judge, which have no
                 # opinion doc (3DCA 2022-0306). Others are opinions whose file
                 # is missing (2DCA 2024-0481)
                 logger.info(
                     "Skipping case with no opinion file %s",
-                    fields["case_number"],
+                    raw_fields.get("case_number"),
                 )
                 continue
 
-            disposition = fields.get("disposition", "") or ""
+            fields = _fields_adapter.validate_python(raw_fields, strict=True)
+            # `note` and `disposition` may come back as JSON null, in which
+            # case `fields.get(..., "")` returns None instead of the default.
+            note = fields.get("note")
+            if note is None:
+                note = ""
+            disposition = fields.get("disposition")
+            if disposition is None:
+                disposition = ""
             self.cases.append(
                 {
-                    "url": urljoin(self.base_url, opinion["uri"]),
+                    "url": urljoin(self.base_url, fields["opinion"]["uri"]),
                     "docket": self.get_docket_number(fields["case_number"]),
-                    "name": titlecase(name),
+                    "name": titlecase(fields["case_style"]),
                     "date": fields["disposition_date"]["date"]["date"].split(
                         " "
                     )[0],
@@ -157,9 +210,9 @@ class Site(OpinionSiteLinear):
         :param end: end date; defaults to today
         :return: none
         """
-        if not end:
+        if end is None:
             end = datetime.today()
-        if not start:
+        if start is None:
             start = end - timedelta(days=self.scrape_interval)
 
         self.start_date = start
@@ -182,6 +235,7 @@ class Site(OpinionSiteLinear):
             self.end_date.strftime(fmt),
         )
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Overrides scraper URL using date inputs
 

@@ -12,15 +12,22 @@ import re
 from datetime import UTC, date, datetime
 from urllib.parse import urljoin
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import (
+    DownloadedContent,
+    RequestParameters,
+    SiteOptions,
+    logger,
+)
 from juriscraper.lib.exceptions import BotChallengeError
 from juriscraper.lib.network_utils import add_delay
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[tuple[date, date]]):
     court_query = "supct"
     days_interval = 7
     first_opinion_date = date(1998, 1, 1)
@@ -30,9 +37,14 @@ class Site(OpinionSiteLinear):
     # and respect the site's `Request-rate` (see robots.txt). See #2006
     request_delay = 5
 
-    def __init__(self, *args, **kwargs):
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
         kwargs.setdefault("verify", False)
-        super().__init__(*args, **kwargs)
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
 
         self.status = "Published"
@@ -87,24 +99,31 @@ class Site(OpinionSiteLinear):
         self._check_for_bot_challenge()
 
         # This warning is useful for backscraping
-        results_number = self.html.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        results_numbers: list[str] = self.html.xpath(
             "//div[@class='searchresult_number']/text()"
         )
-        if results_number:
-            results_number = results_number[0].split(" of ")[-1].strip()
+        if bool(results_numbers):
+            results_number = results_numbers[0].split(" of ")[-1].strip()
             if int(results_number) > 10:
                 logger.warning(
                     "Page has a size 10, and there are %s results for this query",
                     results_number,
                 )
-
-        for case in self.html.xpath("//div[@class='searchresult']"):
-            name = re.sub(r"\s+", " ", case.xpath(".//a/text()")[0])
+        case_matches: list[HtmlElement] = self.html.xpath(
+            "//div[@class='searchresult']"
+        )
+        for case in case_matches:
+            name: str = case.xpath(".//a/text()")[0]
+            name = re.sub(r"\s+", " ", name)
             name_match = re.search(r"(?P<name>.+)\. A\d{2}-\d+", name)
-            if name_match:
+            if name_match is not None:
                 name = name_match.group("name")
 
-            summary = case.xpath(
+            summary: str = case.xpath(
                 ".//div[@class='searchresult_snippet']/text()"
             )[0]
             disposition = ""
@@ -115,13 +134,13 @@ class Site(OpinionSiteLinear):
                 if (
                     len(parts) > 2
                     and len(parts[-2].split()) <= 10
-                    and not re.search(r"\d", parts[-2])
+                    and re.search(r"\d", parts[-2]) is None
                 ):
                     # Sometimes there is no disposition. Ex: A23-1504
                     # False positives usually contain numbers. Ex: A22-0776
                     disposition = parts[-2].strip()
 
-            raw_date = case.xpath(".//div[@class='searchresult_date']")[
+            raw_date = case.findall(".//div[@class='searchresult_date']")[
                 -1
             ].text_content()
             date_filed = re.sub(r"\s+", " ", raw_date).split(":")[1].strip()
@@ -129,14 +148,15 @@ class Site(OpinionSiteLinear):
             # Backscrapers may find citations, since they are attached some
             # months after the initial release of an opinion
             citation = ""
-            if cite_element := case.xpath(
+            cite_element: list[HtmlElement] = case.xpath(
                 ".//div[b[contains(text(), 'Citation:')]]"
-            ):
+            )
+            if bool(cite_element):
                 citation = (
                     cite_element[0].text_content().split(":", 1)[-1].strip()
                 )
 
-            url = case.xpath(".//a/@href")[0]
+            url: str = case.xpath(".//a/@href")[0]
             docket = url.split("/")[-1].split("-")[0][2:]
             self.cases.append(
                 {
@@ -150,7 +170,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    async def _download_backwards(self, dates: tuple[date, date]):
+    @override
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         logger.info("Backscraping for range %s - %s", *dates)
         params = {**self.base_params}
         params.update(
@@ -178,7 +199,10 @@ class Site(OpinionSiteLinear):
             return True
         return datetime.now(UTC).hour < 12
 
-    async def _download(self, request_dict=None):
+    @override
+    async def _download(
+        self, request_dict: RequestParameters | None = None
+    ) -> DownloadedContent:
         """Skip the request entirely when outside the robots.txt visit window.
 
         Returning None aborts the scrape gracefully: ``parse()`` leaves
@@ -205,9 +229,13 @@ class Site(OpinionSiteLinear):
 
         :raises BotChallengeError: when a captcha challenge is detected
         """
-        title = " ".join(self.html.xpath("//title//text()"))
-        if "Bot Manager Captcha" in title or self.html.xpath(
-            "//div[contains(@class, 'h-captcha')]"
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        title: str = " ".join(self.html.xpath("//title//text()"))
+        if "Bot Manager Captcha" in title or bool(
+            self.html.xpath("//div[contains(@class, 'h-captcha')]")
         ):
             raise BotChallengeError(
                 f"{self.court_id}: blocked by Radware Bot Manager captcha",

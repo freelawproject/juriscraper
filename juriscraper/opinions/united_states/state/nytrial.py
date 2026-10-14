@@ -11,20 +11,24 @@ History:
 
 import re
 from datetime import date
-from typing import Any
 from urllib.parse import urljoin
 
 import httpx
 from lxml.etree import ParserError
-from lxml.html import fromstring
-from typing_extensions import override
+from lxml.html import HtmlElement, fromstring
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
 from juriscraper.lib.auth_utils import set_api_token_header
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.exceptions import ParsingException
 from juriscraper.lib.judge_parsers import normalize_judge_string
-from juriscraper.lib.string_utils import clean_string, harmonize
+from juriscraper.lib.string_utils import (
+    CaseNameTweaker,
+    clean_string,
+    harmonize,
+)
+from juriscraper.lib.type_utils import BackscrapeOptions, ExtractedMetadata
 from juriscraper.opinions.united_states.state import ny
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -53,7 +57,7 @@ pdf_caption_regex = re.compile(
 )
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[date]):
     court_regex: str  # to be defined on inheriting classes
     base_url = "https://nycourts.gov/reporter/current/index/miscolo.shtml"
     # month pages from this date on live in "current/index", older ones in
@@ -63,8 +67,13 @@ class Site(OpinionSiteLinear):
     is_backscrape = False
     days_interval = 30
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[date]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
 
         self.court_id = self.__module__
         self.url = self.build_url()
@@ -82,7 +91,10 @@ class Site(OpinionSiteLinear):
         :returns str: formatted url
         """
         today = date.today()
-        if not target_date or (target_date.year, target_date.month) == (
+        if target_date is None or (
+            target_date.year,
+            target_date.month,
+        ) == (
             today.year,
             today.month,
         ):
@@ -117,31 +129,38 @@ class Site(OpinionSiteLinear):
         :return: None
         """
         # a missing page is served with a 200 status code
-        title = self.html.xpath("string(//title)")
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        title: str = self.html.xpath("string(//title)")
         if "404 ERROR" in title:
             raise ParsingException(f"nytrial: page not found {self.url}")
 
         # the first table holds the newest posting day. Daily scrapes only
         # fetch its stub pages, older days were fetched on previous runs
-        tables = self.html.xpath("//table[caption]")
-        newest_rows = set(tables[0].xpath(".//tr")) if tables else set()
+        tables: list[HtmlElement] = self.html.xpath("//table[caption]")
+        newest_rows = (
+            set(tables[0].findall(".//tr")) if bool(tables) else set()
+        )
 
         row_xpath = "//table[caption]//tr[position()>1 and td]"
-        for row in self.html.xpath(row_xpath):
+        rows: list[HtmlElement] = self.html.xpath(row_xpath)
+        for row in rows:
             court = re.sub(
-                r"\s+", " ", row.xpath("td[2]")[0].text_content()
+                r"\s+", " ", row.findall("td[2]")[0].text_content()
             ).strip(", ")
 
             if not self.is_court_of_interest(court):
                 logger.debug("Skipping %s", court)
                 continue
 
-            url = row.xpath("td[1]/a/@href")[0]
+            url: str = row.xpath("td[1]/a/@href")[0]
             # the stub page of "30000" decisions links to the PDF. These PDFs
             # lack the cover page with the judge and docket number, so we get
             # them from the stub page
             judge = docket = ""
-            if stub_regex.search(url):
+            if stub_regex.search(url) is not None:
                 if not self.test_mode_enabled() and (
                     self.is_backscrape or row in newest_rows
                 ):
@@ -149,11 +168,13 @@ class Site(OpinionSiteLinear):
                 url = stub_regex.sub(r"/pdfs/\1/\2.pdf", url)
             # rows linking directly to a PDF have a "(PDF)" suffix
             name = re.sub(
-                r"\s*\(PDF\)\s*$", "", row.xpath("td[1]/a")[0].text_content()
+                r"\s*\(PDF\)\s*$",
+                "",
+                row.findall("td[1]/a")[0].text_content(),
             )
             name = harmonize(name)
-            opinion_date = row.xpath("td[3]")[0].text_content()
-            slip_cite = row.xpath("td[4]")[0].text_content()
+            opinion_date = row.findall("td[3]")[0].text_content()
+            slip_cite = row.findall("td[4]")[0].text_content()
             status = "Unpublished" if "(U)" in slip_cite else "Published"
 
             self.cases.append(
@@ -179,31 +200,33 @@ class Site(OpinionSiteLinear):
             found
         """
         try:
-            html = await self._get_html_tree_by_url(urljoin(self.url, url))
+            html = await self._get_html_tree_by_url(
+                urljoin((self.url if self.url is not None else ""), url)
+            )
         except (httpx.HTTPError, ParserError) as e:
             logger.warning("nytrial: could not get stub %s: %s", url, e)
             return "", ""
-        header = html.xpath("//h1/parent::div")[:1]
+        header: list[HtmlElement] = html.xpath("//h1/parent::div")[:1]
         return (
             self.get_judge_from_header(header),
             self.get_docket_from_header(header),
         )
 
     @staticmethod
-    def get_docket_from_header(header: list) -> str:
+    def get_docket_from_header(header: list[HtmlElement]) -> str:
         """Find the docket line, such as "Index No. 300468-26", in the
         header <div> of a stub page
 
         :param header: a list with the header element, or an empty list
         :return: the docket number, or an empty string if not found
         """
-        if not header:
+        if not bool(header):
             return ""
-        for p in header[0].xpath("./p"):
+        for p in header[0].findall("./p"):
             docket = clean_string(p.text_content())
             if re.match(
                 r"(Index|Claim|File|Docket|Case|Indictment) No", docket
-            ) and Site.is_valid_docket(docket):
+            ) is not None and Site.is_valid_docket(docket):
                 return docket
         return ""
 
@@ -215,29 +238,32 @@ class Site(OpinionSiteLinear):
         :param docket: the cleaned docket line
         :return: True if it looks like a docket number
         """
-        return bool(
-            docket_regex.fullmatch(docket)
+        return (
+            docket_regex.fullmatch(docket) is not None
             and "XXX" not in docket
-            and re.search(r"\d", docket)
+            and bool(re.search(r"\d", docket))
         )
 
     @staticmethod
-    def get_judge_from_header(header: list) -> str:
+    def get_judge_from_header(header: list[HtmlElement]) -> str:
         """Find the judge line, such as "Charles D. Wood, J.", in the header
         <div> that holds the <h1> case name
 
         :param header: a list with the header element, or an empty list
         :return: the judge name, or an empty string if not found
         """
-        if not header:
+        if not bool(header):
             return ""
-        for p in header[0].xpath("./p"):
-            if judge_match := judge_regex.fullmatch(
-                clean_string(p.text_content())
-            ):
+        for p in header[0].findall("./p"):
+            if (
+                judge_match := judge_regex.fullmatch(
+                    clean_string(p.text_content())
+                )
+            ) is not None:
                 return normalize_judge_string(judge_match.group("judge"))[0]
         return ""
 
+    @override
     async def _download_backwards(self, target_date: date) -> None:
         """Method used by backscraper to download historical records
 
@@ -247,7 +273,8 @@ class Site(OpinionSiteLinear):
         self.is_backscrape = True
         self.url = self.build_url(target_date)
 
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract values from opinion's text
 
         The document may be a HTML or a PDF. We use different regexes for each
@@ -255,12 +282,7 @@ class Site(OpinionSiteLinear):
         :param scraped_text: pdf or html string contents
         :return: dict where keys match courtlistener model objects
         """
-        metadata: dict[str, Any] = {
-            "Citation": {},
-            "Docket": {},
-            "Opinion": {},
-            "OpinionCluster": {},
-        }
+        metadata: ExtractedMetadata = {}
         target_text = scraped_text[:2000]
         if "<h1>" in target_text:
             return self.extract_from_current_template(scraped_text)
@@ -268,35 +290,47 @@ class Site(OpinionSiteLinear):
         is_html = "<br>" in target_text and "<table" in target_text
         if not is_html:
             # Most info is in a table at the start of the document
-            if pdf_docket := re.search(
-                r"\n\s*Docket Number:\s+(?P<docket_number>.+)\s*\n",
-                target_text,
-            ):
-                metadata["Docket"]["docket_number"] = pdf_docket.group(
-                    "docket_number"
-                ).strip()
-            elif pdf_docket := pdf_stamp_regex.search(target_text):
+            if (
+                pdf_docket := re.search(
+                    r"\n\s*Docket Number:\s+(?P<docket_number>.+)\s*\n",
+                    target_text,
+                )
+            ) is not None:
+                metadata.setdefault("Docket", {})["docket_number"] = (
+                    pdf_docket.group("docket_number").strip()
+                )
+            elif (
+                pdf_docket := pdf_stamp_regex.search(target_text)
+            ) is not None:
                 # fallback to the NYSCEF stamp when the cover page does not
                 # exist, as in most "30000" decisions
                 kind = pdf_docket.group("kind").title()
                 number = pdf_docket.group("number")
-                metadata["Docket"]["docket_number"] = f"{kind} No. {number}"
-            elif pdf_docket := pdf_caption_regex.search(target_text):
-                metadata["Docket"]["docket_number"] = pdf_docket.group()
+                metadata.setdefault("Docket", {})["docket_number"] = (
+                    f"{kind} No. {number}"
+                )
+            elif (
+                pdf_docket := pdf_caption_regex.search(target_text)
+            ) is not None:
+                metadata.setdefault("Docket", {})["docket_number"] = (
+                    pdf_docket.group()
+                )
             else:
                 logger.error(
                     "nytrial: unable to extract_from_text docket number",
                     extra={"pdf_text": target_text.strip()[:1024]},
                 )
 
-            if pdf_judge := re.search(
-                r"\n\s*Judge:\s+(?P<judge>.+)\s*\n", target_text
-            ):
-                metadata["Opinion"]["author_str"] = pdf_judge.group(
-                    "judge"
-                ).strip()
+            if (
+                pdf_judge := re.search(
+                    r"\n\s*Judge:\s+(?P<judge>.+)\s*\n", target_text
+                )
+            ) is not None:
+                metadata.setdefault("Opinion", {})["author_str"] = (
+                    pdf_judge.group("judge").strip()
+                )
 
-            return {k: v for k, v in metadata.items() if v}
+            return metadata
 
         # HTML processing
         # Index No. E2024006644
@@ -316,16 +350,16 @@ class Site(OpinionSiteLinear):
             ),
         ]
         for regex in docket_regexes:
-            if docket_match := regex.search(target_text):
+            if (docket_match := regex.search(target_text)) is not None:
                 docket = docket_match.group("docket_number").strip()
                 # avoid censored docket numbers
                 # https://www.courtlistener.com/opinion/9500907/xx/
                 if "XXX" not in docket:
-                    metadata["Docket"]["docket_number"] = docket
+                    metadata.setdefault("Docket", {})["docket_number"] = docket
 
         # found on the header table inside brackets "[111 Misc 3d 222]" May have
         # extra symbols next to the page value, such as [A]
-        if cite_match := re.search(citation_regex, target_text):
+        if (cite_match := re.search(citation_regex, target_text)) is not None:
             metadata["Citation"] = cite_match.group(0)
 
         # found on the header table
@@ -349,30 +383,31 @@ class Site(OpinionSiteLinear):
                 judge = judge_matches[-1].group("judge")
             else:
                 judge = judge_matches[0].group("judge")
-        elif judge_matches:
+        elif bool(judge_matches):
             judge = judge_matches[0].group("judge")
 
-        if judge:
+        if bool(judge):
             metadata["Opinion"] = {
                 "author_str": normalize_judge_string(judge)[0]
             }
 
         # found on a table after the summary table
-        full_case = ""
         # replace <br> with newlines because text_content() replaces <br>
         # with whitespace. If not, case names would lack proper separation
         scraped_text = scraped_text.replace("<br>", "\n")
-        full_case = fromstring(scraped_text).xpath("//table")
-        full_case = full_case[1].text_content() if len(full_case) > 1 else ""
-        if full_case:
+        tables: list[HtmlElement] = fromstring(scraped_text).xpath("//table")
+        full_case = tables[1].text_content() if len(tables) > 1 else ""
+        if bool(full_case):
             full_case = harmonize(full_case)
-            metadata["Docket"]["case_name_full"] = full_case
-            metadata["OpinionCluster"]["case_name_full"] = full_case
+            metadata.setdefault("Docket", {})["case_name_full"] = full_case
+            metadata.setdefault("OpinionCluster", {})["case_name_full"] = (
+                full_case
+            )
 
-        return {k: v for k, v in metadata.items() if v}
+        return metadata
 
     @staticmethod
-    def extract_from_current_template(scraped_text: str) -> dict[str, Any]:
+    def extract_from_current_template(scraped_text: str) -> ExtractedMetadata:
         """Extract values from the opinion template used since April 2026
 
         The header is a <div> with the <h1> case name, the slip opinion and
@@ -385,35 +420,32 @@ class Site(OpinionSiteLinear):
         :param scraped_text: html string contents, after cleanup_content
         :return: dict where keys match courtlistener model objects
         """
-        metadata: dict[str, Any] = {
-            "Citation": {},
-            "Docket": {},
-            "Opinion": {},
-            "OpinionCluster": {},
-        }
+        metadata: ExtractedMetadata = {}
         tree = fromstring(scraped_text)
-        header = tree.xpath("//h1/parent::div")
-        if not header:
+        header: list[HtmlElement] = tree.xpath("//h1/parent::div")
+        if not bool(header):
             return {}
 
         header_lines = [
-            clean_string(p.text_content()) for p in header[0].xpath("./p")
+            clean_string(p.text_content()) for p in header[0].findall("./p")
         ]
-        if cite_match := re.search(citation_regex, " ".join(header_lines)):
+        if (
+            cite_match := re.search(citation_regex, " ".join(header_lines))
+        ) is not None:
             metadata["Citation"] = cite_match.group(0)
 
-        if judge := Site.get_judge_from_header(header):
-            metadata["Opinion"]["author_str"] = judge
+        if bool(judge := Site.get_judge_from_header(header)):
+            metadata.setdefault("Opinion", {})["author_str"] = judge
 
-        decided = tree.xpath(
+        decided: list[HtmlElement] = tree.xpath(
             "//p[starts-with(normalize-space(), 'Decided on')]"
         )
-        if decided:
+        if bool(decided):
             docket_p = decided[0].getnext()
             if docket_p is not None and docket_p.tag == "p":
                 docket = clean_string(docket_p.text_content())
                 if Site.is_valid_docket(docket):
-                    metadata["Docket"]["docket_number"] = docket
+                    metadata.setdefault("Docket", {})["docket_number"] = docket
 
             court_p = decided[0].getprevious()
             parties = court_p.getprevious() if court_p is not None else None
@@ -423,31 +455,36 @@ class Site(OpinionSiteLinear):
         if parties is not None and parties.tag == "div":
             # drop footnote markers, such as "The State of New York,<sup>FN1
             # </sup>"
-            for sup in parties.xpath(".//sup"):
+            for sup in parties.findall(".//sup"):
                 sup.drop_tree()
             # drop leftovers of the caption box border, such as
             # "People of the State of New York, X"
             lines = [
                 re.sub(r",\s*X$", "", clean_string(p.text_content()))
-                for p in parties.xpath("./p")
+                for p in parties.findall("./p")
             ]
-            if full_case := harmonize(" ".join(lines)):
-                metadata["Docket"]["case_name_full"] = full_case
-                metadata["OpinionCluster"]["case_name_full"] = full_case
+            if bool(full_case := harmonize(" ".join(lines))):
+                metadata.setdefault("Docket", {})["case_name_full"] = full_case
+                metadata.setdefault("OpinionCluster", {})["case_name_full"] = (
+                    full_case
+                )
 
-        return {k: v for k, v in metadata.items() if v}
+        return metadata
 
+    @override
     @staticmethod
     def cleanup_content(content: bytes) -> bytes:
         return ny.Site.cleanup_content(content)
 
-    def make_backscrape_iterable(self, kwargs) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """Make back scrape iterable
 
         :param kwargs: the back scraping params
         :return: None
         """
-        super().make_backscrape_iterable(kwargs)
-        self.back_scrape_iterable = unique_year_month(
-            self.back_scrape_iterable
-        )
+        date_ranges = self._get_backscrape_date_ranges(kwargs)
+        if not bool(date_ranges):
+            self.back_scrape_iterable = []
+            return
+        self.back_scrape_iterable = unique_year_month(date_ranges)

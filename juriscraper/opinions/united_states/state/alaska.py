@@ -21,15 +21,22 @@ from html import unescape
 from urllib.parse import urlencode, urljoin
 
 from lxml import html
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import (
+    DownloadedContent,
+    RequestParameters,
+    SiteOptions,
+    logger,
+)
 from juriscraper.lib.exceptions import InvalidDocumentError
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[tuple[date, date]]):
     base_url = "https://govt.westlaw.com/akcases/"
     # Court label as rendered in each result's description line. Subclasses
     # override this to scrape a different court from the same result feed.
@@ -111,8 +118,13 @@ class Site(OpinionSiteLinear):
     # "Moore, Jr." -> ["Moore", "Jr"]; reattached during panel parsing
     judge_suffixes = ("Jr", "Sr", "II", "III", "IV")
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.end_date = date.today()
         self.start_date = self.end_date - timedelta(days=self.days_interval)
@@ -129,14 +141,18 @@ class Site(OpinionSiteLinear):
 
     @override
     async def _process_html(self) -> None:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
         self._parse_results_page(self.html)
         if self.test_mode_enabled():
             return
-        while next_url := self._next_page_url():
+        while bool(next_url := self._next_page_url()):
             self.html = await self._get_html_tree_by_url(next_url)
             self._parse_results_page(self.html)
 
-    def _parse_results_page(self, tree) -> None:
+    def _parse_results_page(self, tree: HtmlElement) -> None:
         """Parse one results page, keeping only this court's opinions.
 
         Each result is an ``<li>`` with the case name in an ``a.resultLink``
@@ -146,29 +162,30 @@ class Site(OpinionSiteLinear):
 
         :param tree: the lxml tree of a results page
         """
-        for row in tree.xpath("//ol[@id='results']/li"):
-            anchor = row.xpath(".//a[@class='resultLink']")
-            description = row.xpath(
+        rows: list[HtmlElement] = tree.xpath("//ol[@id='results']/li")
+        for row in rows:
+            anchor = row.findall(".//a[@class='resultLink']")
+            descriptions: list[str] = row.xpath(
                 ".//div[@class='co_resultsListDescription']/text()"
             )
-            if not anchor or not description:
+            if not bool(anchor) or not bool(descriptions):
                 logger.warning(
                     "%s: skipping result row with unexpected structure: %s",
                     self.court_id,
                     row.text_content().strip(),
                 )
                 continue
-            description = description[0].strip()
+            description = descriptions[0].strip()
 
             # A single search returns both Alaska courts; skip the other one
             court = self.court_regex.search(description)
-            if not court or court.group(1) != self.court_label:
+            if court is None or court.group(1) != self.court_label:
                 continue
 
             # Date and docket are required; everything else is best-effort
             date_match = self.date_regex.search(description)
             docket_match = self.docket_regex.search(description)
-            if not date_match or not docket_match:
+            if date_match is None or docket_match is None:
                 logger.error(
                     "%s: incomplete metadata, skipping row '%s'",
                     self.court_id,
@@ -177,9 +194,9 @@ class Site(OpinionSiteLinear):
                 continue
 
             # Precedential status from the reporter field
-            if self.unpublished_regex.search(description):
+            if self.unpublished_regex.search(description) is not None:
                 status = "Unpublished"
-            elif self.published_regex.search(description):
+            elif self.published_regex.search(description) is not None:
                 status = "Published"
             else:
                 status = "Unknown"
@@ -188,10 +205,12 @@ class Site(OpinionSiteLinear):
             # preferring the official Pacific Reporter cite over the Westlaw one
             reporter = self.reporter_citation_regex.search(description)
             westlaw = self.westlaw_citation_regex.search(description)
-            if reporter:
+            if reporter is not None:
                 citation = reporter.group(0)
-                parallel_citation = westlaw.group(0) if westlaw else ""
-            elif westlaw:
+                parallel_citation = (
+                    westlaw.group(0) if westlaw is not None else ""
+                )
+            elif westlaw is not None:
                 citation, parallel_citation = westlaw.group(0), ""
             else:
                 citation, parallel_citation = "", ""
@@ -201,8 +220,8 @@ class Site(OpinionSiteLinear):
             name = self.whitespace_regex.sub(" ", name).strip(" .")
 
             # Build a clean, downloadable document URL from the result link
-            doc_id = self.document_id_regex.search(anchor[0].get("href"))
-            if not doc_id:
+            doc_id = self.document_id_regex.search(anchor[0].attrib["href"])
+            if doc_id is None:
                 logger.error(
                     "%s: could not extract document id from result link, "
                     "skipping row '%s'",
@@ -228,6 +247,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     @staticmethod
     def cleanup_content(content: bytes) -> str:
         """Isolate the opinion from the surrounding Westlaw site chrome.
@@ -241,8 +261,8 @@ class Site(OpinionSiteLinear):
             here skips just this document instead of ingesting the junk page
         """
         tree = html.fromstring(content)
-        nodes = tree.xpath("//*[@id='co_document']")
-        if not nodes:
+        nodes: list[HtmlElement] = tree.xpath("//*[@id='co_document']")
+        if not bool(nodes):
             raise InvalidDocumentError(
                 "alaska: opinion container '#co_document' missing; "
                 "the document request was likely blocked"
@@ -253,6 +273,7 @@ class Site(OpinionSiteLinear):
         # content hash is stable across downloads (CL dedupes on hash) #2009
         return Site.volatile_token_regex.sub("", cleaned)
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Configure the date window for a historical range and download.
 
@@ -291,7 +312,10 @@ class Site(OpinionSiteLinear):
             f"{urljoin(self.base_url, 'Search/Results')}?{urlencode(params)}"
         )
 
-    async def _download(self, request_dict=None):
+    @override
+    async def _download(
+        self, request_dict: RequestParameters | None = None
+    ) -> DownloadedContent:
         """Bootstrap a session and fetch the first results page.
 
         The site sits behind a BrowserHawk capability gate. We seed cookies by
@@ -317,8 +341,11 @@ class Site(OpinionSiteLinear):
 
         self.url = self._build_search_url()
         await self._request_url_get(self.url)
-        if "click here to continue" in self.request["response"].text.lower():
-            self.url = self._follow_interstitial(self.request["response"].text)
+        response = self.request.get("response")
+        if response is None:
+            raise ValueError("Download a response before accessing it.")
+        if "click here to continue" in response.text.lower():
+            self.url = self._follow_interstitial(response.text)
             await self._request_url_get(self.url)
 
         self._post_process_response()
@@ -331,7 +358,7 @@ class Site(OpinionSiteLinear):
         :return: the absolute canonical results URL
         """
         match = self.interstitial_regex.search(text)
-        if not match:
+        if match is None:
             raise ValueError(
                 f"{self.court_id}: could not parse BrowserHawk interstitial"
             )
@@ -340,26 +367,31 @@ class Site(OpinionSiteLinear):
 
     def _next_page_url(self) -> str | None:
         """Return the absolute URL of the next results page, if any."""
-        links = self.html.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        links: list[str] = self.html.xpath(
             "//a[contains(., 'Next set of documents')]/@href"
         )
-        return links[0] if links else None
+        return links[0] if bool(links) else None
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract the lower court (and its judge) from the opinion text.
 
         :param scraped_text: The text to extract from.
         :return: A dictionary with the metadata.
         """
-        metadata = {}
+        metadata: ExtractedMetadata = {}
 
         lower_court_str = ""
-        if match := self.lower_court_regex.search(scraped_text):
+        if (match := self.lower_court_regex.search(scraped_text)) is not None:
             lower_court_str = self.whitespace_regex.sub(
                 " ", match.group("lower_court")
             ).strip()
 
-        if lower_court_str:
+        if bool(lower_court_str):
             parts = [part.strip() for part in lower_court_str.split(",")]
             if "appeals" in parts[0].lower():
                 lower_court = parts[0]
@@ -373,13 +405,15 @@ class Site(OpinionSiteLinear):
                     lower_court_judge = f"{parts[-3]} Jr."
 
             metadata["Docket"] = {"appeal_from_str": lower_court}
-            if lower_court_judge:
+            if bool(lower_court_judge):
                 metadata.setdefault("OriginatingCourtInformation", {})[
                     "assigned_to_str"
                 ] = lower_court_judge
 
         # The lower court docket number sits right beside the lower court
-        if number_match := self.lower_court_number_regex.search(scraped_text):
+        if (
+            number_match := self.lower_court_number_regex.search(scraped_text)
+        ) is not None:
             lower_court_number = self.whitespace_regex.sub(
                 " ", number_match.group(1)
             ).strip()
@@ -388,20 +422,21 @@ class Site(OpinionSiteLinear):
             ] = lower_court_number
 
         # The panel of judges from the "Before:" line
-        if panel_match := self.panel_regex.search(scraped_text):
+        if (panel_match := self.panel_regex.search(scraped_text)) is not None:
             panel = self.panel_title_regex.sub("", panel_match.group("panel"))
-            judges = []
-            for judge in self.panel_split_regex.split(panel):
+            judges: list[str] = []
+            panel_members: list[str] = self.panel_split_regex.split(panel)
+            for judge in panel_members:
                 judge = judge.strip(" .,")
-                if not judge:
+                if not bool(judge):
                     continue
                 # Reattach a suffix the comma split off, e.g. "Moore, Jr."
-                if judge in self.judge_suffixes and judges:
+                if judge in self.judge_suffixes and bool(judges):
                     suffix = f"{judge}." if judge in ("Jr", "Sr") else judge
                     judges[-1] = f"{judges[-1]} {suffix}"
                 else:
                     judges.append(judge)
-            if judges:
+            if bool(judges):
                 metadata.setdefault("OpinionCluster", {})["judges"] = (
                     ", ".join(judges)
                 )

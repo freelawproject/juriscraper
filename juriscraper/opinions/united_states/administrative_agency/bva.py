@@ -33,13 +33,21 @@ import os
 import re
 from datetime import datetime
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import (
+    DownloadedContent,
+    RequestParameters,
+    SiteOptions,
+    logger,
+)
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import BackscrapeOptions
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[int]):
     # Sitemaps available from 1992 to present
     first_opinion_date = datetime(1992, 1, 1)
     days_interval = 365
@@ -59,8 +67,13 @@ class Site(OpinionSiteLinear):
     date_re = re.compile(r"Decision Date:\s*(\S+)")
     docket_re = re.compile(r"DOCKET NO\.\s*(.+)")
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[int]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
 
         self.status = "Unpublished"
@@ -74,7 +87,10 @@ class Site(OpinionSiteLinear):
         self.save_response = None
         self.make_backscrape_iterable(kwargs)
 
-    async def _download(self, request_dict=None):
+    @override
+    async def _download(
+        self, request_dict: RequestParameters | None = None
+    ) -> DownloadedContent:
         """Fall back to the previous year's sitemap if the current
         year's does not exist yet. Do not do this in a backscrape
         """
@@ -83,6 +99,8 @@ class Site(OpinionSiteLinear):
 
         # Uses a HEAD request (headers only, no body) to cheaply check
         # existence before committing to a full GET of the ~18 MB XML.
+        if self.url is None:
+            raise ValueError("A sitemap URL is required")
         r = await self.request["session"].head(self.url, timeout=10)
         if r.status_code == 404:
             # Current year's sitemap doesn't exist yet;
@@ -106,7 +124,11 @@ class Site(OpinionSiteLinear):
         """
         # lxml's HTML parser can handle the sitemap XML; namespace
         # prefixes are stripped so //loc works directly
-        locs = self.html.xpath("//loc/text()")
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        locs: list[str] = self.html.xpath("//loc/text()")
 
         for loc in reversed(locs):
             if len(self.cases) >= self.cases_to_scrape:
@@ -155,25 +177,27 @@ class Site(OpinionSiteLinear):
                 doctor_is_available=False,
             )
 
-        content = raw.decode("cp1252")
+        content = raw.decode("cp1252") if isinstance(raw, bytes) else raw
 
         citation_match = self.citation_re.search(content)
         date_match = self.date_re.search(content)
 
-        if not citation_match or not date_match:
+        if citation_match is None or date_match is None:
             logger.warning("Could not parse header from %s", url)
             return
 
         citation = citation_match.group(1)
         date_str = date_match.group(1)
         docket_match = self.docket_re.search(content)
-        docket = docket_match.group(1).strip() if docket_match else ""
+        docket = (
+            docket_match.group(1).strip() if docket_match is not None else ""
+        )
 
         self.cases.append(
             {
                 # BVA decisions use the docket as the case name
                 # because veterans' names are not published
-                "name": docket or citation,
+                "name": (docket if bool(docket) else citation),
                 "url": url,
                 "date": date_str,
                 "docket": docket,
@@ -182,6 +206,7 @@ class Site(OpinionSiteLinear):
             }
         )
 
+    @override
     async def _download_backwards(self, yy: int) -> None:
         """Download and process all decisions from a given year's sitemap.
 
@@ -198,18 +223,22 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         await self._process_html()
 
-    def make_backscrape_iterable(self, kwargs):
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """Convert the parent's date-range tuples into 2-digit year ints.
 
         The parent creates (start_date, end_date) tuples based on
         days_interval.  We only need the year boundaries, since
         _download_backwards operates on one year's sitemap at a time.
         """
-        super().make_backscrape_iterable(kwargs)
+        date_ranges = self._get_backscrape_date_ranges(kwargs)
+        if not bool(date_ranges):
+            self.back_scrape_iterable = []
+            return
 
         # back_scrape_iterable is a list of (start, end) date tuples
-        start_year = self.back_scrape_iterable[0][0].year
-        end_year = self.back_scrape_iterable[-1][-1].year
+        start_year = date_ranges[0][0].year
+        end_year = date_ranges[-1][-1].year
 
         self.back_scrape_iterable = [
             y % 100 for y in range(start_year, end_year + 1)

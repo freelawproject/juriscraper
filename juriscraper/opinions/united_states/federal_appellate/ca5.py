@@ -8,13 +8,16 @@ import re
 from datetime import date, datetime
 from urllib.parse import urlencode, urljoin
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[tuple[date, date]]):
     # https://www.ca5.uscourts.gov/opinions?group=flat&pageSize=1000&quick=30
     base_url = "https://www.ca5.uscourts.gov/opinions/results"
     # Oldest opinion available on the court's search
@@ -25,15 +28,20 @@ class Site(OpinionSiteLinear):
     # page; `_download_backwards` still follows the pager if it doesn't
     page_size = 1000
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         # `quick=30` selects the last 30 days of opinions and orders
         self.url = self.build_url({"quick": 30})
         self.should_have_results = True
         self.make_backscrape_iterable(kwargs)
 
-    def build_url(self, params: dict) -> str:
+    def build_url(self, params: dict[str, str | int]) -> str:
         """Build a results URL, keeping the shared parameters in one place
 
         :param params: filters particular to this query, such as the `quick`
@@ -45,13 +53,26 @@ class Site(OpinionSiteLinear):
 
     @override
     def _process_html(self) -> None:
-        for row in self.html.xpath("//a[contains(@class, 'oprow')]"):
-            docket = row.xpath("span[@class='oprow__docket']/text()")
-            name = row.xpath("span[@class='oprow__caption']/text()")
-            date_filed = row.xpath("span[@class='oprow__date']/text()")
-            url = row.xpath("@href")
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(
+            "//a[contains(@class, 'oprow')]"
+        )
+        for row in rows:
+            docket: list[str] = row.xpath(
+                "span[@class='oprow__docket']/text()"
+            )
+            name: list[str] = row.xpath("span[@class='oprow__caption']/text()")
+            date_filed: list[str] = row.xpath(
+                "span[@class='oprow__date']/text()"
+            )
+            url: list[str] = row.xpath("@href")
 
-            if not (docket and name and date_filed and url):
+            if not (
+                bool(docket) and bool(name) and bool(date_filed) and bool(url)
+            ):
                 logger.error(
                     "ca5: incomplete opinion row '%s'",
                     " ".join(row.text_content().split()),
@@ -59,7 +80,9 @@ class Site(OpinionSiteLinear):
                 continue
 
             # Ex: "Published Opinion", "Unpublished Order"
-            label = row.xpath(".//span[contains(@class, 'tag')]/text()")
+            label: list[str] = row.xpath(
+                ".//span[contains(@class, 'tag')]/text()"
+            )
 
             self.cases.append(
                 {
@@ -68,7 +91,7 @@ class Site(OpinionSiteLinear):
                     "date": date_filed[0].strip(),
                     "docket": docket[0].strip(),
                     "status": self.get_status(
-                        label[0].strip() if label else ""
+                        label[0].strip() if bool(label) else ""
                     ),
                 }
             )
@@ -87,6 +110,7 @@ class Site(OpinionSiteLinear):
         logger.error("ca5: unknown document type '%s'", label)
         return "Unknown"
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Scrape a date range, following the pager when the range is big
 
@@ -106,11 +130,16 @@ class Site(OpinionSiteLinear):
             self.html = await self._download()
             self._process_html()
 
-            if not self.html.xpath("//a[@rel='next']"):
+            if not isinstance(self.html, HtmlElement):
+                raise ValueError(
+                    "An HTML document must be downloaded before parsing."
+                )
+            if not bool(self.html.xpath("//a[@rel='next']")):
                 break
             page += 1
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract lower court from the scraped text.
 
         :param scraped_text: The text to extract from.
@@ -131,12 +160,12 @@ class Site(OpinionSiteLinear):
         )
 
         lower_court = ""
-        if match := pattern.search(scraped_text):
+        if (match := pattern.search(scraped_text)) is not None:
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
 
-        if lower_court:
+        if bool(lower_court):
             return {
                 "Docket": {
                     "appeal_from_str": lower_court,

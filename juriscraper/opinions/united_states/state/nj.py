@@ -2,19 +2,26 @@ import re
 from datetime import date, datetime
 from urllib.parse import urlencode
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[tuple[date, date]]):
     first_opinion_date = datetime(2013, 1, 14)
     days_interval = 30
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.base_url = self.url = (
             "https://www.njcourts.gov/attorneys/opinions/supreme"
@@ -33,24 +40,29 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
-        for row in self.html.xpath("//div[@class='card-body']"):
-            container = row.xpath(".//a[@class='text-underline-hover']")
-            if not container:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath("//div[@class='card-body']")
+        for row in rows:
+            container = row.findall(".//a[@class='text-underline-hover']")
+            if not bool(container):
                 logger.warning(
                     "Skipping row with no URL: %s",
                     re.sub(r"\s+", " ", row.text_content()),
                 )
                 continue
 
-            url = container[0].xpath("@href")[0]
+            url: str = container[0].xpath("@href")[0]
             # name is sometimes inside a span, not inside the a tag
-            name_content = container[0].xpath("string(.)")
+            name_content = container[0].text_content()
             name_str, _, _ = name_content.partition("(")
 
-            docket = row.xpath('.//*[contains(@class, "mt-1")]/text()')[
+            docket: str = row.xpath('.//*[contains(@class, "mt-1")]/text()')[
                 0
             ].strip()
-            date = row.xpath(
+            date: str = row.xpath(
                 ".//div[@class='col-lg-12 small text-muted mt-2']/text()"
             )[0]
 
@@ -62,12 +74,15 @@ class Site(OpinionSiteLinear):
             }
 
             if self.status == "Published":
-                summary = row.xpath(".//div[@class='modal-body']/p/text()")
+                summary: list[str] = row.xpath(
+                    ".//div[@class='modal-body']/p/text()"
+                )
                 case["summary"] = "\n".join(summary)
 
             self.cases.append(case)
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract lower court from the scraped text.
 
         :param scraped_text: The text to extract from.
@@ -87,14 +102,14 @@ class Site(OpinionSiteLinear):
         )
 
         lower_court = ""
-        if match := pattern.search(scraped_text):
+        if (match := pattern.search(scraped_text)) is not None:
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
             if lower_court.lower().strip() == "superior court":
                 lower_court = "New Jersey Superior Court"
 
-        if lower_court:
+        if bool(lower_court):
             return {
                 "Docket": {
                     "appeal_from_str": titlecase(lower_court),
@@ -103,6 +118,7 @@ class Site(OpinionSiteLinear):
 
         return {}
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
 

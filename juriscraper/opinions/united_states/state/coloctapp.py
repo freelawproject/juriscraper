@@ -10,6 +10,12 @@ History:
     - 2025-08-11: Add cleanup_content method, quevon24
 """
 
+from datetime import date
+
+from typing_extensions import Unpack, override
+
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.opinions.united_states.state import colo
 
 
@@ -18,11 +24,17 @@ class Site(colo.Site):
     days_interval = 15
     docket_number_regex = r"\d{2,2}CA\d{1,4}"
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.expected_content_types = ["application/pdf"]
 
+    @override
     @staticmethod
-    def cleanup_content(content):
+    def cleanup_content(content: bytes) -> bytes:
         """Return raw pdf content"""
         return content

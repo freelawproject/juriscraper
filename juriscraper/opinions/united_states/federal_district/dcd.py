@@ -11,18 +11,26 @@ import re
 from datetime import date, datetime
 
 from lxml import html
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import BackscrapeOptions
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[int]):
     docket_document_number_regex = re.compile(r"(\?)(\d+)([a-z]+)(\d+)(-)(.*)")
     nature_of_suit_regex = re.compile(r"(\?)(\d+)([a-z]+)(\d+)(-)(.*)")
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[int]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = f"https://ecf.dcd.uscourts.gov/cgi-bin/Opinions.pl?{date.today().year}"
         self.status = "Published"
@@ -34,23 +42,33 @@ class Site(OpinionSiteLinear):
         Some rows have mutliple documents and hence urls for each case.
         We will "pad" every other metadata field to match the urls
         """
-        for row in self.html.xpath("//table[2]//tr[not(th)]"):
-            case_name = titlecase(
-                row.xpath("td[2]//text()[preceding-sibling::br]")[0].lower()
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
             )
-            date_string = row.xpath("td[1]/text()")[0]
+        rows: list[HtmlElement] = self.html.xpath("//table[2]//tr[not(th)]")
+        for row in rows:
+            case_name: str = row.xpath("td[2]//text()[preceding-sibling::br]")[
+                0
+            ]
+            case_name = titlecase(case_name.lower())
+            date_string: str = row.xpath("td[1]/text()")[0]
             date_filed = datetime.strptime(date_string, "%m/%d/%Y")
-            docket = row.xpath("td[2]//text()[following-sibling::br]")[0]
+            docket: str = row.xpath("td[2]//text()[following-sibling::br]")[0]
 
-            judge_element = row.xpath("td[3]")[0]
+            judge_element = row.findall("td[3]")[0]
             judge_string = html.tostring(
                 judge_element, method="text", encoding="unicode"
             )
-            judge = re.search(r"(by\s)(.*)", judge_string, re.MULTILINE).group(
-                2
-            )
+            match = re.search(r"(by\s)(.*)", judge_string, re.MULTILINE)
+            if match is None:
+                raise ValueError(
+                    f"Could not parse opinion judge: {judge_string!r}"
+                )
+            judge = match.group(2)
 
-            for url in row.xpath("td[3]/a/@href"):
+            urls: list[str] = row.xpath("td[3]/a/@href")
+            for url in urls:
                 doc_number = self.get_docket_document_number_from_url(url)
                 self.cases.append(
                     {
@@ -63,7 +81,7 @@ class Site(OpinionSiteLinear):
                     }
                 )
 
-    def get_docket_document_number_from_url(self, url: str) -> tuple[str, str]:
+    def get_docket_document_number_from_url(self, url: str) -> str:
         """Get docket document number from the opinion URL
 
         :param url:
@@ -71,10 +89,11 @@ class Site(OpinionSiteLinear):
         """
         # In 2012 (and perhaps elsewhere) they have a few weird urls.
         match = self.docket_document_number_regex.search(url)
-        doc_number = match.group(6) if match else url
+        doc_number = match.group(6) if match is not None else url
 
         return doc_number
 
+    @override
     async def _download_backwards(self, year: int) -> None:
         """Build URL with year input and scrape
 
@@ -85,7 +104,8 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs: dict) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """Checks if backscrape start and end arguments have been passed
         by caller, and parses them accordingly
 
@@ -98,12 +118,12 @@ class Site(OpinionSiteLinear):
 
         start = (
             datetime.strptime(start_date, "%m/%d/%Y").year
-            if start_date
+            if bool(start_date)
             else date.today().year
         )
         end = (
             datetime.strptime(end_date, "%m/%d/%Y").year + 1
-            if end_date
+            if bool(end_date)
             else date.today().year
         )
 

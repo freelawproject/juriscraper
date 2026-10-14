@@ -1,5 +1,10 @@
 import re
 import urllib.parse
+from datetime import date
+from typing import TYPE_CHECKING
+
+from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import (
@@ -10,10 +15,13 @@ from juriscraper.lib.string_utils import (
 from juriscraper.lib.utils import clean_court_object
 from juriscraper.pacer.reports import BaseReport
 
-from .docket_report import BaseDocketReport
+from .docket_report import BaseDocketReport, DocketNumberComponents
 from .utils import get_pacer_doc_id_from_doc1_url
 
 logger = make_default_logger()
+
+if TYPE_CHECKING:
+    from .http import PacerSession
 
 
 class ClaimsRegister(BaseDocketReport, BaseReport):
@@ -33,35 +41,44 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         "No claims found for this case using selection criteria entered"
     ]
 
-    def __init__(self, court_id, pacer_session=None):
-        BaseDocketReport.__init__(self, court_id)
+    def __init__(
+        self, court_id: str, pacer_session: "PacerSession | None" = None
+    ) -> None:
+        super().__init__(court_id)
         BaseReport.__init__(self, court_id, pacer_session)
 
         self._clear_caches()
-        self._metadata = None
-        self._claims = None
-        assert court_id.endswith("b"), (
-            "Unable to create object. Must use bankruptcy court abbreviation."
-        )
+        self._metadata: dict[str, object] | None = None
+        self._claims: list[dict[str, object]] | None = None
+        if not court_id.endswith("b"):
+            raise ValueError(
+                "Unable to create object. Must use bankruptcy court abbreviation."
+            )
 
     @property
-    def data(self):
+    @override
+    def data(self) -> dict[str, object]:
         """Get all the data back from this endpoint."""
         if self.is_valid is False:
             return {}
-        data = self.metadata.copy()
+        data: dict[str, object] = self.metadata.copy()
         data["claims"] = self.claims
         return data
 
+    @override
+    def _parse_text(self, text: str) -> None:
+        self._clear_caches()
+        super()._parse_text(text)
+
     @property
-    def metadata(self):
+    def metadata(self) -> dict[str, object]:
         if self.is_valid is False:
             return {}
 
         if self._metadata is not None:
             return self._metadata
 
-        data = {
+        data: dict[str, object] = {
             "court_id": self.court_id,
         }
         field_mappings = {
@@ -82,7 +99,13 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         }
         # The title row has some weird labels that look like:
         #  <span class="label">Closed</span> 10/26/2018
-        label_nodes = self.tree.xpath('//span[@class="label"]')
+        if self.tree is None:
+            raise ValueError("Parse a report before accessing its contents.")
+        if not isinstance(self.tree, HtmlElement):
+            raise TypeError("Expected an HTML tree for this report.")
+        label_nodes: list[HtmlElement] = self.tree.xpath(
+            '//span[@class="label"]'
+        )
         for label_node in label_nodes:
             data.update(
                 self._get_label_value_pair(label_node, False, field_mappings)
@@ -90,11 +113,12 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
 
         # Each cell in the header table has a value like:
         # <td><b>Judge:</b>  Barbara J. Houser</td>
-        cells = self.tree.xpath(
+        cells: list[HtmlElement] = self.tree.xpath(
             "//center/p/following-sibling::table[1]//td[text() and b]"
         )
         for cell in cells:
-            label_node = cell.xpath("./b")[0]
+            labels: list[HtmlElement] = cell.xpath("./b")
+            label_node = labels[0]
             data.update(
                 self._get_label_value_pair(label_node, True, field_mappings)
             )
@@ -107,8 +131,11 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
                 self._get_label_value_pair(label_node, True, field_mappings)
             )
 
+        raw_number = data.get("docket_number", "")
+        if not isinstance(raw_number, str):
+            raise TypeError("A docket number must be a string.")
         docket_number, docket_number_components = self._parse_docket_number(
-            data.get("docket_number", "")
+            raw_number
         )
         data["docket_number"] = docket_number
         # Include the docket_number components.
@@ -120,8 +147,8 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         return data
 
     def _parse_docket_number(
-        self, docket_number
-    ) -> tuple[str, dict[str, str | None]]:
+        self, docket_number: str
+    ) -> tuple[str, DocketNumberComponents]:
         """Parse a valid docket number and its components.
 
         :param: docket_number: A string docket number to clean.
@@ -138,7 +165,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         ]
         for regex in regexes:
             match = regex.search(docket_number)
-            if match:
+            if match is not None:
                 docket_number_components = self._parse_dn_components(
                     docket_number
                 )
@@ -148,37 +175,49 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         return docket_number, self._return_default_dn_components()
 
     @property
-    def claims(self):
+    def claims(self) -> list[dict[str, object]]:
         """Parse out all the claims information"""
         if self._claims is not None:
             return self._claims
 
-        claim_tables = self.tree.xpath('//table[@class="complexReport"]')
-        claims = []
+        if self.tree is None:
+            raise ValueError("Parse a report before accessing its contents.")
+        if not isinstance(self.tree, HtmlElement):
+            raise TypeError("Expected an HTML tree for this report.")
+        claim_tables: list[HtmlElement] = self.tree.xpath(
+            '//table[@class="complexReport"]'
+        )
+        claims: list[dict[str, object]] = []
         for claim_table in claim_tables:
-            claim: dict = {}
+            claim: dict[str, object] = {}
 
             # Identify and parse each cell.
-            creditor_td = claim_table.xpath("(.//tr)[1]/td[1]")[0]
+            creditor_td: HtmlElement = claim_table.xpath("(.//tr)[1]/td[1]")[0]
             claim.update(self._parse_creditor_cell(creditor_td))
 
-            claim_number_td = claim_table.xpath("(.//tr)[1]/td[2]")[0]
+            claim_number_td: HtmlElement = claim_table.xpath(
+                "(.//tr)[1]/td[2]"
+            )[0]
             claim.update(self._parse_claim_number_cell(claim_number_td))
 
-            claim_metadata_td = claim_table.xpath("(.//tr)[1]/td[3]")[0]
+            claim_metadata_td: HtmlElement = claim_table.xpath(
+                "(.//tr)[1]/td[3]"
+            )[0]
             claim.update(self._parse_claim_metadata_cell(claim_metadata_td))
 
-            amounts_td = claim_table.xpath("(.//tr)[2]/td[1]")[0]
+            amounts_td: HtmlElement = claim_table.xpath("(.//tr)[2]/td[1]")[0]
             claim.update(self._parse_amounts_cell(amounts_td))
 
             # Paths here are a bit more complex because the amounts table above
             # contains a table, so we can't just get trs by index anymore.
             history_path = './/tr[.//i[text() = "History:"]]'
-            history_td = claim_table.xpath(history_path)[0]
+            history_td: HtmlElement = claim_table.xpath(history_path)[0]
             claim["history"] = self._parse_history_cell(history_td)
 
             description_path = './/i[text() = "Description:"]'
-            description_node = claim_table.xpath(description_path)[0]
+            description_node: HtmlElement = claim_table.xpath(
+                description_path
+            )[0]
             claim.update(
                 self._get_label_value_pair(
                     description_node, True, {"Description": "description"}
@@ -186,7 +225,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             )
 
             remarks_path = './/i[text() = "Remarks:"]'
-            remarks_td = claim_table.xpath(remarks_path)[0]
+            remarks_td: HtmlElement = claim_table.xpath(remarks_path)[0]
             claim.update(
                 self._get_label_value_pair(
                     remarks_td, True, {"remarks": "remarks"}
@@ -198,30 +237,42 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         self._claims = claims
         return claims
 
-    def _parse_creditor_cell(self, td):
+    def _parse_creditor_cell(
+        self, td: HtmlElement
+    ) -> dict[str, str | date | None]:
         """Get creditor_id, creditor_details"""
-        credit_label = td.xpath(".//i")[0]
-        info: dict = self._get_label_value_pair(
+        credit_label: HtmlElement = td.xpath(".//i")[0]
+        info = self._get_label_value_pair(
             credit_label, True, {"creditor": "creditor_id"}
         )
-        info["creditor_id"] = info["creditor_id"].strip("()")
+        creditor_id = info["creditor_id"]
+        if not isinstance(creditor_id, str):
+            raise TypeError("A creditor ID must be a string.")
+        info["creditor_id"] = creditor_id.strip("()")
 
         # Redelimit the <br> tags, then use newlines to join everything but the
         # first line in the cell, and the "Claimant History" link if applicable
         better_td = self.redelimit_p(td, self.BR_REGEX)
-        good_text = [s.strip() for s in better_td.xpath(".//p/text()")[1:]]
+        text_nodes: list[str] = better_td.xpath(".//p/text()")[1:]
+        good_text = [s.strip() for s in text_nodes]
         info["creditor_details"] = "\n".join(good_text).strip()
 
         return info
 
-    def _parse_claim_number_cell(self, td):
+    def _parse_claim_number_cell(
+        self, td: HtmlElement
+    ) -> dict[str, str | int | date | None]:
         """Get the claim_number and date fields"""
-        data: dict = {}
-        claim_number_text = td.xpath(".//b")[0].text_content()
-        claim_number = int(re.search(r"\d+", claim_number_text).group(0))
+        data: dict[str, str | int | date | None] = {}
+        bold: HtmlElement = td.xpath(".//b")[0]
+        claim_number_text = bold.text_content()
+        match = re.search(r"\d+", claim_number_text)
+        if match is None:
+            raise ValueError("Claim number cell does not contain a number.")
+        claim_number = int(match.group(0))
         data["claim_number"] = claim_number
 
-        labels = td.xpath(".//i")
+        labels: list[HtmlElement] = td.xpath(".//i")
         fields = {
             "original_filed_date": "date_original_filed",
             "original_entered_date": "date_original_entered",
@@ -232,10 +283,12 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             data.update(self._get_label_value_pair(label, False, fields))
         return data
 
-    def _parse_claim_metadata_cell(self, td):
+    def _parse_claim_metadata_cell(
+        self, td: HtmlElement
+    ) -> dict[str, str | date | None]:
         """Get the status, filed_by, entered_by, date_modified fields"""
-        labels = td.xpath(".//i")
-        data = {}
+        labels: list[HtmlElement] = td.xpath(".//i")
+        data: dict[str, str | date | None] = {}
         fields = {
             "modified": "date_modified",
         }
@@ -244,7 +297,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         return data
 
     @staticmethod
-    def _parse_amounts_cell(td):
+    def _parse_amounts_cell(td: HtmlElement) -> dict[str, str]:
         """Get the amounts claimed/secured/etc."""
         # These fields are tricky. They come in a table like this:
         #  | Amount  | Claimed: | $49.00
@@ -258,31 +311,35 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             "Admin": "admin_claimed",
             "Unknown": "unknown_claimed",
         }
-        rows = td.xpath(".//tr")
-        data = {}
+        rows: list[HtmlElement] = td.xpath(".//tr")
+        data: dict[str, str] = {}
         for row in rows:
             # The first cell sets the field name
-            label = row.xpath(".//td[1]")[0].text_content().strip()
-            if not label:
+            label_cell: HtmlElement = row.xpath(".//td[1]")[0]
+            label = label_cell.text_content().strip()
+            if not bool(label):
                 # There's an empty row; ignore it.
                 continue
             label = fields[label]
-            value = row.xpath(".//td[3]")[0].text_content().strip()
+            value_cell: HtmlElement = row.xpath(".//td[3]")[0]
+            value = value_cell.text_content().strip()
             data[label] = value
         return data
 
-    def _parse_history_cell(self, td):
+    def _parse_history_cell(
+        self, td: HtmlElement
+    ) -> list[dict[str, str | int | date | None]]:
         """Parse the history table.
 
         This is similar to a mini-docket entries table, but it has a mixture of
         claims documents (with their own numbering scheme), and normal docket
         entries.
         """
-        history_rows = []
-        entry_trs = td.xpath(".//tr")
+        history_rows: list[dict[str, str | int | date | None]] = []
+        entry_trs: list[HtmlElement] = td.xpath(".//tr")
         for entry_tr in entry_trs:
-            row: dict = {}
-            number_cell = entry_tr.xpath("./td[3]")[0]
+            row: dict[str, str | int | date | None] = {}
+            number_cell: HtmlElement = entry_tr.xpath("./td[3]")[0]
             number = number_cell.text_content().strip()
 
             """
@@ -305,7 +362,8 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
               - Link: /doc1/150014580417
             """
             try:
-                href = number_cell.xpath(".//a/@href")[0]
+                hrefs: list[str] = number_cell.xpath(".//a/@href")
+                href = hrefs[0]
             except IndexError:
                 href = None
 
@@ -320,13 +378,13 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
                     # Minute entry
                     row["document_number"] = None
 
-            if href and "claim_id" in href:
+            if bool(href) and "claim_id" in href:
                 row["type"] = "claim"
             else:
                 row["type"] = "docket_entry"
 
             # Next do the URL parsing for whatever is in it (if we have a URL)
-            if href and row["document_number"] is not None:
+            if bool(href) and row["document_number"] is not None:
                 if "doc1" in href:
                     row["pacer_doc_id"] = get_pacer_doc_id_from_doc1_url(href)
 
@@ -348,11 +406,11 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
                         row["pacer_dm_id"] = qs_dict["dm_id"][0]
 
             # Date
-            date_cell = entry_tr.xpath("./td[4]")[0]
+            date_cell: HtmlElement = entry_tr.xpath("./td[4]")[0]
             row["date_filed"] = convert_date_string(date_cell.text_content())
 
             # Description
-            desc_cell = entry_tr.xpath("./td[5]")[0]
+            desc_cell: HtmlElement = entry_tr.xpath("./td[5]")[0]
             row["description"] = force_unicode(
                 desc_cell.text_content().strip()
             )
@@ -360,8 +418,12 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         return history_rows
 
     async def query(
-        self, pacer_case_id, docket_number, date_start=None, date_end=None
-    ):
+        self,
+        pacer_case_id: str | int,
+        docket_number: str,
+        date_start: date | None = None,
+        date_end: date | None = None,
+    ) -> None:
         """Query the claims register and return the results.
 
         :param pacer_case_id: The internal PACER ID for the case
@@ -377,9 +439,10 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         :type: str
         :return: request response object
         """
-        assert self.session is not None, (
-            "session attribute of ClaimsRegister cannot be None."
-        )
+        if self.session is None:
+            raise ValueError(
+                "session attribute of ClaimsRegister cannot be None."
+            )
 
         params = {
             "all_case_ids": pacer_case_id,
@@ -392,12 +455,12 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             # This field seems to be required while 'all_case_ids' is not.
             "case_num": docket_number,
         }
-        if date_start:
+        if date_start is not None:
             params["f_fromdt"] = date_start.strftime("%m/%d/%Y")
         else:
             # Set the default
             params["f_fromdt"] = "1/1/1960"
-        if date_end:
+        if date_end is not None:
             params["f_todt"] = date_end.strftime("%m/%d/%Y")
 
         logger.info(

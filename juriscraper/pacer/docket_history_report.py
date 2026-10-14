@@ -1,4 +1,9 @@
 import re
+from datetime import date
+
+from httpx import Response
+from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.lib.judge_parsers import normalize_judge_string
 from juriscraper.lib.log_tools import make_default_logger
@@ -10,7 +15,11 @@ from juriscraper.lib.string_utils import (
 )
 from juriscraper.lib.utils import clean_court_object, previous_and_next
 
-from .docket_report import DocketReport
+from .docket_report import (
+    DocketEntry,
+    DocketNumberComponents,
+    DocketReportParser,
+)
 from .utils import (
     get_nonce_from_form,
     get_pacer_doc_id_from_doc1_url,
@@ -20,36 +29,38 @@ from .utils import (
 logger = make_default_logger()
 
 
-class DocketHistoryReport(DocketReport):
+class DocketHistoryReport(DocketReportParser):
     assigned_to_regex = r"(.*),\s+presiding"
     referred_to_regex = r"(.*),\s+referral"
     date_filed_regex = re.compile(
-        r"[fF]iled:\s+(%s)" % DocketReport.DATE_REGEX
+        r"[fF]iled:\s+(%s)" % DocketReportParser.DATE_REGEX
     )
     date_last_filing_regex = re.compile(
-        r"last\s+filing:\s+(%s)" % DocketReport.DATE_REGEX,
+        r"last\s+filing:\s+(%s)" % DocketReportParser.DATE_REGEX,
         flags=re.IGNORECASE,
     )
     date_filed_and_entered_regex = re.compile(
-        r"& Entered:\s+(%s)" % DocketReport.DATE_REGEX
+        r"& Entered:\s+(%s)" % DocketReportParser.DATE_REGEX
     )
     date_entered_regex = re.compile(
-        r"[eE]ntered:\s+(%s)" % DocketReport.DATE_REGEX
+        r"[eE]ntered:\s+(%s)" % DocketReportParser.DATE_REGEX
     )
 
     PATH = "cgi-bin/HistDocQry.pl"
 
     @property
-    def data(self):
+    @override
+    def data(self) -> dict[str, object]:
         """Get all the data back from this endpoint."""
         if self.is_valid is False:
             return {}
-        data = self.metadata.copy()
+        data: dict[str, object] = dict(self.metadata)
         data["docket_entries"] = self.docket_entries
         return data
 
     @property
-    def metadata(self):
+    @override
+    def metadata(self) -> dict[str, str | date | None]:
         if self.is_valid is False:
             return {}
 
@@ -58,7 +69,7 @@ class DocketHistoryReport(DocketReport):
 
         self._set_metadata_values()
         docket_number, docket_number_components = self._parse_docket_number()
-        data = {
+        data: dict[str, str | date | None] = {
             "court_id": self.court_id,
             "docket_number": docket_number,
             "case_name": self._get_case_name(),
@@ -91,11 +102,11 @@ class DocketHistoryReport(DocketReport):
 
     async def query(
         self,
-        pacer_case_id,
-        query_type="History",
-        order_by="asc",
-        show_de_descriptions=False,
-    ):
+        pacer_case_id: str | int,
+        query_type: str = "History",
+        order_by: str = "asc",
+        show_de_descriptions: bool = False,
+    ) -> None:
         """Query the docket history report and return the results. Because of
         the way this works, you have to hit PACER twice. Once to get a nonce,
         and a second time to make your query.
@@ -107,20 +118,20 @@ class DocketHistoryReport(DocketReport):
         in the report.
         :param order_by: The ordering desired for the results, either 'asc' or
         'desc'.
-        :return: request response object
+        :return: None. Sets self.response and parses the report.
         """
         # Set up and sanity tests
-        assert self.session is not None, (
-            "session attribute of DocketHistoryReport cannot be None."
-        )
+        if self.session is None:
+            raise ValueError(
+                "session attribute of DocketHistoryReport cannot be None."
+            )
 
         if query_type not in ["History", "Documents"]:
             raise ValueError("Invalid value for 'query_type' parameter.")
-        if (
-            show_de_descriptions is not True
-            and show_de_descriptions is not False
-        ):
-            raise ValueError("")
+        if not isinstance(show_de_descriptions, bool):
+            raise ValueError(
+                "Invalid value for 'show_de_descriptions' parameter."
+            )
         if order_by not in ["asc", "desc"]:
             raise ValueError("Invalid value for 'order_by' parameter.")
 
@@ -128,7 +139,7 @@ class DocketHistoryReport(DocketReport):
             "Getting nonce for docket history report with "
             "pacer_case_id: %s" % pacer_case_id
         )
-        r = await self.session.get(f"{self.url}?{pacer_case_id}")
+        r: Response = await self.session.get(f"{self.url}?{pacer_case_id}")
         nonce = get_nonce_from_form(r)
 
         query_params = {
@@ -149,46 +160,57 @@ class DocketHistoryReport(DocketReport):
         self.parse()
 
     @property
-    def docket_entries(self):
+    @override
+    def docket_entries(self) -> list[DocketEntry]:
         if self._docket_entries is not None:
             return self._docket_entries
 
         docket_header = './/th/text()[contains(., "Description")]'
-        docket_entry_rows = self.tree.xpath(
+        if self.tree is None:
+            raise ValueError("Parse a report before accessing its contents.")
+        if not isinstance(self.tree, HtmlElement):
+            raise TypeError("Expected an HTML tree for this report.")
+        docket_entry_rows: list[HtmlElement] = self.tree.xpath(
             f"//table[{docket_header}]/tbody/tr"
         )[1:]  # Skip first row
 
-        docket_entries = []
+        docket_entries: list[DocketEntry] = []
         for row in docket_entry_rows:
-            cells = row.xpath("./td")
+            cells: list[HtmlElement] = row.xpath("./td")
             if len(cells) == 3:
                 # Normal row, parse the document_number, date, etc.
-                de: dict = {}
-                de["document_number"] = clean_string(cells[0].text_content())
-                if de["document_number"] == "":
-                    de["document_number"] = None
-                anchors = cells[0].xpath(".//a")
+                document_number = clean_string(cells[0].text_content())
+                if not bool(document_number):
+                    document_number = None
+                anchors: list[HtmlElement] = cells[0].xpath(".//a[@href]")
                 if len(anchors) == 1:
-                    doc1_url = anchors[0].xpath("./@href")[0]
-                    de["pacer_doc_id"] = get_pacer_doc_id_from_doc1_url(
-                        doc1_url
-                    )
-                    de["pacer_seq_no"] = get_pacer_seq_no_from_doc1_anchor(
+                    doc1_url = anchors[0].get("href", "")
+                    pacer_doc_id = get_pacer_doc_id_from_doc1_url(doc1_url)
+                    pacer_seq_no = get_pacer_seq_no_from_doc1_anchor(
                         anchors[0]
                     )
                 else:
                     # Unlinked minute entry; may or may not be numbered
-                    de["pacer_doc_id"] = None
-                    de["pacer_seq_no"] = None
-                de["date_filed"] = self._get_date_filed(cells[1])
-                de["date_entered"] = self._get_date_entered(cells[1])
-                de["short_description"] = force_unicode(
-                    cells[2].text_content()
-                )
-                de["description"] = ""
+                    pacer_doc_id = None
+                    pacer_seq_no = None
+                de: DocketEntry = {
+                    "document_number": document_number,
+                    "pacer_doc_id": pacer_doc_id,
+                    "pacer_seq_no": pacer_seq_no,
+                    "date_filed": self._get_date_filed(cells[1]),
+                    "date_entered": self._get_date_entered(cells[1]),
+                    "short_description": force_unicode(
+                        cells[2].text_content()
+                    ),
+                    "description": "",
+                }
                 docket_entries.append(de)
             elif len(cells) in {1, 2}:
                 # Document long description. Get it, and add it to previous de.
+                if not bool(docket_entries):
+                    raise ValueError(
+                        "Description row has no preceding docket entry."
+                    )
                 desc = force_unicode(cells[-1].text_content())
                 label = "Docket Text: "
                 if desc.startswith(label):
@@ -207,33 +229,43 @@ class DocketHistoryReport(DocketReport):
         self._docket_entries = docket_entries
         return docket_entries
 
-    def _get_date_filed(self, cell):
+    def _get_date_filed(self, cell: HtmlElement) -> date | None:
         s = clean_string(cell.text_content())
         regexes = [self.date_filed_regex, self.date_filed_and_entered_regex]
         for regex in regexes:
             m = regex.search(s)
-            if m:
+            if m is not None:
                 return convert_date_string(m.group(1))
+        return None
 
-    def _get_date_entered(self, cell):
+    def _get_date_entered(self, cell: HtmlElement) -> date | None:
         s = clean_string(cell.text_content())
         regexes = [self.date_entered_regex, self.date_filed_and_entered_regex]
         for regex in regexes:
             m = regex.search(s)
-            if m:
+            if m is not None:
                 return convert_date_string(m.group(1))
+        return None
 
-    def _set_metadata_values(self):
-        text_nodes = self.tree.xpath("//center[not(.//table)]//text()")
-        values = []
+    @override
+    def _set_metadata_values(self) -> None:
+        if self.tree is None:
+            raise ValueError("Parse a report before accessing its contents.")
+        if not isinstance(self.tree, HtmlElement):
+            raise TypeError("Expected an HTML tree for this report.")
+        text_nodes: list[str] = self.tree.xpath(
+            "//center[not(.//table)]//text()"
+        )
+        values: list[str] = []
         for s in text_nodes:
             s = clean_string(force_unicode(s))
-            if s:
+            if bool(s):
                 values.append(s)
         values.append(" ".join(values))
         self.metadata_values = values
 
-    def _get_case_name(self):
+    @override
+    def _get_case_name(self) -> str:
         if self.is_bankruptcy:
             # Uses both b/c sometimes the bankr. cases have a dist-style docket
             # number.
@@ -244,7 +276,7 @@ class DocketHistoryReport(DocketReport):
         else:
             regexes = [self.docket_number_dist_regex]
 
-        matches = set()
+        matches: set[str] = set()
         # Skip the last value, it's a concat of all previous values and
         # isn't needed for case name matching.
         for prev, v, _nxt in previous_and_next(self.metadata_values[:-1]):
@@ -252,12 +284,12 @@ class DocketHistoryReport(DocketReport):
                 continue
             for regex in regexes:
                 match = regex.search(prev)
-                if match:
+                if match is not None:
                     if self.is_bankruptcy:
                         return harmonize(v)
                     for cn_regex in self.case_name_regexes:
                         cn_match = cn_regex.match(v)
-                        if cn_match:
+                        if cn_match is not None:
                             matches.add(cn_match.group(1))
         if len(matches) == 1:
             case_name = list(matches)[0]
@@ -265,9 +297,10 @@ class DocketHistoryReport(DocketReport):
             case_name = "Unknown Case Title"
         return harmonize(case_name)
 
+    @override
     def _parse_docket_number(
         self,
-    ) -> tuple[str | None, dict[str, str | None]]:
+    ) -> tuple[str | None, DocketNumberComponents]:
         """Parse a valid docket number and its components.
 
         :param: docket_number: A string docket number to clean.
@@ -285,23 +318,32 @@ class DocketHistoryReport(DocketReport):
             ]
         else:
             regexes = [self.docket_number_dist_regex]
-        nodes = self.tree.xpath('//center//font[@size="+1"]')
+        if self.tree is None:
+            raise ValueError("Parse a report before accessing its contents.")
+        if not isinstance(self.tree, HtmlElement):
+            raise TypeError("Expected an HTML tree for this report.")
+        nodes: list[HtmlElement] = self.tree.xpath(
+            '//center//font[@size="+1"]'
+        )
         string_nodes = [s.text_content() for s in nodes]
         for regex in regexes:
             for s in string_nodes:
                 match = regex.search(s)
-                if match:
+                if match is not None:
                     docket_number_components = self._parse_dn_components(s)
                     return match.group(1), docket_number_components
 
         return None, self._return_default_dn_components()
 
-    def _get_assigned_judge(self):
+    def _get_assigned_judge(self) -> str | None:
         if self.is_bankruptcy:
             # Look for string like "Judge: Michael J. Fox"
             for prev, v, _nxt in previous_and_next(self.metadata_values[:-1]):
-                if prev is not None and re.search("Judge:", prev, flags=re.I):
+                if prev is not None and bool(
+                    re.search("Judge:", prev, flags=re.I)
+                ):
                     return normalize_judge_string(v)[0]
         else:
             # Look for string like "Michael J. Fox, presiding"
             return self._get_judge(self.assigned_to_regex)
+        return None

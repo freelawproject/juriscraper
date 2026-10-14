@@ -18,7 +18,8 @@ Features:
 - Drop Python 3.10 and add Python 3.15 support
 
 Changes:
--
+- Enforce strict type checking across the project and ship a `py.typed` marker
+  so downstream type checkers recognize the inline annotations. #2304
 
 Fixes:
 -

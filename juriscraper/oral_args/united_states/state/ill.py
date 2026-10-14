@@ -11,16 +11,22 @@ History:
 from datetime import timedelta
 
 from dateutil.utils import today
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.string_utils import clean_string
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker, clean_string
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
 class Site(OralArgumentSiteLinear):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.illinoiscourts.gov/courts/supreme-court/oral-argument-audio-and-video/"
         self.method = "POST"
@@ -28,7 +34,7 @@ class Site(OralArgumentSiteLinear):
         self.earlier = (today() - timedelta(days=30)).strftime("%m/%d/%Y")
         self._set_parameters()
 
-    def _set_parameters(self):
+    def _set_parameters(self) -> None:
         self.parameters = {
             "__EVENTTARGET": "ctl00$ctl04$txtFilterDateFrom",
             "__EVENTARGUMENT": "",
@@ -45,12 +51,16 @@ class Site(OralArgumentSiteLinear):
 
     @override
     def _process_html(self) -> None:
-        for row in self.html.xpath(".//tr")[1:]:
-            audio_anchor = row.xpath(".//a/@data-audio")
-            if not audio_anchor:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        for row in self.html.findall(".//tr")[1:]:
+            audio_anchor: list[str] = row.xpath(".//a/@data-audio")
+            if not bool(audio_anchor):
                 logger.warning(
                     "Row has no audio anchor '%s'",
-                    clean_string(row.xpath("string()")),
+                    clean_string(row.text_content()),
                 )
                 continue
 

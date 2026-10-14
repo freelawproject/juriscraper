@@ -1,5 +1,7 @@
 """Classes and utilities for an async httpx-based request manager for scrapers."""
 
+from __future__ import annotations
+
 import asyncio
 import time
 from abc import ABC, abstractmethod
@@ -14,14 +16,13 @@ from contextvars import ContextVar
 from dataclasses import dataclass, field
 from http.cookiejar import CookieJar
 from types import TracebackType
-from typing import Any
+from typing import TYPE_CHECKING, TypeVar
 
 import httpx
 from httpx import (
     URL,
     USE_CLIENT_DEFAULT,
     AsyncClient,
-    Auth,
     Cookies,
     HTTPStatusError,
     NetworkError,
@@ -29,10 +30,20 @@ from httpx import (
     Response,
     TimeoutException,
 )
-from httpx._client import UseClientDefault
-from typing_extensions import override
+from typing_extensions import Unpack, override
 
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.type_utils import (
+    AsyncClientOptions,
+    AuthTypes,
+    HeaderTypes,
+    QueryParamTypes,
+    RequestFiles,
+    TimeoutTypes,
+)
+
+if TYPE_CHECKING:
+    from httpx._client import UseClientDefault
 
 logger = make_default_logger()
 
@@ -43,12 +54,15 @@ CookieType = Cookies | CookieJar | dict[str, str] | list[tuple[str, str]]
 RequestContentType = str | bytes | Iterable[bytes] | AsyncIterable[bytes]
 
 
-async def _wait_for_cleanup(future: asyncio.Future[Any]) -> None:
+_Result = TypeVar("_Result")
+
+
+async def _wait_for_cleanup(future: asyncio.Future[_Result]) -> None:
     """Finish cleanup before propagating cancellation, including repeated cancels."""
     cancelled = None
     while not future.done():
         try:
-            await asyncio.shield(future)
+            await asyncio.wait((future,))
         except asyncio.CancelledError as exc:
             cancelled = exc
     future.result()
@@ -56,7 +70,7 @@ async def _wait_for_cleanup(future: asyncio.Future[Any]) -> None:
         raise cancelled
 
 
-async def _cancel_and_wait(futures: Iterable[asyncio.Future[Any]]) -> None:
+async def _cancel_and_wait(futures: Iterable[asyncio.Future[_Result]]) -> None:
     futures = tuple(futures)
     for future in futures:
         if not future.done():
@@ -64,17 +78,19 @@ async def _cancel_and_wait(futures: Iterable[asyncio.Future[Any]]) -> None:
     await _wait_for_cleanup(asyncio.gather(*futures, return_exceptions=True))
 
 
-async def _run_tasks(*awaitables: Awaitable[Any]) -> None:
+async def _run_tasks(*awaitables: Awaitable[object]) -> None:
     futures = [asyncio.ensure_future(awaitable) for awaitable in awaitables]
-    group = asyncio.gather(*futures)
     try:
-        # Cancel children once, in cleanup, rather than through both gathers.
-        await asyncio.shield(group)
+        # Wait without propagating cancellation; cancel children once below.
+        pending = set(futures)
+        while bool(pending):
+            done, pending = await asyncio.wait(
+                pending, return_when=asyncio.FIRST_COMPLETED
+            )
+            for future in done:
+                future.result()
     finally:
-        try:
-            await _cancel_and_wait(futures)
-        finally:
-            group.exception()
+        await _cancel_and_wait(futures)
 
 
 class ScheduledRequest(Request):
@@ -88,30 +104,41 @@ class ScheduledRequest(Request):
     def __init__(
         self,
         method: str,
-        url: str,
+        url: URL | str,
         *,
         content: RequestContentType | None = None,
-        data: Mapping[str, PrimitiveData] | None = None,
-        json: Any | None = None,
-        params: Mapping[str, PrimitiveData | Sequence[PrimitiveData]]
-        | None = None,
-        headers: Mapping[str, str] | None = None,
+        data: Mapping[str, object] | None = None,
+        files: RequestFiles | None = None,
+        json: object = None,
+        params: QueryParamTypes | None = None,
+        headers: HeaderTypes | None = None,
         cookies: CookieType | None = None,
         follow_redirects: bool | UseClientDefault = USE_CLIENT_DEFAULT,
-        timeout: float | UseClientDefault | None = USE_CLIENT_DEFAULT,
+        timeout: TimeoutTypes | UseClientDefault = USE_CLIENT_DEFAULT,
+        extensions: Mapping[str, object] | None = None,
     ) -> None:
+        request_extensions = dict(extensions if bool(extensions) else {})
+        if isinstance(timeout, tuple):
+            timeout = httpx.Timeout(timeout)
+        if isinstance(timeout, httpx.Timeout | int | float) or timeout is None:
+            request_extensions.setdefault(
+                "timeout", httpx.Timeout(timeout).as_dict()
+            )
         super().__init__(
             method=method,
             url=url,
             content=content,
             data=data,
+            files=files,
             json=json,
             params=params,
             headers=headers,
             cookies=cookies,
-            extensions={"timeout": timeout},
+            extensions=request_extensions,
         )
         self.follow_redirects: bool | UseClientDefault = follow_redirects
+        self.auth: AuthTypes | UseClientDefault | None = USE_CLIENT_DEFAULT
+        self.stream_response = False
         self.response: asyncio.Future[Response] = asyncio.Future()
         self.attempt = 0
 
@@ -121,7 +148,7 @@ class ScheduledRequest(Request):
         request: Request,
         *,
         follow_redirects: bool | UseClientDefault = USE_CLIENT_DEFAULT,
-    ) -> "ScheduledRequest":
+    ) -> ScheduledRequest:
         """Wrap a pre-built :class:`httpx.Request` as a :class:`ScheduledRequest`.
 
         Use this when the request has already been produced via
@@ -131,6 +158,8 @@ class ScheduledRequest(Request):
         instance = cls.__new__(cls)
         instance.__dict__.update(request.__dict__)
         instance.follow_redirects = follow_redirects
+        instance.auth = USE_CLIENT_DEFAULT
+        instance.stream_response = False
         instance.response = asyncio.Future()
         instance.attempt = 0
         return instance
@@ -143,7 +172,7 @@ class RequestHandler:
     """
 
     async def before_send(
-        self, manager: "RequestManager", request: ScheduledRequest
+        self, manager: RequestManager, request: ScheduledRequest
     ) -> None:
         """The RequestManager awaits this method before sending the request.
 
@@ -153,7 +182,7 @@ class RequestHandler:
         return
 
     async def listen(
-        self, manager: "RequestManager", request: ScheduledRequest
+        self, manager: RequestManager, request: ScheduledRequest
     ) -> None:
         """The RequestManager spawns this method in a Task to listen to the
         request concurrently.
@@ -243,15 +272,7 @@ class RequestManager(AsyncClient):
         handlers: Sequence[RequestHandler] | None = None,
         *,
         retry: RetryHandler | None = None,
-        auth: tuple[str | bytes, str | bytes] | Auth | None = None,
-        params: Mapping[str, PrimitiveData | Sequence[PrimitiveData]]
-        | None = None,
-        headers: Mapping[str, str] | None = None,
-        cookies: CookieType | None = None,
-        timeout: float = 30.0,
-        follow_redirects: bool = True,
-        base_url: URL | str = "",
-        default_encoding: str = "utf-8",
+        **kwargs: Unpack[AsyncClientOptions],
     ) -> None:
         """Initialize the request manager.
 
@@ -270,6 +291,7 @@ class RequestManager(AsyncClient):
             base_url: Base URL for every request (httpx AsyncClient passthrough)
             default_encoding: Default encoding for responses if not specified by `Content-Type`
                 header (httpx AsyncClient passthrough)
+            **kwargs: Additional HTTPX AsyncClient options.
         """
         if retry is None:
             retry = NoRetry()
@@ -278,22 +300,16 @@ class RequestManager(AsyncClient):
             "Pragma": "no-cache",
         }
         logger.debug("Creating request manager.")
-        headers = httpx.Headers(headers)
+        headers = httpx.Headers(kwargs.get("headers"))
         ua_header = headers.setdefault("User-Agent", USER_AGENT)
         if "Juriscraper" not in ua_header:
             extra_headers |= {"User-Agent": ua_header + f" {USER_AGENT}"}
         headers.update(extra_headers)
-        super().__init__(
-            auth=auth,
-            params=params,
-            headers=headers,
-            cookies=cookies,
-            timeout=timeout,
-            http2=True,
-            follow_redirects=follow_redirects,
-            base_url=base_url,
-            default_encoding=default_encoding,
-        )
+        kwargs["headers"] = headers
+        kwargs.setdefault("timeout", 30.0)
+        kwargs.setdefault("http2", True)
+        kwargs.setdefault("follow_redirects", True)
+        super().__init__(**kwargs)
         if handlers is None:
             handlers = []
         self._retry_handler: RetryHandler = retry
@@ -315,7 +331,7 @@ class RequestManager(AsyncClient):
                     await _run_tasks(
                         *(h.before_send(self, request) for h in self.handlers)
                     )
-                    await self.send(request)
+                    await self._send_scheduled(request)
         except Exception as exc:
             if not request.response.done():
                 request.response.set_exception(exc)
@@ -371,67 +387,6 @@ class RequestManager(AsyncClient):
             request: The request to schedule."""
         self._schedule_request(request)
 
-    @override
-    async def request(
-        self,
-        method: str,
-        url: str,
-        *,
-        content: RequestContentType | None = None,
-        data: Mapping[str, PrimitiveData] | None = None,
-        json: Any | None = None,
-        params: Mapping[str, PrimitiveData | Sequence[PrimitiveData]]
-        | None = None,
-        headers: Mapping[str, str] | None = None,
-        cookies: CookieType | None = None,
-        follow_redirects: bool | UseClientDefault = USE_CLIENT_DEFAULT,
-        timeout: float | UseClientDefault | None = USE_CLIENT_DEFAULT,
-        **kwargs: Any,
-    ) -> Response:
-        """Send a request and set all handlers to listen to it.
-
-        Parameters are passed directly to `httpx.AsyncClient.send`.
-
-        Requests will not be sent until the `before_send` method has exited on
-        all handlers, and Responses will not be returned until the `listen`
-        method has exited on all handlers.
-
-        Args:
-            method: The HTTP method for this request
-            url: The URL to send the request to
-            content: The content to send with the request
-            data: The form data to send with the request
-            json: The JSON data to send with the request
-            params: The query parameters to send with the request
-            headers: The headers to send with the request
-            cookies: The cookies to send with the request
-            follow_redirects: Whether to follow redirect responses
-            timeout: Response timeout
-            **kwargs: Arbitrary keyword arguments.
-
-        Return:
-            The response to the dispatched request after handler interference."""
-        self._check_open()
-        logger.debug("Requesting %s %s", method, url)
-        request = self.build_request(
-            method,
-            url,
-            content=content,
-            data=data,
-            json=json,
-            params=params,
-            headers=headers,
-            cookies=cookies,
-            follow_redirects=follow_redirects,
-            timeout=timeout,
-        )
-
-        task = self._schedule_request(request, listen=True)
-        try:
-            return await asyncio.shield(task)
-        finally:
-            await _cancel_and_wait((task,))
-
     async def _request(
         self, request: ScheduledRequest, *, listen: bool
     ) -> Response:
@@ -450,19 +405,66 @@ class RequestManager(AsyncClient):
                 self._send_request(request),
             )
             return request.response.result()
+        except BaseException:
+            if (
+                request.response.done()
+                and not request.response.cancelled()
+                and request.response.exception() is None
+            ):
+                await _wait_for_cleanup(
+                    asyncio.ensure_future(request.response.result().aclose())
+                )
+            raise
         finally:
             request.response.cancel()
             self._in_request.reset(token)
 
     @override
     async def send(
-        self, request: ScheduledRequest, **kwargs: Any
+        self,
+        request: Request,
+        *,
+        stream: bool = False,
+        auth: AuthTypes | UseClientDefault | None = USE_CLIENT_DEFAULT,
+        follow_redirects: bool | UseClientDefault = USE_CLIENT_DEFAULT,
+    ) -> Response:
+        """Send a built request through the handlers and retry pipeline."""
+        if isinstance(request, ScheduledRequest):
+            scheduled = request
+            if isinstance(follow_redirects, bool):
+                scheduled.follow_redirects = follow_redirects
+        else:
+            scheduled = ScheduledRequest._from_httpx_request(
+                request, follow_redirects=follow_redirects
+            )
+        scheduled.auth = auth
+        scheduled.stream_response = stream
+        task = self._schedule_request(scheduled, listen=True)
+        try:
+            await asyncio.wait((task,))
+        except BaseException:
+            try:
+                await _cancel_and_wait((task,))
+            finally:
+                # The task may have returned a stream before cancellation won.
+                if (
+                    task.done()
+                    and not task.cancelled()
+                    and task.exception() is None
+                ):
+                    await _wait_for_cleanup(
+                        asyncio.ensure_future(task.result().aclose())
+                    )
+            raise
+        return task.result()
+
+    async def _send_scheduled(
+        self, request: ScheduledRequest
     ) -> Response | None:
         """Send a `ScheduledRequest` and set the response or error on it accordingly.
 
         Args:
             request: The request to send.
-            **kwargs: Arbitrary keyword arguments.
 
         Returns:
             The `httpx.Response` or `None` if an error occurred."""
@@ -474,7 +476,7 @@ class RequestManager(AsyncClient):
                 "Request intercepted and response set (%s).", request.url
             )
             exc = request.response.exception()
-            if exc:
+            if bool(exc):
                 return None
             return request.response.result()
         self._check_open()
@@ -484,9 +486,15 @@ class RequestManager(AsyncClient):
             response = await super().send(
                 request,
                 follow_redirects=request.follow_redirects,
+                auth=request.auth,
+                stream=request.stream_response,
             )
             _ = response.raise_for_status()
         except Exception as e:
+            if response is not None:
+                await _wait_for_cleanup(
+                    asyncio.ensure_future(response.aclose())
+                )
             if request.response.done():
                 return response
             if await self._retry_handler.should_retry(request, e):
@@ -500,24 +508,50 @@ class RequestManager(AsyncClient):
             logger.debug("Request succeeded: %s", request.url)
             if not request.response.done():
                 request.response.set_result(response)
+            else:
+                await _wait_for_cleanup(
+                    asyncio.ensure_future(response.aclose())
+                )
 
         return response
 
     @override
     def build_request(
         self,
-        *args: Any,
+        method: str,
+        url: URL | str,
+        *,
+        content: RequestContentType | None = None,
+        data: Mapping[str, object] | None = None,
+        files: RequestFiles | None = None,
+        json: object = None,
+        params: QueryParamTypes | None = None,
+        headers: HeaderTypes | None = None,
+        cookies: CookieType | None = None,
+        timeout: TimeoutTypes | UseClientDefault = USE_CLIENT_DEFAULT,
+        extensions: Mapping[str, object] | None = None,
         follow_redirects: bool | UseClientDefault = USE_CLIENT_DEFAULT,
-        **kwargs: Any,
     ) -> ScheduledRequest:
         """Build a `ScheduledRequest` from the arguments passed to `request`."""
         return ScheduledRequest._from_httpx_request(
-            super().build_request(*args, **kwargs),
+            super().build_request(
+                method,
+                url,
+                content=content,
+                data=data,
+                files=files,
+                json=json,
+                params=params,
+                headers=headers,
+                cookies=cookies,
+                timeout=timeout,
+                extensions=extensions,
+            ),
             follow_redirects=follow_redirects,
         )
 
     @override
-    async def __aenter__(self) -> "RequestManager":
+    async def __aenter__(self) -> RequestManager:
         """Allows the client to be used as an async context manager."""
         self._check_open()
         _ = await super().__aenter__()
@@ -550,7 +584,7 @@ class RateLimit(RequestHandler):
 
     @override
     async def before_send(
-        self, manager: "RequestManager", request: ScheduledRequest
+        self, manager: RequestManager, request: ScheduledRequest
     ) -> None:
         """Ensure that requests aren't sent faster than the rate limit."""
         elapsed = time.time() - self._last_request_time

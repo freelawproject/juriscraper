@@ -4,18 +4,28 @@ Author: mlr
 """
 
 import datetime
+from datetime import date
 
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
+
+from juriscraper.AbstractSite import SiteOptions
 from juriscraper.lib.html_utils import (
     get_table_column_links,
     get_table_column_text,
 )
-from juriscraper.lib.string_utils import convert_date_string
+from juriscraper.lib.string_utils import CaseNameTweaker, convert_date_string
 from juriscraper.OralArgumentSite import OralArgumentSite
 
 
 class Site(OralArgumentSite):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         # query for results of current month
         now = datetime.datetime.now()
@@ -32,13 +42,28 @@ class Site(OralArgumentSite):
             "field_oa_hearing_date_value[max][date]=%s"
         ) % (start, end)
 
-    def _get_download_urls(self):
+    @override
+    def _get_download_urls(self) -> list[str]:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
         return get_table_column_links(self.html, 6)
 
-    def _get_case_names(self):
+    @override
+    def _get_case_names(self) -> list[str]:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
         return get_table_column_text(self.html, 3)
 
-    def _get_docket_numbers(self):
+    @override
+    def _get_docket_numbers(self) -> list[str]:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
         dockets = get_table_column_text(self.html, 2)
         # Handle case where "no results" message is put in table cell, see: ca10_example_2.html
         return (
@@ -47,7 +72,12 @@ class Site(OralArgumentSite):
             else dockets
         )
 
-    def _get_case_dates(self):
+    @override
+    def _get_case_dates(self) -> list[date | None]:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
         return [
             convert_date_string(ds)
             for ds in get_table_column_text(self.html, 4)

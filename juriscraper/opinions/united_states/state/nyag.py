@@ -5,14 +5,22 @@ Court Short Name: New York Attorney General
 
 import datetime
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.year = datetime.date.today().year
         self.base_url = "https://ag.ny.gov/appeals-and-opinions/numerical-index?field_opinion_year_value=%d"
@@ -21,10 +29,17 @@ class Site(OpinionSiteLinear):
 
     @override
     def _process_html(self) -> None:
-        for row in self.html.xpath("//div[@class='views-row']"):
-            docket, _, _, summary, *_ = row.xpath(".//div/text()")
-            url = row.xpath(".//div/span/p/a")[0].get("href")
-            case = row.xpath(".//div/span/p/a/text()")[0]
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath("//div[@class='views-row']")
+        for row in rows:
+            metadata: list[str] = row.xpath(".//div/text()")
+            docket, _, _, summary, *_ = metadata
+            anchor: HtmlElement = row.xpath(".//div/span/p/a")[0]
+            url = anchor.attrib["href"]
+            case: str = row.xpath(".//div/span/p/a/text()")[0]
             self.cases.append(
                 {
                     "name": case,

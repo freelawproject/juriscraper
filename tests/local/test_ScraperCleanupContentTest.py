@@ -4,6 +4,7 @@ import glob
 import os
 import unittest
 
+from juriscraper.AbstractSite import AbstractSite
 from juriscraper.lib.importer import build_module_list
 from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.lib.test_utils import warn_generated_compare_file
@@ -25,7 +26,7 @@ class ScraperCleanupContentTest(unittest.TestCase):
     run again.
     """
 
-    def test_cleanup_content_fixtures(self):
+    def test_cleanup_content_fixtures(self) -> None:
         module_strings = build_module_list("juriscraper.opinions")
         modules_by_name = {
             module_string.rsplit(".", 1)[1]: module_string
@@ -57,7 +58,14 @@ class ScraperCleanupContentTest(unittest.TestCase):
             mod = __import__(
                 f"{package}.{module}", globals(), locals(), [module]
             )
-            site = mod.Site(cnt=CaseNameTweaker())
+            site_class: object = getattr(mod, "Site", None)
+            if not isinstance(site_class, type) or not issubclass(
+                site_class, AbstractSite
+            ):
+                raise TypeError(
+                    f"{mod.__name__}.Site must subclass AbstractSite"
+                )
+            site = site_class(cnt=CaseNameTweaker())
 
             with open(path, "rb") as fixture_file:
                 content = fixture_file.read()
@@ -82,7 +90,7 @@ class ScraperCleanupContentTest(unittest.TestCase):
                 with open(compare_path, "wb") as compare_file:
                     compare_file.write(cleaned)
 
-        if compare_files_generated:
+        if bool(compare_files_generated):
             self.fail(
                 "Generated compare file(s) during test, please review before "
                 "proceeding. If the data looks good, run tests again, then be "

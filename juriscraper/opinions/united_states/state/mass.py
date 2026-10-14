@@ -17,8 +17,11 @@ History:
 
 import re
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -27,8 +30,13 @@ class Site(OpinionSiteLinear):
     Backscraper is implemented on `united_states_backscrapers.state.mass.py`
     """
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.url = "https://www.mass.gov/info-details/new-opinions"
         self.court_id = self.__module__
         self.court_identifier = "SJC"
@@ -38,21 +46,28 @@ class Site(OpinionSiteLinear):
 
     @override
     def _process_html(self) -> None:
-        for row in self.html.xpath(".//a/@href[contains(.,'download')]/.."):
-            url = row.get("href")
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(
+            ".//a/@href[contains(.,'download')]/.."
+        )
+        for row in rows:
+            url = row.attrib["href"]
             content = row.text_content()
             m = re.search(r"(.*?) \((.*?)\)( \((.*?)\))?", content)
-            if not m:
+            if m is None:
                 continue
             name, docket, _, date = m.groups()
             if self.court_identifier not in docket:
                 continue
             if date is None:
                 # Likely a new case opinion - check the header text above it
-                if row.xpath(".//../../h3/text()"):
-                    header_text = row.xpath(".//../../h3/text()")[0]
+                if bool(row.xpath(".//../../h3/text()")):
+                    header_text: str = row.xpath(".//../../h3/text()")[0]
                     date = header_text.split("Decisions:")[1].strip()
-                if not date:
+                if not bool(date):
                     # if no date is found skip it
                     continue
             self.cases.append(

@@ -11,25 +11,48 @@ History:
 """
 
 import re
-from datetime import datetime
+from datetime import date, datetime
+from typing import NotRequired
 from urllib.parse import urlencode
 
-from typing_extensions import override
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
 from juriscraper.ClusterSite import ClusterSite
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.lib.type_utils import OpinionType
 from juriscraper.opinions.united_states.state import mich
 from juriscraper.OpinionSite import OpinionSite
 
 
-class Site(ClusterSite, mich.Site):
+class _CaseTitle(TypedDict):
+    title: str
+
+
+class _CaseDetails(TypedDict):
+    searchItems: NotRequired[list[_CaseTitle]]
+
+
+class _Search(TypedDict):
+    caseDetailResults: NotRequired[_CaseDetails]
+
+
+_search_adapter = TypeAdapter(_Search)
+
+
+class Site(ClusterSite[tuple[date, date]], mich.Site):
     court = "Court Of Appeals"
     first_opinion_date = datetime(1996, 4, 9)
     extract_from_text = OpinionSite.extract_from_text
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         params = self.filters + (("aAppellateCourt", self.court),)
         self.url = f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseOpinions?{urlencode(params)}"
@@ -40,7 +63,10 @@ class Site(ClusterSite, mich.Site):
 
         :return: None
         """
-        for item in self.html["searchItems"]:
+        items = mich.SEARCH_RESPONSE.validate_python(self.html, strict=True)[
+            "searchItems"
+        ]
+        for item in items:
             case_dict = await self._extract_case_data_from_item(item)
 
             # Use URL suffix to get the type. Other prefixes not used here
@@ -61,10 +87,13 @@ class Site(ClusterSite, mich.Site):
 
             # If we can't cluster it, append it to self.cases
             # if it was clustered, the data will already be in self.cases
-            if not self.cluster_opinions(case_dict, self.cases):
+            if not bool(self.cluster_opinions(case_dict, self.cases)):
                 self.cases.append(case_dict)
 
-    async def get_missing_name_and_docket(self, item: dict) -> tuple[str, str]:
+    @override
+    async def get_missing_name_and_docket(
+        self, item: mich.SearchItem
+    ) -> tuple[str, str]:
         """Try to get the case name using a secondary request
 
         Example of the content in the URL
@@ -77,24 +106,31 @@ class Site(ClusterSite, mich.Site):
             return "Placeholder name", "Placeholder docket"
 
         logger.info("Getting case name from secondary request")
-        if match := re.search(
-            r"\d{7}_C(?P<docket_number>\d{6})", item["title"]
-        ):
+        if (
+            match := re.search(
+                r"\d{7}_C(?P<docket_number>\d{6})", item["title"]
+            )
+        ) is not None:
             docket_number = match.group("docket_number")
         else:
             docket_number = item["caseUrl"].split("/")[-1]
 
-        if not docket_number:
+        if not bool(docket_number):
             logger.error("michctapp: could not get docket number", extra=item)
             return "Placeholder name", "Placeholder docket"
 
         url = f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseSearchContent?searchQuery={docket_number}"
         await self._request_url_get(url)
-        response = self.request["response"].json()
+        response = self.request.get("response")
+        if response is None:
+            raise ValueError("Download a response before accessing it.")
+        response = _search_adapter.validate_python(
+            response.json(), strict=True
+        )
         search_items = response.get("caseDetailResults", {}).get(
             "searchItems", []
         )
-        if not search_items:
+        if not bool(search_items):
             logger.error(
                 "michctapp: no results from search API for docket %s "
                 % docket_number,
@@ -111,7 +147,8 @@ class Site(ClusterSite, mich.Site):
 
         return self.cleanup_case_name(search_items[0]["title"]), docket_number
 
-    def get_disposition(self, item: dict) -> str:
+    @override
+    def get_disposition(self, item: mich.SearchItem) -> str:
         """Get the disposition value
 
         Examples:
@@ -123,7 +160,11 @@ class Site(ClusterSite, mich.Site):
         :return: the disposition string
         """
         return (
-            (item.get("decision", "") or "")
+            (
+                decision_value
+                if (decision_value := item.get("decision", "")) is not None
+                else ""
+            )
             .replace("L/Ct", "Lower Court")
             .strip()
         )

@@ -4,17 +4,25 @@ import os
 import pprint
 import re
 import sys
+from datetime import datetime
 from html import unescape
+from types import TracebackType
+from typing import Self
 
 import feedparser
-from httpx import AsyncClient, Timeout
+from feedparser.util import FeedParserDict
+from httpx import AsyncClient, Response, Timeout
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import clean_string, harmonize
+from juriscraper.lib.type_utils import AsyncClientOptions, GetRequestOptions
 from juriscraper.lib.utils import clean_court_object
 
-from .docket_report import DocketReport
+from .docket_report import BaseDocketReport, DocketNumberComponents
 from .utils import (
+    AppellateDocument,
     get_pacer_case_id_from_nonce_url,
     get_pacer_doc_id_from_doc1_url,
     get_pacer_seq_no_from_doc1_url,
@@ -75,7 +83,55 @@ reached out to all of these jurisdictions and heard back the following:
 """
 
 
-def append_or_merge_entry(docket_list, new_docket):
+class RssEntry(AppellateDocument):
+    date_filed: datetime
+    description: str
+    short_description: str
+    pacer_seq_no: str | None
+
+
+class _RssMetadata(TypedDict, total=False):
+    court_id: str
+    pacer_case_id: str | None
+    docket_number: str | None
+    case_name: str
+    date_filed: None
+    date_terminated: None
+    date_converted: None
+    date_discharged: None
+    assigned_to_str: str
+    referred_to_str: str
+    cause: str
+    nature_of_suit: str
+    jury_demand: str
+    demand: str
+    jurisdiction: str
+    trustee_str: str
+    type: str
+    office: str
+    chapter: str
+    federal_defendant_number: str | None
+    federal_dn_case_type: str | None
+    federal_dn_judge_initials_assigned: str | None
+    federal_dn_judge_initials_referred: str | None
+    federal_dn_office_code: str | None
+
+
+class RssMetadata(_RssMetadata, closed=True):
+    pass
+
+
+_RSS_METADATA = TypeAdapter(RssMetadata)
+
+
+class RssDocket(_RssMetadata, closed=True):
+    parties: None
+    docket_entries: list[RssEntry]
+
+
+def append_or_merge_entry(
+    docket_list: list[RssDocket], new_docket: RssDocket
+) -> None:
     """Append new entry to our output or merge it if it's a multi-event entry.
 
     CMECF entries can contain multiple events, e.g. anyone filing a Motion can
@@ -95,8 +151,12 @@ def append_or_merge_entry(docket_list, new_docket):
     for docket in docket_list:
         entry = docket["docket_entries"][0]
         new_entry = new_docket["docket_entries"][0]
-        same_dn = docket["docket_number"] == new_docket["docket_number"]
-        same_cn = docket["pacer_case_id"] == new_docket["pacer_case_id"]
+        same_dn = docket.get("docket_number") == new_docket.get(
+            "docket_number"
+        )
+        same_cn = docket.get("pacer_case_id") == new_docket.get(
+            "pacer_case_id"
+        )
         same_date = entry["date_filed"] == new_entry["date_filed"]
         same_doc_id = entry["pacer_doc_id"] == new_entry["pacer_doc_id"]
         if all([same_dn, same_cn, same_date, same_doc_id]):
@@ -116,7 +176,7 @@ def append_or_merge_entry(docket_list, new_docket):
         docket_list.append(new_docket)
 
 
-class PacerRssFeed(DocketReport):
+class PacerRssFeed(BaseDocketReport[list[RssDocket]]):
     # The entries are HTML entity-coded, and these matches are run AFTER
     # decoding. A typical entry is of the form:
     #   [short_description] (<a href="doc1_url">document_number</a>)
@@ -133,12 +193,21 @@ class PacerRssFeed(DocketReport):
 
     CACHE_ATTRS = ["data"]
 
-    def __init__(self, court_id, **kwargs):
+    def __init__(
+        self, court_id: str, **kwargs: Unpack[AsyncClientOptions]
+    ) -> None:
         super().__init__(court_id)
         self._clear_caches()
-        self._data = None
+        self._data: list[RssDocket] | None = None
+        self.feed: FeedParserDict | None = None
+        self.response: Response | None = None
         kwargs.setdefault("http2", True)
         kwargs.setdefault("follow_redirects", True)
+        # The timeout here is a bit tricky. Too long, and national PACER
+        # outages cause us grief. Too short and slow courts don't get done.
+        # Previously, this value has been (60, 300), then 5. Hopefully the
+        # below is a reasonable middle ground.
+        kwargs.setdefault("timeout", Timeout(5, read=20))
         self.session = AsyncClient(**kwargs)
         self.is_valid = True
         self.is_appellate = False
@@ -153,17 +222,20 @@ class PacerRssFeed(DocketReport):
         else:
             self.is_bankruptcy = False
 
-    async def __aenter__(self):
-        assert self.session is not None
+    async def __aenter__(self) -> Self:
         await self.session.__aenter__()
         return self
 
-    async def __aexit__(self, exc_type, exc_value, traceback):
-        assert self.session is not None
+    async def __aexit__(
+        self,
+        exc_type: type[BaseException] | None,
+        exc_value: BaseException | None,
+        traceback: TracebackType | None,
+    ) -> None:
         await self.session.__aexit__(exc_type, exc_value, traceback)
 
     @property
-    def url(self):
+    def url(self) -> str:
         if self.court_id == "nyed":
             # EDNY has some special RSS software. In Sept. 2017,
             # rss_outside.pl redirected to readyDockets.pl:
@@ -182,7 +254,7 @@ class PacerRssFeed(DocketReport):
         else:
             return f"https://ecf.{self.court_id}.uscourts.gov/{self.PATH}"
 
-    async def query(self):
+    async def query(self, **kwargs: Unpack[GetRequestOptions]) -> None:
         """Query the RSS feed for a given court ID
 
         Note that we use httpx here, and so we forgo some of the
@@ -198,72 +270,79 @@ class PacerRssFeed(DocketReport):
         For a good summary of this issue, see:
         https://github.com/freelawproject/juriscraper/issues/195#issuecomment-385848344
         """
-        assert self.session is not None
         logger.info(f"Querying the RSS feed for {self.court_id}")
-        # The timeout here is a bit tricky. Too long, and national PACER
-        # outages cause us grief. Too short and slow courts don't get done.
-        # Previously, this value has been (60, 300), then 5. Hopefully the
-        # below is a reasonable middle ground.
-        timeout = Timeout(5, read=20)
-        self.response = await self.session.get(self.url, timeout=timeout)
+        self.response = await self.session.get(self.url, **kwargs)
 
-    def parse(self):
+    def parse(self) -> None:
         self._clear_caches()
+        if self.response is None:
+            raise ValueError("A response is required before parsing a feed.")
         self.response.raise_for_status()
         self._parse_text(self.response.text)
 
-    def _parse_text(self, text):
+    def _parse_text(self, text: str) -> None:
         """Parse the feed and set self.feed
 
         :param text: The text of the RSS feed.
         :return: None
         """
+        self._clear_caches()
         self.feed = feedparser.parse(text)
 
     @property
-    def data(self):
+    @override
+    def data(self) -> list[RssDocket]:
         """Override this to create a list of docket-like objects instead of the
         usual dict that is usually provided by the docket report.
         """
         if self._data is not None:
             return self._data
 
-        docket_list = []
-        for entry in self.feed.entries:
+        if self.feed is None:
+            raise ValueError("Parse a feed before accessing its entries.")
+        docket_list: list[RssDocket] = []
+        entries: list[FeedParserDict] = self.feed.entries
+        for entry in entries:
             try:
-                new_docket = self.metadata(entry)
-                new_docket["parties"] = None
-                new_docket["docket_entries"] = self.docket_entries(entry)
+                new_docket: RssDocket = {
+                    **self.metadata(entry),
+                    "parties": None,
+                    "docket_entries": self.docket_entries(entry),
+                }
             except AttributeError:
                 # Happens when RSS items lack necessary attributes like a URL
                 # or published date.
                 pass
             else:
-                if (
-                    new_docket["docket_entries"]
-                    and new_docket["docket_number"]
+                if bool(new_docket["docket_entries"]) and bool(
+                    new_docket.get("docket_number")
                 ):
                     append_or_merge_entry(docket_list, new_docket)
 
         self._data = docket_list
         return docket_list
 
-    def metadata(self, entry):
+    def metadata(self, entry: FeedParserDict) -> RssMetadata:
         if self.is_valid is False:
             return {}
 
+        title: object = entry.get("title")
+        if not isinstance(title, str):
+            raise AttributeError("RSS entry lacks a text 'title' field.")
         docket_number, docket_number_components = self._parse_docket_number(
-            entry.title
+            title
         )
-        data = {
+        pacer_case_id = None
+        if not self.is_appellate:
+            link: object = entry.get("link")
+            if not isinstance(link, str):
+                raise AttributeError("RSS entry lacks a text 'link' field.")
+            pacer_case_id = get_pacer_case_id_from_nonce_url(link)
+        data: RssMetadata = {
             "court_id": self.court_id,
-            "pacer_case_id": (
-                get_pacer_case_id_from_nonce_url(entry.link)
-                if not self.is_appellate
-                else None
-            ),
+            "pacer_case_id": pacer_case_id,
             "docket_number": docket_number,
-            "case_name": self._get_case_name(entry.title),
+            "case_name": self._get_case_name(title),
             # Filing date is not available. Also the case for free opinions.
             "date_filed": None,
             "date_terminated": None,
@@ -282,40 +361,57 @@ class PacerRssFeed(DocketReport):
             "office": "",
             "chapter": "",
         }
-        data.update(self._parse_get_trustee_type_office_chapter(entry.summary))
+        summary: object = entry.get("summary")
+        if not isinstance(summary, str):
+            raise AttributeError("RSS entry lacks a text 'summary' field.")
+        data.update(self._parse_get_trustee_type_office_chapter(summary))
         # Include the docket_number components.
         data.update(docket_number_components)
-        data = clean_court_object(data)
-        return data
+        return _RSS_METADATA.validate_python(
+            clean_court_object(data), strict=True
+        )
 
     @property
-    def parties(self):
+    def parties(self) -> None:
         raise NotImplementedError("No parties for RSS feeds.")
 
-    def docket_entries(self, entry):
+    def docket_entries(self, entry: FeedParserDict) -> list[RssEntry]:
         """Parse the RSS item to get back a docket entry-like object.
         Although there is only one, return it as a list.
         """
-        de = {
-            "date_filed": parse_datetime_for_us_timezone(entry.published),
+        summary: object = entry.get("summary")
+        if not isinstance(summary, str):
+            raise AttributeError("RSS entry lacks a text 'summary' field.")
+        published: object = entry.get("published")
+        if not isinstance(published, str):
+            raise AttributeError("RSS entry lacks a text 'published' field.")
+        de: RssEntry = {
+            "date_filed": parse_datetime_for_us_timezone(published),
             "description": "",
-            "document_number": self._get_value(
-                self.document_number_regex, entry.summary
-            )
-            or None,
-            "short_description": unescape(
-                self._get_value(self.short_desc_regex, entry.summary)
+            "document_number": (
+                get_value_value
+                if bool(
+                    get_value_value := self._get_value(
+                        self.document_number_regex, summary
+                    )
+                )
+                else None
             ),
+            "short_description": unescape(
+                self._get_value(self.short_desc_regex, summary)
+            ),
+            "pacer_doc_id": "",
+            "pacer_seq_no": None,
         }
 
         # District and bankruptcy doc URL
-        doc1_url = self._get_value(self.doc1_url_regex, entry.summary)
+        doc1_url = self._get_value(self.doc1_url_regex, summary)
         # Appellate doc URL
-        docs1_url = self._get_value(self.docs1_url_regex, entry.summary)
-        if doc1_url:
+        docs1_url = self._get_value(self.docs1_url_regex, summary)
+        if bool(doc1_url):
             de["pacer_doc_id"] = get_pacer_doc_id_from_doc1_url(doc1_url)
             de["pacer_seq_no"] = get_pacer_seq_no_from_doc1_url(doc1_url)
-        elif docs1_url:
+        elif bool(docs1_url):
             de["pacer_doc_id"] = get_pacer_doc_id_from_doc1_url(docs1_url)
             de["pacer_seq_no"] = None
         else:
@@ -330,7 +426,9 @@ class PacerRssFeed(DocketReport):
 
         return [de]
 
-    def _parse_get_trustee_type_office_chapter(self, entry_text):
+    def _parse_get_trustee_type_office_chapter(
+        self, entry_text: str
+    ) -> RssMetadata:
         if not self.is_bankruptcy:
             return {}
         data_parts_re = re.compile(
@@ -342,16 +440,19 @@ class PacerRssFeed(DocketReport):
             re.VERBOSE,
         )
         m = data_parts_re.search(entry_text)
+        if m is None:
+            return {}
+        trustee = m.group("trustee")
         return {
             "type": m.group("type"),
             "office": m.group("office"),
             "chapter": m.group("chapter"),
-            "trustee_str": m.group("trustee") or "",
+            "trustee_str": trustee if trustee is not None else "",
         }
 
     def _parse_docket_number(
         self, title_text: str | None = None
-    ) -> tuple[str | None, dict[str, str | None]]:
+    ) -> tuple[str | None, DocketNumberComponents]:
         """Parse docket numbers from a list of potential ones. Also parse
         the docket number components.
 
@@ -361,6 +462,8 @@ class PacerRssFeed(DocketReport):
         Otherwise, None and the default docket_number components dict with None
         values.
         """
+        if not bool(title_text):
+            return None, self._return_default_dn_components()
         if self.is_bankruptcy:
             # Uses both b/c sometimes the bankr. cases have a dist-style docket
             # number.
@@ -374,14 +477,14 @@ class PacerRssFeed(DocketReport):
             regexes = [self.docket_number_dist_regex]
         for regex in regexes:
             match = regex.search(title_text)
-            if match:
+            if match is not None:
                 docket_number_components = self._parse_dn_components(
                     title_text
                 )
                 return match.group(1), docket_number_components
         return None, self._return_default_dn_components()
 
-    def _get_case_name(self, title_text):
+    def _get_case_name(self, title_text: str) -> str:
         # 1:18-cv-04423 Chau v. Gorg &amp; Smith et al --> Chau v. Gorg & Smith
         try:
             case_name = title_text.split(" ", 1)[1]
@@ -392,7 +495,7 @@ class PacerRssFeed(DocketReport):
         return case_name
 
 
-async def _main():
+async def _main() -> None:
     # For help: python -m juriscraper.pacer.rss_feeds -h
     parser = argparse.ArgumentParser(
         prog="python -m %s.%s"
@@ -440,7 +543,12 @@ sorry if that was your filename.""",
                 % (args.court_or_file, feed.court_id)
             )
             f = open(args.court_or_file)  # noqa: SIM115
-        feed._parse_text(f.read().decode("utf-8"))
+        async with feed:
+            try:
+                feed._parse_text(f.read())
+            finally:
+                if f is not sys.stdin:
+                    f.close()
 
     print(f"Got {len(feed.data)} items")
     if args.verbose:

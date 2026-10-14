@@ -9,17 +9,18 @@
 
 import re
 from datetime import datetime
-from typing import Any
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
 from juriscraper.lib.html_utils import get_row_column_text
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import BackscrapeOptions, ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[int]):
     # data available in HTML format since 1996, in PDF since 2006
     start_year = 2006
     # judges full names from https://ujs.sd.gov/Supreme_Court/Justices.aspx
@@ -50,8 +51,13 @@ class Site(OpinionSiteLinear):
         "aff in pt & vacate": "Affirmed and vacated",  # https://www.courtlistener.com/opinion/9502826/state-v-scott/pdf/
     }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[int]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = "https://ujs.sd.gov/Supreme_Court/opinions.aspx"
         self.is_backscrape = False
@@ -64,18 +70,23 @@ class Site(OpinionSiteLinear):
 
         :return None
         """
-        for row in self.html.xpath("//tr[td/strong/a]"):
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath("//tr[td/strong/a]")
+        for row in rows:
             title = get_row_column_text(row, 2)
 
             status = "Published"
             cite = re.findall(r"\d{4} S\.?D\.? \d+", title)
-            if not cite:
+            if not bool(cite):
                 status = "Unpublished"
                 cite = [""]
 
-            url = row.xpath(".//a/@href")[0]
+            url: str = row.xpath(".//a/@href")[0]
             docket = url.split("/")[-1][:5]
-            name = titlecase(title.rsplit(",", 1)[0] if cite else title)
+            name = titlecase(title.rsplit(",", 1)[0] if bool(cite) else title)
             self.cases.append(
                 {
                     "date": get_row_column_text(row, 1),
@@ -88,24 +99,31 @@ class Site(OpinionSiteLinear):
             )
 
         if self.is_backscrape:
-            page_count = self.html.xpath(
+            page_count: str = self.html.xpath(
                 "//span[@id='ContentPlaceHolder1_ChildContent1_Label_Page']"
             )[0].text_content()
-            page_of = re.findall(r"Page (\d+) of (\d+)", page_count)
+            page_of = re.search(r"Page (\d+) of (\d+)", page_count)
+            if page_of is None:
+                raise ValueError(f"Could not parse pagination: {page_count!r}")
+            current_page, last_page = map(int, page_of.group(1, 2))
 
-            if len(set(page_of[0])) == 1:
+            if current_page == last_page:
                 return
 
-            logger.info(
-                "Getting page %s of %s", int(page_of[0][0]) + 1, page_of[0][1]
-            )
+            logger.info("Getting page %s of %s", current_page + 1, last_page)
             await self.get_next_page()
             await self._process_html()
 
     async def get_next_page(self) -> None:
         """Gets next page"""
-        view_state = self.html.xpath("//input[@id='__VIEWSTATE']/@value")[0]
-        event_validation = self.html.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        view_state: str = self.html.xpath("//input[@id='__VIEWSTATE']/@value")[
+            0
+        ]
+        event_validation: str = self.html.xpath(
             "//input[@id='__EVENTVALIDATION']/@value"
         )[0]
         data = {
@@ -117,6 +135,7 @@ class Site(OpinionSiteLinear):
         self.parameters = data
         self.html = await super()._download()
 
+    @override
     async def _download_backwards(self, year: int) -> None:
         """Get input year's page
 
@@ -131,11 +150,17 @@ class Site(OpinionSiteLinear):
 
         self.method = "GET"
         self.html = await super()._download()
-        view_state = self.html.xpath("//input[@id='__VIEWSTATE']/@value")[0]
-        event_validation = self.html.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        view_state: str = self.html.xpath("//input[@id='__VIEWSTATE']/@value")[
+            0
+        ]
+        event_validation: str = self.html.xpath(
             "//input[@id='__EVENTVALIDATION']/@value"
         )[0]
-        a = self.html.xpath(
+        a: list[str] = self.html.xpath(
             f".//a[contains(@id,'ContentPlaceHolder1_ChildContent1_Repeater_OpinionsYear_LinkButton1')][contains(text(), '{year}')]/@href"
         )
         link = a[0].split("'")[1]
@@ -149,7 +174,8 @@ class Site(OpinionSiteLinear):
         self.html = await super()._download()
         await self._process_html()
 
-    def make_backscrape_iterable(self, kwargs: dict) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """Creates backscrape iterable from kwargs or defaults
 
         :param kwargs: passed when initializing the scraper, may or
@@ -159,12 +185,13 @@ class Site(OpinionSiteLinear):
         start = kwargs.get("backscrape_start")
         end = kwargs.get("backscrape_end")
 
-        start = int(start) if start else self.start_year
-        end = int(end) + 1 if end else datetime.today().year
+        start = int(start) if bool(start) else self.start_year
+        end = int(end) + 1 if bool(end) else datetime.today().year
 
         self.back_scrape_iterable = range(start, end)
 
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Can we extract the date filed from the text?
 
         Some edge cases:
@@ -175,19 +202,19 @@ class Site(OpinionSiteLinear):
         :param scraped_text: The content of the document downloaded
         :return: Metadata to be added to the case
         """
-        metadata = {}
+        metadata: ExtractedMetadata = {}
         target_text = scraped_text[:100]
 
         dockets = re.findall(r"(?<=#)\d+", target_text)
-        if dockets:
+        if bool(dockets):
             metadata["Docket"] = {"docket_number": ", ".join(dockets)}
 
         judge_regex = r"-[A-Z]{2,3}(\s*[,&]\s+[A-Z]{2,3})*"
-        if judges_match := re.search(judge_regex, target_text):
+        if (judges_match := re.search(judge_regex, target_text)) is not None:
             initials = re.sub(r"[\s,&-]+", " ", judges_match.group(0)).strip()
             judges = []
             for initial in initials.split(" "):
-                if judge := self.initials_to_judges.get(initial):
+                if bool(judge := self.initials_to_judges.get(initial)):
                     judges.append(judge)
                 else:
                     # Catch updates
@@ -195,14 +222,16 @@ class Site(OpinionSiteLinear):
                         "Judge initials not mapped to full name %s", initial
                     )
 
-            if judges:
+            if bool(judges):
                 metadata["OpinionCluster"] = {"judges": ", ".join(judges)}
 
         disposition_regex = r"(?<=-)[a-z,&\s]+(?=-)"
-        if disposition_match := re.search(disposition_regex, target_text):
+        if (
+            disposition_match := re.search(disposition_regex, target_text)
+        ) is not None:
             raw_disposition = disposition_match.group(0)
-            if disp := self.disposition_mapper.get(raw_disposition):
-                if metadata.get("OpinionCluster"):
+            if bool(disp := self.disposition_mapper.get(raw_disposition)):
+                if bool(metadata.get("OpinionCluster")):
                     metadata["OpinionCluster"]["disposition"] = disp
                 else:
                     metadata["OpinionCluster"] = {"disposition": disp}
@@ -215,7 +244,7 @@ class Site(OpinionSiteLinear):
                     """,
             re.X,
         )
-        if match := lower_court_regex.search(scraped_text):
+        if (match := lower_court_regex.search(scraped_text)) is not None:
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()

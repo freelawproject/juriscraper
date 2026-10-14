@@ -18,62 +18,77 @@ from datetime import date, datetime
 from urllib.parse import urljoin
 
 from lxml import html as lxml_html
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
+from juriscraper.AbstractSite import RequestParameters, SiteOptions
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.log_tools import make_default_logger
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import BackscrapeOptions
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 logger = make_default_logger()
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[date]):
     base_url = "https://www.la3circuit.org"
     first_opinion_date = datetime(1992, 1, 1)
     days_interval = 28
     use_urllib = True
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[date]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = f"{self.base_url}/index.aspx"
         self.status = "Unknown"
         self.needs_special_headers = True
-        self.target_date = datetime.today()
+        self.target_date = date.today()
         self.make_backscrape_iterable(kwargs)
 
     @staticmethod
-    def _get_form_params(tree):
+    def _get_form_params(tree: HtmlElement) -> dict[str, str]:
         """Extract form parameters from an ASP.NET page
 
         :param tree: lxml HTML tree
         :return: dict of form parameters
         """
         params = {}
-        for inp in tree.xpath("//form//input[@name]"):
+        inps: list[HtmlElement] = tree.xpath("//form//input[@name]")
+        for inp in inps:
             name = inp.get("name", "")
-            if name and "btn" not in name.lower():
+            if bool(name) and "btn" not in name.lower():
                 params[name] = inp.get("value", "")
-        for sel in tree.xpath("//form//select[@name]"):
-            if selected := sel.xpath(".//option[@selected]"):
-                params[sel.get("name")] = selected[0].get(
+        sels: list[HtmlElement] = tree.xpath("//form//select[@name]")
+        for sel in sels:
+            if bool(selected := sel.findall(".//option[@selected]")):
+                params[sel.attrib["name"]] = selected[0].get(
                     "value", selected[0].text_content()
                 )
             else:
-                if first := sel.xpath(".//option"):
-                    params[sel.get("name")] = first[0].get(
+                if bool(first := sel.findall(".//option")):
+                    params[sel.attrib["name"]] = first[0].get(
                         "value", first[0].text_content()
                     )
         return params
 
-    async def _download(self, request_dict=None):
+    @override
+    async def _download(
+        self, request_dict: RequestParameters | None = None
+    ) -> HtmlElement:
         """Override to perform the month/year search POST after initial load
 
         :param request_dict: optional request parameters
         :return: lxml HTML tree of search results
         """
         tree = await super()._download(request_dict)
+        if not isinstance(tree, HtmlElement):
+            raise TypeError("Expected a downloaded HTML document")
         if self.test_mode_enabled():
             return tree
 
@@ -90,29 +105,37 @@ class Site(OpinionSiteLinear):
         headers["Content-Type"] = "application/x-www-form-urlencoded"
         headers["Accept-Encoding"] = "gzip, deflate"
 
+        if self.url is None:
+            raise ValueError("A search URL is required")
         raw = self._urllib_fetch(self.url, data=data, headers=headers)
 
         return lxml_html.fromstring(raw.decode("utf-8"))
 
     @override
     def _process_html(self) -> None:
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
         tree = self.html
-        seen_urls = {case["url"] for case in self.cases}
-        rows = tree.xpath(
+        seen_urls = {case["url"] for case in self.cases if "url" in case}
+        rows: list[HtmlElement] = tree.xpath(
             '//table[.//strong[contains(text(),"Opinion Search by")]]'
             "//tbody/tr[.//a]"
         )
-        if not rows:
+        if not bool(rows):
             # Fallback for test mode (example uses divOpinionSearchByDate)
-            rows = tree.xpath(
+            rows: list[HtmlElement] = tree.xpath(
                 '//div[@id="divOpinionSearchByDate"]//tbody/tr[.//a]'
             )
         for row in rows:
-            td = row.xpath(".//td")[0]
-            link = td.xpath(".//h4/a/@href")
-            if not link:
-                strongs_text = td.xpath(".//strong/text()")
-                docket_hint = strongs_text[0].strip() if strongs_text else "?"
+            td = row.findall(".//td")[0]
+            link: list[str] = td.xpath(".//h4/a/@href")
+            if not bool(link):
+                strongs_text: list[str] = td.xpath(".//strong/text()")
+                docket_hint = (
+                    strongs_text[0].strip() if bool(strongs_text) else "?"
+                )
                 logger.warning(
                     "No link found in row (docket: %s), skipping",
                     docket_hint,
@@ -120,10 +143,10 @@ class Site(OpinionSiteLinear):
                 continue
 
             url = urljoin(f"{self.base_url}/", link[0])
-            strongs = td.xpath(".//strong/text()")
+            strongs: list[str] = td.xpath(".//strong/text()")
 
             # First strong is the docket number
-            raw_docket = strongs[0].strip() if strongs else ""
+            raw_docket = strongs[0].strip() if bool(strongs) else ""
             docket = re.sub(r"\s+", "", raw_docket)
 
             # Extract fields from text nodes following strong tags
@@ -140,12 +163,12 @@ class Site(OpinionSiteLinear):
             lower_court_match = re.search(r"Lower Court:\s*(.+)", text)
 
             case_date = ""
-            if date_match:
+            if date_match is not None:
                 raw = date_match.group(1)
                 case_date = f"{raw[:2]}/{raw[2:4]}/{raw[4:]}"
 
             name = ""
-            if title_match:
+            if title_match is not None:
                 name = re.sub(r"\s+", " ", title_match.group(1)).strip()
                 # Strip trailing ", ET AL." variations
                 name = re.sub(r",?\s*ET\s+AL\.?\s*$", "", name, flags=re.I)
@@ -156,13 +179,13 @@ class Site(OpinionSiteLinear):
                 name = re.sub(r"\bVersus\b", "v.", name)
 
             parish = ""
-            if parish_match:
+            if parish_match is not None:
                 parish = parish_match.group(1).strip()
 
             lower_court = ""
-            if lower_court_match:
+            if lower_court_match is not None:
                 lower_court = lower_court_match.group(1).strip()
-                if parish:
+                if bool(parish):
                     lower_court = f"{lower_court}, {parish} Parish"
 
             # Deduplicate by URL
@@ -185,13 +208,16 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     async def _download_backwards(self, target_date: date) -> None:
         self.target_date = target_date
         self.html = await self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs):
-        super().make_backscrape_iterable(kwargs)
-        self.back_scrape_iterable = unique_year_month(
-            self.back_scrape_iterable
-        )
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
+        date_ranges = self._get_backscrape_date_ranges(kwargs)
+        if not bool(date_ranges):
+            self.back_scrape_iterable = []
+            return
+        self.back_scrape_iterable = unique_year_month(date_ranges)

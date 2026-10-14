@@ -20,14 +20,22 @@ CourtID: md
 Court Short Name: Md.
 """
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
 class Site(OralArgumentSiteLinear):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.courts.state.md.us/coappeals/webcasts/webcastarchive.html"
 
@@ -37,13 +45,17 @@ class Site(OralArgumentSiteLinear):
         path = (
             "//tr[.//td[2]//a/@href][not(contains(.//@href, 'baradmission'))]"
         )
-        rows = self.html.xpath(path)
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(path)
 
         for row in rows:
-            cell_two = row.xpath("./td[2]")[0]
+            cell_two = row.findall("./td[2]")[0]
             self.cases.append(
                 {
-                    "date": row.xpath("./td[1]")[0].text_content(),
+                    "date": row.findall("./td[1]")[0].text_content(),
                     "name": row.xpath("./td[3]/*[self::b or self::strong]")[
                         0
                     ].text_content(),  # sometimes they use <b> tag, other times <strong> tag

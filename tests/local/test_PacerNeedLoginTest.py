@@ -20,7 +20,9 @@ from tests import TESTS_ROOT_EXAMPLES_PACER
 class PacerNeedLoginTest(unittest.IsolatedAsyncioTestCase):
     """Test if different pages require a log in."""
 
-    def parse_files(self, path_root, file_ext):
+    def parse_files(
+        self, path_root: str | os.PathLike[str], file_ext: str
+    ) -> None:
         paths = []
         for root, _, filenames in os.walk(path_root):
             for filename in fnmatch.filter(filenames, file_ext):
@@ -53,7 +55,7 @@ class PacerNeedLoginTest(unittest.IsolatedAsyncioTestCase):
 
             sys.stdout.write("✓\n")
 
-    def test_parsing_auth_samples(self):
+    def test_parsing_auth_samples(self) -> None:
         path_root = os.path.join(
             TESTS_ROOT_EXAMPLES_PACER, "authentication_samples"
         )
@@ -61,7 +63,7 @@ class PacerNeedLoginTest(unittest.IsolatedAsyncioTestCase):
 
     @mock.patch(
         "juriscraper.pacer.http.httpx.AsyncClient.get",
-        side_effect=lambda *args, **kwargs: MockResponse(
+        return_value=MockResponse(
             200,
             b"",
             headers={"content-type": "text/html"},
@@ -70,11 +72,11 @@ class PacerNeedLoginTest(unittest.IsolatedAsyncioTestCase):
     )
     @mock.patch(
         "juriscraper.pacer.http.check_if_logged_in_page",
-        side_effect=lambda x: False,
+        return_value=False,
     )
     async def test_do_an_additional_get_request(
-        self, mock_get, mock_check_if_logged_in
-    ):
+        self, mock_get: mock.Mock, mock_check_if_logged_in: mock.Mock
+    ) -> None:
         """Test if we can do an additional GET request after check_if_logged_in
         returned False, check_if_logged_in_page should be called 2 times and
         raise a PacerLoginException afterwards.
@@ -86,8 +88,8 @@ class PacerNeedLoginTest(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(mock_check_if_logged_in.call_count, 2)
 
     @mock.patch(
-        "juriscraper.pacer.http.httpx.AsyncClient.post",
-        side_effect=lambda *args, **kwargs: MockResponse(
+        "juriscraper.pacer.http.httpx.AsyncClient.request",
+        return_value=MockResponse(
             200,
             b"",
             headers={"content-type": "text/html"},
@@ -96,11 +98,11 @@ class PacerNeedLoginTest(unittest.IsolatedAsyncioTestCase):
     )
     @mock.patch(
         "juriscraper.pacer.http.check_if_logged_in_page",
-        side_effect=lambda x: False,
+        return_value=False,
     )
     async def test_avoid_an_additional_post_request(
-        self, mock_get, mock_check_if_logged_in
-    ):
+        self, mock_get: mock.Mock, mock_check_if_logged_in: mock.Mock
+    ) -> None:
         """Test if we can avoid an additional POST request after
         check_if_logged_in returned False, check_if_logged_in_page should be
         called 1 time and raise a PacerLoginException afterwards.
@@ -113,15 +115,18 @@ class PacerNeedLoginTest(unittest.IsolatedAsyncioTestCase):
     @mock.patch("juriscraper.pacer.http.httpx.AsyncClient.get")
     @mock.patch(
         "juriscraper.pacer.http.check_if_logged_in_page",
-        side_effect=lambda x: False,
+        return_value=False,
     )
     @mock.patch(
         "juriscraper.pacer.http.is_pdf",
-        side_effect=lambda x: True,
+        return_value=True,
     )
     async def test_avoid_an_additional_get_request_pdf(
-        self, mock_get, mock_check_if_logged_in, mock_is_pdf
-    ):
+        self,
+        mock_get: mock.Mock,
+        mock_check_if_logged_in: mock.Mock,
+        mock_is_pdf: mock.Mock,
+    ) -> None:
         """Test if we can avoid an additional GET requests if a PDF binary is
         returned, check_if_logged_in_page shouldn't be called.
         """

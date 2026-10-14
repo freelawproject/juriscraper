@@ -1,8 +1,10 @@
 import asyncio
 import time
 import unittest
+from collections.abc import Callable, Coroutine, Mapping
 
 import httpx
+from typing_extensions import override
 
 from juriscraper.state.RequestManager import (
     USER_AGENT,
@@ -10,6 +12,7 @@ from juriscraper.state.RequestManager import (
     RateLimit,
     RequestHandler,
     RequestManager,
+    RetryHandler,
     ScheduledRequest,
 )
 
@@ -18,8 +21,17 @@ def _ok_handler(request: httpx.Request) -> httpx.Response:
     return httpx.Response(200, text="ok")
 
 
-def _make_manager(transport_handler=_ok_handler, **kwargs) -> RequestManager:
-    manager = RequestManager(**kwargs)
+def _make_manager(
+    transport_handler: Callable[[httpx.Request], httpx.Response]
+    | Callable[
+        [httpx.Request], Coroutine[None, None, httpx.Response]
+    ] = _ok_handler,
+    *,
+    headers: Mapping[str, str] | None = None,
+    handlers: list[RequestHandler] | None = None,
+    retry: RetryHandler | None = None,
+) -> RequestManager:
+    manager = RequestManager(headers=headers, handlers=handlers, retry=retry)
     # Swap the transport so requests still travel the full httpx build/send
     # path but resolve against an in-process handler.
     manager._transport = httpx.MockTransport(transport_handler)
@@ -27,16 +39,20 @@ def _make_manager(transport_handler=_ok_handler, **kwargs) -> RequestManager:
 
 
 class RequestManagerCoreTest(unittest.IsolatedAsyncioTestCase):
-    async def asyncSetUp(self):
+    @override
+    async def asyncSetUp(self) -> None:
         self.manager = _make_manager()
 
-    async def asyncTearDown(self):
+    @override
+    async def asyncTearDown(self) -> None:
         await self.manager.aclose()
 
-    async def test_default_user_agent(self):
+    async def test_default_user_agent(self) -> None:
         self.assertEqual(self.manager.headers.get("User-Agent"), USER_AGENT)
 
-    async def test_user_agent_already_contains_juriscraper_left_alone(self):
+    async def test_user_agent_already_contains_juriscraper_left_alone(
+        self,
+    ) -> None:
         manager = _make_manager(
             headers={"User-Agent": "Custom Juriscraper Build/1.0"}
         )
@@ -48,7 +64,7 @@ class RequestManagerCoreTest(unittest.IsolatedAsyncioTestCase):
         finally:
             await manager.aclose()
 
-    async def test_user_agent_missing_juriscraper_gets_appended(self):
+    async def test_user_agent_missing_juriscraper_gets_appended(self) -> None:
         manager = _make_manager(headers={"User-Agent": "CustomAgent/1.0"})
         try:
             ua = manager.headers.get("User-Agent")
@@ -57,21 +73,21 @@ class RequestManagerCoreTest(unittest.IsolatedAsyncioTestCase):
         finally:
             await manager.aclose()
 
-    async def test_cache_control_and_pragma_headers_set(self):
+    async def test_cache_control_and_pragma_headers_set(self) -> None:
         self.assertEqual(
             self.manager.headers.get("Cache-Control"),
             "no-cache, max-age=0, must-revalidate",
         )
         self.assertEqual(self.manager.headers.get("Pragma"), "no-cache")
 
-    async def test_request_leaves_no_background_tasks(self):
+    async def test_request_leaves_no_background_tasks(self) -> None:
         self.assertFalse(self.manager._requests)
         response = await self.manager.get("https://example.com/")
         self.assertEqual(response.status_code, 200)
         self.assertFalse(self.manager._requests)
         self.assertFalse(self.manager._send_lock.locked())
 
-    async def test_get_post_put_delete_round_trip(self):
+    async def test_get_post_put_delete_round_trip(self) -> None:
         seen: list[str] = []
 
         def handler(request: httpx.Request) -> httpx.Response:
@@ -91,18 +107,22 @@ class RequestManagerCoreTest(unittest.IsolatedAsyncioTestCase):
         finally:
             await manager.aclose()
 
-    async def test_close_finishes_cleanup_and_closes_client(self):
+    async def test_close_finishes_cleanup_and_closes_client(self) -> None:
         await self.manager.get("https://example.com/")
         await self.manager.aclose()
+        assert self.manager._close_task is not None
         self.assertTrue(self.manager._close_task.done())
         self.assertFalse(self.manager._requests)
         self.assertTrue(self.manager.is_closed)
 
-    async def test_follow_redirects_propagated_per_request(self):
+    async def test_follow_redirects_propagated_per_request(self) -> None:
         captured: list[object] = []
 
         class CapturingHandler(RequestHandler):
-            async def before_send(self, manager, request):
+            @override
+            async def before_send(
+                self, manager: RequestManager, request: ScheduledRequest
+            ) -> None:
                 captured.append(request.follow_redirects)
 
         manager = _make_manager(handlers=[CapturingHandler()])
@@ -115,7 +135,9 @@ class RequestManagerCoreTest(unittest.IsolatedAsyncioTestCase):
 
 
 class HandlerOrderingTest(unittest.IsolatedAsyncioTestCase):
-    async def test_before_queue_runs_before_before_send_runs_before_send(self):
+    async def test_before_queue_runs_before_before_send_runs_before_send(
+        self,
+    ) -> None:
         events: list[tuple[str, float]] = []
         send_called = asyncio.Event()
 
@@ -125,12 +147,18 @@ class HandlerOrderingTest(unittest.IsolatedAsyncioTestCase):
             return httpx.Response(200, text="ok")
 
         class Recorder(RequestHandler):
-            async def before_send(self, manager, request):
+            @override
+            async def before_send(
+                self, manager: RequestManager, request: ScheduledRequest
+            ) -> None:
                 events.append(("before_send_start", time.monotonic()))
                 await asyncio.sleep(0.01)
                 events.append(("before_send_done", time.monotonic()))
 
-            async def listen(self, manager, request):
+            @override
+            async def listen(
+                self, manager: RequestManager, request: ScheduledRequest
+            ) -> None:
                 events.append(("listen_start", time.monotonic()))
                 _ = await request.response
                 events.append(("listen_done", time.monotonic()))
@@ -148,14 +176,20 @@ class HandlerOrderingTest(unittest.IsolatedAsyncioTestCase):
         self.assertLess(keys.index("listen_start"), keys.index("send"))
         self.assertLess(keys.index("send"), keys.index("listen_done"))
 
-    async def test_multiple_handlers_all_invoked_per_request(self):
+    async def test_multiple_handlers_all_invoked_per_request(self) -> None:
         counts = {"before_send": 0, "listen": 0}
 
         class Counter(RequestHandler):
-            async def before_send(self, manager, request):
+            @override
+            async def before_send(
+                self, manager: RequestManager, request: ScheduledRequest
+            ) -> None:
                 counts["before_send"] += 1
 
-            async def listen(self, manager, request):
+            @override
+            async def listen(
+                self, manager: RequestManager, request: ScheduledRequest
+            ) -> None:
                 counts["listen"] += 1
                 _ = await request.response
 
@@ -169,15 +203,15 @@ class HandlerOrderingTest(unittest.IsolatedAsyncioTestCase):
 
 
 class RateLimitTest(unittest.IsolatedAsyncioTestCase):
-    async def test_zero_rps_raises(self):
+    async def test_zero_rps_raises(self) -> None:
         with self.assertRaises(ValueError):
             RateLimit(rps=0.0)
 
-    async def test_negative_rps_raises(self):
+    async def test_negative_rps_raises(self) -> None:
         with self.assertRaises(ValueError):
             RateLimit(rps=-1.0)
 
-    async def test_spacing_enforced_between_sequential_requests(self):
+    async def test_spacing_enforced_between_sequential_requests(self) -> None:
         rate = RateLimit(rps=10.0)  # 0.1s spacing
         manager = _make_manager(handlers=[rate])
         try:
@@ -189,7 +223,7 @@ class RateLimitTest(unittest.IsolatedAsyncioTestCase):
         finally:
             await manager.aclose()
 
-    async def test_concurrent_before_send_calls_are_serialized(self):
+    async def test_concurrent_before_send_calls_are_serialized(self) -> None:
         # The lock around _last_request_time should serialize *reservations*
         # even when callers fire concurrently. Without the lock, all callers
         # would read the same _last_request_time and sleep the same short
@@ -197,10 +231,12 @@ class RateLimitTest(unittest.IsolatedAsyncioTestCase):
         spacing = 0.05
         rate = RateLimit(rps=1.0 / spacing)
         n = 5
+        manager = _make_manager()
+        self.addAsyncCleanup(manager.aclose)
 
-        async def reserve():
+        async def reserve() -> None:
             req = ScheduledRequest("GET", "https://x/")
-            await rate.before_send(None, req)
+            await rate.before_send(manager, req)
 
         start = time.monotonic()
         await asyncio.gather(*[reserve() for _ in range(n)])
@@ -213,7 +249,7 @@ class RateLimitTest(unittest.IsolatedAsyncioTestCase):
 
 
 class RetryTest(unittest.IsolatedAsyncioTestCase):
-    async def test_retries_until_success(self):
+    async def test_retries_until_success(self) -> None:
         attempts = {"n": 0}
 
         def handler(request: httpx.Request) -> httpx.Response:
@@ -232,7 +268,7 @@ class RetryTest(unittest.IsolatedAsyncioTestCase):
         finally:
             await manager.aclose()
 
-    async def test_exhausting_retries_surfaces_last_exception(self):
+    async def test_exhausting_retries_surfaces_last_exception(self) -> None:
         attempts = 0
 
         def handler(request: httpx.Request) -> httpx.Response:
@@ -252,7 +288,7 @@ class RetryTest(unittest.IsolatedAsyncioTestCase):
         finally:
             await manager.aclose()
 
-    async def test_last_try_is_response(self):
+    async def test_last_try_is_response(self) -> None:
         n = 0
 
         def handler(request: httpx.Request) -> httpx.Response:
@@ -262,10 +298,13 @@ class RetryTest(unittest.IsolatedAsyncioTestCase):
                 return httpx.Response(200, text="ok")
             return httpx.Response(500, text="fail")
 
-        response = None
+        response: httpx.Response | None = None
 
         class Recorder(RequestHandler):
-            async def listen(self, manager, request):
+            @override
+            async def listen(
+                self, manager: RequestManager, request: ScheduledRequest
+            ) -> None:
                 nonlocal response
                 response = await request.response
 
@@ -276,7 +315,7 @@ class RetryTest(unittest.IsolatedAsyncioTestCase):
         )
         try:
             _ = await manager.get("https://example.com/")
-            self.assertIsNotNone(response)
+            assert response is not None
             self.assertEqual(response.status_code, 200)
             self.assertEqual(response.text, "ok")
         finally:

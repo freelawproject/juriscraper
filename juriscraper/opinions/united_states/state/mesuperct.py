@@ -11,22 +11,32 @@ History:
 
 from datetime import date
 
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker
+from juriscraper.lib.type_utils import BackscrapeOptions
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear[int]):
     base_url = "https://apps.maine.edu/SuperiorCourt/show_list.jsp?plaintiff=&defendant=&year={}&code=&rule=&title=&number=&section=&Search=Search"
     start_year = 1999
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[int]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.current_year = date.today().year
         self.make_backscrape_iterable(kwargs)
         self.url = self.base_url.format(self.current_year)
 
+    @override
     async def _download_backwards(self, year: int) -> None:
         """Sets the URL for the backwards download based on the given year.
 
@@ -47,13 +57,18 @@ class Site(OpinionSiteLinear):
         :return: None
         """
 
-        for row in self.html.xpath("//tr")[1:]:
-            docket_number = row.xpath(".//td//a/text()")[0].strip()
-            date = row.xpath(".//td/text()")[-1].strip()
-            plaintiff = row.xpath(".//td/a/text()")[1].strip()
-            defendant = row.xpath(".//td/a/text()")[2].strip()
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath("//tr")[1:]
+        for row in rows:
+            docket_number: str = row.xpath(".//td//a/text()")[0].strip()
+            date: str = row.xpath(".//td/text()")[-1].strip()
+            plaintiff: str = row.xpath(".//td/a/text()")[1].strip()
+            defendant: str = row.xpath(".//td/a/text()")[2].strip()
             url = f"https://files.mainelaw.maine.edu/library/SuperiorCourt/decisions/{docket_number}.pdf"
-            author = row.xpath(".//td/a/text()")[3].strip()
+            author: str = row.xpath(".//td/a/text()")[3].strip()
             self.cases.append(
                 {
                     "date": date,
@@ -65,7 +80,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def make_backscrape_iterable(self, kwargs: dict) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: BackscrapeOptions) -> None:
         """Checks if backscrape start and end arguments have been passed
         by caller, and parses them accordingly
 
@@ -76,7 +92,7 @@ class Site(OpinionSiteLinear):
         start = kwargs.get("backscrape_start")
         end = kwargs.get("backscrape_end")
 
-        start = int(start) if start else self.start_year
-        end = int(end) + 1 if end else self.current_year
+        start = int(start) if bool(start) else self.start_year
+        end = int(end) + 1 if bool(end) else self.current_year
 
         self.back_scrape_iterable = range(start, end)

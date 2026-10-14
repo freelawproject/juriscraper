@@ -11,15 +11,22 @@ History:
 from datetime import timedelta
 
 from dateutil.utils import today
-from typing_extensions import override
+from lxml.html import HtmlElement
+from typing_extensions import Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
 class Site(OralArgumentSiteLinear):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.illinoiscourts.gov/courts/appellate-court/oral-argument-audio/"
         self.method = "POST"
@@ -28,7 +35,7 @@ class Site(OralArgumentSiteLinear):
         self.district = "1st"
         self._set_parameters()
 
-    def _set_parameters(self):
+    def _set_parameters(self) -> None:
         self.parameters = {
             "__EVENTTARGET": "ctl00$ctl04$ddlFilterDistrict",
             "__EVENTARGUMENT": "",
@@ -46,16 +53,21 @@ class Site(OralArgumentSiteLinear):
 
     @override
     def _process_html(self) -> None:
-        for row in self.html.xpath(
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
+        rows: list[HtmlElement] = self.html.xpath(
             './/table[@id="ctl04_gvArguments"]/tr[not(th)]'
-        ):
-            url = row.xpath(".//a/@data-audio")
-            if not url:
+        )
+        for row in rows:
+            urls: list[str] = row.xpath(".//a/@data-audio")
+            if not bool(urls):
                 logger.warning("Skipping row with no audio file to download")
                 continue
 
-            url = url[0].replace(" ", "%20")
-            span_elements = row.xpath(".//span")
+            url = urls[0].replace(" ", "%20")
+            span_elements = row.findall(".//span")
             spans = [span.text_content().strip() for span in span_elements]
             if len(spans) < 4:
                 logger.warning(
@@ -64,7 +76,7 @@ class Site(OralArgumentSiteLinear):
                 )
                 continue
             date, _, docket, name, *others = spans
-            if others:
+            if bool(others):
                 docket, name = name, others[0]
             self.cases.append(
                 {

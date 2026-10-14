@@ -10,17 +10,48 @@ History:
     2022-05-02: Updated by William E. Palin, to use JSON responses
 """
 
+from typing import NotRequired
 from urllib.parse import quote
 
 from lxml import html
-from typing_extensions import override
+from lxml.html import HtmlElement
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
+from juriscraper.AbstractSite import SiteOptions
+from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
+class _Row(TypedDict):
+    Path: str
+    RIJCaseSummaryOWSMTXT: NotRequired[str | None]
+    RIJLongNumberOWSMTXT: str
+    RIJLongTitleOWSMTXT: str
+    RIJDateOWSDATE: str
+
+
+class _Table(TypedDict):
+    ResultRows: list[_Row]
+
+
+class _Results(TypedDict):
+    ResultTables: list[object]
+
+
+_envelope_adapter = TypeAdapter(list[object])
+_results_adapter = TypeAdapter(dict[str, _Results])
+_table_adapter = TypeAdapter(_Table)
+
+
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.status = "Published"
         self.url = "https://www.courts.ri.gov/Pages/ood.aspx#k=#l=1033"
@@ -54,6 +85,10 @@ class Site(OpinionSiteLinear):
         if self.test_mode_enabled():
             return
         self.parameters = self.data_xml
+        if not isinstance(self.html, HtmlElement):
+            raise ValueError(
+                "An HTML document must be downloaded before parsing."
+            )
         content = html.tostring(self.html)
         request_digest = (
             str(content).split("formDigestElement.value")[3].split("'")[1]
@@ -69,13 +104,21 @@ class Site(OpinionSiteLinear):
         :return: None
         """
         await self.fetch_json()
-        rows = self.request["response"].json()[-3][self.search_key][
-            "ResultTables"
-        ][0]["ResultRows"]
+        response = self.request.get("response")
+        if response is None:
+            raise ValueError("Download a response before accessing it.")
+        envelope = _envelope_adapter.validate_json(
+            response.content, strict=True
+        )
+        results = _results_adapter.validate_python(envelope[-3], strict=True)
+        table = _table_adapter.validate_python(
+            results[self.search_key]["ResultTables"][0], strict=True
+        )
+        rows = table["ResultRows"]
         for row in rows:
             # Summary can be None - which breaks CL so set it to empty string
             summary = row.get("RIJCaseSummaryOWSMTXT", "")
-            summary = summary if summary else ""
+            summary = summary if bool(summary) else ""
             self.cases.append(
                 {
                     "url": quote(row["Path"], safe="://&"),

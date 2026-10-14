@@ -18,17 +18,54 @@ History:
 
 import re
 from datetime import date, datetime, timedelta
+from typing import NotRequired
 from urllib.parse import urlencode
 
-from typing_extensions import override
+from pydantic import TypeAdapter
+from typing_extensions import TypedDict, Unpack, override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import SiteOptions, logger
 from juriscraper.lib.judge_parsers import normalize_judge_string
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import CaseNameTweaker, titlecase
+from juriscraper.lib.type_utils import ExtractedMetadata
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
+_Row = TypedDict(
+    "_Row",
+    {
+        "filedDate": str,
+        "docketEntryDescription": str,
+        "caseHeader.caseNumber": str,
+        "hasDocuments": bool,
+        "docketEntryID": str,
+    },
+)
 
-class Site(OpinionSiteLinear):
+
+class _CaseHeader(TypedDict):
+    shortTitle: str
+
+
+class _Document(TypedDict):
+    caseHeader: _CaseHeader
+    documentID: str
+    documentText: NotRequired[list[str] | None]
+
+
+class _Result(TypedDict):
+    rowMap: _Row
+    detailJson: NotRequired[list[_Document] | None]
+
+
+class _Search(TypedDict):
+    resultItems: list[_Result]
+
+
+_search_adapter = TypeAdapter(_Search)
+_documents_adapter = TypeAdapter(list[_Document])
+
+
+class Site(OpinionSiteLinear[tuple[date, date]]):
     # Home: https://appellatepublic.kycourts.net/login
     first_opinion_date = datetime(1982, 2, 18).date()
     days_interval = 7  # page size of 25
@@ -47,8 +84,13 @@ class Site(OpinionSiteLinear):
     # Examples: "2022-CA-1454, 1456, 1457"
     docket_regex = r"\d{4}-(CA|SC)-\d{4}(,\s?\d{4})*"
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(
+        self,
+        cnt: CaseNameTweaker | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs: Unpack[SiteOptions[tuple[date, date]]],
+    ) -> None:
+        super().__init__(cnt, user_agent, **kwargs)
         self.court_id = self.__module__
         self.set_url()
         self.make_backscrape_iterable(kwargs)
@@ -62,8 +104,9 @@ class Site(OpinionSiteLinear):
         :param end: end date
         :return None
         """
-        if not start:
+        if end is None:
             end = datetime.now()
+        if start is None:
             start = end - timedelta(7)
 
         logger.info("Date range %s %s", start, end)
@@ -87,7 +130,7 @@ class Site(OpinionSiteLinear):
 
         :return None
         """
-        result_json = self.html
+        result_json = _search_adapter.validate_python(self.html, strict=True)
 
         for result in result_json["resultItems"]:
             case_name = ""
@@ -106,7 +149,7 @@ class Site(OpinionSiteLinear):
             # and case names are not as expected
             # "2024 CA ADMIN - NON-CONFIDENTIAL OPINION - 002"
             # The proper docket number may be found on the disposition string
-            if not re.search(self.docket_regex, docket_number) and (
+            if re.search(self.docket_regex, docket_number) is None and bool(
                 docket_match := re.search(self.docket_regex, disposition)
             ):
                 docket_number = docket_match.group(0)
@@ -116,11 +159,13 @@ class Site(OpinionSiteLinear):
                     disposition, case_name = disposition.split("\n", 1)
 
             judge = ""
-            if judge_match := re.search(self.judge_regex, disposition):
+            if (
+                judge_match := re.search(self.judge_regex, disposition)
+            ) is not None:
                 judge = normalize_judge_string(judge_match.group("judge"))[0]
                 # Drop from the disposition everything after "BY JUDGE..."
                 # May contain the case name
-                disposition = re.split(self.judge_regex, disposition)[0]
+                disposition = disposition[: judge_match.start()]
 
             if disposition.upper() in [
                 "OPINION OF THE COURT",
@@ -130,28 +175,28 @@ class Site(OpinionSiteLinear):
 
             if self.test_mode_enabled():
                 # detail request has been manually nested in the test file
-                doc_json = result["detailJson"]
+                detail_json = result.get("detailJson")
+                doc_json: list[_Document] = (
+                    detail_json if detail_json is not None else []
+                )
             else:
                 detail_url = self.docket_entry_url.format(row["docketEntryID"])
                 doc_json = await self.get_json(detail_url)
 
-            if not doc_json:
+            if not bool(doc_json):
                 logger.error(
                     "ky: no document details returned for Docket %s",
                     docket_number,
                 )
                 continue
 
-            if not case_name:
-                case_name = doc_json[0]["caseHeader"].get("shortTitle")
-            doc_id = doc_json[0].get("documentID")
-            doc_text = (
-                doc_json[0]["documentText"][0]
-                if doc_json[0].get("documentText")
-                else ""
-            )
+            if not bool(case_name):
+                case_name = doc_json[0]["caseHeader"]["shortTitle"]
+            doc_id = doc_json[0]["documentID"]
+            pages = doc_json[0].get("documentText")
+            doc_text = pages[0] if bool(pages) else ""
 
-            if not doc_text:
+            if not bool(doc_text):
                 status = "Unknown"
             elif "\r\nTO BE PUBLISHED \r\n" in doc_text:
                 status = "Published"
@@ -170,7 +215,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    async def get_json(self, url: str) -> dict:
+    async def get_json(self, url: str) -> list[_Document]:
         """Get JSON from the API
 
         :param url: url
@@ -179,8 +224,11 @@ class Site(OpinionSiteLinear):
         logger.debug("Getting JSON: '%s'", url)
         await self._request_url_get(url)
         self._post_process_response()
-        return self._return_response_text_object()
+        return _documents_adapter.validate_python(
+            self._return_response_text_object(), strict=True
+        )
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Set date range from backscraping args and scrape
 
@@ -192,7 +240,8 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         await self._process_html()
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetadata:
         """Extract lower court from the scraped text.
 
         :param scraped_text: The text to extract from.
@@ -208,8 +257,8 @@ class Site(OpinionSiteLinear):
             re.I | re.S | re.X,
         )
 
-        result = {}
-        if match := pattern.search(scraped_text):
+        result: ExtractedMetadata = {}
+        if (match := pattern.search(scraped_text)) is not None:
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")
             ).strip()
@@ -225,11 +274,11 @@ class Site(OpinionSiteLinear):
             lower_court_judge = match.group("lower_court_judge")
             lower_court_number = match.group("lower_court_number")
 
-            if lower_court_judge:
+            if bool(lower_court_judge):
                 result.setdefault("OriginatingCourtInformation", {})[
                     "assigned_to_str"
                 ] = titlecase(lower_court_judge.strip())
-            if lower_court_number:
+            if bool(lower_court_number):
                 result.setdefault("OriginatingCourtInformation", {})[
                     "docket_number"
                 ] = lower_court_number.strip()
