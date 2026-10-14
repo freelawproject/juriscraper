@@ -1,4 +1,8 @@
 import re
+from datetime import date
+
+from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.lib.judge_parsers import normalize_judge_string
 from juriscraper.lib.log_tools import make_default_logger
@@ -40,6 +44,7 @@ class DocketHistoryReport(DocketReport):
     PATH = "cgi-bin/HistDocQry.pl"
 
     @property
+    @override
     def data(self):
         """Get all the data back from this endpoint."""
         if self.is_valid is False:
@@ -49,6 +54,7 @@ class DocketHistoryReport(DocketReport):
         return data
 
     @property
+    @override
     def metadata(self):
         if self.is_valid is False:
             return {}
@@ -149,18 +155,19 @@ class DocketHistoryReport(DocketReport):
         self.parse()
 
     @property
+    @override
     def docket_entries(self):
         if self._docket_entries is not None:
             return self._docket_entries
 
         docket_header = './/th/text()[contains(., "Description")]'
-        docket_entry_rows = self.tree.xpath(
+        docket_entry_rows: list[HtmlElement] = self.tree.xpath(
             f"//table[{docket_header}]/tbody/tr"
         )[1:]  # Skip first row
 
         docket_entries = []
         for row in docket_entry_rows:
-            cells = row.xpath("./td")
+            cells: list[HtmlElement] = row.xpath("./td")
             if len(cells) == 3:
                 # Normal row, parse the document_number, date, etc.
                 de: dict = {}
@@ -207,7 +214,7 @@ class DocketHistoryReport(DocketReport):
         self._docket_entries = docket_entries
         return docket_entries
 
-    def _get_date_filed(self, cell):
+    def _get_date_filed(self, cell: HtmlElement) -> date | None:
         s = clean_string(cell.text_content())
         regexes = [self.date_filed_regex, self.date_filed_and_entered_regex]
         for regex in regexes:
@@ -215,7 +222,7 @@ class DocketHistoryReport(DocketReport):
             if m:
                 return convert_date_string(m.group(1))
 
-    def _get_date_entered(self, cell):
+    def _get_date_entered(self, cell: HtmlElement) -> date | None:
         s = clean_string(cell.text_content())
         regexes = [self.date_entered_regex, self.date_filed_and_entered_regex]
         for regex in regexes:
@@ -223,9 +230,12 @@ class DocketHistoryReport(DocketReport):
             if m:
                 return convert_date_string(m.group(1))
 
-    def _set_metadata_values(self):
-        text_nodes = self.tree.xpath("//center[not(.//table)]//text()")
-        values = []
+    @override
+    def _set_metadata_values(self) -> None:
+        text_nodes: list[str] = self.tree.xpath(
+            "//center[not(.//table)]//text()"
+        )
+        values: list[str] = []
         for s in text_nodes:
             s = clean_string(force_unicode(s))
             if s:
@@ -233,7 +243,8 @@ class DocketHistoryReport(DocketReport):
         values.append(" ".join(values))
         self.metadata_values = values
 
-    def _get_case_name(self):
+    @override
+    def _get_case_name(self) -> str:
         if self.is_bankruptcy:
             # Uses both b/c sometimes the bankr. cases have a dist-style docket
             # number.
@@ -244,7 +255,7 @@ class DocketHistoryReport(DocketReport):
         else:
             regexes = [self.docket_number_dist_regex]
 
-        matches = set()
+        matches: set[str] = set()
         # Skip the last value, it's a concat of all previous values and
         # isn't needed for case name matching.
         for prev, v, _nxt in previous_and_next(self.metadata_values[:-1]):
@@ -265,6 +276,7 @@ class DocketHistoryReport(DocketReport):
             case_name = "Unknown Case Title"
         return harmonize(case_name)
 
+    @override
     def _parse_docket_number(
         self,
     ) -> tuple[str | None, dict[str, str | None]]:
@@ -285,7 +297,9 @@ class DocketHistoryReport(DocketReport):
             ]
         else:
             regexes = [self.docket_number_dist_regex]
-        nodes = self.tree.xpath('//center//font[@size="+1"]')
+        nodes: list[HtmlElement] = self.tree.xpath(
+            '//center//font[@size="+1"]'
+        )
         string_nodes = [s.text_content() for s in nodes]
         for regex in regexes:
             for s in string_nodes:
@@ -296,7 +310,7 @@ class DocketHistoryReport(DocketReport):
 
         return None, self._return_default_dn_components()
 
-    def _get_assigned_judge(self):
+    def _get_assigned_judge(self) -> str | None:
         if self.is_bankruptcy:
             # Look for string like "Judge: Michael J. Fox"
             for prev, v, _nxt in previous_and_next(self.metadata_values[:-1]):

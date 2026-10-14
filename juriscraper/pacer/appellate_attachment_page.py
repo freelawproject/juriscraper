@@ -32,7 +32,7 @@ class AppellateAttachmentPage(BaseReport):
     def __init__(self, court_id, pacer_session=None):
         super().__init__(court_id, pacer_session)
 
-    async def query(self, document_number):
+    async def query(self, document_number: str) -> None:
         """Query the "attachment page" endpoint and set the results to self.response.
 
         The appellate attachment page uses the a variable called dls_id
@@ -86,7 +86,9 @@ class AppellateAttachmentPage(BaseReport):
             return {}
 
         # Find the table/tr/td containing a link and return the tr's
-        rows = self.tree.xpath("//tbody/tr/td/a/parent::td/parent::tr")
+        rows: list[html.HtmlElement] = self.tree.xpath(
+            "//tbody/tr/td/a/parent::td/parent::tr"
+        )
         if not rows:
             logger.info("No documents found on attachment page.")
             return {}
@@ -111,7 +113,7 @@ class AppellateAttachmentPage(BaseReport):
             result["attachments"].append(attachment)
         return result
 
-    def _get_main_pacer_doc_id(self):
+    def _get_main_pacer_doc_id(self) -> str | None:
         """Extract the main pacer_doc_id.
 
         The DLS ID  This should be used to identify
@@ -121,7 +123,7 @@ class AppellateAttachmentPage(BaseReport):
         :return: main pacer_doc_id
         """
         try:
-            rows = self.tree.xpath("//tbody/tr/td/a/@href")
+            rows: list[str] = self.tree.xpath("//tbody/tr/td/a/@href")
             pacer_doc_ids = []
             for url_row in rows:
                 pacer_doc_ids.append(get_pacer_doc_id_from_doc1_url(url_row))
@@ -144,13 +146,13 @@ class AppellateAttachmentPage(BaseReport):
         :param row: Table row
         :return: Attachment description
         """
-        row_nodes = row.xpath(".//td")
+        row_nodes: list[html.HtmlElement] = row.xpath(".//td")
         if not row_nodes:
             return ""
         desc_idx = -2
         if len(row_nodes) == 6:
             desc_idx = -3
-        description = row_nodes[desc_idx].xpath("text()")
+        description: list[str] = row_nodes[desc_idx].xpath("text()")
         if description:
             return force_unicode(description[0].strip())
         return ""
@@ -167,7 +169,7 @@ class AppellateAttachmentPage(BaseReport):
         if sum_doc_selected_parts and "page_count" in sum_doc_selected_parts:
             return sum_doc_selected_parts["page_count"]
 
-        description_text_nodes = row.xpath(".//td/text()")
+        description_text_nodes: list[str] = row.xpath(".//td/text()")
         if not description_text_nodes:
             return None
         return int(description_text_nodes[-1].strip())
@@ -231,7 +233,7 @@ class AppellateAttachmentPage(BaseReport):
             return None
 
 
-def main():
+def main() -> None:
     if len(sys.argv) != 2:
         print(
             "Usage: python -m juriscraper.pacer.appellate_attachment_page filepath"

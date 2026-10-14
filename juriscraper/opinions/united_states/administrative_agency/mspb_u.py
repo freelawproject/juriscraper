@@ -11,7 +11,7 @@ from juriscraper.opinions.united_states.administrative_agency import mspb_p
 
 
 class Site(mspb_p.Site):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.status = "Unpublished"

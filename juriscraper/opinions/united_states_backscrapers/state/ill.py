@@ -5,13 +5,14 @@ from datetime import datetime
 
 from dateutil import parser
 from lxml import html
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
         self.year = 0
         self.court_id = self.__module__
@@ -25,11 +26,13 @@ class Site(OpinionSite):
         self.case_dates_path_month = None
         self.precedential_statuses_path = None
         self.docket_numbers_path = None
-        self.neutral_citations_path = None
+        self.neutral_citations_path: str | None = None
 
+    @override
     def _get_download_urls(self):
         return list(self.html.xpath(self.download_url_path))
 
+    @override
     def _get_case_names(self):
         case_names = [
             " ".join(i.strip() for i in e.xpath(".//text()")).strip()
@@ -37,6 +40,7 @@ class Site(OpinionSite):
         ]
         return case_names
 
+    @override
     def _get_case_dates(self):
         if self.year <= 2006:
             case_dates = []
@@ -64,6 +68,7 @@ class Site(OpinionSite):
 
         return case_dates
 
+    @override
     def _get_precedential_statuses(self):
         statuses = []
         for e in self.html.xpath(self.precedential_statuses_path):
@@ -74,6 +79,7 @@ class Site(OpinionSite):
                 statuses.append("Published")
         return statuses
 
+    @override
     def _get_docket_numbers(self):
         docket_numbers = []
         for e in self.html.xpath(self.docket_numbers_path):
@@ -82,6 +88,7 @@ class Site(OpinionSite):
             docket_numbers.append(nums)
         return docket_numbers
 
+    @override
     def _get_citations(self):
         neutral_citations = None
         if self.neutral_citations_path:
@@ -93,7 +100,8 @@ class Site(OpinionSite):
 
         return neutral_citations
 
-    async def _download_backwards(self, d):
+    @override
+    async def _download_backwards(self, d: int) -> None:
         self.__set_paths(d)
 
         self.url = self.url_base.format(year=self.year)
@@ -104,7 +112,7 @@ class Site(OpinionSite):
             # function from being run a second time by the parse method.
             self.status = 200
 
-    def __set_paths(self, year):
+    def __set_paths(self, year: int) -> None:
         self.year = year
         if year < 2006:
             base_path = "//tr/td[4][a]"

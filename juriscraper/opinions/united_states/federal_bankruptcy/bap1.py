@@ -46,7 +46,7 @@ class Site(OpinionSiteLinear):
     }
     # See issue #828 for mapper extraction reference
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.url = "https://www.bap1.uscourts.gov/bapopn"
         self.first_opinion_date = date(2001, 9, 7)
@@ -54,6 +54,7 @@ class Site(OpinionSiteLinear):
         self.court_id = self.__module__
         self.should_have_results = True
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Method used by backscraper to download historical records
 
@@ -163,6 +164,7 @@ class Site(OpinionSiteLinear):
         """
         return html_element.xpath(xpath)[0].text_content().strip()
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Extract Date Filed from text
 

@@ -10,6 +10,7 @@ import re
 from datetime import date, datetime
 
 from dateparser import parse
+from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
@@ -48,7 +49,7 @@ class Site(OpinionSiteLinear):
         cells_in_td_xpath = "ancestor::td[1]/following-sibling::td"
 
         for link in self.html.xpath("//a[contains(string(.), 'TSPR')]"):
-            url = link.xpath("@href")[0]
+            url: str = link.xpath("@href")[0]
             citation = link.xpath("string(.)").strip()
             sibling_td_count = len(link.xpath(cells_in_td_xpath))
 
@@ -75,7 +76,7 @@ class Site(OpinionSiteLinear):
                     r"\s+", " ", cells[2].text_content()
                 ).strip()
                 if day_field.isdigit():
-                    month_h3 = link.xpath(
+                    month_h3: list[HtmlElement] = link.xpath(
                         "ancestor::table[1]/preceding::h3[1]"
                     )
                     month_name = (
@@ -95,7 +96,7 @@ class Site(OpinionSiteLinear):
             elif sibling_td_count == 0:
                 # Newest format (2023+): vertical layout with labeled rows
                 # Rows: [Núm., Partes, Ponente, Fecha, Materia]
-                cells = link.xpath(cells_in_tr_xpath)
+                cells: list[HtmlElement] = link.xpath(cells_in_tr_xpath)
                 docket = self.extract_cell(cells, 0)
                 name = self.extract_cell(cells, 1)
                 date_str = cells[3].xpath(".//td")[1].text_content().strip()
@@ -139,7 +140,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def extract_cell(self, cells, index) -> str:
+    def extract_cell(self, cells: list[HtmlElement], index: int) -> str:
         """Extract the value from a labeled table cell in the newest layout
 
         Each cell contains a label (e.g. "Núm.", "Partes") followed by the
@@ -175,7 +176,8 @@ class Site(OpinionSiteLinear):
 
         self.back_scrape_iterable = range(start_date.year, end_date.year + 1)
 
-    async def _download_backwards(self, year) -> None:
+    @override
+    async def _download_backwards(self, year: int) -> None:
         """Download and parse opinions for a single back-scrape year
 
         :param year: The year to scrape

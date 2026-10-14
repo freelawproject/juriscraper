@@ -11,7 +11,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.year = datetime.date.today().year
@@ -24,7 +24,7 @@ class Site(OpinionSiteLinear):
         for row in self.html.xpath("//div[@class='views-row']"):
             docket, _, _, summary, *_ = row.xpath(".//div/text()")
             url = row.xpath(".//div/span/p/a")[0].get("href")
-            case = row.xpath(".//div/span/p/a/text()")[0]
+            case: str = row.xpath(".//div/span/p/a/text()")[0]
             self.cases.append(
                 {
                     "name": case,

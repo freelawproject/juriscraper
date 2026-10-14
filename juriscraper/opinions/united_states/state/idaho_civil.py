@@ -44,7 +44,7 @@ class Site(OpinionSiteLinear):
     days_interval = 30
     first_opinion_date = datetime(2010, 1, 1)
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.status = self.default_status
@@ -133,7 +133,7 @@ class Site(OpinionSiteLinear):
         value = (content.get(key) or {}).get("value")
         return str(value).strip() if value is not None else ""
 
-    def _build_full_name(self, content: dict) -> str:
+    def _build_full_name(self, content: dict[str, object]) -> str:
         """Join plaintiff and defendant from the doc detail into a long
         case name, titlecased. Returns "" if either side is missing.
         """
@@ -143,7 +143,8 @@ class Site(OpinionSiteLinear):
             return titlecase(f"{plaintiff} vs. {defendant}")
         return ""
 
-    def _get_case_name_shorts(self):
+    @override
+    def _get_case_name_shorts(self) -> list[str]:
         # Use the source's polished `title` field instead of the default
         # CaseNameTweaker heuristic, which can't handle Idaho's long
         # all-caps party names.
@@ -169,6 +170,7 @@ class Site(OpinionSiteLinear):
         doc = self._return_response_text_object()
         return doc or {}
 
+    @override
     async def _download_backwards(self, d: tuple[date, date]) -> None:
         start, _ = d
         self._back_start = start
@@ -193,6 +195,7 @@ class Site(OpinionSiteLinear):
                 logger.info("No cursor")
                 break
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Build a single (start, end) tuple from kwargs.
 
@@ -213,6 +216,7 @@ class Site(OpinionSiteLinear):
         )
         self.back_scrape_iterable = [(start, end)]
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court from the scraped text.
 

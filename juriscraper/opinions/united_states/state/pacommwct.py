@@ -31,7 +31,7 @@ class Site(pasuperct.Site):
     extract_from_text = OpinionSite.extract_from_text
     post_type_key = "PostingTypeId"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         """About postTypes
         complete = Complete Opinion
         mo = majority opinion

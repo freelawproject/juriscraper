@@ -4,6 +4,12 @@ which is free.
 
 import pprint
 import sys
+from datetime import date
+from typing import Literal
+
+from httpx import Response
+from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.lib.date_utils import make_date_range_tuples
 from juriscraper.lib.html_utils import (
@@ -37,14 +43,15 @@ class FreeOpinionReport(BaseReport):
     EXCLUDED_COURT_IDS = ["casb", "innb", "ohsb"]
     VALID_SORT_PARAMS = ("date_filed", "case_number")
 
-    def __init__(self, court_id, pacer_session=None):
-        self.responses = []
+    def __init__(self, court_id: str, pacer_session=None) -> None:
+        self.responses: list[Response] = []
         self.responses_with_params = []
-        self.trees = []
+        self.trees: list[HtmlElement] = []
         super().__init__(court_id, pacer_session)
 
     @property
-    def url(self):
+    @override
+    def url(self) -> str:
         if self.court_id == "ohnd":
             return "https://ecf.ohnd.uscourts.gov/cgi-bin/OHND_WrtOpRpt.pl"
         else:
@@ -52,7 +59,13 @@ class FreeOpinionReport(BaseReport):
                 f"https://ecf.{self.court_id}.uscourts.gov/cgi-bin/WrtOpRpt.pl"
             )
 
-    async def query(self, start, end, sort="date_filed", day_span=7):
+    async def query(
+        self,
+        start: date,
+        end: date,
+        sort: str = "date_filed",
+        day_span: int = 7,
+    ) -> None:
         """Query the Free Opinions report one day at a time.
 
         :param start: a date object representing the date you want to start at.
@@ -71,7 +84,7 @@ class FreeOpinionReport(BaseReport):
             return
 
         dates = make_date_range_tuples(start, end, gap=day_span)
-        responses = []
+        responses: list[Response] = []
         responses_with_params = []
         for _start, _end in dates:
             _start = _start.strftime("%m/%d/%Y")
@@ -115,7 +128,8 @@ class FreeOpinionReport(BaseReport):
         self.responses_with_params = responses_with_params
         self.parse()
 
-    def parse(self):
+    @override
+    def parse(self) -> None:
         """Using a list of responses, parse out useful information and return
         it as a list of dicts.
         """
@@ -132,7 +146,8 @@ class FreeOpinionReport(BaseReport):
             )
             self.trees.append(tree)
 
-    def _parse_text(self, text):
+    @override
+    def _parse_text(self, text: str) -> None:
         """Parse the HTML as unicode text and set self.tree
 
         This is a particularly critical method when running tests, which pull
@@ -153,7 +168,7 @@ class FreeOpinionReport(BaseReport):
         self.trees.append(self.tree)
 
     @staticmethod
-    def _get_reported_opinion_count(tree):
+    def _get_reported_opinion_count(tree: HtmlElement) -> int:
         """PACER's "Total number of opinions reported" value for one page.
 
         :param tree: a parsed lxml tree for a single result page.
@@ -166,7 +181,7 @@ class FreeOpinionReport(BaseReport):
         )
 
     @property
-    def reported_opinion_count(self):
+    def reported_opinion_count(self) -> int:
         """Total opinions PACER reported across all queried pages for this scrape.
 
         This is PACER's own count, independent of how many rows we successfully
@@ -184,7 +199,9 @@ class FreeOpinionReport(BaseReport):
             opinion_count = self._get_reported_opinion_count(tree)
             if opinion_count == 0:
                 continue
-            rows = tree.xpath("(//table)[1]//tr[position() > 1]")
+            rows: list[HtmlElement] = tree.xpath(
+                "(//table)[1]//tr[position() > 1]"
+            )
             for row in rows:
                 if results:
                     # If we have results already, pass the previous result to
@@ -200,7 +217,7 @@ class FreeOpinionReport(BaseReport):
         )
         return results
 
-    def _normalize_sort_param(self, sort):
+    def _normalize_sort_param(self, sort: str) -> str:
         if sort == "date_filed":
             return "de_date_filed"
         elif sort == "case_number":
@@ -256,7 +273,7 @@ class FreeOpinionRow(BaseDocketReport):
             self._parse_docket_number_strs([self.get_docket_number()])
         )
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"<FreeOpinionRow in {self.court_id}>\n{self.data}"
 
     @property
@@ -285,15 +302,16 @@ class FreeOpinionRow(BaseDocketReport):
         return data
 
     @property
+    @override
     def data(self):
         """Get all the data back from this endpoint."""
         data = self.metadata.copy()
         return data
 
-    def _get_column_count(self):
+    def _get_column_count(self) -> int:
         return len(self.element.xpath("./td"))
 
-    def _detect_sort_order(self):
+    def _detect_sort_order(self) -> Literal["date_filed", "case_number"]:
         """Detect whether the report is ordered by case number or by date filed.
 
         If the report is ordered by date filed, you'll have a table row like:
@@ -314,7 +332,7 @@ class FreeOpinionRow(BaseDocketReport):
         else:
             return "case_number"
 
-    def get_pacer_case_id_and_pacer_seq_no(self):
+    def get_pacer_case_id_and_pacer_seq_no(self) -> tuple[str, str | None]:
         """Get the pacer_case_id and pacer_seq_no values for a document.
 
         Both come from the link to the document, if it has an onclick
@@ -373,7 +391,7 @@ class FreeOpinionRow(BaseDocketReport):
         else:
             return s
 
-    def get_case_name(self):
+    def get_case_name(self) -> str:
         if self._sort_order == "case_number":
             cell = self.element.xpath("./td[1]")[0]
         else:
@@ -402,7 +420,7 @@ class FreeOpinionRow(BaseDocketReport):
                 )
                 return "Case name unknown"
 
-    def get_date_filed(self):
+    def get_date_filed(self) -> date | None:
         if self._sort_order == "case_number":
             path = "./td[2]//text()"
         elif self._sort_order == "date_filed":
@@ -414,17 +432,17 @@ class FreeOpinionRow(BaseDocketReport):
         else:
             return convert_date_string(s)
 
-    def get_pacer_doc_id(self):
+    def get_pacer_doc_id(self) -> str:
         doc1_url = self.element.xpath("./td[3]//@href")[0]
         return get_pacer_doc_id_from_doc1_url(doc1_url)
 
-    def get_document_number(self):
+    def get_document_number(self) -> str:
         return self.element.xpath("./td[3]//text()")[0]
 
-    def get_description(self):
+    def get_description(self) -> str:
         return self.element.xpath("./td[4]")[0].text_content()
 
-    def get_nos(self):
+    def get_nos(self) -> str:
         if self._column_count == 4:
             return ""
         try:
@@ -434,7 +452,7 @@ class FreeOpinionRow(BaseDocketReport):
         except IndexError:
             return ""
 
-    def get_cause(self):
+    def get_cause(self) -> str:
         if self._column_count == 4:
             return ""
         try:
@@ -445,7 +463,7 @@ class FreeOpinionRow(BaseDocketReport):
             return ""
 
 
-def _main():
+def _main() -> None:
     if len(sys.argv) != 2:
         print("Usage: python -m juriscraper.pacer.docket_report filepath")
         print("Please provide a path to an HTML file to parse.")

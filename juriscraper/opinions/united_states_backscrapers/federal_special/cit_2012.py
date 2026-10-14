@@ -2,22 +2,26 @@ import time
 from datetime import date
 
 from lxml import html
+from typing_extensions import override
 
 from juriscraper.opinions.united_states.federal_special import cit
 
 
 class Site(cit.Site):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.url = "http://www.cit.uscourts.gov/SlipOpinions/SlipOps-2012.html"
         self.court_id = self.__module__
 
+    @override
     def _get_download_urls(self):
         return list(self.html.xpath("//table[4]//tr/td[1]//a/@href"))
 
+    @override
     def _get_citations(self):
         return list(self.html.xpath("//table[4]//tr/td[1]//a/text()"))
 
+    @override
     def _get_case_names(self):
         # Exclude confidential rows by ensuring there is a sibling row that
         # contains an anchor (which confidential cases do not)
@@ -28,9 +32,11 @@ class Site(cit.Site):
             )
         )
 
+    @override
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
 
+    @override
     def _get_case_dates(self):
         # This does not capture the release dates for the errata documents.
         # The errata release date is listed in column 2. This will use the
@@ -52,6 +58,7 @@ class Site(cit.Site):
                     continue
         return dates
 
+    @override
     def _get_docket_numbers(self):
         docket_numbers = []
         for e in self.html.xpath(
@@ -62,6 +69,7 @@ class Site(cit.Site):
             )
         return docket_numbers
 
+    @override
     def _get_judges(self):
         judges = []
         for e in self.html.xpath(
@@ -71,5 +79,6 @@ class Site(cit.Site):
             judges.append(s)
         return judges
 
+    @override
     def _get_nature_of_suit(self):
         return list(self.html.xpath("//table[4]//tr/td[6][../td//a]/text()"))

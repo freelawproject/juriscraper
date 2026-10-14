@@ -34,7 +34,7 @@ class Site(OpinionSiteLinear):
     )
     first_opinion_year = 2017
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.courts.maine.gov/courts/sjc/opinions.html"
@@ -64,6 +64,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract out lots of data from Maine
 
@@ -117,13 +118,15 @@ class Site(OpinionSiteLinear):
 
         return metadata
 
+    @override
     async def _download_backwards(self, year: int) -> None:
         self.url = self.url_template.format(year)
         logger.info("Backscraping for year %s %s", year, self.url)
         self.html = await self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs: dict):
+    @override
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
         if kwargs.get("backscrape_start"):
             start = int(kwargs["backscrape_start"])
         else:

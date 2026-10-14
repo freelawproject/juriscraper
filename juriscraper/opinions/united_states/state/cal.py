@@ -10,7 +10,7 @@ class Site(OpinionSiteLinear):
     division = ""
     date_regex = re.compile(r" \d\d?/\d\d?/\d\d| filed")
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         kwargs.setdefault("verify", False)
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -21,7 +21,7 @@ class Site(OpinionSiteLinear):
     @override
     def _process_html(self) -> None:
         for row in self.html.xpath("//table/tr[not(th)]"):
-            name = row.xpath(".//*[@class='op-title']/text()")[0]
+            name: str = row.xpath(".//*[@class='op-title']/text()")[0]
 
             split = self.date_regex.split(name)[0]
             if "P. v. " in split:
@@ -29,9 +29,9 @@ class Site(OpinionSiteLinear):
             else:
                 case_name = split
 
-            url = row.xpath(".//a[@class='op-link']/@href")[0]
-            date_filed = row.xpath(".//*[@class='op-date']/text()")[0]
-            docket = row.xpath(".//*[@class='op-case']/text()")[0]
+            url: str = row.xpath(".//a[@class='op-link']/@href")[0]
+            date_filed: str = row.xpath(".//*[@class='op-date']/text()")[0]
+            docket: str = row.xpath(".//*[@class='op-case']/text()")[0]
             case = {
                 "name": case_name,
                 "url": url,
@@ -43,6 +43,7 @@ class Site(OpinionSiteLinear):
 
             self.cases.append(case)
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court and case number from the scraped text.
 

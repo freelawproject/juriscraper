@@ -5,7 +5,7 @@ import httpx
 from lxml import etree, html
 
 
-async def get_court_names(**kwargs):
+async def get_court_names(**kwargs) -> None:
     kwargs.setdefault("http2", True)
     async with httpx.AsyncClient(**kwargs) as client:
         response = await client.get(
@@ -13,11 +13,11 @@ async def get_court_names(**kwargs):
         )
     tree = html.fromstring(response.text)
 
-    data = {}
+    data: dict[str, str] = {}
 
     for tr in tree.xpath("//tr"):
-        pre = tr.xpath("./td[5]/a/text()")
-        name = tr.xpath("./td[1]/text()")
+        pre: list[str] = tr.xpath("./td[5]/a/text()")
+        name: list[str] = tr.xpath("./td[1]/text()")
         if pre and name:
             data[pre[0].strip()] = name[0].strip()
 
@@ -25,7 +25,7 @@ async def get_court_names(**kwargs):
         json.dump(data, f)
 
 
-async def get_fdsys_court_names(**kwargs):
+async def get_fdsys_court_names(**kwargs) -> None:
     kwargs.setdefault("http2", True)
     async with httpx.AsyncClient(**kwargs) as client:
         response = await client.get(
@@ -33,7 +33,7 @@ async def get_fdsys_court_names(**kwargs):
         )
         tree = etree.parse(await response.aread())
 
-    data = {}
+    data: dict[str, str] = {}
 
     for url in tree.xpath(
         "//m:loc/text()",

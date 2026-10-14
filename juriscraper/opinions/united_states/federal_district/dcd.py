@@ -21,7 +21,7 @@ class Site(OpinionSiteLinear):
     docket_document_number_regex = re.compile(r"(\?)(\d+)([a-z]+)(\d+)(-)(.*)")
     nature_of_suit_regex = re.compile(r"(\?)(\d+)([a-z]+)(\d+)(-)(.*)")
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = f"https://ecf.dcd.uscourts.gov/cgi-bin/Opinions.pl?{date.today().year}"
@@ -38,9 +38,9 @@ class Site(OpinionSiteLinear):
             case_name = titlecase(
                 row.xpath("td[2]//text()[preceding-sibling::br]")[0].lower()
             )
-            date_string = row.xpath("td[1]/text()")[0]
+            date_string: str = row.xpath("td[1]/text()")[0]
             date_filed = datetime.strptime(date_string, "%m/%d/%Y")
-            docket = row.xpath("td[2]//text()[following-sibling::br]")[0]
+            docket: str = row.xpath("td[2]//text()[following-sibling::br]")[0]
 
             judge_element = row.xpath("td[3]")[0]
             judge_string = html.tostring(
@@ -63,7 +63,7 @@ class Site(OpinionSiteLinear):
                     }
                 )
 
-    def get_docket_document_number_from_url(self, url: str) -> tuple[str, str]:
+    def get_docket_document_number_from_url(self, url: str) -> str:
         """Get docket document number from the opinion URL
 
         :param url:
@@ -75,6 +75,7 @@ class Site(OpinionSiteLinear):
 
         return doc_number
 
+    @override
     async def _download_backwards(self, year: int) -> None:
         """Build URL with year input and scrape
 
@@ -85,6 +86,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Checks if backscrape start and end arguments have been passed
         by caller, and parses them accordingly

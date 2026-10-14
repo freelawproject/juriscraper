@@ -64,7 +64,7 @@ class TexasSupremeCourtScraper(TexasCommonScraper[TexasSupremeCourtDocket]):
     - Remarks on case events and appellate briefs.
     """
 
-    def __init__(self, court_id: str = "texas_sc"):
+    def __init__(self, court_id: str = "texas_sc") -> None:
         super().__init__(court_id)
 
     @override

@@ -26,7 +26,7 @@ class Site(OpinionSiteLinear):
         "https://stwjbopinions.blob.core.usgovcloudapi.net/wsc-opinions"
     )
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.set_url(datetime(datetime.today().year, 1, 1))
@@ -86,6 +86,7 @@ class Site(OpinionSiteLinear):
         else:
             self.url = self.api_url
 
+    @override
     async def _download_backwards(
         self, dates: tuple[date | None, date]
     ) -> None:
@@ -99,6 +100,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Checks if backscrape start and end arguments have been passed
         by caller, and parses them accordingly
@@ -121,6 +123,7 @@ class Site(OpinionSiteLinear):
 
         self.back_scrape_iterable = [(start, end)]
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court from the scraped text.
 

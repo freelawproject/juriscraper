@@ -24,6 +24,7 @@ from urllib.parse import urlparse
 
 from dateutil import parser
 from lxml import html as lxmlHTML
+from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
@@ -60,7 +61,7 @@ class Site(ClusterSite):
         "//table[@class='rgMasterTable']/tbody/tr[not(@class='rgNoRecords')]"
     )
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.checkbox = 0
@@ -280,10 +281,12 @@ class Site(ClusterSite):
 
         :return: dict with parsed OCI data
         """
-        labels = html.xpath(
+        labels: list[str] = html.xpath(
             f"//div[@id='{table_id}']//div[@class='span2']/label/text()"
         )
-        values = html.xpath(f"//div[@id='{table_id}']//div[@class='span4']")
+        values: list[HtmlElement] = html.xpath(
+            f"//div[@id='{table_id}']//div[@class='span4']"
+        )
 
         data = {}
         for lab, val in zip(labels, values):
@@ -371,13 +374,13 @@ class Site(ClusterSite):
 
         for opinion in html.xpath(opinion_xpath):
             op = {}
-            link = opinion.xpath(link_xpath)
+            link: list[HtmlElement] = opinion.xpath(link_xpath)
             if not link:
                 logger.warning("No link for this opinion")
                 continue
 
             try:
-                date_string = opinion.xpath(".//td[1]/text()")[0]
+                date_string: str = opinion.xpath(".//td[1]/text()")[0]
                 opinion_date = datetime.strptime(
                     date_string, "%m/%d/%Y"
                 ).date()
@@ -396,7 +399,7 @@ class Site(ClusterSite):
             op["url"] = link[0].xpath("td/a/@href")[0]
 
             # Check both document type (td[2]) and disposition (td[3]) for opinion type
-            op_type = link[0].xpath("td[2]/text()")[0].strip().lower()
+            op_type: str = link[0].xpath("td[2]/text()")[0].strip().lower()
 
             # Get disposition text
             op_disposition_raw = (
@@ -438,6 +441,7 @@ class Site(ClusterSite):
         except IndexError:
             return ""
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Overrides present scraper start_date and end_date
 

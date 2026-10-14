@@ -57,7 +57,7 @@ class TexasCourtOfAppealsScraper(
     - Transfer information (if available).
     """
 
-    def __init__(self, court_id: str):
+    def __init__(self, court_id: str) -> None:
         super().__init__(court_id)
 
     @override

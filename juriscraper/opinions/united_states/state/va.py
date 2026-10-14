@@ -10,7 +10,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     lower_court_regex = re.compile(r"FROM THE (?P<lower_court>.+)")
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.courts.state.va.us/scndex.htm"
@@ -32,7 +32,7 @@ class Site(OpinionSiteLinear):
             links = row.xpath(".//a")
             if len(links) != 2:
                 continue
-            name = row.xpath(".//b/text()")[0].strip()
+            name: str = row.xpath(".//b/text()")[0].strip()
 
             text = row.text_content().split(name)[1].strip()
             split_test = text.split("\n")
@@ -57,6 +57,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court from the scraped text.
 

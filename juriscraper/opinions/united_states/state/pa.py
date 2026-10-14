@@ -159,7 +159,7 @@ class Site(ClusterSite):
         """
         return author_str
 
-    def get_type(self, post_type: str, cluster: dict) -> OpinionType:
+    def get_type(self, post_type: object, cluster: dict) -> OpinionType:
         """Parse the PostingType into one of our Opinion.type values
 
         :param post_type: type as returned by the source
@@ -214,6 +214,7 @@ class Site(ClusterSite):
 
         return type
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract citations from text
 
@@ -253,6 +254,7 @@ class Site(ClusterSite):
 
         return result
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Modify GET querystring for desired date range
 

@@ -2,7 +2,7 @@ from juriscraper.opinions.united_states.federal_appellate import ca11_p
 
 
 class Site(ca11_p.Site):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.url = "http://media.ca11.uscourts.gov/opinions/unpub/logname.php"
         self.court_id = self.__module__

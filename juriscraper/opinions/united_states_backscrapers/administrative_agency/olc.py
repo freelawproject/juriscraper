@@ -6,15 +6,18 @@ History:
     2022-01-14: Created by William E. Palin
 """
 
+from typing_extensions import override
+
 from juriscraper.opinions.united_states.administrative_agency import olc
 
 
 class Site(olc.Site):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.back_scrape_iterable = range(1, 36)
 
+    @override
     async def _download_backwards(self, page: int) -> None:
         """Download backwards over the volume links in the DOJ OLC website.
 

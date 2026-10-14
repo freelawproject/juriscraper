@@ -4,7 +4,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.vacourts.gov/wpcap.htm"
@@ -15,7 +15,7 @@ class Site(OpinionSiteLinear):
     def _process_html(self) -> None:
         for row in self.html.xpath("//p"):
             links = row.xpath(".//a")
-            name = row.xpath(".//b/text()")
+            name: list[str] = row.xpath(".//b/text()")
             if not name:
                 continue
             date, disposition, *_ = row.text_content().splitlines()

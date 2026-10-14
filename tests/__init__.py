@@ -12,5 +12,5 @@ TESTS_ROOT_EXAMPLES_SCOTUS = TESTS_ROOT_EXAMPLES / "scotus"
 TESTS_ROOT_EXAMPLES_STATES = TESTS_ROOT_EXAMPLES / "state"
 
 
-def test_local():
+def test_local() -> unittest.TestSuite:
     return unittest.TestLoader().discover("./tests/local")

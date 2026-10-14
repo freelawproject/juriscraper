@@ -1,4 +1,7 @@
-from collections.abc import Awaitable
+from __future__ import annotations
+
+from collections.abc import Awaitable, Sequence
+from datetime import date
 
 from typing_extensions import override
 
@@ -52,7 +55,7 @@ class OpinionSiteLinear(OpinionSite):
         "content",
     }
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.cases = []
         self.status = None
@@ -63,21 +66,26 @@ class OpinionSiteLinear(OpinionSite):
             "Must implement _process_html() on OpinionSiteLinear child"
         )
 
-    def _get_case_names(self):
+    @override
+    def _get_case_names(self) -> Sequence[str]:
         return [case["name"] for case in self.cases]
 
-    def _get_download_urls(self):
+    @override
+    def _get_download_urls(self) -> Sequence[str] | Awaitable[Sequence[str]]:
         return [case["url"] for case in self.cases]
 
-    def _get_case_dates(self):
+    @override
+    def _get_case_dates(self) -> Sequence[date | None]:
         return [convert_date_string(case["date"]) for case in self.cases]
 
-    def _get_date_filed_is_approximate(self):
+    @override
+    def _get_date_filed_is_approximate(self) -> Sequence[bool]:
         return [
             case.get("date_filed_is_approximate", False) for case in self.cases
         ]
 
-    def _get_precedential_statuses(self):
+    @override
+    def _get_precedential_statuses(self) -> Sequence[str]:
         # first try to use status values set in cases dictionary
         try:
             return [case["status"] for case in self.cases]
@@ -94,7 +102,8 @@ class OpinionSiteLinear(OpinionSite):
             )
         return [self.status] * len(self.cases)
 
-    def _get_docket_numbers(self):
+    @override
+    def _get_docket_numbers(self) -> Sequence[str | None]:
         return [case["docket"] for case in self.cases]
 
     # optional getters below
@@ -103,83 +112,112 @@ class OpinionSiteLinear(OpinionSite):
         if self.cases and id in self.cases[0]:
             return [case[id] for case in self.cases]
 
-    def _get_judges(self):
+    @override
+    def _get_judges(self) -> Sequence[str | None] | None:
         return self._get_optional_field_by_id("judge")
 
-    def _get_citations(self):
+    @override
+    def _get_citations(self) -> Sequence[str | None] | None:
         return self._get_optional_field_by_id("citation")
 
-    def _get_parallel_citations(self):
+    @override
+    def _get_parallel_citations(self) -> Sequence[str | None] | None:
         return self._get_optional_field_by_id("parallel_citation")
 
-    def _get_summaries(self):
+    @override
+    def _get_summaries(self) -> Sequence[str | None] | None:
         return self._get_optional_field_by_id("summary")
 
-    def _get_child_courts(self):
+    @override
+    def _get_child_courts(self) -> Sequence[str | None] | None:
         return self._get_optional_field_by_id("child_court")
 
-    def _get_lower_courts(self):
+    @override
+    def _get_lower_courts(self) -> Sequence[str | None] | None:
         return self._get_optional_field_by_id("lower_court")
 
-    def _get_lower_court_ids(self):
+    @override
+    def _get_lower_court_ids(self) -> Sequence[str | None] | None:
         return self._get_optional_field_by_id("lower_court_id")
 
-    def _get_lower_court_judges(self):
+    @override
+    def _get_lower_court_judges(self) -> Sequence[str | None] | None:
         return self._get_optional_field_by_id("lower_court_judge")
 
-    def _get_lower_court_numbers(self):
+    @override
+    def _get_lower_court_numbers(self) -> Sequence[str | None] | None:
         return self._get_optional_field_by_id("lower_court_number")
 
-    def _get_nature_of_suit(self):
+    @override
+    def _get_nature_of_suit(self) -> Sequence[str | None] | None:
         return self._get_optional_field_by_id("nature_of_suit")
 
-    def _get_docket_document_numbers(self):
+    @override
+    def _get_docket_document_numbers(
+        self,
+    ) -> Sequence[int | str | None] | None:
         return self._get_optional_field_by_id("docket_document_number")
 
-    def _get_docket_attachment_numbers(self):
+    @override
+    def _get_docket_attachment_numbers(
+        self,
+    ) -> Sequence[int | str | None] | None:
         return self._get_optional_field_by_id("docket_attachment_number")
 
-    def _get_causes(self):
+    @override
+    def _get_causes(self) -> Sequence[str | None] | None:
         return self._get_optional_field_by_id("cause")
 
-    def _get_dispositions(self):
+    @override
+    def _get_dispositions(self) -> Sequence[str | None] | None:
         return self._get_optional_field_by_id("disposition")
 
-    def _get_divisions(self):
+    @override
+    def _get_divisions(self) -> Sequence[str | None] | None:
         return self._get_optional_field_by_id("division")
 
-    def _get_adversary_numbers(self):
+    @override
+    def _get_adversary_numbers(self) -> Sequence[str | None] | None:
         return self._get_optional_field_by_id("adversary_number")
 
-    def _get_authors(self):
+    @override
+    def _get_authors(self) -> Sequence[str | None] | None:
         return self._get_optional_field_by_id("author")
 
-    def _get_per_curiam(self):
+    @override
+    def _get_per_curiam(self) -> Sequence[bool | None] | None:
         return self._get_optional_field_by_id("per_curiam")
 
-    def _get_joined_by(self):
+    @override
+    def _get_joined_by(self) -> Sequence[str | None] | None:
         return self._get_optional_field_by_id("joined_by")
 
-    def _get_types(self):
+    @override
+    def _get_types(self) -> Sequence[str | None] | None:
         return self._get_optional_field_by_id("type")
 
-    def _get_other_dates(self):
+    @override
+    def _get_other_dates(self) -> Sequence[str | None] | None:
         """Goes into OpinionCluster.other_dates, type: string"""
         return self._get_optional_field_by_id("other_date")
 
-    def _get_attorneys(self):
+    @override
+    def _get_attorneys(self) -> Sequence[str | None] | None:
         """Goes into OpinionCluster.attorneys, type: string"""
         return self._get_optional_field_by_id("attorney")
 
-    def _get_headnotes(self):
+    @override
+    def _get_headnotes(self) -> Sequence[str | None] | None:
         """Goes into OpinionCluster.headnotes, type: string"""
         return self._get_optional_field_by_id("headnote")
 
-    def _get_content(self):
+    @override
+    def _get_content(self) -> Sequence[str | bytes | None] | None:
         """Goes into Opinion.html or Opinion.plain_text"""
         return self._get_optional_field_by_id("content")
 
-    def _check_sanity(self):
+    @override
+    def _check_sanity(self) -> None:
         super()._check_sanity()
         # Check that all returned keys have the proper name to be used
         # in an Opinion / AbstractSite getter

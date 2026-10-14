@@ -3,17 +3,19 @@ import time
 from datetime import date
 
 from lxml import html
+from typing_extensions import override
 
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.url = "http://www.isc.idaho.gov/opinions/cacivil.htm"
         self.court_id = self.__module__
 
+    @override
     def tweak_response_object(self):
         """
         This state uses an HTTP header to indicate an encoding of UTF-8,
@@ -24,6 +26,7 @@ class Site(OpinionSite):
         """
         self.request["response"].encoding = "ISO-8859-1"
 
+    @override
     def _get_case_names(self):
         case_names = []
         for xelement in self.html.xpath('//li[@class="MsoNormal"]/span/a[1]'):
@@ -50,12 +53,14 @@ class Site(OpinionSite):
 
         return case_names
 
+    @override
     def _get_download_urls(self):
         download_urls = []
         for e in self.html.xpath('//li[@class="MsoNormal"]/span/a[1]/@href'):
             download_urls.append(e)
         return download_urls
 
+    @override
     def _get_case_dates(self):
         case_dates = []
         for e in self.html.xpath('//li[@class="MsoNormal"]/span/a[1]'):
@@ -74,5 +79,6 @@ class Site(OpinionSite):
             case_dates.append(case_date)
         return case_dates
 
+    @override
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)

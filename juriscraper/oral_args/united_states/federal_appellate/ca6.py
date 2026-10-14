@@ -26,7 +26,7 @@ class Site(OralArgumentSiteLinear):
     # than 1000 every time
     limit = 100
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = (
@@ -59,6 +59,7 @@ class Site(OralArgumentSiteLinear):
                 }
             )
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Downloads and parses older records according to input dates"""
         logger.info("Backscraping for range %s", *dates)

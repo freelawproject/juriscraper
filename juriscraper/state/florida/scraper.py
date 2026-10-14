@@ -692,7 +692,7 @@ async def get_cases(
     return (await scraper.courts), cases
 
 
-def _main():
+def _main() -> None:
     """Run the scraper on a given date range"""
 
     import argparse

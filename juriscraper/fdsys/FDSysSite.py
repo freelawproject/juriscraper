@@ -1,17 +1,21 @@
+from __future__ import annotations
+
 import glob
 import json
 import re
 from collections import defaultdict
 from datetime import date
+from typing import Self
 
 import httpx
 from httpx import InvalidURL
 from lxml import etree
+from typing_extensions import override
 
 from juriscraper.AbstractSite import AbstractSite
 
 
-async def get_tree(url, **kwargs):
+async def get_tree(url: str, **kwargs) -> etree._ElementTree[etree._Element]:
     try:
         kwargs.setdefault("http2", True)
         async with httpx.AsyncClient(**kwargs) as client:
@@ -33,7 +37,7 @@ def xpath(tree, query):
 
 
 class FDSysModsContent:
-    def __init__(self, url):
+    def __init__(self, url) -> None:
         self._all_attrs = [
             "download_url",
             "fdsys_id",
@@ -48,7 +52,7 @@ class FDSysModsContent:
         mods_url = self._get_mods_file_url(url)
         self.parse(mods_url)
 
-    def get_content(self):
+    def get_content(self) -> dict[str, object]:
         """Using i, convert a single item into a dict. This is effectively a
         different view of the data.
         """
@@ -63,34 +67,34 @@ class FDSysModsContent:
         for attr in self._all_attrs:
             self.__setattr__(attr, getattr(self, f"_get_{attr}")())
 
-    def _get_download_url(self):
+    def _get_download_url(self) -> str:
         return "".join(
             xpath(self.tree, "(//m:identifier[@type='uri'])[1]/text()")
         ).strip()
 
-    def _get_fdsys_id(self):
+    def _get_fdsys_id(self) -> str:
         return "".join(xpath(self.tree, "(//m:accessId/text())[1]"))
 
-    def _get_docket_number(self):
+    def _get_docket_number(self) -> str:
         return "".join(xpath(self.tree, "(//m:caseNumber/text())[1]"))
 
-    def _get_court_id(self):
+    def _get_court_id(self) -> str:
         return "".join(xpath(self.tree, "(//m:courtCode/text())[1]")).lower()
 
-    def _get_court_location(self):
+    def _get_court_location(self) -> str:
         return "".join(xpath(self.tree, "(//m:caseOffice/text())[1]"))
 
-    def _get_case_name(self):
+    def _get_case_name(self) -> str:
         return "".join(xpath(self.tree, "(//m:titleInfo/m:title/text())[1]"))
 
-    def _get_parties(self):
+    def _get_parties(self) -> list[dict[str, str]]:
         """Extract the parties from the XML into a nice object."""
         party_nodes = xpath(self.tree, "(//m:extension[m:party])[1]//m:party")
 
         return list(map(self._get_party, party_nodes))
 
     @staticmethod
-    def _get_party(party_node):
+    def _get_party(party_node: etree._Element) -> dict[str, str]:
         return {
             "name_first": "".join(xpath(party_node, "./@firstName")),
             "name_last": "".join(xpath(party_node, "./@lastName")),
@@ -99,13 +103,13 @@ class FDSysModsContent:
             "role": "".join(xpath(party_node, "./@role")),
         }
 
-    def _get_documents(self):
+    def _get_documents(self) -> list[dict[str, str]]:
         """Get the documents from the XML into a nice object."""
         document_nodes = xpath(self.tree, "//m:mods/m:relatedItem")
 
         return list(map(self._get_document, document_nodes))
 
-    def _get_document(self, document_node):
+    def _get_document(self, document_node: etree._Element) -> dict[str, str]:
         desription = " ".join(
             "".join(xpath(document_node, ".//m:subTitle/text()")).split()
         )
@@ -122,7 +126,7 @@ class FDSysModsContent:
         }
 
     @staticmethod
-    def _get_mods_file_url(url):
+    def _get_mods_file_url(url: str) -> str:
         """replaces content-detail.html with mods.xml"""
         return url.replace("content-detail.html", "mods.xml")
 
@@ -140,27 +144,30 @@ class FDSysSite(AbstractSite):
 
     """
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         current_year = date.today().year
         self.base_url = "https://www.gpo.gov/smap/fdsys/sitemap_{year}/{year}_USCOURTS_sitemap.xml"
         self.url = self.base_url.format(year=current_year)
         self.back_scrape_iterable = list(range(1982, current_year + 1))
 
+    @override
     def __iter__(self):
         for url in xpath(self.html, "//s:loc/text()"):
             self.save_mods_file(url)
             mods_file = FDSysModsContent(url)
             yield mods_file.get_content()
 
-    def __getitem__(self, i):
+    @override
+    def __getitem__(self, i: int) -> dict[str, object]:
         mods_file = FDSysModsContent(xpath(self.html, "//s:loc/text()")[i])
         return mods_file.get_content()
 
-    def __len__(self):
+    @override
+    def __len__(self) -> int:
         return len(xpath(self.html, "//s:loc/text()"))
 
-    async def save_mods_file(self, url, **kwargs):
+    async def save_mods_file(self, url: str, **kwargs) -> None:
         mods_url = FDSysModsContent._get_mods_file_url(url)
         name = "-".join(mods_url.split("/")[-2].split("-")[1:])
         with open(f"./examples/2006/{name}.xml", "wb") as handle:
@@ -172,13 +179,15 @@ class FDSysSite(AbstractSite):
                 async for block in response.aiter_bytes():
                     handle.write(block)
 
+    @override
     async def _download(self, request_dict=None):
         """
         it actually builds an XML tree
         """
         return await get_tree(self.url)
 
-    async def _download_backwards(self, year):
+    @override
+    async def _download_backwards(self, year: int) -> None:
         self.url = self.base_url.format(year=year)
         self.html = await self._download()
         if self.html is not None:
@@ -186,10 +195,12 @@ class FDSysSite(AbstractSite):
             # function from being run a second time by the parse method.
             self.status = 200
 
-    def _check_sanity(self):
+    @override
+    def _check_sanity(self) -> None:
         pass
 
-    async def parse(self):
+    @override
+    async def parse(self) -> Self:
         if self.status is None:
             # Run the downloader if it hasn't been run already
             self.html = await self._download()

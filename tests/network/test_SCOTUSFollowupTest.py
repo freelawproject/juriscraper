@@ -2,6 +2,7 @@ from pathlib import Path
 from unittest import IsolatedAsyncioTestCase, mock
 
 from httpx import HTTPError, Request, Response
+from typing_extensions import override
 
 from juriscraper.scotus import SCOTUSEmail
 from tests import TESTS_ROOT_EXAMPLES_SCOTUS
@@ -10,10 +11,11 @@ from tests import TESTS_ROOT_EXAMPLES_SCOTUS
 class SCOTUSFollowupTest(IsolatedAsyncioTestCase):
     """Ensure the handle_email method works as expected."""
 
-    def setUp(self):
+    @override
+    def setUp(self) -> None:
         self.test_root = Path(TESTS_ROOT_EXAMPLES_SCOTUS) / "email"
 
-    async def run_test_on_email(self, email_path: Path):
+    async def run_test_on_email(self, email_path: Path) -> None:
         with open(email_path) as f:
             scotus_email_scraper = SCOTUSEmail()
             scotus_email_scraper._parse_text(f.read())
@@ -27,7 +29,7 @@ class SCOTUSFollowupTest(IsolatedAsyncioTestCase):
         "juriscraper.scotus.scotus_email.httpx.AsyncClient.get",
         new_callable=mock.AsyncMock,
     )
-    async def test_handle_email(self, mock_get):
+    async def test_handle_email(self, mock_get: mock.AsyncMock) -> None:
         mock_get.side_effect = lambda url, **kwargs: Response(
             404, request=Request("GET", url)
         )

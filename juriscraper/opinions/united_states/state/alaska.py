@@ -21,6 +21,7 @@ from html import unescape
 from urllib.parse import urlencode, urljoin
 
 from lxml import html
+from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
@@ -228,6 +229,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     @staticmethod
     def cleanup_content(content: bytes) -> str:
         """Isolate the opinion from the surrounding Westlaw site chrome.
@@ -241,7 +243,7 @@ class Site(OpinionSiteLinear):
             here skips just this document instead of ingesting the junk page
         """
         tree = html.fromstring(content)
-        nodes = tree.xpath("//*[@id='co_document']")
+        nodes: list[HtmlElement] = tree.xpath("//*[@id='co_document']")
         if not nodes:
             raise InvalidDocumentError(
                 "alaska: opinion container '#co_document' missing; "
@@ -253,6 +255,7 @@ class Site(OpinionSiteLinear):
         # content hash is stable across downloads (CL dedupes on hash) #2009
         return Site.volatile_token_regex.sub("", cleaned)
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Configure the date window for a historical range and download.
 
@@ -291,6 +294,7 @@ class Site(OpinionSiteLinear):
             f"{urljoin(self.base_url, 'Search/Results')}?{urlencode(params)}"
         )
 
+    @override
     async def _download(self, request_dict=None):
         """Bootstrap a session and fetch the first results page.
 
@@ -340,11 +344,12 @@ class Site(OpinionSiteLinear):
 
     def _next_page_url(self) -> str | None:
         """Return the absolute URL of the next results page, if any."""
-        links = self.html.xpath(
+        links: list[str] = self.html.xpath(
             "//a[contains(., 'Next set of documents')]/@href"
         )
         return links[0] if links else None
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract the lower court (and its judge) from the opinion text.
 
@@ -390,7 +395,7 @@ class Site(OpinionSiteLinear):
         # The panel of judges from the "Before:" line
         if panel_match := self.panel_regex.search(scraped_text):
             panel = self.panel_title_regex.sub("", panel_match.group("panel"))
-            judges = []
+            judges: list[str] = []
             for judge in self.panel_split_regex.split(panel):
                 judge = judge.strip(" .,")
                 if not judge:

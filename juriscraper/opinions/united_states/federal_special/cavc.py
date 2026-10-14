@@ -12,6 +12,7 @@ import re
 from datetime import date
 from typing import Any
 
+from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.lib.string_utils import titlecase
@@ -19,7 +20,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.url = "http://www.uscourts.cavc.gov/opinions.php"
         self.court_id = self.__module__
@@ -34,7 +35,9 @@ class Site(OpinionSiteLinear):
         """
         if self.test_mode_enabled():
             self.last_month = datetime.datetime(2022, 12, 27).date()
-        cases = self.html.xpath(".//tbody/tr/td/a/parent::td/parent::tr")
+        cases: list[HtmlElement] = self.html.xpath(
+            ".//tbody/tr/td/a/parent::td/parent::tr"
+        )
         for case in cases:
             try:
                 _, date = case.xpath(".//td/text()")
@@ -53,6 +56,7 @@ class Site(OpinionSiteLinear):
                 # The table has a malformed row
                 continue
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Can we extract the case name and clean it up?
 

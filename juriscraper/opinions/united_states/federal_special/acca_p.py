@@ -13,7 +13,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.jagcnet.army.mil/ACCALibrary/cases/opinions/OC"
@@ -27,7 +27,7 @@ class Site(OpinionSiteLinear):
             '//*[@id="Opinions_ResizeContainer"]/table/tbody/tr'
         ):
             col1, col2, col3 = row.xpath(".//td")
-            url = col1.xpath(".//a/@href")
+            url: list[str] = col1.xpath(".//a/@href")
             if not url:
                 continue
             name = col1.text_content()

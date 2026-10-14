@@ -19,7 +19,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     extract_from_text = ariz.Site.extract_from_text
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         # Feeling down and tired of of your regular life? Check out this website.
@@ -31,16 +31,18 @@ class Site(OpinionSiteLinear):
     def _process_html(self) -> None:
         path = "//table//a[contains(@href, '.pdf')]"
         for item in self.html.xpath(path):
-            docket = item.xpath("./text()")[0]
-            url = item.xpath("./@href")[0]
-            names = item.xpath("./following::td[1]/*/text()")
+            docket: str = item.xpath("./text()")[0]
+            url: str = item.xpath("./@href")[0]
+            names: list[str] = item.xpath("./following::td[1]/*/text()")
             if not names:
                 continue
             name = names[0]
             # Expected: "Opinion Filed: 10/13/2021"
-            date_string = item.xpath("./following::td[2]/text()")[0].strip()
+            date_string: str = item.xpath("./following::td[2]/text()")[
+                0
+            ].strip()
             date = clean_if_py3(date_string).rsplit(":", 1)[1].strip()
-            summary_list = item.xpath("./following::tr[1]//text()")
+            summary_list: list[str] = item.xpath("./following::tr[1]//text()")
             summary = "".join(summary_list).strip()
             self.cases.append(
                 {

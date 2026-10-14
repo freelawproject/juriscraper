@@ -3,6 +3,8 @@ import pprint
 import sys
 import unicodedata
 
+from typing_extensions import override
+
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.network_utils import AcmsApiClient
@@ -16,12 +18,13 @@ logger = make_default_logger()
 class ACMSAttachmentPage(BaseReport):
     """Parse ACMS attachment pages' JSON."""
 
-    def __init__(self, court_id, pacer_session=None) -> None:
+    def __init__(self, court_id: str, pacer_session=None) -> None:
         super().__init__(court_id, pacer_session)
         self._acms_json: dict = {}
         self.api_client = AcmsApiClient(pacer_session, court_id)
 
-    def _parse_text(self, text):
+    @override
+    def _parse_text(self, text: str) -> None:
         """Store the ACMS JSON
 
         This does not, in fact, actually *parse* the data, it
@@ -94,6 +97,7 @@ class ACMSAttachmentPage(BaseReport):
             return int(attachment)
         return int(value)
 
+    @override
     def check_validity(self, parsed_json: dict) -> None:
         """Place sanity checks here to make sure that the returned json is
         valid and not an error page or some other kind of problem.
@@ -108,7 +112,7 @@ class ACMSAttachmentPage(BaseReport):
             return
         self.is_valid = True
 
-    async def query(self, case_id: str, entry_id: str):
+    async def query(self, case_id: str, entry_id: str) -> None:
         """
         Retrieves details for a specific docket entry and its attachments.
 
@@ -222,7 +226,7 @@ class ACMSAttachmentPage(BaseReport):
         return result
 
 
-def main():
+def main() -> None:
     if len(sys.argv) != 2:
         print(
             "Usage: python -m juriscraper.pacer.acms_attachment_page filepath"

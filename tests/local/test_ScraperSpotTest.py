@@ -13,7 +13,7 @@ class ScraperSpotTest(unittest.TestCase):
     without a full integration test.
     """
 
-    def test_mass(self):
+    def test_mass(self) -> None:
         strings = {
             "Massachusetts State Automobile Dealers Association, Inc. v. Tesla Motors MA, Inc. (SJC 11545) (September 15, 2014)": [
                 "Massachusetts State Automobile Dealers Association, Inc. v. Tesla Motors MA, Inc.",
@@ -73,7 +73,7 @@ class ScraperSpotTest(unittest.TestCase):
             name, docket, _, date = m.groups()
             self.assertEqual([name, docket], s[1])
 
-    def test_massappct(self):
+    def test_massappct(self) -> None:
         strings = {
             "Commonwealth v. Forbes (AC 13-P-730) (August 26, 2014)": [
                 "Commonwealth v. Forbes",
@@ -133,7 +133,7 @@ class ScraperSpotTest(unittest.TestCase):
             name, docket, _, date = m.groups()
             self.assertEqual([name, docket], s[1])
 
-    def test_nytrial_build_url(self):
+    def test_nytrial_build_url(self) -> None:
         from juriscraper.opinions.united_states.state import (
             nysupct,
             nysupct_commercial,
@@ -162,7 +162,7 @@ class ScraperSpotTest(unittest.TestCase):
                 site.build_url(target_date), f"{root}/{path}.shtml"
             )
 
-    def test_nytrial_page_not_found(self):
+    def test_nytrial_page_not_found(self) -> None:
         from lxml.html import fromstring
 
         from juriscraper.lib.exceptions import ParsingException
@@ -184,7 +184,7 @@ class ScraperSpotTest(unittest.TestCase):
         with self.assertRaises(ParsingException):
             asyncio.run(site._process_html())
 
-    def test_nytrial_metadata_from_stub(self):
+    def test_nytrial_metadata_from_stub(self) -> None:
         from lxml.html import fromstring
 
         from juriscraper.opinions.united_states.state import nytrial
@@ -248,7 +248,7 @@ class ScraperSpotTest(unittest.TestCase):
                 nytrial.Site.get_docket_from_header(header), docket
             )
 
-    def test_nev_judge_initials(self):
+    def test_nev_judge_initials(self) -> None:
         """Panel initials resolve by court and filed date"""
         supreme, appeals = nev.Site(), nevapp.Site()
 
@@ -267,7 +267,7 @@ class ScraperSpotTest(unittest.TestCase):
             )
         self.assertEqual(metadata["judge"], "Stiglich, Lee")
 
-    def test_nev_majority_panel(self):
+    def test_nev_majority_panel(self) -> None:
         """Panel parsing tolerates a "Before:" prefix and spaced slashes"""
         site = nev.Site()
         tests = [
@@ -298,7 +298,7 @@ class ScraperSpotTest(unittest.TestCase):
                 metadata = site.parse_description(description, "2026-06-18")
                 self.assertEqual(metadata["judge"], judges)
 
-    def test_nev_backscrape_past_last_page(self):
+    def test_nev_backscrape_past_last_page(self) -> None:
         """A backscrape stops on the empty page after the last one"""
         result = {
             "docketEntryHeader": {

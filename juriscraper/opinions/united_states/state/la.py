@@ -12,6 +12,7 @@ import re
 from urllib.parse import urljoin
 
 import httpx
+from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
@@ -61,7 +62,8 @@ class Site(OpinionSiteLinear):
         # User-Agent the 521/empty shell more often; a browser UA is stabler.
         self.request["headers"]["User-Agent"] = self.chrome_user_agent
 
-    async def _download(self, request_dict=None):
+    @override
+    async def _download(self, request_dict=None) -> list[HtmlElement]:
         if self.test_mode_enabled():
             # The example file is a single rendered news-release fragment.
             return [await OpinionSiteLinear._download(self, request_dict)]
@@ -387,7 +389,7 @@ class Site(OpinionSiteLinear):
                 break
         return bytes(prefix) + payload
 
-    def _get_date_for_opinions(self, html) -> str:
+    def _get_date_for_opinions(self, html: HtmlElement) -> str:
         """Parse the hand-down date, e.g. "1st day of June, 2026".
 
         :param html: the parsed news-release fragment
@@ -401,16 +403,17 @@ class Site(OpinionSiteLinear):
         year = parts[1].split()[1].strip(",")
         return " ".join([month, day, year])
 
-    def _get_judge_above_anchor(self, anchor) -> str | None:
+    def _get_judge_above_anchor(self, anchor: HtmlElement) -> str | None:
         path = (
             "./preceding::*[starts-with(., 'BY ') or contains(., 'CURIAM:')]"
         )
         try:
-            text = anchor.xpath(path)[-1].text_content()
+            text: str = anchor.xpath(path)[-1].text_content()
         except IndexError:
             return None
         return text.rstrip(":").lstrip("BY").strip()
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court from the scraped text.
 

@@ -7,21 +7,24 @@ import time
 from datetime import date
 
 from lxml import html
+from typing_extensions import override
 
 from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.url = "http://www.cit.uscourts.gov/SlipOpinions/index.html"
         self.court_id = self.__module__
         self.base = '//tr[../tr/th[contains(., "Caption")]]'
         self.should_have_results = True
 
+    @override
     def _get_download_urls(self):
         return list(self.html.xpath(f"{self.base}/td[1]/a/@href"))
 
+    @override
     def _get_citations(self):
         neutral_citations = []
         for t in self.html.xpath(f"{self.base}/td[1]/a/text()"):
@@ -29,6 +32,7 @@ class Site(OpinionSite):
             neutral_citations.append(f"20{year} CIT {item_number}")
         return neutral_citations
 
+    @override
     def _get_case_names(self):
         # Exclude confidential rows by ensuring there is a sibling row that
         # contains an anchor (which confidential cases do not)
@@ -40,6 +44,7 @@ class Site(OpinionSite):
             case_names.append(case_name)
         return case_names
 
+    @override
     def _get_precedential_statuses(self):
         statuses = []
         for e in self.html.xpath(f"{self.base}/td[2][../td/a]"):
@@ -54,6 +59,7 @@ class Site(OpinionSite):
                 statuses.append("Published")
         return statuses
 
+    @override
     def _get_case_dates(self):
         # This does not capture the release dates for the errata documents.
         # The errata release date is listed in column 2. This will use the
@@ -77,6 +83,7 @@ class Site(OpinionSite):
                     continue
         return dates
 
+    @override
     def _get_docket_numbers(self):
         docket_numbers = []
         for e in self.html.xpath(f"{self.base}/td[4][../td/a]"):
@@ -85,6 +92,7 @@ class Site(OpinionSite):
             )
         return docket_numbers
 
+    @override
     def _get_judges(self):
         judges = []
         for e in self.html.xpath(f"{self.base}/td[5][../td/a]"):
@@ -92,5 +100,6 @@ class Site(OpinionSite):
             judges.append(s)
         return judges
 
+    @override
     def _get_nature_of_suit(self):
         return list(self.html.xpath(f"{self.base}/td[6][../td/a]/text()"))

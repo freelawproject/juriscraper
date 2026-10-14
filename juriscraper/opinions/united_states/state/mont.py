@@ -17,7 +17,7 @@ class Site(OpinionSiteLinear):
     download_base = f"{base_url}/getDocByCTrackId?DocId="
     cite_regex = r"((19|20)\d{2}\sMT\s\d{1,3}[A-Z]?)"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = f"{self.base_url}/getDailyOrders"
@@ -77,6 +77,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract citation, and OriginatingCourtInformation from text
 
@@ -120,8 +121,9 @@ class Site(OpinionSiteLinear):
 
         return result
 
+    @override
     @staticmethod
-    def cleanup_content(content: str | bytes) -> str:
+    def cleanup_content(content: str | bytes) -> str | bytes:
         """Raise an error if the content is invalid; otherwise just return it
 
         Not cleaning up in the common sense; but avoids ingesting error

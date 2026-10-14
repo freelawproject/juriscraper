@@ -7,6 +7,9 @@ presents some more information for BK cases.
 import pprint
 import re
 import sys
+from datetime import date
+
+from typing_extensions import override
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import clean_string, force_unicode, harmonize
@@ -37,20 +40,21 @@ class CaseQuery(BaseDocketReport, BaseReport):
         r"Control F",
     ]
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None) -> None:
         BaseDocketReport.__init__(self, court_id)
         BaseReport.__init__(self, court_id, pacer_session)
 
         # Initialize the empty cache properties
         self._clear_caches()
-        self._metadata = None
+        self._metadata: dict[str, str | date | None] | None = None
 
-    def parse(self):
+    @override
+    def parse(self) -> None:
         self._clear_caches()
         super().parse()
 
     @property
-    def metadata(self):
+    def metadata(self) -> dict[str, str | date | None]:
         if self.is_valid is False:
             return {}
 
@@ -169,7 +173,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
         #   Mark L. Wolf, presiding
         #   <B>Date filed:</B> 02/10/2011
         #   <B>Date filed:</B> 04/30/2018<B>Date of last filing:</B> 06/06/2018
-        data: dict = {}
+        data: dict[str, str | date | None] = {}
         field_names = {
             "date_of_last_filing": "date_last_filing",
             "judge": "assigned_to_str",
@@ -228,7 +232,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
         self._metadata = data
         return data
 
-    async def query(self, pacer_case_id):
+    async def query(self, pacer_case_id: str | int) -> None:
         """Use a district court's PACER query function with a known case ID
 
         At the top of every district PACER court, there's a button that says,
@@ -304,7 +308,8 @@ class CaseQuery(BaseDocketReport, BaseReport):
         self.parse()
 
     @property
-    def data(self):
+    @override
+    def data(self) -> dict[str, str | date | None]:
         """Get all the data back from this endpoint.
 
         Don't attempt to return parties or docket_entries like the superclass
@@ -317,7 +322,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
         return data
 
 
-def _main():
+def _main() -> None:
     if len(sys.argv) != 2:
         print("Usage: python -m juriscraper.pacer.case_query filepath")
         print("Please provide a path to an HTML file to parse.")

@@ -19,7 +19,7 @@ class SkipRowError(JuriscraperException):
     For example, when collecting opinions and finding an order
     """
 
-    def __init__(self, message: str):
+    def __init__(self, message: str) -> None:
         self.logger.debug(message)
 
 
@@ -70,7 +70,7 @@ class AutoLoggingException(Exception):
         logging_level: int | None = None,
         fingerprint: list[str] | None = None,
         data: dict | None = None,
-    ):
+    ) -> None:
         if not message:
             message = self.message
         if not logger:

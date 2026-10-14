@@ -15,6 +15,7 @@ import re
 from datetime import date, datetime
 from urllib.parse import urlencode
 
+from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
@@ -50,17 +51,17 @@ class Site(OpinionSiteLinear):
         :return None
         """
         for case in self.html.xpath(".//article"):
-            name_url_span = case.xpath(
+            name_url_span: HtmlElement = case.xpath(
                 ".//div[contains(@class, 'views-field-name')]"
             )[0]
-            date_filed = (
+            date_filed: str = (
                 case.xpath(
                     ".//div[contains(@class, 'views-field-field-document-expiration')]"
                 )[0]
                 .text_content()
                 .strip()
             )
-            docket = (
+            docket: str = (
                 case.xpath(
                     ".//div[contains(@class, 'views-field-field-document-number')]"
                 )[0]
@@ -76,6 +77,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
         :param dates: (start_date, end_date) tuple
@@ -116,6 +118,7 @@ class Site(OpinionSiteLinear):
 
         self.url = f"{self.base_url}?{urlencode(params)}"
 
+    @override
     def extract_from_text(self, scraped_text: str):
         """Extract a neutral citation if it exists, and update court and status
 

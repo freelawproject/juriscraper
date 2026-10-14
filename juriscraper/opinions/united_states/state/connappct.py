@@ -14,6 +14,6 @@ from juriscraper.opinions.united_states.state import conn
 class Site(conn.Site):
     court_abbv = "ap"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__

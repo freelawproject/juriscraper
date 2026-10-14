@@ -2,7 +2,7 @@ from juriscraper.opinions.united_states.state import cal
 
 
 class Site(cal.Site):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.url = (
             "http://www.courtinfo.ca.gov/cgi-bin/opinarch-blank.cgi?Courts=S"

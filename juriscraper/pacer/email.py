@@ -1,9 +1,11 @@
 import email
 import re
+from collections.abc import Sequence
 from datetime import date
 from typing import TypedDict
 
 from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import (
@@ -79,17 +81,17 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         "vaeb",
     ]
 
-    def __init__(self, court_id):
+    def __init__(self, court_id: str) -> None:
         self.court_id = court_id
-        self.content_type = None
+        self.content_type: str | None = None
         self.appellate = None
-        self.acms = None
+        self.acms: bool | None = None
         self.image_attached = False
         self.docket_numbers = []
         self.subject = None
         self.subject_cleaned = None
-        self.case_names = []
-        self.raw_docket_numbers = set()
+        self.case_names: list[str] = []
+        self.raw_docket_numbers: set[str] = set()
         if self.court_id.endswith("b"):
             self.is_bankruptcy = True
         else:
@@ -97,6 +99,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         super().__init__(court_id)
 
     @property
+    @override
     def data(self):
         # Emails with attached images should be ignored.
         if self.is_valid is False or self.tree is None or self.image_attached:
@@ -161,7 +164,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         self.acms = case_names_count == 1
         return self.acms
 
-    def _sibling_path(self, label):
+    def _sibling_path(self, label: str) -> str:
         """Gets the path string for the sibling of a label cell (td)
 
         Many data attributes are presented in the format of key: value in table syntax
@@ -349,7 +352,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         except IndexError:
             return None
 
-    def _get_case_id_from_case_url(self, case_url) -> str | None:
+    def _get_case_id_from_case_url(self, case_url: str) -> str | None:
         """Extract the caseid from the case anchor.
 
         :param case_url: The case_url where to look for the case_id.
@@ -399,7 +402,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             possible_paths = ["/descendant::text()"]
 
         for path in possible_paths:
-            node = current_node.xpath(f"{main_path}{path}")
+            node: list[str] = current_node.xpath(f"{main_path}{path}")
             if len(node):
                 for des_part in node:
                     if (
@@ -851,7 +854,9 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         return clean_string(short_description)
 
-    def _get_emaiL_recipients_without_links(self, recipient_lines):
+    def _get_emaiL_recipients_without_links(
+        self, recipient_lines: Sequence[str]
+    ):
         """Gets all the email recipients of the notification
 
         :returns: List of email recipients with names and email addresses
@@ -947,10 +952,10 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         """
         if self._is_appellate():
             path = '//strong[contains(., "Notice will be electronically mailed to")]/following-sibling::'
-            recipient_lines = self.tree.xpath(f"{path}text()")
+            recipient_lines: list[str] = self.tree.xpath(f"{path}text()")
         else:
             path = '//b[contains(., "Notice has been electronically mailed to")]/following-sibling::'
-            recipient_lines = self.tree.xpath(f"{path}text()")
+            recipient_lines: list[str] = self.tree.xpath(f"{path}text()")
             link_lines = self.tree.xpath(f"{path}a")
             if len(link_lines):
                 return self._get_email_recipients_with_links(
@@ -960,7 +965,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 )
         if not recipient_lines:
             path = '//b[contains(., "Notice will be electronically mailed to")]/following-sibling::'
-            recipient_lines = self.tree.xpath(f"{path}text()")
+            recipient_lines: list[str] = self.tree.xpath(f"{path}text()")
 
         return self._get_email_recipients_with_links(" ".join(recipient_lines))
 
@@ -1005,7 +1010,7 @@ class S3NotificationEmail(NotificationEmail):
     SES emails automatically archived in S3.
     """
 
-    def _combine_lines_with_proper_spaces(self, text):
+    def _combine_lines_with_proper_spaces(self, text: str) -> str:
         """Re-composes S3 line breaks to have proper spacing depending on line ending character
 
         :returns: String with spacing as read normally
@@ -1025,7 +1030,7 @@ class S3NotificationEmail(NotificationEmail):
                 combined += f" {line}"
         return combined
 
-    def _html_from_s3_email(self, text):
+    def _html_from_s3_email(self, text: str) -> str:
         """Pulls the HTML content, parsed with line breaks normalized for from the S3 email file
 
         :returns: String with proper replacements for normal HTML parsing
@@ -1034,7 +1039,8 @@ class S3NotificationEmail(NotificationEmail):
         cleaned_s3_line_ends = self._combine_lines_with_proper_spaces(text)
         return cleaned_s3_line_ends
 
-    def _parse_text(self, text):
+    @override
+    def _parse_text(self, text: str) -> None:
         """MIME Parser from file text, text/html and text/plain messages are supported.
         This obtains the email payload decoded as UTF-8.
         """

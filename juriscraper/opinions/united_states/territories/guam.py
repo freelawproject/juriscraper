@@ -15,6 +15,7 @@ from urllib.parse import urljoin
 
 from dateutil import parser
 from dateutil.parser import ParserError
+from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
@@ -110,10 +111,10 @@ class Site(OpinionSiteLinear):
         for item in self.html.xpath(
             '//div[contains(@class, "item_for_list")]'
         ):
-            anchor = item.xpath(".//h4/a")[0]
+            anchor: HtmlElement = item.xpath(".//h4/a")[0]
             name = anchor.text_content().strip()
             url = anchor.get("href")
-            text = " ".join(item.xpath(".//p//text()")).strip()
+            text: str = " ".join(item.xpath(".//p//text()")).strip()
             # Some entries arrive double-encoded; \xc2\xa0 is mojibake for
             # a non-breaking space and breaks both the citation and date
             # regexes when it sits between tokens
@@ -167,6 +168,7 @@ class Site(OpinionSiteLinear):
                 logger.warning("Unable to find date %s", text)
                 pass
 
+    @override
     def make_backscrape_iterable(self, kwargs):
         super().make_backscrape_iterable(kwargs)
 
@@ -178,6 +180,7 @@ class Site(OpinionSiteLinear):
 
         self.back_scrape_iterable = iterable
 
+    @override
     async def _download_backwards(self, year: int) -> None:
         """Sets up the download of past records from the legacy endpoint
 

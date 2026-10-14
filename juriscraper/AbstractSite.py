@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import gzip
 import hashlib
 import http.cookiejar
@@ -7,12 +9,16 @@ import os
 import ssl
 import urllib.parse
 import urllib.request
-from collections.abc import Awaitable
+from collections.abc import Awaitable, Sequence
 from datetime import datetime
+from types import TracebackType
+from typing import Self
 
 import certifi
 import httpx
 from charset_normalizer import from_bytes
+from lxml import etree
+from lxml.html import HtmlElement
 
 from juriscraper.lib.date_utils import (
     json_date_handler,
@@ -78,11 +84,11 @@ class AbstractSite:
         cnt: CaseNameTweaker | None = None,
         user_agent: str = "Juriscraper",
         **kwargs,
-    ):
+    ) -> None:
         super().__init__()
 
         # Computed metadata
-        self.hash = None
+        self.hash: str | None = None
         self.html = None
         self.method = "GET"
         self.back_scrape_iterable = None
@@ -142,18 +148,23 @@ class AbstractSite:
         self.court_id = None
         self.url = None
         self.parameters = None
-        self._opt_attrs = []
-        self._req_attrs = []
-        self._all_attrs = []
+        self._opt_attrs: list[str] = []
+        self._req_attrs: list[str] = []
+        self._all_attrs: list[str] = []
 
-    async def __aenter__(self):
+    async def __aenter__(self) -> Self:
         await self.request["session"].__aenter__()
         return self
 
-    async def __aexit__(self, exc_type, exc_value, traceback):
+    async def __aexit__(
+        self,
+        exc_type: type[BaseException] | None,
+        exc_value: BaseException | None,
+        traceback: TracebackType | None,
+    ) -> None:
         await self.request["session"].__aexit__(exc_type, exc_value, traceback)
 
-    def __str__(self):
+    def __str__(self) -> str:
         out = []
         for attr, val in self.__dict__.items():
             out.append(f"{attr}: {val}")
@@ -163,35 +174,37 @@ class AbstractSite:
         for i in range(0, len(self.case_names)):
             yield self._make_item(i)
 
-    def __getitem__(self, i):
+    def __getitem__(self, i: int):
         return self._make_item(i)
 
     def __len__(self):
         return len(self.case_names)
 
-    async def close_session(self):
+    async def close_session(self) -> None:
         if self.request["session"]:
             await self.request["session"].aclose()
 
-    def _make_item(self, i):
+    def _make_item(self, i: int) -> dict[str, object]:
         """Using i, convert a single item into a dict. This is effectively a
         different view of the data.
         """
-        item = {}
+        item: dict[str, object] = {}
         for attr_name in self._all_attrs:
-            attr_value = getattr(self, attr_name)
+            attr_value: Sequence[object] | None = getattr(self, attr_name)
             if attr_value is not None:
                 item[attr_name] = attr_value[i]
         return item
 
-    def enable_test_mode(self):
+    def enable_test_mode(self) -> None:
         self.method = "LOCAL"
 
-    def dump_html(self, element):
+    def dump_html(
+        self, element: HtmlElement | etree._ElementTree[HtmlElement]
+    ) -> None:
         """Use this for debugging purposes"""
         print(get_html_from_element(element))
 
-    def set_custom_adapter(self, cipher: str):
+    def set_custom_adapter(self, cipher: str) -> ssl.SSLContext:
         """Set Custom SSL/TLS cipher for out of date court systems
 
         :param cipher: The court required cipher
@@ -201,10 +214,10 @@ class AbstractSite:
         ctx.set_ciphers(cipher)
         return ctx
 
-    def test_mode_enabled(self):
+    def test_mode_enabled(self) -> bool:
         return self.method == "LOCAL"
 
-    def to_json(self):
+    def to_json(self) -> str:
         return json.dumps(
             list(self),
             default=json_date_handler,
@@ -241,18 +254,18 @@ class AbstractSite:
         self._make_hash()
         return self
 
-    def tweak_response_object(self):
+    def tweak_response_object(self) -> None:
         """
         Does nothing, but provides a hook that allows inheriting objects to
         tweak the requests object if necessary.
         """
         pass
 
-    def _clean_text(self, text):
+    def _clean_text(self, text: str) -> str:
         """A hook for subclasses to override if needed."""
         return clean_html(text)
 
-    def _clean_attributes(self):
+    def _clean_attributes(self) -> None:
         """Iterate over attribute values and clean them"""
         for attr in self._all_attrs:
             item = getattr(self, attr)
@@ -265,7 +278,7 @@ class AbstractSite:
 
             self.__setattr__(attr, cleaned_item)
 
-    def _post_parse(self):
+    def _post_parse(self) -> None:
         """This provides an hook for subclasses to do custom work on the data
         after the parsing is complete.
         """
@@ -369,7 +382,7 @@ class AbstractSite:
         """
         self.hash = hashlib.sha1(str(self.case_names).encode()).hexdigest()
 
-    def _make_html_tree(self, text):
+    def _make_html_tree(self, text: str | bytes) -> HtmlElement:
         """Hook for custom HTML parsers
 
         By default, the etree.html parser is used, but this allows support for
@@ -411,7 +424,9 @@ class AbstractSite:
         self._post_process_response()
         return self._return_response_text_object()
 
-    def _download_content_urllib(self, download_url: str, headers: dict):
+    def _download_content_urllib(
+        self, download_url: str, headers: dict[str, str]
+    ):
         """Download content using urllib to bypass Cloudflare
 
         Uses urllib instead of httpx because Cloudflare blocks httpx
@@ -452,7 +467,7 @@ class AbstractSite:
         # noinspection PyBroadException
         if self.test_mode_enabled():
             # this is useful for CL integration tests
-            def handler(request: httpx.Request):
+            def handler(request: httpx.Request) -> httpx.Response:
                 r = httpx.Response(status_code=404, request=request)
                 try:
                     url = os.path.join(media_root, download_url)
@@ -513,7 +528,7 @@ class AbstractSite:
         """
         pass
 
-    def _process_request_parameters(self, parameters=None):
+    def _process_request_parameters(self, parameters=None) -> None:
         """Hook for processing injected parameter overrides"""
         if parameters is None:
             parameters = {}
@@ -668,7 +683,7 @@ class AbstractSite:
         tree.make_links_absolute(url)
         return tree
 
-    async def _download_backwards(self, d):
+    async def _download_backwards(self, d) -> None:
         # methods for downloading the entire Site
         pass
 

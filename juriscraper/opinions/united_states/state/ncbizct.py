@@ -90,7 +90,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def extract_case_and_citation(self, case_string):
+    def extract_case_and_citation(self, case_string: str) -> tuple[str, str]:
         """Extract citations and clean up case name
 
         Possible strings:
@@ -111,6 +111,7 @@ class Site(OpinionSiteLinear):
 
         return case_name, citation
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Build URL with year input and scrape
 

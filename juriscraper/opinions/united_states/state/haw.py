@@ -18,7 +18,7 @@ class Site(ClusterSite):
     first_opinion_date = datetime(2010, 1, 1)
     days_interval = 1
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.url = (
             "https://www.courts.state.hi.us/opinions_and_orders/opinions"
@@ -164,6 +164,7 @@ class Site(ClusterSite):
 
             self.cases.append(case_dict)
 
+    @override
     async def _download_backwards(self, search_date: date) -> None:
         """Download and process HTML for a given target date.
 
@@ -183,6 +184,7 @@ class Site(ClusterSite):
         self.html = await self._download()
         self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs) -> None:
         """Make back scrape iterable
 

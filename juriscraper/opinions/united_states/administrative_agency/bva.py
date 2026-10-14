@@ -59,7 +59,7 @@ class Site(OpinionSiteLinear):
     date_re = re.compile(r"Decision Date:\s*(\S+)")
     docket_re = re.compile(r"DOCKET NO\.\s*(.+)")
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
 
@@ -74,6 +74,7 @@ class Site(OpinionSiteLinear):
         self.save_response = None
         self.make_backscrape_iterable(kwargs)
 
+    @override
     async def _download(self, request_dict=None):
         """Fall back to the previous year's sitemap if the current
         year's does not exist yet. Do not do this in a backscrape
@@ -106,7 +107,7 @@ class Site(OpinionSiteLinear):
         """
         # lxml's HTML parser can handle the sitemap XML; namespace
         # prefixes are stripped so //loc works directly
-        locs = self.html.xpath("//loc/text()")
+        locs: list[str] = self.html.xpath("//loc/text()")
 
         for loc in reversed(locs):
             if len(self.cases) >= self.cases_to_scrape:
@@ -182,6 +183,7 @@ class Site(OpinionSiteLinear):
             }
         )
 
+    @override
     async def _download_backwards(self, yy: int) -> None:
         """Download and process all decisions from a given year's sitemap.
 
@@ -198,6 +200,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         await self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs):
         """Convert the parent's date-range tuples into 2-digit year ints.
 

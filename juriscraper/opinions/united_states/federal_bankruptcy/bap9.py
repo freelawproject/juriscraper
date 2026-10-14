@@ -24,7 +24,7 @@ class Site(OpinionSiteLinear):
         r"Appeals? from the (?P<lower_court>.+\n.+)"
     )
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.base_url = "https://www.ca9.uscourts.gov/bap/"
@@ -43,7 +43,7 @@ class Site(OpinionSiteLinear):
         self.url = "https://cognito-identity.us-west-2.amazonaws.com/"
         self.make_backscrape_iterable(kwargs)
 
-    def build_payload(self):
+    def build_payload(self) -> None:
         """Build query
 
         :return: query dict
@@ -71,6 +71,7 @@ class Site(OpinionSiteLinear):
             }
         )
 
+    @override
     async def _download(self):
         """Download data from DynamoDB for oral arguments.
 
@@ -141,6 +142,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court from the scraped text.
 
@@ -163,6 +165,7 @@ class Site(OpinionSiteLinear):
     #  not given, `start_date` will be a datetime and `strptime` will raise an
     #  exception. A 3-tuple is given, but there's no indication that the third
     #  thing serves a purpose. See #2139
+    @override
     async def _download_backwards(self, dates) -> None:
         """Download cases for a specific date range.
 
@@ -189,6 +192,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs) -> None:
         """Make back scrape iterable
 

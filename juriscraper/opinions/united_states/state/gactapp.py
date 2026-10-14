@@ -19,7 +19,7 @@ class Site(OpinionSiteLinear):
     first_opinion_date = date(2012, 3, 30)
     days_interval = 7
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         today = date.today()
@@ -53,6 +53,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     async def _download_backwards(self, date_range: str) -> None:
         """Backscrape one weekly date range (start,end)."""
         start, end = date_range.split(",")
@@ -64,6 +65,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict[str, str]) -> None:
         """Generate weekly date ranges from backscrape_start → backscrape_end."""
         start_str = kwargs.get("backscrape_start")

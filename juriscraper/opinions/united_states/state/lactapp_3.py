@@ -18,6 +18,7 @@ from datetime import date, datetime
 from urllib.parse import urljoin
 
 from lxml import html as lxml_html
+from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.lib.date_utils import unique_year_month
@@ -44,7 +45,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
 
     @staticmethod
-    def _get_form_params(tree):
+    def _get_form_params(tree: HtmlElement) -> dict[str, str]:
         """Extract form parameters from an ASP.NET page
 
         :param tree: lxml HTML tree
@@ -67,6 +68,7 @@ class Site(OpinionSiteLinear):
                     )
         return params
 
+    @override
     async def _download(self, request_dict=None):
         """Override to perform the month/year search POST after initial load
 
@@ -98,20 +100,20 @@ class Site(OpinionSiteLinear):
     def _process_html(self) -> None:
         tree = self.html
         seen_urls = {case["url"] for case in self.cases}
-        rows = tree.xpath(
+        rows: list[HtmlElement] = tree.xpath(
             '//table[.//strong[contains(text(),"Opinion Search by")]]'
             "//tbody/tr[.//a]"
         )
         if not rows:
             # Fallback for test mode (example uses divOpinionSearchByDate)
-            rows = tree.xpath(
+            rows: list[HtmlElement] = tree.xpath(
                 '//div[@id="divOpinionSearchByDate"]//tbody/tr[.//a]'
             )
         for row in rows:
             td = row.xpath(".//td")[0]
-            link = td.xpath(".//h4/a/@href")
+            link: list[str] = td.xpath(".//h4/a/@href")
             if not link:
-                strongs_text = td.xpath(".//strong/text()")
+                strongs_text: list[str] = td.xpath(".//strong/text()")
                 docket_hint = strongs_text[0].strip() if strongs_text else "?"
                 logger.warning(
                     "No link found in row (docket: %s), skipping",
@@ -120,7 +122,7 @@ class Site(OpinionSiteLinear):
                 continue
 
             url = urljoin(f"{self.base_url}/", link[0])
-            strongs = td.xpath(".//strong/text()")
+            strongs: list[str] = td.xpath(".//strong/text()")
 
             # First strong is the docket number
             raw_docket = strongs[0].strip() if strongs else ""
@@ -185,11 +187,13 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     async def _download_backwards(self, target_date: date) -> None:
         self.target_date = target_date
         self.html = await self._download()
         self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs):
         super().make_backscrape_iterable(kwargs)
         self.back_scrape_iterable = unique_year_month(

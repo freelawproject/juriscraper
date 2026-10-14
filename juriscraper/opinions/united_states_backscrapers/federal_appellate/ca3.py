@@ -1,14 +1,17 @@
 import time
+from collections.abc import Sequence
 from datetime import date
 
 from lxml import html
+from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.base_url = (
             "http://digitalcommons.law.villanova.edu/thirdcircuit_{year}/"
@@ -19,7 +22,8 @@ class Site(OpinionSite):
         self.case_xpath = "//p[@class='article-listing']/a/@href"
         self.next_page_xpath = "//div[@class='adjacent-pagination']//li[@class='active']//following-sibling::li/a/@href"
 
-    async def _download(self, request_dict=None):
+    @override
+    async def _download(self, request_dict=None) -> list[HtmlElement]:
         if request_dict is None:
             request_dict = {}
         if self.test_mode_enabled():
@@ -40,7 +44,9 @@ class Site(OpinionSite):
                 html_trees.extend(html_next_trees)
         return html_trees
 
-    async def _get_case_html_page(self, html_trees, html_l, request_dict):
+    async def _get_case_html_page(
+        self, html_trees, html_l: HtmlElement, request_dict
+    ) -> list[HtmlElement]:
         """Gets each of the individual case pages"""
         s = self.request["session"]
         for case_url in html_l.xpath(self.case_xpath):
@@ -67,6 +73,7 @@ class Site(OpinionSite):
             html_trees.append(html_tree)
         return html_trees
 
+    @override
     def _get_case_names(self):
         data = []
         for html_tree in self.html:
@@ -76,6 +83,7 @@ class Site(OpinionSite):
                 data.append("")
         return data
 
+    @override
     def _get_download_urls(self):
         data = []
         for html_tree in self.html:
@@ -85,6 +93,7 @@ class Site(OpinionSite):
                 data.append("")
         return data
 
+    @override
     def _get_case_dates(self):
         data = []
         for html_tree in self.html:
@@ -101,6 +110,7 @@ class Site(OpinionSite):
                 data.append("")
         return data
 
+    @override
     def _get_docket_numbers(self):
         data = []
         for html_tree in self.html:
@@ -114,6 +124,7 @@ class Site(OpinionSite):
                 data.append("")
         return data
 
+    @override
     def _get_precedential_statuses(self):
         data = []
         for html_tree in self.html:
@@ -127,6 +138,7 @@ class Site(OpinionSite):
                 data.append("Unknown")
         return data
 
+    @override
     def _get_lower_courts(self):
         data = []
         for html_tree in self.html:
@@ -138,7 +150,8 @@ class Site(OpinionSite):
                 data.append("")
         return data
 
-    async def _download_backwards(self, d):
+    @override
+    async def _download_backwards(self, d: int) -> None:
         self.url = self.base_url.format(year=d)
         self.html = await self._download()
         if self.html is not None:
@@ -146,6 +159,7 @@ class Site(OpinionSite):
             # function from being run a second time by the parse method.
             self.status = 200
 
+    @override
     def _post_parse(self):
         """This will remove the cases without a case name"""
         to_be_removed = [
@@ -161,7 +175,9 @@ class Site(OpinionSite):
                 self.__setattr__(attr, new_item)
 
     @staticmethod
-    def remove_elements(list_, indexes_to_be_removed):
+    def remove_elements(
+        list_: Sequence[object], indexes_to_be_removed: Sequence[int]
+    ) -> list[object]:
         return [
             i for j, i in enumerate(list_) if j not in indexes_to_be_removed
         ]

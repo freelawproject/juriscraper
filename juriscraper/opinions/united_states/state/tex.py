@@ -23,7 +23,7 @@ import re
 from datetime import date
 from datetime import datetime as dt
 
-from lxml import etree
+from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
@@ -55,6 +55,7 @@ class Site(ClusterSite):
         self.make_backscrape_iterable(kwargs)
         self.is_backscrape = False
 
+    @override
     async def _download(self, request_dict=None):
         """Downloads the HTML content for the current opinion page.
 
@@ -66,7 +67,7 @@ class Site(ClusterSite):
 
         if not self.is_backscrape and not self.test_mode_enabled():
             self.html = await super()._download(request_dict)
-            links = self.html.xpath(self.link_xp)
+            links: list[str] = self.html.xpath(self.link_xp)
             if not links:
                 # No orders posted yet (common in early January)
                 self.html = None
@@ -238,7 +239,7 @@ class Site(ClusterSite):
         return "", "", ""
 
     @staticmethod
-    def extract_type(link: etree.Element) -> str:
+    def extract_type(link: HtmlElement) -> str:
         """Determines the opinion type
 
         :param link: (etree.Element) The anchor element containing the PDF link.
@@ -265,6 +266,7 @@ class Site(ClusterSite):
             op_type = OpinionType.MAJORITY
         return str(op_type.value)
 
+    @override
     def make_backscrape_iterable(self, kwargs) -> None:
         """Checks if backscrape start and end arguments have been passed
 

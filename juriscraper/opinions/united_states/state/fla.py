@@ -34,6 +34,7 @@ class Site(OpinionSiteLinear):
         self.set_url()
         self.make_backscrape_iterable(kwargs)
 
+    @override
     async def _download(
         self, request_dict: dict | None = None
     ) -> dict[str, Any]:
@@ -182,6 +183,7 @@ class Site(OpinionSiteLinear):
             self.end_date.strftime(fmt),
         )
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Overrides scraper URL using date inputs
 

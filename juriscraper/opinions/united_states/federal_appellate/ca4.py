@@ -1,5 +1,6 @@
 import re
 from datetime import date, datetime
+from typing import Literal
 
 from dateutil.relativedelta import relativedelta
 from typing_extensions import override
@@ -12,7 +13,7 @@ class Site(OpinionSiteLinear):
     oldest_opinion = "2002-03-20"
     court_name = "United States Court of Appeals for the Fourth Circuit"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.url = "https://www.govinfo.gov/wssearch/search"
         self.court_id = self.__module__
@@ -28,6 +29,7 @@ class Site(OpinionSiteLinear):
         self.update_parameters()
         self.make_backscrape_iterable(kwargs)
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict[str, str]) -> None:
         """Make back scrape iterable
 
@@ -80,7 +82,7 @@ class Site(OpinionSiteLinear):
             case.update(metadata)
             self.cases.append(case)
 
-    def extract_metadata(self, teaser: str) -> dict[str, str]:
+    def extract_metadata(self, teaser: str | None) -> dict[str, str]:
         """Extract out various metadata fields
 
         Method leaves in a few regex patterns that we do not currently support
@@ -91,7 +93,9 @@ class Site(OpinionSiteLinear):
         """
         if not teaser:
             return {"lower_court": "", "lower_court_number": ""}
-        patterns = {
+        patterns: dict[
+            Literal["lower_court", "lower_court_number"], re.Pattern[str]
+        ] = {
             "lower_court": re.compile(
                 r"""
                 (?:
@@ -131,7 +135,7 @@ class Site(OpinionSiteLinear):
             metadata[name] = match
         return metadata
 
-    def update_parameters(self):
+    def update_parameters(self) -> None:
         """Update the date range parameter"""
 
         self.request["parameters"]["json"] = {
@@ -142,7 +146,8 @@ class Site(OpinionSiteLinear):
             "sortBy": "2",  # 2 -> newest to oldest
         }
 
-    async def _download_backwards(self, date_range) -> None:
+    @override
+    async def _download_backwards(self, date_range: str) -> None:
         """Download backward
 
         :param date_range: the date range as a string

@@ -7,6 +7,7 @@ History:
     2025-07-29: Created by Luis Manzur
 """
 
+from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.lib.string_utils import titlecase
@@ -14,7 +15,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.status = "Published"
@@ -29,7 +30,7 @@ class Site(OpinionSiteLinear):
         :return None
         """
 
-        rows = self.html.xpath("//table/tbody/tr")
+        rows: list[HtmlElement] = self.html.xpath("//table/tbody/tr")
         for row in rows:
             cells = row.xpath(".//td")
             link = cells[2].xpath(".//a")

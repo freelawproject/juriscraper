@@ -2,6 +2,7 @@ import re
 from datetime import date
 
 from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import (
@@ -28,7 +29,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         "Security violation: You do not have access rights to this program",
     ]
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None) -> None:
         BaseDocketReport.__init__(self, court_id)
         BaseReport.__init__(self, court_id, pacer_session)
 
@@ -40,6 +41,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         )
 
     @property
+    @override
     def data(self):
         """Get all the data back from this endpoint."""
         if self.is_valid is False:
@@ -391,7 +393,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         creditor_name: str,
         date_start: date | None = None,
         date_end: date | None = None,
-    ):
+    ) -> None:
         """Query the claims activity and return the results.
 
         :param pacer_case_id: The internal PACER ID for the case.

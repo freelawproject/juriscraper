@@ -73,6 +73,7 @@ class Site(OralArgumentSiteLinear):
                 }
             )
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Download a months' worth of oral arguments.
 
@@ -89,7 +90,7 @@ class Site(OralArgumentSiteLinear):
 
         :return:None
         """
-        wdt_nonce = self.html.xpath(
+        wdt_nonce: list[str] = self.html.xpath(
             ".//input[@id='wdtNonceFrontendServerSide_8']/@value"
         )
 

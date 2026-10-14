@@ -2,6 +2,10 @@
 # CourtID: iowa
 # Court Short Name: iowa
 import re
+from datetime import date
+
+from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import convert_date_string
@@ -9,7 +13,7 @@ from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.cases = []
@@ -20,6 +24,7 @@ class Site(OpinionSite):
         self.url = "https://www.iowacourts.gov/iowa-courts/supreme-court/supreme-court-opinions/"
         self.should_have_results = True
 
+    @override
     async def _download(self, request_dict=None):
         if request_dict is None:
             request_dict = {}
@@ -39,22 +44,28 @@ class Site(OpinionSite):
             else:
                 proceed = False
 
-    def _get_case_names(self):
+    @override
+    def _get_case_names(self) -> list[str]:
         return [case["name"] for case in self.cases]
 
-    def _get_download_urls(self):
+    @override
+    def _get_download_urls(self) -> list[str]:
         return [case["url"] for case in self.cases]
 
-    def _get_case_dates(self):
+    @override
+    def _get_case_dates(self) -> list[date | None]:
         return [convert_date_string(case["date"]) for case in self.cases]
 
+    @override
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_dates)
 
-    def _get_docket_numbers(self):
+    @override
+    def _get_docket_numbers(self) -> list[str]:
         return [case["docket"] for case in self.cases]
 
-    async def _download_backwards(self, _):
+    @override
+    async def _download_backwards(self, _: str) -> None:
         """Walk over all "Archive" links on Archive page,
         extract cases dictionaries, and add to self.cases
         """
@@ -69,22 +80,24 @@ class Site(OpinionSite):
             )
             self.extract_archive_cases(archive_page_html)
 
-    def extract_cases(self, html):
+    def extract_cases(self, html: HtmlElement) -> None:
         """Extract case dictionaries from "Recent" html page
         and add them to self.cases
         """
         case_substring = "Case No."
-        case_elements = html.xpath(f'//h3[contains(., "{case_substring}")]')
+        case_elements: list[HtmlElement] = html.xpath(
+            f'//h3[contains(., "{case_substring}")]'
+        )
         for case_element in case_elements:
             text = case_element.text_content()
             parts = text.split(":")
             docket = parts[0].replace(case_substring, "").strip()
             name = parts[1].strip()
-            date_text = case_element.xpath("./following::p[1]")[
+            date_text: str = case_element.xpath("./following::p[1]")[
                 0
             ].text_content()
             date_string = date_text.replace("Filed", "")
-            url = case_element.xpath("./following::p[2]//a/@href")[0]
+            url: str = case_element.xpath("./following::p[2]//a/@href")[0]
             self.cases.append(
                 {
                     "name": name,
@@ -94,7 +107,7 @@ class Site(OpinionSite):
                 }
             )
 
-    def extract_archive_cases(self, html):
+    def extract_archive_cases(self, html: HtmlElement) -> None:
         """Extract case dictionaries from "Archive" html page
         and add them to self.cases
         """
@@ -128,6 +141,7 @@ class Site(OpinionSite):
         elements = html.xpath(path)
         return elements[0] if elements else False
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court from the scraped text.
 

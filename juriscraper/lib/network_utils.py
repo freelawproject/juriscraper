@@ -1,9 +1,10 @@
 import asyncio
 import random
+from collections.abc import Mapping
 from datetime import datetime
 from typing import Any
 
-from httpx import AsyncClient
+from httpx import AsyncClient, Response
 
 from juriscraper.lib.log_tools import make_default_logger
 
@@ -38,7 +39,7 @@ class AcmsApiClient:
     MERGE_PDF_ENDPOINT = "MergePDFFiles/"
     GET_PDF_ENDPOINT = "GetMergedFile/"
 
-    def __init__(self, session: AsyncClient, court_id: str):
+    def __init__(self, session: AsyncClient, court_id: str) -> None:
         self.session = session
         self.court_id = court_id
         self.base_url = self.BASE_URL_TEMPLATE.format(court_id=self.court_id)
@@ -161,8 +162,8 @@ class AcmsApiClient:
         return docket_info
 
     def _map_docket_entry_document(
-        self, raw_doc_data: dict[str, Any]
-    ) -> dict[str, Any]:
+        self, raw_doc_data: Mapping[str, object]
+    ) -> dict[str, object]:
         """
         Maps a raw dictionary representing a docket entry document to a
         standardized format.
@@ -275,7 +276,7 @@ class AcmsApiClient:
         document_url: str,
         max_attempts: int = 90,
         poll_interval: float = 1.0,
-    ):
+    ) -> Response:
         """
         Requests generation and download of a merged PDF from the remote API.
 

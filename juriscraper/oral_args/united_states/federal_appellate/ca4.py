@@ -5,29 +5,38 @@
 # Reviewer: mlr
 # Date created: 18 July 2014
 
+from datetime import date
+
+from typing_extensions import override
+
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.OralArgumentSite import OralArgumentSite
 
 
 class Site(OralArgumentSite):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.ca4.uscourts.gov/oral-argument/listen-to-oral-arguments"
 
+    @override
     def _get_download_urls(self):
         return list(self.html.xpath("//tr/td[2]//a/@href"))
 
-    def _get_case_names(self):
+    @override
+    def _get_case_names(self) -> list[str]:
         return self.text_from_cell(3)
 
-    def _get_case_dates(self):
+    @override
+    def _get_case_dates(self) -> list[date | None]:
         return [convert_date_string(date) for date in self.text_from_cell(1)]
 
-    def _get_judges(self):
+    @override
+    def _get_judges(self) -> list[str]:
         return self.text_from_cell(4)
 
-    def _get_docket_numbers(self):
+    @override
+    def _get_docket_numbers(self) -> list[str]:
         return self.text_from_cell(2)
 
     def text_from_cell(self, cell_number):

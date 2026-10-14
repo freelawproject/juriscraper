@@ -55,7 +55,7 @@ class Site(OpinionSiteLinear):
         "Memo": "Unpublished",
     }
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.end_date = date.today()
@@ -72,8 +72,8 @@ class Site(OpinionSiteLinear):
 
     def _build_api_url(
         self,
-        start_date: date | None,
-        end_date: date | None,
+        start_date: date,
+        end_date: date,
         page: int = 0,
     ) -> str:
         """Build the API URL with query parameters.
@@ -97,7 +97,7 @@ class Site(OpinionSiteLinear):
 
         :return: None
         """
-        tab_script = self.html.xpath(self.tab_xp)[0]
+        tab_script: str = self.html.xpath(self.tab_xp)[0]
         tab_id = re.search(r'"tabId":(\d+)', tab_script).group(1)
 
         self.request["headers"].update(
@@ -108,6 +108,7 @@ class Site(OpinionSiteLinear):
             }
         )
 
+    @override
     async def _download(self, request_dict=None):
         """Override download to add authentication headers.
 
@@ -217,6 +218,7 @@ class Site(OpinionSiteLinear):
         self.html = await super()._download()
         await self._process_html()
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request for backscraping.
 
@@ -233,6 +235,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         await self._process_html()
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court and judge from the scraped text.
 

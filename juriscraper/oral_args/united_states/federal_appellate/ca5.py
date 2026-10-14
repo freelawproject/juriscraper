@@ -17,7 +17,7 @@ from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
 class Site(OralArgumentSiteLinear):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.ca5.uscourts.gov/feeds/oral-arguments"
@@ -32,7 +32,7 @@ class Site(OralArgumentSiteLinear):
             # reaches us as a single text node. Ex:
             # "19-40930<br/>USA v. Senegal<br/>Argued August 4, 2026<br/>
             #  <br/>Appearing:<br/>Kathryn Shephard — Appellant<br/>"
-            description = item.xpath("description/text()")
+            description: list[str] = item.xpath("description/text()")
             if not description:
                 logger.error("ca5: item with no description")
                 continue

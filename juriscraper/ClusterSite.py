@@ -1,4 +1,5 @@
 from dateutil import parser
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import InsanityException
@@ -77,7 +78,7 @@ class ClusterSite(OpinionSiteLinear):
         "adversary_number": "adversary_numbers",
     }
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.all_attributes = self._all_attrs
         # doing this will help us re-use `AbstractSite.parse``
@@ -86,16 +87,20 @@ class ClusterSite(OpinionSiteLinear):
         # if set,  allow clustering when dates are not exactly the same
         self.cluster_by_date_max_days = 0
 
+    @override
     def __iter__(self):
         yield from self.cases
 
+    @override
     def __str__(self):
         return self.cases
 
-    def __getitem__(self, i):
+    @override
+    def __getitem__(self, i: int):
         return self.cases[i]
 
-    def __len__(self):
+    @override
+    def __len__(self) -> int:
         return len(self.cases)
 
     def normalize_attribute_name(self, name: str) -> str:
@@ -114,7 +119,8 @@ class ClusterSite(OpinionSiteLinear):
 
         raise ValueError(f"Invalid normalized name '{name}'")
 
-    def _clean_attributes(self):
+    @override
+    def _clean_attributes(self) -> None:
         """Perform name normalization and standard attribute cleaning.
         Handles nested opinion objects
         """
@@ -148,7 +154,8 @@ class ClusterSite(OpinionSiteLinear):
 
         self.cases = cases
 
-    def _date_sort(self):
+    @override
+    def _date_sort(self) -> None:
         """Orders cases by values of _req_attributes, beggining with date and name"""
         self.cases.sort(
             key=lambda case: tuple(
@@ -157,7 +164,8 @@ class ClusterSite(OpinionSiteLinear):
             reverse=True,
         )
 
-    def _post_parse(self):
+    @override
+    def _post_parse(self) -> None:
         """Let's use this hook to add default values for required attributes"""
         for case in self.cases:
             if not case.get("case_name_short"):
@@ -176,13 +184,15 @@ class ClusterSite(OpinionSiteLinear):
                         f"No value for `precedential_statuses` for case {case}"
                     )
 
-    def _make_hash(self):
+    @override
+    def _make_hash(self) -> None:
         """Populate the expected self.cases list; just before calling the parent
         _make_hash
         """
         self.case_names = [i["case_names"] for i in self.cases]
         super()._make_hash()
 
+    @override
     def _check_sanity(self):
         """Perform standard validity checks. Handles nested objects
 

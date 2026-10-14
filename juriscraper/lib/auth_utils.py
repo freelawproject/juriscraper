@@ -124,7 +124,7 @@ def generate_aws_sigv4_headers(
     )
 
     # Signing key derivation
-    def sign(key, msg):
+    def sign(key: bytes, msg: str) -> bytes:
         return hmac.new(key, msg.encode(), hashlib.sha256).digest()
 
     k_date = sign(("AWS4" + creds["SecretKey"]).encode(), date_stamp)

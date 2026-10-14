@@ -4,6 +4,8 @@
 import unittest
 from datetime import date
 
+from typing_extensions import override
+
 from juriscraper.lib.html_utils import get_html_parsed_text
 from juriscraper.pacer import DocketReport
 from tests.network import SKIP_IF_NO_PACER_LOGIN, get_pacer_session
@@ -12,7 +14,8 @@ from tests.network import SKIP_IF_NO_PACER_LOGIN, get_pacer_session
 class PacerDocketReportTest(unittest.IsolatedAsyncioTestCase):
     """A variety of tests for the docket report"""
 
-    async def asyncSetUp(self):
+    @override
+    async def asyncSetUp(self) -> None:
         self.session = get_pacer_session()
         self.addAsyncCleanup(self.session.aclose)
         await self.session.login()
@@ -20,7 +23,7 @@ class PacerDocketReportTest(unittest.IsolatedAsyncioTestCase):
         self.pacer_case_id = "186730"  # 4:06-cv-07294 Foley v. Bates
 
     @staticmethod
-    def _count_rows(html):
+    def _count_rows(html: str) -> int:
         """Count the rows in the docket report.
 
         :param html: The HTML of the docket report.
@@ -30,7 +33,7 @@ class PacerDocketReportTest(unittest.IsolatedAsyncioTestCase):
         return len(tree.xpath("//table[./tr/td[3]]/tr")) - 1  # No header row
 
     @SKIP_IF_NO_PACER_LOGIN
-    async def test_queries(self):
+    async def test_queries(self) -> None:
         """Do a variety of queries work?"""
         await self.report.query(self.pacer_case_id)
         self.assertIn(
@@ -115,7 +118,7 @@ class PacerDocketReportTest(unittest.IsolatedAsyncioTestCase):
         )
 
     @SKIP_IF_NO_PACER_LOGIN
-    async def test_using_same_report_twice(self):
+    async def test_using_same_report_twice(self) -> None:
         """Do the caches get properly nuked between runs?
 
         See issue #187.

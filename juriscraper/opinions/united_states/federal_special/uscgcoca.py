@@ -55,8 +55,8 @@ class Site(OpinionSiteLinear):
         """
         path = "//table[@class='Dashboard']/tbody/tr"
         for item in self.html.xpath(path):
-            url = item.xpath(".//td/a/@href")[0]
-            first_cell = item.xpath(".//td/a/text()")[0]
+            url: str = item.xpath(".//td/a/@href")[0]
+            first_cell: str = item.xpath(".//td/a/text()")[0]
             tds = item.xpath(".//td")
             summary = ""
             per_curiam = False
@@ -97,6 +97,7 @@ class Site(OpinionSiteLinear):
                 )
             )
 
+    @override
     async def _download_backwards(self, page_number: int) -> None:
         """Method used by backscraper to download historical records
 
@@ -118,7 +119,9 @@ class Site(OpinionSiteLinear):
             if citation and citation in name:
                 name = name.split(citation, 1)[0]
 
-        parts = re.split(r"[(-]| WITH | ONREMAND | PETITION FOR", name)
+        parts: list[str] = re.split(
+            r"[(-]| WITH | ONREMAND | PETITION FOR", name
+        )
         if len(parts) > 1 and parts[0].strip().lower() in [
             "order",
             "opinion",
@@ -139,6 +142,7 @@ class Site(OpinionSiteLinear):
         case["name"] = titlecase(name.strip(" -:"))
         return case
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Checks if backscrape start and end arguments have been passed"""
 

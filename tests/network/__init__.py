@@ -14,9 +14,9 @@ SKIP_IF_NO_PACER_LOGIN = unittest.skipUnless(
 )
 
 
-def pacer_credentials_are_defined():
+def pacer_credentials_are_defined() -> bool:
     return bool(PACER_USERNAME and PACER_PASSWORD)
 
 
-def get_pacer_session():
+def get_pacer_session() -> PacerSession:
     return PacerSession(username=PACER_USERNAME, password=PACER_PASSWORD)

@@ -7,43 +7,49 @@ History:
  - 2014-07-22: download_url fixed by mlr
 """
 
-from datetime import datetime
+from datetime import date, datetime
+
+from typing_extensions import override
 
 from juriscraper.lib.string_utils import clean_if_py3
 from juriscraper.OralArgumentSite import OralArgumentSite
 
 
 class Site(OralArgumentSite):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://media-oa.ca8.uscourts.gov/circ8rss.xml"
 
-    async def _download(self, request_dict=None):
+    @override
+    async def _download(self, request_dict=None) -> None:
         """Go through the items and filter out ones that aren't complete."""
         if request_dict is None:
             request_dict = {}
         self.items = []
         html_tree = await super()._download(request_dict=request_dict)
         for item in html_tree.xpath("//item"):
-            case_name = item.xpath("./title/text()")[0].split(":", 1)[1]
+            case_name: str = item.xpath("./title/text()")[0].split(":", 1)[1]
             if case_name.strip():
                 self.items.append(item)
 
         # Set self.html to None so it can't be misused.
         return None
 
-    def _get_download_urls(self):
+    @override
+    def _get_download_urls(self) -> list[str]:
         return [item.xpath("./enclosure/@url")[0] for item in self.items]
 
-    def _get_case_names(self):
+    @override
+    def _get_case_names(self) -> list[str]:
         case_names = []
         for txt in [item.xpath("./title/text()")[0] for item in self.items]:
             case_name = clean_if_py3(txt).split(": ", 1)[1]
             case_names.append(case_name)
         return case_names
 
-    def _get_case_dates(self):
+    @override
+    def _get_case_dates(self) -> list[date]:
         case_dates = []
         for txt in [
             item.xpath("./description/text()")[0] for item in self.items
@@ -54,7 +60,8 @@ class Site(OralArgumentSite):
             case_dates.append(datetime.strptime(case_date, "%m/%d/%Y").date())
         return case_dates
 
-    def _get_docket_numbers(self):
+    @override
+    def _get_docket_numbers(self) -> list[str]:
         docket_numbers = []
         for txt in [item.xpath("./title/text()")[0] for item in self.items]:
             docket_number = clean_if_py3(txt).split(": ", 1)[0]

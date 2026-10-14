@@ -18,7 +18,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.status = "Unknown"
@@ -54,6 +54,7 @@ class Site(OpinionSiteLinear):
             "User-Agent": "Juriscraper",
         }
 
+    @override
     async def _download(self, request_dict=None):
         if self.test_mode_enabled():
             return await super()._download(request_dict)
@@ -63,7 +64,7 @@ class Site(OpinionSiteLinear):
         return self._return_response_text_object()
 
     @staticmethod
-    def extract_case_name_info(case_name):
+    def extract_case_name_info(case_name: str) -> tuple[str | None, str]:
         """Extracts docket number and cleans case name
 
         :param case_name: raw case name with docket number

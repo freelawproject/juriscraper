@@ -35,7 +35,7 @@ class Site(OpinionSiteLinear):
     first_opinion_date = datetime(2018, 6, 25)
     days_interval = 365
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.status = "Published"
@@ -95,6 +95,7 @@ class Site(OpinionSiteLinear):
             return citation.strip()
         return ""
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Use the default make_backscrape_iterable to parse input
         and create date objects. Then, use the dates to get the terms
@@ -113,7 +114,8 @@ class Site(OpinionSiteLinear):
                 f"{self.base_url}/{yy}" for yy in range(start, end)
             ]
 
-    async def _download_backwards(self, d: str):
+    @override
+    async def _download_backwards(self, d: str) -> None:
         self.url = f"{self.base_url}/{d}"
         logger.info("Backscraping %s", self.url)
         self.html = await self._download()

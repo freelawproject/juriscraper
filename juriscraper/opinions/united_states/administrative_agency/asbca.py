@@ -11,6 +11,7 @@ History:
 from datetime import datetime
 from urllib.parse import urljoin
 
+from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
@@ -20,7 +21,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     base_url = "https://www.asbca.mil/"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.year = str(datetime.today().year)
@@ -50,7 +51,7 @@ class Site(OpinionSiteLinear):
         if self.test_mode_enabled():
             self.year = "2026"
 
-        rows = self.html.xpath(
+        rows: list[HtmlElement] = self.html.xpath(
             "//tr[not(th) and not(.//span[@style='background-color:#F8C100;']) and descendant::a]"
         )
         for row in rows:

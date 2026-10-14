@@ -14,6 +14,7 @@ import re
 from datetime import datetime, timedelta
 from typing import Any
 
+from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
@@ -24,7 +25,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.justice.gov/eoir/ag-bia-decisions"
@@ -37,7 +38,7 @@ class Site(OpinionSiteLinear):
         if not self.test_mode_enabled():
             # Get last volume URL
             if not self.urls:
-                urls = self.html.xpath(
+                urls: list[HtmlElement] = self.html.xpath(
                     ".//table[1]/tbody/tr/td/a[contains(., 'Volume')]"
                 )
 
@@ -58,18 +59,20 @@ class Site(OpinionSiteLinear):
         # the dup check to see newer records first.
         for index, row in enumerate(self.html.xpath("//table")):
             summary = row.xpath("string(following-sibling::p[1])")
-            name = row.xpath(".//td[1]//*[self::strong or self::b]/text()")[0]
+            name: str = row.xpath(
+                ".//td[1]//*[self::strong or self::b]/text()"
+            )[0]
 
             if row.xpath(".//td[1]/text()"):
-                row_text = row.xpath(".//td[1]/text()")[-1]
+                row_text: str = row.xpath(".//td[1]/text()")[-1]
             else:
-                row_text = row.xpath(".//td[1]/p/text()")[-1]
+                row_text: str = row.xpath(".//td[1]/p/text()")[-1]
 
             citation, year = row_text.split("(", 1)
 
             year = re.search(r"\d{4}", year).group(0)
             date = datetime(int(year), 7, 1) - timedelta(days=index)
-            url = row.xpath(".//td[2]//a/@href")
+            url: list[str] = row.xpath(".//td[2]//a/@href")
             docket = row.xpath("string(.//td[2]//a)")
             self.cases.append(
                 {
@@ -83,6 +86,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Can we extract the date filed from the text?
 

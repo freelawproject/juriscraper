@@ -6,7 +6,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.url = (
             "http://www.ca10.uscourts.gov/opinions/new/daily_decisions.rss"
@@ -28,7 +28,7 @@ class Site(OpinionSiteLinear):
             date = convert_date_string(item.xpath(".//pubdate/text()")[0])
             formatted_date = date.strftime("%Y-%m-%d")
 
-            lower_court = (
+            lower_court: str = (
                 item.xpath(
                     ".//*[local-name()='dc:creator' or local-name()='creator']/text()"
                 )[0]

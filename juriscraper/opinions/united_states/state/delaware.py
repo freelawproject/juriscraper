@@ -47,6 +47,7 @@ class Site(OpinionSiteLinear):
 
             self.cases.append(case)
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court from the scraped text.
 

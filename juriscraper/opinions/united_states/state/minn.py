@@ -30,7 +30,7 @@ class Site(OpinionSiteLinear):
     # and respect the site's `Request-rate` (see robots.txt). See #2006
     request_delay = 5
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         kwargs.setdefault("verify", False)
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -104,7 +104,7 @@ class Site(OpinionSiteLinear):
             if name_match:
                 name = name_match.group("name")
 
-            summary = case.xpath(
+            summary: str = case.xpath(
                 ".//div[@class='searchresult_snippet']/text()"
             )[0]
             disposition = ""
@@ -136,7 +136,7 @@ class Site(OpinionSiteLinear):
                     cite_element[0].text_content().split(":", 1)[-1].strip()
                 )
 
-            url = case.xpath(".//a/@href")[0]
+            url: str = case.xpath(".//a/@href")[0]
             docket = url.split("/")[-1].split("-")[0][2:]
             self.cases.append(
                 {
@@ -150,7 +150,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    async def _download_backwards(self, dates: tuple[date, date]):
+    @override
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         logger.info("Backscraping for range %s - %s", *dates)
         params = {**self.base_params}
         params.update(
@@ -178,6 +179,7 @@ class Site(OpinionSiteLinear):
             return True
         return datetime.now(UTC).hour < 12
 
+    @override
     async def _download(self, request_dict=None):
         """Skip the request entirely when outside the robots.txt visit window.
 
@@ -205,7 +207,7 @@ class Site(OpinionSiteLinear):
 
         :raises BotChallengeError: when a captcha challenge is detected
         """
-        title = " ".join(self.html.xpath("//title//text()"))
+        title: str = " ".join(self.html.xpath("//title//text()"))
         if "Bot Manager Captcha" in title or self.html.xpath(
             "//div[contains(@class, 'h-captcha')]"
         ):

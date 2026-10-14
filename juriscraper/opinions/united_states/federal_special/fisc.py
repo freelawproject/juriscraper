@@ -60,7 +60,8 @@ class Site(OpinionSiteLinear):
         """
         return "FISCR" in docket or "FISCR" in filename
 
-    async def _download_backwards(self, _) -> None:
+    @override
+    async def _download_backwards(self, _: str) -> None:
         """Start from second page up to last page
 
         :return None

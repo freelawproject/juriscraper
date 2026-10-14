@@ -25,7 +25,7 @@ class Site(OpinionSiteLinear):
     first_opinion_date = datetime(1996, 11, 12)
     days_interval = 120
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.set_url()
@@ -72,6 +72,7 @@ class Site(OpinionSiteLinear):
         }
         self.url = f"{self.base_url}?{urlencode(params)}"
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
 

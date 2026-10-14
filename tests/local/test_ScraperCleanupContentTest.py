@@ -25,7 +25,7 @@ class ScraperCleanupContentTest(unittest.TestCase):
     run again.
     """
 
-    def test_cleanup_content_fixtures(self):
+    def test_cleanup_content_fixtures(self) -> None:
         module_strings = build_module_list("juriscraper.opinions")
         modules_by_name = {
             module_string.rsplit(".", 1)[1]: module_string

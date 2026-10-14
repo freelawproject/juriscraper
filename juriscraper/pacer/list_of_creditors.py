@@ -1,4 +1,5 @@
 from httpx import Request, Response, Timeout
+from typing_extensions import override
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.pacer.reports import BaseReport
@@ -18,18 +19,19 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
         "You entered a non-bankruptcy type case:",
     ]
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None) -> None:
         BaseDocketReport.__init__(self, court_id)
         BaseReport.__init__(self, court_id, pacer_session)
 
         self._clear_caches()
-        self._metadata = None
+        self._metadata: dict[str, str | None] | None = None
         assert court_id.endswith("b"), (
             "Unable to create object. Must use bankruptcy court abbreviation."
         )
 
     @property
-    def data(self):
+    @override
+    def data(self) -> dict[str, str | None]:
         """Get all the data back from this endpoint."""
         if self.is_valid is False:
             return {}
@@ -38,7 +40,7 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
         return data
 
     @property
-    def metadata(self):
+    def metadata(self) -> dict[str, str | None]:
         """Parse the raw data from the HTML file."""
         if self.is_valid is False:
             return {}
@@ -52,7 +54,7 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
             )[0]
         except IndexError:
             raw_data = None
-        meta_data = {
+        meta_data: dict[str, str | None] = {
             "court_id": self.court_id,
             "data": raw_data,
         }
@@ -119,7 +121,7 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
         pacer_case_id: str,
         docket_number: str,
         post_param: str,
-    ):
+    ) -> None:
         """Query the List of creditors report and return the results.
 
         :param pacer_case_id: The internal PACER ID for the case.

@@ -239,14 +239,14 @@
       "severity": "error"
     },
     {
-      "column": 16,
+      "column": 35,
       "path": "juriscraper/opinions/united_states/administrative_agency/asbca.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
     },
     {
-      "column": 24,
+      "column": 43,
       "path": "juriscraper/opinions/united_states/administrative_agency/bia.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -274,7 +274,7 @@
       "severity": "error"
     },
     {
-      "column": 16,
+      "column": 27,
       "path": "juriscraper/opinions/united_states/administrative_agency/bva.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -519,13 +519,6 @@
       "severity": "error"
     },
     {
-      "column": 16,
-      "path": "juriscraper/opinions/united_states/federal_district/dcd.py",
-      "name": "bad-return",
-      "concise_description": "Returned type `str | Any` is not assignable to declared return type `tuple[str, str]`",
-      "severity": "error"
-    },
-    {
       "column": 20,
       "path": "juriscraper/opinions/united_states/federal_special/acca_p.py",
       "name": "missing-attribute",
@@ -554,7 +547,7 @@
       "severity": "error"
     },
     {
-      "column": 17,
+      "column": 36,
       "path": "juriscraper/opinions/united_states/federal_special/cavc.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -624,28 +617,14 @@
       "severity": "error"
     },
     {
-      "column": 17,
+      "column": 28,
       "path": "juriscraper/opinions/united_states/state/alaska.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
     },
     {
-      "column": 26,
-      "path": "juriscraper/opinions/united_states/state/ariz.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `strftime`",
-      "severity": "error"
-    },
-    {
-      "column": 24,
-      "path": "juriscraper/opinions/united_states/state/ariz.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `strftime`",
-      "severity": "error"
-    },
-    {
-      "column": 22,
+      "column": 27,
       "path": "juriscraper/opinions/united_states/state/ariz.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -764,48 +743,6 @@
       "severity": "error"
     },
     {
-      "column": 38,
-      "path": "juriscraper/opinions/united_states/state/colo.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `tuple[date, date]` is not assignable to parameter `dates` with type `tuple[date] | None` in function `Site.update_url`",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "juriscraper/opinions/united_states/state/colo.py",
-      "name": "bad-assignment",
-      "concise_description": "`tuple[datetime, datetime]` is not assignable to variable `dates` with type `tuple[date] | None`",
-      "severity": "error"
-    },
-    {
-      "column": 17,
-      "path": "juriscraper/opinions/united_states/state/colo.py",
-      "name": "unsupported-operation",
-      "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "column": 15,
-      "path": "juriscraper/opinions/united_states/state/colo.py",
-      "name": "unsupported-operation",
-      "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "juriscraper/opinions/united_states/state/colo.py",
-      "name": "bad-index",
-      "concise_description": "Index 1 out of range for tuple with 1 elements",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "juriscraper/opinions/united_states/state/colo.py",
-      "name": "bad-return",
-      "concise_description": "Returned type `tuple[date] | None` is not assignable to declared return type `tuple[date]`",
-      "severity": "error"
-    },
-    {
       "column": 16,
       "path": "juriscraper/opinions/united_states/state/conn.py",
       "name": "missing-attribute",
@@ -879,18 +816,18 @@
       "column": 13,
       "path": "juriscraper/opinions/united_states/state/haw.py",
       "name": "bad-argument-type",
-      "concise_description": "Argument `Unknown | None` is not assignable to parameter `date_list` with type `list[tuple[Unknown]] | list[Unknown]` in function `juriscraper.lib.date_utils.unique_year_month`",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `date_list` with type `Iterable[tuple[Unknown, ...] | Unknown]` in function `juriscraper.lib.date_utils.unique_year_month`",
       "severity": "error"
     },
     {
-      "column": 16,
+      "column": 35,
       "path": "juriscraper/opinions/united_states/state/ill.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
     },
     {
-      "column": 18,
+      "column": 23,
       "path": "juriscraper/opinions/united_states/state/ill.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -904,7 +841,7 @@
       "severity": "error"
     },
     {
-      "column": 16,
+      "column": 35,
       "path": "juriscraper/opinions/united_states/state/indctapp_reclassified.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -953,21 +890,21 @@
       "severity": "error"
     },
     {
-      "column": 16,
+      "column": 35,
       "path": "juriscraper/opinions/united_states/state/lactapp_3.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
     },
     {
-      "column": 20,
+      "column": 39,
       "path": "juriscraper/opinions/united_states/state/lactapp_3.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
     },
     {
-      "column": 19,
+      "column": 38,
       "path": "juriscraper/opinions/united_states/state/lactapp_4.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -984,7 +921,7 @@
       "column": 13,
       "path": "juriscraper/opinions/united_states/state/lactapp_4.py",
       "name": "bad-argument-type",
-      "concise_description": "Argument `Unknown | None` is not assignable to parameter `date_list` with type `list[tuple[Unknown]] | list[Unknown]` in function `juriscraper.lib.date_utils.unique_year_month`",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `date_list` with type `Iterable[tuple[Unknown, ...] | Unknown]` in function `juriscraper.lib.date_utils.unique_year_month`",
       "severity": "error"
     },
     {
@@ -1009,7 +946,7 @@
       "severity": "error"
     },
     {
-      "column": 17,
+      "column": 36,
       "path": "juriscraper/opinions/united_states/state/lactapp_5.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -1065,13 +1002,6 @@
       "severity": "error"
     },
     {
-      "column": 16,
-      "path": "juriscraper/opinions/united_states/state/masslandct.py",
-      "name": "bad-return",
-      "concise_description": "Returned type `list[date | None]` is not assignable to declared return type `list[date]`",
-      "severity": "error"
-    },
-    {
       "column": 30,
       "path": "juriscraper/opinions/united_states/state/masslandct.py",
       "name": "missing-attribute",
@@ -1096,7 +1026,7 @@
       "column": 13,
       "path": "juriscraper/opinions/united_states/state/masssuperct.py",
       "name": "bad-argument-type",
-      "concise_description": "Argument `Unknown | None` is not assignable to parameter `date_list` with type `list[tuple[Unknown]] | list[Unknown]` in function `juriscraper.lib.date_utils.unique_year_month`",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `date_list` with type `Iterable[tuple[Unknown, ...] | Unknown]` in function `juriscraper.lib.date_utils.unique_year_month`",
       "severity": "error"
     },
     {
@@ -1156,7 +1086,7 @@
       "severity": "error"
     },
     {
-      "column": 26,
+      "column": 31,
       "path": "juriscraper/opinions/united_states/state/minn.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -1216,13 +1146,6 @@
       "path": "juriscraper/opinions/united_states/state/mont.py",
       "name": "no-matching-overload",
       "concise_description": "No matching overload found for function `typing.MutableMapping.setdefault` called with arguments: (Literal['Docket'], dict[@_, @_])",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "juriscraper/opinions/united_states/state/mont.py",
-      "name": "bad-return",
-      "concise_description": "Returned type `bytes | str` is not assignable to declared return type `str`",
       "severity": "error"
     },
     {
@@ -1394,7 +1317,7 @@
       "severity": "error"
     },
     {
-      "column": 16,
+      "column": 35,
       "path": "juriscraper/opinions/united_states/state/nm.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -1415,7 +1338,7 @@
       "severity": "error"
     },
     {
-      "column": 17,
+      "column": 36,
       "path": "juriscraper/opinions/united_states/state/ny.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -1436,14 +1359,14 @@
       "severity": "error"
     },
     {
-      "column": 17,
+      "column": 22,
       "path": "juriscraper/opinions/united_states/state/nytrial.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
     },
     {
-      "column": 18,
+      "column": 37,
       "path": "juriscraper/opinions/united_states/state/nytrial.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -1460,7 +1383,7 @@
       "column": 13,
       "path": "juriscraper/opinions/united_states/state/nytrial.py",
       "name": "bad-argument-type",
-      "concise_description": "Argument `Unknown | None` is not assignable to parameter `date_list` with type `list[tuple[Unknown]] | list[Unknown]` in function `juriscraper.lib.date_utils.unique_year_month`",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `date_list` with type `Iterable[tuple[Unknown, ...] | Unknown]` in function `juriscraper.lib.date_utils.unique_year_month`",
       "severity": "error"
     },
     {
@@ -1485,14 +1408,14 @@
       "severity": "error"
     },
     {
-      "column": 22,
+      "column": 41,
       "path": "juriscraper/opinions/united_states/state/ohio.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
     },
     {
-      "column": 28,
+      "column": 47,
       "path": "juriscraper/opinions/united_states/state/ohio.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -1593,7 +1516,7 @@
       "column": 13,
       "path": "juriscraper/opinions/united_states/state/sc.py",
       "name": "bad-argument-type",
-      "concise_description": "Argument `Unknown | None` is not assignable to parameter `date_list` with type `list[tuple[Unknown]] | list[Unknown]` in function `juriscraper.lib.date_utils.unique_year_month`",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `date_list` with type `Iterable[tuple[Unknown, ...] | Unknown]` in function `juriscraper.lib.date_utils.unique_year_month`",
       "severity": "error"
     },
     {
@@ -1604,21 +1527,21 @@
       "severity": "error"
     },
     {
-      "column": 26,
+      "column": 31,
       "path": "juriscraper/opinions/united_states/state/sd.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
     },
     {
-      "column": 22,
+      "column": 27,
       "path": "juriscraper/opinions/united_states/state/sd.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
     },
     {
-      "column": 28,
+      "column": 33,
       "path": "juriscraper/opinions/united_states/state/sd.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -1681,7 +1604,7 @@
       "severity": "error"
     },
     {
-      "column": 17,
+      "column": 36,
       "path": "juriscraper/opinions/united_states/state/texag.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -2027,7 +1950,7 @@
       "column": 13,
       "path": "juriscraper/oral_args/united_states/federal_appellate/cadc.py",
       "name": "bad-argument-type",
-      "concise_description": "Argument `Unknown | None` is not assignable to parameter `date_list` with type `list[tuple[Unknown]] | list[Unknown]` in function `juriscraper.lib.date_utils.unique_year_month`",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `date_list` with type `Iterable[tuple[Unknown, ...] | Unknown]` in function `juriscraper.lib.date_utils.unique_year_month`",
       "severity": "error"
     },
     {
@@ -2038,7 +1961,7 @@
       "severity": "error"
     },
     {
-      "column": 21,
+      "column": 32,
       "path": "juriscraper/oral_args/united_states/federal_appellate/cafc.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -2059,7 +1982,7 @@
       "severity": "error"
     },
     {
-      "column": 16,
+      "column": 35,
       "path": "juriscraper/oral_args/united_states/state/md.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -2157,14 +2080,14 @@
       "severity": "error"
     },
     {
-      "column": 16,
+      "column": 40,
       "path": "juriscraper/pacer/appellate_attachment_page.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
     },
     {
-      "column": 20,
+      "column": 31,
       "path": "juriscraper/pacer/appellate_attachment_page.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -2318,14 +2241,14 @@
       "severity": "error"
     },
     {
-      "column": 16,
+      "column": 35,
       "path": "juriscraper/pacer/attachment_page.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
     },
     {
-      "column": 21,
+      "column": 40,
       "path": "juriscraper/pacer/attachment_page.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -2353,21 +2276,21 @@
       "severity": "error"
     },
     {
-      "column": 21,
+      "column": 40,
       "path": "juriscraper/pacer/attachment_page.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
     },
     {
-      "column": 16,
+      "column": 35,
       "path": "juriscraper/pacer/attachment_page.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
     },
     {
-      "column": 21,
+      "column": 40,
       "path": "juriscraper/pacer/attachment_page.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -2535,7 +2458,7 @@
       "severity": "error"
     },
     {
-      "column": 24,
+      "column": 43,
       "path": "juriscraper/pacer/claims_register.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -2563,21 +2486,21 @@
       "severity": "error"
     },
     {
-      "column": 29,
+      "column": 48,
       "path": "juriscraper/pacer/docket_history_report.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
     },
     {
-      "column": 22,
+      "column": 33,
       "path": "juriscraper/pacer/docket_history_report.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
     },
     {
-      "column": 17,
+      "column": 36,
       "path": "juriscraper/pacer/docket_history_report.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -3007,7 +2930,7 @@
       "column": 25,
       "path": "juriscraper/pacer/email.py",
       "name": "bad-assignment",
-      "concise_description": "`str | Any | None` is not assignable to dict key `pacer_seq_no` with type `None`",
+      "concise_description": "`str | None` is not assignable to dict key `pacer_seq_no` with type `None`",
       "severity": "error"
     },
     {
@@ -3039,14 +2962,14 @@
       "severity": "error"
     },
     {
-      "column": 31,
+      "column": 42,
       "path": "juriscraper/pacer/email.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
     },
     {
-      "column": 31,
+      "column": 42,
       "path": "juriscraper/pacer/email.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -3067,7 +2990,7 @@
       "severity": "error"
     },
     {
-      "column": 31,
+      "column": 42,
       "path": "juriscraper/pacer/email.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -3144,20 +3067,6 @@
       "severity": "error"
     },
     {
-      "column": 49,
-      "path": "juriscraper/pacer/free_documents.py",
-      "name": "unbound-name",
-      "concise_description": "`href` may be uninitialized",
-      "severity": "error"
-    },
-    {
-      "column": 32,
-      "path": "juriscraper/pacer/free_documents.py",
-      "name": "unbound-name",
-      "concise_description": "`path` may be uninitialized",
-      "severity": "error"
-    },
-    {
       "column": 15,
       "path": "juriscraper/pacer/hidden_api.py",
       "name": "bad-override",
@@ -3172,7 +3081,7 @@
       "severity": "error"
     },
     {
-      "column": 17,
+      "column": 39,
       "path": "juriscraper/pacer/hidden_api.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -3242,7 +3151,7 @@
       "severity": "error"
     },
     {
-      "column": 20,
+      "column": 42,
       "path": "juriscraper/pacer/internet_archive.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -3330,13 +3239,6 @@
       "path": "juriscraper/pacer/reports.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `post`",
-      "severity": "error"
-    },
-    {
-      "column": 17,
-      "path": "juriscraper/pacer/reports.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `str | None` is not assignable to parameter `pacer_case_id` with type `str` in function `BaseReport._query_pdf_download`",
       "severity": "error"
     },
     {

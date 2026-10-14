@@ -6,6 +6,8 @@ This provides the total number of docket entries, which is useful for alerts
 import pprint
 import sys
 
+from typing_extensions import override
+
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.utils import clean_court_object
 
@@ -25,20 +27,21 @@ class MobileQuery(BaseDocketReport, BaseReport):
 
     CACHE_ATTRS = ["metadata"]
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None) -> None:
         BaseDocketReport.__init__(self, court_id)
         BaseReport.__init__(self, court_id, pacer_session)
 
         # Initialize the empty cache properties
         self._clear_caches()
-        self._metadata = None
+        self._metadata: dict[str, str | int | float] | None = None
 
-    def parse(self):
+    @override
+    def parse(self) -> None:
         self._clear_caches()
         super().parse()
 
     @property
-    def metadata(self):
+    def metadata(self) -> dict[str, str | int | float]:
         if self.is_valid is False:
             return {}
 
@@ -62,7 +65,10 @@ class MobileQuery(BaseDocketReport, BaseReport):
             "Cost:" in cost_raw
         ):  # bad: means we were charged. Return immediately with bad news.
             cost = float(cost_raw.split("Cost: ", 1)[1])
-            data = {"cost": cost, "cost_raw": cost_raw}
+            data: dict[str, str | int | float] = {
+                "cost": cost,
+                "cost_raw": cost_raw,
+            }
             self._metadata = data
             return data
         span = self.tree.xpath('.//a[@id="entriesLink"]//span')[0]
@@ -78,7 +84,7 @@ class MobileQuery(BaseDocketReport, BaseReport):
         self._metadata = data
         return data
 
-    async def query(self, pacer_case_id):
+    async def query(self, pacer_case_id: str | int) -> None:
         """Use a district court's PACER mobile query function with a known case id
 
         At the top of every district PACER court, there's a button that says,
@@ -127,7 +133,8 @@ class MobileQuery(BaseDocketReport, BaseReport):
         self.parse()
 
     @property
-    def data(self):
+    @override
+    def data(self) -> dict[str, str | int | float]:
         """Get all the data back from this endpoint.
 
         Don't attempt to return parties or docket_entries like the superclass
@@ -140,7 +147,7 @@ class MobileQuery(BaseDocketReport, BaseReport):
         return data
 
 
-def _main():
+def _main() -> None:
     if len(sys.argv) != 2:
         print("Usage: python -m juriscraper.pacer.mobile_query filepath")
         print("Please provide a path to an HTML file to parse.")

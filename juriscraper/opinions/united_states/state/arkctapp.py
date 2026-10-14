@@ -12,6 +12,6 @@ class Site(ark.Site):
     cite_regex = re.compile(r"\d{2,4} Ark\. App\. \d+", re.I)
     first_opinion_date = datetime(1979, 9, 4)
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__

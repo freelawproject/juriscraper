@@ -46,14 +46,14 @@ class Site(ClusterSite):
         Appends a dictionary with these details to self.cases.
         """
         for row in self.html.xpath("//tr"):
-            date = (
+            date: str = (
                 row.xpath(
                     ".//td[contains(@class, 'views-field-field-opinions-date-filed')]"
                 )[0]
                 .text_content()
                 .strip()
             )
-            section = row.xpath(
+            section: HtmlElement = row.xpath(
                 f".//td[contains(@class, '{self.section_selector}')]"
             )[0]
             url = section.xpath(".//a")[0].get("href")
@@ -75,7 +75,7 @@ class Site(ClusterSite):
                     lower_court_judge[0].split(":", 1)[1].strip()
                 )
 
-            judge = (
+            judge: str = (
                 section.xpath(".//text()[contains(., 'Authoring Judge:')]")[0]
                 .strip()
                 .split(":", 1)[1]
@@ -108,6 +108,7 @@ class Site(ClusterSite):
 
             self.cases.append(case_dict)
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract precedential_status and appeal_from_str from scraped text.
 
@@ -209,6 +210,7 @@ class Site(ClusterSite):
 
         return raw_name, op_type.value
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         r"""Download cases within a given date range.
 

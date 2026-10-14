@@ -14,7 +14,7 @@ from juriscraper.opinions.united_states.state import texapp
 
 
 class Site(texapp.Site):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.checkbox = 1
@@ -38,7 +38,7 @@ class Site(texapp.Site):
 
         for opinion in html.xpath(opinion_xpath):
             op = {}
-            link = opinion.xpath(link_xpath)
+            link: list[HtmlElement] = opinion.xpath(link_xpath)
             if not link:
                 logger.info(
                     "Skipping row with no link %s", opinion.xpath("string")
@@ -47,10 +47,10 @@ class Site(texapp.Site):
 
             op["url"] = link[0].xpath("td/a/@href")[0]
 
-            op_type = link[0].xpath("td[2]/text()")[0].strip()
+            op_type: str = link[0].xpath("td[2]/text()")[0].strip()
             if op_type == "Original":
                 # use the 'main' opinion disposition as cluster disposition
-                disposition = opinion.xpath(".//td[3]/text()")[0]
+                disposition: str = opinion.xpath(".//td[3]/text()")[0]
                 op["type"] = OpinionType.MAJORITY.value
             elif op_type == "Concurring & Dissenting":
                 op["type"] = (

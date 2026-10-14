@@ -8,15 +8,18 @@ History:
 
 from datetime import date
 
+from typing_extensions import override
+
 from juriscraper.opinions.united_states.state import utahctapp
 
 
 class Site(utahctapp.Site):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.back_scrape_iterable = list(range(2012, date.today().year))
 
-    async def _download_backwards(self, year: str) -> None:
+    @override
+    async def _download_backwards(self, year: int | str) -> None:
         """Download the page for each year in the backscrape_iterable.
 
         :param year: The year to download

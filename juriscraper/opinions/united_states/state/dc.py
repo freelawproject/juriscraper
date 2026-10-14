@@ -16,7 +16,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.dccourts.gov/court-of-appeals/opinions-and-memorandum-of-judgments"
@@ -39,12 +39,12 @@ class Site(OpinionSiteLinear):
         """
 
         for row in self.html.xpath(self.base_path):
-            docket = row.xpath("./td[1]/a/text()")[0].strip()
-            url = row.xpath("./td[1]/a/@href")[0].strip()
-            name = row.xpath("./td[2]/text()")[0].strip()
-            date = row.xpath("./td[3]/text()")[0].strip()
-            disposition = "".join(row.xpath("./td[4]//text()")).strip()
-            judge = "".join(row.xpath("./td[5]//text()")).strip()
+            docket: str = row.xpath("./td[1]/a/text()")[0].strip()
+            url: str = row.xpath("./td[1]/a/@href")[0].strip()
+            name: str = row.xpath("./td[2]/text()")[0].strip()
+            date: str = row.xpath("./td[3]/text()")[0].strip()
+            disposition: str = "".join(row.xpath("./td[4]//text()")).strip()
+            judge: str = "".join(row.xpath("./td[5]//text()")).strip()
 
             # "Per Curiam" appears in the Judge column instead of an author
             per_curiam = "per curiam" in judge.lower()
@@ -63,6 +63,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court from the scraped text.
 

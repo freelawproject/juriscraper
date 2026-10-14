@@ -6,33 +6,39 @@ Reviewer: mlr
 Date created: 19 July 2014
 """
 
-from datetime import datetime
+from datetime import date, datetime
+
+from typing_extensions import override
 
 from juriscraper.OralArgumentSite import OralArgumentSite
 
 
 class Site(OralArgumentSite):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://media.ca7.uscourts.gov/oralArguments/oar.jsp?caseyear=&casenumber=&period=Past+month"
 
+    @override
     def _get_download_urls(self):
         path = "//tr[@bgcolor]/td[5]//@href"
         return list(self.html.xpath(path))
 
+    @override
     def _get_case_names(self):
         path = "//tr[@bgcolor]/td[2]/text()"
         return list(self.html.xpath(path))
 
+    @override
     def _get_case_dates(self):
         path = "//tr[@bgcolor]/td[4]/text()"
         return list(map(self._return_case_date, self.html.xpath(path)))
 
     @staticmethod
-    def _return_case_date(s):
+    def _return_case_date(s: str) -> date:
         return datetime.strptime(s.strip(), "%m/%d/%Y").date()
 
+    @override
     def _get_docket_numbers(self):
         path = "//tr[@bgcolor]/td[1]/text()"
         return list(self.html.xpath(path))

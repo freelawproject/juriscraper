@@ -2,14 +2,17 @@
 CourtID: uscfc
 Court Short Name: Fed. Cl."""
 
+from typing_extensions import override
+
 from juriscraper.opinions.united_states.federal_special import uscfc
 
 
 class Site(uscfc.Site):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.url = "https://ecf.cofc.uscourts.gov/cgi-bin/CFC_RecentDecisionsOfTheSpecialMasters.pl"
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract 'status' from text, if possible
 

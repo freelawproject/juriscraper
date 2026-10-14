@@ -6,6 +6,7 @@ import unittest
 from datetime import date
 
 from lxml import html
+from typing_extensions import override
 
 from juriscraper.state.texas.tames import (
     ATTORNEY_BAR_FIELD,
@@ -58,7 +59,9 @@ class FakeResponse:
 class FakeRequestManager:
     """Serves canned form/results pages and records what was posted."""
 
-    def __init__(self, form_pages: list[bytes], result_pages: list[bytes]):
+    def __init__(
+        self, form_pages: list[bytes], result_pages: list[bytes]
+    ) -> None:
         self._form_pages = form_pages
         self._result_pages = result_pages
         self.posted_bodies: list[dict[str, str]] = []
@@ -85,13 +88,15 @@ class TamesBarNumberTest(unittest.IsolatedAsyncioTestCase):
     that attorney's cases — often zero rows, but not always.
     """
 
-    def _scraper(self, form_pages, result_pages):
+    def _scraper(
+        self, form_pages: list[bytes], result_pages: list[bytes]
+    ) -> tuple[TAMESScraper, FakeRequestManager]:
         rm = FakeRequestManager(form_pages, result_pages)
         scraper = TAMESScraper()
         scraper.request_manager = rm
         return scraper, rm
 
-    async def test_bar_number_always_posted_blank(self):
+    async def test_bar_number_always_posted_blank(self) -> None:
         """Every search posts the attorney field, explicitly blank."""
         scraper, rm = self._scraper(
             [_search_page()], [_search_page(rows=2, items=2)]
@@ -108,7 +113,9 @@ class TamesBarNumberTest(unittest.IsolatedAsyncioTestCase):
             self.assertIn(field, rm.posted_bodies[0])
             self.assertEqual(rm.posted_bodies[0][field], "")
 
-    async def test_zero_rows_with_prefilled_bar_number_is_retried(self):
+    async def test_zero_rows_with_prefilled_bar_number_is_retried(
+        self,
+    ) -> None:
         """A poisoned form plus zero rows triggers one clean resubmission."""
         scraper, rm = self._scraper(
             # First form arrives poisoned, the second one is clean
@@ -128,7 +135,9 @@ class TamesBarNumberTest(unittest.IsolatedAsyncioTestCase):
         for body in rm.posted_bodies:
             self.assertEqual(body[ATTORNEY_BAR_FIELD], "")
 
-    async def test_nonzero_rows_with_prefilled_bar_number_is_retried(self):
+    async def test_nonzero_rows_with_prefilled_bar_number_is_retried(
+        self,
+    ) -> None:
         """An injected bar number belonging to an attorney with cases.
 
         The filtered search returns rows, so row count can't be the signal --
@@ -157,7 +166,9 @@ class TamesBarNumberTest(unittest.IsolatedAsyncioTestCase):
             f"expected a resubmission warning, got {logs.output}",
         )
 
-    async def test_persistent_bar_number_with_rows_is_logged_as_an_error(self):
+    async def test_persistent_bar_number_with_rows_is_logged_as_an_error(
+        self,
+    ) -> None:
         """A retry that stays filtered is flagged however many rows it has."""
         scraper, _ = self._scraper(
             [_search_page("24075665")],
@@ -174,7 +185,7 @@ class TamesBarNumberTest(unittest.IsolatedAsyncioTestCase):
             f"expected an untrusted-results error, got {logs.output}",
         )
 
-    async def test_genuinely_empty_result_is_not_retried(self):
+    async def test_genuinely_empty_result_is_not_retried(self) -> None:
         """A clean form with no matches is a real answer, not a retry."""
         scraper, rm = self._scraper([_search_page()], [_search_page()])
 
@@ -186,7 +197,7 @@ class TamesBarNumberTest(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(rows, [])
         self.assertEqual(len(rm.posted_bodies), 1)
 
-    async def test_pagination_keeps_the_bar_number_blank(self):
+    async def test_pagination_keeps_the_bar_number_blank(self) -> None:
         """Page 2+ must not re-poison the search."""
         scraper, _ = self._scraper([_search_page()], [_search_page()])
         form_data = scraper._build_form_data(
@@ -205,14 +216,14 @@ class TamesBarNumberTest(unittest.IsolatedAsyncioTestCase):
             scraper.request_manager.posted_bodies[-1][ATTORNEY_BAR_FIELD], ""
         )
 
-    def test_bar_number_value_reads_prefilled_form(self):
+    def test_bar_number_value_reads_prefilled_form(self) -> None:
         clean = html.fromstring(_search_page())
         poisoned = html.fromstring(_search_page("24075665"))
 
         self.assertEqual(TAMESScraper._bar_number_value(clean), "")
         self.assertEqual(TAMESScraper._bar_number_value(poisoned), "24075665")
 
-    def test_real_form_fixture_is_clean(self):
+    def test_real_form_fixture_is_clean(self) -> None:
         """The checked-in fixture shows the normal, unpoisoned form."""
         fixture_path = (
             TESTS_ROOT_EXAMPLES_STATES / "texas" / "CaseSearch.aspx.html"
@@ -226,11 +237,12 @@ class TamesBarNumberTest(unittest.IsolatedAsyncioTestCase):
 class TamesSearchParseTest(unittest.TestCase):
     """Test parsing of TAMES search result pages."""
 
-    def setUp(self):
+    @override
+    def setUp(self) -> None:
         self.maxDiff = 200000
         self.scraper = TAMESScraper()
 
-    def test_parse_search_results(self):
+    def test_parse_search_results(self) -> None:
         """Test parsing search results from CaseSearch.aspx.html fixture."""
         fixture_path = (
             TESTS_ROOT_EXAMPLES_STATES / "texas" / "CaseSearch.aspx.html"
@@ -295,7 +307,7 @@ class TamesSearchParseTest(unittest.TestCase):
         self.assertEqual(cca["court_code"], "coscca")
         self.assertEqual(cca["case_type"], "11.07 HC")
 
-    def test_parse_search_results_handles_empty_cells(self):
+    def test_parse_search_results_handles_empty_cells(self) -> None:
         """Test that empty cells (with &nbsp;) are handled correctly."""
         fixture_path = (
             TESTS_ROOT_EXAMPLES_STATES / "texas" / "CaseSearch.aspx.html"
@@ -312,7 +324,7 @@ class TamesSearchParseTest(unittest.TestCase):
         self.assertEqual(cca["trial_court_county"], "")
         self.assertEqual(cca["trial_court"], "")
 
-    def test_has_next_page_returns_false_on_last_page(self):
+    def test_has_next_page_returns_false_on_last_page(self) -> None:
         """Test that _has_next_page returns False on the last page of results."""
         fixture_path = (
             TESTS_ROOT_EXAMPLES_STATES
@@ -331,7 +343,7 @@ class TamesSearchParseTest(unittest.TestCase):
         results = list(self.scraper._parse_search_results(tree))
         self.assertGreater(len(results), 0)
 
-    def test_has_next_page_returns_true_on_middle_page(self):
+    def test_has_next_page_returns_true_on_middle_page(self) -> None:
         """Test that _has_next_page returns True when more pages exist."""
         fixture_path = (
             TESTS_ROOT_EXAMPLES_STATES
@@ -360,13 +372,15 @@ class TamesWafSignatureTest(unittest.IsolatedAsyncioTestCase):
     # does roughly nine times in ten.
     TRIPWIRE_VIEW_STATE = "AAA0x1a2AAAA"
 
-    def _scraper(self, form_pages, result_pages):
+    def _scraper(
+        self, form_pages: list[bytes], result_pages: list[bytes]
+    ) -> tuple[TAMESScraper, FakeRequestManager]:
         rm = FakeRequestManager(form_pages, result_pages)
         scraper = TAMESScraper()
         scraper.request_manager = rm
         return scraper, rm
 
-    async def test_search_postback_has_no_hex_literal(self):
+    async def test_search_postback_has_no_hex_literal(self) -> None:
         scraper, rm = self._scraper(
             [_search_page(view_state=self.TRIPWIRE_VIEW_STATE)],
             [_search_page(rows=1, items=1)],
@@ -386,7 +400,7 @@ class TamesWafSignatureTest(unittest.IsolatedAsyncioTestCase):
             base64.b64decode(self.TRIPWIRE_VIEW_STATE),
         )
 
-    async def test_pagination_postback_has_no_hex_literal(self):
+    async def test_pagination_postback_has_no_hex_literal(self) -> None:
         """Page 2 is where this bites: the results ViewState is the big one."""
         scraper, rm = self._scraper([_search_page()], [_search_page()])
         form_data = scraper._build_form_data(

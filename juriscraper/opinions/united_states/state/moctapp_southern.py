@@ -4,7 +4,7 @@ from juriscraper.opinions.united_states.state import mo
 
 
 class Site(mo.Site):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.court = "Southern"
@@ -16,7 +16,7 @@ class Site(mo.Site):
             date = row.xpath(".//input")[0].value
             for opinion in row.xpath(".//div[@class='list-group-item-text']"):
                 url = opinion.xpath("a")[0].get("href")
-                all_text = opinion.xpath(".//text()")
+                all_text: list[str] = opinion.xpath(".//text()")
                 case_metadata = [t.strip() for t in all_text if t.strip()]
                 if len(case_metadata) != 6:
                     continue

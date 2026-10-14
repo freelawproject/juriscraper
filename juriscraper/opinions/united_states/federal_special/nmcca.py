@@ -20,7 +20,7 @@ class Site(OpinionSiteLinear):
     days_interval = 60
     first_opinion_date = datetime(2004, 1, 8)
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         kwargs.setdefault("verify", False)
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -46,6 +46,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
 

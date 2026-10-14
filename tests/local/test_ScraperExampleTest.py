@@ -9,6 +9,8 @@ import sys
 import time
 import unittest
 
+from typing_extensions import override
+
 from juriscraper.lib.importer import build_module_list
 from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.lib.test_utils import (
@@ -18,12 +20,14 @@ from juriscraper.lib.test_utils import (
 
 
 class ScraperExampleTest(unittest.IsolatedAsyncioTestCase):
-    def setUp(self):
+    @override
+    def setUp(self) -> None:
         self.maxDiff = 1000
         # Disable logging
         logging.disable(logging.CRITICAL)
 
-    def tearDown(self):
+    @override
+    def tearDown(self) -> None:
         # Re-enable logging
         logging.disable(logging.NOTSET)
 
@@ -171,40 +175,40 @@ class ScraperExampleTest(unittest.IsolatedAsyncioTestCase):
                 "good work!"
             )
 
-    async def test_scrape_opinion_admin_example_files(self):
+    async def test_scrape_opinion_admin_example_files(self) -> None:
         await self.run_tests_on_module_str(
             "juriscraper.opinions.united_states.administrative_agency"
         )
 
-    async def test_scrape_opinion_fed_app_example_files(self):
+    async def test_scrape_opinion_fed_app_example_files(self) -> None:
         await self.run_tests_on_module_str(
             "juriscraper.opinions.united_states.federal_appellate"
         )
 
-    async def test_scrape_opinion_fed_bankr_example_files(self):
+    async def test_scrape_opinion_fed_bankr_example_files(self) -> None:
         await self.run_tests_on_module_str(
             "juriscraper.opinions.united_states.federal_bankruptcy"
         )
 
-    async def test_scrape_opinion_fed_dist_example_files(self):
+    async def test_scrape_opinion_fed_dist_example_files(self) -> None:
         await self.run_tests_on_module_str(
             "juriscraper.opinions.united_states.federal_district"
         )
 
-    async def test_scrape_opinion_fed_special_example_files(self):
+    async def test_scrape_opinion_fed_special_example_files(self) -> None:
         await self.run_tests_on_module_str(
             "juriscraper.opinions.united_states.federal_special"
         )
 
-    async def test_scrape_opinion_state_example_files(self):
+    async def test_scrape_opinion_state_example_files(self) -> None:
         await self.run_tests_on_module_str(
             "juriscraper.opinions.united_states.state"
         )
 
-    async def test_scrape_oral_arg_example_files(self):
+    async def test_scrape_oral_arg_example_files(self) -> None:
         await self.run_tests_on_module_str("juriscraper.oral_args")
 
-    async def test_scrape_opinion_territories_example_files(self):
+    async def test_scrape_opinion_territories_example_files(self) -> None:
         await self.run_tests_on_module_str(
             "juriscraper.opinions.united_states.territories"
         )

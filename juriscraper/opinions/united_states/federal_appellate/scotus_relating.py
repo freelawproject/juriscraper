@@ -4,7 +4,7 @@ from juriscraper.opinions.united_states.federal_appellate import (
 
 
 class Site(scotus_chambers.Site):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.precedential = "Relating-to"

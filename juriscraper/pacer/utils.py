@@ -5,11 +5,12 @@ import httpx
 from dateutil import parser
 from dateutil.tz import gettz
 from lxml import html
+from pydantic import JsonValue
 
 from juriscraper.lib.exceptions import ParsingException
 
 
-def get_court_id_from_doc_id_prefix(prefix):
+def get_court_id_from_doc_id_prefix(prefix: str) -> str:
     prefix_to_cid_map = {
         "001": "ca1",
         "002": "ca2",
@@ -219,7 +220,7 @@ def get_court_id_from_doc_id_prefix(prefix):
     return prefix_to_cid_map[prefix]
 
 
-def get_doc_id_prefix_from_court_id(court_id):
+def get_doc_id_prefix_from_court_id(court_id: str) -> str:
     cid_to_prefix_map = {
         "akb": "022",
         "akd": "023",
@@ -430,7 +431,7 @@ def get_doc_id_prefix_from_court_id(court_id):
     return cid_to_prefix_map[court_id]
 
 
-async def get_pacer_court_info(**kwargs):
+async def get_pacer_court_info(**kwargs) -> dict[str, dict[str, JsonValue]]:
     kwargs.setdefault("http2", True)
     kwargs.setdefault("follow_redirects", True)
     async with httpx.AsyncClient(**kwargs) as client:
@@ -449,13 +450,13 @@ def get_courts_from_json(j):
     return courts
 
 
-def get_court_id_from_url(url):
+def get_court_id_from_url(url: str | httpx.URL) -> str:
     """Extract the court ID from the URL."""
     host = httpx.URL(url).host
     return host.split(".")[1]
 
 
-def get_pacer_case_id_from_nonce_url(url):
+def get_pacer_case_id_from_nonce_url(url: str) -> str:
     """Extract the pacer case ID from the URL.
 
     In: https://ecf.almd.uscourts.gov/cgi-bin/DktRpt.pl?56120
@@ -469,7 +470,7 @@ def get_pacer_case_id_from_nonce_url(url):
     return param
 
 
-def get_pacer_seq_no_from_doc1_url(url):
+def get_pacer_seq_no_from_doc1_url(url: str) -> str | None:
     """Extract the seq_no from the doc1 URL."""
     match = re.search(r"de_seq_num=(\d+)", url)
     if match:
@@ -538,7 +539,7 @@ def get_pacer_doc_id_from_doc1_url(url: str) -> str:
     return url
 
 
-def get_pacer_seq_no_from_doc1_anchor(anchor):
+def get_pacer_seq_no_from_doc1_anchor(anchor: html.HtmlElement) -> str | None:
     """Extract the PACER sequence number from an HTML anchor node.
 
     :param anchor: An LXML Element.
@@ -555,7 +556,7 @@ def get_pacer_seq_no_from_doc1_anchor(anchor):
             return go_dls_parts["de_seq_num"]
 
 
-def reverse_goDLS_function(s):
+def reverse_goDLS_function(s: str):
     """Extract the arguments from the goDLS JavaScript function.
 
     In: goDLS('/doc1/01712427473','56121','69','','','1','','');return(false);
@@ -611,7 +612,7 @@ def reverse_goDLS_function(s):
     return parts
 
 
-def reverse_sumDocSelected_function(s) -> dict[str, int] | None:
+def reverse_sumDocSelected_function(s: str) -> dict[str, int] | None:
     """Extract the arguments from the sumDocSelected JavaScript function.
 
     In: sumDocSelected(this,1,13481, 7548050)
@@ -639,7 +640,9 @@ def reverse_sumDocSelected_function(s) -> dict[str, int] | None:
     return parts
 
 
-def make_doc1_url(court_id, pacer_doc_id, skip_attachment_page):
+def make_doc1_url(
+    court_id: str | None, pacer_doc_id, skip_attachment_page: bool
+) -> str:
     """Make a doc1 URL.
 
     If skip_attachment_page is True, we replace the fourth digit with a 1
@@ -668,7 +671,7 @@ def make_doc1_url(court_id, pacer_doc_id, skip_attachment_page):
 
 
 def make_docs1_url(
-    court_id: str | None, pacer_doc_id: str, skip_attachment_page
+    court_id: str | None, pacer_doc_id: str, skip_attachment_page: bool
 ) -> str:
     """Make a docs1 URL for NDAs free look downloads.
 
@@ -706,17 +709,17 @@ def make_acms_free_doc_url(court_id: str, pacer_magic_num: str) -> str:
     return f"https://{court_id}-showdoc.azurewebsites.us/NDA/{pacer_magic_num}"
 
 
-def is_pdf(response):
+def is_pdf(response: httpx.Response) -> bool:
     """Determines whether the item downloaded is a PDF or something else."""
     return response.headers.get("content-type") == "application/pdf"
 
 
-def is_text(response):
+def is_text(response: httpx.Response) -> bool:
     """Determines whether the item downloaded is a text file or something else."""
     return ".txt" in response.headers.get("content-type", "")
 
 
-def get_nonce_from_form(r):
+def get_nonce_from_form(r: httpx.Response) -> str | None:
     """Get a nonce value from a HTML response. Returns the first nonce that is
     found.
 
@@ -731,7 +734,7 @@ def get_nonce_from_form(r):
         raise ParsingException(
             "Got XML when expecting HTML and cannot parse it."
         )
-    form_attrs = tree.xpath("//form//@action")
+    form_attrs: list[str] = tree.xpath("//form//@action")
     for attr in form_attrs:
         # The action attr will be a value like:
         # ../cgi-bin/HistDocQry.pl?112801540788508-L_1_0-1
@@ -749,7 +752,7 @@ def get_nonce_from_form(r):
 BASE_IA_URL = "https://www.archive.org/download"
 
 
-def get_bucket_name(court, pacer_case_id):
+def get_bucket_name(court: str, pacer_case_id: str | int) -> str:
     bucketlist = ["gov", "uscourts", court, str(pacer_case_id)]
     return ".".join(bucketlist)
 
@@ -782,11 +785,16 @@ def get_document_filename(
     )
 
 
-def get_docketxml_url(court, pacer_case_id):
+def get_docketxml_url(court: str, pacer_case_id: str | int) -> str:
     return f"{BASE_IA_URL}/{get_bucket_name(court, pacer_case_id)}/{get_docket_filename(court, pacer_case_id)}"
 
 
-def get_pdf_url(court, pacer_case_id, document_number, attachment_number):
+def get_pdf_url(
+    court: str,
+    pacer_case_id: str | int,
+    document_number: str | int,
+    attachment_number: str | int | None,
+) -> str:
     return "{}/{}/{}".format(
         BASE_IA_URL,
         get_bucket_name(court, pacer_case_id),
@@ -861,9 +869,11 @@ def parse_sumDocSelected_from_row(
      or None if the row does not contain such data.
     """
 
-    input_els = row.xpath(".//input[@class='selDocCl']")
+    input_els: list[html.HtmlElement] = row.xpath(
+        ".//input[@class='selDocCl']"
+    )
     for input_el in input_els:
-        onclick = input_el.xpath("./@onclick")
+        onclick: list[str] = input_el.xpath("./@onclick")
         if onclick and "sumDocSelected" in onclick[0]:
             return reverse_sumDocSelected_function(onclick[0])
     return None
@@ -902,7 +912,7 @@ def get_file_size_str_from_tr(tr: html.HtmlElement) -> str:
     """Take a row from the attachment table and return the number of bytes
     as an int.
     """
-    cells = tr.xpath("./td")
+    cells: list[html.HtmlElement] = tr.xpath("./td")
     last_cell_contents = cells[-1].text_content()
     units = ["kb", "mb"]
     if any(unit in last_cell_contents.lower() for unit in units):

@@ -27,7 +27,7 @@ logger = make_default_logger()
 
 # Patch the HtmlElement class to add a function that can handle regular
 # expressions within XPath queries. See usages throughout AppellateDocketReport.
-def re_xpath(self, path):
+def re_xpath(self, path: str):
     return self.xpath(
         path, namespaces={"re": "http://exslt.org/regular-expressions"}
     )

@@ -13,7 +13,7 @@ class Site(OpinionSiteLinear):
     days_interval = 5
     first_opinion_date = datetime(2003, 3, 23)
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = self.base_url
@@ -23,13 +23,13 @@ class Site(OpinionSiteLinear):
     @override
     def _process_html(self) -> None:
         for row in self.html.xpath("//tr[not(th)]"):
-            title = row.xpath("td[2]/a/text()")[0]
-            url = row.xpath("td[2]/a/@href")[0]
+            title: str = row.xpath("td[2]/a/text()")[0]
+            url: str = row.xpath("td[2]/a/@href")[0]
             status = self.get_status_from_opinion_title(title)
-            docket = row.xpath("td[3]/a/text()")[0]
-            date_filed = row.xpath("td[1]/span/text()")[0]
-            name = row.xpath("td[4]/text()")[0]
-            lower_court = row.xpath("td[4]/span/text()")[0]
+            docket: str = row.xpath("td[3]/a/text()")[0]
+            date_filed: str = row.xpath("td[1]/span/text()")[0]
+            name: str = row.xpath("td[4]/text()")[0]
+            lower_court: str = row.xpath("td[4]/span/text()")[0]
             self.cases.append(
                 {
                     "name": name.strip(),
@@ -58,6 +58,7 @@ class Site(OpinionSiteLinear):
             status = "Unknown"
         return status
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Change URL to backscraping date range
 

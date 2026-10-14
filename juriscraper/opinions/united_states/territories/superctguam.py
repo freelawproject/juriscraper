@@ -10,6 +10,7 @@ import re
 from datetime import date
 from urllib.parse import urljoin
 
+from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
@@ -100,6 +101,7 @@ class Site(guam.Site):
                 }
             )
 
+    @override
     def _process_legacy_html(self) -> None:
         """Process the legacy ``get_items`` API HTML, used for backscraping
 
@@ -122,7 +124,7 @@ class Site(guam.Site):
         for item in self.html.xpath(
             '//div[contains(@class, "item_for_list")]'
         ):
-            anchors = item.xpath(".//h4/a")
+            anchors: list[HtmlElement] = item.xpath(".//h4/a")
             if not anchors:
                 logger.warning(
                     "superctguam: legacy row without PDF link, skipping"
@@ -133,7 +135,7 @@ class Site(guam.Site):
             name = anchor.text_content().strip()
             url = anchor.get("href")
 
-            docket_divs = item.xpath(
+            docket_divs: list[HtmlElement] = item.xpath(
                 './/div[contains(@style, "font-weight: bold")]'
             )
             docket = docket_divs[0].text_content() if docket_divs else ""

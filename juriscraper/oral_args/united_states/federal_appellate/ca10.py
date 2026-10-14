@@ -5,6 +5,8 @@ Author: mlr
 
 import datetime
 
+from typing_extensions import override
+
 from juriscraper.lib.html_utils import (
     get_table_column_links,
     get_table_column_text,
@@ -14,7 +16,7 @@ from juriscraper.OralArgumentSite import OralArgumentSite
 
 
 class Site(OralArgumentSite):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         # query for results of current month
@@ -32,12 +34,15 @@ class Site(OralArgumentSite):
             "field_oa_hearing_date_value[max][date]=%s"
         ) % (start, end)
 
+    @override
     def _get_download_urls(self):
         return get_table_column_links(self.html, 6)
 
+    @override
     def _get_case_names(self):
         return get_table_column_text(self.html, 3)
 
+    @override
     def _get_docket_numbers(self):
         dockets = get_table_column_text(self.html, 2)
         # Handle case where "no results" message is put in table cell, see: ca10_example_2.html
@@ -47,6 +52,7 @@ class Site(OralArgumentSite):
             else dockets
         )
 
+    @override
     def _get_case_dates(self):
         return [
             convert_date_string(ds)

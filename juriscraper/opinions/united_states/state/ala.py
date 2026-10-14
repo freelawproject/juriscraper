@@ -22,7 +22,7 @@ class Site(OpinionSiteLinear):
     court_str = "68f021c4-6a44-4735-9a76-5360b2e8af13"
     base_url = "https://publicportal-api.alappeals.gov"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = f"{self.base_url}/courts/cms/publications"
@@ -34,6 +34,7 @@ class Site(OpinionSiteLinear):
         }
         self.make_backscrape_iterable(kwargs)
 
+    @override
     async def _download(self, request_dict=None):
         """Download the publication list and then fetch detailed publication data.
 
@@ -121,7 +122,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    async def _download_backwards(self, d: int):
+    @override
+    async def _download_backwards(self, d: int) -> None:
         """Fetches a page of publications for backscraping."""
         self.url = f"{self.base_url}/courts/cms/publications"
         self.request["parameters"]["params"] = {
@@ -133,6 +135,7 @@ class Site(OpinionSiteLinear):
         await self._download()
         self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict):
         """Checks if backscrape start and end arguments have been passed"""
         start = kwargs.get("backscrape_start")

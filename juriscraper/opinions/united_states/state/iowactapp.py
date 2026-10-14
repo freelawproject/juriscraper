@@ -2,18 +2,22 @@
 # CourtID: iowactapp
 # Court Short Name: iowactapp
 
+from lxml.html import HtmlElement
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 
 from . import iowa
 
 
 class Site(iowa.Site):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.iowacourts.gov/iowa-courts/court-of-appeals/court-of-appeals-court-opinions/"
 
-    async def _download_backwards(self, _):
+    @override
+    async def _download_backwards(self, _: str) -> None:
         """Overriding this method from parent iowa class because the
         site link/page structure for archived Court of Appeals opinions
         is different than that of Archived Supreme Court opinions
@@ -32,7 +36,8 @@ class Site(iowa.Site):
             )
             self.extract_archive_cases(archive_page_html)
 
-    def extract_archive_cases(self, html):
+    @override
+    def extract_archive_cases(self, html: HtmlElement) -> None:
         """Overriding this method from parent iowa class because the
         html structure for archived Court of Appeals opinion pages is
         different than that of Archived Supreme Court opinion pages

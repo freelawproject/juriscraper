@@ -27,7 +27,7 @@ class Site(OralArgumentSiteLinear):
     upload_window_days = 7
     first_opinion_date = datetime(2000, 10, 16)
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
 
         self.court_id = self.__module__
@@ -105,6 +105,7 @@ class Site(OralArgumentSiteLinear):
             }
         )
 
+    @override
     async def _download(self):
         """Build and download the table to parse
 
@@ -126,7 +127,7 @@ class Site(OralArgumentSiteLinear):
         creds = res.json().get("Credentials")
 
         all_items = []
-        payload = json.loads(self.payload)
+        payload: dict[str, object] = json.loads(self.payload)
         max_pages = 100
 
         for _page in range(max_pages):
@@ -225,6 +226,7 @@ class Site(OralArgumentSiteLinear):
             reverse=True,
         )
 
+    @override
     def _date_sort(self) -> None:
         """Preserve the upload time ordering applied by `_process_html`
 
@@ -234,6 +236,7 @@ class Site(OralArgumentSiteLinear):
         :return: None
         """
 
+    @override
     async def _download_backwards(self, dates: tuple[str, str]) -> None:
         """Download backwards
 
@@ -259,6 +262,7 @@ class Site(OralArgumentSiteLinear):
         self.html = await self._download()
         self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """
         Prepare a single (start, end) tuple, defaulting to __init__’s range

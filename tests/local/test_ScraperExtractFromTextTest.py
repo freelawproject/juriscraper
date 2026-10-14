@@ -1900,7 +1900,7 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
     }
 
-    def test_extract_from_text(self):
+    def test_extract_from_text(self) -> None:
         """Test that extract_from_text returns the expected data."""
         # prevent logger.error calls to be triggered
         logging.disable(logging.CRITICAL)
@@ -1924,7 +1924,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 )
         logging.disable(logging.NOTSET)
 
-    def test_extract_from_text_properly_implemented(self):
+    def test_extract_from_text_properly_implemented(self) -> None:
         """Ensure that extract_from_text is properly implemented."""
 
         module_strings = build_module_list(
@@ -1944,7 +1944,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 msg=f"{module_string} not yet added to extract_from_text test data.",
             )
 
-    def test_valid_date_format(self):
+    def test_valid_date_format(self) -> None:
         """Is the returned date format valid for a Django model date field?
 
         Django models will accept date objects and strings. If a string is not

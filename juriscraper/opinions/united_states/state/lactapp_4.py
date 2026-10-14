@@ -42,23 +42,23 @@ class Site(OpinionSiteLinear):
 
         # XPath for the opinion results
         opinion_results_xpath = "//div[contains(@class, 'opinion-result')]"
-        results = self.html.xpath(opinion_results_xpath)
+        results: list[HtmlElement] = self.html.xpath(opinion_results_xpath)
 
         self.cases = []
         for result in results:
-            docket = result.xpath(".//strong/text()")[0]
-            name = (
+            docket: str = result.xpath(".//strong/text()")[0]
+            name: str = (
                 result.xpath(".//p[not(strong)]/text()")[0]
                 .replace(" VS. .", ".")
                 .strip()
             )
-            decree = result.xpath(
+            decree: str = result.xpath(
                 ".//p[strong[contains(text(), 'Decree')]]/text()"
             )[0]
-            date = result.xpath(
+            date: str = result.xpath(
                 ".//p[strong[contains(text(), 'Opinion Date')]]/text()"
             )[0]
-            download_url = result.xpath(
+            download_url: str = result.xpath(
                 ".//p/a[contains(text(), 'View Document')]/@href"
             )[0]
 
@@ -92,6 +92,7 @@ class Site(OpinionSiteLinear):
 
             self.parameters[name] = value
 
+    @override
     async def _download_backwards(self, search_date: date) -> None:
         """Download and process HTML for a given target date.
 
@@ -103,6 +104,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs) -> None:
         """Make back scrape iterable
 
@@ -114,6 +116,7 @@ class Site(OpinionSiteLinear):
             self.back_scrape_iterable
         )
 
+    @override
     async def _download(self, request_dict=None) -> HtmlElement:
         """Download the HTML content for the current search state.
 
@@ -128,6 +131,7 @@ class Site(OpinionSiteLinear):
             self.method = "POST"
         return await super()._download()
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extracts structured metadata from the provided opinion text.
 

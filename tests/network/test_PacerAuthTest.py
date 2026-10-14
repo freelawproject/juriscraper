@@ -11,7 +11,7 @@ class PacerAuthTest(unittest.IsolatedAsyncioTestCase):
     """Test the authentication methods"""
 
     @SKIP_IF_NO_PACER_LOGIN
-    async def test_logging_into_pacer(self):
+    async def test_logging_into_pacer(self) -> None:
         try:
             self.session = get_pacer_session()
             self.addAsyncCleanup(self.session.aclose)
@@ -27,7 +27,7 @@ class PacerAuthTest(unittest.IsolatedAsyncioTestCase):
         except PacerLoginException:
             self.fail("Could not log into PACER")
 
-    async def test_logging_in_bad_credentials(self):
+    async def test_logging_in_bad_credentials(self) -> None:
         """Make sure if username/password is incorrect an exception is throw"""
         async with PacerSession(
             username="foofoo", password="barbarbar"

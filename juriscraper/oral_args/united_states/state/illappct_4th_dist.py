@@ -12,7 +12,7 @@ from juriscraper.oral_args.united_states.state import illappct_1st_dist
 
 
 class Site(illappct_1st_dist.Site):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.district = "4th"

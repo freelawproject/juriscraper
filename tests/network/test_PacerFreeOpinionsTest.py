@@ -7,6 +7,7 @@ from unittest import mock
 
 import jsondate3 as json
 from httpx import ConnectError
+from typing_extensions import override
 
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.pacer import DownloadConfirmationPage, FreeOpinionReport
@@ -23,7 +24,8 @@ from tests.network import (
 class PacerFreeOpinionsTest(unittest.IsolatedAsyncioTestCase):
     """A variety of tests relating to the Free Written Opinions report"""
 
-    async def asyncSetUp(self):
+    @override
+    async def asyncSetUp(self) -> None:
         pacer_session = (
             get_pacer_session()
             if pacer_credentials_are_defined()
@@ -43,13 +45,13 @@ class PacerFreeOpinionsTest(unittest.IsolatedAsyncioTestCase):
         with open(path) as j:
             self.valid_dates = json.load(j)
 
-        self.reports = {}
+        self.reports: dict[str, FreeOpinionReport] = {}
         for court in self.courts:
             court_id = get_court_id_from_url(court["court_link"])
             self.reports[court_id] = FreeOpinionReport(court_id, pacer_session)
 
     @unittest.skip("disabling during refactor")
-    async def test_extract_written_documents_report(self):
+    async def test_extract_written_documents_report(self) -> None:
         """Do all the written reports work?"""
 
         for court in self.courts:
@@ -117,28 +119,28 @@ class PacerFreeOpinionsTest(unittest.IsolatedAsyncioTestCase):
                 self.assertEqual(r.headers["Content-Type"], "application/pdf")
 
     @SKIP_IF_NO_PACER_LOGIN
-    async def test_download_simple_pdf(self):
+    async def test_download_simple_pdf(self) -> None:
         """Can we download a PDF document returned directly?"""
         report = self.reports["alnb"]
         r, msg = await report.download_pdf("602431", "018129511556")
         self.assertEqual(r.headers["Content-Type"], "application/pdf")
 
     @SKIP_IF_NO_PACER_LOGIN
-    async def test_download_redirected_pdf(self):
+    async def test_download_redirected_pdf(self) -> None:
         """Can we download a PDF document returned after a redirection?"""
         report = self.reports["azd"]
         r, msg = await report.download_pdf("1311031", "025125636132")
         self.assertEqual(r.headers["Content-Type"], "application/pdf")
 
     @SKIP_IF_NO_PACER_LOGIN
-    async def test_download_iframed_pdf(self):
+    async def test_download_iframed_pdf(self) -> None:
         """Can we download a PDF document returned in IFrame?"""
         report = self.reports["vib"]
         r, msg = await report.download_pdf("1507", "1921141093")
         self.assertEqual(r.headers["Content-Type"], "application/pdf")
 
     @SKIP_IF_NO_PACER_LOGIN
-    async def test_download_unavailable_pdf(self):
+    async def test_download_unavailable_pdf(self) -> None:
         """Do we throw an error if the item is unavailable?"""
         # 5:11-cr-40057-JAR, document 3
         report = self.reports["ksd"]
@@ -147,7 +149,7 @@ class PacerFreeOpinionsTest(unittest.IsolatedAsyncioTestCase):
         self.assertIn("Document not available in case", msg)
 
     @SKIP_IF_NO_PACER_LOGIN
-    async def test_query_can_get_multiple_results(self):
+    async def test_query_can_get_multiple_results(self) -> None:
         """
         Can we run a query that gets multiple rows and parse them all?
         """
@@ -158,7 +160,7 @@ class PacerFreeOpinionsTest(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(3, len(report.data), "should get 3 responses for ksb")
 
     @SKIP_IF_NO_PACER_LOGIN
-    async def test_query_using_last_good_row(self):
+    async def test_query_using_last_good_row(self) -> None:
         """
         Can we run a query that triggers no content in first cell?
         """
@@ -169,7 +171,7 @@ class PacerFreeOpinionsTest(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(2, len(report.data), "should get 2 response for ksb")
 
     @SKIP_IF_NO_PACER_LOGIN
-    async def test_ordering_by_date_filed(self):
+    async def test_ordering_by_date_filed(self) -> None:
         """Can we change the ordering?"""
         # First try both orderings in areb (where things have special cases) and
         # ded (Delaware) where things are more normal.
@@ -190,7 +192,7 @@ class PacerFreeOpinionsTest(unittest.IsolatedAsyncioTestCase):
                 f"should get {test['count']} response for {test['court']}",
             )
 
-    async def test_catch_excluded_court_ids(self):
+    async def test_catch_excluded_court_ids(self) -> None:
         """Do we properly catch and prevent a query against disused courts?"""
         mock_session = mock.MagicMock()
 
@@ -210,7 +212,8 @@ class PacerFreeOpinionsTest(unittest.IsolatedAsyncioTestCase):
 class PacerMagicLinkTest(unittest.IsolatedAsyncioTestCase):
     """Test related to PACER magic link free download"""
 
-    async def asyncSetUp(self):
+    @override
+    async def asyncSetUp(self) -> None:
         pacer_session = (
             get_pacer_session()
             if pacer_credentials_are_defined()
@@ -220,7 +223,7 @@ class PacerMagicLinkTest(unittest.IsolatedAsyncioTestCase):
         if pacer_credentials_are_defined():
             await pacer_session.login()
 
-        self.reports = {}
+        self.reports: dict[str, FreeOpinionReport] = {}
         court_id = "nysd"
         court_id_nda = "ca3"
         court_id_acms = "ca9"
@@ -232,7 +235,9 @@ class PacerMagicLinkTest(unittest.IsolatedAsyncioTestCase):
             court_id_acms, pacer_session
         )
 
-    async def test_download_simple_pdf_magic_link_fails(self, mock_logger):
+    async def test_download_simple_pdf_magic_link_fails(
+        self, mock_logger: mock.Mock
+    ) -> None:
         """Can we download a PACER document with an invalid or expired
         magic link? land on a login page and returns an error.
         """
@@ -252,7 +257,9 @@ class PacerMagicLinkTest(unittest.IsolatedAsyncioTestCase):
         # No PDF should be returned
         self.assertEqual(r, None)
 
-    async def test_download_nda_pdf_magic_link(self, mock_logger):
+    async def test_download_nda_pdf_magic_link(
+        self, mock_logger: mock.Mock
+    ) -> None:
         """Can we download a NDA PACER document with an invalid or expired
         magic link? land on a login page and returns an error.
         """
@@ -273,7 +280,9 @@ class PacerMagicLinkTest(unittest.IsolatedAsyncioTestCase):
         # No PDF should be returned
         self.assertEqual(r, None)
 
-    async def test_download_acms_nda_pdf_magic_link(self, mock_logger):
+    async def test_download_acms_nda_pdf_magic_link(
+        self, mock_logger: mock.Mock
+    ) -> None:
         """Can we download an NDA ACMS PACER document with an invalid or expired
         magic link? land on a login page and returns an error.
         """
@@ -295,7 +304,8 @@ class PacerMagicLinkTest(unittest.IsolatedAsyncioTestCase):
 class PacerDownloadConfirmationPageTest(unittest.IsolatedAsyncioTestCase):
     """A variety of tests for the download confirmation page"""
 
-    async def asyncSetUp(self):
+    @override
+    async def asyncSetUp(self) -> None:
         self.session = get_pacer_session()
         self.addAsyncCleanup(self.session.aclose)
         await self.session.login()
@@ -314,7 +324,7 @@ class PacerDownloadConfirmationPageTest(unittest.IsolatedAsyncioTestCase):
         self.pacer_doc_id_nef = "035022812318"
 
     @SKIP_IF_NO_PACER_LOGIN
-    async def test_get_document_number(self):
+    async def test_get_document_number(self) -> None:
         """Can we get the PACER document number from a download confirmation
         page?"""
         await self.report.query(self.pacer_doc_id)
@@ -326,7 +336,7 @@ class PacerDownloadConfirmationPageTest(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(data_report["document_description"], "PDF Document")
 
     @SKIP_IF_NO_PACER_LOGIN
-    async def test_get_document_number_skipping_attachment_page(self):
+    async def test_get_document_number_skipping_attachment_page(self) -> None:
         """Can we get the PACER document number from a download confirmation
         page skipping the attachment page?"""
         await self.report_att.query(self.pacer_doc_id_att)
@@ -338,7 +348,7 @@ class PacerDownloadConfirmationPageTest(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(data_report["document_description"], "PDF Document")
 
     @SKIP_IF_NO_PACER_LOGIN
-    async def test_no_confirmation_page(self):
+    async def test_no_confirmation_page(self) -> None:
         """If the download confirmation page is not available an empty
         dictionary is returned"""
         await self.report.query(self.no_confirmation_page_pacer_doc_id)
@@ -346,7 +356,7 @@ class PacerDownloadConfirmationPageTest(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(data_report, {})
 
     @SKIP_IF_NO_PACER_LOGIN
-    async def test_no_confirmation_page_pdf_returned(self):
+    async def test_no_confirmation_page_pdf_returned(self) -> None:
         """If the download confirmation page is not available when the PDF is
         returned directly, no valid page to parse."""
         await self.report_pdf.query(self.pacer_doc_id_pdf)
@@ -354,7 +364,7 @@ class PacerDownloadConfirmationPageTest(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(data_report, {})
 
     @SKIP_IF_NO_PACER_LOGIN
-    async def test_confirmation_page_pdf_district(self):
+    async def test_confirmation_page_pdf_district(self) -> None:
         """Can we get the PACER document number from a district download
         confirmation page?"""
         await self.report_nef.query(self.pacer_doc_id_nef)
@@ -366,7 +376,7 @@ class PacerDownloadConfirmationPageTest(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(data_report["document_description"], "Image670-0")
 
     @SKIP_IF_NO_PACER_LOGIN
-    async def test_no_confirmation_page_pdf_returned_district(self):
+    async def test_no_confirmation_page_pdf_returned_district(self) -> None:
         """If the district download confirmation page is not available an empty
         dictionary is returned"""
         await self.report_nef_no_confirmation.query(

@@ -11,6 +11,8 @@ import re
 from datetime import datetime
 from urllib.parse import urlencode
 
+from typing_extensions import override
+
 from juriscraper.opinions.united_states.state import pa
 
 
@@ -20,7 +22,7 @@ class Site(pa.Site):
     judge_key = "AuthorName"
     post_type_key = "PostingTypeCode"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         """
         About the postTypes filter:
         1 = opinion
@@ -52,6 +54,7 @@ class Site(pa.Site):
         )
         self.url = f"{self.base_url}{urlencode(self.params)}"
 
+    @override
     def get_status(self, op: dict) -> str:
         """Get status from opinion object
 
@@ -65,6 +68,7 @@ class Site(pa.Site):
             return "Published"
         return "Unknown"
 
+    @override
     def clean_judge(self, author_str: str) -> str:
         """
         Examples:
@@ -85,6 +89,7 @@ class Site(pa.Site):
             )
         return author_str
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Get neutral citation from the first lines in the first page
 

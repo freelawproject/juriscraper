@@ -17,7 +17,7 @@ from typing import Any
 from urllib.parse import urljoin
 
 import nh3
-from lxml.html import fromstring, tostring
+from lxml.html import HtmlElement, fromstring, tostring
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
@@ -43,7 +43,7 @@ class Site(OpinionSiteLinear):
     court = "Court of Appeals"
     empty_result_messages = {"No results found."}
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = self.base_url
@@ -92,6 +92,7 @@ class Site(OpinionSiteLinear):
             "btnSubmit": "",
         }
 
+    @override
     async def _download(self, request_dict=None):
         """Override to handle Wicket's session-based form submission.
 
@@ -106,7 +107,7 @@ class Site(OpinionSiteLinear):
         html = await super()._download(request_dict)
 
         # Step 2: Extract the form action URL
-        form_action = html.xpath("//form/@action")
+        form_action: list[str] = html.xpath("//form/@action")
         if not form_action:
             logger.warning("Could not find form action URL")
             return html
@@ -120,12 +121,14 @@ class Site(OpinionSiteLinear):
 
     @override
     def _process_html(self) -> None:
-        table = self.html.xpath('.//table[contains(@class, "table")]')
+        table: list[HtmlElement] = self.html.xpath(
+            './/table[contains(@class, "table")]'
+        )
         if not table:
             logger.warning("No results table found.")
             return
 
-        rows = table[0].xpath(".//tbody/tr")
+        rows: list[HtmlElement] = table[0].xpath(".//tbody/tr")
         # Empty-result responses render a single placeholder row whose only
         # cell contains one of the strings below. Treat as normal empty
         # result rather than logging an error per row. Wording is shared
@@ -147,7 +150,7 @@ class Site(OpinionSiteLinear):
                 )
                 continue
 
-            url = cells[6].xpath(".//a/@href")
+            url: list[str] = cells[6].xpath(".//a/@href")
             if not url:
                 logger.error("%s: no url found for row", self.court_id)
                 continue
@@ -183,6 +186,7 @@ class Site(OpinionSiteLinear):
                 case["author"] = cleaned_author
             self.cases.append(case)
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Can we extract the docket number from the text?
 
@@ -198,6 +202,7 @@ class Site(OpinionSiteLinear):
             return {"Docket": dockets.groupdict()}
         return {}
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
 
@@ -209,6 +214,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
+    @override
     @staticmethod
     def cleanup_content(content: bytes) -> bytes:
         """Keep only the opinion content, without hash altering elements
@@ -268,7 +274,7 @@ class Site(OpinionSiteLinear):
         ).encode()
 
     @staticmethod
-    def clean_docket_match(match: re.Match) -> str:
+    def clean_docket_match(match: re.Match[str]) -> str:
         """Clean a docket number extracted from text
 
         :param match: a Match object with a named group
