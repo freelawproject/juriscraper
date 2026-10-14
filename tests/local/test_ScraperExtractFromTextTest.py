@@ -166,7 +166,8 @@ class ScraperExtractFromText(unittest.TestCase):
                 """CNMI SUPREME COURT\nFiling ID: 74026455\nCase No.: ADM-2024\nJudy Aldan\n\n                       Defendant-Appellant.\n\n              Supreme Court No. 2021-SCC-0007-CIV\n""",
                 {
                     "Docket": {
-                        "docket_number": "Supreme Court No. 2021-SCC-0007-CIV"
+                        "docket_number": "2021-SCC-0007-CIV",
+                        "docket_number_raw": "Supreme Court No. 2021-SCC-0007-CIV",
                     }
                 },
             ),
@@ -175,7 +176,8 @@ class ScraperExtractFromText(unittest.TestCase):
                 """                Defendants-Appellees.\n\n  Supreme Court Nos. 2013-SCC-0006-CIV & 2013-SCC-0025-CIV\n                         (Consolidated)\n""",
                 {
                     "Docket": {
-                        "docket_number": "Supreme Court Nos. 2013-SCC-0006-CIV & 2013-SCC-0025-CIV"
+                        "docket_number": "2013-SCC-0006-CIV & 2013-SCC-0025-CIV",
+                        "docket_number_raw": "Supreme Court Nos. 2013-SCC-0006-CIV & 2013-SCC-0025-CIV",
                     }
                 },
             ),
@@ -184,7 +186,8 @@ class ScraperExtractFromText(unittest.TestCase):
                 """                         Supreme Court Appeal Nos. 04-012-GA & 04-013-GA\n                                     Civil Action No. 97-0486\n""",
                 {
                     "Docket": {
-                        "docket_number": "Supreme Court Appeal Nos. 04-012-GA & 04-013-GA"
+                        "docket_number": "04-012-GA & 04-013-GA",
+                        "docket_number_raw": "Supreme Court Appeal Nos. 04-012-GA & 04-013-GA",
                     }
                 },
             ),
@@ -193,26 +196,38 @@ class ScraperExtractFromText(unittest.TestCase):
                 """     Supreme Court Consolidated Appeal Nos. 04-0024-GA and 05-0006-GA\n                            Superior Court Civil Case No. 02-0037\n""",
                 {
                     "Docket": {
-                        "docket_number": "Supreme Court Consolidated Appeal Nos. 04-0024-GA and 05-0006-GA"
+                        "docket_number": "04-0024-GA and 05-0006-GA",
+                        "docket_number_raw": "Supreme Court Consolidated Appeal Nos. 04-0024-GA and 05-0006-GA",
                     }
                 },
             ),
             (
                 # 1996 MP 20: older label in a pleading paper ")" column
                 """COMMONWEALTH OF THE NORTHERN             )                       APPEAL NO. 95-006\nMARIANA ISLANDS,                         )                       CRIMINAL CASE NO. 94-136\n""",
-                {"Docket": {"docket_number": "Appeal No. 95-006"}},
+                {
+                    "Docket": {
+                        "docket_number": "95-006",
+                        "docket_number_raw": "Appeal No. 95-006",
+                    }
+                },
             ),
             (
                 # 1996 MP 12
                 """                                         Original Action No. 96-001\n""",
-                {"Docket": {"docket_number": "Original Action No. 96-001"}},
+                {
+                    "Docket": {
+                        "docket_number": "96-001",
+                        "docket_number_raw": "Original Action No. 96-001",
+                    }
+                },
             ),
             (
                 # 2003 MP 8
                 """                          CERTIFIED QUESTION NO. 02-001-OA\n""",
                 {
                     "Docket": {
-                        "docket_number": "Certified Question No. 02-001-OA"
+                        "docket_number": "02-001-OA",
+                        "docket_number_raw": "Certified Question No. 02-001-OA",
                     }
                 },
             ),
@@ -228,7 +243,8 @@ class ScraperExtractFromText(unittest.TestCase):
                 """                     SUPREME COURT NO. 2009-SCC-0031-GA\n                         SUPERIOR COURT NO. 09-0066E\n""",
                 {
                     "Docket": {
-                        "docket_number": "Supreme Court No. 2009-SCC-0031-GA"
+                        "docket_number": "2009-SCC-0031-GA",
+                        "docket_number_raw": "Supreme Court No. 2009-SCC-0031-GA",
                     }
                 },
             ),
@@ -237,7 +253,8 @@ class ScraperExtractFromText(unittest.TestCase):
                 """Case No.: 2024-SCC-0024-CQU\n            Supreme Court No. 2024-SCC-0024-CQU\n                         SLIP OPINION\nPER CURIAM:\n¶1      Defendant-Appellant""",
                 {
                     "Docket": {
-                        "docket_number": "Supreme Court No. 2024-SCC-0024-CQU"
+                        "docket_number": "2024-SCC-0024-CQU",
+                        "docket_number_raw": "Supreme Court No. 2024-SCC-0024-CQU",
                     },
                     "Opinion": {"author_str": "", "per_curiam": True},
                 },

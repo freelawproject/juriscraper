@@ -145,8 +145,8 @@ class Site(OpinionSiteLinear):
             curiam opinion also clears the author from the listing table
         """
         metadata: dict[str, dict[str, Any]] = {}
-        if docket_number := self._extract_docket_number(scraped_text):
-            metadata["Docket"] = {"docket_number": docket_number}
+        if docket := self._extract_docket(scraped_text):
+            metadata["Docket"] = docket
         if self._is_per_curiam(scraped_text):
             # The text is more reliable than the listing table, which leaves
             # many authors unmarked and sometimes stars a per curiam opinion.
@@ -154,20 +154,28 @@ class Site(OpinionSiteLinear):
             metadata["Opinion"] = {"author_str": "", "per_curiam": True}
         return metadata
 
-    def _extract_docket_number(self, scraped_text: str) -> str:
+    def _extract_docket(self, scraped_text: str) -> dict[str, str]:
         """Extract the docket number from the opinion's header
 
         :param scraped_text: Text of the opinion
-        :return: The docket number with its label, such as "Supreme Court
-            No. 2021-SCC-0007-CIV", or an empty string if none was found
+        :return: The docket number, such as "2021-SCC-0007-CIV", and the raw
+            docket number with its label, such as "Supreme Court No.
+            2021-SCC-0007-CIV", or an empty dict if none was found
         """
         text = scraped_text[: self.docket_text_limit]
         for regex in self.docket_regexes:
             if match := regex.search(text):
                 label = titlecase(match.group("label").lower())
-                docket = normalize_dashes(f"{label} {match.group('number')}")
-                return " ".join(docket.split())
-        return ""
+                number = " ".join(
+                    normalize_dashes(match.group("number")).split()
+                )
+                if not number:
+                    continue
+                return {
+                    "docket_number": number,
+                    "docket_number_raw": " ".join(f"{label} {number}".split()),
+                }
+        return {}
 
     def _is_per_curiam(self, scraped_text: str) -> bool:
         """Check if the opinion has a "PER CURIAM" heading
