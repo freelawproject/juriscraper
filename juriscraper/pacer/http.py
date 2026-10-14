@@ -379,12 +379,18 @@ class PacerSession(httpx.AsyncClient):
         """
         Transforms a data dictionary into the multi-part form data that PACER
         expects as the POST body
+
+        HTTPX only accepts str or bytes for multipart field values, so other
+        values (e.g. ints) are coerced to str, as requests used to do.
+
         :param data: dict of data to transform
         :return: dict with values wrapped into tuples like:(None, <value>)
         """
         output = {}
-        for key in data:
-            output[key] = (None, data[key])
+        for key, value in data.items():
+            if not isinstance(value, (str, bytes)):
+                value = str(value)
+            output[key] = (None, value)
         return output
 
     @staticmethod
