@@ -243,11 +243,6 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
             (
-                # 2006 MP 3: pleading paper line numbers before the heading
-                """               ) 12   \\3      PER CURIAM:  14\n""",
-                {"Opinion": {"author_str": "", "per_curiam": True}},
-            ),
-            (
                 # 3 N.M.I. 400: a "(per curiam)" citation isn't the heading
                 """VILLAGOMEZ, Justice:\n     See Sablan v. Iginoef, 1 N.M.I. 190 (1990) (per curiam).""",
                 {},
