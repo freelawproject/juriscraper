@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- `ca9_p` and `ca9_u`: read the court's `opinions` and `memoranda` tables instead of the 25 item RSS feeds, and order them by the court's upload timestamp instead of the filing date. Adds backscraping. #2120
 
 ## 4.0.0 - 2026-10-12
 
