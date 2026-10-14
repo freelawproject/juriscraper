@@ -43,8 +43,30 @@ class Site(OpinionSiteLinear):
     per_curiam_regex = re.compile(r"^[ \t\d\\)|]*PER\s+CURIAM\b", re.MULTILINE)
     # The docket label always ends before char 2,400 (2006 MP 25)
     docket_text_limit = 2500
-    docket_regex = re.compile(
-        r"Supreme\s+Court\s+(?:Appeal\s+)?Nos?\.(.*)", re.I
+    # Docket regexes, to be tried in order.
+    docket_number_regex = r"[A-Z]{0,2}[ -]?\d{2,4}-\d{2,4}(?:-?[A-Z]{2,3})?"
+    docket_regexes = (
+        # Docket labels used from 2004 and forward
+        re.compile(
+            r"""
+            (?P<label>Supreme\s+Court\s+(?:Consolidated\s+)?
+                (?:Appeal\s+|Original\s+Action\s+)?Nos?\.)
+            (?P<number>.*)
+            """,
+            re.I | re.VERBOSE,
+        ),
+        # Older docket labels
+        re.compile(
+            rf"""
+            (?P<label>\b(?:Appeals?|Original\s+Action|Certified\s+Question)
+                \s+Nos?\.)
+            \s*(?P<number>
+                {docket_number_regex}
+                (?:\s*(?:&|and|,|/)\s*{docket_number_regex})*
+            )
+            """,
+            re.I | re.VERBOSE,
+        ),
     )
 
     def __init__(self, *args, **kwargs):
@@ -136,12 +158,16 @@ class Site(OpinionSiteLinear):
         """Extract the docket number from the opinion's header
 
         :param scraped_text: Text of the opinion
-        :return: The docket number, or an empty string if none was found
+        :return: The docket number with its label, such as "Supreme Court
+            No. 2021-SCC-0007-CIV", or an empty string if none was found
         """
         text = scraped_text[: self.docket_text_limit]
-        if not (match := self.docket_regex.search(text)):
-            return ""
-        return normalize_dashes(match.group(1)).strip()
+        for regex in self.docket_regexes:
+            if match := regex.search(text):
+                label = titlecase(match.group("label").lower())
+                docket = normalize_dashes(f"{label} {match.group('number')}")
+                return " ".join(docket.split())
+        return ""
 
     def _is_per_curiam(self, scraped_text: str) -> bool:
         """Check if the opinion has a "PER CURIAM" heading
