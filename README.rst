@@ -46,7 +46,7 @@ Some of the design goals for this project are:
 Installation & Dependencies
 ===========================
 
-First step: Install Python 3.10+, then:
+First step: Install Python 3.11+, then:
 
 Install the dependencies
 ------------------------
