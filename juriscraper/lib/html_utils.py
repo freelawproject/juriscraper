@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+from __future__ import annotations
+
 import re
 from copy import deepcopy
 from typing import cast
@@ -41,15 +43,17 @@ ALLOWED_TAGS.add("input")
 ALLOWED_TAGS.add("script")
 
 
-def get_xml_parsed_text(text):
+def get_xml_parsed_text(text: str | bytes) -> etree._Element:
     return etree.fromstring(text)
 
 
-def get_html_parsed_text(text):
+def get_html_parsed_text(text: str | bytes) -> HtmlElement:
     return html.fromstring(text)
 
 
-def get_html_from_element(element):
+def get_html_from_element(
+    element: HtmlElement | etree._ElementTree[HtmlElement],
+) -> bytes:
     return tostring(element)
 
 
@@ -330,7 +334,7 @@ def parse_table(table: HtmlElement) -> dict[str, list[HtmlElement]]:
         rows = table.findall("./tr")
     else:
         rows = table.findall("./tbody/tr")
-    columns = {header: [] for header in headers}
+    columns: dict[str, list[HtmlElement]] = {header: [] for header in headers}
 
     for row in rows:
         cells = cast(list[HtmlElement], row.xpath("./td"))

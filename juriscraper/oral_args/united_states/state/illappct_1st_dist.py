@@ -18,7 +18,7 @@ from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
 class Site(OralArgumentSiteLinear):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.illinoiscourts.gov/courts/appellate-court/oral-argument-audio/"
@@ -28,7 +28,7 @@ class Site(OralArgumentSiteLinear):
         self.district = "1st"
         self._set_parameters()
 
-    def _set_parameters(self):
+    def _set_parameters(self) -> None:
         self.parameters = {
             "__EVENTTARGET": "ctl00$ctl04$ddlFilterDistrict",
             "__EVENTARGUMENT": "",

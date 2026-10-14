@@ -12,6 +12,8 @@ History:
 import re
 from datetime import datetime
 
+from typing_extensions import override
+
 from juriscraper.opinions.united_states.state import ill
 
 
@@ -20,7 +22,7 @@ class Site(ill.Site):
     first_opinion_date = datetime(1996, 9, 3)
     court_filter = "All Appellate Court"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = (
@@ -28,6 +30,7 @@ class Site(ill.Site):
         )
         self.docket_re = r"(?P<citation>\d{4}\s+ILL?\s+App\s+(\((?P<district>\d+)\w{1,2}\)\s+)?(?P<docket>\d+\w{1,2})-?U?[BCD]?)"
 
+    @override
     def _get_citation(self, citation: str) -> str:
         """Normalize citation; replace 'ILL App' with 'IL App'.
 
@@ -36,7 +39,8 @@ class Site(ill.Site):
         """
         return re.sub(r"ILL App", "IL App", citation)
 
-    def _get_docket(self, match: re.Match) -> str:
+    @override
+    def _get_docket(self, match: re.Match[str]) -> str:
         """Builds docket_number from a regex match
 
         :param match: a regex match object

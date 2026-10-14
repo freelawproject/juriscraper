@@ -11,17 +11,19 @@ import time
 from datetime import date
 
 from lxml import html
+from typing_extensions import override
 
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://ecf.dcd.uscourts.gov/cgi-bin/Opinions.pl?2013"
 
+    @override
     def _get_download_urls(self):
         # There are often multiple documents and hence urls for each case.
         # This requires us to pad every other metadata field to match the
@@ -29,6 +31,7 @@ class Site(OpinionSite):
         path = "//table[2]//tr[position()>0]/td[3]/a/@href"
         return list(self.html.xpath(path))
 
+    @override
     def _get_case_names(self):
         casenames = []
         rowpath = "//table[2]//tr[position()>0]"
@@ -44,6 +47,7 @@ class Site(OpinionSite):
                 casenames.extend([case_name] * count)
         return casenames
 
+    @override
     def _get_case_dates(self):
         dates = []
         rowpath = "//table[2]//tr[position()>0]"
@@ -61,9 +65,11 @@ class Site(OpinionSite):
                 dates.extend([date_object] * count)
         return dates
 
+    @override
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
 
+    @override
     def _get_docket_numbers(self):
         docket_numbers = []
         rowpath = "//table[2]//tr[position()>0]"
@@ -77,6 +83,7 @@ class Site(OpinionSite):
             docket_numbers.extend(docket_number * count)
         return docket_numbers
 
+    @override
     def _get_docket_document_numbers(self):
         document_numbers = []
         regex = re.compile(r"(\?)(\d+)([a-z]+)(\d+)(-)(.*)")
@@ -93,6 +100,7 @@ class Site(OpinionSite):
                 document_numbers.append(url)
         return document_numbers
 
+    @override
     def _get_judges(self):
         judges = []
         rowpath = "//table[2]//tr[position()>0]"
@@ -112,6 +120,7 @@ class Site(OpinionSite):
                 judges.extend([judge] * count)
         return judges
 
+    @override
     def _get_nature_of_suit(self):
         nos = []
         for url in self.html.xpath(

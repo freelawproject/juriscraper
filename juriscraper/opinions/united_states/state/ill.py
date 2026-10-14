@@ -14,6 +14,7 @@ History:
 import re
 from datetime import date, datetime
 
+from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
@@ -29,7 +30,7 @@ class Site(OpinionSiteLinear):
     first_opinion_date = datetime(1996, 5, 22)
     court_filter = "Supreme Court"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.docket_re = r"\d{4} IL (?P<docket>\d+)"
@@ -79,7 +80,9 @@ class Site(OpinionSiteLinear):
 
         Return: None
         """
-        rows = self.html.xpath("//table[@id='ctl04_gvDecisions']/tr")[1:]
+        rows: list[HtmlElement] = self.html.xpath(
+            "//table[@id='ctl04_gvDecisions']/tr"
+        )[1:]
         for row in rows:
             # Don't parse rows for pagination, headers, footers or announcements
             if len(row.xpath(".//td")) != 7 or row.xpath(".//table"):
@@ -124,6 +127,7 @@ class Site(OpinionSiteLinear):
                 "This source paginates at 150 results. There are 150 results for this page. Some opinions may be lost"
             )
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range POST request
 
@@ -164,6 +168,6 @@ class Site(OpinionSiteLinear):
         # Due to the `site_yielder` used when backscraping, each backscrape
         # iterable seed uses a new scraper object, so we can't reuse viewstates
         for _ in range(2):
-            vs = self.html.xpath("//input[@name='__VIEWSTATE']/@value")[0]
+            vs: str = self.html.xpath("//input[@name='__VIEWSTATE']/@value")[0]
             self.parameters["__VIEWSTATE"] = vs
             self.html = await self._download()

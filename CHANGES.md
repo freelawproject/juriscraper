@@ -18,7 +18,8 @@ Features:
 - Drop Python 3.10 and add Python 3.15 support
 
 Changes:
--
+- Add type annotations across the library, tests, and sample caller without
+  changing runtime behavior. #2306
 
 Fixes:
 -

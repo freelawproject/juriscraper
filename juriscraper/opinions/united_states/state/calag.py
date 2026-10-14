@@ -12,7 +12,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         cipher = "ECDHE-RSA-AES128-GCM-SHA256"
         kwargs.setdefault("verify", self.set_custom_adapter(cipher))
         super().__init__(*args, **kwargs)
@@ -39,9 +39,9 @@ class Site(OpinionSiteLinear):
         :return: none
         """
         for row in self.html.xpath("//table/tbody/tr[.//a]"):
-            docket = row.xpath(".//a//strong/text()")[0].strip()
+            docket: str = row.xpath(".//a//strong/text()")[0].strip()
             # Citation may not exist (yet?)
-            citation = row.xpath(".//strong/em/text()")
+            citation: list[str] = row.xpath(".//strong/em/text()")
             self.cases.append(
                 {
                     "url": row.xpath(".//a/@href")[0],
@@ -53,7 +53,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    async def _download_backwards(self, year: str) -> None:
+    @override
+    async def _download_backwards(self, year: int | str) -> None:
         """Download backwards
 
         :param year: The year to scrape

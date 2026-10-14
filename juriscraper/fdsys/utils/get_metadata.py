@@ -3,6 +3,7 @@ import argparse
 import glob
 import json
 import pprint
+from collections.abc import Sequence
 
 from lxml import etree
 
@@ -19,7 +20,7 @@ def xpath(tree, query):
     )
 
 
-def get_court_id(fdsys_court):
+def get_court_id(fdsys_court: list[str]) -> list[str]:
     """Map the fdsys_court string to a CourtListener string"""
     return fdsys_court
 
@@ -36,7 +37,9 @@ def clean_up_rough_data(data):
     return data
 
 
-def get_unique_nodes(node_list):
+def get_unique_nodes(
+    node_list: Sequence[etree._Element],
+) -> list[etree._Element]:
     """Lots of duplication in the XML. Nuke duplicates."""
     good_nodes = []
     nodes_as_txt = []
@@ -51,12 +54,12 @@ def get_unique_nodes(node_list):
     return good_nodes
 
 
-def get_parties(tree):
+def get_parties(tree) -> list[dict[str, list[str]]]:
     """Extract the parties from the XML into a nice object."""
     party_nodes = xpath(tree, "//m:party")
     party_nodes = get_unique_nodes(party_nodes)
 
-    parties = []
+    parties: list[dict[str, list[str]]] = []
     for party_node in party_nodes:
         parties.append(
             {
@@ -86,7 +89,7 @@ def get_documents(tree):
         )
 
 
-def print_xpath_results():
+def print_xpath_results() -> None:
     for f in glob.glob("../examples/*.xml"):
         tree = etree.parse(f)
         rough_data = {
@@ -105,7 +108,7 @@ def print_xpath_results():
         pprint.pprint(data)
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(
         description="Get all the metadata from a mods file."
     )
@@ -114,7 +117,7 @@ def main():
     print_xpath_results()
 
 
-def get_fdsys_court_names():
+def get_fdsys_court_names() -> None:
     response = glob.glob("../examples/2015_USCOURTS_sitemap.xml")
     tree = etree.parse(response[0])
     # print(etree.tostring(tree, pretty_print=True))

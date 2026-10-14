@@ -2,21 +2,24 @@ import time
 from datetime import date
 
 from lxml import html
+from typing_extensions import override
 
 from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.url = (
             "http://www.armfor.uscourts.gov/newcaaf/opinions/2005Term.htm"
         )
         self.court_id = self.__module__
 
+    @override
     def _get_case_names(self):
         return list(self.html.xpath("//table//tr/td[1]/font/text()"))
 
+    @override
     def _get_download_urls(self):
         return list(
             self.html.xpath(
@@ -24,6 +27,7 @@ class Site(OpinionSite):
             )
         )
 
+    @override
     def _get_case_dates(self):
         dates = []
         for e in self.html.xpath(
@@ -35,6 +39,7 @@ class Site(OpinionSite):
             )
         return dates
 
+    @override
     def _get_docket_numbers(self):
         docket_numbers = []
         for e in self.html.xpath("//table//table//tr[position() > 1]/td[2]"):
@@ -42,9 +47,11 @@ class Site(OpinionSite):
             docket_numbers.append(s.strip()[:-5])
         return docket_numbers
 
+    @override
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
 
+    @override
     def _get_citations(self):
         neutral_citations = []
         for e in self.html.xpath(

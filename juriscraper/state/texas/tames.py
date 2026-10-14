@@ -172,7 +172,7 @@ class TAMESScraper(BaseStateScraper):
         self._form_bar_number: str = ""
         self._result_bar_number: str = ""
 
-    def scrape(self):
+    def scrape(self) -> None:
         pass
 
     @override
@@ -215,7 +215,7 @@ class TAMESScraper(BaseStateScraper):
         while start_date < current_end or overlap_start:
             overlap_start = False
             last_seen_case_urls = current_seen_case_urls
-            current_seen_case_urls = set()
+            current_seen_case_urls: set[str] = set()
             search_end = current_end
             redundant_cases = 0
 
@@ -547,7 +547,7 @@ class TAMESScraper(BaseStateScraper):
 
     async def _fetch_next_page(
         self, tree: HtmlElement, form_data: dict[str, str]
-    ):
+    ) -> HtmlElement:
         """Fetch the next page of results."""
 
         next_button = cast(

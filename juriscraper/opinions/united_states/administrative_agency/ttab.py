@@ -22,7 +22,7 @@ class Site(OpinionSiteLinear):
     TTAB_RR_API = urljoin(TTAB_RR_BASE, "ttab-efoia-api/decision/search")
     TTAB_RR_PDF_BASE = urljoin(TTAB_RR_BASE, "/cms/rest/")
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = self.TTAB_RR_API
@@ -69,6 +69,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         logger.info("Backscraping for range %s %s", *dates)
         self._search_payload["dateRangeData"] = {

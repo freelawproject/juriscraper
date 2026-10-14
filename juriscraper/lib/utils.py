@@ -1,11 +1,11 @@
 import re
 import traceback
-from collections.abc import Callable, Hashable, Iterable
+from collections.abc import Callable, Hashable, Iterable, Mapping, Sequence
 from datetime import date, datetime, timedelta
 from itertools import chain, islice, tee
 from typing import Any, Protocol, TypeVar, cast
 
-from httpx import HTTPError
+from httpx import HTTPError, Response
 
 from juriscraper.lib.exceptions import (
     EmptyFileError,
@@ -28,7 +28,7 @@ logger = make_default_logger()
 
 
 def sanity_check_dates(
-    dates_and_names: list[tuple[object, object, object]], court_id: str
+    dates_and_names: Iterable[tuple[object, object, object]], court_id: str
 ) -> None:
     """Checks that dates are datetime.date objects and that they are not in the future
 
@@ -61,7 +61,7 @@ def sanity_check_dates(
                 )
 
 
-def sanity_check_case_names(case_names: list[str]) -> None:
+def sanity_check_case_names(case_names: Iterable[str]) -> None:
     """Check that no name is an empty string
 
     :param case_names: ordered list of case names
@@ -77,7 +77,7 @@ def sanity_check_case_names(case_names: list[str]) -> None:
 
 
 def sanity_check_opinion_types(
-    sub_opinions: list[dict[Hashable, object]],
+    sub_opinions: Sequence[Mapping[str, object]],
 ) -> None:
     """Check opinion type assignment rules within a cluster
 
@@ -348,7 +348,7 @@ def check_expected_content_types(
     if hasattr(response, "getheader"):
         raw_ct = response.getheader("Content-Type", "")
     else:
-        raw_ct = response.headers.get("Content-Type", "")
+        raw_ct: str = response.headers.get("Content-Type", "")
 
     # Clean up content types like "application/pdf;charset=utf-8"
     # and 'application/octet-stream; charset=UTF-8'
@@ -371,7 +371,7 @@ def check_download_url(download_url: str) -> None:
 
 
 def check_empty_downloaded_file(
-    response: bytes | Any, download_url: str
+    response: bytes | Response, download_url: str
 ) -> None:
     """Raise EmptyFileError if the downloaded content is empty.
 

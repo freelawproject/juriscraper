@@ -5,7 +5,7 @@ from juriscraper.opinions.united_states_backscrapers.state import ill
 
 
 class Site(ill.Site):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
         self.court_id = self.__module__
         self.url_base = "http://www.illinoiscourts.gov/Opinions/AppellateCourt/{year}/1stDistrict/default.asp"

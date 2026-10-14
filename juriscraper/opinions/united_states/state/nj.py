@@ -42,15 +42,15 @@ class Site(OpinionSiteLinear):
                 )
                 continue
 
-            url = container[0].xpath("@href")[0]
+            url: str = container[0].xpath("@href")[0]
             # name is sometimes inside a span, not inside the a tag
             name_content = container[0].xpath("string(.)")
             name_str, _, _ = name_content.partition("(")
 
-            docket = row.xpath('.//*[contains(@class, "mt-1")]/text()')[
+            docket: str = row.xpath('.//*[contains(@class, "mt-1")]/text()')[
                 0
             ].strip()
-            date = row.xpath(
+            date: str = row.xpath(
                 ".//div[@class='col-lg-12 small text-muted mt-2']/text()"
             )[0]
 
@@ -62,11 +62,14 @@ class Site(OpinionSiteLinear):
             }
 
             if self.status == "Published":
-                summary = row.xpath(".//div[@class='modal-body']/p/text()")
+                summary: list[str] = row.xpath(
+                    ".//div[@class='modal-body']/p/text()"
+                )
                 case["summary"] = "\n".join(summary)
 
             self.cases.append(case)
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court from the scraped text.
 
@@ -103,6 +106,7 @@ class Site(OpinionSiteLinear):
 
         return {}
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
 

@@ -16,7 +16,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.oscn.net/decisions/ok/30"
@@ -28,11 +28,17 @@ class Site(OpinionSiteLinear):
     def _process_html(self) -> None:
         for row in self.html.xpath(".//li[@class='decision']"):
             name, citation = row.xpath(".//a/text()")
-            url = row.xpath(".//a/@href")[0]
-            date_filed_raw = row.xpath(".//span[@class='decidedDate']/text()")
-            summary = row.xpath(".//p[@class='summaryParagraph']/text()")[0]
+            url: str = row.xpath(".//a/@href")[0]
+            date_filed_raw: list[str] = row.xpath(
+                ".//span[@class='decidedDate']/text()"
+            )
+            summary: str = row.xpath(".//p[@class='summaryParagraph']/text()")[
+                0
+            ]
 
-            docket = row.xpath(".//span[@class='caseNumber']/text()")
+            docket: list[str] = row.xpath(
+                ".//span[@class='caseNumber']/text()"
+            )
             if not docket:
                 logger.debug("Skipping row without docket number")
                 continue
@@ -49,6 +55,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     @staticmethod
     def cleanup_content(content):
         """Remove non-opinion HTML

@@ -9,6 +9,10 @@ In the cases, we look up search results by name, date, etc.
 
 import pprint
 import sys
+from datetime import date
+
+from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import (
@@ -33,7 +37,7 @@ class BaseCaseQueryAdvanced(BaseDocketReport, BaseReport):
 
     CACHE_ATTRS = ["metadata"]
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None) -> None:
         BaseDocketReport.__init__(self, court_id)
         BaseReport.__init__(self, court_id, pacer_session)
 
@@ -41,11 +45,13 @@ class BaseCaseQueryAdvanced(BaseDocketReport, BaseReport):
         self._clear_caches()
         self._metadata = None
 
-    def parse(self):
+    @override
+    def parse(self) -> None:
         self._clear_caches()
         super().parse()
 
     @property
+    @override
     def data(self):
         """Get all the data back from this endpoint.
 
@@ -58,11 +64,11 @@ class BaseCaseQueryAdvanced(BaseDocketReport, BaseReport):
         return self.metadata
 
     @staticmethod
-    def get_text_for_cell(cell):
+    def get_text_for_cell(cell: HtmlElement) -> str:
         """Return the text within a <td>"""
         return force_unicode(cell.text_content().strip())
 
-    def get_date_for_cell(self, cell):
+    def get_date_for_cell(self, cell: HtmlElement) -> date | None:
         """Return a parsed date within a <td>"""
         s = self.get_text_for_cell(cell)
         try:
@@ -259,11 +265,11 @@ class CaseQueryAdvancedDistrict(BaseCaseQueryAdvanced):
     def __init__(self):
         raise NotImplementedError("This object is a stub.")
 
-    async def query(self, *args, **kwargs):
+    async def query(self, *args: object, **kwargs: object) -> None:
         raise NotImplementedError("This object is a stub")
 
 
-def _main():
+def _main() -> None:
     if len(sys.argv) != 2:
         print(
             "Usage: python -m juriscraper.pacer.case_query_advanced filepath"

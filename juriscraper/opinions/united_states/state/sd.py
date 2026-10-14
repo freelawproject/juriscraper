@@ -50,7 +50,7 @@ class Site(OpinionSiteLinear):
         "aff in pt & vacate": "Affirmed and vacated",  # https://www.courtlistener.com/opinion/9502826/state-v-scott/pdf/
     }
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://ujs.sd.gov/Supreme_Court/opinions.aspx"
@@ -73,7 +73,7 @@ class Site(OpinionSiteLinear):
                 status = "Unpublished"
                 cite = [""]
 
-            url = row.xpath(".//a/@href")[0]
+            url: str = row.xpath(".//a/@href")[0]
             docket = url.split("/")[-1][:5]
             name = titlecase(title.rsplit(",", 1)[0] if cite else title)
             self.cases.append(
@@ -88,7 +88,7 @@ class Site(OpinionSiteLinear):
             )
 
         if self.is_backscrape:
-            page_count = self.html.xpath(
+            page_count: str = self.html.xpath(
                 "//span[@id='ContentPlaceHolder1_ChildContent1_Label_Page']"
             )[0].text_content()
             page_of = re.findall(r"Page (\d+) of (\d+)", page_count)
@@ -104,8 +104,10 @@ class Site(OpinionSiteLinear):
 
     async def get_next_page(self) -> None:
         """Gets next page"""
-        view_state = self.html.xpath("//input[@id='__VIEWSTATE']/@value")[0]
-        event_validation = self.html.xpath(
+        view_state: str = self.html.xpath("//input[@id='__VIEWSTATE']/@value")[
+            0
+        ]
+        event_validation: str = self.html.xpath(
             "//input[@id='__EVENTVALIDATION']/@value"
         )[0]
         data = {
@@ -117,6 +119,7 @@ class Site(OpinionSiteLinear):
         self.parameters = data
         self.html = await super()._download()
 
+    @override
     async def _download_backwards(self, year: int) -> None:
         """Get input year's page
 
@@ -131,11 +134,13 @@ class Site(OpinionSiteLinear):
 
         self.method = "GET"
         self.html = await super()._download()
-        view_state = self.html.xpath("//input[@id='__VIEWSTATE']/@value")[0]
-        event_validation = self.html.xpath(
+        view_state: str = self.html.xpath("//input[@id='__VIEWSTATE']/@value")[
+            0
+        ]
+        event_validation: str = self.html.xpath(
             "//input[@id='__EVENTVALIDATION']/@value"
         )[0]
-        a = self.html.xpath(
+        a: list[str] = self.html.xpath(
             f".//a[contains(@id,'ContentPlaceHolder1_ChildContent1_Repeater_OpinionsYear_LinkButton1')][contains(text(), '{year}')]/@href"
         )
         link = a[0].split("'")[1]
@@ -149,6 +154,7 @@ class Site(OpinionSiteLinear):
         self.html = await super()._download()
         await self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Creates backscrape iterable from kwargs or defaults
 
@@ -164,6 +170,7 @@ class Site(OpinionSiteLinear):
 
         self.back_scrape_iterable = range(start, end)
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Can we extract the date filed from the text?
 

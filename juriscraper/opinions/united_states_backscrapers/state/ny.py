@@ -17,6 +17,6 @@ class Site(NySite):
     first_opinion_date = date(2003, 10, 27)
     days_interval = 180
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court = "Court of Appeals"

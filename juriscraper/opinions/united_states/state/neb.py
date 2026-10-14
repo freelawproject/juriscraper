@@ -22,7 +22,7 @@ class Site(OpinionSiteLinear):
         re.X | re.DOTALL,
     )
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = (
@@ -30,6 +30,7 @@ class Site(OpinionSiteLinear):
         )
         self.should_have_results = True
 
+    @override
     def _return_response_text_object(self):
         """Remove faulty URLs from HTML
 
@@ -63,20 +64,20 @@ class Site(OpinionSiteLinear):
     @override
     def _process_html(self) -> None:
         for table in self.html.xpath(".//table"):
-            date_tags = table.xpath("preceding::time[1]/text()")
+            date_tags: list[str] = table.xpath("preceding::time[1]/text()")
             if not date_tags:
                 continue
             date = date_tags[0]
 
             for row in table.xpath(".//tr[td]"):
                 c1, c2, c3 = row.xpath(".//td")
-                docket = c1.xpath(".//text()")[0].strip()
+                docket: str = c1.xpath(".//text()")[0].strip()
                 if "A-XX-XXXX" in docket or not c3.xpath(".//a"):
                     logger.info("Skip row %s", row.text_content())
                     continue
 
-                citation = c2.xpath(".//text()")[0].strip()
-                name = c3.xpath(".//a/text()")[0].strip()
+                citation: str = c2.xpath(".//text()")[0].strip()
+                name: str = c3.xpath(".//a/text()")[0].strip()
                 url = c3.xpath(".//a")[0].get("href")
                 # This URL location is used for unpublished opinions
                 if "/sites/default/files" in url:
@@ -95,6 +96,7 @@ class Site(OpinionSiteLinear):
                     }
                 )
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Get the state citation and lower court info from the document's text."""
         result = {}

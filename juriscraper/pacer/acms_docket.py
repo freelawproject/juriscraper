@@ -5,6 +5,8 @@ import sys
 from collections import OrderedDict
 
 from httpx import Response
+from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.lib.log_tools import make_default_logger
@@ -19,12 +21,13 @@ logger = make_default_logger()
 class ACMSDocketReport(AppellateDocketReport):
     """Parse ACMS docket JSON."""
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None) -> None:
         super().__init__(court_id, pacer_session)
         self._acms_json = None
         self.api_client = AcmsApiClient(pacer_session, court_id)
 
-    def _parse_text(self, text):
+    @override
+    def _parse_text(self, text: str) -> None:
         """Store the ACMS JSON
 
         This does not, in fact, actually *parse* the data, it
@@ -36,7 +39,7 @@ class ACMSDocketReport(AppellateDocketReport):
         """
         self._acms_json = json.loads(text)
 
-    async def query(self, case_id: str):
+    async def query(self, case_id: str) -> None:
         """
         Queries the court API for case and docket details for a given case ID.
 
@@ -114,7 +117,7 @@ class ACMSDocketReport(AppellateDocketReport):
         return r, ""
 
     @property
-    def metadata(self):
+    def metadata(self) -> dict[str, object]:
         """Metadata is the basis returned by BaseDocketReport's data property.
 
         That function then supplements it with parties and docket entries.
@@ -133,7 +136,7 @@ class ACMSDocketReport(AppellateDocketReport):
         }
 
         # originating_court_infomation, see AppellateDocketReport
-        ogc_info = {}
+        ogc_info: dict[str, str | None] = {}
 
         # Surprisingly, we lack the lower court docket number. (!)
 
@@ -337,7 +340,7 @@ class ACMSDocketReport(AppellateDocketReport):
 
         parties_html = self._acms_json["caseDetails"]["partyAttorneyList"]
         tree = strip_bad_html_tags_insecure(parties_html)
-        party_rows = tree.xpath(".//tr")
+        party_rows: list[HtmlElement] = tree.xpath(".//tr")
         parties = []
         for row in party_rows:
             party = OrderedDict()
@@ -455,7 +458,7 @@ class ACMSDocketReport(AppellateDocketReport):
         return docket_entries
 
 
-def _main():
+def _main() -> None:
     if len(sys.argv) != 2:
         print("Usage: python -m juriscraper.pacer.acms_docket filepath")
         print("Please provide a path to a JSON file to parse.")

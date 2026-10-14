@@ -25,7 +25,7 @@ class Site(OpinionSiteLinear):
     # page; `_download_backwards` still follows the pager if it doesn't
     page_size = 1000
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         # `quick=30` selects the last 30 days of opinions and orders
@@ -33,7 +33,7 @@ class Site(OpinionSiteLinear):
         self.should_have_results = True
         self.make_backscrape_iterable(kwargs)
 
-    def build_url(self, params: dict) -> str:
+    def build_url(self, params: dict[str, str | int]) -> str:
         """Build a results URL, keeping the shared parameters in one place
 
         :param params: filters particular to this query, such as the `quick`
@@ -46,10 +46,14 @@ class Site(OpinionSiteLinear):
     @override
     def _process_html(self) -> None:
         for row in self.html.xpath("//a[contains(@class, 'oprow')]"):
-            docket = row.xpath("span[@class='oprow__docket']/text()")
-            name = row.xpath("span[@class='oprow__caption']/text()")
-            date_filed = row.xpath("span[@class='oprow__date']/text()")
-            url = row.xpath("@href")
+            docket: list[str] = row.xpath(
+                "span[@class='oprow__docket']/text()"
+            )
+            name: list[str] = row.xpath("span[@class='oprow__caption']/text()")
+            date_filed: list[str] = row.xpath(
+                "span[@class='oprow__date']/text()"
+            )
+            url: list[str] = row.xpath("@href")
 
             if not (docket and name and date_filed and url):
                 logger.error(
@@ -59,7 +63,9 @@ class Site(OpinionSiteLinear):
                 continue
 
             # Ex: "Published Opinion", "Unpublished Order"
-            label = row.xpath(".//span[contains(@class, 'tag')]/text()")
+            label: list[str] = row.xpath(
+                ".//span[contains(@class, 'tag')]/text()"
+            )
 
             self.cases.append(
                 {
@@ -87,6 +93,7 @@ class Site(OpinionSiteLinear):
         logger.error("ca5: unknown document type '%s'", label)
         return "Unknown"
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Scrape a date range, following the pager when the range is big
 
@@ -110,6 +117,7 @@ class Site(OpinionSiteLinear):
                 break
             page += 1
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court from the scraped text.
 

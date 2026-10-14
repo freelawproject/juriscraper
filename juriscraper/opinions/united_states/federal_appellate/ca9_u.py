@@ -12,7 +12,7 @@ from juriscraper.opinions.united_states.federal_appellate import ca9_p
 
 
 class Site(ca9_p.Site):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.ca9.uscourts.gov/decisions/memoranda/index.xml"

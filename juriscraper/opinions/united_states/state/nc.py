@@ -31,7 +31,7 @@ class Site(OpinionSiteLinear):
     )
     pattern = r"(?P<name>.*?)(?:[\s,]+\s*(?P<cite>\d+\s+NC(?:\s+App)?\s+\d+))?\s*\(\s*(?P<docket>[^\s]+)\s*-\s*(?P<status>[^)]+)\s*\)"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.base_url = (
@@ -48,7 +48,7 @@ class Site(OpinionSiteLinear):
         """
         for row in self.html.xpath(self.row_xpath):
             title = row.xpath("string(span[@class='title'])")
-            links = row.xpath("span[@class='title']/@onclick")
+            links: list[str] = row.xpath("span[@class='title']/@onclick")
             summary = row.xpath("string(span[@class='desc'])")
             if not links:
                 logger.warning("No link for row %s", title)
@@ -79,12 +79,13 @@ class Site(OpinionSiteLinear):
         :param row: row to process
         :return: date string
         """
-        date_block = row.xpath(self.date_xpath)[-1].text_content()
+        date_block: str = row.xpath(self.date_xpath)[-1].text_content()
         if match := re.search(self.date_regex, date_block):
             return match.group("date")
         # Second pattern for ncctapp unpublished opinions
         return self.coa_rgx.search(date_block).group("date")
 
+    @override
     async def _download_backwards(self, year: int) -> None:
         """Build year URL and scrape
 
@@ -95,6 +96,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Checks if backscrape start and end arguments have been passed
         by caller, and parses them accordingly

@@ -12,7 +12,7 @@ class Site(OpinionSiteLinear):
     days_interval = 15
     first_opinion_date = datetime(1995, 6, 1).date()
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.base_url = "https://www.wicourts.gov/supreme/scopin.jsp"
@@ -66,6 +66,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract citation from text
 
@@ -78,6 +79,7 @@ class Site(OpinionSiteLinear):
 
         return {}
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Set date range from backscraping args and scrape
 

@@ -8,9 +8,11 @@ import signal
 import sys
 import webbrowser
 from collections import defaultdict
+from collections.abc import Mapping
 from contextlib import aclosing
 from datetime import datetime
 from optparse import OptionParser
+from types import FrameType
 from typing import cast
 from urllib import parse
 
@@ -30,7 +32,7 @@ logger = make_default_logger()
 die_now = False
 
 
-def signal_handler(signal, frame):
+def signal_handler(signal: int, frame: FrameType | None) -> None:
     # Trigger this with CTRL+4
     logger.debug("**************")
     logger.debug("Signal caught. Finishing the current court, then exiting...")
@@ -40,7 +42,12 @@ def signal_handler(signal, frame):
 
 
 # Copied from django
-def force_bytes(s, encoding="utf-8", strings_only=False, errors="strict"):
+def force_bytes(
+    s: object,
+    encoding: str = "utf-8",
+    strings_only: bool = False,
+    errors: str = "strict",
+) -> bytes:
     """
     Similar to smart_bytes, except that lazy instances are resolved to
     strings, rather than kept as lazy objects.
@@ -59,7 +66,7 @@ def force_bytes(s, encoding="utf-8", strings_only=False, errors="strict"):
 
 
 # Copied from Courtlistener
-def sha1(s):
+def sha1(s: str | bytes) -> str:
     """Return the sha1sum of a string.
 
     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -78,7 +85,7 @@ def sha1(s):
     return sha1sum.hexdigest()
 
 
-def log_dict(dic: dict) -> None:
+def log_dict(dic: Mapping[str, object]) -> None:
     """Logs key-value pairs from a dictionary,
     truncating string values
     """
@@ -164,7 +171,7 @@ async def extract_doc_content(
 
 
 async def check_hashes(
-    data: bytes, download_url: str, site: AbstractSite
+    data: bytes | str, download_url: str, site: AbstractSite
 ) -> None:
     """Detect timestamped content by downloading the same URL twice and
     comparing hashes
@@ -256,9 +263,9 @@ async def process_an_opinion(
 
 async def scrape_court(
     site: AbstractSite,
-    binaries=False,
-    extract_content=False,
-    doctor_host="",
+    binaries: bool = False,
+    extract_content: bool = False,
+    doctor_host: str = "",
     test_hashes: bool = False,
     limit: int = 1000,
 ):
@@ -273,7 +280,7 @@ async def scrape_court(
     Nonetheless, this caller is useful for testing, and for demonstrating some
     basic pitfalls that a caller will run into.
     """
-    exceptions = defaultdict(list)
+    exceptions: defaultdict[str, list[Exception]] = defaultdict(list)
     for index, item in enumerate(site):
         if index == limit:
             break
@@ -305,7 +312,7 @@ async def scrape_court(
     return {"count": len(site), "exceptions": exceptions}
 
 
-def save_response(site):
+def save_response(site) -> None:
     """
     Save response content and headers into /tmp/
 
@@ -326,7 +333,7 @@ def save_response(site):
 
     try:
         # Brute force test to see if it's a JSON
-        json_data = json.loads(response.content)
+        json_data: object = json.loads(response.content)
     except Exception:
         json_data = None
 

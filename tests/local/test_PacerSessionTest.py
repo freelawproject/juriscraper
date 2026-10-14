@@ -1,7 +1,9 @@
 import unittest
+from collections.abc import Sequence
 from unittest import mock
 
 import httpx
+from typing_extensions import override
 
 from juriscraper.lib.exceptions import PacerLoginException
 from juriscraper.pacer import CaseQuery, PacerSession
@@ -12,10 +14,11 @@ from tests.network import get_pacer_session
 class PacerSessionTest(unittest.IsolatedAsyncioTestCase):
     """Test the PacerSession wrapper class"""
 
-    def setUp(self):
+    @override
+    def setUp(self) -> None:
         self.session = get_pacer_session()
 
-    def test_data_transformation(self):
+    def test_data_transformation(self) -> None:
         """Test our data transformation routine for building out PACER-compliant
         multi-part form data
         """
@@ -25,7 +28,9 @@ class PacerSessionTest(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(output, expected)
 
     @mock.patch("juriscraper.pacer.http.httpx.AsyncClient.post")
-    async def test_ignores_non_data_posts(self, mock_post):
+    async def test_ignores_non_data_posts(
+        self, mock_post: mock.AsyncMock
+    ) -> None:
         """Test that POSTs without a data parameter just pass through as normal.
 
         :param mock_post: mocked Session.post method
@@ -46,7 +51,9 @@ class PacerSessionTest(unittest.IsolatedAsyncioTestCase):
         )
 
     @mock.patch("juriscraper.pacer.http.httpx.AsyncClient.post")
-    async def test_transforms_data_on_post(self, mock_post):
+    async def test_transforms_data_on_post(
+        self, mock_post: mock.AsyncMock
+    ) -> None:
         """Test that POSTs using the data parameter get transformed into PACER's
         delightfully odd multi-part form data.
 
@@ -74,7 +81,9 @@ class PacerSessionTest(unittest.IsolatedAsyncioTestCase):
         )
 
     @mock.patch("juriscraper.pacer.http.httpx.AsyncClient.post")
-    async def test_sets_default_timeout(self, mock_post):
+    async def test_sets_default_timeout(
+        self, mock_post: mock.AsyncMock
+    ) -> None:
         await self.session.post("https://free.law", data={}, auto_login=False)
 
         self.assertTrue(
@@ -89,7 +98,7 @@ class PacerSessionTest(unittest.IsolatedAsyncioTestCase):
             300, mock_post.call_args[1]["timeout"], "default should be 300"
         )
 
-    def test_scraper_has_session_attribute(self):
+    def test_scraper_has_session_attribute(self) -> None:
         report = CaseQuery("cand", PacerSession())
         try:
             report.session  # noqa: B018
@@ -103,7 +112,8 @@ class PacerSessionAcmsTest(unittest.IsolatedAsyncioTestCase):
     ACMS_DOMAIN = "ca9-showdoc.azurewebsites.us"
     SAML_PARAMS = {"SAMLResponse": "assertion", "RelayState": "state"}
 
-    def setUp(self):
+    @override
+    def setUp(self) -> None:
         self.session = PacerSession(username="user", password="pass")
         self.addAsyncCleanup(self.session.aclose)
         # establish_acms_session() refuses to run without a PACER session.
@@ -122,13 +132,19 @@ class PacerSessionAcmsTest(unittest.IsolatedAsyncioTestCase):
         ).start()
         self.addCleanup(mock.patch.stopall)
 
-    def _acs_sets_cookies(self, cookie_names):
+    def _acs_sets_cookies(self, cookie_names: Sequence[str]) -> None:
         """Make the Saml2/Acs stand-in behave like ACMS: answer 200 whether or
         not the login worked, and leave `cookie_names` in the session jar,
         Secure like the real ones.
         """
 
-        def post(url, data, headers, *args, **kwargs):
+        def post(
+            url: str,
+            data: object,
+            headers: object,
+            *args: object,
+            **kwargs: object,
+        ) -> httpx.Response:
             response = httpx.Response(
                 200,
                 request=httpx.Request("POST", url),
@@ -145,7 +161,7 @@ class PacerSessionAcmsTest(unittest.IsolatedAsyncioTestCase):
 
         self.acs_post.side_effect = post
 
-    async def test_requires_saml_response(self):
+    async def test_requires_saml_response(self) -> None:
         """An expired PACER session lands on PACER's login form, whose hidden
         inputs are not SAML parameters. The handshake must stop there.
         """
@@ -158,7 +174,7 @@ class PacerSessionAcmsTest(unittest.IsolatedAsyncioTestCase):
         self.acs_post.assert_not_called()
         self.assertNotIn("ca9", self.session.acms_cookies)
 
-    async def test_rejected_login_is_not_a_session(self):
+    async def test_rejected_login_is_not_a_session(self) -> None:
         """A rejected SAML login answers 200 and still sets Azure's affinity
         cookies, but never the ASP.NET auth cookie.
         """
@@ -174,7 +190,7 @@ class PacerSessionAcmsTest(unittest.IsolatedAsyncioTestCase):
             )
         )
 
-    async def test_successful_login_moves_cookies_to_court_jar(self):
+    async def test_successful_login_moves_cookies_to_court_jar(self) -> None:
         """A successful login sets the (possibly chunked) auth cookie. All ACMS
         cookies move to the court's jar, desecured.
         """

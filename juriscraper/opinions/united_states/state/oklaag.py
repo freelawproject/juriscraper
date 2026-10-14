@@ -14,7 +14,7 @@ from juriscraper.opinions.united_states.state import okla
 
 class Site(okla.Site):
     # Inherit cleanup_content from Okla
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         year = datetime.today().year

@@ -60,7 +60,7 @@ class Site(OpinionSiteLinear):
     cite_regex = re.compile(r"\d{4}\sN\.H\.\s\d+")
     docket_regex = re.compile(r"(?P<docket>\d{4}-\d{1,4})[\s,]*")
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.status = "Published"
@@ -190,6 +190,7 @@ class Site(OpinionSiteLinear):
             "X-Requested-With": "XMLHttpRequest",
         }
 
+    @override
     async def _download_backwards(self, year: int) -> None:
         self.paginate = True
         self.set_request_parameters(year)
@@ -197,6 +198,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         await self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """The API exposes no date filter, so we must query a year
         and then paginate the results.

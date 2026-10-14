@@ -2,12 +2,13 @@ import time
 from datetime import date
 
 from dateutil.rrule import DAILY, rrule
+from typing_extensions import override
 
 from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         today = date.today()
         self.url = "http://www.ca10.uscourts.gov/opinion/search/results?query=%20date%3A{}".format(
@@ -26,14 +27,17 @@ class Site(OpinionSite):
             "//table[contains(concat('', @class, ''), 'search-results')]//tr"
         )
 
+    @override
     def _get_case_names(self):
         return list(
             self.html.xpath(f"{self.base}/td[@class='case-name']/text()")
         )
 
+    @override
     def _get_download_urls(self):
         return list(self.html.xpath(f"{self.base}/td[@class='link']/a/@href"))
 
+    @override
     def _get_case_dates(self):
         dates = []
         for date_string in self.html.xpath(
@@ -47,18 +51,22 @@ class Site(OpinionSite):
             )
         return dates
 
+    @override
     def _get_docket_numbers(self):
         return list(
             self.html.xpath(f"{self.base}/td[@class='case-no']/text()")
         )
 
+    @override
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
 
+    @override
     def _get_lower_courts(self):
         return list(self.html.xpath(f"{self.base}/td[@class='origin']/text()"))
 
-    async def _download_backwards(self, d):
+    @override
+    async def _download_backwards(self, d: date) -> None:
         self.url = "http://www.ca10.uscourts.gov/opinion/search/results?query=%20date%3A{}".format(
             d.strftime("%m/%d/%Y")
         )

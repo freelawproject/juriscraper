@@ -36,7 +36,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
     ADDRESS_RE = r"([^,]+),\s*([A-Z]{2})\s+(\d{5}(?:-\d{4})?)$"
     DOCKET_NUMBER_RE = r"No\.\s*([^\s<]+)"
 
-    def __init__(self, court_id: str = "scotus"):
+    def __init__(self, court_id: str = "scotus") -> None:
         """Initialize the HTML report parser."""
         super().__init__(court_id=court_id)
         self.tree: HtmlElement | None = None
@@ -348,10 +348,10 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
             if section_root is None:
                 continue
 
-            names = section_root.xpath(
+            names: list[HtmlElement] = section_root.xpath(
                 ".//div[contains(@class,'ContactName')]"
             )
-            contact_data = section_root.xpath(
+            contact_data: list[HtmlElement] = section_root.xpath(
                 ".//div[contains(@class,'ContactData2')]"
             )
 
@@ -364,7 +364,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
                 # Normalize party_name
                 party_name = ""
                 if data_div is not None:
-                    party_name_raw = data_div.xpath(
+                    party_name_raw: list[str] = data_div.xpath(
                         ".//span[contains(@class,'partyname')]/text()"
                     )
                     party_name = (
@@ -394,7 +394,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
             defaultdict(list)
         )
         current_type = None
-        rows = table.xpath(".//tr[td]")
+        rows: list[HtmlElement] = table.xpath(".//tr[td]")
         for i, tr in enumerate(rows):
             # omit section header
             if tr.xpath(
@@ -411,7 +411,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
                 continue
 
             # Attorney row
-            tds = tr.xpath("./td")
+            tds: list[HtmlElement] = tr.xpath("./td")
             if current_type and len(tds) == 3:
                 name_td, addr_td, phone_td = tds
                 name_text = self._clean_whitespace(
@@ -639,7 +639,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
             )
             phone = phone.replace("Ph:", "").strip() if phone else None
 
-            address_span = data_div.xpath(
+            address_span: list[HtmlElement] = data_div.xpath(
                 ".//span[contains(@class,'address1')]"
             )
             if address_span:
@@ -753,7 +753,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         ).strip()
 
 
-def _main():
+def _main() -> None:
     """Parse a local HTML file and pretty-print normalized data.
 
     :return: None

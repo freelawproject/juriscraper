@@ -21,7 +21,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         kwargs.setdefault("verify", False)
         super().__init__(*args, **kwargs)
         self.url = "https://cafc.uscourts.gov/category/opinion-order/feed/"
@@ -46,7 +46,7 @@ class Site(OpinionSiteLinear):
         for item in feed["entries"]:
             value = item["content"][0]["value"]
             docket, title = item["title"].split(" [")[0].split(": ", 1)
-            slug = fromstring(value).xpath(".//a/@href")[0]
+            slug: str = fromstring(value).xpath(".//a/@href")[0]
             self.cases.append(
                 {
                     "date": item["published"],
@@ -70,6 +70,7 @@ class Site(OpinionSiteLinear):
             status = "Unknown"
         return status
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court from the scraped text.
 

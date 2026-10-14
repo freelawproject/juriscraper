@@ -23,7 +23,7 @@ class Site(OpinionSiteLinear):
     base_url = "https://poderjudicial.pr/tribunal-apelaciones/decisiones-finales-del-tribunal-de-apelaciones"
     is_backscrape = False
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         kwargs.setdefault("verify", False)
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -34,6 +34,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.make_backscrape_iterable(kwargs)
 
+    @override
     async def _download(self):
         """Download case pages
 
@@ -48,7 +49,7 @@ class Site(OpinionSiteLinear):
             self.html = await super()._download()
 
         if not self.is_backscrape:
-            latest_url = self.html.xpath(
+            latest_url: list[str] = self.html.xpath(
                 f"(//a[contains(@href,'{self.year}') and contains(@href,'decisiones-del-tribunal-de-apelaciones')])[last()]/@href"
             )
             if not latest_url:
@@ -92,7 +93,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def make_backscrape_iterable(self, kwargs):
+    @override
+    def make_backscrape_iterable(self, kwargs) -> None:
         """Generate backscrape iterable
 
         Generate spanish language year month slug to be used in scraping
@@ -114,7 +116,8 @@ class Site(OpinionSiteLinear):
 
         self.back_scrape_iterable = months
 
-    async def _download_backwards(self, year_month: str):
+    @override
+    async def _download_backwards(self, year_month: str) -> None:
         """Download backwards
 
         :param year_month: spanish year month used to generate url
@@ -126,7 +129,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
-    def format_spanish_month_year(self, datetime_obj: datetime) -> str:
+    def format_spanish_month_year(self, datetime_obj: date) -> str:
         """Generate month year slug in spanish
 
         Use this method to avoid issues with changing locale to spanish

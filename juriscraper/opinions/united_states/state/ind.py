@@ -17,7 +17,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     page_court_id = "9510"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.court_name = "Supreme Court"
@@ -89,7 +89,7 @@ class Site(OpinionSiteLinear):
 
         return result
 
-    def parse_court_info(self, case):
+    def parse_court_info(self, case) -> tuple[str, str]:
         """Extract the lower court name and number from case data
 
         :param case: case row json to parse

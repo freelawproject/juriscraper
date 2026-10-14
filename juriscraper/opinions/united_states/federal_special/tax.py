@@ -19,7 +19,7 @@ class Site(OpinionSiteLinear):
     days_interval = 10
     base_url = "https://public-api-green.dawson.ustaxcourt.gov/public-api"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.set_blue_green = None
         self.url = f"{self.base_url}/opinion-search"
@@ -37,6 +37,7 @@ class Site(OpinionSiteLinear):
         }
         self.make_backscrape_iterable(kwargs)
 
+    @override
     async def _download(self, request_dict=None):
         """Download from api
 
@@ -110,6 +111,7 @@ class Site(OpinionSiteLinear):
         pdf_url = html["url"]
         return pdf_url
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request to the API
 

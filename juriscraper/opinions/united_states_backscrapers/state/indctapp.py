@@ -8,11 +8,13 @@ History:
     2014-09-02: Created by Jon Andersen
 """
 
+from typing_extensions import override
+
 from juriscraper.opinions.united_states_backscrapers.state import ind
 
 
 class Site(ind.Site):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.in.gov/judiciary/opinions/archapp.html"
@@ -22,6 +24,7 @@ class Site(ind.Site):
             "archapp2005.html",
         )
 
-    async def _download_backwards(self, page):
+    @override
+    async def _download_backwards(self, page: str) -> None:
         self.url = f"http://www.in.gov/judiciary/opinions/{page}"
         self.html = await self._download()

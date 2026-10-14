@@ -16,7 +16,7 @@ from urllib.parse import urljoin
 
 import httpx
 from lxml.etree import ParserError
-from lxml.html import fromstring
+from lxml.html import HtmlElement, fromstring
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
@@ -117,13 +117,13 @@ class Site(OpinionSiteLinear):
         :return: None
         """
         # a missing page is served with a 200 status code
-        title = self.html.xpath("string(//title)")
+        title: str = self.html.xpath("string(//title)")
         if "404 ERROR" in title:
             raise ParsingException(f"nytrial: page not found {self.url}")
 
         # the first table holds the newest posting day. Daily scrapes only
         # fetch its stub pages, older days were fetched on previous runs
-        tables = self.html.xpath("//table[caption]")
+        tables: list[HtmlElement] = self.html.xpath("//table[caption]")
         newest_rows = set(tables[0].xpath(".//tr")) if tables else set()
 
         row_xpath = "//table[caption]//tr[position()>1 and td]"
@@ -136,7 +136,7 @@ class Site(OpinionSiteLinear):
                 logger.debug("Skipping %s", court)
                 continue
 
-            url = row.xpath("td[1]/a/@href")[0]
+            url: str = row.xpath("td[1]/a/@href")[0]
             # the stub page of "30000" decisions links to the PDF. These PDFs
             # lack the cover page with the judge and docket number, so we get
             # them from the stub page
@@ -190,7 +190,7 @@ class Site(OpinionSiteLinear):
         )
 
     @staticmethod
-    def get_docket_from_header(header: list) -> str:
+    def get_docket_from_header(header: list[HtmlElement]) -> str:
         """Find the docket line, such as "Index No. 300468-26", in the
         header <div> of a stub page
 
@@ -222,7 +222,7 @@ class Site(OpinionSiteLinear):
         )
 
     @staticmethod
-    def get_judge_from_header(header: list) -> str:
+    def get_judge_from_header(header: list[HtmlElement]) -> str:
         """Find the judge line, such as "Charles D. Wood, J.", in the header
         <div> that holds the <h1> case name
 
@@ -238,6 +238,7 @@ class Site(OpinionSiteLinear):
                 return normalize_judge_string(judge_match.group("judge"))[0]
         return ""
 
+    @override
     async def _download_backwards(self, target_date: date) -> None:
         """Method used by backscraper to download historical records
 
@@ -247,6 +248,7 @@ class Site(OpinionSiteLinear):
         self.is_backscrape = True
         self.url = self.build_url(target_date)
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Extract values from opinion's text
 
@@ -392,7 +394,7 @@ class Site(OpinionSiteLinear):
             "OpinionCluster": {},
         }
         tree = fromstring(scraped_text)
-        header = tree.xpath("//h1/parent::div")
+        header: list[HtmlElement] = tree.xpath("//h1/parent::div")
         if not header:
             return {}
 
@@ -405,7 +407,7 @@ class Site(OpinionSiteLinear):
         if judge := Site.get_judge_from_header(header):
             metadata["Opinion"]["author_str"] = judge
 
-        decided = tree.xpath(
+        decided: list[HtmlElement] = tree.xpath(
             "//p[starts-with(normalize-space(), 'Decided on')]"
         )
         if decided:
@@ -437,10 +439,12 @@ class Site(OpinionSiteLinear):
 
         return {k: v for k, v in metadata.items() if v}
 
+    @override
     @staticmethod
     def cleanup_content(content: bytes) -> bytes:
         return ny.Site.cleanup_content(content)
 
+    @override
     def make_backscrape_iterable(self, kwargs) -> None:
         """Make back scrape iterable
 

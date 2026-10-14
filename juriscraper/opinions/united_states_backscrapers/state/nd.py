@@ -4,11 +4,13 @@
 import re
 from datetime import date, datetime
 
+from typing_extensions import override
+
 from juriscraper.opinions.united_states.state import nd
 
 
 class Site(nd.Site):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         today = date.today()
@@ -16,6 +18,7 @@ class Site(nd.Site):
             today.strftime("%b%Y")
         )
 
+    @override
     async def _get_download_urls(self) -> list[str]:
         """We use a fetcher and a DeferringList object and a HEAD request
         to test whether the wpd exists for a case"""
@@ -46,6 +49,7 @@ class Site(nd.Site):
             case_names.append(await fetcher(case))
         return case_names
 
+    @override
     def _get_case_names(self):
         if self.crawl_date >= date(1998, 10, 1):
             path = '//a[contains(@href, "/court/opinions/")]/text()'
@@ -63,6 +67,7 @@ class Site(nd.Site):
             else:
                 return list(names)
 
+    @override
     def _get_case_dates(self):
         # A tricky one. We get the case dates, but each can have different number of cases below it, so we have to
         # count them.
@@ -99,9 +104,11 @@ class Site(nd.Site):
                         continue
         return case_dates
 
+    @override
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
 
+    @override
     def _get_docket_numbers(self):
         if self.crawl_date >= date(1998, 10, 1):
             path = '//a/@href[contains(., "/court/opinions/")]'
@@ -115,6 +122,7 @@ class Site(nd.Site):
                 continue
         return docket_numbers
 
+    @override
     def _get_citations(self):
         if self.crawl_date < date(1997, 2, 1):
             # Old format, but no neutral cites, thus short circuit the function.
@@ -137,6 +145,7 @@ class Site(nd.Site):
                 continue
         return neutral_cites
 
+    @override
     def _post_parse(self):
         # Remove any information that applies to non-appellate cases.
         if self.neutral_citations:
@@ -156,6 +165,7 @@ class Site(nd.Site):
             # When there aren't any neutral cites that means they're all supreme court cases.
             pass
 
+    @override
     async def _download_backwards(self, d):
         self.crawl_date = d
         self.url = "http://www.ndcourts.gov/opinions/month/%s.htm" % (

@@ -17,7 +17,7 @@ class Site(OpinionSiteLinear):
     base_url = "http://afcca.law.af.mil/content/opinions_date_{}.html"
     start_year = 2002
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         kwargs.setdefault("verify", False)
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -43,6 +43,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     async def _download_backwards(self, year: int) -> None:
         """Build URL with year input and scrape
 
@@ -53,6 +54,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Checks if backscrape start and end arguments have been passed
         by caller, and parses them accordingly

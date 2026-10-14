@@ -64,7 +64,7 @@ class BetterInfo(parserinfo):
         "th",
     ]
 
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
 
 
@@ -101,7 +101,7 @@ def quarter(month: int) -> int:
     return int(ceil(float(month) / 3))
 
 
-def is_first_month_in_quarter(month: int) -> int:
+def is_first_month_in_quarter(month: int) -> bool:
     """
 
     :param month: Any month as an int.
@@ -174,7 +174,7 @@ def make_date_range_tuples(
 
 
 def unique_year_month(
-    date_list: list[_SomeDateT] | list[tuple[_SomeDateT]],
+    date_list: Iterable[_SomeDateT | tuple[_SomeDateT, ...]],
 ) -> list[_SomeDateT]:
     """Takes a list of dates or date tuples, and reduces it
     to date objects with unique year-months pairs

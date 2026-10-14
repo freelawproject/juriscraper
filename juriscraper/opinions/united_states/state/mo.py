@@ -13,14 +13,14 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.court = "Supreme"
         self.url = self.build_url()
         self.status = "Published"
 
-    def build_url(self):
+    def build_url(self) -> str:
         year = date.today().year
         return f"https://www.courts.mo.gov/page.jsp?id=12086&dist=Opinions%20{self.court}&date=all&year={year}#all"
 
@@ -33,7 +33,7 @@ class Site(OpinionSiteLinear):
                 if len(links) != 2:
                     continue
                 url = opinion.xpath("a")[1].get("href")
-                all_text = opinion.xpath(".//text()")
+                all_text: list[str] = opinion.xpath(".//text()")
                 case_metadata = [t.strip() for t in all_text if t.strip()]
                 docket, _, name, _, author, _, vote = case_metadata
                 self.cases.append(

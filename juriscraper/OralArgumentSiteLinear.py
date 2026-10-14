@@ -1,4 +1,5 @@
-from collections.abc import Awaitable
+from collections.abc import Awaitable, Sequence
+from datetime import date
 
 from typing_extensions import override
 
@@ -13,10 +14,10 @@ class OralArgumentSiteLinear(OralArgumentSite):
     case you can simply extend this class and implement _process_html().
     """
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.cases = []
-        self.status = None
+        self.status: str | None = None
 
     @override
     def _process_html(self) -> None | Awaitable[None]:
@@ -24,16 +25,20 @@ class OralArgumentSiteLinear(OralArgumentSite):
             "Must implement _process_html() on OralArgumentSiteLinear child"
         )
 
-    def _get_case_names(self):
+    @override
+    def _get_case_names(self) -> Sequence[str]:
         return [case["name"] for case in self.cases]
 
-    def _get_download_urls(self):
+    @override
+    def _get_download_urls(self) -> Sequence[str]:
         return [case["url"] for case in self.cases]
 
-    def _get_case_dates(self):
+    @override
+    def _get_case_dates(self) -> Sequence[date | None]:
         return [convert_date_string(case["date"]) for case in self.cases]
 
-    def _get_docket_numbers(self):
+    @override
+    def _get_docket_numbers(self) -> Sequence[str | None]:
         return [case["docket"] for case in self.cases]
 
     # optional getters below
@@ -42,8 +47,10 @@ class OralArgumentSiteLinear(OralArgumentSite):
         if self.cases and id in self.cases[0]:
             return [case[id] for case in self.cases]
 
-    def _get_judges(self):
+    @override
+    def _get_judges(self) -> Sequence[str | None] | None:
         return self._get_optional_field_by_id("judge")
 
-    def _get_attorneys(self):
+    @override
+    def _get_attorneys(self) -> Sequence[str | None] | None:
         return self._get_optional_field_by_id("attorney")

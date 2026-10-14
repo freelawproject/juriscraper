@@ -24,7 +24,7 @@ class Site(OpinionSiteLinear):
     days_interval = 180
     first_opinion_date = datetime(1934, 3, 16)
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = self.base_url
@@ -39,7 +39,7 @@ class Site(OpinionSiteLinear):
             name = row.xpath(".//h2")[0].text_content().strip()
             if not name:
                 continue
-            url = row.xpath(".//a/@href")[0]
+            url: str = row.xpath(".//a/@href")[0]
             date_filed = row.xpath(".//time")[0].text_content()
             summary = row.xpath(".//p")[0].text_content()
             self.cases.append(
@@ -52,6 +52,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
 

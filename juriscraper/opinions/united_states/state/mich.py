@@ -99,7 +99,7 @@ class Site(OpinionSiteLinear):
         name = titlecase(re.sub(r"\s+", " ", name_raw.strip()))
         return name.replace("People of Mi ", "People of Michigan ")
 
-    def parse_lower_courts(self, courts: list | None) -> str:
+    def parse_lower_courts(self, courts: list[str] | None) -> str:
         """Get the lower courts
 
         :param courts: Court names as an array
@@ -141,6 +141,7 @@ class Site(OpinionSiteLinear):
         )
         return f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseOpinions?{urlencode(params)}"
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Download opinions for a specific date range.
 
@@ -152,6 +153,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         await self._process_html()
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extracts case names and docket numbers from the document's text
 

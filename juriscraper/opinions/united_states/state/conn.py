@@ -17,6 +17,7 @@ import re
 from datetime import date
 
 from dateutil.parser import parse
+from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
@@ -33,7 +34,7 @@ class Site(ClusterSite):
         r"(\b\d{1,2}/\d{1,2}/\d{2,4}\b)|(\b(?:January|February|March|April|May|June|July|August|September|October|November|December) \d{1,2}, \d{4}\b)"
     )
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         cipher = "AES256-SHA256"
         kwargs.setdefault("verify", self.set_custom_adapter(cipher))
         super().__init__(*args, **kwargs)
@@ -61,19 +62,19 @@ class Site(ClusterSite):
             return m.groups()[0] if m.groups()[0] else m.groups()[1]
         return ""
 
-    def extract_metadata(self, row) -> tuple[str, str, str]:
+    def extract_metadata(self, row: HtmlElement) -> tuple[str, str, str]:
         """Extract the docket, case name and opinion type from each row
 
         :param row: Row to process
         :return: Docket(s), Case Name, opinion type
         """
-        text = " ".join(row.xpath("ancestor::li[1]//text()"))
+        text: str = " ".join(row.xpath("ancestor::li[1]//text()"))
         if not text:
             # bad/unusual HTML, when there is no external <li>
             # get the floating texts in the same "level", these should contain
             # the case name and docket number
-            prev = row.xpath("preceding-sibling::text()[1]")
-            next = row.xpath("following-sibling::text()[1]")
+            prev: list[str] = row.xpath("preceding-sibling::text()[1]")
+            next: list[str] = row.xpath("following-sibling::text()[1]")
             text = f"{prev[0] if prev else ''}{row.xpath('string(.)')}{next[0] if next else ''}"
 
         clean_text = re.sub(r"[\n\r\t\s]+", " ", text).replace("–", "-")
@@ -117,7 +118,9 @@ class Site(ClusterSite):
         :return: None
         """
         for row in self.html.xpath(".//*[contains(@href, '.pdf')]"):
-            pub = row.xpath('preceding::*[contains(., "Published")][1]/text()')
+            pub: list[str] = row.xpath(
+                'preceding::*[contains(., "Published")][1]/text()'
+            )
             date_filed_is_approximate = True
             if pub:
                 date_filed = self.find_published_date(pub)
@@ -155,6 +158,7 @@ class Site(ClusterSite):
         year_str = str(year % 2000).zfill(2)
         return self.base_url.format(self.court_abbv, year_str)
 
+    @override
     def extract_from_text(self, scraped_text: str):
         """
         If possible, extract Opinion Cluster values:
@@ -235,6 +239,7 @@ class Site(ClusterSite):
 
         return metadata
 
+    @override
     async def _download_backwards(self, year: int) -> None:
         """Build URL with year input and scrape
 
@@ -246,6 +251,7 @@ class Site(ClusterSite):
         self.html = await self._download()
         self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Checks if backscrape start and end arguments have been passed
         by caller, and parses them accordingly

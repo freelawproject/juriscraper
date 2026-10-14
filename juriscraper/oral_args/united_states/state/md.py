@@ -20,13 +20,14 @@ CourtID: md
 Court Short Name: Md.
 """
 
+from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
 class Site(OralArgumentSiteLinear):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://www.courts.state.md.us/coappeals/webcasts/webcastarchive.html"
@@ -37,7 +38,7 @@ class Site(OralArgumentSiteLinear):
         path = (
             "//tr[.//td[2]//a/@href][not(contains(.//@href, 'baradmission'))]"
         )
-        rows = self.html.xpath(path)
+        rows: list[HtmlElement] = self.html.xpath(path)
 
         for row in rows:
             cell_two = row.xpath("./td[2]")[0]

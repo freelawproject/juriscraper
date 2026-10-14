@@ -9,7 +9,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.justice.gov/olc/opinions?items_per_page=40"
@@ -20,7 +20,7 @@ class Site(OpinionSiteLinear):
     def _process_html(self) -> None:
         for row in self.html.xpath(".//article"):
             name = row.xpath(".//h2")[0].text_content().strip()
-            url = row.xpath(".//a/@href")[0]
+            url: str = row.xpath(".//a/@href")[0]
             date = row.xpath(".//time")[0].text_content()
             if not name:
                 continue

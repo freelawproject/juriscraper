@@ -1,6 +1,7 @@
 import re
 from datetime import datetime
 
+from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
@@ -26,7 +27,7 @@ class Site(OpinionSiteLinear):
         f"'{panel_prefix}_rptCaseSearch_lblCaseNum')]]"
     )
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.fifthcircuit.org/"
@@ -48,7 +49,9 @@ class Site(OpinionSiteLinear):
         for row in self.html.xpath(self.row_xpath):
             fixed_values = {}
             for id_part, key in self.id_to_case_mapper.items():
-                element = row.xpath(f".//*[contains(@id, '{id_part}')]")
+                element: list[HtmlElement] = row.xpath(
+                    f".//*[contains(@id, '{id_part}')]"
+                )
                 if element:
                     fixed_values[key] = element[0].text_content().strip()
 
@@ -94,7 +97,9 @@ class Site(OpinionSiteLinear):
                     continue
 
                 other_dates = [hearing]
-                label = anchor.xpath("preceding-sibling::b[1]/text()")
+                label: list[str] = anchor.xpath(
+                    "preceding-sibling::b[1]/text()"
+                )
                 if label and label[0].strip().startswith("Rehearing"):
                     other_dates.append(rehearing_application)
 
@@ -122,13 +127,15 @@ class Site(OpinionSiteLinear):
             return False
         return True
 
-    def get_hearing_info(self, row) -> str:
+    def get_hearing_info(self, row: HtmlElement) -> str:
         """Get the "Court Hearing Info" of a case row
 
         :param row: the case row element
         :return: the hearing info, or an empty string if it has no valid date
         """
-        element = row.xpath(".//span[contains(@id, '_Label2_')]")
+        element: list[HtmlElement] = row.xpath(
+            ".//span[contains(@id, '_Label2_')]"
+        )
         if not element:
             return ""
         text = re.sub(r"\s+", " ", element[0].text_content()).strip()
@@ -139,14 +146,14 @@ class Site(OpinionSiteLinear):
         text = re.sub(r"\s*Oral Argument:", ", Oral Argument:", text)
         return f"Court Hearing Info: {text}"
 
-    def get_rehearing_application(self, row) -> str:
+    def get_rehearing_application(self, row: HtmlElement) -> str:
         """Get the "Application for Rehearing" date of a case row
 
         :param row: the case row element
         :return: the application text, or an empty string if it has no
             valid date
         """
-        label = row.xpath(
+        label: list[HtmlElement] = row.xpath(
             ".//b[starts-with(normalize-space(), 'Application for Rehearing')]"
         )
         if not label:
@@ -170,7 +177,7 @@ class Site(OpinionSiteLinear):
                 fingerprint=[f"{self.court_id}-bot-challenge"],
             )
 
-        count = self.html.xpath(self.count_xpath)
+        count: list[HtmlElement] = self.html.xpath(self.count_xpath)
         if not count:
             raise ParsingException(
                 f"{self.court_id}: no 'Latest Decisions' record count on "

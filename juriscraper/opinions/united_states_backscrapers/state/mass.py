@@ -51,7 +51,7 @@ class Site(OpinionSiteLinear):
     # a headers variable is required for mass
     headers: dict = {}
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.make_backscrape_iterable(kwargs)
@@ -79,8 +79,8 @@ class Site(OpinionSiteLinear):
             # Consolidated cases, for example 432 Mass. 489
             # on year 2000
             name = "; ".join(name).strip()
-            cite = row.xpath(".//a/text()")[0]
-            url = row.xpath(".//a/@href")[0]
+            cite: str = row.xpath(".//a/text()")[0]
+            url: str = row.xpath(".//a/@href")[0]
             self.cases.append(
                 {
                     "citation": cite,
@@ -92,6 +92,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Extracts docket number from downloaded opinion HTML
 
@@ -130,6 +131,7 @@ class Site(OpinionSiteLinear):
             "OpinionCluster": {"headnotes": headnotes, "summary": summary},
         }
 
+    @override
     async def _download_backwards(
         self, dates_and_url: tuple[datetime, datetime, str]
     ) -> None:
@@ -143,6 +145,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Checks if backscrape start and end arguments have been passed
         by caller, and parses them accordingly

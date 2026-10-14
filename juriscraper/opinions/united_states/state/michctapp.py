@@ -28,7 +28,7 @@ class Site(ClusterSite, mich.Site):
     first_opinion_date = datetime(1996, 4, 9)
     extract_from_text = OpinionSite.extract_from_text
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         params = self.filters + (("aAppellateCourt", self.court),)
@@ -64,6 +64,7 @@ class Site(ClusterSite, mich.Site):
             if not self.cluster_opinions(case_dict, self.cases):
                 self.cases.append(case_dict)
 
+    @override
     async def get_missing_name_and_docket(self, item: dict) -> tuple[str, str]:
         """Try to get the case name using a secondary request
 
@@ -111,6 +112,7 @@ class Site(ClusterSite, mich.Site):
 
         return self.cleanup_case_name(search_items[0]["title"]), docket_number
 
+    @override
     def get_disposition(self, item: dict) -> str:
         """Get the disposition value
 

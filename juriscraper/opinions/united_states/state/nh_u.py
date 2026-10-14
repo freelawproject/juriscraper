@@ -23,7 +23,7 @@ class Site(nh_p.Site):
     filter_mode = "INCLUSIVE"
     document_type = "case-orders"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.status = "Unpublished"
         self.year_to_filter.update(

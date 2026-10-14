@@ -104,6 +104,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     @staticmethod
     def cleanup_content(content):
         """Remove non-opinion HTML
@@ -134,6 +135,7 @@ class Site(OpinionSiteLinear):
         body.append(content[0])
         return html.tostring(new_tree)
 
+    @override
     async def _download_backwards(self, search_date: date) -> None:
         """Download and process HTML for a given target date.
 
@@ -146,6 +148,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs) -> None:
         """Make back scrape iterable
 

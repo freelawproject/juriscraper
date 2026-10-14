@@ -2,6 +2,7 @@ import time
 from datetime import date
 
 from lxml import html
+from typing_extensions import override
 
 from juriscraper.opinions.united_states_backscrapers.federal_special import (
     cit_2010,
@@ -9,11 +10,12 @@ from juriscraper.opinions.united_states_backscrapers.federal_special import (
 
 
 class Site(cit_2010.Site):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.url = "http://www.cit.uscourts.gov/SlipOpinions/SlipOps-2009.html"
         self.court_id = self.__module__
 
+    @override
     def _get_case_dates(self):
         case_dates = []
         for e in self.html.xpath("//table[3]/tr/td[3][../td/a]"):
@@ -30,5 +32,6 @@ class Site(cit_2010.Site):
             )
         return case_dates
 
-    def _get_nature_of_suit(self):
+    @override
+    def _get_nature_of_suit(self) -> None:
         return None

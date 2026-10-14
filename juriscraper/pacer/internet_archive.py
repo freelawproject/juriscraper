@@ -1,4 +1,8 @@
-from httpx import AsyncClient, Timeout
+from datetime import date
+from types import TracebackType
+from typing import Self
+
+from httpx import AsyncClient, Response, Timeout
 from lxml import etree
 
 from juriscraper.lib.judge_parsers import normalize_judge_string
@@ -24,32 +28,40 @@ class InternetArchive(BaseDocketReport):
 
     CACHE_ATTRS = ["metadata", "parties", "docket_entries"]
 
-    def __init__(self, court_id, **kwargs):
+    def __init__(self, court_id: str, **kwargs) -> None:
         super().__init__(court_id)
 
         # Initialize the empty cache properties.
         self._clear_caches()
-        self._metadata = None
+        self._metadata: dict[str, str | date | None] | None = None
         self._parties = None
         self._docket_entries = None
         kwargs.setdefault("http2", True)
         kwargs.setdefault("follow_redirects", True)
         self.session = AsyncClient(**kwargs)
-        self.response = None
+        self.response: Response | None = None
         self.tree = None
         self.parser = etree.XMLParser(recover=True)
         self.is_valid = True
 
-    async def __aenter__(self):
+    async def __aenter__(self) -> Self:
         await self.session.__aenter__()
         return self
 
-    async def __aexit__(self, exc_type, exc_value, traceback):
+    async def __aexit__(
+        self,
+        exc_type: type[BaseException] | None,
+        exc_value: BaseException | None,
+        traceback: TracebackType | None,
+    ) -> None:
         await self.session.__aexit__(exc_type, exc_value, traceback)
 
     async def download_pdf(
-        self, pacer_case_id, document_number, attachment_number
-    ):
+        self,
+        pacer_case_id: str | int,
+        document_number: str | int,
+        attachment_number: str | int | None,
+    ) -> Response | None:
         """Download a PDF from the Internet Archive"""
         timeout = Timeout(60, read=300)
         url = get_pdf_url(
@@ -64,7 +76,7 @@ class InternetArchive(BaseDocketReport):
         else:
             return r
 
-    async def query(self, pacer_case_id):
+    async def query(self, pacer_case_id: str | int) -> None:
         """Download a docket XML page from the Internet Archive"""
         timeout = Timeout(60, read=300)
         url = get_docketxml_url(self.court_id, pacer_case_id)
@@ -73,27 +85,27 @@ class InternetArchive(BaseDocketReport):
         self.response = r
         self.parse()
 
-    def parse(self):
+    def parse(self) -> None:
         """Parse the item, but clear the cache before you do so."""
         self._clear_caches()
         self.response.raise_for_status()
         self._parse_text(self.response.text)
 
-    def _parse_text(self, text):
+    def _parse_text(self, text: str) -> None:
         assert isinstance(text, str), (
             f"Input must be unicode, not {type(text)}"
         )
         self.tree = etree.fromstring(text.encode("utf-8"), self.parser)
 
     @property
-    def metadata(self):
+    def metadata(self) -> dict[str, str | date | None]:
         if self.is_valid is False:
             return {}
 
         if self._metadata is not None:
             return self._metadata
 
-        data = {
+        data: dict[str, str | date | None] = {
             "court_id": self.court_id,
             "docket_number": self._get_str_from_tree("//docket_num"),
             "case_name": self._get_case_name(),
@@ -184,7 +196,9 @@ class InternetArchive(BaseDocketReport):
         if self._docket_entries is not None:
             return self._docket_entries
 
-        de_nodes = self.tree.xpath("//document_list/document")
+        de_nodes: list[etree._Element] = self.tree.xpath(
+            "//document_list/document"
+        )
         docket_entries = []
         for de_node in de_nodes:
             de = {
@@ -243,12 +257,12 @@ class InternetArchive(BaseDocketReport):
         self._docket_entries = docket_entries
         return docket_entries
 
-    def _get_judge(self, path):
+    def _get_judge(self, path: str):
         judge_str = self._get_str_from_tree(path)
         if judge_str is not None:
             return normalize_judge_string(judge_str)[0]
 
-    def _get_case_name(self):
+    def _get_case_name(self) -> str:
         case_name = self._get_str_from_tree("//case_name")
         case_name = clean_string(harmonize(case_name))
         if not case_name:

@@ -8,13 +8,14 @@ History:
 """
 
 from lxml import html
+from typing_extensions import override
 
 from juriscraper.lib.string_utils import convert_date_string, titlecase
 from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://court-url.gov/some-path.html"
@@ -31,6 +32,7 @@ class Site(OpinionSite):
     Remove this comment before submission.
     """
 
+    @override
     def _get_download_urls(self):
         """
         This is an example of a basic piece of meta data accessible with a
@@ -44,6 +46,7 @@ class Site(OpinionSite):
         path = "//path/to/text/text()"
         return list(self.html.xpath(path))
 
+    @override
     def _get_case_names(self):
         """
         This example demonstrates how to extract text from an element that
@@ -65,6 +68,7 @@ class Site(OpinionSite):
             case_names.append(titlecase(s))
         return case_names
 
+    @override
     def _get_case_dates(self):
         """
         This is an example of a date field. Note that the format string
@@ -78,6 +82,7 @@ class Site(OpinionSite):
             for date_string in self.html.xpath(path)
         ]
 
+    @override
     def _get_precedential_statuses(self):
         """
         In most cases, this field should be normalized to either
@@ -100,31 +105,36 @@ class Site(OpinionSite):
       Remove this comment and any unused methods before submission
     """
 
-    def _get_docket_numbers(self):
+    @override
+    def _get_docket_numbers(self) -> None:
         """
         This is typically of the form ##-####
         """
         return None
 
-    def _get_citations(self):
+    @override
+    def _get_citations(self) -> None:
         """
         A citation for the case.
         """
         return None
 
-    def _get_parallel_citations(self):
+    @override
+    def _get_parallel_citations(self) -> None:
         """
         A second citation for the case.
         """
         return None
 
-    def _get_judges(self):
+    @override
+    def _get_judges(self) -> None:
         """
         For the name of the judge authoring the lead opinion
         """
         return None
 
-    def _get_lower_courts(self):
+    @override
+    def _get_lower_courts(self) -> None:
         """
         If the document is an opinion of an appellate court, then the court
         from which the case was appealed would go here. So, a 9th Circuit
@@ -132,14 +142,16 @@ class Site(OpinionSite):
         """
         return None
 
-    def _get_nature_of_suit(self):
+    @override
+    def _get_nature_of_suit(self) -> None:
         """
         Some courts provide a NOS code or phrase giving the subject matter
         of the case, such as 'Contract' 'Civil Rights' 'Immigration' etc.
         """
         return None
 
-    def _get_summaries(self):
+    @override
+    def _get_summaries(self) -> None:
         """
         Some courts provide a summary of the case or the opinion's holding.
         """
@@ -151,27 +163,31 @@ class Site(OpinionSite):
     Remove this comment and any unused methods before submission
     """
 
-    def _get_adversary_numbers(self):
+    @override
+    def _get_adversary_numbers(self) -> None:
         """
         Similar to a docket number, but found only in bankruptcy cases.
         """
         return None
 
-    def _get_causes(self):
+    @override
+    def _get_causes(self) -> None:
         """
         Some courts will give the plaintiff's or appellant's cause of action
         such as 'Employment' 'Trademark' etc.
         """
         return None
 
-    def _get_dispositions(self):
+    @override
+    def _get_dispositions(self) -> None:
         """
         Affirmed, Reversed, Vacated; if longer than a sentence, should
         probably use _get_summaries instead.
         """
         return None
 
-    def _get_docket_attachment_numbers(self):
+    @override
+    def _get_docket_attachment_numbers(self) -> None:
         """
         A document appears on a docket. Each line on the docket has a number.
         Item number 12, for example, might be a declaration with several
@@ -179,14 +195,16 @@ class Site(OpinionSite):
         """
         return None
 
-    def _get_docket_document_numbers(self):
+    @override
+    def _get_docket_document_numbers(self) -> None:
         """
         A document appears on a docket. Each line on the docket has a number.
         Those numbers go here.
         """
         return None
 
-    def _get_lower_court_judges(self):
+    @override
+    def _get_lower_court_judges(self) -> None:
         """
         If the document is an opinion of an appellate court, then the court
         from which the case was appealed is the lower court. So, a 9th Cir.
@@ -195,7 +213,8 @@ class Site(OpinionSite):
         """
         return None
 
-    def _get_lower_court_numbers(self):
+    @override
+    def _get_lower_court_numbers(self) -> None:
         """
         If the document is an opinion of an appellate court, then the court
         from which the case was appealed is the lower court. So, a 9th Cir.
@@ -208,8 +227,9 @@ class Site(OpinionSite):
     Optional methods for special purposes
     """
 
+    @override
     @staticmethod
-    def cleanup_content(content):
+    def cleanup_content(content: bytes) -> bytes:
         """
         Given the HTML from a page, this method is used to strip it down to
         its bare essentials.
@@ -224,7 +244,8 @@ class Site(OpinionSite):
         """
         return content
 
-    async def _download_backwards(self, date_str):
+    @override
+    async def _download_backwards(self, date_str: str) -> None:
         """
         This is a simple method that can be used to generate Site objects
         that can be used to paginate through a court's entire website.

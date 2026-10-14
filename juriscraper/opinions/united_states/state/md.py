@@ -22,7 +22,7 @@ class Site(OpinionSiteLinear):
     empty_cite_strings = {"slip.op.", "."}
     no_judge_strings = {"Order", "PC Order", "Per Curiam"}
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         kwargs.setdefault("verify", False)
         super().__init__(*args, **kwargs)
         self.url = self.base_url.format(self.court, self.current_year)
@@ -37,22 +37,24 @@ class Site(OpinionSiteLinear):
         :return None
         """
         for row in self.html.xpath("//table//tr[td and not (.//h2)]"):
-            url = row.xpath("td//a[contains(@href,'pdf')]/@href")[0]
-            docket = row.xpath("td[1]//text()")[0]
+            url: str = row.xpath("td//a[contains(@href,'pdf')]/@href")[0]
+            docket: str = row.xpath("td[1]//text()")[0]
             date_filed, _, other_date = row.xpath("td[3]/font/text()")[
                 0
             ].partition(" ")
-            name = row.xpath("td[5]/font/text()")[0].split("(")[0].strip()
+            name: str = row.xpath("td[5]/font/text()")[0].split("(")[0].strip()
 
             per_curiam = False
-            judge = row.xpath("td[4]/font/text()")[0].split("()")[0].strip()
+            judge: str = (
+                row.xpath("td[4]/font/text()")[0].split("()")[0].strip()
+            )
             if judge in self.no_judge_strings:
                 # Other strings in self.no_judge_strings point to
                 # Per Curiam opinions
                 per_curiam = judge != "Order"
                 judge = ""
 
-            cite = row.xpath("td[2]/font/text()")[0].strip()
+            cite: str = row.xpath("td[2]/font/text()")[0].strip()
             if cite in self.empty_cite_strings:
                 cite = ""
 
@@ -69,6 +71,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Checks if backscrape start and end arguments have been passed
         by caller, and parses them accordingly
@@ -85,6 +88,7 @@ class Site(OpinionSiteLinear):
 
         self.back_scrape_iterable = range(start, end)
 
+    @override
     async def _download_backwards(self, year: int) -> None:
         """Build URL with year input and scrape
 

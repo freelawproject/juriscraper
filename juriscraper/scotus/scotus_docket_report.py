@@ -5,7 +5,7 @@ import sys
 from collections import defaultdict
 from collections.abc import Hashable
 from datetime import date, datetime
-from typing import Any
+from typing import Any, Literal
 
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.lib.log_tools import make_default_logger
@@ -40,7 +40,7 @@ class SCOTUSDocketReport:
 
     SCOTUS_BASE_URL = "https://www.supremecourt.gov"
 
-    def __init__(self, court_id: str = "scotus"):
+    def __init__(self, court_id: str = "scotus") -> None:
         self._scotus_json: dict[Hashable, Any] | None = None
 
     @property
@@ -217,7 +217,9 @@ class SCOTUSDocketReport:
             "email": att.get("Email"),
         }
 
-    def _build_parties_for_type(self, type_key: str) -> list[dict[str, Any]]:
+    def _build_parties_for_type(
+        self, type_key: Literal["Petitioner", "Respondent", "Other"]
+    ) -> list[dict[str, Any]]:
         """Group attorneys by party name for a party type.
 
         Preserves the order of first appearance of each party name and assigns all
@@ -395,7 +397,7 @@ class SCOTUSDocketReport:
         ]
 
 
-def _main():
+def _main() -> None:
     if len(sys.argv) != 2:
         print("Usage: python -m juriscraper.scotus_docket_report <filepath>")
         print("Please provide a path to a JSON file to parse.")

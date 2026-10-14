@@ -60,7 +60,7 @@ class Site(OpinionSiteLinear):
         r"\bV\.?I\.?\s*Super\.?\s*\d+(?P<u>\s*U)?\b", re.I
     )
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = f"{self.base_url}/courts/cms/publications"
@@ -152,6 +152,7 @@ class Site(OpinionSiteLinear):
         self._post_process_response()
         return self._return_response_text_object()
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Filter the publication list by `publicationDate` and process the
         first page of results.

@@ -81,7 +81,7 @@ class Site(ClusterSite):
     base_url = "https://www.courtswv.gov"
     opinions_path = "/appellate-courts/supreme-court-of-appeals/opinions"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.url = urljoin(self.base_url, self.opinions_path)
         self.court_id = self.__module__
@@ -103,16 +103,16 @@ class Site(ClusterSite):
             # Strip "(Separate Included)" from case name
             name = name.replace("(Separate Included)", "").strip()
 
-            decision_type = row.xpath("td[5]/text()")[0]
+            decision_type: str = row.xpath("td[5]/text()")[0]
             case_dict = self.get_metadata(name, decision_type)
 
-            url = row.xpath("td[3]/a/@href")[0]
+            url: str = row.xpath("td[3]/a/@href")[0]
             # Skip duplicates from pagination overlap
             if url in self.seen_urls:
                 continue
             self.seen_urls.add(url)
 
-            case_type = row.xpath("td[4]/text()")[0].strip()
+            case_type: str = row.xpath("td[4]/text()")[0].strip()
             case_dict.update(
                 {
                     "date": row.xpath("td[1]/text()")[0].strip(),
@@ -216,6 +216,7 @@ class Site(ClusterSite):
             "name": name,
         }
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """The prior-terms page only filters by year. We iterate
         by year and paginate through all pages for each year.
@@ -237,6 +238,7 @@ class Site(ClusterSite):
 
         self.back_scrape_iterable = list(range(start.year, end.year + 1))
 
+    @override
     async def _download_backwards(self, year: int) -> None:
         logger.info("Backscraping %s for year %s", self.court_id, year)
         self.url = urljoin(self.base_url, self.prior_terms_path)

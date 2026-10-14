@@ -17,7 +17,7 @@ from juriscraper.OpinionSite import OpinionSite
 class Site(cadc.Site):
     extract_from_text = OpinionSite.extract_from_text
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         # https://media.cadc.uscourts.gov/orders/
         self.url = "https://media.cadc.uscourts.gov/orders/bydate/recent"

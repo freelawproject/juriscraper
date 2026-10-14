@@ -3,15 +3,18 @@
 
 import os
 
+from typing_extensions import override
+
 from juriscraper.pacer.rss_feeds import PacerRssFeed
 from tests import TESTS_ROOT_EXAMPLES_PACER
 from tests.local.PacerParseTestCase import PacerParseTestCase
 
 
 class PacerParseRssFeedTest(PacerParseTestCase):
-    def setUp(self):
+    @override
+    def setUp(self) -> None:
         self.maxDiff = 200000
 
-    def test_parsing_rss_parsing(self):
+    def test_parsing_rss_parsing(self) -> None:
         path_root = os.path.join(TESTS_ROOT_EXAMPLES_PACER, "rss_feeds")
         self.parse_files(path_root, "*.xml", PacerRssFeed)

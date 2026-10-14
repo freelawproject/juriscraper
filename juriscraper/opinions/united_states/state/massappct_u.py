@@ -18,7 +18,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.case_date = date.today()
         self.backwards_days = 14
@@ -66,7 +66,7 @@ class Site(OpinionSiteLinear):
             docket, name, date = row.xpath(
                 ".//div[@class='col-md-7 font-bold']/text()"
             )
-            path = row.xpath(".//div/div/a/@href")[0]
+            path: str = row.xpath(".//div/div/a/@href")[0]
             self.cases.append(
                 {
                     "date": date.strip(),

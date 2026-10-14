@@ -1,5 +1,7 @@
 """Classes and utilities for an async httpx-based request manager for scrapers."""
 
+from __future__ import annotations
+
 import asyncio
 import time
 from abc import ABC, abstractmethod
@@ -64,7 +66,7 @@ async def _cancel_and_wait(futures: Iterable[asyncio.Future[Any]]) -> None:
     await _wait_for_cleanup(asyncio.gather(*futures, return_exceptions=True))
 
 
-async def _run_tasks(*awaitables: Awaitable[Any]) -> None:
+async def _run_tasks(*awaitables: Awaitable[object]) -> None:
     futures = [asyncio.ensure_future(awaitable) for awaitable in awaitables]
     group = asyncio.gather(*futures)
     try:
@@ -88,11 +90,11 @@ class ScheduledRequest(Request):
     def __init__(
         self,
         method: str,
-        url: str,
+        url: URL | str,
         *,
         content: RequestContentType | None = None,
-        data: Mapping[str, PrimitiveData] | None = None,
-        json: Any | None = None,
+        data: Mapping[str, object] | None = None,
+        json: object = None,
         params: Mapping[str, PrimitiveData | Sequence[PrimitiveData]]
         | None = None,
         headers: Mapping[str, str] | None = None,
@@ -121,7 +123,7 @@ class ScheduledRequest(Request):
         request: Request,
         *,
         follow_redirects: bool | UseClientDefault = USE_CLIENT_DEFAULT,
-    ) -> "ScheduledRequest":
+    ) -> ScheduledRequest:
         """Wrap a pre-built :class:`httpx.Request` as a :class:`ScheduledRequest`.
 
         Use this when the request has already been produced via
@@ -143,7 +145,7 @@ class RequestHandler:
     """
 
     async def before_send(
-        self, manager: "RequestManager", request: ScheduledRequest
+        self, manager: RequestManager, request: ScheduledRequest
     ) -> None:
         """The RequestManager awaits this method before sending the request.
 
@@ -153,7 +155,7 @@ class RequestHandler:
         return
 
     async def listen(
-        self, manager: "RequestManager", request: ScheduledRequest
+        self, manager: RequestManager, request: ScheduledRequest
     ) -> None:
         """The RequestManager spawns this method in a Task to listen to the
         request concurrently.
@@ -517,7 +519,7 @@ class RequestManager(AsyncClient):
         )
 
     @override
-    async def __aenter__(self) -> "RequestManager":
+    async def __aenter__(self) -> RequestManager:
         """Allows the client to be used as an async context manager."""
         self._check_open()
         _ = await super().__aenter__()
@@ -550,7 +552,7 @@ class RateLimit(RequestHandler):
 
     @override
     async def before_send(
-        self, manager: "RequestManager", request: ScheduledRequest
+        self, manager: RequestManager, request: ScheduledRequest
     ) -> None:
         """Ensure that requests aren't sent faster than the rate limit."""
         elapsed = time.time() - self._last_request_time

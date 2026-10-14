@@ -5,7 +5,7 @@ from juriscraper.opinions.united_states.state import neb
 
 
 class Site(neb.Site):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.url = (
             "https://supremecourt.nebraska.gov/courts/court-appeals/opinions"

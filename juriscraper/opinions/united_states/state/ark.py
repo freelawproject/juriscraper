@@ -22,7 +22,7 @@ class Site(OpinionSiteLinear):
     days_interval = 7
     not_a_opinion_regex = r"SYLLABUS|(NO (COURT OF APPEALS )?OPINION)"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.set_url()
@@ -101,6 +101,7 @@ class Site(OpinionSiteLinear):
         }
         self.url = f"{self.base_url}?{urlencode(params)}"
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Pass scraped text into function and return data as a dictionary
 
@@ -113,6 +114,7 @@ class Site(OpinionSiteLinear):
             return {"OpinionCluster": {"docket_number": match[0]}}
         return {}
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
 

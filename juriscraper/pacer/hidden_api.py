@@ -1,4 +1,5 @@
 from lxml import etree
+from typing_extensions import override
 
 from juriscraper.lib.diff_tools import get_closest_match_index
 from juriscraper.lib.exceptions import ParsingException
@@ -24,7 +25,7 @@ class PossibleCaseNumberApi(BaseReport):
 
     PATH = "cgi-bin/possible_case_numbers.pl"
 
-    async def query(self, docket_number):
+    async def query(self, docket_number: str) -> None:
         """Query the "possible case numbers" endpoint and return the results.
 
         :param docket_number: A string representing a docket number
@@ -40,7 +41,8 @@ class PossibleCaseNumberApi(BaseReport):
         self.response = await self.session.get(url)
         self.parse()
 
-    def _parse_text(self, text):
+    @override
+    def _parse_text(self, text: str) -> None:
         """Parse the text of the response object and put it in self.tree.
 
         Use an XML parser instead of the normal HTML one.
@@ -48,8 +50,11 @@ class PossibleCaseNumberApi(BaseReport):
         self.tree = etree.fromstring(text)
 
     def data(
-        self, case_name=None, office_number=None, docket_number_letters=None
-    ):
+        self,
+        case_name: str | None = None,
+        office_number: str | None = None,
+        docket_number_letters: str | None = None,
+    ) -> dict[str, str] | None:
         """Get data back from this query for the matching case.
 
         :param case_name: This endpoint can return multiple cases for a given
@@ -79,7 +84,7 @@ class PossibleCaseNumberApi(BaseReport):
         There are others too, feel free to add them if you know them.
         """
         case_count = self.tree.xpath("count(//case)")
-        nodes = self.tree.xpath("//case")
+        nodes: list[etree._Element] = self.tree.xpath("//case")
         if case_count == 0:
             try:
                 msg = self.tree.xpath("//message/@text")[0]
@@ -100,7 +105,7 @@ class PossibleCaseNumberApi(BaseReport):
             if office_number is not None:
                 # Remove items by docket number, if they lead with something
                 # other than the correct office number.
-                def correct_office_number(node):
+                def correct_office_number(node: etree._Element) -> bool:
                     try:
                         number = node.xpath("./@number")[0].split(":")[0]
                     except IndexError:
@@ -198,15 +203,18 @@ class ShowCaseDocApi(BaseReport):
 
     PATH = "cgi-bin/show_case_doc"
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None) -> None:
         assert not court_id.endswith("b"), (
             "This API is not available at bankruptcy courts."
         )
         super().__init__(court_id, pacer_session)
 
     async def query(
-        self, pacer_case_id, document_number, attachment_number=""
-    ):
+        self,
+        pacer_case_id: str | int,
+        document_number: str | int,
+        attachment_number: str | int = "",
+    ) -> None:
         """Query the show_case_doc endpoint and return the normalized doc1
         number.
 
@@ -230,12 +238,13 @@ class ShowCaseDocApi(BaseReport):
         self.response = await self.session.get(url, follow_redirects=True)
         self.parse()
 
-    def _parse_text(self, text):
+    @override
+    def _parse_text(self, text: str) -> None:
         """Just a stub. No parsing needed here."""
         pass
 
     @property
-    def data(self):
+    def data(self) -> str:
         """Get the URL out of the response object."""
         url = str(self.response.url)
         if "doc1" in url:
@@ -251,7 +260,7 @@ class AcmsCaseSearch(BaseReport):
     Looks up an ACMS case by its docket number using the CaseSearch API.
     """
 
-    async def query(self, docket_number):
+    async def query(self, docket_number: str) -> None:
         assert self.session is not None, (
             "session attribute of AcmsCaseSearch cannot be None."
         )
@@ -262,7 +271,8 @@ class AcmsCaseSearch(BaseReport):
         )
         self.parse()
 
-    def _parse_text(self, text):
+    @override
+    def _parse_text(self, text: str) -> None:
         """Just a stub. No parsing needed here."""
         pass
 

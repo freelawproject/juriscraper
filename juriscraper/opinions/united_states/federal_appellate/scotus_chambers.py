@@ -4,6 +4,9 @@ Court Contact: https://www.supremecourt.gov/contact/contact_webmaster.aspx
 
 from datetime import date
 
+from lxml.html import HtmlElement
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import InsanityException
 from juriscraper.lib.string_utils import convert_date_string
@@ -33,7 +36,7 @@ class Site(OpinionSite):
         "T": "Clarence Thomas",
     }
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.yy = self._get_current_term()
@@ -44,11 +47,11 @@ class Site(OpinionSite):
         self.precedential = "In-chambers"
         self.court = "in-chambers"
         self.url = False
-        self.headers = []
-        self.cases = []
+        self.headers: list[str] = []
+        self.cases: list[dict[str, str]] = []
 
     @staticmethod
-    def _get_current_term():
+    def _get_current_term() -> int | str:
         """The URLs for SCOTUS correspond to the term, not the calendar.
 
         The terms kick off on the first Monday of October, so we use October 1st
@@ -62,7 +65,8 @@ class Site(OpinionSite):
         else:
             return today.strftime("%y")
 
-    async def _download(self, request_dict=None):
+    @override
+    async def _download(self, request_dict=None) -> HtmlElement:
         if request_dict is None:
             request_dict = {}
         self.set_url()
@@ -70,10 +74,10 @@ class Site(OpinionSite):
         self.extract_cases_from_html(html)
         return html
 
-    def set_url(self):
+    def set_url(self) -> None:
         self.url = f"{self.url_base}/{self.court}.aspx"
 
-    def set_table_headers(self, html):
+    def set_table_headers(self, html: HtmlElement) -> None:
         # Do nothing if table is missing
         if html.xpath(self.path_table):
             path = f"{self.path_table}//th"
@@ -129,25 +133,32 @@ class Site(OpinionSite):
                     case[f"{label}_Url"] = href[0]
         return case
 
-    def _get_case_names(self):
+    @override
+    def _get_case_names(self) -> list[str]:
         return [case["Name"] for case in self.cases]
 
-    def _get_download_urls(self):
+    @override
+    def _get_download_urls(self) -> list[str]:
         return [case["Name_Url"] for case in self.cases]
 
-    def _get_case_dates(self):
+    @override
+    def _get_case_dates(self) -> list[date | None]:
         return [convert_date_string(case["Date"]) for case in self.cases]
 
-    def _get_docket_numbers(self):
+    @override
+    def _get_docket_numbers(self) -> list[str]:
         return [case["Docket"] for case in self.cases]
 
-    def _get_judges(self):
+    @override
+    def _get_judges(self) -> list[str]:
         return [case["judge"] for case in self.cases]
 
-    def _get_precedential_statuses(self):
+    @override
+    def _get_precedential_statuses(self) -> list[str]:
         return [self.precedential] * len(self.cases)
 
-    async def _download_backwards(self, d):
+    @override
+    async def _download_backwards(self, d: int) -> None:
         self.yy = str(d if d >= 10 else f"0{d}")
         logger.info(f"Running backscraper for year: 20{self.yy}")
         self.html = await self._download()

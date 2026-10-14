@@ -5,15 +5,18 @@ Author: William E. Palin
 Date created: December 27, 2021
 """
 
+from typing_extensions import override
+
 from juriscraper.opinions.united_states.administrative_agency import bia
 
 
 class Site(bia.Site):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.back_scrape_iterable = range(0, 21)
 
+    @override
     async def _download_backwards(self, volume: int) -> None:
         """Download backwards over the volume links in the DOJ BIA website.
 

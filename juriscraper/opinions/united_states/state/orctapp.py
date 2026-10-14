@@ -17,5 +17,5 @@ class Site(oregon_module.Site):
     court_code = "p17027coll5"
     citation_field = "identia"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)

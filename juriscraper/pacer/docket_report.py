@@ -87,7 +87,7 @@ class BaseDocketReport:
 
         Normalize these values.
         """
-        atty_cache = {}
+        atty_cache: dict[str, str] = {}
         for party in parties:
             for atty in party.get("attorneys", []):
                 if not atty["contact"]:
@@ -163,7 +163,7 @@ class BaseDocketReport:
             return ""
 
     @staticmethod
-    def _xpath_text_0(node, xpath):
+    def _xpath_text_0(node: etree._Element, xpath: str):
         """Get the first text element from a node or return ''
 
         This is annoyingly hard with normal xpath.
@@ -173,7 +173,7 @@ class BaseDocketReport:
         except IndexError:
             return ""
 
-    def _get_str_from_tree(self, path):
+    def _get_str_from_tree(self, path: str):
         try:
             s = self.tree.xpath(f"{path}/text()")[0].strip()
         except IndexError:
@@ -345,7 +345,7 @@ class BaseDocketReport:
                 return d
 
     @staticmethod
-    def _br_split(element):
+    def _br_split(element: HtmlElement) -> list[str]:
         """Split the text of an element on the BRs.
 
         :param element: Any HTML element
@@ -362,7 +362,9 @@ class BaseDocketReport:
     BR_REGEX = r"(?i)<br\s*/?>"
 
     @staticmethod
-    def redelimit_p(target_element, delimiter_re):
+    def redelimit_p(
+        target_element: HtmlElement, delimiter_re: str
+    ) -> HtmlElement:
         r"""Redelimit the children of the target element with <p> tags.
 
         Insert a <p> tag immediately after the target tag,
@@ -1464,20 +1466,20 @@ class DocketReport(BaseDocketReport, BaseReport):
 
     async def query(
         self,
-        pacer_case_id,
-        date_range_type="Filed",
-        date_start=None,
-        date_end=None,
-        doc_num_start="",
-        doc_num_end="",
-        show_parties_and_counsel=False,
-        show_terminated_parties=False,
-        show_list_of_member_cases=False,
-        include_pdf_headers=True,
-        show_multiple_docs=False,
-        output_format="html",
-        order_by="date",
-    ):
+        pacer_case_id: str | int,
+        date_range_type: str = "Filed",
+        date_start: date | None = None,
+        date_end: date | None = None,
+        doc_num_start: str | int = "",
+        doc_num_end: str | int = "",
+        show_parties_and_counsel: bool = False,
+        show_terminated_parties: bool = False,
+        show_list_of_member_cases: bool = False,
+        include_pdf_headers: bool = True,
+        show_multiple_docs: bool = False,
+        output_format: str = "html",
+        order_by: str = "date",
+    ) -> None:
         """Query the docket report and return the results.
 
         :param pacer_case_id: The internal PACER case ID for a case.

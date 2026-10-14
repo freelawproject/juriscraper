@@ -1,4 +1,6 @@
-from datetime import datetime
+from datetime import date, datetime
+
+import httpx
 
 from juriscraper.lasc.http import LASCSession
 from juriscraper.lib.log_tools import make_default_logger
@@ -14,11 +16,11 @@ class LASCSearch:
     those cases if made available in the MAP.
     """
 
-    def __init__(self, session):
+    def __init__(self, session) -> None:
         self.session: LASCSession = session
         self.api_base = "media.lacourt.org/api/AzureApi/"
 
-    async def get_json_from_internal_case_id(self, internal_case_id):
+    async def get_json_from_internal_case_id(self, internal_case_id: str):
         """Query LASC for the case json based on the internal case id
 
         :param internal_case_id: An internal ID of the form, 19STCV25157;SS;CV
@@ -31,7 +33,7 @@ class LASCSearch:
 
         return self._parse_case_data(r.json())
 
-    async def query_cases_by_date(self, start, end):
+    async def query_cases_by_date(self, start: date, end: date):
         """Query LASC for a list of cases between two dates (inclusive)
 
         The LASC interface only allows queries of up to seven days at a time.
@@ -62,7 +64,7 @@ class LASCSearch:
 
         return normal_cases
 
-    async def get_pdf_from_url(self, pdf_url):
+    async def get_pdf_from_url(self, pdf_url: str) -> bytes:
         """Get a PDF from the MAP
 
         :param pdf_url: The URL to a particular PDF you wish to download
@@ -254,7 +256,7 @@ class LASCSearch:
 
         return clean_data
 
-    def _check_success(self, r):
+    def _check_success(self, r: httpx.Response) -> None:
         if r.json()["IsSuccess"]:
             self.case_data = r.text
             logger.info("Successful query into LASC map")

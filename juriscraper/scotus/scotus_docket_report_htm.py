@@ -59,7 +59,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         "and td[3][contains(normalize-space(.), '~~Phone')]]"
     )
 
-    def __init__(self, court_id: str = "scotus"):
+    def __init__(self, court_id: str = "scotus") -> None:
         """Initialize the HTM report parser.
 
         :param court_id: The court ID.
@@ -85,7 +85,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             logger.error("Could not find case metadata table.")
             return {}
         self._case_data_table = table_to_array2d(case_data_table_element)
-        docket_entry_table_elements = self.tree.xpath(
+        docket_entry_table_elements: list[HtmlElement] = self.tree.xpath(
             ".//td[title]/table[.//tr[contains(normalize-space(.), '~~Date~~')]]"
         )
         if len(docket_entry_table_elements) == 0:
@@ -234,7 +234,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         return self._get_case_data_text(5, 2)
 
     @property
-    def case_name(self) -> str | None:
+    def case_name(self) -> str:
         if self._page_format == HTMPageFormat.New:
             title_parts = [
                 self._clean_whitespace(node.text_content())
@@ -429,7 +429,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
                 current_attorney = None
 
         for tr in header_tr.itersiblings(tag="tr"):
-            tds = tr.xpath("./td")
+            tds: list[HtmlElement] = tr.xpath("./td")
             if not tds:
                 continue
 
@@ -571,7 +571,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         )
 
 
-def _main():
+def _main() -> None:
     """Parse a local HTML file and pretty-print normalized data.
 
     :return: None

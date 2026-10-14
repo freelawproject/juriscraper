@@ -3,22 +3,27 @@
 that has incomplete meta data. You can see it in the example document.
 """
 
+from typing_extensions import override
+
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.url = "http://www2.ca3.uscourts.gov/recentop/week/recprec.htm"
         self.court_id = self.__module__
 
+    @override
     def _get_case_names(self):
         return list(self.html.xpath('//a[contains(@href, "opinarch")]/text()'))
 
+    @override
     def _get_download_urls(self):
         return list(self.html.xpath('//a[contains(@href, "opinarch")]/@href'))
 
+    @override
     def _get_case_dates(self):
         dates = []
         for text_string in self.html.xpath("//text()"):
@@ -30,6 +35,7 @@ class Site(OpinionSite):
                 dates.append(convert_date_string(date_string))
         return dates
 
+    @override
     def _get_docket_numbers(self):
         docket_numbers = []
         for text_string in self.html.xpath("//text()"):
@@ -39,6 +45,7 @@ class Site(OpinionSite):
                 docket_numbers.append(text_string.split(" ")[3])
         return docket_numbers
 
+    @override
     def _get_precedential_statuses(self):
         statuses = []
         for _ in range(0, len(self.case_names)):
@@ -50,6 +57,7 @@ class Site(OpinionSite):
                 statuses.append("Unknown")
         return statuses
 
+    @override
     def _get_lower_courts(self):
         lower_courts = []
         for e in self.html.xpath('//a[contains(@href, "opinarch")]'):

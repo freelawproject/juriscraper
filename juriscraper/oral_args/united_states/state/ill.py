@@ -19,7 +19,7 @@ from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
 class Site(OralArgumentSiteLinear):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.illinoiscourts.gov/courts/supreme-court/oral-argument-audio-and-video/"
@@ -28,7 +28,7 @@ class Site(OralArgumentSiteLinear):
         self.earlier = (today() - timedelta(days=30)).strftime("%m/%d/%Y")
         self._set_parameters()
 
-    def _set_parameters(self):
+    def _set_parameters(self) -> None:
         self.parameters = {
             "__EVENTTARGET": "ctl00$ctl04$txtFilterDateFrom",
             "__EVENTARGUMENT": "",
@@ -46,7 +46,7 @@ class Site(OralArgumentSiteLinear):
     @override
     def _process_html(self) -> None:
         for row in self.html.xpath(".//tr")[1:]:
-            audio_anchor = row.xpath(".//a/@data-audio")
+            audio_anchor: list[str] = row.xpath(".//a/@data-audio")
             if not audio_anchor:
                 logger.warning(
                     "Row has no audio anchor '%s'",

@@ -20,7 +20,7 @@ class Site(OpinionSiteLinear):
     base_url = "https://media.ca8.uscourts.gov/cgi-bin/opnByMM.pl?theMM=%02d&theYY=%s&A1=Get+Opinions"
     is_bap_scraper = False
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         kwargs.setdefault("verify", False)
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -34,7 +34,7 @@ class Site(OpinionSiteLinear):
     def _process_html(self) -> None:
         for link in self.html.xpath('//a[contains(@href, "opndir")]'):
             url = link.get("href")
-            text = link.xpath("following-sibling::text()")[0].strip()
+            text: str = link.xpath("following-sibling::text()")[0].strip()
 
             lower_court, is_bap_opinion = self.get_lower_court(text)
             if is_bap_opinion:
@@ -82,6 +82,7 @@ class Site(OpinionSiteLinear):
 
         return "", False
 
+    @override
     def make_backscrape_iterable(self, kwargs) -> None:
         """Parse the input dates, and create a tick for each month"""
         super().make_backscrape_iterable(kwargs)
@@ -94,6 +95,7 @@ class Site(OpinionSiteLinear):
             )
         ]
 
+    @override
     async def _download_backwards(self, d: date) -> None:
         """
         If an updated backscraper is needed in the future, this court

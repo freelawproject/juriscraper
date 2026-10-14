@@ -6,22 +6,25 @@ import time
 from datetime import date
 
 from lxml import html
+from typing_extensions import override
 
 from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         # This is a special backscraper to deal with problems on the 1999 page.
         self.url = "http://www.cit.uscourts.gov/SlipOpinions/SlipOps-1999.html"
         self.court_id = self.__module__
 
+    @override
     def _get_download_urls(self):
         return list(
             self.html.xpath("//table[3]//tr[position() > 1]/td//font//a/@href")
         )
 
+    @override
     def _get_citations(self):
         neutral_citations = []
         for e in self.html.xpath(
@@ -31,6 +34,7 @@ class Site(OpinionSite):
             neutral_citations.append(s)
         return neutral_citations
 
+    @override
     def _get_case_names(self):
         case_names = []
         for e in self.html.xpath("//table[3]//tr[position() > 1]/td[2]/*"):
@@ -42,9 +46,11 @@ class Site(OpinionSite):
                 case_names.append(s.strip())
         return case_names
 
+    @override
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
 
+    @override
     def _get_case_dates(self):
         case_dates = []
         for e in self.html.xpath("//table[3]//tr[position() > 1]/td[3]//font"):
@@ -57,6 +63,7 @@ class Site(OpinionSite):
         return case_dates
 
     # Because there can be multiple docket numbers we have to replace some newlines.
+    @override
     def _get_docket_numbers(self):
         docket_numbers = []
         for e in self.html.xpath("//table[3]//tr[position() > 1]/td[4]//font"):

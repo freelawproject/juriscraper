@@ -12,16 +12,19 @@ History:
 import time
 from datetime import date
 
+from typing_extensions import override
+
 from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.url = "http://www.in.gov/judiciary/opinions/archsup.html"
         self.court_id = self.__module__
         self.my_precedential_statuses = []
 
+    @override
     def _get_case_names(self):
         raw_case_names = self.html.xpath(
             "//table/tr/td[3]/table/tr[4]//table/tr[position() > 1]/td[2]//a/text()"
@@ -37,6 +40,7 @@ class Site(OpinionSite):
                 self.my_precedential_statuses.append("Published")
         return case_names
 
+    @override
     def _get_download_urls(self):
         return list(
             self.html.xpath(
@@ -44,6 +48,7 @@ class Site(OpinionSite):
             )
         )
 
+    @override
     def _get_case_dates(self):
         dates = []
         for date_string in self.html.xpath(
@@ -60,6 +65,7 @@ class Site(OpinionSite):
                 )
         return dates
 
+    @override
     def _get_docket_numbers(self):
         return list(
             self.html.xpath(
@@ -67,6 +73,7 @@ class Site(OpinionSite):
             )
         )
 
+    @override
     def _get_lower_court_numbers(self):
         return [
             e if e.strip() != "N/A" else ""
@@ -75,5 +82,6 @@ class Site(OpinionSite):
             )
         ]
 
-    def _get_precedential_statuses(self):
+    @override
+    def _get_precedential_statuses(self) -> list[str]:
         return self.my_precedential_statuses

@@ -16,6 +16,6 @@ class Site(ariz.Site):
     search_page_path = "/Decisions/Search-Decisions"
     module_xp = "//*[@id='dnn_ContentPane']/div[1]/a/@name"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__

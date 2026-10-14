@@ -8,6 +8,7 @@ import re
 from datetime import datetime
 
 from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.opinions.united_states.state import tenn
 from juriscraper.OpinionSite import OpinionSite
@@ -19,7 +20,7 @@ class Site(tenn.Site):
 
     extract_from_text = OpinionSite.extract_from_text
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.url = "https://www.tncourts.gov/courts/work-comp/opinions"
         self.section_selector = (
@@ -29,6 +30,7 @@ class Site(tenn.Site):
         # docket will always contain WC in the docket number
         self.docket_xpath = "text()[contains(., 'WC')]"
 
+    @override
     def get_summary(self, section: HtmlElement) -> str:
         """Get the summary considering some XPath variations
 
@@ -41,7 +43,7 @@ class Site(tenn.Site):
             pass
 
         # last non empty floating text in the section
-        summary = section.xpath("text()[normalize-space()]")[-1]
+        summary: str = section.xpath("text()[normalize-space()]")[-1]
         # ensure we didn't pick up a judge field
         if " Judge:" not in summary:
             return summary

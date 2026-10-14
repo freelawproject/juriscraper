@@ -5,6 +5,7 @@ from posixpath import normpath
 from urllib.parse import urljoin, urlparse, urlunparse
 
 from lxml import html
+from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
@@ -46,6 +47,7 @@ class Site(OpinionSiteLinear):
 
         self.make_backscrape_iterable(kwargs)
 
+    @override
     async def _download(self, request_dict=None):
         """Fetch hand-down dates from the API, filter to the date
         range, and download each date's opinion list page.
@@ -124,7 +126,9 @@ class Site(OpinionSiteLinear):
                 if parent.tag == "td":
                     sections = parent.xpath(".//ul")
                 else:
-                    sections = parent.xpath("./following-sibling::ul")
+                    sections: list[HtmlElement] = parent.xpath(
+                        "./following-sibling::ul"
+                    )
 
                 if not sections:
                     docket = anchor.text_content().strip()
@@ -155,6 +159,7 @@ class Site(OpinionSiteLinear):
                     }
                 )
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """The API only filters by year. We iterate by year but
         filter available dates to the backscrape date range, to
@@ -179,6 +184,7 @@ class Site(OpinionSiteLinear):
             (year, start, end) for year in range(start.year, end.year + 1)
         ]
 
+    @override
     async def _download_backwards(
         self, params: tuple[int, datetime.date, datetime.date]
     ) -> None:

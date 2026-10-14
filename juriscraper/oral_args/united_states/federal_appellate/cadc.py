@@ -10,6 +10,7 @@ Updated: 2024-10-10
 from datetime import date, datetime
 from urllib.parse import urljoin
 
+from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
@@ -22,7 +23,7 @@ class Site(OralArgumentSiteLinear):
     first_opinion_date = datetime(2007, 9, 10)
     base_url = "https://media.cadc.uscourts.gov/recordings/bydate/{}"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         kwargs.setdefault("verify", False)
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
@@ -34,9 +35,9 @@ class Site(OralArgumentSiteLinear):
     def _process_html(self) -> None:
         anchor_xpath = "a[contains(@href, '/recordings/docs/') and contains(@href, '.mp3')]"
         for row in self.html.xpath(f"//div[div[div[div[{anchor_xpath}]]]]"):
-            ahref = row.xpath(f".//{anchor_xpath}")
+            ahref: list[HtmlElement] = row.xpath(f".//{anchor_xpath}")
             url = ahref[0].xpath("@href")[0]
-            docket = ahref[0].xpath("text()")[0]
+            docket: str = ahref[0].xpath("text()")[0]
 
             if "mp3" not in url:
                 logger.info("Not a mp3 URL? %s", url)
@@ -60,6 +61,7 @@ class Site(OralArgumentSiteLinear):
                 }
             )
 
+    @override
     async def _download_backwards(self, target_date: date) -> None:
         """Download historical data
 
@@ -75,6 +77,7 @@ class Site(OralArgumentSiteLinear):
         self.html = await self._download()
         self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Use base function to generate a range, then pick
         unique year-month combinations to build the backscrape

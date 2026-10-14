@@ -7,7 +7,7 @@ from juriscraper.opinions.united_states.state import wis
 
 
 class Site(wis.Site):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.base_url = "https://www.wicourts.gov/other/appeals/caopin.jsp"
@@ -43,7 +43,7 @@ class Site(wis.Site):
                 logger.debug("Skipping withdrawn opinion: %s", long_caption)
                 continue
 
-            captions = caption.xpath(".//text()")
+            captions: list[str] = caption.xpath(".//text()")
             if "Errata" in captions[0]:
                 status, name = "Errata", captions[1]
             elif "Recommended for Publication" in captions[-1]:

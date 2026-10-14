@@ -21,7 +21,7 @@ from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 class Site(OralArgumentSiteLinear):
     docket_regex = r"\d{2}-\d{3,4}"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         # Files posted in the last 30 days. OralArgContents7.html and
@@ -39,8 +39,8 @@ class Site(OralArgumentSiteLinear):
         :return None
         """
         for row in self.html.xpath("//table//tr[td]"):
-            links = row.xpath(".//a/@href")
-            dates = row.xpath("./td[2]/text()")
+            links: list[str] = row.xpath(".//a/@href")
+            dates: list[str] = row.xpath("./td[2]/text()")
             if not links or not dates:
                 logger.warning(
                     "ca3: skipping row without link or date: %s",

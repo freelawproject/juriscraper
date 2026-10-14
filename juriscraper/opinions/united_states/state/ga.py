@@ -16,7 +16,7 @@ class Site(OpinionSiteLinear):
     url_template = "https://www.gasupreme.us/opinions/{}-opinions/"
     first_opinion_year = 2017
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = self.url_template.format(date.today().year)
@@ -55,7 +55,7 @@ class Site(OpinionSiteLinear):
             # - "October 19, 2021—SUMMARIES for NOTEWORTHY OPINIONS"
             # - "July 7, 2021"
             # - "February 15, 2021 – SUMMARIES for NOTEWORTHY OPINIONS"
-            summary = link.xpath(
+            summary: str = link.xpath(
                 ".//parent::li/parent::ul/preceding-sibling::h3[1]/following-sibling::p"
             )[0].text_content()
             # Character separator for dates from summary text could be:
@@ -74,13 +74,15 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     async def _download_backwards(self, year: int) -> None:
         self.url = self.url_template.format(year)
         logger.info("Backscraping for year %s %s", year, self.url)
         self.html = await self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs: dict):
+    @override
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
         if kwargs.get("backscrape_start"):
             start = int(kwargs["backscrape_start"])
         else:
@@ -96,6 +98,7 @@ class Site(OpinionSiteLinear):
 
         self.back_scrape_iterable = range(start, end)
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract the state citation from the document's text
 

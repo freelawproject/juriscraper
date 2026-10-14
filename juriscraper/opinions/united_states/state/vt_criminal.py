@@ -11,6 +11,6 @@ class Site(vt.Site):
     division = 2
     days_interval = 200
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__

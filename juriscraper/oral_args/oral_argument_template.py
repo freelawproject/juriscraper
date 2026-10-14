@@ -8,13 +8,14 @@ History:
 """
 
 from lxml import html
+from typing_extensions import override
 
 from juriscraper.lib.string_utils import convert_date_string, titlecase
 from juriscraper.OralArgumentSite import OralArgumentSite
 
 
 class Site(OralArgumentSite):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "http://court-url.gov/some-path.html"
@@ -28,6 +29,7 @@ class Site(OralArgumentSite):
       Remove this comment before submission.
     """
 
+    @override
     def _get_download_urls(self):
         """This is an example of a basic piece of meta data accessible with a
         simple XPath query.
@@ -40,6 +42,7 @@ class Site(OralArgumentSite):
         path = "//path/to/text/text()"
         return list(self.html.xpath(path))
 
+    @override
     def _get_case_names(self):
         """This example demonstrates how to extract text from an element that
         may contain other elements.
@@ -60,6 +63,7 @@ class Site(OralArgumentSite):
             case_names.append(titlecase(s))
         return case_names
 
+    @override
     def _get_case_dates(self):
         """This is an example of a date field. Note that the format string
         will likely need to be updated to  match the date formats
@@ -78,13 +82,15 @@ class Site(OralArgumentSite):
       Remove this comment and any unused methods before submission
     """
 
-    def _get_docket_numbers(self):
+    @override
+    def _get_docket_numbers(self) -> None:
         """
         This is typically of the form ##-####
         """
         return None
 
-    def _get_judges(self):
+    @override
+    def _get_judges(self) -> None:
         """
         For the name of the judge authoring the lead opinion
         """
@@ -94,7 +100,8 @@ class Site(OralArgumentSite):
       Optional method used for downloading multiple pages of a court site.
     """
 
-    async def _download_backwards(self, date_str):
+    @override
+    async def _download_backwards(self, date_str: str) -> None:
         """This is a simple method that can be used to generate Site objects
         that can be used to paginate through a court's entire website.
 

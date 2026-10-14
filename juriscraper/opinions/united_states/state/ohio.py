@@ -15,6 +15,7 @@ History:
 from datetime import date
 from typing import Any
 
+from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
@@ -61,20 +62,20 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
             ".//table[@id='MainContent_gvResults']//tr[not(.//a[contains(@href, 'javascript')])]"
         ):
             # Filter out the case announcements and rulings (ie non-opinions)
-            docket = row.xpath(".//td[2]//text()")[0].strip()
-            name = row.xpath(".//a/text()")[0]
+            docket: str = row.xpath(".//td[2]//text()")[0].strip()
+            name: str = row.xpath(".//a/text()")[0]
             if not docket:
                 logger.debug("Skipping row with name '%s'", name.strip())
                 continue
 
-            judge = row.xpath(".//td[4]//text()")[0]
+            judge: str = row.xpath(".//td[4]//text()")[0]
             per_curiam = False
             if "per curiam" in judge.lower():
                 judge = ""
                 per_curiam = True
 
-            citation_or_county = row.xpath(".//td[5]//text()")[0].strip()
-            web_cite = row.xpath(".//td[8]//text()")[0]
+            citation_or_county: str = row.xpath(".//td[5]//text()")[0].strip()
+            web_cite: str = row.xpath(".//td[8]//text()")[0]
             case = {
                 "docket": docket,
                 "name": name,
@@ -112,7 +113,9 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
 
         :return: None
         """
-        view_state = self.html.xpath("//input[@id='__VIEWSTATE']")
+        view_state: list[HtmlElement] = self.html.xpath(
+            "//input[@id='__VIEWSTATE']"
+        )
         self.parameters = {
             "__VIEWSTATEENCRYPTED": "",
             "ctl00$MainContent$ddlCourt": f"{self.court_index}",
@@ -125,7 +128,9 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
 
         # The site stopped emitting __EVENTVALIDATION around 2026-06-29;
         # send it only when present so both variants work
-        event_validation = self.html.xpath("//input[@id='__EVENTVALIDATION']")
+        event_validation: list[HtmlElement] = self.html.xpath(
+            "//input[@id='__EVENTVALIDATION']"
+        )
         if event_validation:
             self.parameters["__EVENTVALIDATION"] = event_validation[0].get(
                 "value"
@@ -143,6 +148,7 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
 
         self.method = "POST"
 
+    @override
     async def _download_backwards(self, d: tuple[date, date]) -> None:
         """Filter site to get older records
 
@@ -188,6 +194,7 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
             return
         site.set_parameters(str(page))
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         super().make_backscrape_iterable(kwargs)
         start_date = self.back_scrape_iterable[0][0]

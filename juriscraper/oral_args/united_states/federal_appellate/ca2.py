@@ -18,6 +18,7 @@ History:
 from datetime import date, datetime, timedelta
 from urllib.parse import urljoin
 
+from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
@@ -40,7 +41,7 @@ class Site(OralArgumentSiteLinear):
     first_opinion_date = datetime(2016, 1, 1)
     days_interval = 15
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = self.search_url
@@ -82,7 +83,9 @@ class Site(OralArgumentSiteLinear):
     @override
     def _process_html(self) -> None:
         for row in self.html.xpath('//table[@class="ResultsTable"]/tr'):
-            anchor = row.xpath('.//td[@class="ResultsItemLeft"]/a')
+            anchor: list[HtmlElement] = row.xpath(
+                './/td[@class="ResultsItemLeft"]/a'
+            )
             if not anchor:
                 logger.warning("ca2: row without anchor, skipping")
                 continue
@@ -112,6 +115,7 @@ class Site(OralArgumentSiteLinear):
                 }
             )
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         self.start_date, self.end_date = dates
         self._update_parameters()

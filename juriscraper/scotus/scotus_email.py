@@ -124,7 +124,7 @@ class _SCOTUSConfirmationPageScraper:
     :ivar tree: Parsed HTML tree.
     """
 
-    def __init__(self, court_id: str = "scotus"):
+    def __init__(self, court_id: str = "scotus") -> None:
         self.court_id = court_id
         self.tree: HtmlElement | None = None
 
@@ -202,7 +202,7 @@ class SCOTUSEmail:
         r"^Supreme Court Case Notification .+$"
     )
 
-    def __init__(self, court_id: str = "scotus"):
+    def __init__(self, court_id: str = "scotus") -> None:
         self.court_id: str = court_id
         self.tree: HtmlElement | None = None
         self.message: Message | None = None
@@ -472,7 +472,7 @@ class SCOTUSEmail:
         return anchor.get("href")
 
 
-def _main():
+def _main() -> None:
     """Parse a local email file and pretty print extracted data.
 
     :return: None

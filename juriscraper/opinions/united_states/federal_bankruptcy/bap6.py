@@ -14,6 +14,6 @@ class Site(ca6.Site):
         "CRM": "Charles R. Merrill",
     }
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.should_have_results = False

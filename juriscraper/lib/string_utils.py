@@ -290,7 +290,7 @@ BW = (
 BAD_WORDS = re.compile(r"^(%s)(,|\.)?$" % BW, re.I)
 
 
-def harmonize(text) -> str:
+def harmonize(text: object) -> str:
     """Fixes case names so they are cleaner.
 
     Using a bunch of regex's, this function cleans up common data problems in
@@ -349,7 +349,7 @@ def harmonize(text) -> str:
     return clean_string(result)
 
 
-def clean_string(s) -> str:
+def clean_string(s: object) -> str:
     """Clean up strings.
 
     Accomplishes the following:
@@ -410,7 +410,10 @@ def clean_string(s) -> str:
 
 
 def force_unicode(
-    s, encoding="utf-8", strings_only=False, errors="strict"
+    s: object,
+    encoding: str = "utf-8",
+    strings_only: bool = False,
+    errors: str = "strict",
 ) -> str:
     # Borrows heavily from django.utils.encoding.force_unicode.
     # This should be applied to *input* not *output*!
@@ -568,7 +571,7 @@ def normalize_dashes(raw_string: str) -> str:
 
 
 class CaseNameTweaker:
-    def __init__(self):
+    def __init__(self) -> None:
         self._bad_words: list[str] | None = None
         super().__init__()
 

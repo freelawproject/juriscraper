@@ -7,13 +7,16 @@ import os
 import sys
 import unittest
 
+from typing_extensions import override
+
 from juriscraper.lib.exceptions import ParsingException
 from juriscraper.pacer import PossibleCaseNumberApi
 from tests import TESTS_ROOT_EXAMPLES_PACER
 
 
 class PacerPossibleCaseNumbersTest(unittest.TestCase):
-    def setUp(self):
+    @override
+    def setUp(self) -> None:
         xml = """
             <request number="16-01152">
                 <case number="1:16-cr-1152" id="1000068"
@@ -40,7 +43,7 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
         self.report = PossibleCaseNumberApi("anything")
         self.report._parse_text(xml)
 
-    def test_parsing_results(self):
+    def test_parsing_results(self) -> None:
         """Can we do a simple query and parse?"""
         paths = []
         path_root = os.path.join(
@@ -81,17 +84,17 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
 
             sys.stdout.write("✓\n")
 
-    def test_filtering_by_office_number(self):
+    def test_filtering_by_office_number(self) -> None:
         """Can we filter by office number?"""
         d = self.report.data(office_number="1")
         self.assertEqual("1000068", d["pacer_case_id"])
 
-    def test_filtering_by_civil_or_criminal(self):
+    def test_filtering_by_civil_or_criminal(self) -> None:
         """Can we filter by civil or criminal?"""
         d = self.report.data(docket_number_letters="cv")
         self.assertEqual("977547", d["pacer_case_id"])
 
-    def test_filtering_by_office_and_civil_criminal(self):
+    def test_filtering_by_office_and_civil_criminal(self) -> None:
         """Can we filter by multiple variables?"""
         d = self.report.data(
             office_number="2",
@@ -99,27 +102,27 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
         )
         self.assertEqual("977548", d["pacer_case_id"])
 
-    def test_filtering_by_case_name(self):
+    def test_filtering_by_case_name(self) -> None:
         d = self.report.data(case_name="Willy Wonka")
         self.assertEqual("977547", d["pacer_case_id"])
 
-    def test_filtering_by_office_and_case_name(self):
+    def test_filtering_by_office_and_case_name(self) -> None:
         d = self.report.data(office_number="2", case_name="Willy Wonka")
         self.assertEqual("977547", d["pacer_case_id"])
 
-    def test_choosing_the_lowest_sequentially(self):
+    def test_choosing_the_lowest_sequentially(self) -> None:
         """When the ids are sequential, can we pick the lowest one?"""
         d = self.report.data(office_number="2")
         self.assertEqual("977547", d["pacer_case_id"])
 
-    def test_cannot_make_choice_because_not_sequential_ids(self):
+    def test_cannot_make_choice_because_not_sequential_ids(self) -> None:
         """When the remaining nodes only have IDs that aren't sequential, do we
         give up and throw an error?
         """
         with self.assertRaises(ParsingException):
             _ = self.report.data(office_number="3")
 
-    def test_no_case_name_with_sequential_ids(self):
+    def test_no_case_name_with_sequential_ids(self) -> None:
         """Does this work properly when we don't have a case name, but we do
         have the office number, criminal vs. civil info, and sequential ids?
         """
@@ -144,7 +147,7 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
         d = report.data(office_number="4", docket_number_letters="cr")
         self.assertEqual("313707", d["pacer_case_id"])
 
-    def test_pick_sequentially_by_defendant_number(self):
+    def test_pick_sequentially_by_defendant_number(self) -> None:
         """Does this work properly when we pick by sequential defendant number?"""
         xml = """
         <request number='1700355'>

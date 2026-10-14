@@ -14,7 +14,9 @@ from juriscraper.lib.test_utils import warn_or_crash_slow_parser
 class PacerParseTestCase(unittest.TestCase):
     """A mixin to add a parsing test."""
 
-    def parse_files(self, path_root, file_ext, test_class):
+    def parse_files(
+        self, path_root: str | os.PathLike[str], file_ext: str, test_class
+    ) -> None:
         """Can we do a simple query and parse?"""
         paths = []
         for root, _, filenames in os.walk(path_root):

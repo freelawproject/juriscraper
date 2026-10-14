@@ -1,3 +1,6 @@
+from collections.abc import Sequence
+from datetime import date
+
 from juriscraper.AbstractSite import AbstractSite
 
 
@@ -32,22 +35,22 @@ class OralArgumentSite(AbstractSite):
         for attr in self._all_attrs:
             self.__setattr__(attr, None)
 
-    def _get_download_urls(self):
+    def _get_download_urls(self) -> Sequence[str]:
         raise NotImplementedError(
             "`_get_download_urls()` must be implemented."
         )
 
-    def _get_case_dates(self):
+    def _get_case_dates(self) -> Sequence[date | str | None]:
         raise NotImplementedError("`_get_case_dates()` must be implemented.")
 
-    def _get_case_names(self):
+    def _get_case_names(self) -> Sequence[str]:
         raise NotImplementedError("`_get_case_names()` must be implemented.")
 
-    def _get_docket_numbers(self):
+    def _get_docket_numbers(self) -> Sequence[str | None] | None:
         return None
 
-    def _get_judges(self):
+    def _get_judges(self) -> Sequence[str | None] | None:
         return None
 
-    def _get_attorneys(self):
+    def _get_attorneys(self) -> Sequence[str | None] | None:
         return None

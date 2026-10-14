@@ -1,5 +1,6 @@
 import httpx
-from lxml.html import fromstring
+from lxml.html import HtmlElement, fromstring
+from typing_extensions import override
 
 from juriscraper.lib.log_tools import make_default_logger
 
@@ -13,8 +14,12 @@ class LASCSession(httpx.AsyncClient):
     """
 
     def __init__(
-        self, username=None, password=None, user_agent="Juriscraper", **kwargs
-    ):
+        self,
+        username: str | None = None,
+        password: str | None = None,
+        user_agent: str = "Juriscraper",
+        **kwargs,
+    ) -> None:
         """
         Instantiate a new LASC HTTP Session with some Juriscraper defaults.
         This method requires credentials from the media access portal.
@@ -27,7 +32,7 @@ class LASCSession(httpx.AsyncClient):
         kwargs.setdefault("follow_redirects", True)
         super().__init__(**kwargs)
 
-        self.html = None
+        self.html: HtmlElement | None = None
 
         # Los Angeles Superior Court MAP urls and paths
         la_url = "https://media.lacourt.org"
@@ -59,7 +64,10 @@ class LASCSession(httpx.AsyncClient):
             "User-Agent": self.user_agent,
         }
 
-    async def get(self, url, auto_login=False, **kwargs):
+    @override
+    async def get(
+        self, url: httpx.URL | str, auto_login: bool = False, **kwargs
+    ) -> httpx.Response:
         """Overrides httpx.AsyncClient.get with session retry logic.
 
         :param url: url string to GET
@@ -71,7 +79,10 @@ class LASCSession(httpx.AsyncClient):
 
         return await super().get(url, **kwargs)
 
-    async def post(self, url, auto_login=False, **kwargs):
+    @override
+    async def post(
+        self, url: httpx.URL | str, auto_login: bool = False, **kwargs
+    ) -> httpx.Response:
         """Overrides httpx.AsyncClient.post with session retry logic.
 
         :param url: url string to GET
@@ -84,7 +95,7 @@ class LASCSession(httpx.AsyncClient):
         return await super().post(url, **kwargs)
 
     @staticmethod
-    def _parse_new_html_for_keys(r):
+    def _parse_new_html_for_keys(r: httpx.Response) -> dict[str, str]:
         """Parse the current page for new key data
 
         This method parses the HTML after the first login page and identifies
@@ -119,10 +130,10 @@ class LASCSession(httpx.AsyncClient):
             logger.info("Invalid Email Address")
             raise LASCLoginException("Invalid Email Address")
 
-    def _update_header_token(self, r):
+    def _update_header_token(self, r: httpx.Response) -> None:
         self.headers["X-CSRF-TOKEN"] = r.text.split("csrf")[1].split('"')[2]
 
-    async def login(self):
+    async def login(self) -> None:
         """Log into the LASC Media Access Portal
         The process is tricky, requiring two GET requests, each of which
         returns HTML or JSON that is parsed for values to send in a subsequent
@@ -350,5 +361,5 @@ class LASCLoginException(Exception):
     Raised when the system cannot authenticate with LASC MAP
     """
 
-    def __init__(self, message):
+    def __init__(self, message: str) -> None:
         Exception.__init__(self, message)

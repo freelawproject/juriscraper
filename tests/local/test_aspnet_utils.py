@@ -16,7 +16,7 @@ SIGNATURE_RE = re.compile(r"0[xX][0-9a-fA-F]{3}")
 
 
 class DefangWafSqliSignatureTest(unittest.TestCase):
-    def test_hex_literal_runs_are_split(self):
+    def test_hex_literal_runs_are_split(self) -> None:
         form = {"__VIEWSTATE": "abc0x1a2def"}
 
         defanged = breakup_hex_substrings(form)
@@ -24,14 +24,14 @@ class DefangWafSqliSignatureTest(unittest.TestCase):
         self.assertEqual(defanged["__VIEWSTATE"], "abc0\nx1a2def")
         self.assertIsNone(SIGNATURE_RE.search(defanged["__VIEWSTATE"]))
 
-    def test_every_run_is_split(self):
+    def test_every_run_is_split(self) -> None:
         form = {"__VIEWSTATE": "0xdeadbeef mid 0XABC tail 0x123"}
 
         defanged = breakup_hex_substrings(form)
 
         self.assertIsNone(SIGNATURE_RE.search(defanged["__VIEWSTATE"]))
 
-    def test_shorter_hex_runs_are_left_alone(self):
+    def test_shorter_hex_runs_are_left_alone(self) -> None:
         """Fewer than three hex digits after the 0x doesn't trip the rule."""
         form = {"__VIEWSTATE": "0x1 and 0xab and 0xgg"}
 
@@ -40,14 +40,14 @@ class DefangWafSqliSignatureTest(unittest.TestCase):
             "0x1 and 0xab and 0xgg",
         )
 
-    def test_event_validation_is_defanged_too(self):
+    def test_event_validation_is_defanged_too(self) -> None:
         form = {"__EVENTVALIDATION": "0x1a2"}
 
         self.assertEqual(
             breakup_hex_substrings(form)["__EVENTVALIDATION"], "0\nx1a2"
         )
 
-    def test_decoded_viewstate_is_unchanged(self):
+    def test_decoded_viewstate_is_unchanged(self) -> None:
         """Base64 decoding ignores whitespace, so the ViewState MAC still
         validates after the rewrite.
         """
@@ -64,7 +64,7 @@ class DefangWafSqliSignatureTest(unittest.TestCase):
             base64.b64decode(view_state),
         )
 
-    def test_other_fields_are_left_untouched(self):
+    def test_other_fields_are_left_untouched(self) -> None:
         """Non-Base64 fields can't take whitespace, so they're only logged."""
         form = {"__VIEWSTATE": "0x1a2", "ctl00$q": "0xdeadbeef"}
 
@@ -72,14 +72,14 @@ class DefangWafSqliSignatureTest(unittest.TestCase):
 
         self.assertEqual(defanged["ctl00$q"], "0xdeadbeef")
 
-    def test_input_is_not_mutated(self):
+    def test_input_is_not_mutated(self) -> None:
         form = {"__VIEWSTATE": "0x1a2"}
 
         breakup_hex_substrings(form)
 
         self.assertEqual(form["__VIEWSTATE"], "0x1a2")
 
-    def test_clean_and_empty_bodies_survive(self):
+    def test_clean_and_empty_bodies_survive(self) -> None:
         self.assertEqual(breakup_hex_substrings({}), {})
         self.assertEqual(
             breakup_hex_substrings({"__VIEWSTATE": "", "a": "b"}),
@@ -88,12 +88,12 @@ class DefangWafSqliSignatureTest(unittest.TestCase):
         clean = {"__VIEWSTATE": "no hex literals here"}
         self.assertEqual(breakup_hex_substrings(clean), clean)
 
-    def test_regex_boundaries(self):
+    def test_regex_boundaries(self) -> None:
         self.assertIsNone(WAF_SQLI_HEX_LITERAL_RE.search("0x1a"))
         self.assertIsNotNone(WAF_SQLI_HEX_LITERAL_RE.search("0x1a2"))
         self.assertIsNotNone(WAF_SQLI_HEX_LITERAL_RE.search("0X1a2"))
 
-    def test_uppercase_x_is_defanged_and_its_case_kept(self):
+    def test_uppercase_x_is_defanged_and_its_case_kept(self) -> None:
         """The gateway blocks "0X1a2" just as readily as "0x1a2"."""
         form = {"__VIEWSTATE": "0X1a2"}
 

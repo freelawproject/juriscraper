@@ -5,9 +5,13 @@ import pprint
 import re
 import sys
 from html import unescape
+from types import TracebackType
+from typing import Self
 
 import feedparser
+from feedparser.util import FeedParserDict
 from httpx import AsyncClient, Timeout
+from typing_extensions import override
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import clean_string, harmonize
@@ -75,7 +79,7 @@ reached out to all of these jurisdictions and heard back the following:
 """
 
 
-def append_or_merge_entry(docket_list, new_docket):
+def append_or_merge_entry(docket_list, new_docket) -> None:
     """Append new entry to our output or merge it if it's a multi-event entry.
 
     CMECF entries can contain multiple events, e.g. anyone filing a Motion can
@@ -133,7 +137,7 @@ class PacerRssFeed(DocketReport):
 
     CACHE_ATTRS = ["data"]
 
-    def __init__(self, court_id, **kwargs):
+    def __init__(self, court_id: str, **kwargs) -> None:
         super().__init__(court_id)
         self._clear_caches()
         self._data = None
@@ -153,17 +157,22 @@ class PacerRssFeed(DocketReport):
         else:
             self.is_bankruptcy = False
 
-    async def __aenter__(self):
+    async def __aenter__(self) -> Self:
         assert self.session is not None
         await self.session.__aenter__()
         return self
 
-    async def __aexit__(self, exc_type, exc_value, traceback):
+    async def __aexit__(
+        self,
+        exc_type: type[BaseException] | None,
+        exc_value: BaseException | None,
+        traceback: TracebackType | None,
+    ) -> None:
         assert self.session is not None
         await self.session.__aexit__(exc_type, exc_value, traceback)
 
     @property
-    def url(self):
+    def url(self) -> str:
         if self.court_id == "nyed":
             # EDNY has some special RSS software. In Sept. 2017,
             # rss_outside.pl redirected to readyDockets.pl:
@@ -182,7 +191,7 @@ class PacerRssFeed(DocketReport):
         else:
             return f"https://ecf.{self.court_id}.uscourts.gov/{self.PATH}"
 
-    async def query(self):
+    async def query(self) -> None:
         """Query the RSS feed for a given court ID
 
         Note that we use httpx here, and so we forgo some of the
@@ -207,12 +216,12 @@ class PacerRssFeed(DocketReport):
         timeout = Timeout(5, read=20)
         self.response = await self.session.get(self.url, timeout=timeout)
 
-    def parse(self):
+    def parse(self) -> None:
         self._clear_caches()
         self.response.raise_for_status()
         self._parse_text(self.response.text)
 
-    def _parse_text(self, text):
+    def _parse_text(self, text: str) -> None:
         """Parse the feed and set self.feed
 
         :param text: The text of the RSS feed.
@@ -221,6 +230,7 @@ class PacerRssFeed(DocketReport):
         self.feed = feedparser.parse(text)
 
     @property
+    @override
     def data(self):
         """Override this to create a list of docket-like objects instead of the
         usual dict that is usually provided by the docket report.
@@ -248,7 +258,7 @@ class PacerRssFeed(DocketReport):
         self._data = docket_list
         return docket_list
 
-    def metadata(self, entry):
+    def metadata(self, entry: FeedParserDict):
         if self.is_valid is False:
             return {}
 
@@ -292,7 +302,7 @@ class PacerRssFeed(DocketReport):
     def parties(self):
         raise NotImplementedError("No parties for RSS feeds.")
 
-    def docket_entries(self, entry):
+    def docket_entries(self, entry: FeedParserDict):
         """Parse the RSS item to get back a docket entry-like object.
         Although there is only one, return it as a list.
         """
@@ -330,7 +340,7 @@ class PacerRssFeed(DocketReport):
 
         return [de]
 
-    def _parse_get_trustee_type_office_chapter(self, entry_text):
+    def _parse_get_trustee_type_office_chapter(self, entry_text: str):
         if not self.is_bankruptcy:
             return {}
         data_parts_re = re.compile(
@@ -381,7 +391,7 @@ class PacerRssFeed(DocketReport):
                 return match.group(1), docket_number_components
         return None, self._return_default_dn_components()
 
-    def _get_case_name(self, title_text):
+    def _get_case_name(self, title_text: str) -> str:
         # 1:18-cv-04423 Chau v. Gorg &amp; Smith et al --> Chau v. Gorg & Smith
         try:
             case_name = title_text.split(" ", 1)[1]
@@ -392,7 +402,7 @@ class PacerRssFeed(DocketReport):
         return case_name
 
 
-async def _main():
+async def _main() -> None:
     # For help: python -m juriscraper.pacer.rss_feeds -h
     parser = argparse.ArgumentParser(
         prog="python -m %s.%s"

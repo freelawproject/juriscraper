@@ -60,15 +60,15 @@ class Site(OpinionSiteLinear):
     @override
     def _process_html(self) -> None:
         for row in self.html.xpath("//div[contains(@class,'case-result')]"):
-            date_filed = row.xpath(
+            date_filed: str = row.xpath(
                 "preceding-sibling::div[contains(@class,'result-heading')]/h3/text()"
             )[-1]
-            docket = row.xpath(
+            docket: str = row.xpath(
                 ".//span[contains(@class, 'case-number')]/text()"
             )[0]
-            name = row.xpath(".//span[contains(@class, 'case-name')]/text()")[
-                0
-            ]
+            name: str = row.xpath(
+                ".//span[contains(@class, 'case-name')]/text()"
+            )[0]
 
             summary = row.xpath(".//div[@class='result-info']/p/text()")
             if summary:
@@ -77,7 +77,9 @@ class Site(OpinionSiteLinear):
                 # Unpublished opinions don't have a summary
                 summary = ""
 
-            url = row.xpath(".//a[contains(@class,'download-link')]/@href")[0]
+            url: str = row.xpath(
+                ".//a[contains(@class,'download-link')]/@href"
+            )[0]
             self.cases.append(
                 {
                     "docket": docket,
@@ -88,6 +90,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Reuse base function to get a sequence of date objects for
         each month in the interval. Then, convert them to target URLs
@@ -133,6 +136,7 @@ class Site(OpinionSiteLinear):
             str(date_obj.month).zfill(2),
         )
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract docket number from the scraped text.
 

@@ -37,7 +37,7 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
     days_interval = (datetime.today() - first_opinion_date).days + 2
     name_regex = re.compile(r"^(.*?)(\s*(\d{4}\sND\s\d+))\s*$")
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.ndcourts.gov/supreme-court/opinions?topic=&author=&searchQuery=&trialJudge=&pageSize=100&sortOrder=1"
@@ -59,7 +59,7 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
         seen_urls = set()
 
         for row in self.html.xpath('//table//div[@class="row"]'):
-            onclick = row.xpath(".//button[@onclick]/@onclick")
+            onclick: list[str] = row.xpath(".//button[@onclick]/@onclick")
             if not onclick:
                 logger.info("Skipping row without a 'View Opinion' button")
                 continue
@@ -140,6 +140,7 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
 
         return name.strip(), other_dockets
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract model fields from opinion's document text
 
@@ -215,6 +216,7 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
 
         return metadata
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
 

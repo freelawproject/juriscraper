@@ -3,15 +3,18 @@
 
 import os
 
+from typing_extensions import override
+
 from juriscraper.pacer import AttachmentPage
 from tests import TESTS_ROOT_EXAMPLES_PACER
 from tests.local.PacerParseTestCase import PacerParseTestCase
 
 
 class PacerParseAttachmentPageTest(PacerParseTestCase):
-    def setUp(self):
+    @override
+    def setUp(self) -> None:
         self.maxDiff = 200000
 
-    def test_parsing_attachment_pages(self):
+    def test_parsing_attachment_pages(self) -> None:
         path_root = os.path.join(TESTS_ROOT_EXAMPLES_PACER, "attachment_pages")
         self.parse_files(path_root, "*.html", AttachmentPage)

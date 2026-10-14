@@ -3,6 +3,7 @@ from datetime import date, datetime, timedelta
 from typing import Any
 from urllib.parse import urlencode
 
+from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
@@ -24,7 +25,7 @@ class Site(OpinionSiteLinear):
     first_opinion_date = datetime(1900, 1, 1)
     days_interval = 15
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.set_url()
@@ -39,26 +40,28 @@ class Site(OpinionSiteLinear):
 
         :return None
         """
-        rows = self.html.xpath("//div[@class='info']")
+        rows: list[HtmlElement] = self.html.xpath("//div[@class='info']")
         if len(rows) >= 25:
             logger.info(
                 "25 results for this query, results may be lost in pagination"
             )
 
         for row in rows:
-            url = row.xpath(
+            url: str = row.xpath(
                 ".//a[contains(@title, 'Download the PDF version')]/@href"
             )[0]
-            name = row.xpath(".//span[@class='title']/a/text()")[0]
-            date_filed = row.xpath(".//span[@class='publicationDate']/text()")[
-                0
-            ]
+            name: str = row.xpath(".//span[@class='title']/a/text()")[0]
+            date_filed: str = row.xpath(
+                ".//span[@class='publicationDate']/text()"
+            )[0]
 
-            cite = row.xpath(".//span[@class='citation']/text()")
+            cite: list[str] = row.xpath(".//span[@class='citation']/text()")
             citation = cite[0] if cite else ""
 
             status = "Unknown"
-            metadata = row.xpath(".//div[@class='subMetadata']/span/text()")
+            metadata: list[str] = row.xpath(
+                ".//div[@class='subMetadata']/span/text()"
+            )
             if metadata:
                 if "Reported" in metadata[-1] or "Slip" in metadata[-1]:
                     status = "Published"
@@ -110,6 +113,7 @@ class Site(OpinionSiteLinear):
         }
         self.url = f"{self.base_url}?{urlencode(params)}"
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
 
@@ -121,6 +125,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
         """Pass scraped text into function and return data as a dictionary
 

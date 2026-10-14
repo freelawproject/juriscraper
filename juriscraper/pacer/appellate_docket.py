@@ -92,18 +92,18 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
     async def query(
         self,
-        docket_number,
-        show_docket_entries=False,
-        show_orig_docket=False,
-        show_prior_cases=False,
-        show_associated_cases=False,
-        show_panel_info=False,
-        show_party_atty_info=False,
-        show_caption=False,
-        date_start=None,
-        date_end=None,
-        output_format="html",
-    ):
+        docket_number: str,
+        show_docket_entries: bool = False,
+        show_orig_docket: bool = False,
+        show_prior_cases: bool = False,
+        show_associated_cases: bool = False,
+        show_panel_info: bool = False,
+        show_party_atty_info: bool = False,
+        show_caption: bool = False,
+        date_start: datetime.date | None = None,
+        date_end: datetime.date | None = None,
+        output_format: str = "html",
+    ) -> None:
         """
         Query PACER to get a docket report.
 
@@ -264,7 +264,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         super().parse()
 
     async def download_pdf(
-        self, pacer_doc_id, pacer_case_id=None
+        self, pacer_doc_id: str, pacer_case_id: str | None = None
     ) -> tuple[Response | None, str]:
         """Download a PDF from an appellate court.
 
@@ -985,7 +985,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         return appeal_from
 
 
-def _main():
+def _main() -> None:
     if len(sys.argv) != 2:
         print("Usage: python -m juriscraper.pacer.appellate_docket filepath")
         print("Please provide a path to an HTML file to parse.")

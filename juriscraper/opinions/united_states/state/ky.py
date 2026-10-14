@@ -47,7 +47,7 @@ class Site(OpinionSiteLinear):
     # Examples: "2022-CA-1454, 1456, 1457"
     docket_regex = r"\d{4}-(CA|SC)-\d{4}(,\s?\d{4})*"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.set_url()
@@ -181,6 +181,7 @@ class Site(OpinionSiteLinear):
         self._post_process_response()
         return self._return_response_text_object()
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Set date range from backscraping args and scrape
 
@@ -192,6 +193,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         await self._process_html()
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court from the scraped text.
 

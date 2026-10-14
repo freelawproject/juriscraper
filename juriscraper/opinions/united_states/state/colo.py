@@ -39,7 +39,7 @@ class Site(OpinionSiteLinear):
     }
     docket_number_regex = r"\d{2,4}(?:SC|AS|SA)\d{1,4}"
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.params = {
@@ -212,6 +212,7 @@ class Site(OpinionSiteLinear):
                 case["docket"] = ""
             self.cases.append(case)
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request
 
@@ -223,7 +224,9 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         await self._process_html()
 
-    def update_url(self, dates: tuple[date] | None = None) -> tuple[date]:
+    def update_url(
+        self, dates: tuple[date, date] | None = None
+    ) -> tuple[date, date]:
         """
         Set URL with date filters and current timestamp.
         Request with no date filter was returning very old documents
@@ -250,6 +253,7 @@ class Site(OpinionSiteLinear):
         self.url = f"{self.base_url}?{urlencode(params)}"
         return dates
 
+    @override
     @staticmethod
     def cleanup_content(content):
         """Wrap content in HTML structure if needed
@@ -268,7 +272,7 @@ class Site(OpinionSiteLinear):
         return content.encode("utf-8")
 
     async def update_page_size(
-        self, total_count: int, results_in_page: int, dates: tuple[date]
+        self, total_count: int, results_in_page: int, dates: tuple[date, date]
     ) -> dict:
         new_per_page = min(
             total_count, 500
@@ -291,6 +295,7 @@ class Site(OpinionSiteLinear):
         )
         return search_json
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         docket_pattern = re.compile(self.docket_number_regex)
         metadata = {}

@@ -8,7 +8,7 @@ History:
 """
 
 import re
-from datetime import datetime
+from datetime import date, datetime
 from urllib.parse import urlencode, urljoin
 
 from typing_extensions import override
@@ -69,7 +69,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def make_backscrape_iterable(self, kwargs):
+    @override
+    def make_backscrape_iterable(self, kwargs) -> None:
         """Checks if backscrape start and end arguments have been passed
         by caller, and parses them accordingly
 
@@ -110,7 +111,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
-    def date_is_in_backscrape_range(self, case_date):
+    def date_is_in_backscrape_range(self, case_date: date) -> bool:
         """When backscraping, check if the case date is in
         the backscraping range
 
@@ -119,7 +120,8 @@ class Site(OpinionSiteLinear):
         """
         return self.start_date <= case_date <= self.end_date
 
-    def extract_from_text(self, scraped_text):
+    @override
+    def extract_from_text(self, scraped_text: str):
         """Extract the following values from the opinion's pdf text. The information we need is in the first page
             - appeal_from_str
             - judges

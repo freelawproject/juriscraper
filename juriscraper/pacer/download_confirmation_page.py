@@ -19,7 +19,7 @@ class DownloadConfirmationPage(BaseReport):
     download page.
     """
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None) -> None:
         super().__init__(court_id, pacer_session)
 
         self.is_appellate = False
@@ -30,7 +30,7 @@ class DownloadConfirmationPage(BaseReport):
         ]:
             self.is_appellate = True
 
-    async def query(self, pacer_doc_id):
+    async def query(self, pacer_doc_id: str) -> None:
         """Query the "confirmation download page" endpoint and set the results
         to self.response.
 
@@ -59,7 +59,7 @@ class DownloadConfirmationPage(BaseReport):
         self.parse()
 
     @property
-    def data(self):
+    def data(self) -> dict[str, str | datetime | None]:
         """Get data back from the query for the matching document entry.
 
         :return: If lookup fails, an empty dict. Else, a dict containing the

@@ -31,7 +31,7 @@ class Site(OpinionSiteLinear):
     days_interval = 30
     use_urllib = True
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         today = date.today()
@@ -66,7 +66,7 @@ class Site(OpinionSiteLinear):
                 logger.warning("Skipping record from other court, %s", cells)
                 continue
 
-            url = cells[5].xpath(".//a/@href")
+            url: list[str] = cells[5].xpath(".//a/@href")
             self.cases.append(
                 {
                     "date": cells[0].text_content().strip(),
@@ -77,6 +77,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Backscrape using the /Documents/Search endpoint
 

@@ -1,6 +1,8 @@
 import unittest
 from datetime import date
 
+from typing_extensions import override
+
 from juriscraper.pacer import ACMSDocketReport
 from tests.network import SKIP_IF_NO_PACER_LOGIN, get_pacer_session
 
@@ -8,7 +10,8 @@ from tests.network import SKIP_IF_NO_PACER_LOGIN, get_pacer_session
 class AcmsDocketReportTest(unittest.IsolatedAsyncioTestCase):
     """A test of basic info for the Case Query"""
 
-    async def asyncSetUp(self):
+    @override
+    async def asyncSetUp(self) -> None:
         self.session = get_pacer_session()
         self.addAsyncCleanup(self.session.aclose)
         await self.session.login()
@@ -16,7 +19,7 @@ class AcmsDocketReportTest(unittest.IsolatedAsyncioTestCase):
         self.pacer_case_id = "ee86bf29-5e50-f011-a2da-001dd8307a8d"  # Partners Agency Services, LLC v. LaMonica
 
     @SKIP_IF_NO_PACER_LOGIN
-    async def test_queries(self):
+    async def test_queries(self) -> None:
         """Do a variety of queries work?"""
         await self.report.query(self.pacer_case_id)
         metadata = self.report.metadata

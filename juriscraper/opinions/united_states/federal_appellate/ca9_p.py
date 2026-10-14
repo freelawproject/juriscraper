@@ -20,7 +20,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = "https://www.ca9.uscourts.gov/decisions/opinions/index.xml"
@@ -42,6 +42,7 @@ class Site(OpinionSiteLinear):
             if case not in self.cases:
                 self.cases.append(case)
 
+    @override
     def extract_from_text(self, scraped_text: str) -> dict:
         """Extract lower court from the scraped text.
 

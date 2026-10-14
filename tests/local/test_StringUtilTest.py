@@ -19,7 +19,7 @@ from juriscraper.lib.string_utils import (
 
 
 class StringUtilTest(unittest.TestCase):
-    def test_make_short_name(self):
+    def test_make_short_name(self) -> None:
         test_pairs = [
             # In re and Matter of
             ("In re Lissner", "In re Lissner"),
@@ -229,7 +229,7 @@ class StringUtilTest(unittest.TestCase):
                 % (t[0], t[1], output),
             )
 
-    def test_quarter(self):
+    def test_quarter(self) -> None:
         answers = {
             1: 1,
             2: 1,
@@ -247,7 +247,7 @@ class StringUtilTest(unittest.TestCase):
         for month, q in answers.items():
             self.assertEqual(quarter(month), q)
 
-    def test_is_first_month_in_quarter(self):
+    def test_is_first_month_in_quarter(self) -> None:
         answers = {
             1: True,
             2: False,
@@ -260,7 +260,7 @@ class StringUtilTest(unittest.TestCase):
         for month, is_first in answers.items():
             self.assertEqual(is_first_month_in_quarter(month), is_first)
 
-    def test_harmonize_and_clean_string_tests(self):
+    def test_harmonize_and_clean_string_tests(self) -> None:
         """Tests various inputs for the clean_string and harmonize functions"""
         test_pairs = [
             # Et al
@@ -384,7 +384,7 @@ class StringUtilTest(unittest.TestCase):
             with self.subTest("Harmonize function", test=pair[0]):
                 self.assertEqual(harmonize(clean_string(pair[0])), pair[1])
 
-    def test_normalize_phrase(self):
+    def test_normalize_phrase(self) -> None:
         """Tests normalization of case titles."""
         test_pairs = [
             ["Commissioner v. Palin", "palin"],
@@ -401,7 +401,7 @@ class StringUtilTest(unittest.TestCase):
                 normalize_phrase(harmonize(clean_string(pair[0]))), pair[1]
             )
 
-    def test_titlecase(self):
+    def test_titlecase(self) -> None:
         """Tests various inputs for the titlecase function"""
         test_pairs = [
             [
@@ -541,7 +541,7 @@ class StringUtilTest(unittest.TestCase):
             unicode_string = force_unicode(pair[0])
             self.assertEqual(titlecase(unicode_string, DEBUG=False), pair[1])
 
-    def test_fixing_camel_case(self):
+    def test_fixing_camel_case(self) -> None:
         """Can we correctly identify and fix camelCase?"""
         test_pairs = (
             # A nasty one with a v in the middle and two uppercase letters
@@ -583,7 +583,7 @@ class StringUtilTest(unittest.TestCase):
         for pair in test_pairs:
             self.assertEqual(pair[1], fix_camel_case(pair[0]))
 
-    def test_split_date_range_string(self):
+    def test_split_date_range_string(self) -> None:
         tests = {
             "October - December 2016": convert_date_string(
                 "November 16, 2016"
@@ -603,7 +603,7 @@ class StringUtilTest(unittest.TestCase):
                     "Unrecognized date format:"
                 )
 
-    def test_normalize_dashes(self):
+    def test_normalize_dashes(self) -> None:
         tests = [
             # copied from http://www.w3schools.com/charsets/ref_utf_punctuation.asp
             " this is    –a test–",  # en dash

@@ -263,6 +263,7 @@ class Site(OpinionSiteLinear):
         )
         return ""
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Collapse the default per-interval windows into a single range
 
@@ -278,6 +279,7 @@ class Site(OpinionSiteLinear):
         end = self.back_scrape_iterable[-1][1]
         self.back_scrape_iterable = [(start, end)]
 
+    @override
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Page through the date-sorted feed for a backscrape window
 

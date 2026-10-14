@@ -2,6 +2,8 @@ import pprint
 import re
 import sys
 
+from lxml.html import HtmlElement
+
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import force_unicode
 
@@ -22,13 +24,13 @@ class AttachmentPage(BaseReport):
 
     PATH = "doc1/"
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None) -> None:
         super().__init__(court_id, pacer_session)
         # Note that parsing bankruptcy attachment pages does not reveal the
         # document number, only the attachment numbers.
         self.is_bankruptcy = self.court_id.endswith("b")
 
-    async def query(self, document_number):
+    async def query(self, document_number: str) -> None:
         """Query the "attachment page" endpoint and set the results to self.response.
 
         :param document_number: The internal PACER document ID for the item.
@@ -68,7 +70,7 @@ class AttachmentPage(BaseReport):
         if self.is_valid is False:
             return {}
 
-        rows = self.tree.xpath("//tr[.//a]")
+        rows: list[HtmlElement] = self.tree.xpath("//tr[.//a]")
         if not rows:
             logger.info("No documents found on attachment page.")
             return {}
@@ -116,14 +118,14 @@ class AttachmentPage(BaseReport):
 
         return result
 
-    def _get_document_number(self):
+    def _get_document_number(self) -> int | None:
         """Return the document number for an item.
 
         In district court attachment pages, this is easy to extract with an
         XPath. In bankruptcy cases, it's sometimes not there.
         """
         # First try inspecting the input elements
-        input_els = self.tree.xpath("//input")
+        input_els: list[HtmlElement] = self.tree.xpath("//input")
         for input_el in input_els:
             try:
                 name = input_el.xpath("./@name")[0]
@@ -157,7 +159,7 @@ class AttachmentPage(BaseReport):
                 continue
         return None
 
-    def _decrement_attachment_index(self, row):
+    def _decrement_attachment_index(self, row: HtmlElement) -> bool:
         """Return if we need to decrement the attachment index.
 
         We need to do this for all bankruptcy courts and old attachment pages
@@ -224,7 +226,7 @@ class AttachmentPage(BaseReport):
         dlsid = int(doc_id[3:])
         return sub_dlsid[court_id] >= dlsid
 
-    def _get_name_attachment_number(self, row):
+    def _get_name_attachment_number(self, row: HtmlElement) -> int | None:
         try:
             name = row.xpath(".//input/@name")[0]
         except IndexError:
@@ -236,7 +238,7 @@ class AttachmentPage(BaseReport):
                 return int(split[2])
         return None
 
-    def _get_attachment_number(self, row):
+    def _get_attachment_number(self, row: HtmlElement) -> int:
         """Return the attachment number for an item.
 
         In district courts, this can be easily extracted. In bankruptcy courts,
@@ -250,9 +252,9 @@ class AttachmentPage(BaseReport):
             return number - 1
         return number
 
-    def _get_description_from_tr(self, row):
+    def _get_description_from_tr(self, row: HtmlElement) -> str:
         """Get the description from the row"""
-        columns_in_row = row.xpath("./td")
+        columns_in_row: list[HtmlElement] = row.xpath("./td")
         if not self.is_bankruptcy:
             index = 2
             # Some NEFs attachment pages for some courts have an extra column
@@ -264,7 +266,7 @@ class AttachmentPage(BaseReport):
             if len(columns_in_row) == 6:
                 index = 4
 
-        description_text_nodes = row.xpath(f"./td[{index}]//text()")
+        description_text_nodes: list[str] = row.xpath(f"./td[{index}]//text()")
         if not description_text_nodes:
             # No text in the cell.
             return ""
@@ -272,7 +274,7 @@ class AttachmentPage(BaseReport):
         return force_unicode(description)
 
     @staticmethod
-    def _get_page_count_from_tr_input_value(tr):
+    def _get_page_count_from_tr_input_value(tr: HtmlElement) -> int | None:
         """Take a row from the attachment table and return the page count as an
         int extracted from the input value.
         """
@@ -281,14 +283,16 @@ class AttachmentPage(BaseReport):
             return int(count)
 
     @staticmethod
-    def _get_page_count_from_tr(tr):
+    def _get_page_count_from_tr(tr: HtmlElement) -> int | None:
         """Take a row from the attachment table and return the page count as an
         int extracted from the cell specified by index.
         """
         pg_cnt_input = AttachmentPage._get_page_count_from_tr_input_value(tr)
         if pg_cnt_input:
             return pg_cnt_input
-        pg_cnt_str_nodes = tr.xpath('./td[contains(., "page")]/text()')
+        pg_cnt_str_nodes: list[str] = tr.xpath(
+            './td[contains(., "page")]/text()'
+        )
         if not pg_cnt_str_nodes:
             # It's a restricted document without page count information.
             return None
@@ -304,7 +308,7 @@ class AttachmentPage(BaseReport):
                 continue
 
     @staticmethod
-    def _get_file_size_bytes_from_tr(tr):
+    def _get_file_size_bytes_from_tr(tr: HtmlElement) -> int | None:
         """Take a row from the attachment table and return the number of bytes
         as an int.
         """
@@ -317,7 +321,7 @@ class AttachmentPage(BaseReport):
         return file_size
 
     @staticmethod
-    def _get_pacer_doc_id(row):
+    def _get_pacer_doc_id(row: HtmlElement) -> str | None:
         """Take in a row from the attachment table and return the pacer_doc_id
         for the item in that row. Return None if the ID cannot be found.
         """
@@ -333,18 +337,18 @@ class AttachmentPage(BaseReport):
             doc1_url = url.xpath("./@href")[0]
             return get_pacer_doc_id_from_doc1_url(doc1_url)
 
-    def _get_pacer_seq_no_from_tr(self, row):
+    def _get_pacer_seq_no_from_tr(self, row: HtmlElement) -> str | None:
         """Take a row of the attachment page, and return the sequence number
         from the goDLS function.
         """
-        url = row.xpath(".//a")
+        url: list[HtmlElement] = row.xpath(".//a")
         if url:
             onclick = url[0].xpath("./@onclick")
             if onclick and "goDLS" in onclick[0]:
                 go_dls_parts = reverse_goDLS_function(onclick[0])
                 return go_dls_parts["de_seq_num"]
 
-        input_els = self.tree.xpath("//input")
+        input_els: list[HtmlElement] = self.tree.xpath("//input")
         for input_el in input_els:
             try:
                 onclick = input_el.xpath("./@onclick")[0]
@@ -362,13 +366,13 @@ class AttachmentPage(BaseReport):
         # 3. No goDLS in the onclick
         return None
 
-    def _get_pacer_case_id(self):
+    def _get_pacer_case_id(self) -> str | None:
         """Get the pacer_case_id value by inspecting the HTML
 
         :returns str: The pacer_case_id value
         """
         # Start by inspecting all the links
-        urls = self.tree.xpath("//a")
+        urls: list[HtmlElement] = self.tree.xpath("//a")
         for url in urls:
             try:
                 onclick = url.xpath("./@onclick")[0]
@@ -382,7 +386,7 @@ class AttachmentPage(BaseReport):
                 return go_dls_parts["caseid"]
 
         # If that fails, try inspecting the input elements
-        input_els = self.tree.xpath("//input")
+        input_els: list[HtmlElement] = self.tree.xpath("//input")
         for input_el in input_els:
             try:
                 onclick = input_el.xpath("./@onclick")[0]
@@ -394,7 +398,7 @@ class AttachmentPage(BaseReport):
                     return m.group(1)
 
 
-def _main():
+def _main() -> None:
     if len(sys.argv) != 2:
         print("Usage: python -m juriscraper.pacer.attachment_page filepath")
         print("Please provide a path to an HTML file to parse.")
