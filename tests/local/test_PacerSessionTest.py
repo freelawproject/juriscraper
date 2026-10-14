@@ -39,6 +39,15 @@ class PacerSessionTest(unittest.IsolatedAsyncioTestCase):
         self.assertIn(b'name="case_id"\r\n\r\n123\r\n', body)
         self.assertIn(b'name="all_case_ids"\r\n\r\n0\r\n', body)
 
+    def test_multipart_form_data_omits_none_values(self):
+        """None values must be left out of the form, not sent as "None"."""
+        data = {"case_num": "1:23-bk-45678", "all_case_ids": None}
+        files = self.session._prepare_multipart_form_data(data)
+        request = httpx.Request("POST", "https://free.law", files=files)
+        body = request.read()
+        self.assertIn(b'name="case_num"\r\n\r\n1:23-bk-45678\r\n', body)
+        self.assertNotIn(b'name="all_case_ids"', body)
+
     @mock.patch("juriscraper.pacer.http.httpx.AsyncClient.post")
     async def test_ignores_non_data_posts(self, mock_post):
         """Test that POSTs without a data parameter just pass through as normal.

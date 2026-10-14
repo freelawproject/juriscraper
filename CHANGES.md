@@ -21,8 +21,8 @@ Changes:
 -
 
 Fixes:
-- Coerce non-string multipart form values to str in `PacerSession` so httpx
-  can encode them #2301
+- Coerce non-string multipart form values to str and omit `None` values in
+  `PacerSession` so httpx can encode them #2301
 
 ## 4.0.0 - 2026-10-12
 

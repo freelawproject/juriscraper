@@ -1,7 +1,7 @@
 import gzip
 import json
 import re
-from collections.abc import Iterator
+from collections.abc import Iterator, Mapping
 from contextvars import ContextVar
 from http.cookiejar import Cookie
 from typing import Any
@@ -375,23 +375,28 @@ class PacerSession(httpx.AsyncClient):
         return await super().head(url, **kwargs)
 
     @staticmethod
-    def _prepare_multipart_form_data(data):
+    def _prepare_multipart_form_data(
+        data: Mapping[str, object],
+    ) -> dict[str, tuple[None, str | bytes]]:
         """
         Transforms a data dictionary into the multi-part form data that PACER
         expects as the POST body
 
         HTTPX only accepts str or bytes for multipart field values, so other
-        values (e.g. ints) are coerced to str, as requests used to do.
+        values (e.g. ints) are coerced to str. Fields whose value is None are
+        omitted, matching how requests encoded them.
 
         :param data: dict of data to transform
         :return: dict with values wrapped into tuples like:(None, <value>)
         """
-        output = {}
-        for key, value in data.items():
-            if not isinstance(value, (str, bytes)):
-                value = str(value)
-            output[key] = (None, value)
-        return output
+        return {
+            key: (
+                None,
+                value if isinstance(value, str | bytes) else str(value),
+            )
+            for key, value in data.items()
+            if value is not None
+        }
 
     @staticmethod
     def _desecure_acms_cookies(jar: Cookies) -> None:
