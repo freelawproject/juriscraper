@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Fix `tenn`, `tennctapp`, `tenncrimapp` and `tenn_workers_comp` crash when a row's opinion link has an empty URL; those rows are now skipped. #2303
 
 ## 4.0.0 - 2026-10-12
 
