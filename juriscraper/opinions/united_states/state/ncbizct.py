@@ -18,7 +18,6 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 class Site(OpinionSiteLinear):
     days_interval = 7
-    use_urllib = True
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

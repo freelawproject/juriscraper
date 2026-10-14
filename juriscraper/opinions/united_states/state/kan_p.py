@@ -29,9 +29,10 @@ class Site(OpinionSiteLinear):
     status = "Published"
     first_opinion_date = date(2015, 1, 1)
     days_interval = 30
-    use_urllib = True
 
     def __init__(self, *args, **kwargs):
+        # This site's bot protection rejects HTTP/2 requests.
+        kwargs.setdefault("http2", False)
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         today = date.today()

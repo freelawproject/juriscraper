@@ -15,13 +15,6 @@
       "severity": "error"
     },
     {
-      "column": 46,
-      "path": "juriscraper/AbstractSite.py",
-      "name": "unbound-name",
-      "concise_description": "`s` may be uninitialized",
-      "severity": "error"
-    },
-    {
       "column": 59,
       "path": "juriscraper/AbstractSite.py",
       "name": "bad-specialization",

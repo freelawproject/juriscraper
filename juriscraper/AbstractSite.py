@@ -1,12 +1,8 @@
-import gzip
 import hashlib
-import http.cookiejar
 import inspect
 import json
 import os
 import ssl
-import urllib.parse
-import urllib.request
 from collections.abc import Awaitable
 from datetime import datetime
 
@@ -52,10 +48,6 @@ class AbstractSite:
 
     Should not contain lists that can't be sorted by the _date_sort function.
     """
-
-    # Set to True in subclasses to use urllib instead of httpx.
-    # Useful for sites that block httpx via TLS fingerprinting.
-    use_urllib = False
 
     # Some courts' bot management blocks the "Juriscraper" User-Agent, and
     # some also block browser User-Agents that have gone stale. Scrapers that
@@ -124,13 +116,6 @@ class AbstractSite:
         # or may need special headers. This flag let's the caller know it
         # should use the modified `self.request["headers"]`
         self.needs_special_headers = False
-
-        # urllib opener for sites that need TLS fingerprint bypass
-        if self.use_urllib:
-            cookie_jar = http.cookiejar.CookieJar()
-            self.urllib_opener = urllib.request.build_opener(
-                urllib.request.HTTPCookieProcessor(cookie_jar)
-            )
 
         # indicates whether the scraper should have results or not to raise an error
         self.should_have_results = False
@@ -401,8 +386,6 @@ class AbstractSite:
             await self._request_url_mock(self.url)
             self._post_process_response()
             return self._return_response_text_object()
-        elif self.use_urllib:
-            return self._download_urllib()
         elif self.method == "GET":
             await self._request_url_get(self.url)
         elif self.method == "POST":
@@ -410,22 +393,6 @@ class AbstractSite:
 
         self._post_process_response()
         return self._return_response_text_object()
-
-    def _download_content_urllib(self, download_url: str, headers: dict):
-        """Download content using urllib to bypass Cloudflare
-
-        Uses urllib instead of httpx because Cloudflare blocks httpx
-        via TLS fingerprinting. Used by scrapers with `use_urllib = True`.
-
-        :param download_url: The URL for the item you wish to download.
-        :param headers: headers dict
-        :return: A response object with a `content` field
-        """
-        req = urllib.request.Request(download_url, headers=headers)
-        response = self.urllib_opener.open(req, timeout=90)
-        response.content = response.read()
-
-        return response
 
     async def download_content(
         self,
@@ -478,23 +445,20 @@ class AbstractSite:
         else:
             headers = {"User-Agent": "CourtListener"}
 
-        if self.use_urllib:
-            r = self._download_content_urllib(download_url, headers)
-        else:
-            s = self.request["session"]
-            # Note that we do a GET even if self.method is POST. This is
-            # deliberate.
-            r = await s.get(
-                download_url,
-                headers=headers,
-                cookies=self.cookies,
-                timeout=300,
-            )
+        s = self.request["session"]
+        # Note that we do a GET even if self.method is POST. This is
+        # deliberate.
+        r = await s.get(
+            download_url,
+            headers=headers,
+            cookies=self.cookies,
+            timeout=300,
+        )
 
         check_empty_downloaded_file(r, download_url)
         check_expected_content_types(self, r, download_url)
 
-        if doctor_is_available and not self.use_urllib:
+        if doctor_is_available:
             # test for and follow meta redirects, uses doctor get_extension
             # service
             r = await follow_redirections(r, s)
@@ -518,64 +482,6 @@ class AbstractSite:
         if parameters is None:
             parameters = {}
         self.request["parameters"].update(parameters)
-
-    def _download_urllib(self):
-        """Handle download using urllib backend.
-
-        :return: parsed HTML tree or JSON object
-        """
-        data = None
-        if self.method == "POST":
-            data = urllib.parse.urlencode(self.parameters).encode("utf-8")
-
-        raw = self._urllib_fetch(self.url, data=data)
-        text = raw.decode("utf-8")
-
-        content_type = ""
-        if hasattr(self.request["response"], "getheader"):
-            content_type = self.request["response"].getheader(
-                "Content-Type", ""
-            )
-        if "json" in content_type:
-            return json.loads(text)
-
-        text = self._clean_text(text)
-        html_tree = self._make_html_tree(text)
-        return html_tree
-
-    def _urllib_fetch(self, url, data=None, headers=None):
-        """Fetch a URL using urllib to bypass Cloudflare TLS fingerprinting.
-
-        httpx gets blocked by Cloudflare due to its TLS fingerprint
-        (httpcore). Python's stdlib urllib uses a different TLS stack
-        that Cloudflare does not block.
-
-        :param url: URL to fetch
-        :param data: POST data as bytes, or None for GET
-        :param headers: optional dict of headers to use instead of defaults
-        :return: raw response bytes
-        """
-        if headers is None:
-            headers = dict(self.request["headers"])
-        req = urllib.request.Request(url, data=data, headers=headers)
-        response = self.urllib_opener.open(req, timeout=60)
-        raw = response.read()
-        # Gzip decompression - currently only needed for lactapp_3
-        # whose server returns gzip-encoded responses
-        if raw[:2] == b"\x1f\x8b":
-            raw = gzip.decompress(raw)
-
-        # Populate request dict for save_response compatibility.
-        # Currently only needed for lactapp_3 which uses urllib
-        self.request["url"] = url
-        self.request["response"] = response
-        if self.save_response:
-            response.text = raw.decode("utf-8")
-            response.content = raw
-            response.history = []
-            self.save_response(self)
-
-        return raw
 
     async def _request_url_get(self, url):
         """Execute GET request and assign appropriate request dictionary
