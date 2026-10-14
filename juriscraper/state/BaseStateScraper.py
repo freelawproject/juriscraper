@@ -11,12 +11,12 @@ from datetime import date
 from types import TracebackType
 from typing import (
     Any,
+    Self,
     TypedDict,
     TypeVar,
 )
 
 import httpx
-from typing_extensions import Self
 
 from juriscraper.lib.log_tools import make_default_logger
 
