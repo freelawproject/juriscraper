@@ -18,7 +18,8 @@ Features:
 - Drop Python 3.10 and add Python 3.15 support
 
 Changes:
--
+- Migrate remaining scrapers from `urllib` to the shared `httpx` client,
+  defaulting to HTTP/1.1 for sites that block HTTP/2.
 
 Fixes:
 -

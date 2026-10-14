@@ -32,10 +32,11 @@ logger = make_default_logger()
 class Site(OpinionSiteLinear):
     court_name = "Superior Court"
     first_opinion_date = datetime(2017, 6, 20)
-    use_urllib = True
     base_url = "https://www.socialaw.com/services/slip-opinions/"
 
     def __init__(self, *args, **kwargs):
+        # This site's bot protection rejects HTTP/2 requests.
+        kwargs.setdefault("http2", False)
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.search_date = datetime.today()

@@ -6,14 +6,11 @@ History:
   2026-03-19: Created by grossir
   2026-03-24: Switched from calendar navigation to month/year search
 Notes:
-  The site uses Cloudflare which blocks httpx via TLS fingerprinting.
-  We use urllib.request which is not blocked.The site is an ASP.NET
-  app. We search opinions by
-  month and year using the site's search form.
+  The site is an ASP.NET app. We search opinions by month and year
+  using the site's search form.
 """
 
 import re
-import urllib.parse
 from datetime import date, datetime
 from urllib.parse import urljoin
 
@@ -32,9 +29,10 @@ class Site(OpinionSiteLinear):
     base_url = "https://www.la3circuit.org"
     first_opinion_date = datetime(1992, 1, 1)
     days_interval = 28
-    use_urllib = True
 
     def __init__(self, *args, **kwargs):
+        # This site's bot protection rejects HTTP/2 requests.
+        kwargs.setdefault("http2", False)
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = f"{self.base_url}/index.aspx"
@@ -84,15 +82,11 @@ class Site(OpinionSiteLinear):
         params["ctl00$MainContent$ddlSearchOpinions2_Month"] = month_name
         params["ctl00$MainContent$ddlSearchOpinions2_Year"] = str(target.year)
         params["ctl00$MainContent$btnSearchOpinionsByMonthYear"] = "Search"
-        data = urllib.parse.urlencode(params).encode("utf-8")
+        self.parameters = params
 
-        headers = dict(self.request["headers"])
-        headers["Content-Type"] = "application/x-www-form-urlencoded"
-        headers["Accept-Encoding"] = "gzip, deflate"
-
-        raw = self._urllib_fetch(self.url, data=data, headers=headers)
-
-        return lxml_html.fromstring(raw.decode("utf-8"))
+        await self._request_url_post(self.url)
+        self._post_process_response()
+        return lxml_html.fromstring(self.request["response"].text)
 
     @override
     def _process_html(self) -> None:
