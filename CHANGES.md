@@ -15,6 +15,17 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+-
+
+Changes:
+-
+
+Fixes:
+-
+
+## 4.0.1 - 2026-10-15
+
+Features:
 - Drop Python 3.10 and add Python 3.15 support
 - Add a backscraper to `nmariana`. #1946
 
