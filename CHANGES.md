@@ -15,7 +15,6 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
-- Drop Python 3.10 and add Python 3.15 support
 - `fladistctapp_1` now extracts the Southern Reporter citation that the source
   adds to the `note` field months after an opinion is published #2122
 
@@ -23,8 +22,23 @@ Changes:
 -
 
 Fixes:
+-
+
+## 4.0.1 - 2026-10-15
+
+Features:
+- Drop Python 3.10 and add Python 3.15 support
+- Add a backscraper to `nmariana`. #1946
+
+Changes:
+-
+
+Fixes:
 - Coerce non-string multipart form values to str and omit `None` values in
   `PacerSession` so httpx can encode them #2301
+- Fix `nmariana` judge names and authors parsed from the panel. #1946
+- Fix `nmariana` per curiam: set it from the opinion's "PER CURIAM" heading, not from a missing "*" author. #1946
+- Fix `nmariana` docket numbers: take them with their label from the opinion header, not the e-filing stamp, and leave them out when not found. #1946
 
 ## 4.0.0 - 2026-10-12
 
