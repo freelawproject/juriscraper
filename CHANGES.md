@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Fix `tenn`, `tennctapp`, `tenncrimapp` and `tenn_workers_comp` crash when a row's opinion link has an empty URL; those rows are now skipped. #2303
 
 ## 4.0.1 - 2026-10-15
 
@@ -38,7 +38,6 @@ Fixes:
 - Fix `nmariana` judge names and authors parsed from the panel. #1946
 - Fix `nmariana` per curiam: set it from the opinion's "PER CURIAM" heading, not from a missing "*" author. #1946
 - Fix `nmariana` docket numbers: take them with their label from the opinion header, not the e-filing stamp, and leave them out when not found. #1946
-- Fix `tenn`, `tennctapp`, `tenncrimapp` and `tenn_workers_comp` crash when a row's opinion link has an empty URL; those rows are now skipped. #2303
 
 ## 4.0.0 - 2026-10-12
 
