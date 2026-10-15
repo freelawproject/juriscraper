@@ -56,7 +56,12 @@ class Site(ClusterSite):
             section = row.xpath(
                 f".//td[contains(@class, '{self.section_selector}')]"
             )[0]
+            docket = section.xpath(self.docket_xpath)[0].strip()
             url = section.xpath(".//a")[0].get("href")
+            if not url or url == self.request["url"]:
+                # empty hrefs are rewritten to the page URL by AbstractSite
+                logger.warning("Skipping row %s without opinion URL", docket)
+                continue
 
             summary = self.get_summary(section)
             # prevent picking up one of the judge containers
@@ -90,7 +95,7 @@ class Site(ClusterSite):
                 "date": date,
                 "url": url,
                 "name": name.strip(),
-                "docket": section.xpath(self.docket_xpath)[0].strip(),
+                "docket": docket,
                 "judge": judge,
                 "author": judge,
                 "lower_court_judge": lower_court_judge or "",
