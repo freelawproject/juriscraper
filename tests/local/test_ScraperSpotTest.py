@@ -5,7 +5,11 @@ import unittest
 from datetime import date
 
 from juriscraper.AbstractSite import logger
-from juriscraper.opinions.united_states.state import nev, nevapp
+from juriscraper.opinions.united_states.state import (
+    fladistctapp_1,
+    nev,
+    nevapp,
+)
 
 
 class ScraperSpotTest(unittest.TestCase):
@@ -326,3 +330,56 @@ class ScraperSpotTest(unittest.TestCase):
         asyncio.run(site._download_backwards(site.back_scrape_iterable[0]))
         self.assertEqual(len(site.cases), 1)
         self.assertEqual(pages, [])
+
+    def test_fladistctapp_1_get_citation(self):
+        """Citations are taken from the 1st DCA `note` field"""
+        site = fladistctapp_1.Site()
+        tests = [
+            # Disposition, then a citation on its own line
+            ("Affirmed\r\n433 So. 3d 1007", "433 So. 3d 1007"),
+            ("Dismissed\r\n428 So. 3d 1285", "428 So. 3d 1285"),
+            ("Denied\r\n433 So. 3d 472", "433 So. 3d 472"),
+            ("Reversed\r\n433 So. 3d 454", "433 So. 3d 454"),
+            (
+                "Affirmed in Part/Reversed in Part\r\n433 So. 3d 458",
+                "433 So. 3d 458",
+            ),
+            (
+                "Affirmed - Corrected 9/20/24\r\n393 So. 3d 289",
+                "393 So. 3d 289",
+            ),
+            # No citation yet
+            ("Affirmed", ""),
+            ("Affirmed - Per Curiam Affirmed", ""),
+            ("Affirmed in Part/Reversed in Part", ""),
+            ("", ""),
+            ("Affirmed;  WITHDRAWN 05-13-2026", ""),
+            ("Reversed - Corrected 9/16/2025", ""),
+            ("Affirmed\r\nWithdrawn 11-06-24", ""),
+            # Malformed citations are returned as written
+            ("Affirmed\r\n432 So. 3d  1204", "432 So. 3d  1204"),
+            ("Affirmed\r\n376 so. 3d 709", "376 so. 3d 709"),
+            ("Affirmed\r\n400 S. 3d 797", "400 S. 3d 797"),
+            ("Reversed\r\n432 So. 3d1080", "432 So. 3d1080"),
+            ("Affirmed\r\n381 So . 3d 648", "381 So . 3d 648"),
+            ("Affirmed\r\n373 So 3d 851", "373 So 3d 851"),
+            # Citation before the disposition
+            ("379 So. 3d 494\r\nAffirmed", "379 So. 3d 494"),
+            # A later edition of the reporter (not in the source yet)
+            ("Affirmed\r\n12 So. 4d 345", "12 So. 4d 345"),
+            # Citations to other cases, quoted in the court's text
+            (
+                "Transf to Leon Co to Cons as Extraord Writ ~ See Bush v. "
+                "State, 945 So. 2d 1207, 1213-14 (Fla. 2006).",
+                "",
+            ),
+            (
+                "Accordingly, we direct the Clerk to forward a certified copy "
+                "of this opinion to the Florida Department of Corrections. "
+                "See Ibarra v. State, 45 So. 3d 911, 914 (Fla. 4th DCA 2010).",
+                "",
+            ),
+        ]
+        for note, citation in tests:
+            with self.subTest(note=note):
+                self.assertEqual(site.get_citation(note), citation)

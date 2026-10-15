@@ -16,6 +16,8 @@ The following changes are not yet released, but are code complete:
 
 Features:
 - Drop Python 3.10 and add Python 3.15 support
+- `fladistctapp_1` now extracts the Southern Reporter citation that the source
+  adds to the `note` field months after an opinion is published #2122
 
 Changes:
 -
