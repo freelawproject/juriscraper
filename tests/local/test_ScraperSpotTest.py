@@ -383,3 +383,69 @@ class ScraperSpotTest(unittest.TestCase):
         for note, citation in tests:
             with self.subTest(note=note):
                 self.assertEqual(site.get_citation(note), citation)
+
+    def test_fladistctapp_1_get_disposition(self):
+        """The disposition comes from the `disposition` or `note` field"""
+        site = fladistctapp_1.Site()
+        tests = [
+            # `disposition` is "Appeal - Per Curiam Affirmed"
+            (
+                "Appeal - Per Curiam Affirmed",
+                "Affirmed\r\n433 So. 3d 928",
+                "Affirmed",
+            ),
+            ("Appeal - Per Curiam Affirmed", "Affirmed", "Affirmed"),
+            (
+                "Appeal - Per Curiam Affirmed",
+                "Affirmed - Per Curiam Affirmed",
+                "Affirmed",
+            ),
+            # `disposition` describes the document, `note` holds the
+            # disposition, maybe followed by a citation
+            (
+                "Appeal - Per Curiam Opinion",
+                "Dismissed\r\n428 So. 3d 1285",
+                "Dismissed",
+            ),
+            (
+                "Petition - Per Curiam Opinion",
+                "Dismissed\r\n433 So. 3d 470",
+                "Dismissed",
+            ),
+            (
+                "Appeal - Per Curiam Opinion",
+                "Affirmed\r\n433 So. 3d 1007",
+                "Affirmed",
+            ),
+            ("Petition - PC Denied", "Denied\r\n433 So. 3d 472", "Denied"),
+            (
+                "Appeal - Authored Opinion",
+                "Reversed\r\n433 So. 3d 454",
+                "Reversed",
+            ),
+            ("Appeal - Citation", "Affirmed\r\n426 So. 3d 546", "Affirmed"),
+            (
+                "Appeal - Authored Opinion",
+                "Reversed\r\n432 So. 3d1080",
+                "Reversed",
+            ),
+            ("Petition - Per Curiam Opinion", "Dismissed", "Dismissed"),
+            ("Petition - PC Denied", "Denied", "Denied"),
+            ("Appeal - Authored Opinion", "Reversed", "Reversed"),
+            # Older schema: `disposition` holds the disposition, and `note`
+            # is empty or a continuation clause
+            ("Affirmed", "", "Affirmed"),
+            ("Dismissed", "", "Dismissed"),
+            ("Denied", "", "Denied"),
+            ("Reversed", "and Remanded.", "Reversed"),
+            (
+                "Affirmed in Part/Reversed in Part",
+                "and Remanded ",
+                "Affirmed in Part/Reversed in Part",
+            ),
+        ]
+        for disposition, note, expected in tests:
+            with self.subTest(disposition=disposition, note=note):
+                self.assertEqual(
+                    site.get_disposition(disposition, note), expected
+                )

@@ -53,11 +53,14 @@ class Site(fla.Site):
         if raw_disposition == "Appeal - Per Curiam Affirmed":
             return "Affirmed"
 
-        if (
-            note in valid_dispositions
-            or note.split(" ")[0] in valid_dispositions
-        ):
-            return note.split(" ")[0]
+        if note in valid_dispositions:
+            return note
+
+        # Split on any whitespace, since a citation may follow the
+        # disposition on a new line: "Affirmed\r\n428 So. 3d 1288"
+        first_word = (note.split() or [""])[0]
+        if first_word in valid_dispositions:
+            return first_word
 
         # Older schema. Keep the whole value, to preserve compound
         # dispositions such as "Affirmed in Part/Reversed in Part"
