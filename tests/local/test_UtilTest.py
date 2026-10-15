@@ -6,6 +6,11 @@ import unittest
 from juriscraper.lib.utils import clean_court_object, previous_and_next
 
 
+class PassingTest(unittest.TestCase):
+    def passing_test(self):
+        self.assertTrue(True)
+
+
 class UtilTest(unittest.TestCase):
     def test_clean_court_object(self):
         unclean_str = "1,  2, 3,4  ,5  ,  6 "
