@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- `ca7` opinions: use filing dates from opinion links and retain feed timestamp ordering. #2123
 
 ## 4.0.1 - 2026-10-15
 
