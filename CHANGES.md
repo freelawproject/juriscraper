@@ -30,7 +30,7 @@ Features:
 - Add a backscraper to `nmariana`. #1946
 
 Changes:
--
+- Migrate HTTPX integrations to `httpx2`. Callers supplying HTTP clients, responses, or transports must use `httpx2` types, and exception handlers and logging configuration must use the new module names. #2288
 
 Fixes:
 - Coerce non-string multipart form values to str and omit `None` values in

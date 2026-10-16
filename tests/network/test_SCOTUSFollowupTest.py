@@ -1,7 +1,7 @@
 from pathlib import Path
 from unittest import IsolatedAsyncioTestCase, mock
 
-from httpx import HTTPError, Request, Response
+from httpx2 import HTTPError, Request, Response
 
 from juriscraper.scotus import SCOTUSEmail
 from tests import TESTS_ROOT_EXAMPLES_SCOTUS
@@ -24,7 +24,7 @@ class SCOTUSFollowupTest(IsolatedAsyncioTestCase):
                 pass
 
     @mock.patch(
-        "juriscraper.scotus.scotus_email.httpx.AsyncClient.get",
+        "juriscraper.scotus.scotus_email.httpx2.AsyncClient.get",
         new_callable=mock.AsyncMock,
     )
     async def test_handle_email(self, mock_get):

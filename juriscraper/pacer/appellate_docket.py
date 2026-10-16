@@ -5,7 +5,7 @@ import sys
 from collections import OrderedDict
 from typing import Any, Literal, overload
 
-from httpx import Response
+from httpx2 import Response
 from lxml import html
 from lxml.etree import _ElementUnicodeResult
 from lxml.html import HtmlElement
