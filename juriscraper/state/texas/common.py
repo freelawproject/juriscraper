@@ -1037,6 +1037,7 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
         if table is None:
             return []
         documents = parse_table(table)
+
         def case_document_from_row(
             link_cell: HtmlElement, description_cell: HtmlElement
         ) -> TexasCaseDocument | None:
@@ -1070,6 +1071,7 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
                 file_size_str=file_size_str,
                 file_size_bytes=size_string_to_bytes(file_size_str),
             )
+
         case_documents = [
             case_document_from_row(link, description)
             for (link, description) in zip(documents["0"], documents["1"])
