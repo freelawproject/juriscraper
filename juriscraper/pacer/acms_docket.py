@@ -21,7 +21,7 @@ class ACMSDocketReport(AppellateDocketReport):
 
     def __init__(self, court_id: str, pacer_session=None):
         super().__init__(court_id, pacer_session)
-        self._acms_json = None
+        self._acms_json: dict | None = None
         self.api_client = AcmsApiClient(pacer_session, court_id)
 
     def _parse_text(self, text):

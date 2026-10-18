@@ -2094,6 +2094,27 @@
       "severity": "error"
     },
     {
+      "column": 24,
+      "path": "juriscraper/pacer/acms_attachment_page.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/pacer/acms_attachment_page.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/pacer/acms_attachment_page.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
       "column": 41,
       "path": "juriscraper/pacer/acms_docket.py",
       "name": "bad-argument-type",
