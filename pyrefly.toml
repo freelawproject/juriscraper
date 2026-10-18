@@ -75,6 +75,7 @@ invalid-variance = true
 invalid-yield = true
 implicit-abstract-class = true
 implicit-any = true
+implicit-reexport = true
 misplaced-ignore = true
 missing-argument = true
 missing-attribute = true
