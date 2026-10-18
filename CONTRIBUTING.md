@@ -216,23 +216,13 @@ It's also possible to iterate over all courts in a Python package, even if they'
 
 ```python
 # Start with an import path. This will do all federal courts.
-court_id = 'juriscraper.opinions.united_states.federal'
+court_id = "juriscraper.opinions.united_states.federal"
 
 # Import all the scrapers
-scrapers = __import__(
-    court_id,
-    globals(),
-    locals(),
-    ['*']
-).__all__
+scrapers = __import__(court_id, globals(), locals(), ["*"]).__all__
 
 for scraper in scrapers:
-    mod = __import__(
-        f'{court_id}.{scraper}',
-        globals(),
-        locals(),
-        [scraper]
-    )
+    mod = __import__(f"{court_id}.{scraper}", globals(), locals(), [scraper])
     # Create a Site instance, then get the contents
     site = mod.Site()
     site.parse()
