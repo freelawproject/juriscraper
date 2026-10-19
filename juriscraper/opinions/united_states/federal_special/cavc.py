@@ -83,6 +83,9 @@ class Site(OpinionSiteLinear):
             else:
                 keepers.append(row[: row.index("JR.") + 3].strip())
         case_name = titlecase(" ".join(keepers))
+        if not case_name:
+            # Do not overwrite the scraped case name with an empty one. #2310
+            return {}
         metadata = {
             "OpinionCluster": {
                 "case_name": case_name,
