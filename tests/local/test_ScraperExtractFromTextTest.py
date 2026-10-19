@@ -2051,6 +2051,74 @@ class ScraperExtractFromText(unittest.TestCase):
                 msg=f"{module_string} not yet added to extract_from_text test data.",
             )
 
+    # Empty values returned on purpose, to clear a wrong value set from the
+    # listing. Any other empty value fails test_extract_from_text_no_empty_values
+    intentional_empty_values = {
+        # Per curiam opinions clear the author the listing table sets
+        (
+            "juriscraper.opinions.united_states.state.me",
+            "Opinion",
+            "author_str",
+        ),
+        (
+            "juriscraper.opinions.united_states.territories.nmariana",
+            "Opinion",
+            "author_str",
+        ),
+    }
+
+    @staticmethod
+    def _empty_values(metadata: dict) -> list[tuple[str, str, object]]:
+        """List the (model, field, value) entries that are "" or None"""
+        empty = []
+        for model, fields in metadata.items():
+            if not isinstance(fields, dict):  # e.g. a citation string
+                if fields in ("", None):
+                    empty.append((model, "", fields))
+                continue
+            for field, value in fields.items():
+                if value in ("", None):
+                    empty.append((model, field, value))
+        return empty
+
+    def test_extract_from_text_no_empty_values(self):
+        """Is a value that was not found left out, instead of returned empty?
+
+        CourtListener applies every returned value to the saved objects, so
+        an empty one overwrites good data, or fails validation and loses the
+        rest of the extracted metadata. #2310
+        """
+        logging.disable(logging.CRITICAL)
+        try:
+            for module_string, test_cases in self.test_data.items():
+                package, module = module_string.rsplit(".", 1)
+                mod = __import__(
+                    f"{package}.{module}", globals(), locals(), [module]
+                )
+                site = mod.Site()
+
+                # No intentional clear can apply when nothing matched
+                no_match = site.extract_from_text("Lorem ipsum dolorem...")
+                for model, field, value in self._empty_values(no_match):
+                    self.fail(
+                        f"{module_string} returns {model}.{field}={value!r} "
+                        "for text with no match; leave the key out instead"
+                    )
+
+                for test_case in test_cases:
+                    metadata = site.extract_from_text(test_case[0])
+                    for model, field, value in self._empty_values(metadata):
+                        self.assertIn(
+                            (module_string, model, field),
+                            self.intentional_empty_values,
+                            msg=f"{module_string} returns {model}.{field}="
+                            f"{value!r}; leave the key out, or add it to "
+                            "intentional_empty_values if it clears a value "
+                            "on purpose",
+                        )
+        finally:
+            logging.disable(logging.NOTSET)
+
     def test_valid_date_format(self):
         """Is the returned date format valid for a Django model date field?
 

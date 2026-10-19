@@ -79,41 +79,36 @@ class Site(OpinionSiteLinear):
             value = match.group("value").strip()
             extracted[label] = value
 
+        # Leave out any value that is not found, so that an empty value
+        # does not overwrite good data downstream. #2310
+        opinion = {}
         author = r"(?P<author_str>.*)\n+(\s+)?\[¶1\]"
         m = re.search(author, scraped_text, re.MULTILINE)
         if m:
             if m.group("author_str") == "PER CURIAM":
-                per_curiam = True
-                author_str = ""
-            else:
-                per_curiam = False
-                author_str = m.group("author_str")
-        else:
-            per_curiam = False
-            author_str = ""
+                opinion["per_curiam"] = True
+                # Intentionally empty: clears an author set from the listing
+                opinion["author_str"] = ""
+            elif author_str := normalize_judge_names(m.group("author_str")):
+                opinion["per_curiam"] = False
+                opinion["author_str"] = author_str
 
-        date_argued = extracted.get("On Briefs", "") or extracted.get(
-            "Argued", ""
-        )
-        date_argued_str = ""
+        docket = {}
+        date_argued = extracted.get("On Briefs") or extracted.get("Argued")
         if date_argued:
-            # Format date
-            date_argued = convert_date_string(date_argued)
-            date_argued_str = date_argued.strftime("%Y-%m-%d")
+            docket["date_argued"] = convert_date_string(date_argued).strftime(
+                "%Y-%m-%d"
+            )
+        if docket_number := extracted.get("Docket"):
+            docket["docket_number"] = docket_number
 
-        metadata = {
-            "Opinion": {
-                "author_str": normalize_judge_names(author_str),
-                "per_curiam": per_curiam,
-            },
-            "OpinionCluster": {
-                "judges": extracted.get("Panel", ""),
-            },
-            "Docket": {
-                "date_argued": date_argued_str,
-                "docket_number": extracted.get("Docket", ""),
-            },
-        }
+        metadata = {}
+        if opinion:
+            metadata["Opinion"] = opinion
+        if judges := extracted.get("Panel"):
+            metadata["OpinionCluster"] = {"judges": judges}
+        if docket:
+            metadata["Docket"] = docket
 
         return metadata
 
