@@ -4,8 +4,14 @@ import re
 import unittest
 from datetime import date
 
+from lxml import html as lxml_html
+
 from juriscraper.AbstractSite import logger
-from juriscraper.opinions.united_states.state import nev, nevapp
+from juriscraper.opinions.united_states.state import (
+    nev,
+    nevapp,
+    tenn_workers_comp,
+)
 
 
 class ScraperSpotTest(unittest.TestCase):
@@ -326,3 +332,59 @@ class ScraperSpotTest(unittest.TestCase):
         asyncio.run(site._download_backwards(site.back_scrape_iterable[0]))
         self.assertEqual(len(site.cases), 1)
         self.assertEqual(pages, [])
+
+    def test_tenn_workers_comp_backscrape(self):
+        """A backscrape filters by date, follows the pager, parses older
+        dockets and skips empty rows #1743
+        """
+
+        def row(date_filed: str, brief: str) -> str:
+            return (
+                "<tr><td class='views-field views-field-field-opinions-date-filed'>"
+                f"{date_filed}</td><td class='views-field "
+                f"views-field-field-opinions-case-brief'>{brief}</td></tr>"
+            )
+
+        def brief(name: str, docket: str) -> str:
+            return (
+                f"<a href='/{docket}.pdf'>{name}</a><br>{docket}<br>"
+                "Authoring Judge: Senior Judge John Doe<br>"
+                "Trial Court Judge: Hon. Jane Roe<br><br>A summary."
+            )
+
+        next_page = "<ul><li class='pager__item pager__item--next'><a href='?page=1'>Next</a></li></ul>"
+        pages = [
+            "<table>"
+            + row("10/01/96", brief("A v. B", "01S01-9509-CV-00147"))
+            + row("10/02/96", brief("C v. D", "E2016-01234-SC-R3-WC"))
+            + "</table>"
+            + next_page,
+            "<table>"
+            + row("10/03/96", brief("E v. F", "02S01-9601-CH-00012"))
+            + row("10/04/96", "")
+            + "</table>",
+        ]
+        urls = []
+
+        site = tenn_workers_comp.Site(backscrape_start="1996/10/01")
+
+        async def download():
+            urls.append(site.url)
+            return lxml_html.fromstring(pages.pop(0))
+
+        site._download = download
+        asyncio.run(site._download_backwards(site.back_scrape_iterable[0]))
+
+        self.assertEqual(pages, [])
+        self.assertIn("field_opinions_date_filed_value=1996-10-01", urls[0])
+        self.assertIn("field_opinions_date_filed_value_1=", urls[0])
+        self.assertTrue(urls[0].endswith("page=0"))
+        self.assertTrue(urls[1].endswith("page=1"))
+        self.assertEqual(
+            [case["docket"] for case in site.cases],
+            [
+                "01S01-9509-CV-00147",
+                "E2016-01234-SC-R3-WC",
+                "02S01-9601-CH-00012",
+            ],
+        )
