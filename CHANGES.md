@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- `me` and `cavc` `extract_from_text`: leave out values that are not found instead of returning `""`, and add a test that fails on any empty value not listed as an intentional clear. #2310
 
 ## 4.0.1 - 2026-10-15
 
