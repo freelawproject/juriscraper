@@ -146,14 +146,18 @@ class PacerSessionAnonymousGetTest(unittest.IsolatedAsyncioTestCase):
 
         Regression test for magic link downloads failing with ReadError.
         """
-        await self.session.get_anonymous("https://ecf.nysd.uscourts.gov/doc1/1")
+        await self.session.get_anonymous(
+            "https://ecf.nysd.uscourts.gov/doc1/1"
+        )
 
         [request] = self.sent
         self.assertEqual(request.headers.get("User-Agent"), "Juriscraper")
         self.assertEqual(request.headers.get("Referer"), "https://external")
 
     async def test_omits_session_cookies(self):
-        await self.session.get_anonymous("https://ecf.nysd.uscourts.gov/doc1/1")
+        await self.session.get_anonymous(
+            "https://ecf.nysd.uscourts.gov/doc1/1"
+        )
 
         [request] = self.sent
         self.assertNotIn("Cookie", request.headers)
