@@ -8,6 +8,7 @@ import re
 from datetime import date, datetime
 from urllib.parse import urlencode
 
+from httpx import HTTPError
 from lxml.html import HtmlElement
 from typing_extensions import override
 
@@ -20,6 +21,9 @@ class Site(tenn.Site):
     first_opinion_date = datetime(1996, 3, 14)
     days_interval = 30
     base_url = "https://www.tncourts.gov/courts/work-comp/opinions"
+    # A 30 day window has needed at most 2 pages; this only stops a
+    # backscrape that would otherwise never end
+    max_pages = 20
 
     extract_from_text = OpinionSite.extract_from_text
 
@@ -32,7 +36,10 @@ class Site(tenn.Site):
 
         # The docket is the first floating text after the case name link.
         # Older dockets have no "WC" in them, e.g. 01S01-9509-CV-00147
-        self.docket_xpath = "text()[normalize-space()][1]"
+        # A judge line ("Authoring Judge: ...") is never taken as the docket
+        self.docket_xpath = (
+            "text()[normalize-space()][1][not(contains(., ':'))]"
+        )
 
     @override
     def _process_html(self) -> None:
@@ -40,6 +47,8 @@ class Site(tenn.Site):
 
         Some older rows are empty: no link, docket or summary
         """
+        if self.html is None:
+            return
         for section in self.html.xpath(
             f"//td[contains(@class, '{self.section_selector}')][not(.//a)]"
         ):
@@ -55,12 +64,16 @@ class Site(tenn.Site):
         `field_opinions_date_filed_value_1`, unlike the Supreme Court page,
         and some months have more than one page of results
 
+        Pagination stops when a page has no "next" link, when a page links
+        the same opinions as the page before it, or after `max_pages`. If a
+        later page fails to download, the pages already parsed are kept
+
         :param dates: (start, end) dates of the range to download
         :return: None
         """
         start, end = dates
-        page = 0
-        while True:
+        previous_links: set[str] = set()
+        for page in range(self.max_pages):
             params = {
                 "field_opinions_date_filed_value": start.strftime("%Y-%m-%d"),
                 "field_opinions_date_filed_value_1": end.strftime("%Y-%m-%d"),
@@ -68,13 +81,41 @@ class Site(tenn.Site):
             }
             self.url = f"{self.base_url}?{urlencode(params)}"
             logger.info("Backscraping %s", self.url)
-            self.html = await self._download()
+            try:
+                self.html = await self._download()
+            except HTTPError:
+                if page == 0:
+                    raise
+                logger.warning(
+                    "Download failed for %s; keeping the %s earlier pages",
+                    self.url,
+                    page,
+                )
+                return
+
+            # Compare links, not parsed cases: tenn merges rows of the same
+            # case, so a new page can legitimately add no new case
+            links = set(
+                self.html.xpath(
+                    f"//td[contains(@class, '{self.section_selector}')]//a/@href"
+                )
+            )
+            if page and links == previous_links:
+                logger.warning(
+                    "%s repeats the previous page; stopping", self.url
+                )
+                return
+            previous_links = links
+
             self._process_html()
-            if not self.html.xpath(
+            if self.html is None or not self.html.xpath(
                 "//li[contains(@class, 'pager__item--next')]"
             ):
-                break
-            page += 1
+                return
+
+        logger.warning(
+            "Stopped after %s pages for %s to %s", self.max_pages, start, end
+        )
 
     def get_summary(self, section: HtmlElement) -> str:
         """Get the summary considering some XPath variations

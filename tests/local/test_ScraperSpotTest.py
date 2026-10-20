@@ -4,6 +4,7 @@ import re
 import unittest
 from datetime import date
 
+from httpx import HTTPError
 from lxml import html as lxml_html
 
 from juriscraper.AbstractSite import logger
@@ -388,3 +389,122 @@ class ScraperSpotTest(unittest.TestCase):
                 "02S01-9601-CH-00012",
             ],
         )
+
+    @staticmethod
+    def _tenn_wc_page(
+        dockets: list[str], next_page: bool = True, link_suffix: str = ""
+    ) -> str:
+        """A results page for tenn_workers_comp with one row per docket"""
+        rows = "".join(
+            "<tr><td class='views-field views-field-field-opinions-date-filed'>"
+            "10/01/96</td><td class='views-field "
+            "views-field-field-opinions-case-brief'>"
+            f"<a href='/{docket}{link_suffix}.pdf'>A v. B</a><br>{docket}<br>"
+            "Authoring Judge: Senior Judge John Doe<br>"
+            "Trial Court Judge: Hon. Jane Roe<br><br>A summary.</td></tr>"
+            for docket in dockets
+        )
+        pager = (
+            "<ul><li class='pager__item pager__item--next'>"
+            "<a href='?page=1'>Next</a></li></ul>"
+            if next_page
+            else ""
+        )
+        return f"<table>{rows}</table>{pager}"
+
+    def _tenn_wc_backscrape(self, download) -> tenn_workers_comp.Site:
+        """Run a tenn_workers_comp backscrape of one window"""
+        site = tenn_workers_comp.Site(backscrape_start="1996/10/01")
+        site._download = download
+        asyncio.run(site._download_backwards(site.back_scrape_iterable[0]))
+        return site
+
+    def test_tenn_workers_comp_backscrape_stops_on_repeated_page(self):
+        """A page that repeats the previous one, pager included, ends the
+        backscrape instead of looping forever #1743
+        """
+        calls = []
+        page = self._tenn_wc_page(["01S01-9509-CV-00147"])
+
+        async def download():
+            calls.append(1)
+            if len(calls) > 5:
+                raise AssertionError("the backscrape did not stop")
+            return lxml_html.fromstring(page)
+
+        site = self._tenn_wc_backscrape(download)
+        self.assertEqual(len(calls), 2)
+        self.assertEqual(
+            [case["docket"] for case in site.cases], ["01S01-9509-CV-00147"]
+        )
+
+    def test_tenn_workers_comp_backscrape_page_of_merged_opinions(self):
+        """A page whose only row merges into a case from the page before
+        (a second opinion in the same case) does not stop the backscrape
+        """
+        pages = [
+            self._tenn_wc_page(["01S01-9509-CV-00147"]),
+            self._tenn_wc_page(["01S01-9509-CV-00147"], link_suffix="j"),
+            self._tenn_wc_page(["02S01-9601-CH-00012"], next_page=False),
+        ]
+
+        async def download():
+            return lxml_html.fromstring(pages.pop(0))
+
+        site = self._tenn_wc_backscrape(download)
+        self.assertEqual(pages, [])
+        self.assertEqual(
+            [case["docket"] for case in site.cases],
+            ["01S01-9509-CV-00147", "02S01-9601-CH-00012"],
+        )
+        self.assertEqual(len(site.cases[0]["sub_opinions"]), 2)
+
+    def test_tenn_workers_comp_backscrape_page_cap(self):
+        """Pagination stops after max_pages even if every page is new"""
+        calls = []
+
+        async def download():
+            calls.append(1)
+            if len(calls) > 50:
+                raise AssertionError("the backscrape did not stop")
+            return lxml_html.fromstring(
+                self._tenn_wc_page([f"01S01-9509-CV-{len(calls):05d}"])
+            )
+
+        site = self._tenn_wc_backscrape(download)
+        self.assertEqual(len(calls), tenn_workers_comp.Site.max_pages)
+        self.assertEqual(len(site.cases), tenn_workers_comp.Site.max_pages)
+
+    def test_tenn_workers_comp_backscrape_keeps_pages_on_error(self):
+        """A failed download on a later page keeps the pages already parsed;
+        a failed first page still raises, as before
+        """
+        pages = [self._tenn_wc_page(["01S01-9509-CV-00147"])]
+
+        async def download():
+            if not pages:
+                raise HTTPError("server error")
+            return lxml_html.fromstring(pages.pop(0))
+
+        site = self._tenn_wc_backscrape(download)
+        self.assertEqual(
+            [case["docket"] for case in site.cases], ["01S01-9509-CV-00147"]
+        )
+
+        async def fail():
+            raise HTTPError("server error")
+
+        with self.assertRaises(HTTPError):
+            self._tenn_wc_backscrape(fail)
+
+    def test_tenn_workers_comp_judge_line_is_not_a_docket(self):
+        """A row with a link but no docket line fails loudly instead of
+        storing the judge line as the docket
+        """
+        page = self._tenn_wc_page([""], next_page=False)
+
+        async def download():
+            return lxml_html.fromstring(page)
+
+        with self.assertRaises(IndexError):
+            self._tenn_wc_backscrape(download)
