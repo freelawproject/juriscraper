@@ -22,6 +22,7 @@ Changes:
 
 Fixes:
 - Fix `tenn`, `tennctapp`, `tenncrimapp` and `tenn_workers_comp` crash when a row's opinion link has an empty URL; those rows are now skipped. #2303
+- Send the session's default headers, including `User-Agent`, on PACER magic link downloads; PACER was intermittently resetting the connection without them.
 
 ## 4.0.1 - 2026-10-15
 

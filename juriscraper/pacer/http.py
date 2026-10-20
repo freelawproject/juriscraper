@@ -181,20 +181,17 @@ class PacerSession(httpx.AsyncClient):
     async def get_anonymous(
         self, url: str | httpx.URL, *, params=None, timeout=300
     ) -> httpx.Response:
-        """GET without session headers, cookies, HTTP auth, or PACER login.
+        """GET without session cookies, HTTP auth, or PACER login.
 
-        Reuse this client's transport with fresh cookies for each call.
-        Cookies set during redirects stay local to that call.
+        Reuse this client's transport and default headers with fresh cookies
+        for each call. Cookies set during redirects stay local to that call.
         """
-        request = httpx.Request(
-            "GET",
-            url,
-            params=params,
-            extensions={"timeout": httpx.Timeout(timeout).as_dict()},
-        )
         # HTTPX reads and updates self.cookies throughout the redirect chain.
         token = self._anonymous_cookies.set(Cookies())
         try:
+            request = self.build_request(
+                "GET", url, params=params, timeout=timeout
+            )
             return await self.send(request, auth=httpx.Auth())
         finally:
             self._anonymous_cookies.reset(token)

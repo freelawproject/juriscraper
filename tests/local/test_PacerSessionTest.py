@@ -121,6 +121,44 @@ class PacerSessionTest(unittest.IsolatedAsyncioTestCase):
             self.fail("Did not have session attribute on CaseQuery object.")
 
 
+class PacerSessionAnonymousGetTest(unittest.IsolatedAsyncioTestCase):
+    """Test the requests PacerSession.get_anonymous sends."""
+
+    def setUp(self):
+        self.sent: list[httpx.Request] = []
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            self.sent.append(request)
+            return httpx.Response(200)
+
+        self.session = PacerSession(
+            username="user",
+            password="pass",
+            transport=httpx.MockTransport(handler),
+        )
+        self.addAsyncCleanup(self.session.aclose)
+        self.session.cookies.set(
+            "NextGenCSO", "token", domain="ecf.nysd.uscourts.gov"
+        )
+
+    async def test_sends_session_default_headers(self):
+        """PACER resets connections from requests without a User-Agent.
+
+        Regression test for magic link downloads failing with ReadError.
+        """
+        await self.session.get_anonymous("https://ecf.nysd.uscourts.gov/doc1/1")
+
+        [request] = self.sent
+        self.assertEqual(request.headers.get("User-Agent"), "Juriscraper")
+        self.assertEqual(request.headers.get("Referer"), "https://external")
+
+    async def test_omits_session_cookies(self):
+        await self.session.get_anonymous("https://ecf.nysd.uscourts.gov/doc1/1")
+
+        [request] = self.sent
+        self.assertNotIn("Cookie", request.headers)
+
+
 class PacerSessionAcmsTest(unittest.IsolatedAsyncioTestCase):
     """Test the ACMS SAML handshake in PacerSession."""
 
