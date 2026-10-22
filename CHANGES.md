@@ -15,7 +15,8 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- `fladistctapp_1` now extracts the Southern Reporter citation that the source
+  adds to the `note` field months after an opinion is published #2122
 
 Changes:
 -
