@@ -3326,13 +3326,6 @@
       "severity": "error"
     },
     {
-      "column": 16,
-      "path": "juriscraper/pacer/reports.py",
-      "name": "unsupported-operation",
-      "concise_description": "`in` is not supported between `Literal['You do not have permission to view this document.']` and `bytes`",
-      "severity": "error"
-    },
-    {
       "column": 15,
       "path": "juriscraper/pacer/rss_feeds.py",
       "name": "bad-override",
