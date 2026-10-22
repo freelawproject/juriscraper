@@ -57,7 +57,7 @@ class BaseDocketReport:
     docket_number_jpml = re.compile(r"(MDL No.\s+\d*)")
     docket_number_appellate_regex = re.compile(r"(\d\d-\d+)")
 
-    def __init__(self, court_id):
+    def __init__(self, court_id: str):
         self.court_id = court_id
         if self.court_id.endswith("b"):
             self.is_bankruptcy = True
@@ -509,7 +509,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         "Submission already made, please wait for response from server",
     ]
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None):
         BaseDocketReport.__init__(self, court_id)
         BaseReport.__init__(self, court_id, pacer_session)
 

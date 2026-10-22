@@ -33,7 +33,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         "No claims found for this case using selection criteria entered"
     ]
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None):
         BaseDocketReport.__init__(self, court_id)
         BaseReport.__init__(self, court_id, pacer_session)
 
@@ -61,7 +61,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         if self._metadata is not None:
             return self._metadata
 
-        data = {
+        data: dict = {
             "court_id": self.court_id,
         }
         field_mappings = {

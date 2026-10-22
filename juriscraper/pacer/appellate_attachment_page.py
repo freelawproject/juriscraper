@@ -29,7 +29,7 @@ class AppellateAttachmentPage(BaseReport):
 
     PATH = "docs1/"
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None):
         super().__init__(court_id, pacer_session)
 
     async def query(self, document_number):
