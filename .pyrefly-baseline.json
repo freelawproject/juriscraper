@@ -3417,15 +3417,15 @@
       "severity": "error"
     },
     {
-      "column": 37,
-      "path": "juriscraper/scotus/scotus_docket_report.py",
+      "column": 33,
+      "path": "juriscraper/scotus/_scotus_docket_report_parsing.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `groups`",
       "severity": "error"
     },
     {
-      "column": 35,
-      "path": "juriscraper/scotus/scotus_docket_report.py",
+      "column": 31,
+      "path": "juriscraper/scotus/_scotus_docket_report_parsing.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `groups`",
       "severity": "error"

@@ -19,8 +19,10 @@ from ._scotus_docket_report_parsing import (
     DOCKET_NUMBER_RE,
     EMAIL_RE,
     ID_RE,
+    clean_lower_court_cases,
     clean_whitespace,
     map_contacts_header_to_type,
+    normalize_date,
     parse_address_lines,
     parse_address_title,
     parse_description_html,
@@ -152,15 +154,15 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
         lower_court_raw = (self.lower_court_case_numbers_raw or "").strip()
         lower_court_cleaned = None
         if lower_court_raw:
-            lower_court_cleaned = self.clean_lower_court_cases(
+            lower_court_cleaned = clean_lower_court_cases(
                 lower_court_raw.strip("()")
             )
 
         if self._page_format == HTMPageFormat.New:
-            lower_court_decision_date = self.normalize_date(
+            lower_court_decision_date = normalize_date(
                 self._htm_value_by_label("Decision Date:", allow_indent=True)
             )
-            lower_court_rehearing_denied_date = self.normalize_date(
+            lower_court_rehearing_denied_date = normalize_date(
                 self._htm_value_by_label(
                     "Rehearing Denied:", allow_indent=True
                 )
@@ -224,8 +226,8 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
     @property
     def date_filed(self) -> date | None:
         if self._page_format == HTMPageFormat.New:
-            return self.normalize_date(self._get_case_data_text(2, 1))
-        return self.normalize_date(self._get_case_data_text(5, 0))
+            return normalize_date(self._get_case_data_text(2, 1))
+        return normalize_date(self._get_case_data_text(5, 0))
 
     @property
     def lower_court(self) -> str | None:
@@ -300,7 +302,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportHTML):
             description = clean_whitespace(node.text_content())
 
         return {
-            "date_filed": self.normalize_date(date_str),
+            "date_filed": normalize_date(date_str),
             "document_number": None,
             "description": description,
             "description_html": description_html,

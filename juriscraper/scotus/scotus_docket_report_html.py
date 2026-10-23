@@ -12,11 +12,14 @@ from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.scotus import SCOTUSDocketReport
 
 from ._scotus_docket_report_parsing import (
+    DOC_NUM_RE,
     DOCKET_NUMBER_RE,
     EMAIL_RE,
     ContactAddress,
+    clean_lower_court_cases,
     clean_whitespace,
     map_contacts_header_to_type,
+    normalize_date,
     parse_address_lines,
     parse_address_title,
     parse_description_html,
@@ -77,7 +80,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         )
 
         docketed_str = self._td_value_by_label("Docketed:")
-        date_filed = self.normalize_date(docketed_str)
+        date_filed = normalize_date(docketed_str)
 
         linked_with_val = self._td_value_by_label("Linked with:")
         if not linked_with_val:
@@ -97,18 +100,16 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         lower_court_cleaned = None
         if lower_court_raw:
             lower_court_text = lower_court_raw.strip("()")
-            lower_court_cleaned = self.clean_lower_court_cases(
-                lower_court_text
-            )
+            lower_court_cleaned = clean_lower_court_cases(lower_court_text)
 
         # Decision dates
-        lower_court_decision_date = self.normalize_date(
+        lower_court_decision_date = normalize_date(
             self._td_value_by_label("Decision Date:", allow_indent=True)
         )
-        lower_court_rehearing_denied = self.normalize_date(
+        lower_court_rehearing_denied = normalize_date(
             self._td_value_by_label("Rehearing Denied:", allow_indent=True)
         )
-        discretionary_court_decision = self.normalize_date(
+        discretionary_court_decision = normalize_date(
             self._td_value_by_label(
                 "Discretionary Court Decision Date:", allow_indent=True
             )
@@ -173,7 +174,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
                     continue
 
                 if document_number is None and "DocketPDF" in href:
-                    match = re.search(self.DOC_NUM_RE, href)
+                    match = re.search(DOC_NUM_RE, href)
                     if match:
                         document_number = int(match.group(1))
 
@@ -198,7 +199,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         description = clean_whitespace(cleaned.text_content())
 
         return {
-            "date_filed": self.normalize_date(date_str),
+            "date_filed": normalize_date(date_str),
             "document_number": document_number,
             "description": description,
             "description_html": description_html,

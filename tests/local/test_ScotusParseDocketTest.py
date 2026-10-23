@@ -6,6 +6,9 @@ from juriscraper.scotus import (
     SCOTUSDocketReportHTM,
     SCOTUSDocketReportHTML,
 )
+from juriscraper.scotus._scotus_docket_report_parsing import (
+    clean_lower_court_cases,
+)
 from tests import TESTS_ROOT_EXAMPLES_SCOTUS
 from tests.local.PacerParseTestCase import PacerParseTestCase
 
@@ -31,9 +34,6 @@ class ScotusParseDocketTest(PacerParseTestCase):
 
 class LowerCourtCasesCleaningTest(unittest.TestCase):
     """Test the SCOTUSDocketReport clean_lower_court_cases method"""
-
-    def setUp(self):
-        self.parser = SCOTUSDocketReport()
 
     def test_clean_lower_court_cases(self):
         cases = {
@@ -92,6 +92,4 @@ class LowerCourtCasesCleaningTest(unittest.TestCase):
 
         for raw, expected in cases.items():
             with self.subTest(raw=raw):
-                self.assertEqual(
-                    expected, self.parser.clean_lower_court_cases(raw)
-                )
+                self.assertEqual(expected, clean_lower_court_cases(raw))
