@@ -198,7 +198,7 @@ class ShowCaseDocApi(BaseReport):
 
     PATH = "cgi-bin/show_case_doc"
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None):
         assert not court_id.endswith("b"), (
             "This API is not available at bankruptcy courts."
         )

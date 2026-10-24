@@ -31,7 +31,7 @@ Features:
 - Add a backscraper to `nmariana`. #1946
 
 Changes:
--
+- Define the type of the `court_id` parameter to `pacer` report initializers (type `str`).
 
 Fixes:
 - Coerce non-string multipart form values to str and omit `None` values in

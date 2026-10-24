@@ -51,7 +51,7 @@ class BaseReport:
         "Drumpf",
     ]
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None):
         self.court_id = court_id
         self.session = pacer_session
         self.tree = None
@@ -420,18 +420,6 @@ class BaseReport:
             )
 
         return r, ""
-
-    async def is_pdf_sealed(
-        self, pacer_case_id, pacer_doc_id, pacer_magic_num=None
-    ):
-        """Check if a PDF is sealed without trying to actually download
-        it.
-        """
-        r, url = await self._query_pdf_download(
-            pacer_case_id, pacer_doc_id, pacer_magic_num, got_receipt="0"
-        )
-        sealed = "You do not have permission to view this document."
-        return sealed in r.content
 
     async def is_entry_sealed(
         self,
