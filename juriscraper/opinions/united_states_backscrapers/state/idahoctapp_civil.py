@@ -2,9 +2,13 @@ import re
 import time
 from datetime import date
 
+import httpx
 from lxml import html
 
-from juriscraper.AbstractSite import MissingRequestResponseException
+from juriscraper.AbstractSite import (
+    MissingRequestResponseException,
+    UnexpectedRequestResponseException,
+)
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.OpinionSite import OpinionSite
 
@@ -25,6 +29,8 @@ class Site(OpinionSite):
         """
         if self.request["response"] is None:
             raise MissingRequestResponseException
+        if not isinstance(self.request["response"], httpx.Response):
+            raise UnexpectedRequestResponseException
         self.request["response"].encoding = "ISO-8859-1"
 
     def _get_case_names(self):

@@ -415,13 +415,6 @@
       "severity": "error"
     },
     {
-      "column": 33,
-      "path": "juriscraper/opinions/united_states/federal_appellate/ca7.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `HTTPResponse` has no attribute `content`",
-      "severity": "error"
-    },
-    {
       "column": 21,
       "path": "juriscraper/opinions/united_states/federal_appellate/ca8.py",
       "name": "missing-attribute",
@@ -454,13 +447,6 @@
       "path": "juriscraper/opinions/united_states/federal_appellate/cadc.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
-      "severity": "error"
-    },
-    {
-      "column": 33,
-      "path": "juriscraper/opinions/united_states/federal_appellate/cafc.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `HTTPResponse` has no attribute `content`",
       "severity": "error"
     },
     {
@@ -762,13 +748,6 @@
       "path": "juriscraper/opinions/united_states/state/colo.py",
       "name": "unsupported-operation",
       "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "column": 31,
-      "path": "juriscraper/opinions/united_states/state/colo.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `HTTPResponse` has no attribute `json`",
       "severity": "error"
     },
     {
@@ -1150,13 +1129,6 @@
       "severity": "error"
     },
     {
-      "column": 20,
-      "path": "juriscraper/opinions/united_states/state/michctapp.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `HTTPResponse` has no attribute `json`",
-      "severity": "error"
-    },
-    {
       "column": 26,
       "path": "juriscraper/opinions/united_states/state/minn.py",
       "name": "missing-attribute",
@@ -1444,13 +1416,6 @@
       "severity": "error"
     },
     {
-      "column": 20,
-      "path": "juriscraper/opinions/united_states/state/or.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `HTTPResponse` has no attribute `json`",
-      "severity": "error"
-    },
-    {
       "column": 24,
       "path": "juriscraper/opinions/united_states/state/pa.py",
       "name": "unsupported-operation",
@@ -1476,13 +1441,6 @@
       "path": "juriscraper/opinions/united_states/state/ri.py",
       "name": "bad-argument-type",
       "concise_description": "Argument `Unknown | None` is not assignable to parameter `doc` with type `HtmlElement | _ElementTree[HtmlElement]` in function `lxml.html._funcs.tostring`",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "juriscraper/opinions/united_states/state/ri.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `HTTPResponse` has no attribute `json`",
       "severity": "error"
     },
     {
@@ -1857,13 +1815,6 @@
       "severity": "error"
     },
     {
-      "column": 33,
-      "path": "juriscraper/oral_args/united_states/federal_appellate/ca1.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `HTTPResponse` has no attribute `content`",
-      "severity": "error"
-    },
-    {
       "column": 20,
       "path": "juriscraper/oral_args/united_states/federal_appellate/ca2.py",
       "name": "missing-attribute",
@@ -1917,13 +1868,6 @@
       "path": "juriscraper/oral_args/united_states/federal_appellate/cadc.py",
       "name": "bad-argument-type",
       "concise_description": "Argument `Unknown | None` is not assignable to parameter `date_list` with type `list[tuple[Unknown]] | list[Unknown]` in function `juriscraper.lib.date_utils.unique_year_month`",
-      "severity": "error"
-    },
-    {
-      "column": 20,
-      "path": "juriscraper/oral_args/united_states/federal_appellate/cafc.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `HTTPResponse` has no attribute `json`",
       "severity": "error"
     },
     {

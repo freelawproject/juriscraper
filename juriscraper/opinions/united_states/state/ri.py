@@ -12,10 +12,14 @@ History:
 
 from urllib.parse import quote
 
+import httpx
 from lxml import html
 from typing_extensions import override
 
-from juriscraper.AbstractSite import MissingRequestResponseException
+from juriscraper.AbstractSite import (
+    MissingRequestResponseException,
+    UnexpectedRequestResponseException,
+)
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -72,6 +76,8 @@ class Site(OpinionSiteLinear):
         await self.fetch_json()
         if self.request["response"] is None:
             raise MissingRequestResponseException
+        if not isinstance(self.request["response"], httpx.Response):
+            raise UnexpectedRequestResponseException
         rows = self.request["response"].json()[-3][self.search_key][
             "ResultTables"
         ][0]["ResultRows"]

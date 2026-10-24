@@ -63,6 +63,10 @@ class MissingRequestResponseException(JuriscraperException):
     """Raised when `request["response"]` is needed but unavailable."""
 
 
+class UnexpectedRequestResponseException(JuriscraperException):
+    """Raised when `request["response"]` is the wrong type - use_urllib is misconfigured."""
+
+
 class AbstractSite:
     """Contains generic methods for scraping data. Should be extended by all
     scrapers.
@@ -655,11 +659,15 @@ class AbstractSite:
         self.tweak_response_object()
         if self.request["response"] is None:
             raise MissingRequestResponseException
+        if not isinstance(self.request["response"], httpx.Response):
+            raise UnexpectedRequestResponseException
         self.request["response"].raise_for_status()
         set_response_encoding(self.request["response"])
 
     def _return_response_text_object(self):
         if self.request["response"]:
+            if not isinstance(self.request["response"], httpx.Response):
+                raise UnexpectedRequestResponseException
             if "json" in self.request["response"].headers.get(
                 "content-type", ""
             ):
