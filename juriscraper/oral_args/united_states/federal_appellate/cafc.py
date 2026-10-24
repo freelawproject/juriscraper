@@ -13,9 +13,14 @@ History:
 from datetime import date, timedelta
 from urllib.parse import urljoin
 
+import httpx
 from typing_extensions import override
 
-from juriscraper.AbstractSite import MissingRequestResponseException, logger
+from juriscraper.AbstractSite import (
+    MissingRequestResponseException,
+    UnexpectedRequestResponseException,
+    logger,
+)
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
@@ -64,6 +69,8 @@ class Site(OralArgumentSiteLinear):
 
         if self.request["response"] is None:
             raise MissingRequestResponseException
+        if not isinstance(self.request["response"], httpx.Response):
+            raise UnexpectedRequestResponseException
 
         for row in self.request["response"].json()["data"]:
             _, name, _, url, _ = row[2].split('"')

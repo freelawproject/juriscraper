@@ -14,9 +14,14 @@ import re
 from datetime import datetime
 from urllib.parse import urlencode
 
+import httpx
 from typing_extensions import override
 
-from juriscraper.AbstractSite import MissingRequestResponseException, logger
+from juriscraper.AbstractSite import (
+    MissingRequestResponseException,
+    UnexpectedRequestResponseException,
+    logger,
+)
 from juriscraper.ClusterSite import ClusterSite
 from juriscraper.lib.type_utils import OpinionType
 from juriscraper.opinions.united_states.state import mich
@@ -92,6 +97,8 @@ class Site(ClusterSite, mich.Site):
         await self._request_url_get(url)
         if self.request["response"] is None:
             raise MissingRequestResponseException
+        if not isinstance(self.request["response"], httpx.Response):
+            raise UnexpectedRequestResponseException
         response = self.request["response"].json()
         search_items = response.get("caseDetailResults", {}).get(
             "searchItems", []

@@ -5,9 +5,14 @@
 import re
 
 import feedparser
+import httpx
 from typing_extensions import override
 
-from juriscraper.AbstractSite import MissingRequestResponseException, logger
+from juriscraper.AbstractSite import (
+    MissingRequestResponseException,
+    UnexpectedRequestResponseException,
+    logger,
+)
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -24,6 +29,8 @@ class Site(OpinionSiteLinear):
             self.year = 2022
         if self.request["response"] is None:
             raise MissingRequestResponseException
+        if not isinstance(self.request["response"], httpx.Response):
+            raise UnexpectedRequestResponseException
         feed = feedparser.parse(self.request["response"].content)
         for item in feed["entries"]:
             if item.get("published_parsed", None) is None:
