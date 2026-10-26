@@ -3480,13 +3480,6 @@
       "severity": "error"
     },
     {
-      "column": 21,
-      "path": "juriscraper/state/florida/scraper.py",
-      "name": "unreachable-match-case",
-      "concise_description": "Case pattern can never match subject of type `FloridaPaginatedResults[FloridaCase]`",
-      "severity": "warn"
-    },
-    {
       "column": 38,
       "path": "juriscraper/state/texas/common.py",
       "name": "missing-attribute",
