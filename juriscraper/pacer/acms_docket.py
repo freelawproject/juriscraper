@@ -21,7 +21,7 @@ class ACMSDocketReport(AppellateDocketReport):
 
     def __init__(self, court_id: str, pacer_session=None):
         super().__init__(court_id, pacer_session)
-        self._acms_json = None
+        self._acms_json: dict | None = None
         self.api_client = AcmsApiClient(pacer_session, court_id)
 
     def _parse_text(self, text):
@@ -363,7 +363,9 @@ class ACMSDocketReport(AppellateDocketReport):
         for party in parties:
             for attorney in party.get("attorneys", []):
                 if re.search(r"see\s+above", attorney.get("attorneys", "")):
-                    assert "Unexpected SEE ABOVE found in ACMS attorney list"
+                    raise AssertionError(
+                        "Unexpected SEE ABOVE found in ACMS attorney list"
+                    )
 
         return parties
 

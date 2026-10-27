@@ -2094,6 +2094,27 @@
       "severity": "error"
     },
     {
+      "column": 24,
+      "path": "juriscraper/pacer/acms_attachment_page.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/pacer/acms_attachment_page.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/pacer/acms_attachment_page.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
       "column": 41,
       "path": "juriscraper/pacer/acms_docket.py",
       "name": "bad-argument-type",
@@ -2134,13 +2155,6 @@
       "name": "missing-attribute",
       "concise_description": "Object of class `str` has no attribute `get`",
       "severity": "error"
-    },
-    {
-      "column": 28,
-      "path": "juriscraper/pacer/acms_docket.py",
-      "name": "redundant-condition",
-      "concise_description": "String literal used as condition. It's equivalent to `True`",
-      "severity": "warn"
     },
     {
       "column": 20,
@@ -3478,13 +3492,6 @@
       "name": "no-any-return-explicit",
       "concise_description": "Returning Any from function declared to return \"PartyType\"",
       "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "juriscraper/state/florida/scraper.py",
-      "name": "unreachable-match-case",
-      "concise_description": "Case pattern can never match subject of type `FloridaPaginatedResults[FloridaCase]`",
-      "severity": "warn"
     },
     {
       "column": 5,
