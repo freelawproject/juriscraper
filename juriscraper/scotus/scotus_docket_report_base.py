@@ -1,9 +1,27 @@
 from abc import ABC, abstractmethod
-from typing import Any, final
+from typing import Any, TypedDict, final
 
 from juriscraper.lib.log_tools import make_default_logger
 
 logger = make_default_logger()
+
+
+class Attorney(TypedDict):
+    name: str | None
+    is_counsel_of_record: bool
+    phone: str | None
+    title: str | None
+    address: str | None
+    city: str | None
+    state: str | None
+    zip: str | None
+    email: str | None
+
+
+class Party(TypedDict):
+    type: str
+    name: str
+    attorneys: list[Attorney]
 
 
 class SCOTUSDocketReportBase(ABC):
@@ -39,7 +57,7 @@ class SCOTUSDocketReportBase(ABC):
 
     @property
     @abstractmethod
-    def parties(self) -> list[dict[str, Any]]: ...
+    def parties(self) -> list[Party]: ...
 
     @property
     @abstractmethod

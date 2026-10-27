@@ -28,7 +28,11 @@ from ._scotus_docket_report_parsing import (
     parse_address_title,
     parse_description_html,
 )
-from .scotus_docket_report_base import SCOTUSDocketReportBase
+from .scotus_docket_report_base import (
+    Attorney,
+    Party,
+    SCOTUSDocketReportBase,
+)
 
 logger = make_default_logger()
 
@@ -44,18 +48,6 @@ class _CurrentAttorney(TypedDict):
     phone: str | None
     _raw_lines: list[str]
     _email: str | None
-
-
-class _Attorney(TypedDict):
-    name: str | None
-    is_counsel_of_record: bool
-    phone: str | None
-    title: str | None
-    address: str | None
-    city: str | None
-    state: str | None
-    zip: str | None
-    email: str | None
 
 
 @final
@@ -370,7 +362,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportBase):
     def _build_htm_attorney(
         self,
         current_attorney: _CurrentAttorney,
-    ) -> _Attorney:
+    ) -> Attorney:
         """Complete an attorney dict from the HTM Contacts table.
 
         :param current_attorney: The in-progress attorney dict with initial values.
@@ -411,7 +403,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportBase):
 
     @override
     @property
-    def parties(self) -> list[dict[str, Any]]:
+    def parties(self) -> list[Party]:
         """Return parties grouped by type for HTM pages.
 
         :return: List of dicts containing parties data.
@@ -430,7 +422,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportBase):
         if header_tr is None:
             return []
 
-        parties_by_key: dict[tuple[str, str], list[_Attorney]] = defaultdict(
+        parties_by_key: dict[tuple[str, str], list[Attorney]] = defaultdict(
             list
         )
         current_type = None

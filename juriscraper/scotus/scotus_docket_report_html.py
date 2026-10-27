@@ -23,7 +23,11 @@ from ._scotus_docket_report_parsing import (
     parse_address_title,
     parse_description_html,
 )
-from .scotus_docket_report_base import SCOTUSDocketReportBase
+from .scotus_docket_report_base import (
+    Attorney,
+    Party,
+    SCOTUSDocketReportBase,
+)
 
 logger = make_default_logger()
 
@@ -278,7 +282,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReportBase):
 
     @override
     @property
-    def parties(self) -> list[dict[str, Any]]:
+    def parties(self) -> list[Party]:
         """Return parties grouped under Contacts (Petitioner/Respondent/Other).
 
         Tries the card-based layout first. If not found, tries the table-based layout.
@@ -293,7 +297,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReportBase):
 
         return self._parties_from_contacts_table()
 
-    def _parties_from_cards(self) -> list[dict[str, Any]]:
+    def _parties_from_cards(self) -> list[Party]:
         """Parse parties from the Contacts card-based layout.
 
         :return: List of dicts containing parties data.
@@ -304,7 +308,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReportBase):
             ("Other Attorneys", "Other"),
         ]
 
-        parties: list[dict[str, Any]] = []
+        parties: list[Party] = []
 
         for heading_text, type_key in sections:
             section_root = self._section_by_heading(heading_text)
@@ -318,7 +322,9 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReportBase):
                 ".//div[contains(@class,'ContactData2')]"
             )
 
-            attorneys_by_party = defaultdict(list)
+            attorneys_by_party: dict[tuple[str, str], list[Attorney]] = (
+                defaultdict(list)
+            )
             for i, name_div in enumerate(names):
                 data_div = contact_data[i] if i < len(contact_data) else None
                 attorney = self._build_attorney_from_contact(
@@ -342,7 +348,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReportBase):
             )
         return parties
 
-    def _parties_from_contacts_table(self) -> list[dict[str, Any]]:
+    def _parties_from_contacts_table(self) -> list[Party]:
         """Parse parties from the table-based contacts layout.
 
         :return: List of dicts containing parties data.
@@ -353,8 +359,8 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReportBase):
         if table is None:
             return []
 
-        parties_by_key: dict[tuple[str, str], list[dict[str, Any]]] = (
-            defaultdict(list)
+        parties_by_key: dict[tuple[str, str], list[Attorney]] = defaultdict(
+            list
         )
         current_type = None
         rows = table.xpath(".//tr[td]")
@@ -494,7 +500,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReportBase):
 
     def _build_attorney_from_contact(
         self, name_div: HtmlElement, data_div: HtmlElement | None
-    ) -> dict[str, Any]:
+    ) -> Attorney:
         """Build an attorney dict from ContactName/ContactData2 pair.
 
         :param name_div: ContactName div.
