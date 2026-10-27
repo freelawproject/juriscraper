@@ -7,7 +7,7 @@ from datetime import datetime
 from email.message import Message
 from enum import Enum
 from pathlib import Path
-from typing import TypedDict
+from typing import Literal, TypedDict
 from urllib.parse import ParseResult, parse_qs, urlparse
 
 import httpx
@@ -74,13 +74,28 @@ class SCOTUSEmailData(TypedDict):
     data: SCOTUSNotificationEmail | None
 
 
-class SCOTUSEmailHandlingResult(TypedDict):
+class SCOTUSDocketEntryEmailHandlingResult(TypedDict):
     """
-    Schema for result of handling SCOTUS emails.
+    Schema for result of handling SCOTUS docket entry emails.
     """
 
-    email_type: str
-    data: dict[str, str] | str
+    email_type: Literal["docket_entry"]
+    data: dict[str, str]
+
+
+class SCOTUSConfirmationEmailHandlingResult(TypedDict):
+    """
+    Schema for result of handling SCOTUS confirmation emails.
+    """
+
+    email_type: Literal["confirmation"]
+    data: str
+
+
+SCOTUSEmailHandlingResult = (
+    SCOTUSDocketEntryEmailHandlingResult
+    | SCOTUSConfirmationEmailHandlingResult
+)
 
 
 class SCOTUSConfirmationResult(Enum):
@@ -274,7 +289,7 @@ class SCOTUSEmail:
         if self.email_type == SCOTUSEmailType.DOCKET_ENTRY:
             scotus_docket_report_html = SCOTUSDocketReportHTML(self.court_id)
             scotus_docket_report_html._parse_text(response.text)
-            return SCOTUSEmailHandlingResult(
+            return SCOTUSDocketEntryEmailHandlingResult(
                 email_type=self.email_type.value,
                 data=scotus_docket_report_html.data,
             )
@@ -284,7 +299,7 @@ class SCOTUSEmail:
             self.court_id
         )
         scotus_confirmation_page_scraper._parse_text(response.text)
-        return SCOTUSEmailHandlingResult(
+        return SCOTUSConfirmationEmailHandlingResult(
             email_type=self.email_type.value,
             data=scotus_confirmation_page_scraper.data,
         )
