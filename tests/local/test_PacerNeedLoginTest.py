@@ -9,7 +9,7 @@ import time
 import unittest
 from unittest import mock
 
-from httpx import Request
+from httpx2 import Request
 
 from juriscraper.lib.exceptions import PacerLoginException
 from juriscraper.lib.test_utils import MockResponse, warn_or_crash_slow_parser
@@ -60,7 +60,7 @@ class PacerNeedLoginTest(unittest.IsolatedAsyncioTestCase):
         self.parse_files(path_root, "*.html")
 
     @mock.patch(
-        "juriscraper.pacer.http.httpx.AsyncClient.get",
+        "juriscraper.pacer.http.httpx2.AsyncClient.get",
         side_effect=lambda *args, **kwargs: MockResponse(
             200,
             b"",
@@ -86,7 +86,7 @@ class PacerNeedLoginTest(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(mock_check_if_logged_in.call_count, 2)
 
     @mock.patch(
-        "juriscraper.pacer.http.httpx.AsyncClient.post",
+        "juriscraper.pacer.http.httpx2.AsyncClient.post",
         side_effect=lambda *args, **kwargs: MockResponse(
             200,
             b"",
@@ -110,7 +110,7 @@ class PacerNeedLoginTest(unittest.IsolatedAsyncioTestCase):
             await session.post("https://example.com")
         self.assertEqual(mock_check_if_logged_in.call_count, 1)
 
-    @mock.patch("juriscraper.pacer.http.httpx.AsyncClient.get")
+    @mock.patch("juriscraper.pacer.http.httpx2.AsyncClient.get")
     @mock.patch(
         "juriscraper.pacer.http.check_if_logged_in_page",
         side_effect=lambda x: False,

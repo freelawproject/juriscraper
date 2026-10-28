@@ -1,7 +1,7 @@
 import unittest
 from unittest import mock
 
-import httpx
+import httpx2
 
 from juriscraper.lib.exceptions import PacerLoginException
 from juriscraper.pacer import CaseQuery, PacerSession
@@ -28,13 +28,13 @@ class PacerSessionTest(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(output, expected)
 
     def test_multipart_form_data_with_non_string_values_encodes(self):
-        """Non-string values must be encodable by httpx as multipart data.
+        """Non-string values must be encodable by httpx2 as multipart data.
 
         Regression test for freelawproject/juriscraper#2301.
         """
         data = {"case_id": 123, "all_case_ids": 0}
         files = self.session._prepare_multipart_form_data(data)
-        request = httpx.Request("POST", "https://free.law", files=files)
+        request = httpx2.Request("POST", "https://free.law", files=files)
         body = request.read()
         self.assertIn(b'name="case_id"\r\n\r\n123\r\n', body)
         self.assertIn(b'name="all_case_ids"\r\n\r\n0\r\n', body)
@@ -43,12 +43,12 @@ class PacerSessionTest(unittest.IsolatedAsyncioTestCase):
         """None values must be left out of the form, not sent as "None"."""
         data = {"case_num": "1:23-bk-45678", "all_case_ids": None}
         files = self.session._prepare_multipart_form_data(data)
-        request = httpx.Request("POST", "https://free.law", files=files)
+        request = httpx2.Request("POST", "https://free.law", files=files)
         body = request.read()
         self.assertIn(b'name="case_num"\r\n\r\n1:23-bk-45678\r\n', body)
         self.assertNotIn(b'name="all_case_ids"', body)
 
-    @mock.patch("juriscraper.pacer.http.httpx.AsyncClient.post")
+    @mock.patch("juriscraper.pacer.http.httpx2.AsyncClient.post")
     async def test_ignores_non_data_posts(self, mock_post):
         """Test that POSTs without a data parameter just pass through as normal.
 
@@ -69,7 +69,7 @@ class PacerSessionTest(unittest.IsolatedAsyncioTestCase):
             "the data should not be changed if using a files call",
         )
 
-    @mock.patch("juriscraper.pacer.http.httpx.AsyncClient.post")
+    @mock.patch("juriscraper.pacer.http.httpx2.AsyncClient.post")
     async def test_transforms_data_on_post(self, mock_post):
         """Test that POSTs using the data parameter get transformed into PACER's
         delightfully odd multi-part form data.
@@ -97,7 +97,7 @@ class PacerSessionTest(unittest.IsolatedAsyncioTestCase):
             "we should transform and populate the files argument",
         )
 
-    @mock.patch("juriscraper.pacer.http.httpx.AsyncClient.post")
+    @mock.patch("juriscraper.pacer.http.httpx2.AsyncClient.post")
     async def test_sets_default_timeout(self, mock_post):
         await self.session.post("https://free.law", data={}, auto_login=False)
 
@@ -125,16 +125,16 @@ class PacerSessionAnonymousGetTest(unittest.IsolatedAsyncioTestCase):
     """Test the requests PacerSession.get_anonymous sends."""
 
     def setUp(self):
-        self.sent: list[httpx.Request] = []
+        self.sent: list[httpx2.Request] = []
 
-        def handler(request: httpx.Request) -> httpx.Response:
+        def handler(request: httpx2.Request) -> httpx2.Response:
             self.sent.append(request)
-            return httpx.Response(200)
+            return httpx2.Response(200)
 
         self.session = PacerSession(
             username="user",
             password="pass",
-            transport=httpx.MockTransport(handler),
+            transport=httpx2.MockTransport(handler),
         )
         self.addAsyncCleanup(self.session.aclose)
         self.session.cookies.set(
@@ -195,9 +195,9 @@ class PacerSessionAcmsTest(unittest.IsolatedAsyncioTestCase):
         """
 
         def post(url, data, headers, *args, **kwargs):
-            response = httpx.Response(
+            response = httpx2.Response(
                 200,
-                request=httpx.Request("POST", url),
+                request=httpx2.Request("POST", url),
                 headers=[
                     (
                         "Set-Cookie",

@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import TypedDict
 from urllib.parse import ParseResult, parse_qs, urlparse
 
-import httpx
+import httpx2
 from lxml import html
 from lxml.html import HtmlElement
 
@@ -261,7 +261,7 @@ class SCOTUSEmail:
 
         # The `followup_url` property is guaranteed to be present if the
         # email type is valid.
-        async with httpx.AsyncClient(
+        async with httpx2.AsyncClient(
             http2=True, follow_redirects=True
         ) as client:
             response = await client.get(

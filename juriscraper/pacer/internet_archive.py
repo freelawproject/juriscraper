@@ -1,4 +1,4 @@
-from httpx import AsyncClient, Timeout
+from httpx2 import AsyncClient, Timeout
 from lxml import etree
 
 from juriscraper.lib.judge_parsers import normalize_judge_string

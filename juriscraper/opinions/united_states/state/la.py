@@ -11,7 +11,7 @@ import json
 import re
 from urllib.parse import urljoin
 
-import httpx
+import httpx2
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
@@ -57,7 +57,7 @@ class Site(OpinionSiteLinear):
         # (url, rendered news-release HTML) pairs, compiled into a single
         # archivable response for save_response after processing (#1983).
         self.rendered_pages: list[tuple[str, str]] = []
-        # lasc.org sits behind Cloudflare and serves the default httpx
+        # lasc.org sits behind Cloudflare and serves the default httpx2
         # User-Agent the 521/empty shell more often; a browser UA is stabler.
         self.request["headers"]["User-Agent"] = self.chrome_user_agent
 
@@ -144,11 +144,11 @@ class Site(OpinionSiteLinear):
             for url, fragment in self.rendered_pages
         )
         self.request["url"] = self.url
-        self.request["response"] = httpx.Response(
+        self.request["response"] = httpx2.Response(
             status_code=200,
             headers={"Content-Type": "text/html; charset=utf-8"},
             content=document.encode("utf-8"),
-            request=httpx.Request("GET", self.url),
+            request=httpx2.Request("GET", self.url),
         )
 
         # The base class only calls this from its own request methods, which
@@ -244,7 +244,7 @@ class Site(OpinionSiteLinear):
         await session.post(conn_url, content=invocation, headers=octet)
 
         # Long-poll for render batches; the news release arrives in the first
-        # non-empty batch, so stop as soon as we can extract it. Any httpx
+        # non-empty batch, so stop as soon as we can extract it. Any httpx2
         # error here is allowed to bubble up and fail the scrape.
         collected = bytearray()
         for _ in range(12):
@@ -292,11 +292,11 @@ class Site(OpinionSiteLinear):
         :param url: the URL to fetch
         :param retries: number of attempts
         :return: the response text
-        :raises httpx.HTTPError: if every attempt failed; this should bubble
+        :raises httpx2.HTTPError: if every attempt failed; this should bubble
             up and fail the scrape rather than silently yielding no opinions
         """
         session = self.request["session"]
-        error = httpx.HTTPError(f"la: no response from {url}")
+        error = httpx2.HTTPError(f"la: no response from {url}")
         for attempt in range(retries):
             try:
                 response = await session.get(
@@ -304,7 +304,7 @@ class Site(OpinionSiteLinear):
                 )
                 response.raise_for_status()
                 return response.text
-            except httpx.HTTPError as exc:
+            except httpx2.HTTPError as exc:
                 error = exc
                 if attempt < retries - 1:
                     await asyncio.sleep(min(2**attempt, 16))
