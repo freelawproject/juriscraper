@@ -7,7 +7,7 @@ from datetime import datetime
 from email.message import Message
 from enum import Enum
 from pathlib import Path
-from typing import Literal, TypedDict
+from typing import Any, Literal, TypedDict
 from urllib.parse import ParseResult, parse_qs, urlparse
 
 import httpx
@@ -80,7 +80,7 @@ class SCOTUSDocketEntryEmailHandlingResult(TypedDict):
     """
 
     email_type: Literal["docket_entry"]
-    data: dict[str, str]
+    data: dict[str, Any]
 
 
 class SCOTUSConfirmationEmailHandlingResult(TypedDict):
