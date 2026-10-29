@@ -10,9 +10,12 @@ History:
     2026-10-28: Updated for redesigned recent opinions page. See #2367
 """
 
+import re
+
 from lxml.html import HtmlElement
 from typing_extensions import override
 
+from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.opinions.united_states.state import ariz
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -42,21 +45,46 @@ class Site(OpinionSiteLinear):
             "//div[contains(@class, 'gray-border-thick')]"
         )
         for card in cards:
-            link = card.xpath(".//a[contains(@href, 'serveFile.php')]")[0]
+            links = card.xpath(".//a[contains(@href, 'serveFile.php')]")
+            title = self._field(card, "Case Title")
+            date = self._field(card, "Opinion Filed")
+            if not (links and title and date):
+                logger.warning(
+                    "%s: skipping opinion card missing a PDF link, "
+                    "title or filed date: %r",
+                    self.court_id,
+                    title,
+                )
+                continue
             summary = card.xpath("string(./div[contains(@class, 'py-20')])")
-            # Titles are all caps except "v." and "et al."; titlecase only
-            # lowercases strings that are entirely uppercase
-            name = self._field(card, "Case Title").upper()
             self.cases.append(
                 {
-                    "name": titlecase(name),
-                    "date": self._field(card, "Opinion Filed"),
-                    "docket": link.text_content().strip(),
-                    "url": link.get("href"),
+                    "name": self._case_name(title),
+                    "date": date,
+                    "docket": links[0].text_content().strip(),
+                    "url": links[0].get("href"),
                     "summary": " ".join(summary.split()),
                     "status": "Published",
                 }
             )
+
+    @staticmethod
+    def _case_name(title: str) -> str:
+        """Title case an all caps case title.
+
+        Titles are all caps except the "v." separator and "et al.", and
+        titlecase only lowercases strings that are entirely uppercase, so
+        each party is cased on its own. titlecase also lowercases a middle
+        initial "V.", which would read as a second separator, so restore it.
+
+        :param title: The raw case title, e.g. "JOHN DOE v. JANE V. ROE"
+        :return: The title cased case name
+        """
+        parties = [
+            re.sub(r"\bv\.", "V.", titlecase(party.upper()))
+            for party in title.split(" v. ")
+        ]
+        return " v. ".join(parties)
 
     def _field(self, card: HtmlElement, label: str) -> str:
         """Return the value that follows a "Label: " heading in a card.
