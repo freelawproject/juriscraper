@@ -13,9 +13,14 @@ History:
 import re
 
 import feedparser
+import httpx
 from lxml.html import fromstring
 from typing_extensions import override
 
+from juriscraper.AbstractSite import (
+    MissingRequestResponseException,
+    UnexpectedRequestResponseException,
+)
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -42,6 +47,10 @@ class Site(OpinionSiteLinear):
         the date, case name, docket number, and status and pdf URL.
         Return: None
         """
+        if self.request["response"] is None:
+            raise MissingRequestResponseException
+        if not isinstance(self.request["response"], httpx.Response):
+            raise UnexpectedRequestResponseException
         feed = feedparser.parse(self.request["response"].content)
         for item in feed["entries"]:
             value = item["content"][0]["value"]

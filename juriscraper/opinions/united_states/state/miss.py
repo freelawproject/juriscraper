@@ -4,10 +4,15 @@ import datetime
 from posixpath import normpath
 from urllib.parse import urljoin, urlparse, urlunparse
 
+import httpx
 from lxml import html
 from typing_extensions import override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import (
+    MissingRequestResponseException,
+    UnexpectedRequestResponseException,
+    logger,
+)
 from juriscraper.lib.string_utils import convert_date_string
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -61,6 +66,10 @@ class Site(OpinionSiteLinear):
         self.downloader_executed = True
         await self._request_url_post(self.url)
         self._post_process_response()
+        if self.request["response"] is None:
+            raise MissingRequestResponseException
+        if not isinstance(self.request["response"], httpx.Response):
+            raise UnexpectedRequestResponseException
         dates_response = self.request["response"].json()
 
         all_dates = self.get_dates_from_response(dates_response)

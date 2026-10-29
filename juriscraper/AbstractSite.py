@@ -9,6 +9,8 @@ import urllib.parse
 import urllib.request
 from collections.abc import Awaitable
 from datetime import datetime
+from http.client import HTTPResponse
+from typing import TypedDict
 
 import certifi
 import httpx
@@ -20,6 +22,7 @@ from juriscraper.lib.date_utils import (
 )
 from juriscraper.lib.exceptions import (
     InsanityException,
+    JuriscraperException,
 )
 from juriscraper.lib.html_utils import (
     clean_html,
@@ -44,6 +47,24 @@ from juriscraper.lib.utils import (
 )
 
 logger = make_default_logger()
+
+
+class SiteRequest(TypedDict):
+    session: httpx.AsyncClient
+    headers: dict[str, str]
+    parameters: dict  # TODO: use a stricter type.
+    request: None  # TODO: Probably unused; remove
+    response: httpx.Response | HTTPResponse | None
+    status: None  # TODO: Probably unused; remove
+    url: str | None
+
+
+class MissingRequestResponseException(JuriscraperException):
+    """Raised when `request["response"]` is needed but unavailable."""
+
+
+class UnexpectedRequestResponseException(JuriscraperException):
+    """Raised when `request["response"]` is the wrong type - use_urllib is misconfigured."""
 
 
 class AbstractSite:
@@ -105,7 +126,7 @@ class AbstractSite:
         kwargs.setdefault("follow_redirects", True)
         kwargs.setdefault("http2", True)
         kwargs.setdefault("verify", True)
-        self.request = {
+        self.request: SiteRequest = {
             "session": httpx.AsyncClient(**kwargs),
             "headers": {
                 "User-Agent": self.user_agent,
@@ -116,6 +137,7 @@ class AbstractSite:
             },
             "parameters": {},
             "request": None,
+            "response": None,
             "status": None,
             "url": None,
         }
@@ -635,11 +657,17 @@ class AbstractSite:
     def _post_process_response(self):
         """Cleanup to response object"""
         self.tweak_response_object()
+        if self.request["response"] is None:
+            raise MissingRequestResponseException
+        if not isinstance(self.request["response"], httpx.Response):
+            raise UnexpectedRequestResponseException
         self.request["response"].raise_for_status()
         set_response_encoding(self.request["response"])
 
     def _return_response_text_object(self):
         if self.request["response"]:
+            if not isinstance(self.request["response"], httpx.Response):
+                raise UnexpectedRequestResponseException
             if "json" in self.request["response"].headers.get(
                 "content-type", ""
             ):
