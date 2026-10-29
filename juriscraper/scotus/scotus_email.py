@@ -208,7 +208,7 @@ class SCOTUSEmail:
     """Parse SCOTUS docket notification email."""
 
     TITLE_REGEX = re.compile(
-        r"^A new docket entry(?:, \"([\w\W]+)\")? has been added", re.M
+        r"^A new docket entry(?:, \"([\w\W]+?)\")? has been added",
     )
     DOCKET_ENTRY_SUBJECT_REGEX = re.compile(
         r"^Supreme Court Electronic Filing System$"
@@ -358,7 +358,6 @@ class SCOTUSEmail:
                 return
 
             text = self.tree.text_content()
-            print(text)
             if self.TITLE_REGEX.match(text) is None:
                 logger.error(
                     "Unable to find match for docket entry title regex in "
