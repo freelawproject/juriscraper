@@ -157,19 +157,19 @@ class UnexpectedContentTypeError(BadContentError):
     site.expected_content_types
     """
 
-    logging_level = logging.ERROR
+    logging_level = logging.WARNING
 
 
 class NoDownloadUrlError(BadContentError):
     """Occurs when a DeferredList fetcher fails."""
 
-    logging_level = logging.ERROR
+    logging_level = logging.WARNING
 
 
 class EmptyFileError(BadContentError):
     """Occurs when the content of the response has lenght 0"""
 
-    logging_level = logging.ERROR
+    logging_level = logging.WARNING
 
 
 class MergingError(AutoLoggingException):
@@ -186,4 +186,4 @@ class BotChallengeError(AutoLoggingException):
     otherwise look like a successful scrape with no new opinions.
     """
 
-    logging_level = logging.ERROR
+    logging_level = logging.WARNING
