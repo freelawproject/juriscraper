@@ -4,6 +4,8 @@
 import re
 from datetime import date, datetime
 
+from typing_extensions import override
+
 from juriscraper.ClusterSite import ClusterSite
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.log_tools import make_default_logger
@@ -27,6 +29,7 @@ class Site(ClusterSite):
         self.should_have_results = True
         self.make_backscrape_iterable(kwargs)
 
+    @override
     def _process_html(self) -> None:
         """Parse HTML into case objects
 
@@ -165,7 +168,7 @@ class Site(ClusterSite):
         """Download and process HTML for a given target date.
 
         :param search_date (date): The date for which to download and process opinions.
-        :return None; sets the target date, downloads the corresponding HTML
+        :return: None; sets the target date, downloads the corresponding HTML
         and processes the HTML to extract case details.
         """
 

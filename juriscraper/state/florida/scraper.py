@@ -408,11 +408,15 @@ class FloridaScraper:
                 cl_parser.endpoint, cl_parser, params=params
             )
 
-            response = await anext(pages_aiter, None)
-
-            match response:
+            # Here we peek at the first result to check for exceptional
+            # conditions. If the initial response is a failure, there is
+            # nothing to be done. If the response indicates that the result set
+            # is too large, the instant pagination is abandoned and replaced by
+            # pagination over a divided time range.
+            initial_response = await anext(pages_aiter, None)
+            match initial_response:
                 case PaginationFailed():
-                    yield response
+                    yield initial_response
                     continue
                 case None:
                     logger.error(
@@ -422,31 +426,36 @@ class FloridaScraper:
                         end,
                     )
                     continue
-                case FloridaPaginatedResults(page=page) if (
-                    page.total_elements >= MAX_RESULTS
-                ):
-                    if start < end:
-                        # Split the range in half and re-queue.
-                        mid = start + (end - start) // 2
-                        logger.info(
-                            "Splitting court %s range %s..%s (totalElements=%d)",
-                            court_external_id,
-                            start,
-                            end,
-                            response.page.total_elements,
+                case FloridaPaginatedResults(page=page):
+                    if page.total_elements >= MAX_RESULTS:
+                        if start < end:
+                            # Split the range in half and re-queue.
+                            mid = start + (end - start) // 2
+                            logger.info(
+                                "Splitting court %s range %s..%s (totalElements=%d)",
+                                court_external_id,
+                                start,
+                                end,
+                                initial_response.page.total_elements,
+                            )
+                            # Date ranges here should stay in reverse chronological order to ensure results are scraped in _chronological_ order
+                            stack.append((mid + timedelta(days=1), end))
+                            stack.append((start, mid))
+                            continue
+                        # Should be unreachable but who knows.
+                        raise InsanityException(
+                            "Single-day query for court %s on %s hit the %d-result cap."
+                            % (court_id, start, MAX_RESULTS)
                         )
-                        # Date ranges here should stay in reverse chronological order to ensure results are scraped in _chronological_ order
-                        stack.append((mid + timedelta(days=1), end))
-                        stack.append((start, mid))
-                        continue
-                    # Should be unreachable but who knows.
-                    raise InsanityException(
-                        "Single-day query for court %s on %s hit the %d-result cap."
-                        % (court_id, start, MAX_RESULTS)
-                    )
 
+            # Having reach this point, the initial page is result set is deemed
+            # acceptable. We proceed to yield the result the initial and
+            # subsequent pages.
             i = 0
-            total = max(response.page.total_elements, 1)
+            total = max(initial_response.page.total_elements, 1)
+            response: (
+                FloridaPaginatedResults[FloridaCase] | PaginationFailed | None
+            ) = initial_response
             while response is not None:
                 match response:
                     case PaginationFailed():

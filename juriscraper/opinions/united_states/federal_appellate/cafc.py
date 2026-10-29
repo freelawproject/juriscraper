@@ -14,6 +14,7 @@ import re
 
 import feedparser
 from lxml.html import fromstring
+from typing_extensions import override
 
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -28,13 +29,12 @@ class Site(OpinionSiteLinear):
         self.needs_special_headers = True
         self.request.update(
             {
-                "headers": {
-                    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
-                },
+                "headers": {"User-Agent": self.chrome_user_agent},
             }
         )
         self.should_have_results = True
 
+    @override
     def _process_html(self) -> None:
         """Process the RSS feed.
 

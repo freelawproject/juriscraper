@@ -223,7 +223,8 @@ class FloridaDocketEntry(DocketEntry[FloridaDocument]):
         validation_alias=AliasPath("docketEntryHeader", "compositeSecurity")
     )
     submitted_by: list[FloridaCaseActor] = Field(
-        validation_alias="submittedBy", default=[]
+        validation_alias="submittedBy",
+        default_factory=list,
     )
     attachments: list[FloridaDocument] = []
 

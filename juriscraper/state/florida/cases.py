@@ -342,7 +342,7 @@ class FloridaCase(Docket[DocketTransfer, FloridaDocketEntry, FloridaParty]):
     )
     originating_cases: list[FloridaOriginatingCase] = Field(
         validation_alias=AliasPath("caseHeader", "originatingCourtCases"),
-        default=[],
+        default_factory=list,
     )
     transfers: list[DocketTransfer] = []
     entries: list[FloridaDocketEntry] = []
@@ -386,6 +386,7 @@ class FloridaCaseInfoParser(LegacyParser[FloridaCase]):
             for oc in case.originating_cases
         ]
 
+    @override
     def _parse(self, i: str) -> FloridaCase:
         flc = FloridaCase.model_validate_json(i)
         # I would prefer to use Pydantic's computed_field decorator for this,

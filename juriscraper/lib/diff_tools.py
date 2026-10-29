@@ -13,7 +13,7 @@ STOP_WORDS = (
 STOP_WORDS_RE = re.compile(r"^(%s)$" % STOP_WORDS)
 
 
-def normalize_phrase(phrase):
+def normalize_phrase(phrase: str) -> str:
     """Clean up words or phrases before sending them to be compared.
 
     - Harmonize things like United States, USA, etc.
@@ -36,7 +36,7 @@ def normalize_phrase(phrase):
     return "".join(result)
 
 
-def get_closest_match_index(word, possibilities):
+def get_closest_match_index(word: str, possibilities: list[str]) -> int | None:
     """Find the string that is most similar to the target string. Uses difflib's
     SequenceMatcher under the covers.
 

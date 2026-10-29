@@ -189,7 +189,7 @@ TODO              text
 .gitattributes    text
 .gitconfig        text
 .htaccess         text
-*.lock            text -diff
+*.lock            text
 package.json      text eol=lf
 package-lock.json text -diff
 pnpm-lock.yaml    text eol=lf -diff

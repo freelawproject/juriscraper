@@ -8,12 +8,15 @@ import signal
 import sys
 import webbrowser
 from collections import defaultdict
+from contextlib import aclosing
 from datetime import datetime
 from optparse import OptionParser
+from typing import cast
 from urllib import parse
 
 import httpx
 
+from juriscraper.AbstractSite import AbstractSite
 from juriscraper.lib.exceptions import BadContentError
 from juriscraper.lib.importer import build_module_list, site_yielder
 from juriscraper.lib.log_tools import make_default_logger
@@ -89,8 +92,12 @@ def log_dict(dic: dict) -> None:
 
 
 async def extract_doc_content(
-    data, extract_from_text: bool, site, doctor_host: str, filename: str
-):
+    data: bytes,
+    extract_from_text: bool,
+    site: AbstractSite,
+    doctor_host: str,
+    filename: str,
+) -> tuple[bytes, dict]:
     """Extracts document's content using a local doctor host
 
     For complete and integrated testing, use the Courtlistener caller
@@ -115,7 +122,7 @@ async def extract_doc_content(
 
     files = {"file": (f"something.{extension}", data)}
     url = MICROSERVICE_URLS["document-extract"].format(doctor_host)
-    async with httpx.AsyncClient() as client:
+    async with httpx.AsyncClient(http2=True) as client:
         extraction__response = await client.post(url, files=files, timeout=120)
     extraction__response.raise_for_status()
     extracted_content = extraction__response.json()["content"]
@@ -156,7 +163,9 @@ async def extract_doc_content(
     return extracted_content, metadata_dict
 
 
-async def check_hashes(data: bytes, download_url: str, site) -> None:
+async def check_hashes(
+    data: bytes, download_url: str, site: AbstractSite
+) -> None:
     """Detect timestamped content by downloading the same URL twice and
     comparing hashes
 
@@ -193,13 +202,13 @@ async def check_hashes(data: bytes, download_url: str, site) -> None:
 
 async def process_an_opinion(
     item: dict,
-    site,
+    site: AbstractSite,
     binaries: bool,
     extract_content: bool,
     test_hashes: bool,
     doctor_host: str,
     is_cluster: bool = False,
-):
+) -> None:
     item_download_urls = item["download_urls"]
     # Percent encode URLs (this is a Python wart)
     download_url = parse.quote(item_download_urls, safe="%/:=&?~#+!$,;'@()*[]")
@@ -246,7 +255,7 @@ async def process_an_opinion(
 
 
 async def scrape_court(
-    site,
+    site: AbstractSite,
     binaries=False,
     extract_content=False,
     doctor_host="",
@@ -527,26 +536,34 @@ async def main():
             if save_responses:
                 site_kwargs = {"save_response_fn": save_response}
 
+            site_class = cast(type[AbstractSite], mod.Site)
             if backscrape:
-                bs_iterable = mod.Site(
-                    backscrape_start=backscrape_start,
-                    backscrape_end=backscrape_end,
-                    days_interval=days_interval,
-                ).back_scrape_iterable
-                sites = site_yielder(bs_iterable, mod, **site_kwargs)
-                async for site in sites:
-                    await site.parse()
-                    await scrape_court(
-                        site,
-                        binaries,
-                        extract_content,
-                        doctor_host,
-                        test_hashes,
-                        limit_per_scrape,
-                    )
+                async with (
+                    site_class(
+                        backscrape_start=backscrape_start,
+                        backscrape_end=backscrape_end,
+                        days_interval=days_interval,
+                    ) as initial_site,
+                    aclosing(
+                        site_yielder(
+                            initial_site.back_scrape_iterable,
+                            mod,
+                            **site_kwargs,
+                        )
+                    ) as sites,
+                ):
+                    async for site in sites:
+                        await site.parse()
+                        await scrape_court(
+                            site,
+                            binaries,
+                            extract_content,
+                            doctor_host,
+                            test_hashes,
+                            limit_per_scrape,
+                        )
             else:
-                sites = [mod.Site(**site_kwargs)]
-                for site in sites:
+                async with site_class(**site_kwargs) as site:
                     await site.parse()
                     await scrape_court(
                         site,

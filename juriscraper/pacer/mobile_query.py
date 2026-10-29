@@ -25,7 +25,7 @@ class MobileQuery(BaseDocketReport, BaseReport):
 
     CACHE_ATTRS = ["metadata"]
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None):
         BaseDocketReport.__init__(self, court_id)
         BaseReport.__init__(self, court_id, pacer_session)
 
@@ -78,7 +78,7 @@ class MobileQuery(BaseDocketReport, BaseReport):
         self._metadata = data
         return data
 
-    def query(self, pacer_case_id):
+    async def query(self, pacer_case_id):
         """Use a district court's PACER mobile query function with a known case id
 
         At the top of every district PACER court, there's a button that says,
@@ -121,7 +121,7 @@ class MobileQuery(BaseDocketReport, BaseReport):
             pacer_case_id,
             self.court_id,
         )
-        self.response = self.session.post(
+        self.response = await self.session.post(
             f"{self.url}?search=caseInfo&caseid=={pacer_case_id}"
         )
         self.parse()
@@ -149,7 +149,7 @@ def _main():
     report = MobileQuery("mad")
     filepath = sys.argv[1]
     print(f"Parsing HTML file at {filepath}")
-    with open(filepath) as f:
+    with open(filepath, "rb") as f:
         text = f.read().decode("utf-8")
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)

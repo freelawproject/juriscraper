@@ -1,19 +1,26 @@
 import re
-from datetime import date, datetime
-from typing import Any
+from datetime import datetime
+from typing import Any, TypedDict
 
 from dateutil import parser
 from lxml.html import fromstring
+from typing_extensions import override
 
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
+
+
+class _BackscrapeDateRange(TypedDict):
+    start: datetime
+    end: datetime | None
+    url: str
 
 
 class Site(OpinionSiteLinear):
     first_opinion_date = datetime(1931, 2, 26)
     docket_number_regex = r"SJC-\d+"
     # This mapper is missing older volumes
-    backscrape_date_range_mapper = [
+    backscrape_date_range_mapper: list[_BackscrapeDateRange] = [
         {
             "start": datetime(2016, 7, 25),
             "end": None,
@@ -50,6 +57,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
         self.expected_content_types = ["text/html"]
 
+    @override
     def _process_html(self) -> None:
         """Parse HTML into case dictionaries
 
@@ -123,7 +131,7 @@ class Site(OpinionSiteLinear):
         }
 
     async def _download_backwards(
-        self, dates_and_url: tuple[date, date, str]
+        self, dates_and_url: tuple[datetime, datetime, str]
     ) -> None:
         """Set proper `masscases.com` url as self.url, and parse content
 

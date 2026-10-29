@@ -10,6 +10,8 @@ History:
 
 import re
 
+from typing_extensions import override
+
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -27,12 +29,10 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
 
         self.needs_special_headers = True
-        self.request["headers"]["User-Agent"] = (
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-            "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-        )
+        self.request["headers"]["User-Agent"] = self.chrome_user_agent
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         """Process the html and extract out the opinions
 
         :return: None

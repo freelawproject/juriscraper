@@ -17,6 +17,7 @@ from typing import Any
 from urllib.parse import urlencode
 
 from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import SkipRowError
@@ -75,6 +76,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
+    @override
     def _process_html(self) -> None:
         """Parses a page's HTML into opinion dictionaries
 

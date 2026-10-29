@@ -9,6 +9,8 @@ History:
     2021-12-10: URL changed to recent opinions page, satsuki-chan
 """
 
+from typing_extensions import override
+
 from juriscraper.lib.string_utils import clean_if_py3, titlecase
 from juriscraper.opinions.united_states.state import ariz
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -25,6 +27,7 @@ class Site(OpinionSiteLinear):
         self.cases = []
         self.should_have_results = True
 
+    @override
     def _process_html(self) -> None:
         path = "//table//a[contains(@href, '.pdf')]"
         for item in self.html.xpath(path):

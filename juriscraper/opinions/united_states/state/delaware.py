@@ -8,6 +8,8 @@ Reviewer: mlr
 import re
 from urllib.parse import urljoin
 
+from typing_extensions import override
+
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -22,7 +24,8 @@ class Site(OpinionSiteLinear):
         self.should_have_results = True
         self.status = "Published"
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         """Process the html and extract out the opinions
 
         :return: None

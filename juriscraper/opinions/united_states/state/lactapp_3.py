@@ -18,6 +18,7 @@ from datetime import date, datetime
 from urllib.parse import urljoin
 
 from lxml import html as lxml_html
+from typing_extensions import override
 
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.log_tools import make_default_logger
@@ -93,7 +94,8 @@ class Site(OpinionSiteLinear):
 
         return lxml_html.fromstring(raw.decode("utf-8"))
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         tree = self.html
         seen_urls = {case["url"] for case in self.cases}
         rows = tree.xpath(

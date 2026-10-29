@@ -33,7 +33,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         "No claims found for this case using selection criteria entered"
     ]
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None):
         BaseDocketReport.__init__(self, court_id)
         BaseReport.__init__(self, court_id, pacer_session)
 
@@ -61,7 +61,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         if self._metadata is not None:
             return self._metadata
 
-        data = {
+        data: dict = {
             "court_id": self.court_id,
         }
         field_mappings = {
@@ -156,7 +156,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         claim_tables = self.tree.xpath('//table[@class="complexReport"]')
         claims = []
         for claim_table in claim_tables:
-            claim = {}
+            claim: dict = {}
 
             # Identify and parse each cell.
             creditor_td = claim_table.xpath("(.//tr)[1]/td[1]")[0]
@@ -201,7 +201,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
     def _parse_creditor_cell(self, td):
         """Get creditor_id, creditor_details"""
         credit_label = td.xpath(".//i")[0]
-        info = self._get_label_value_pair(
+        info: dict = self._get_label_value_pair(
             credit_label, True, {"creditor": "creditor_id"}
         )
         info["creditor_id"] = info["creditor_id"].strip("()")
@@ -216,7 +216,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
 
     def _parse_claim_number_cell(self, td):
         """Get the claim_number and date fields"""
-        data = {}
+        data: dict = {}
         claim_number_text = td.xpath(".//b")[0].text_content()
         claim_number = int(re.search(r"\d+", claim_number_text).group(0))
         data["claim_number"] = claim_number
@@ -281,7 +281,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         history_rows = []
         entry_trs = td.xpath(".//tr")
         for entry_tr in entry_trs:
-            row = {}
+            row: dict = {}
             number_cell = entry_tr.xpath("./td[3]")[0]
             number = number_cell.text_content().strip()
 
@@ -359,7 +359,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             history_rows.append(row)
         return history_rows
 
-    def query(
+    async def query(
         self, pacer_case_id, docket_number, date_start=None, date_end=None
     ):
         """Query the claims register and return the results.
@@ -407,5 +407,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
             self.court_id,
             params,
         )
-        self.response = self.session.post(f"{self.url}?1-L_1_0-1", data=params)
+        self.response = await self.session.post(
+            f"{self.url}?1-L_1_0-1", data=params
+        )
         self.parse()

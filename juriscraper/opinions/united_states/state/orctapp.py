@@ -15,6 +15,7 @@ oregon_module = import_module("juriscraper.opinions.united_states.state.or")
 
 class Site(oregon_module.Site):
     court_code = "p17027coll5"
+    citation_field = "identia"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

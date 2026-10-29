@@ -22,6 +22,8 @@ import re
 from datetime import datetime
 from urllib.parse import urlencode, urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -68,6 +70,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
         self.paginate = False
 
+    @override
     async def _process_html(self) -> None:
         json_response = self.html
 
@@ -176,7 +179,7 @@ class Site(OpinionSiteLinear):
         }
         self.url = f"{self.base_url}?{urlencode(params)}"
         self.request["headers"] = {
-            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36",
+            "User-Agent": self.chrome_user_agent,
             "Accept": "application/json, text/plain, */*",
             "Accept-Language": "en-US,en;q=0.9",
             "Accept-Encoding": "gzip, deflate, br",
@@ -194,7 +197,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         await self._process_html()
 
-    def make_backscrape_iterable(self, kwargs: dict) -> list[int]:
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
         """The API exposes no date filter, so we must query a year
         and then paginate the results.
         """

@@ -10,6 +10,7 @@ import re
 from datetime import date, datetime
 
 from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.string_utils import titlecase
@@ -32,6 +33,7 @@ class Site(OpinionSiteLinear):
             "__EVENTTARGET": "ctl00$Main$btnOpMonthYearSearch",
         }
 
+    @override
     def _process_html(self) -> None:
         """Process the HTML to extract case details.
 
@@ -94,7 +96,7 @@ class Site(OpinionSiteLinear):
         """Download and process HTML for a given target date.
 
         :param search_date (date): The date for which to download and process opinions.
-        :return None; sets the target date, downloads the corresponding HTML
+        :return: None; sets the target date, downloads the corresponding HTML
         and processes the HTML to extract case details.
         """
         self.search_date = search_date

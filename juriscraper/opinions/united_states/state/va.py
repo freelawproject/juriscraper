@@ -1,6 +1,8 @@
 import re
 from datetime import date, datetime, timedelta
 
+from typing_extensions import override
+
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -15,6 +17,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.should_have_results = True
 
+    @override
     def _process_html(self) -> None:
         """Parses the HTML content to extract case information.
 

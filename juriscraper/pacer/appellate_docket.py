@@ -1,12 +1,14 @@
+import datetime
 import pprint
 import re
 import sys
 from collections import OrderedDict
-from typing import Any
+from typing import Any, Literal, overload
 
+from httpx import Response
 from lxml import html
 from lxml.etree import _ElementUnicodeResult
-from requests import Response
+from lxml.html import HtmlElement
 
 from juriscraper.lib.judge_parsers import normalize_judge_string
 from juriscraper.lib.log_tools import make_default_logger
@@ -61,7 +63,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         r"<b>\d+ Documents are attached to this filing</b>",
     ]
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None):
         BaseDocketReport.__init__(self, court_id)
         BaseReport.__init__(self, court_id, pacer_session)
 
@@ -88,7 +90,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                 "n/beam/servlet/TransportRoom" % self.court_id
             )
 
-    def query(
+    async def query(
         self,
         docket_number,
         show_docket_entries=False,
@@ -249,7 +251,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             docket_number,
             query_params,
         )
-        self.response = self.session.get(self.url, params=query_params)
+        self.response = await self.session.get(self.url, params=query_params)
         self.parse()
 
     def parse(self):
@@ -261,7 +263,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         self._clear_caches()
         super().parse()
 
-    def download_pdf(
+    async def download_pdf(
         self, pacer_doc_id, pacer_case_id=None
     ) -> tuple[Response | None, str]:
         """Download a PDF from an appellate court.
@@ -327,7 +329,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         logger.info(
             "GETting PDF at URL: %s with params: %s", self.url, query_params
         )
-        r = self.session.get(self.url, params=query_params)
+        r = await self.session.get(self.url, params=query_params)
         r.raise_for_status()
 
         if b"Documents are attached to this filing" in r.content:
@@ -719,7 +721,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             view_multiple_documents = True
         docket_entries = []
         for row in docket_entry_rows:
-            de = {}
+            de: dict = {}
             cells = row.xpath("./td")
             if len(cells) == 0:
                 continue
@@ -933,7 +935,26 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
                 ogc_info["date_received_coa"] = convert_date_string(date)
         return ogc_info
 
-    def _get_tail_by_regex(self, regex, cast_to_date=False, node=None):
+    @overload
+    def _get_tail_by_regex(
+        self,
+        regex: str,
+        cast_to_date: Literal[True],
+        node: HtmlElement | None = ...,
+    ) -> datetime.date | None: ...
+    @overload
+    def _get_tail_by_regex(
+        self,
+        regex: str,
+        cast_to_date: Literal[False] = ...,
+        node: HtmlElement | None = ...,
+    ) -> str: ...  # Note: empty string is sent instead of `None`
+    def _get_tail_by_regex(
+        self,
+        regex: str,
+        cast_to_date: bool = False,
+        node: HtmlElement | None = None,
+    ) -> str | datetime.date | None:
         """Search all text nodes for a string that matches the regex, then
         return the `tail`ing text.
 

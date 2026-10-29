@@ -11,6 +11,8 @@ import re
 from datetime import datetime
 from typing import Any
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import get_row_column_text
 from juriscraper.lib.string_utils import titlecase
@@ -56,6 +58,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
         self.should_have_results = True
 
+    @override
     async def _process_html(self) -> None:
         """Parse HTML into case dictionaries
 

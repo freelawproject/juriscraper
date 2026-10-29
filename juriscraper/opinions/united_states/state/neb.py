@@ -1,6 +1,8 @@
 import re
 from typing import Any
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
 from juriscraper.lib.string_utils import titlecase
@@ -58,7 +60,8 @@ class Site(OpinionSiteLinear):
                 )
             return html_tree
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         for table in self.html.xpath(".//table"):
             date_tags = table.xpath("preceding::time[1]/text()")
             if not date_tags:

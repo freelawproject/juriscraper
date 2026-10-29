@@ -8,6 +8,8 @@ import re
 from datetime import date, datetime
 from urllib.parse import urlencode, urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -41,6 +43,7 @@ class Site(OpinionSiteLinear):
         params = {"group": "flat", "pageSize": self.page_size, **params}
         return f"{self.base_url}?{urlencode(params)}"
 
+    @override
     def _process_html(self) -> None:
         for row in self.html.xpath("//a[contains(@class, 'oprow')]"):
             docket = row.xpath("span[@class='oprow__docket']/text()")

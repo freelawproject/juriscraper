@@ -153,7 +153,7 @@ class OpinionSite(AbstractSite):
     def extract_from_text(self, scraped_text: str) -> dict:
         """Pass scraped text into function and return data as a dictionary
 
-        :param opinion_text: Text of scraped content
+        :param scraped_text: Text of scraped content
         :return: dictionary of information
         """
         return {}

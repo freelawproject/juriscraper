@@ -2,6 +2,7 @@ import re
 from datetime import date, datetime
 
 from dateutil.relativedelta import relativedelta
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -49,6 +50,7 @@ class Site(OpinionSiteLinear):
 
         self.back_scrape_iterable = date_ranges
 
+    @override
     def _process_html(self) -> None:
         """Process CA4 Opinions
 

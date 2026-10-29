@@ -5,6 +5,7 @@ from posixpath import normpath
 from urllib.parse import urljoin, urlparse, urlunparse
 
 from lxml import html
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import convert_date_string
@@ -30,13 +31,9 @@ class Site(OpinionSiteLinear):
         }
         # The site's WAF answers 500 with a "Website Maintenance" page to
         # user agents on its bot list, which includes "Juriscraper" and
-        # outdated browser versions. The Chrome 120 string we used to send
-        # became stale and started getting blocked, so this needs to be
-        # bumped whenever the court starts failing again. See #2129
-        self.request["headers"]["User-Agent"] = (
-            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
-            " (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
-        )
+        # outdated browser versions, so `AbstractSite.chrome_version` needs
+        # to be bumped when the court starts failing again. See #2129
+        self.request["headers"]["User-Agent"] = self.chrome_user_agent
 
         self.status = "Published"
         self.pages = {}
@@ -110,7 +107,8 @@ class Site(OpinionSiteLinear):
         dates.sort(reverse=True)
         return dates
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         for date, page in self.pages.items():
             for anchor in page.xpath(".//a[contains(./@href, '.pdf')]"):
                 # Walk up to the containing <td> (table layout)
@@ -181,7 +179,9 @@ class Site(OpinionSiteLinear):
             (year, start, end) for year in range(start.year, end.year + 1)
         ]
 
-    async def _download_backwards(self, params: tuple) -> None:
+    async def _download_backwards(
+        self, params: tuple[int, datetime.date, datetime.date]
+    ) -> None:
         year, start, end = params
         logger.info("Backscraping %s for year %s", self.court_id, year)
 

@@ -1,5 +1,7 @@
 """Tests for TAMES search result parsing."""
 
+import base64
+import re
 import unittest
 from datetime import date
 
@@ -12,8 +14,16 @@ from juriscraper.state.texas.tames import (
 )
 from tests import TESTS_ROOT_EXAMPLES_STATES
 
+# The signature the gateway rejects: "0x", either case, plus three hex digits.
+SIGNATURE_RE = re.compile(r"0[xX][0-9a-fA-F]{3}")
 
-def _search_page(bar_value: str = "", rows: int = 0, items: int = 0) -> bytes:
+
+def _search_page(
+    bar_value: str = "",
+    rows: int = 0,
+    items: int = 0,
+    view_state: str = "vs",
+) -> bytes:
     """Minimal stand-in for a TAMES search/results page."""
     info = (
         f'<div class="rgWrap rgInfoPart">{items} items in 1 pages</div>'
@@ -28,7 +38,7 @@ def _search_page(bar_value: str = "", rows: int = 0, items: int = 0) -> bytes:
     )
     return (
         "<html><body><form>"
-        '<input type="hidden" name="__VIEWSTATE" value="vs" />'
+        f'<input type="hidden" name="__VIEWSTATE" value="{view_state}" />'
         f'<input name="{ATTORNEY_BAR_FIELD}" type="text" value="{bar_value}" />'
         f"{info}"
         f'<table id="ctl00_ContentPlaceHolder1_grdCases_ctl00">{body}</table>'
@@ -54,12 +64,12 @@ class FakeRequestManager:
         self.posted_bodies: list[dict[str, str]] = []
         self.get_count = 0
 
-    def get(self, url, **kwargs):
+    async def get(self, url, **kwargs):
         page = self._form_pages[min(self.get_count, len(self._form_pages) - 1)]
         self.get_count += 1
         return FakeResponse(page)
 
-    def post(self, url, data=None, **kwargs):
+    async def post(self, url, data=None, **kwargs):
         page = self._result_pages[
             min(len(self.posted_bodies), len(self._result_pages) - 1)
         ]
@@ -67,7 +77,7 @@ class FakeRequestManager:
         return FakeResponse(page)
 
 
-class TamesBarNumberTest(unittest.TestCase):
+class TamesBarNumberTest(unittest.IsolatedAsyncioTestCase):
     """TAMES injects bar numbers into the search form.
 
     Left in place, an injected value survives in __VIEWSTATE and filters the whole
@@ -81,15 +91,15 @@ class TamesBarNumberTest(unittest.TestCase):
         scraper.request_manager = rm
         return scraper, rm
 
-    def test_bar_number_always_posted_blank(self):
+    async def test_bar_number_always_posted_blank(self):
         """Every search posts the attorney field, explicitly blank."""
         scraper, rm = self._scraper(
             [_search_page()], [_search_page(rows=2, items=2)]
         )
 
         gen = scraper._submit_search(date(2026, 6, 1), date(2026, 6, 2))
-        result_count = next(gen)
-        rows = list(gen)
+        result_count = await anext(gen)
+        rows = [row async for row in gen]
 
         self.assertEqual(result_count, 2)
         self.assertEqual(len(rows), 2)
@@ -98,7 +108,7 @@ class TamesBarNumberTest(unittest.TestCase):
             self.assertIn(field, rm.posted_bodies[0])
             self.assertEqual(rm.posted_bodies[0][field], "")
 
-    def test_zero_rows_with_prefilled_bar_number_is_retried(self):
+    async def test_zero_rows_with_prefilled_bar_number_is_retried(self):
         """A poisoned form plus zero rows triggers one clean resubmission."""
         scraper, rm = self._scraper(
             # First form arrives poisoned, the second one is clean
@@ -108,8 +118,8 @@ class TamesBarNumberTest(unittest.TestCase):
         )
 
         gen = scraper._submit_search(date(2026, 6, 1), date(2026, 6, 2))
-        result_count = next(gen)
-        rows = list(gen)
+        result_count = await anext(gen)
+        rows = [row async for row in gen]
 
         self.assertEqual(rm.get_count, 2)
         self.assertEqual(len(rm.posted_bodies), 2)
@@ -118,7 +128,7 @@ class TamesBarNumberTest(unittest.TestCase):
         for body in rm.posted_bodies:
             self.assertEqual(body[ATTORNEY_BAR_FIELD], "")
 
-    def test_nonzero_rows_with_prefilled_bar_number_is_retried(self):
+    async def test_nonzero_rows_with_prefilled_bar_number_is_retried(self):
         """An injected bar number belonging to an attorney with cases.
 
         The filtered search returns rows, so row count can't be the signal --
@@ -136,8 +146,8 @@ class TamesBarNumberTest(unittest.TestCase):
 
         with self.assertLogs("juriscraper", level="WARNING") as logs:
             gen = scraper._submit_search(date(2026, 6, 1), date(2026, 6, 2))
-            result_count = next(gen)
-            rows = list(gen)
+            result_count = await anext(gen)
+            rows = [row async for row in gen]
 
         self.assertEqual(len(rm.posted_bodies), 2)
         self.assertEqual(result_count, 7)
@@ -147,7 +157,7 @@ class TamesBarNumberTest(unittest.TestCase):
             f"expected a resubmission warning, got {logs.output}",
         )
 
-    def test_persistent_bar_number_with_rows_is_logged_as_an_error(self):
+    async def test_persistent_bar_number_with_rows_is_logged_as_an_error(self):
         """A retry that stays filtered is flagged however many rows it has."""
         scraper, _ = self._scraper(
             [_search_page("24075665")],
@@ -156,27 +166,27 @@ class TamesBarNumberTest(unittest.TestCase):
 
         with self.assertLogs("juriscraper", level="ERROR") as logs:
             gen = scraper._submit_search(date(2026, 6, 1), date(2026, 6, 2))
-            self.assertEqual(next(gen), 3)
-            list(gen)
+            self.assertEqual(await anext(gen), 3)
+            [row async for row in gen]
 
         self.assertTrue(
             any("can't be trusted" in line for line in logs.output),
             f"expected an untrusted-results error, got {logs.output}",
         )
 
-    def test_genuinely_empty_result_is_not_retried(self):
+    async def test_genuinely_empty_result_is_not_retried(self):
         """A clean form with no matches is a real answer, not a retry."""
         scraper, rm = self._scraper([_search_page()], [_search_page()])
 
         gen = scraper._submit_search(date(2026, 6, 1), date(2026, 6, 2))
-        result_count = next(gen)
-        rows = list(gen)
+        result_count = await anext(gen)
+        rows = [row async for row in gen]
 
         self.assertEqual(result_count, 0)
         self.assertEqual(rows, [])
         self.assertEqual(len(rm.posted_bodies), 1)
 
-    def test_pagination_keeps_the_bar_number_blank(self):
+    async def test_pagination_keeps_the_bar_number_blank(self):
         """Page 2+ must not re-poison the search."""
         scraper, _ = self._scraper([_search_page()], [_search_page()])
         form_data = scraper._build_form_data(
@@ -189,7 +199,7 @@ class TamesBarNumberTest(unittest.TestCase):
             '<html><body><input class="rgPageNext" name="next" value="1" />'
             "</body></html>"
         )
-        scraper._fetch_next_page(tree, form_data)
+        await scraper._fetch_next_page(tree, form_data)
         # _fetch_next_page posts through the same manager
         self.assertEqual(
             scraper.request_manager.posted_bodies[-1][ATTORNEY_BAR_FIELD], ""
@@ -335,6 +345,69 @@ class TamesSearchParseTest(unittest.TestCase):
 
         # This fixture is page 9 of 40 (middle page)
         self.assertTrue(self.scraper._has_next_page(tree))
+
+
+class TamesWafSignatureTest(unittest.IsolatedAsyncioTestCase):
+    """TAMES sits behind an Azure Application Gateway running the OWASP rules.
+
+    One SQL-injection rule matches an MSSQL hex literal anywhere in the body,
+    which a Base64 __VIEWSTATE hits by coincidence most of the time. Every
+    postback has to leave here with that signature broken, or the gateway 403s
+    it before TAMES sees it.
+    """
+
+    # Valid Base64 that happens to carry the signature, as a real ViewState
+    # does roughly nine times in ten.
+    TRIPWIRE_VIEW_STATE = "AAA0x1a2AAAA"
+
+    def _scraper(self, form_pages, result_pages):
+        rm = FakeRequestManager(form_pages, result_pages)
+        scraper = TAMESScraper()
+        scraper.request_manager = rm
+        return scraper, rm
+
+    async def test_search_postback_has_no_hex_literal(self):
+        scraper, rm = self._scraper(
+            [_search_page(view_state=self.TRIPWIRE_VIEW_STATE)],
+            [_search_page(rows=1, items=1)],
+        )
+
+        [
+            row
+            async for row in scraper._submit_search(
+                date(2026, 6, 1), date(2026, 6, 2)
+            )
+        ]
+
+        posted = rm.posted_bodies[0]["__VIEWSTATE"]
+        self.assertIsNone(SIGNATURE_RE.search(posted))
+        self.assertEqual(
+            base64.b64decode(posted),
+            base64.b64decode(self.TRIPWIRE_VIEW_STATE),
+        )
+
+    async def test_pagination_postback_has_no_hex_literal(self):
+        """Page 2 is where this bites: the results ViewState is the big one."""
+        scraper, rm = self._scraper([_search_page()], [_search_page()])
+        form_data = scraper._build_form_data(
+            date(2026, 6, 1), date(2026, 6, 2)
+        )
+
+        tree = html.fromstring(
+            "<html><body>"
+            f'<input type="hidden" name="__VIEWSTATE" '
+            f'value="{self.TRIPWIRE_VIEW_STATE}" />'
+            '<input class="rgPageNext" name="next" value="1" />'
+            "</body></html>"
+        )
+        await scraper._fetch_next_page(tree, form_data)
+
+        posted = rm.posted_bodies[-1]["__VIEWSTATE"]
+        self.assertIsNone(SIGNATURE_RE.search(posted))
+        self.assertEqual(
+            base64.b64decode(posted),
+            base64.b64decode(self.TRIPWIRE_VIEW_STATE),
+        )
 
 
 if __name__ == "__main__":
