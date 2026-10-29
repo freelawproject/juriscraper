@@ -15,9 +15,31 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add `juriscraper.lib.log_tools.log_error`, which logs an error with the
+  `fingerprint`, `court_id` and `url` extras that CourtListener uses to group
+  Sentry events. Framework errors (`no_results_warning`, future dates, PACER
+  PDF downloads, RECAP and SCOTUS email parsing, the Doctor extension check)
+  and the opinion and oral argument scrapers now log through it.
+- Add `juriscraper.lib.exceptions.attach_error_context` and the optional
+  `court_id`, `url`, `sentry_fingerprint` and `sentry_owner` attributes on
+  `AutoLoggingException`, `InsanityException`, `ParsingException`,
+  `InvalidDocumentError` and `PacerLoginException`. `Site.parse()` and
+  `Site.download_content()` set `court_id` and `url` on any exception that
+  escapes them.
+- Detect Cloudflare, Imperva and Radware challenge pages on every page and
+  document download and raise `BotChallengeError`, grouped by host. `minn`
+  and `lactapp_5` use the same grouping.
 
 Changes:
+- `UnexpectedContentTypeError`, `EmptyFileError`, `NoDownloadUrlError` and
+  `BotChallengeError` log at WARNING instead of ERROR when raised, because
+  CourtListener reports them itself. Do not release this before the matching
+  CourtListener change is deployed.
+- `site_yielder` logs a failed backscrape window at ERROR instead of DEBUG
+  and still continues with the next window.
+  `backscrape_over_paginated_results` logs a failed page at ERROR instead of
+  INFO.
+- `NoDownloadUrlError` now has a message instead of the empty URL.
 - Move the six attorney general scrapers (`calag`, `mdag`, `minnag`, `nyag`,
   `oklaag`, `texag`) from `opinions.united_states.state` into a new
   `opinions.united_states.attorney_general` package. Court IDs are unchanged,
