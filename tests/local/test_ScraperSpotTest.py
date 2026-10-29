@@ -4,8 +4,10 @@ import re
 import unittest
 from datetime import date
 
+from lxml import html
+
 from juriscraper.AbstractSite import logger
-from juriscraper.opinions.united_states.state import nev, nevapp
+from juriscraper.opinions.united_states.state import nev, nevapp, vt
 
 
 class ScraperSpotTest(unittest.TestCase):
@@ -326,3 +328,26 @@ class ScraperSpotTest(unittest.TestCase):
         asyncio.run(site._download_backwards(site.back_scrape_iterable[0]))
         self.assertEqual(len(site.cases), 1)
         self.assertEqual(pages, [])
+
+    def test_vt_backscrape_pages(self):
+        """A backscrape reads every page of its range, up to its last day"""
+        page = """<div><article>
+            <div class="views-field-name"><a href="/media/1">State v. Doe</a></div>
+            <div class="views-field-field-document-expiration">09/29/2026</div>
+            <div class="views-field-field-document-number">26-AP-001</div>
+            </article>{}</div>"""
+        pages = [
+            html.fromstring(page.format('<a rel="next" href="?page=1"></a>')),
+            html.fromstring(page.format("")),
+        ]
+
+        async def download():
+            return pages.pop(0)
+
+        site = vt.Site()
+        site._download = download
+        dates = (date(2026, 8, 31), date(2026, 9, 29))
+        asyncio.run(site._download_backwards(dates))
+        self.assertEqual(len(site.cases), 2)
+        self.assertEqual(pages, [])
+        self.assertIn("facet_to_date=09%2F30%2F2026", site.url)

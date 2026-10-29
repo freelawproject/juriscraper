@@ -1,7 +1,7 @@
 """Scraper for Vermont Supreme Court
 CourtID: vt
 Court Short Name: VT
-Court Contact: submit form here https://www.vermontjudiciary.org/website-feedback-form
+Court Contact: submit form here https://www.vtcourts.gov/website-feedback-form
 
 If there are errors with the site, you can contact:
 
@@ -12,8 +12,8 @@ She's very responsive.
 """
 
 import re
-from datetime import date, datetime
-from urllib.parse import urlencode
+from datetime import date, datetime, timedelta
+from urllib.parse import urlencode, urljoin
 
 from typing_extensions import override
 
@@ -23,7 +23,7 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
-    base_url = "https://www.vermontjudiciary.org/opinions-decisions"
+    base_url = "https://www.vtcourts.gov/opinions-decisions"
     days_interval = 30
     first_opinion_date = datetime(2000, 1, 1)
     division = 7
@@ -42,10 +42,64 @@ class Site(OpinionSiteLinear):
         self.request["headers"] = {"User-Agent": self.chrome_user_agent}
 
     @override
-    def _process_html(self) -> None:
+    async def _process_html(self) -> None:
         """Process HTML into case dictionaries
 
-        Source's page size is 25 rows
+        Source's page size is 25 rows, sorted only by date. When the first
+        page is full and ends on a date from yesterday on, a batch posted at
+        once may go on past it, so read every page from that date again with
+        a date filter, since pages keep a stable order only within a date range
+
+        :return None
+        """
+        self._process_page()
+        if self.test_mode_enabled() or len(self.cases) < 25:
+            return
+        last_date = datetime.strptime(
+            self.cases[-1]["date"], "%m/%d/%Y"
+        ).date()
+        today = date.today()
+        if last_date < today - timedelta(days=1):
+            return
+
+        listing_url = self.url
+        self.cases = []
+        self.set_url(last_date, today)
+        self.html = await self._download()
+        await self._process_date_range(max_pages=5)
+        self.url = listing_url
+
+    async def _process_date_range(self, max_pages: int | None = None) -> None:
+        """Add the rows of every page of the date range in `self.url`
+
+        Stops early on a page already read, or after `max_pages` pages
+
+        :param max_pages: most pages to read; None reads them all
+        :return None
+        """
+        first_page_url = self.url
+        visited = {self.url}
+        while self.html is not None:
+            self._process_page()
+            next_page = self.html.xpath("//a[@rel='next']/@href")
+            if self.test_mode_enabled() or not next_page:
+                break
+            next_url = urljoin(self.base_url, next_page[0])
+            if next_url in visited or len(visited) == max_pages:
+                logger.error(
+                    "%s: stopped reading %s at %s",
+                    self.court_id,
+                    first_page_url,
+                    self.url,
+                )
+                break
+            visited.add(next_url)
+            self.url = next_url
+            self.html = await self._download()
+        self.url = first_page_url
+
+    def _process_page(self) -> None:
+        """Add the rows of the current listing page to `self.cases`
 
         :return None
         """
@@ -84,7 +138,7 @@ class Site(OpinionSiteLinear):
         logger.info("Backscraping for range %s %s", *dates)
         self.set_url(*dates)
         self.html = await self._download()
-        self._process_html()
+        await self._process_date_range()
 
     def set_url(
         self, start: date | None = None, end: date | None = None
@@ -92,12 +146,15 @@ class Site(OpinionSiteLinear):
         """Formats and sets `self.url` with date inputs
         If no start or end dates are given, scrape without date filter values
 
+        The source leaves out the documents dated `facet_to_date`, so it gets
+        the day after `end`
+
         There is a Document Type filter available, with an 'Opinion' value, that
         can be added to params like this:
             {"f[1]": "document_type:94"}a
         However, we are not using it since some documents marked as 'Decisions'
         also contain opinions. For example:
-        https://www.vermontjudiciary.org/sites/default/files/documents/2020-10-13-57.pdf
+        https://www.vtcourts.gov/sites/default/files/documents/2020-10-13-57.pdf
         titled "Opinion and Order on Cross-Motions for Summary Judgment"
         has 8 pages, most of which are argumentation
 
@@ -110,9 +167,11 @@ class Site(OpinionSiteLinear):
             "facet_to_date": "",
             "f[0]": f"court_division_opinions_library_:{self.division}",  # filter by court
         }
-        if start:
+        if start and end:
             params["facet_from_date"] = start.strftime("%m/%d/%Y")
-            params["facet_to_date"] = end.strftime("%m/%d/%Y")
+            params["facet_to_date"] = (end + timedelta(days=1)).strftime(
+                "%m/%d/%Y"
+            )
 
         self.url = f"{self.base_url}?{urlencode(params)}"
 
