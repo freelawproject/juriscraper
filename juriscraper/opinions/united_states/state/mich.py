@@ -16,6 +16,7 @@ from urllib.parse import urlencode, urljoin
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.log_tools import log_error
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -171,8 +172,12 @@ class Site(OpinionSiteLinear):
                 "Docket": {"case_name": name, "docket_number": docket_number},
             }
         else:
-            logger.error(
-                "mich: extract_from_text failed",
-                extra={"opinion_text": scraped_text[:1024].strip()},
+            log_error(
+                logger,
+                "extract-from-text-failed",
+                "%s: extract_from_text failed",
+                self.court_id,
+                court_id=self.court_id,
+                opinion_text=scraped_text[:1024].strip(),
             )
             return {}

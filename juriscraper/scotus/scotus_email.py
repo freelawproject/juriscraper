@@ -16,7 +16,7 @@ from lxml.html import HtmlElement
 
 from juriscraper.lib.email_utils import parse_email_html
 from juriscraper.lib.html_utils import clean_html
-from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.log_tools import log_error, make_default_logger
 from juriscraper.lib.string_utils import (
     clean_string,
     harmonize,
@@ -301,8 +301,12 @@ class SCOTUSEmail:
             return SCOTUSEmailType.DOCKET_ENTRY
         elif self.CONFIRMATION_SUBJECT_REGEX.match(subject) is not None:
             return SCOTUSEmailType.CONFIRMATION
-        logger.error(
-            "Email subject did not match known patterns. Subject: %s", subject
+        log_error(
+            logger,
+            "scotus-email-subject",
+            "Email subject did not match known patterns. Subject: %s",
+            subject,
+            group_by="shared",
         )
         return SCOTUSEmailType.INVALID
 
@@ -331,32 +335,46 @@ class SCOTUSEmail:
 
         if email_type == SCOTUSEmailType.DOCKET_ENTRY:
             if self.message.get("Date") is None:
-                logger.error("Unable to find 'Date' header in email")
+                log_error(
+                    logger,
+                    "scotus-email-date-header",
+                    "Unable to find 'Date' header in email",
+                    group_by="shared",
+                )
                 return
 
             if n_anchors < 2:
-                logger.error(
+                log_error(
+                    logger,
+                    "scotus-email-links",
                     "Unable to find at least two links in email body (should "
                     "be case link and unsubscribe link); found %d",
                     n_anchors,
+                    group_by="shared",
                 )
                 return
 
             text = self.tree.text_content()
             if self.TITLE_REGEX.match(text) is None:
-                logger.error(
+                log_error(
+                    logger,
+                    "scotus-email-title",
                     "Unable to find match for docket entry title regex in "
-                    "email"
+                    "email",
+                    group_by="shared",
                 )
                 return
 
             self.email_type = email_type
         elif email_type == SCOTUSEmailType.CONFIRMATION:
             if n_anchors != 1:
-                logger.error(
+                log_error(
+                    logger,
+                    "scotus-email-confirmation-links",
                     "Incorrect number of links in email body. Should be "
                     "exactly one (confirmation link); found %d",
                     n_anchors,
+                    group_by="shared",
                 )
                 return
             self.email_type = email_type
@@ -377,9 +395,12 @@ class SCOTUSEmail:
                 raise ValueError("No date is present")
             return datetime.strptime(message_date, "%a, %d %b %Y %H:%M:%S %z")
         except ValueError:
-            logger.error(
+            log_error(
+                logger,
+                "scotus-email-date-parse",
                 "Unable to parse 'Date' header of email (value is '%s')",
                 message_date,
+                group_by="shared",
             )
             return None
 
@@ -442,9 +463,12 @@ class SCOTUSEmail:
             query["filename"][0] for (_, _, query) in links_with_filenames
         }
         if len(filenames) > 1:
-            logger.error(
+            log_error(
+                logger,
+                "scotus-email-filenames",
                 'Multiple URLs with unique "filename" query parameter found in SCOTUS email body (%s). Using first.',
                 filenames,
+                group_by="shared",
             )
         return links_with_filenames[0]
 

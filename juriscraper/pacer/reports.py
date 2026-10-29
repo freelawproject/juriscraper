@@ -12,7 +12,7 @@ from juriscraper.lib.html_utils import (
     set_response_encoding,
     strip_bad_html_tags_insecure,
 )
-from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.log_tools import log_error, make_default_logger
 
 from .utils import (
     get_doc_id_prefix_from_court_id,
@@ -390,19 +390,31 @@ class BaseReport:
             iframe_src = tree.xpath("//iframe/@src")[0]
         except IndexError:
             if "pdf:Producer" in text:
-                error = (
+                reason = (
                     "Unable to download PDF. PDF content was placed "
-                    f"directly in HTML. URL: {url}, caseid: {pacer_case_id}, "
-                    f"magic_num: {pacer_magic_num}"
+                    "directly in HTML."
                 )
             else:
-                error = (
+                reason = (
                     "Unable to download PDF. PDF not served as "
-                    "binary data and unable to find iframe src "
-                    f"attribute. URL: {url}, caseid: {pacer_case_id}, "
-                    f"magic_num: {pacer_magic_num}"
+                    "binary data and unable to find iframe src attribute."
                 )
-            logger.error(error)
+            error = (
+                f"{reason} URL: {url}, caseid: {pacer_case_id}, "
+                f"magic_num: {pacer_magic_num}"
+            )
+            log_error(
+                logger,
+                "pacer-pdf-not-binary",
+                "%s URL: %s, caseid: %s, magic_num: %s",
+                reason,
+                url,
+                pacer_case_id,
+                pacer_magic_num,
+                group_by="shared",
+                court_id=self.court_id,
+                url=url,
+            )
             return None, error
 
         if pacer_magic_num:

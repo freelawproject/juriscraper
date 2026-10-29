@@ -25,6 +25,7 @@ from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import InvalidDocumentError
+from juriscraper.lib.log_tools import log_error
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -169,10 +170,13 @@ class Site(OpinionSiteLinear):
             date_match = self.date_regex.search(description)
             docket_match = self.docket_regex.search(description)
             if not date_match or not docket_match:
-                logger.error(
+                log_error(
+                    logger,
+                    "row-incomplete-metadata",
                     "%s: incomplete metadata, skipping row '%s'",
                     self.court_id,
                     description,
+                    court_id=self.court_id,
                 )
                 continue
 
@@ -203,11 +207,14 @@ class Site(OpinionSiteLinear):
             # Build a clean, downloadable document URL from the result link
             doc_id = self.document_id_regex.search(anchor[0].get("href"))
             if not doc_id:
-                logger.error(
+                log_error(
+                    logger,
+                    "row-document-id",
                     "%s: could not extract document id from result link, "
                     "skipping row '%s'",
                     self.court_id,
                     description,
+                    court_id=self.court_id,
                 )
                 continue
             url = urljoin(

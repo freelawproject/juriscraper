@@ -11,6 +11,7 @@ from urllib.parse import urlencode, urljoin
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.log_tools import log_error
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -52,9 +53,13 @@ class Site(OpinionSiteLinear):
             url = row.xpath("@href")
 
             if not (docket and name and date_filed and url):
-                logger.error(
-                    "ca5: incomplete opinion row '%s'",
+                log_error(
+                    logger,
+                    "row-incomplete",
+                    "%s: incomplete opinion row '%s'",
+                    self.court_id,
                     " ".join(row.text_content().split()),
+                    court_id=self.court_id,
                 )
                 continue
 
@@ -84,7 +89,14 @@ class Site(OpinionSiteLinear):
         if label.startswith("Published"):
             return "Published"
 
-        logger.error("ca5: unknown document type '%s'", label)
+        log_error(
+            logger,
+            "unknown-document-type",
+            "%s: unknown document type '%s'",
+            self.court_id,
+            label,
+            court_id=self.court_id,
+        )
         return "Unknown"
 
     async def _download_backwards(self, dates: tuple[date, date]) -> None:

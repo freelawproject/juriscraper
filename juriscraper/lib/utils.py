@@ -1,5 +1,4 @@
 import re
-import traceback
 from collections.abc import Callable, Hashable, Iterable
 from datetime import date, datetime, timedelta
 from itertools import chain, islice, tee
@@ -13,7 +12,7 @@ from juriscraper.lib.exceptions import (
     NoDownloadUrlError,
     UnexpectedContentTypeError,
 )
-from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.log_tools import log_error, make_default_logger
 from juriscraper.lib.type_utils import OpinionType
 
 from .date_utils import fix_future_year_typo
@@ -52,7 +51,15 @@ def sanity_check_dates(
         ):
             future_date_count += 1
             error = f"{court_id}: {case_date} date is in the future. Case '{case_name}'"
-            logger.error(error)
+            log_error(
+                logger,
+                "future-date",
+                "%s: %s date is in the future. Case '%s'",
+                court_id,
+                case_date,
+                case_name,
+                court_id=court_id,
+            )
 
             # Interrupt data ingestion if more than 1 record has a bad date
             if future_date_count > 1:
@@ -288,10 +295,16 @@ async def backscrape_over_paginated_results(
             # if the request returned and error, take advantage of the cases
             # already downloaded. This may also be a case when the last page
             # was unknown, and `last_page + 1` generates an error
-            logger.info(
-                "Error while downloading, breaking pagination at page %s", page
+            log_error(
+                logger,
+                "backscrape-pagination",
+                "%s: error while downloading, breaking pagination at page %s",
+                site.court_id,
+                page,
+                court_id=site.court_id,
+                url=site.url,
+                exc_info=True,
             )
-            logger.debug("%s", traceback.format_exc())
             break
 
         if not site.cases:
@@ -367,7 +380,9 @@ def check_expected_content_types(
 def check_download_url(download_url: str) -> None:
     """Raise NoDownloadUrlError if download_url is empty or falsy."""
     if not download_url:
-        raise NoDownloadUrlError(download_url)
+        raise NoDownloadUrlError(
+            f"NoDownloadUrlError: download URL is empty: {download_url!r}"
+        )
 
 
 def check_empty_downloaded_file(

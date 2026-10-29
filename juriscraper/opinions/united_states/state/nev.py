@@ -15,6 +15,7 @@ from urllib.parse import urlencode
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.log_tools import log_error
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -255,11 +256,14 @@ class Site(OpinionSiteLinear):
                 return name
 
         # Catch updates
-        logger.error(
+        log_error(
+            logger,
+            "judge-initials-unmapped",
             "%s: judge initials not mapped to full name %s on %s",
             self.court_id,
             initials,
             date_filed,
+            court_id=self.court_id,
         )
         return ""
 

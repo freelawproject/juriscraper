@@ -63,3 +63,38 @@ def make_default_logger(file_path: str = LOG_FILENAME) -> logging.Logger:
         )
         logger.addHandler(handler)
     return logger
+
+
+def log_error(
+    logger: logging.Logger,
+    key: str,
+    msg: str,
+    *args: object,
+    court_id: str | None = None,
+    url: str | None = None,
+    group_by: str = "court",
+    exc_info: bool | BaseException | None = False,
+    **extra: object,
+) -> None:
+    """Log an error with the `extra` keys that group it in Sentry
+
+    CourtListener copies `extra["fingerprint"]` into the Sentry event, so
+    every call with the same key (and court, when `group_by` is "court")
+    lands in one issue no matter how the message varies.
+
+    Use "%s" placeholders in `msg`, never f-strings, so the message itself
+    stays stable too.
+
+    :param key: short stable name for the error, e.g. "zero-results"
+    :param court_id: the scraper's `court_id`, when there is one
+    :param url: the page involved, when there is one
+    :param group_by: "court" groups by key and court; "shared" groups by key
+        only, for errors in shared code where one ticket covers all courts
+    :param exc_info: forwarded to `logger.error`
+    :param extra: more values to show on the Sentry event
+    """
+    fingerprint = [key] if group_by == "shared" else [key, court_id or ""]
+    extra.update(
+        {"fingerprint": fingerprint, "court_id": court_id, "url": url}
+    )
+    logger.error(msg, *args, extra=extra, exc_info=exc_info)

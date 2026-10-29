@@ -23,6 +23,7 @@ from typing_extensions import override
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import set_api_token_header
 from juriscraper.lib.judge_parsers import normalize_judge_string
+from juriscraper.lib.log_tools import log_error
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -142,14 +143,25 @@ class Site(OpinionSiteLinear):
         for row in rows:
             cells = row.xpath("./td")
             if len(cells) < 9:
-                logger.error(
-                    "%s: expected 9 cells, got %s", self.court_id, len(cells)
+                log_error(
+                    logger,
+                    "row-cell-count",
+                    "%s: expected 9 cells, got %s",
+                    self.court_id,
+                    len(cells),
+                    court_id=self.court_id,
                 )
                 continue
 
             url = cells[6].xpath(".//a/@href")
             if not url:
-                logger.error("%s: no url found for row", self.court_id)
+                log_error(
+                    logger,
+                    "row-url-missing",
+                    "%s: no url found for row",
+                    self.court_id,
+                    court_id=self.court_id,
+                )
                 continue
 
             slip_cite = cells[6].xpath(

@@ -24,6 +24,7 @@ from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.judge_parsers import normalize_judge_string
+from juriscraper.lib.log_tools import log_error
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -136,9 +137,13 @@ class Site(OpinionSiteLinear):
                 doc_json = await self.get_json(detail_url)
 
             if not doc_json:
-                logger.error(
-                    "ky: no document details returned for Docket %s",
+                log_error(
+                    logger,
+                    "docket-details-missing",
+                    "%s: no document details returned for Docket %s",
+                    self.court_id,
                     docket_number,
+                    court_id=self.court_id,
                 )
                 continue
 

@@ -5,6 +5,7 @@ import inspect
 import json
 import os
 import ssl
+import urllib.error
 import urllib.parse
 import urllib.request
 from collections.abc import Awaitable
@@ -14,12 +15,14 @@ import certifi
 import httpx
 from charset_normalizer import from_bytes
 
+from juriscraper.lib.bot_challenge import raise_if_bot_challenge
 from juriscraper.lib.date_utils import (
     json_date_handler,
     make_date_range_tuples,
 )
 from juriscraper.lib.exceptions import (
     InsanityException,
+    attach_error_context,
 )
 from juriscraper.lib.html_utils import (
     clean_html,
@@ -28,7 +31,7 @@ from juriscraper.lib.html_utils import (
     get_html_parsed_text,
     set_response_encoding,
 )
-from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.log_tools import log_error, make_default_logger
 from juriscraper.lib.microservices_utils import follow_redirections
 from juriscraper.lib.string_utils import (
     CaseNameTweaker,
@@ -211,6 +214,18 @@ class AbstractSite:
         )
 
     async def parse(self):
+        """Download and parse the site
+
+        Any exception that escapes carries `court_id` and `url`, so the
+        caller can report which scraper and page failed.
+        """
+        try:
+            return await self._parse()
+        except Exception as exc:
+            attach_error_context(exc, court_id=self.court_id, url=self.url)
+            raise
+
+    async def _parse(self):
         if not self.downloader_executed:
             # Run the downloader if it hasn't been run already
             self.html = await self._download()
@@ -273,8 +288,13 @@ class AbstractSite:
 
     def no_results_warning(self) -> None:
         if self.should_have_results:
-            logger.error(
-                f"{self.court_id}: Returned with zero items, but should have results."
+            log_error(
+                logger,
+                "zero-results",
+                "%s: Returned with zero items, but should have results.",
+                self.court_id,
+                court_id=self.court_id,
+                url=self.url,
             )
         else:
             logger.warning(f"{self.court_id}: Returned with zero items.")
@@ -422,7 +442,14 @@ class AbstractSite:
         :return: A response object with a `content` field
         """
         req = urllib.request.Request(download_url, headers=headers)
-        response = self.urllib_opener.open(req, timeout=90)
+        try:
+            response = self.urllib_opener.open(req, timeout=90)
+        except urllib.error.HTTPError as exc:
+            # a blocked download is served as an HTML challenge page
+            raise_if_bot_challenge(
+                exc.read(), download_url, self.court_id, exc.headers
+            )
+            raise
         response.content = response.read()
 
         return response
@@ -445,8 +472,23 @@ class AbstractSite:
             used in test mode
 
         :return: The downloaded and cleaned content
-        :raises: NoDownloadUrlError, UnexpectedContentTypeError, EmptyFileError
+        :raises: NoDownloadUrlError, UnexpectedContentTypeError, EmptyFileError,
+            BotChallengeError
         """
+        try:
+            return await self._download_content(
+                download_url, doctor_is_available, media_root
+            )
+        except Exception as exc:
+            attach_error_context(exc, court_id=self.court_id, url=download_url)
+            raise
+
+    async def _download_content(
+        self,
+        download_url: str,
+        doctor_is_available: bool,
+        media_root: str,
+    ) -> str | bytes:
         check_download_url(download_url)
 
         # noinspection PyBroadException
@@ -491,6 +533,11 @@ class AbstractSite:
                 timeout=300,
             )
 
+        # a blocked PDF download arrives as an HTML challenge page, which
+        # would otherwise be reported as a content type error
+        raise_if_bot_challenge(
+            r.content, download_url, self.court_id, r.headers
+        )
         check_empty_downloaded_file(r, download_url)
         check_expected_content_types(self, r, download_url)
 
@@ -558,12 +605,17 @@ class AbstractSite:
         if headers is None:
             headers = dict(self.request["headers"])
         req = urllib.request.Request(url, data=data, headers=headers)
-        response = self.urllib_opener.open(req, timeout=60)
+        try:
+            response = self.urllib_opener.open(req, timeout=60)
+        except urllib.error.HTTPError as exc:
+            raise_if_bot_challenge(exc.read(), url, self.court_id, exc.headers)
+            raise
         raw = response.read()
         # Gzip decompression - currently only needed for lactapp_3
         # whose server returns gzip-encoded responses
         if raw[:2] == b"\x1f\x8b":
             raw = gzip.decompress(raw)
+        raise_if_bot_challenge(raw, url, self.court_id, response.headers)
 
         # Populate request dict for save_response compatibility.
         # Currently only needed for lactapp_3 which uses urllib
@@ -633,10 +685,21 @@ class AbstractSite:
         return self.request["response"]
 
     def _post_process_response(self):
-        """Cleanup to response object"""
+        """Cleanup to response object
+
+        :raises BotChallengeError: when the response is a bot challenge page,
+            whatever its status code
+        """
         self.tweak_response_object()
-        self.request["response"].raise_for_status()
-        set_response_encoding(self.request["response"])
+        response = self.request["response"]
+        raise_if_bot_challenge(
+            response.content,
+            self.request["url"] or self.url,
+            self.court_id,
+            response.headers,
+        )
+        response.raise_for_status()
+        set_response_encoding(response)
 
     def _return_response_text_object(self):
         if self.request["response"]:

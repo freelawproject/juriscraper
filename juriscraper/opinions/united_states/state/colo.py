@@ -22,6 +22,7 @@ from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
+from juriscraper.lib.log_tools import log_error
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -192,11 +193,16 @@ class Site(OpinionSiteLinear):
                 field for field in required_fields if not case.get(field)
             ]
             if missing_fields:
-                logger.error(
-                    "Skipping case due to missing fields: %s. Detail URL: %s. Case metadata: %s",
+                log_error(
+                    logger,
+                    "case-missing-fields",
+                    "%s: skipping case due to missing fields: %s. Detail URL: %s. Case metadata: %s",
+                    self.court_id,
                     ", ".join(missing_fields),
                     url,
                     case,
+                    court_id=self.court_id,
+                    url=url,
                 )
                 continue
 

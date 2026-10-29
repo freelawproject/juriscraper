@@ -4,7 +4,9 @@ from datetime import datetime
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
-from juriscraper.lib.exceptions import BotChallengeError, ParsingException
+from juriscraper.lib.bot_challenge import bot_challenge_error
+from juriscraper.lib.exceptions import ParsingException
+from juriscraper.lib.log_tools import log_error
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -83,13 +85,16 @@ class Site(OpinionSiteLinear):
                         )
 
                 if not case_date:
-                    logger.error(
+                    log_error(
+                        logger,
+                        "disposition-date-missing",
                         "%s: no date in disposition %r for docket %s; "
                         "skipping document %s",
                         self.court_id,
                         disposition,
                         fixed_values.get("docket"),
                         anchor.get("href"),
+                        court_id=self.court_id,
                     )
                     continue
 
@@ -165,9 +170,10 @@ class Site(OpinionSiteLinear):
         if self.html.xpath(
             "//*[contains(@class, 'h-captcha')]"
         ) or self.html.xpath("//title[contains(., 'Bot Manager Captcha')]"):
-            raise BotChallengeError(
+            raise bot_challenge_error(
                 f"{self.court_id}: served a captcha challenge instead of the homepage",
-                fingerprint=[f"{self.court_id}-bot-challenge"],
+                self.url,
+                self.court_id,
             )
 
         count = self.html.xpath(self.count_xpath)

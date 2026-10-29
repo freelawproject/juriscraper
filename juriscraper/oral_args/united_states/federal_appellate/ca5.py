@@ -13,6 +13,7 @@ from html import unescape
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.log_tools import log_error
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
@@ -34,7 +35,13 @@ class Site(OralArgumentSiteLinear):
             #  <br/>Appearing:<br/>Kathryn Shephard — Appellant<br/>"
             description = item.xpath("description/text()")
             if not description:
-                logger.error("ca5: item with no description")
+                log_error(
+                    logger,
+                    "item-without-description",
+                    "%s: item with no description",
+                    self.court_id,
+                    court_id=self.court_id,
+                )
                 continue
 
             # Entities inside the description are escaped twice, so the
@@ -44,8 +51,13 @@ class Site(OralArgumentSiteLinear):
                 f.strip() for f in unescape(description[0]).split("<br/>")
             ]
             if len(fields) < 3 or not fields[2].startswith("Argued"):
-                logger.error(
-                    "ca5: unexpected description '%s'", description[0]
+                log_error(
+                    logger,
+                    "item-unexpected-description",
+                    "%s: unexpected description '%s'",
+                    self.court_id,
+                    description[0],
+                    court_id=self.court_id,
                 )
                 continue
 

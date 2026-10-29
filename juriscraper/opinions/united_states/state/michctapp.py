@@ -18,6 +18,7 @@ from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.ClusterSite import ClusterSite
+from juriscraper.lib.log_tools import log_error
 from juriscraper.lib.type_utils import OpinionType
 from juriscraper.opinions.united_states.state import mich
 from juriscraper.OpinionSite import OpinionSite
@@ -85,7 +86,14 @@ class Site(ClusterSite, mich.Site):
             docket_number = item["caseUrl"].split("/")[-1]
 
         if not docket_number:
-            logger.error("michctapp: could not get docket number", extra=item)
+            log_error(
+                logger,
+                "docket-number-missing",
+                "%s: could not get docket number",
+                self.court_id,
+                court_id=self.court_id,
+                item=item,
+            )
             return "Placeholder name", "Placeholder docket"
 
         url = f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseSearchContent?searchQuery={docket_number}"
@@ -95,17 +103,25 @@ class Site(ClusterSite, mich.Site):
             "searchItems", []
         )
         if not search_items:
-            logger.error(
-                "michctapp: no results from search API for docket %s "
-                % docket_number,
-                extra={"search_items": search_items},
+            log_error(
+                logger,
+                "search-api-no-results",
+                "%s: no results from search API for docket %s",
+                self.court_id,
+                docket_number,
+                court_id=self.court_id,
+                search_items=search_items,
             )
             return "Placeholder name", docket_number
         elif len(search_items) > 1:
-            logger.error(
-                "michctapp: more than 1 from search API for docket %s "
-                % docket_number,
-                extra={"search_items": search_items},
+            log_error(
+                logger,
+                "search-api-multiple-results",
+                "%s: more than 1 from search API for docket %s",
+                self.court_id,
+                docket_number,
+                court_id=self.court_id,
+                search_items=search_items,
             )
             return "Placeholder name", docket_number
 

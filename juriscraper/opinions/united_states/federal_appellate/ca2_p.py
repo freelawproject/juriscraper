@@ -21,6 +21,7 @@ from urllib.parse import urljoin
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.log_tools import log_error
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -90,12 +91,16 @@ class Site(OpinionSiteLinear):
             posted = fields.get("Date Posted") or fields.get("Date")
             caption = fields.get("Caption")
             if not (url and docket and posted and caption):
-                logger.error(
-                    "ca2: incomplete row docket=%r url=%r posted=%r caption=%r",
+                log_error(
+                    logger,
+                    "row-incomplete",
+                    "%s: incomplete row docket=%r url=%r posted=%r caption=%r",
+                    self.court_id,
                     docket,
                     url,
                     posted,
                     caption,
+                    court_id=self.court_id,
                 )
                 continue
 

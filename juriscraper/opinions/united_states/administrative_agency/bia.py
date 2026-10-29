@@ -19,6 +19,7 @@ from typing_extensions import override
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import get_justice_dot_gov_auth_cookies
 from juriscraper.lib.exceptions import UnexpectedContentTypeError
+from juriscraper.lib.log_tools import log_error
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -94,7 +95,13 @@ class Site(OpinionSiteLinear):
             scraped_text,
         )
         if not date:
-            logger.error("bia: unable to extract_from_text a date_filed")
+            log_error(
+                logger,
+                "extract-date-filed",
+                "%s: unable to extract_from_text a date_filed",
+                self.court_id,
+                court_id=self.court_id,
+            )
             return {}
 
         date_filed = datetime.strptime(date[0], "%B %d, %Y").strftime(

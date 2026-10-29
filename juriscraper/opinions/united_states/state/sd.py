@@ -15,6 +15,7 @@ from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import get_row_column_text
+from juriscraper.lib.log_tools import log_error
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -191,8 +192,13 @@ class Site(OpinionSiteLinear):
                     judges.append(judge)
                 else:
                     # Catch updates
-                    logger.error(
-                        "Judge initials not mapped to full name %s", initial
+                    log_error(
+                        logger,
+                        "judge-initials-unmapped",
+                        "%s: judge initials not mapped to full name %s",
+                        self.court_id,
+                        initial,
+                        court_id=self.court_id,
                     )
 
             if judges:

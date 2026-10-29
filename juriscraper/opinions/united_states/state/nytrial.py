@@ -24,6 +24,7 @@ from juriscraper.lib.auth_utils import set_api_token_header
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.exceptions import ParsingException
 from juriscraper.lib.judge_parsers import normalize_judge_string
+from juriscraper.lib.log_tools import log_error
 from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.opinions.united_states.state import ny
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -284,9 +285,13 @@ class Site(OpinionSiteLinear):
             elif pdf_docket := pdf_caption_regex.search(target_text):
                 metadata["Docket"]["docket_number"] = pdf_docket.group()
             else:
-                logger.error(
-                    "nytrial: unable to extract_from_text docket number",
-                    extra={"pdf_text": target_text.strip()[:1024]},
+                log_error(
+                    logger,
+                    "extract-docket-number",
+                    "%s: unable to extract_from_text docket number",
+                    self.court_id,
+                    court_id=self.court_id,
+                    pdf_text=target_text.strip()[:1024],
                 )
 
             if pdf_judge := re.search(

@@ -28,6 +28,7 @@ from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.ClusterSite import ClusterSite
+from juriscraper.lib.log_tools import log_error
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.lib.type_utils import OpinionType
 
@@ -190,9 +191,13 @@ class Site(ClusterSite):
                 # instead of "Opinion"), so get_opinions() returns an
                 # empty list.  Skip to avoid an InsanityException
                 # downstream when download_urls is missing. #1852
-                logger.error(
-                    "Skipping docket %s - no opinion documents found",
+                log_error(
+                    logger,
+                    "opinion-documents-missing",
+                    "%s: skipping docket %s, no opinion documents found",
+                    self.court_id,
                     case_dict["docket"],
+                    court_id=self.court_id,
                 )
                 continue
 

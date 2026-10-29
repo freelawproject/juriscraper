@@ -22,6 +22,7 @@ from urllib.parse import urlencode, urljoin
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.log_tools import log_error
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -95,10 +96,13 @@ class Site(OpinionSiteLinear):
             opinion_file = (content.get("opinion_file") or {}).get("value")
             url = (opinion_file or {}).get("url")
             if not url:
-                logger.error(
+                log_error(
+                    logger,
+                    "opinion-file-url-missing",
                     "%s: missing opinion_file URL for document id %s",
                     self.court_id,
                     doc_id,
+                    court_id=self.court_id,
                 )
                 continue
 

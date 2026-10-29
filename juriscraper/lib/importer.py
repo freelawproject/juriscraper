@@ -1,15 +1,14 @@
 import os
-import traceback
 from collections.abc import AsyncGenerator, Iterable
-from logging import getLogger
 from types import ModuleType
 from typing import cast
 
 from httpx import HTTPError
 
 from juriscraper.AbstractSite import AbstractSite
+from juriscraper.lib.log_tools import log_error, make_default_logger
 
-logger = getLogger()
+logger = make_default_logger()
 
 
 def build_module_list(court_id: str) -> list[str]:
@@ -103,6 +102,16 @@ async def site_yielder(
             try:
                 await site._download_backwards(i)
             except HTTPError:
-                logger.debug("%s", traceback.format_exc())
+                # keep going so one failed window does not stop the backscrape
+                log_error(
+                    logger,
+                    "backscrape-window",
+                    "%s: error downloading backscrape window %s",
+                    site.court_id,
+                    i,
+                    court_id=site.court_id,
+                    url=site.url,
+                    exc_info=True,
+                )
                 continue
             yield site
