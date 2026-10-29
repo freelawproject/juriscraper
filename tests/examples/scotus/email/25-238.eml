@@ -1,0 +1,44 @@
+Return-Path: <010001a17f0e0e22-aa2acad7-c371-4f8d-af16-6650b5457d71-000000@mail.sc-us.gov>
+Received: from a66-91.smtp-out.amazonses.com (a66-91.smtp-out.amazonses.com [54.240.66.91])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 7a35du18hjgncdn3k6ua7l0kq8pqsnkrj54dnp81
+ for notifications@scotus.recap.email;
+ Tue, 27 Oct 2026 20:29:51 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of mail.sc-us.gov designates 54.240.66.91 as permitted sender) client-ip=54.240.66.91; envelope-from=010001a17f0e0e22-aa2acad7-c371-4f8d-af16-6650b5457d71-000000@mail.sc-us.gov; helo=a66-91.smtp-out.amazonses.com;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of mail.sc-us.gov designates 54.240.66.91 as permitted sender) client-ip=54.240.66.91; envelope-from=010001a17f0e0e22-aa2acad7-c371-4f8d-af16-6650b5457d71-000000@mail.sc-us.gov; helo=a66-91.smtp-out.amazonses.com;
+ dkim=pass header.i=@sc-us.gov;
+ dkim=pass header.i=@amazonses.com;
+ dmarc=pass header.from=sc-us.gov;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFGbUNiWWlwUi9rRitSZ1dyNWpRTWRxR3hsY2h1TTcvaDVKR2RqYStRWWdiUTlibVlPSTRoL2pzNEhRQ05mTm9YSjRxZm9sT2cybHYraUFEam9UQ1lMNVJxb2ZvZlNURHR1YlNxbWg2ckZac0JtM0VXN0tPekFiL2NIVGZ6U0pHeFg2dTNBdFRaZFptWHV0dTFxa3BPdVZ5ZklwdXJnK2RYaEJlcm9Yd1lnS1l6YnduYlI0TGxkbHdUVVR4MDFvTUd5ejlsSTZXZGgzSWRYR1NiQ2dKVzFkQTNEc0t0MHZIQUVLUGUxZXZ2bEI2MzhrMFNNU05hSnZwR0x3ZVFWMDUxZStlWjhKeGQ1U0F2NXY1UnFpYkFLZWtUUWZZUjQvQS9XRmV6SEVWU3NmdmptcVpnY3B1SVRsblJhTGNFRUd5RGxxUWNoNUVQUy9MUXlZVU5vME9xM09jMjdjeTMzZ0Q2Y0JwSTZmVFJ1REZBPT0=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=X0nbfyyZvu24eoyMGy1BGeUVre3oCg6T40Kf2ZlTyc/EcnOenPKyAoq5/4wUkfBUdkwPNvVrjfTC+hqiU6e6Vd/oSlD/nIlctuqPqYipz/Km6mK+PdBWJ3tgSYbdZMWVpNcmBJAvDCpdgeX3ZkNj33xHhOecieUOLYRpGsDPTc8=; c=relaxed/simple; s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1793132991; v=1; bh=WBX2TZaWZWl5htZUkIzUoiXvZdJic7ujl7aWhQ/aF/I=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=sglce367a3eekz5cgo2jpvwdiom4ooya; d=sc-us.gov; t=1793132990;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date;
+	bh=WBX2TZaWZWl5htZUkIzUoiXvZdJic7ujl7aWhQ/aF/I=;
+	b=0jun91DkCCuy3dVnly9pkRz5fs89O2dJjxDgOuDA2O1GEdy7/jP51T5F/1lIA5sH
+	PW2oXzDnD09AQPB/3moL65xuw65XYHIImaxdO6zpq6cnhVPmDsS3UZFrNPm83EgufWz
+	aYcWDr3MzGCk7clNVBpFsyfw4AVksjomoUdjdqsQ=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=224i4yxa5dv7c2xz3womw6peuasteono; d=amazonses.com; t=1793132990;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date:Feedback-ID;
+	bh=WBX2TZaWZWl5htZUkIzUoiXvZdJic7ujl7aWhQ/aF/I=;
+	b=DZ6rLZUhoiFu4DZeCuokBWCgGclu9Cbp9ImM9/zLWlopJMvHX/2mH4BQCScKVnnW
+	bernZ1WuO7ZIx18EofOmcouA38p+KIRO8c6b6z697rSlHoBNfaLdAWATl9gR904QxSr
+	bvh858DBpMnmJoFfGiKoqW8S7kZwbd0bWWVGcmYE=
+From: no-reply@sc-us.gov
+To: notifications@scotus.recap.email
+Subject: Supreme Court Electronic Filing System
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Message-ID: <010001a17f0e0e22-aa2acad7-c371-4f8d-af16-6650b5457d71-000000@email.amazonses.com>
+Date: Tue, 27 Oct 2026 20:29:49 +0000
+Feedback-ID: ::1.us-east-1.+5GeZMB3eXeyv3WY8brP46tghxJpXFIF9yDDvLuTQrk=:AmazonSES
+X-SES-Outgoing: 2026.10.27-54.240.66.91
+
+A new docket entry, "Amicus brief of "CRIME", an Unregistered Group submitted." has been added for <a href='https://www.supremecourt.gov/search.aspx?filename=/docket/DocketFiles/html/Public/25-238.html'>Cutberto Viramontes, et al., Petitioners v. Cook County, Illinois, et al.</a>. You have been signed up to receive email notifications for No. 25-238. <br><br> If you no longer wish to receive email notifications on this case, please 
+
+<a href='https://file.supremecourt.gov/Request/NotificationOptOutGet?id=CfDJ8LWjh78o-U5EigyPTWy9BmcYoWl1N1zZoUMlQNZsNlyb-pgF6F7rgqrGgp72lleifVU7h88BkKmJXAgsKJzY6GHN5JFp8U9uOOGM0L7qXVpjh5R8KmzIDARfyDRhINJhu1BmCGuHaJu5pABdIaeWV1xHdKBjTEgVP08dEEy_V6s2'>click here</a>.
+
