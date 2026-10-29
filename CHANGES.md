@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- Document how to sign the CLA online via CLA Assistant in `CONTRIBUTING.md`. #2369
 
 Fixes:
 - Fix `tenn`, `tennctapp`, `tenncrimapp` and `tenn_workers_comp` crash when a row's opinion link has an empty URL; those rows are now skipped. #2303
