@@ -46,6 +46,8 @@ class Site(OpinionSiteLinear):
         "caseType": "",
         "caseSubType": "",
         "constitutionalityOpinionsOnly": "false",
+        # Required since 2026-10-20; without it the API 404s. See #2357
+        "pageSize": "10",
     }
 
     # Map API decision types to precedential status
