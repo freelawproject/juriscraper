@@ -730,7 +730,7 @@
     },
     {
       "column": 20,
-      "path": "juriscraper/opinions/united_states/state/calag.py",
+      "path": "juriscraper/opinions/united_states/attorney_general/calag.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
@@ -1108,7 +1108,7 @@
     },
     {
       "column": 20,
-      "path": "juriscraper/opinions/united_states/state/mdag.py",
+      "path": "juriscraper/opinions/united_states/attorney_general/mdag.py",
       "name": "unsupported-operation",
       "concise_description": "`None` is not subscriptable",
       "severity": "error"
@@ -1430,7 +1430,7 @@
     },
     {
       "column": 20,
-      "path": "juriscraper/opinions/united_states/state/nyag.py",
+      "path": "juriscraper/opinions/united_states/attorney_general/nyag.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
@@ -1521,7 +1521,7 @@
     },
     {
       "column": 20,
-      "path": "juriscraper/opinions/united_states/state/oklaag.py",
+      "path": "juriscraper/opinions/united_states/attorney_general/oklaag.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
@@ -1682,7 +1682,7 @@
     },
     {
       "column": 17,
-      "path": "juriscraper/opinions/united_states/state/texag.py",
+      "path": "juriscraper/opinions/united_states/attorney_general/texag.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
@@ -2094,6 +2094,27 @@
       "severity": "error"
     },
     {
+      "column": 24,
+      "path": "juriscraper/pacer/acms_attachment_page.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 24,
+      "path": "juriscraper/pacer/acms_attachment_page.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/pacer/acms_attachment_page.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
       "column": 41,
       "path": "juriscraper/pacer/acms_docket.py",
       "name": "bad-argument-type",
@@ -2134,13 +2155,6 @@
       "name": "missing-attribute",
       "concise_description": "Object of class `str` has no attribute `get`",
       "severity": "error"
-    },
-    {
-      "column": 28,
-      "path": "juriscraper/pacer/acms_docket.py",
-      "name": "redundant-condition",
-      "concise_description": "String literal used as condition. It's equivalent to `True`",
-      "severity": "warn"
     },
     {
       "column": 20,
@@ -3449,27 +3463,6 @@
       "path": "juriscraper/state/RequestManager.py",
       "name": "bad-override",
       "concise_description": "Class member `RequestManager.send` overrides parent class `AsyncClient` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "juriscraper/state/florida/scraper.py",
-      "name": "unreachable-match-case",
-      "concise_description": "Case pattern can never match subject of type `FloridaPaginatedResults[FloridaCase]`",
-      "severity": "warn"
-    },
-    {
-      "column": 38,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `get`",
-      "severity": "error"
-    },
-    {
-      "column": 33,
-      "path": "juriscraper/state/texas/common.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `text_content`",
       "severity": "error"
     },
     {

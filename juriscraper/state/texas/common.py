@@ -1037,29 +1037,31 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
         if table is None:
             return []
         documents = parse_table(table)
-        anchors = [parent.find(".//a") for parent in documents["0"]]
-        urls: list[str] = [clean_url(anchor.get("href")) for anchor in anchors]
-        query_dicts: list[dict[str, list[str]]] = [
-            parse_qs(urlparse(url).query) for url in urls
-        ]
-        media_ids = [
-            (query.get("MediaID", []), query.get("MediaVersionID", []))
-            for query in query_dicts
-        ]
-        descriptions: list[str] = [
-            clean_string(document.text_content())
-            for document in documents["1"]
-        ]
-        file_size_matches = [
-            FILE_SIZE_RE.search(anchor.text_content()) for anchor in anchors
-        ]
-        file_size_strs = [
-            match.group(0) if match is not None else ""
-            for match in (file_size_matches)
-        ]
 
-        return [
-            TexasCaseDocument(
+        def case_document_from_row(
+            link_cell: HtmlElement, description_cell: HtmlElement
+        ) -> TexasCaseDocument | None:
+            anchor = link_cell.find(".//a")
+            if anchor is None:
+                return None
+            href = anchor.get("href")
+            if href is None:
+                return None
+            url = clean_url(href)
+
+            query = parse_qs(urlparse(url).query)
+            media_id = query.get("MediaID", [])
+            media_version_id = query.get("MediaVersionID", [])
+
+            description = clean_string(description_cell.text_content())
+
+            file_size_match = FILE_SIZE_RE.search(anchor.text_content())
+
+            file_size_str = (
+                file_size_match.group(0) if file_size_match is not None else ""
+            )
+
+            return TexasCaseDocument(
                 document_url=clean_url(url),
                 description=description,
                 media_id=media_id[0] if len(media_id) > 0 else "",
@@ -1069,12 +1071,14 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
                 file_size_str=file_size_str,
                 file_size_bytes=size_string_to_bytes(file_size_str),
             )
-            for url, (
-                media_id,
-                media_version_id,
-            ), description, file_size_str in zip(
-                urls, media_ids, descriptions, file_size_strs
-            )
+
+        case_documents = [
+            case_document_from_row(link, description)
+            for (link, description) in zip(documents["0"], documents["1"])
+        ]
+
+        return [
+            document for document in case_documents if document is not None
         ]
 
     def _parse_case_events(self) -> list[TexasCaseEvent]:

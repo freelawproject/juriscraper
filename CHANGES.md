@@ -18,10 +18,15 @@ Features:
 -
 
 Changes:
--
+- Move the six attorney general scrapers (`calag`, `mdag`, `minnag`, `nyag`,
+  `oklaag`, `texag`) from `opinions.united_states.state` into a new
+  `opinions.united_states.attorney_general` package. Court IDs are unchanged,
+  but crawls invoked with the `state` package path must add the
+  `attorney_general` package path to keep covering them. #168
 
 Fixes:
 - Fix `tenn`, `tennctapp`, `tenncrimapp` and `tenn_workers_comp` crash when a row's opinion link has an empty URL; those rows are now skipped. #2303
+- Fix `ariz` and `arizctapp_div_1` 404s by sending the `pageSize` parameter the opinions API now requires. #2357
 - Send the session's default headers, including `User-Agent`, on PACER magic link downloads; PACER was intermittently resetting the connection without them.
 
 ## 4.0.1 - 2026-10-15
