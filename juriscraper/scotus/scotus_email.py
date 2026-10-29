@@ -208,7 +208,7 @@ class SCOTUSEmail:
     """Parse SCOTUS docket notification email."""
 
     TITLE_REGEX = re.compile(
-        r"^A new docket entry(?:, \"([^\"]+)\")? has been added"
+        r"^A new docket entry(?:, \"([\w\W]+?)\")? has been added",
     )
     DOCKET_ENTRY_SUBJECT_REGEX = re.compile(
         r"^Supreme Court Electronic Filing System$"
