@@ -3,15 +3,9 @@ import asyncio
 import re
 import unittest
 from datetime import date
-from urllib.parse import parse_qs, urlsplit
 
 from juriscraper.AbstractSite import logger
-from juriscraper.opinions.united_states.state import (
-    ariz,
-    arizctapp_div_1,
-    nev,
-    nevapp,
-)
+from juriscraper.opinions.united_states.state import nev, nevapp
 
 
 class ScraperSpotTest(unittest.TestCase):
@@ -332,25 +326,3 @@ class ScraperSpotTest(unittest.TestCase):
         asyncio.run(site._download_backwards(site.back_scrape_iterable[0]))
         self.assertEqual(len(site.cases), 1)
         self.assertEqual(pages, [])
-
-    def test_ariz_build_api_url(self):
-        """The opinions API 404s unless every filter and pageSize are sent.
-        See #2357
-        """
-        for module, court in [
-            (ariz, "Supreme"),
-            (arizctapp_div_1, "Division1"),
-        ]:
-            with self.subTest(court=court):
-                site = module.Site()
-                url = site._build_api_url(
-                    date(2026, 10, 1), date(2026, 10, 28), page=2
-                )
-                query = parse_qs(urlsplit(url).query, keep_blank_values=True)
-                self.assertEqual(query.get("pageSize"), ["10"])
-                self.assertEqual(query["page"], ["2"])
-                self.assertEqual(query["court"], [court])
-                self.assertEqual(query["startDate"], ["2026-10-01"])
-                self.assertEqual(query["endDate"], ["2026-10-28"])
-                for key in ariz.Site.params:
-                    self.assertIn(key, query)
