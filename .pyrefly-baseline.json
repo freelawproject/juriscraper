@@ -701,13 +701,6 @@
       "severity": "error"
     },
     {
-      "column": 21,
-      "path": "juriscraper/opinions/united_states/state/arizctapp_div_2.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
-      "severity": "error"
-    },
-    {
       "column": 16,
       "path": "juriscraper/opinions/united_states/state/ark.py",
       "name": "missing-attribute",
