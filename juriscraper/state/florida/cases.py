@@ -1,5 +1,6 @@
+import itertools
 from datetime import date, datetime
-from typing import Annotated, Any, ClassVar
+from typing import Annotated, ClassVar
 
 from pydantic import (
     UUID4,
@@ -17,6 +18,7 @@ from juriscraper.abstract_parser import LegacyParser
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import CaseNameTweaker, harmonize
 from juriscraper.state.docket import (
+    DeserializableContext,
     Docket,
     DocketTransfer,
     DocketType,
@@ -73,7 +75,9 @@ FLORIDA_DOCKET_TYPE_MAP: dict[str, DocketType] = {
 }
 
 
-def florida_docket_type_validator(i: str, info: ValidationInfo) -> DocketType:
+def florida_docket_type_validator(
+    value: object, info: ValidationInfo[object | None]
+) -> DocketType:
     """
     Validates and converts a Florida case classification string to a
     DocketType enum value.
@@ -82,18 +86,21 @@ def florida_docket_type_validator(i: str, info: ValidationInfo) -> DocketType:
     "Category - Type - SubType", where the type component is looked up in
     FLORIDA_DOCKET_TYPE_MAP.
 
-    :param i: Florida case classification string.
+    :param value: Florida case classification string.
     :param info: Pydantic validation info.
 
     :return: The corresponding DocketType enum value.
     """
-    if info.context and info.context.get("deserialize"):
-        return DocketType(i)
+    if isinstance(info.context, DeserializableContext):
+        return DocketType(value)
+
+    if not isinstance(value, str):
+        raise ValueError(f"expected string, but got {type(value).__name__}.")
     # None of the middle components in classification strings contained dashes
     # when this scraper was created.
-    parts = [p.strip().lower() for p in i.split(" - ", maxsplit=2)]
+    parts = [p.strip().lower() for p in value.split(" - ", maxsplit=2)]
     if len(parts) < 3:
-        logger.error("Invalid Florida docket type format: %s", i)
+        logger.error("Invalid Florida docket type format: %s", value)
         return DocketType.UNASSIGNED
 
     _case_category, case_type, _case_sub_type = parts[:3]
@@ -106,20 +113,36 @@ def florida_docket_type_validator(i: str, info: ValidationInfo) -> DocketType:
 
 
 def florida_docket_type_raw_validator(
-    i: Any, info: ValidationInfo
+    value: object, info: ValidationInfo[object | None]
 ) -> tuple[str, str, str]:
     """
     Splits a Florida "caseClassification" string into a category, type, sub type
     tuple. Missing components will be filled with empty strings.
 
-    :param i: Florida "caseClassification" string.
+    :param value: Florida "caseClassification" string.
     :param info: Pydantic validation info.
 
     :return: The split tuple.
     """
-    if info.context and info.context.get("deserialize"):
-        return tuple(i)
-    parts = i.split(" - ", maxsplit=2)
+    if isinstance(info.context, DeserializableContext):
+        if not isinstance(value, list):
+            raise ValueError(f"expected list, but got {type(value).__name__}.")
+        if not all(isinstance(e, str) for e in value):
+            types = {type(e).__name__ for e in value}
+            raise ValueError(
+                f"expected list[str], but got list[{' | '.join(types)}]."
+            )
+        if len(value) < 3:
+            logger.error("Invalid Florida docket type format: %s", value)
+
+        parts = list(
+            itertools.islice(itertools.chain(value, itertools.repeat("")), 3)
+        )
+        return parts[0], parts[1], parts[2]
+
+    if not isinstance(value, str):
+        raise ValueError(f"expected str, but got {type(value).__name__}.")
+    parts = value.split(" - ", maxsplit=2)
     # No need to log error here because `florida_docket_type_validator` already
     # does.
     while len(parts) < 3:
@@ -128,20 +151,23 @@ def florida_docket_type_raw_validator(
 
 
 def florida_originating_court_id_validator(
-    i: str, info: ValidationInfo
+    value: object, info: ValidationInfo[object | None]
 ) -> FloridaCourtID:
     """
     Validates and converts a Florida originating court name to a standardized
     Florida court ID.
 
-    :param i: Florida originating court name.
+    :param value: Florida originating court name.
     :param info: Pydantic validation info.
 
     :return: The corresponding CourtID enum value.
     """
-    if info.context and info.context.get("deserialize"):
-        return FloridaCourtID(i)
-    court_name = i.lower().strip()
+    if isinstance(info.context, DeserializableContext):
+        return FloridaCourtID(value)
+
+    if not isinstance(value, str):
+        raise ValueError(f"expected str, but got {type(value).__name__}.")
+    court_name = value.lower().strip()
     if court_name.startswith("circuit court"):
         return FloridaCourtID.CIRCUIT
     if court_name.startswith("county court"):
@@ -202,18 +228,24 @@ class FloridaOriginatingCase(BaseModel):
 
 
 def florida_external_id_to_js_id_validator(
-    i: str, info: ValidationInfo
+    value: object, info: ValidationInfo[object | None]
 ) -> str:
     """
     Maps Florida's external court ID to a value on the FloridaCourtID enum.
 
-    :param i: Florida external court ID as a string.
+    :param value: Florida external court ID as a string.
     :param info: Pydantic validation info.
 
     :return: Value on the FloridaCourtID enum.
     """
-    if info.context and info.context.get("deserialize"):
-        return i
+    if isinstance(info.context, DeserializableContext):
+        if not isinstance(value, str):
+            raise ValueError(f"expected str, but got {type(value).__name__}.")
+        return value
+
+    if not isinstance(value, str):
+        raise ValueError(f"expected str, but got {type(value).__name__}.")
+    i = value
     if i not in FLORIDA_COURT_EXTERNAL_ID_MAP:
         raise PydanticCustomError(
             "florida_court_id",
