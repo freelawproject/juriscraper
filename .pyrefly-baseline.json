@@ -730,7 +730,7 @@
     },
     {
       "column": 20,
-      "path": "juriscraper/opinions/united_states/state/calag.py",
+      "path": "juriscraper/opinions/united_states/attorney_general/calag.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
@@ -1108,7 +1108,7 @@
     },
     {
       "column": 20,
-      "path": "juriscraper/opinions/united_states/state/mdag.py",
+      "path": "juriscraper/opinions/united_states/attorney_general/mdag.py",
       "name": "unsupported-operation",
       "concise_description": "`None` is not subscriptable",
       "severity": "error"
@@ -1430,7 +1430,7 @@
     },
     {
       "column": 20,
-      "path": "juriscraper/opinions/united_states/state/nyag.py",
+      "path": "juriscraper/opinions/united_states/attorney_general/nyag.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
@@ -1521,7 +1521,7 @@
     },
     {
       "column": 20,
-      "path": "juriscraper/opinions/united_states/state/oklaag.py",
+      "path": "juriscraper/opinions/united_states/attorney_general/oklaag.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
@@ -1682,7 +1682,7 @@
     },
     {
       "column": 17,
-      "path": "juriscraper/opinions/united_states/state/texag.py",
+      "path": "juriscraper/opinions/united_states/attorney_general/texag.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
@@ -3463,34 +3463,6 @@
       "path": "juriscraper/state/RequestManager.py",
       "name": "bad-override",
       "concise_description": "Class member `RequestManager.send` overrides parent class `AsyncClient` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "column": 13,
-      "path": "juriscraper/state/florida/cases.py",
-      "name": "unknown-variable-type",
-      "concise_description": "The type of `parts` is unknown; it is inferred as an implicit `Any`",
-      "severity": "error"
-    },
-    {
-      "column": 15,
-      "path": "juriscraper/state/florida/cases.py",
-      "name": "unknown-argument-type",
-      "concise_description": "The type of this argument is unknown",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "juriscraper/state/florida/docket_entries.py",
-      "name": "no-any-return-explicit",
-      "concise_description": "Returning Any from function declared to return \"DocketEntryType\"",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "juriscraper/state/florida/parties.py",
-      "name": "no-any-return-explicit",
-      "concise_description": "Returning Any from function declared to return \"PartyType\"",
       "severity": "error"
     },
     {
