@@ -31,6 +31,8 @@ Fixes:
 - Fix `ariz` and `arizctapp_div_1` 404s by sending the `pageSize` parameter the opinions API now requires. #2357
 - Send the session's default headers, including `User-Agent`, on PACER magic link downloads; PACER was intermittently resetting the connection without them.
 - Fix SCOTUS email parser failing on double quotes in docket entry titles
+- Fix `ga`: read the release date from the `<h3>` heading the 2026 opinions page now uses; opinions since 2026-06-30 were all dated 2026-06-16 and dropped #2287
+- Fix `ala`: accept every document type that contains "Opinion" or "Decision", such as "Published Opinion"; the exact-match filter dropped them (also `alacivapp`, `alacrimapp`) #2287
 
 ## 4.0.1 - 2026-10-15
 
