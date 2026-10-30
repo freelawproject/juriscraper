@@ -28,7 +28,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         "Security violation: You do not have access rights to this program",
     ]
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None):
         BaseDocketReport.__init__(self, court_id)
         BaseReport.__init__(self, court_id, pacer_session)
 
@@ -102,7 +102,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
 
         claim_tables = self.tree.xpath('//table[@class="complexReport"]')
         for claim_table in claim_tables:
-            meta_data = {
+            meta_data: dict = {
                 "court_id": self.court_id,
             }
             claim = {}
@@ -384,7 +384,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
             data = {label: force_unicode(value)}
         return data
 
-    def query(
+    async def query(
         self,
         pacer_case_id: str,
         docket_number: str,
@@ -446,7 +446,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         else:
             post_param = "1-L_1_0-1"
 
-        self.response = self.session.post(
+        self.response = await self.session.post(
             f"{self.url}?{post_param}", data=params
         )
         self.parse()
