@@ -18,6 +18,17 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+-
+
+## 4.0.2 - 2026-10-29
+
+Features:
+-
+
+Changes:
 - Document how to sign the CLA online via CLA Assistant in `CONTRIBUTING.md`. #2369
 - Move the six attorney general scrapers (`calag`, `mdag`, `minnag`, `nyag`,
   `oklaag`, `texag`) from `opinions.united_states.state` into a new
