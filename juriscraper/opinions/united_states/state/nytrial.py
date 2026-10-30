@@ -22,7 +22,7 @@ from typing_extensions import override
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import set_api_token_header
 from juriscraper.lib.date_utils import unique_year_month
-from juriscraper.lib.exceptions import ParsingException
+from juriscraper.lib.exceptions import BotChallengeError, ParsingException
 from juriscraper.lib.judge_parsers import normalize_judge_string
 from juriscraper.lib.log_tools import log_error
 from juriscraper.lib.string_utils import clean_string, harmonize
@@ -181,7 +181,7 @@ class Site(OpinionSiteLinear):
         """
         try:
             html = await self._get_html_tree_by_url(urljoin(self.url, url))
-        except (httpx.HTTPError, ParserError) as e:
+        except (httpx.HTTPError, BotChallengeError, ParserError) as e:
             logger.warning("nytrial: could not get stub %s: %s", url, e)
             return "", ""
         header = html.xpath("//h1/parent::div")[:1]

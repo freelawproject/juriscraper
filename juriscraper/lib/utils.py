@@ -7,6 +7,7 @@ from typing import Any, Protocol, TypeVar, cast
 from httpx import HTTPError
 
 from juriscraper.lib.exceptions import (
+    BotChallengeError,
     EmptyFileError,
     InsanityException,
     NoDownloadUrlError,
@@ -291,7 +292,7 @@ async def backscrape_over_paginated_results(
         try:
             site.html = await site._download()
             await site._process_html()
-        except HTTPError:
+        except (HTTPError, BotChallengeError):
             # if the request returned and error, take advantage of the cases
             # already downloaded. This may also be a case when the last page
             # was unknown, and `last_page + 1` generates an error

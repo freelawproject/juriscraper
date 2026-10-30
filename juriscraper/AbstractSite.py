@@ -15,7 +15,10 @@ import certifi
 import httpx
 from charset_normalizer import from_bytes
 
-from juriscraper.lib.bot_challenge import raise_if_bot_challenge
+from juriscraper.lib.bot_challenge import (
+    INSPECTED_BYTES,
+    raise_if_bot_challenge,
+)
 from juriscraper.lib.date_utils import (
     json_date_handler,
     make_date_range_tuples,
@@ -447,7 +450,10 @@ class AbstractSite:
         except urllib.error.HTTPError as exc:
             # a blocked download is served as an HTML challenge page
             raise_if_bot_challenge(
-                exc.read(), download_url, self.court_id, exc.headers
+                exc.read(INSPECTED_BYTES),
+                download_url,
+                self.court_id,
+                exc.headers,
             )
             raise
         response.content = response.read()
@@ -608,7 +614,9 @@ class AbstractSite:
         try:
             response = self.urllib_opener.open(req, timeout=60)
         except urllib.error.HTTPError as exc:
-            raise_if_bot_challenge(exc.read(), url, self.court_id, exc.headers)
+            raise_if_bot_challenge(
+                exc.read(INSPECTED_BYTES), url, self.court_id, exc.headers
+            )
             raise
         raw = response.read()
         # Gzip decompression - currently only needed for lactapp_3

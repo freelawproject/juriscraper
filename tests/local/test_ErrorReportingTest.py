@@ -13,6 +13,7 @@ from juriscraper.lib.bot_challenge import (
     raise_if_bot_challenge,
 )
 from juriscraper.lib.exceptions import (
+    BadContentError,
     BotChallengeError,
     InsanityException,
     NoDownloadUrlError,
@@ -99,6 +100,14 @@ class LogErrorTest(unittest.TestCase):
         self.assertEqual(record.fingerprint, ["zero-results", COURT_ID])
         self.assertEqual(record.court_id, COURT_ID)
         self.assertEqual(record.url, "https://a")
+
+    def test_record_points_at_the_caller(self):
+        with self.assertLogs(self.logger, level="ERROR") as logs:
+            log_error(self.logger, "zero-results", "x", group_by="shared")
+        self.assertEqual(logs.records[0].module, "test_ErrorReportingTest")
+        self.assertEqual(
+            logs.records[0].funcName, "test_record_points_at_the_caller"
+        )
 
     def test_shared_key_and_exc_info(self):
         with self.assertLogs(self.logger, level="ERROR") as logs:
@@ -196,6 +205,8 @@ class BotChallengeTest(unittest.IsolatedAsyncioTestCase):
             await site.download_content(url)
         self.assertEqual(cm.exception.url, url)
         self.assertNotIsInstance(cm.exception, UnexpectedContentTypeError)
+        # callers that skip one bad document must still catch it
+        self.assertIsInstance(cm.exception, BadContentError)
 
     async def test_parse_attaches_context(self):
         """Any exception escaping parse says which scraper and page failed"""

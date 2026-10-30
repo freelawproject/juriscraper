@@ -47,13 +47,15 @@ def attach_error_context(
         "sentry_owner": owner,
     }
     for name, value in values.items():
-        if value is None or getattr(exc, name, None) is not None:
-            continue
+        # This runs inside except blocks; a property that raises or an
+        # object that refuses attributes must never replace the original
+        # exception
         try:
+            if value is None or getattr(exc, name, None) is not None:
+                continue
             setattr(exc, name, value)
-        except AttributeError:
-            # exceptions with __slots__ cannot take new attributes
-            break
+        except Exception:
+            continue
     return exc
 
 
@@ -178,12 +180,16 @@ class MergingError(AutoLoggingException):
     logging_level = logging.ERROR
 
 
-class BotChallengeError(AutoLoggingException):
+class BotChallengeError(BadContentError):
     """Raised when the source serves a bot/captcha challenge page instead
     of the expected content (e.g. Radware Bot Manager, Cloudflare).
 
     Raising loudly prevents silently ingesting zero results, which would
     otherwise look like a successful scrape with no new opinions.
+
+    It is a `BadContentError` so a challenge served for one document is
+    handled like any other bad download: the caller skips that document
+    and keeps the rest of the run.
     """
 
     logging_level = logging.WARNING

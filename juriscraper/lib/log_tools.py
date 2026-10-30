@@ -97,4 +97,5 @@ def log_error(
     extra.update(
         {"fingerprint": fingerprint, "court_id": court_id, "url": url}
     )
-    logger.error(msg, *args, extra=extra, exc_info=exc_info)
+    # stacklevel=2 keeps the caller's file and line on the log record
+    logger.error(msg, *args, extra=extra, exc_info=exc_info, stacklevel=2)
