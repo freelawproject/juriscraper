@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Fix `nytrial` docket number extraction from PDFs with mixed-up overlapping stamps, such as a Monroe County "Index #" stamp on top of the NYSCEF stamp, or two NYSCEF stamps. #2273
 
 ## 4.0.2 - 2026-10-29
 
