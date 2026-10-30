@@ -217,11 +217,8 @@ class AbstractSite:
         )
 
     async def parse(self):
-        """Download and parse the site
-
-        Any exception that escapes carries `court_id` and `url`, so the
-        caller can report which scraper and page failed.
-        """
+        """Download and parse the site; escaping exceptions carry `court_id`
+        and `url`"""
         try:
             return await self._parse()
         except Exception as exc:
@@ -539,8 +536,7 @@ class AbstractSite:
                 timeout=300,
             )
 
-        # a blocked PDF download arrives as an HTML challenge page, which
-        # would otherwise be reported as a content type error
+        # a blocked download arrives as an HTML challenge page
         raise_if_bot_challenge(
             r.content, download_url, self.court_id, r.headers
         )

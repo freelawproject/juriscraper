@@ -6,18 +6,8 @@ logger = make_default_logger()
 
 
 class ErrorContextMixin:
-    """Optional attributes that describe where an error happened
-
-    Callers that report to Sentry (CourtListener) read these to tag and
-    group events. Scrapers set them through `attach_error_context`; they
-    are never required.
-
-    - `court_id`: the scraper module path, the same value as `Site.court_id`
-    - `url`: the URL being requested or parsed when the error happened
-    - `sentry_fingerprint`: explicit Sentry grouping for this error
-    - `sentry_owner`: who should look at it, e.g. "court-site" when the
-      court website is the cause
-    """
+    """Optional attributes that CourtListener reads to tag and group Sentry
+    events, set through `attach_error_context`"""
 
     court_id: str | None = None
     url: str | None = None
@@ -32,12 +22,8 @@ def attach_error_context(
     fingerprint: list[str] | None = None,
     owner: str | None = None,
 ) -> BaseException:
-    """Set `ErrorContextMixin` attributes on any exception, httpx ones included
+    """Set `ErrorContextMixin` attributes on any exception; existing values win
 
-    Values already present on the exception win, so the innermost raise site
-    keeps its more specific context when an outer frame calls this again.
-
-    :param exc: the exception to annotate
     :return: the same exception, for `raise attach_error_context(...)`
     """
     values = {
@@ -47,9 +33,7 @@ def attach_error_context(
         "sentry_owner": owner,
     }
     for name, value in values.items():
-        # This runs inside except blocks; a property that raises or an
-        # object that refuses attributes must never replace the original
-        # exception
+        # must never replace the exception being handled
         try:
             if value is None or getattr(exc, name, None) is not None:
                 continue
@@ -106,11 +90,9 @@ class AutoLoggingException(ErrorContextMixin, Exception):
     """Exception with defaults for logging, to be subclassed
 
     We log expected exceptions to better understand what went wrong.
-    Logger calls with level `logging.ERROR` are sent to Sentry, so subclasses
-    that the caller (CourtListener) reports on its own log at WARNING to
-    avoid a duplicate Sentry issue. The `fingerprint` is kept on
-    `self.sentry_fingerprint` so the caller can report the exception with the
-    same grouping.
+    Subclasses that CourtListener reports itself log at WARNING, since ERROR
+    logs reach Sentry too. The `fingerprint` is kept on
+    `self.sentry_fingerprint` for that report.
 
     Other `logger` calls are just printed on the console when using a
     VerboseCommand with proper verbosity levels
@@ -185,11 +167,8 @@ class BotChallengeError(BadContentError):
     of the expected content (e.g. Radware Bot Manager, Cloudflare).
 
     Raising loudly prevents silently ingesting zero results, which would
-    otherwise look like a successful scrape with no new opinions.
-
-    It is a `BadContentError` so a challenge served for one document is
-    handled like any other bad download: the caller skips that document
-    and keeps the rest of the run.
+    otherwise look like a successful scrape with no new opinions. As a
+    `BadContentError`, a blocked document is skipped like any bad download.
     """
 
     logging_level = logging.WARNING

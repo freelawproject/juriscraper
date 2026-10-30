@@ -1,5 +1,4 @@
-"""Tests for the error context, logging and bot challenge helpers that
-CourtListener relies on to group juriscraper errors in Sentry."""
+"""Tests for the error context, logging and bot challenge helpers"""
 
 import logging
 import unittest
