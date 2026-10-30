@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- `tenn_workers_comp` backscraper: filter with the page's own date parameters, follow the pager, parse dockets without "WC" (1996-2000) and skip empty rows. #1743
 
 ## 4.0.2 - 2026-10-29
 
