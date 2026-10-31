@@ -208,6 +208,16 @@ class Site(OpinionSite):
     Optional methods for special purposes
     """
 
+    def extract_from_text(self, scraped_text: str) -> dict:
+        """
+        This function extracts information from the scraped text of an opinion.
+
+        :param scraped_text: Text of scraped content
+        :return: metadata extracted from scraped text
+        """
+
+        return super().extract_from_text(scraped_text)
+
     @staticmethod
     def cleanup_content(content):
         """
