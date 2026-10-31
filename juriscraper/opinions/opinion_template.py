@@ -8,9 +8,10 @@ History:
 """
 
 from lxml import html
+from typing_extensions import override
 
 from juriscraper.lib.string_utils import convert_date_string, titlecase
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.OpinionSite import ExtractedMetaData, OpinionSite
 
 
 class Site(OpinionSite):
@@ -207,6 +208,17 @@ class Site(OpinionSite):
     """
     Optional methods for special purposes
     """
+
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
+        """
+        This function extracts information from the scraped text of an opinion.
+
+        :param scraped_text: Text of scraped content
+        :return: metadata extracted from scraped text
+        """
+
+        return super().extract_from_text(scraped_text)
 
     @staticmethod
     def cleanup_content(content):

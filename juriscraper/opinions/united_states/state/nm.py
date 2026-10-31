@@ -1,12 +1,12 @@
 import re
 from datetime import date, datetime, timedelta
-from typing import Any
 from urllib.parse import urlencode
 
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -121,13 +121,14 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Pass scraped text into function and return data as a dictionary
 
         :param scraped_text: Text of scraped content
         :return: metadata
         """
-        metadata: dict[str, dict] = {}
+        metadata: ExtractedMetaData = {}
         docket_number = re.findall(r"N[oO]\.\s(.*)", scraped_text)
         if docket_number:
             metadata.setdefault("OpinionCluster", {})["docket_number"] = (

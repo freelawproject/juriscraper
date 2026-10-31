@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- The return type of `OpinionSite.extract_from_text()` is given a rudimentary structure, `ExtractedMetaData`.
 
 Fixes:
 -

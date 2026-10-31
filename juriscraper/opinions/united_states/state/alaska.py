@@ -26,6 +26,7 @@ from typing_extensions import override
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import InvalidDocumentError
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -345,13 +346,14 @@ class Site(OpinionSiteLinear):
         )
         return links[0] if links else None
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract the lower court (and its judge) from the opinion text.
 
         :param scraped_text: The text to extract from.
         :return: A dictionary with the metadata.
         """
-        metadata = {}
+        metadata: ExtractedMetaData = {}
 
         lower_court_str = ""
         if match := self.lower_court_regex.search(scraped_text):
