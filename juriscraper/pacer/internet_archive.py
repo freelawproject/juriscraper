@@ -79,7 +79,7 @@ class InternetArchive(BaseDocketReport):
         self.response.raise_for_status()
         self._parse_text(self.response.text)
 
-    def _parse_text(self, text):
+    def _parse_text(self, text: str) -> None:
         assert isinstance(text, str), (
             f"Input must be unicode, not {type(text)}"
         )

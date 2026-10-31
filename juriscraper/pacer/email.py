@@ -4,6 +4,7 @@ from datetime import date
 from typing import TypedDict
 
 from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import (
@@ -1034,7 +1035,8 @@ class S3NotificationEmail(NotificationEmail):
         cleaned_s3_line_ends = self._combine_lines_with_proper_spaces(text)
         return cleaned_s3_line_ends
 
-    def _parse_text(self, text):
+    @override
+    def _parse_text(self, text: str) -> None:
         """MIME Parser from file text, text/html and text/plain messages are supported.
         This obtains the email payload decoded as UTF-8.
         """
