@@ -331,6 +331,41 @@
     },
     {
       "column": 20,
+      "path": "juriscraper/opinions/united_states/attorney_general/calag.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/opinions/united_states/attorney_general/mdag.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/opinions/united_states/attorney_general/nyag.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/opinions/united_states/attorney_general/oklaag.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 17,
+      "path": "juriscraper/opinions/united_states/attorney_general/texag.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 20,
       "path": "juriscraper/opinions/united_states/federal_appellate/ca1.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -722,13 +757,6 @@
       "severity": "error"
     },
     {
-      "column": 20,
-      "path": "juriscraper/opinions/united_states/attorney_general/calag.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
-      "severity": "error"
-    },
-    {
       "column": 23,
       "path": "juriscraper/opinions/united_states/state/colo.py",
       "name": "unsupported-operation",
@@ -1101,13 +1129,6 @@
     },
     {
       "column": 20,
-      "path": "juriscraper/opinions/united_states/attorney_general/mdag.py",
-      "name": "unsupported-operation",
-      "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "column": 20,
       "path": "juriscraper/opinions/united_states/state/me.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -1422,13 +1443,6 @@
       "severity": "warn"
     },
     {
-      "column": 20,
-      "path": "juriscraper/opinions/united_states/attorney_general/nyag.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
-      "severity": "error"
-    },
-    {
       "column": 17,
       "path": "juriscraper/opinions/united_states/state/nytrial.py",
       "name": "missing-attribute",
@@ -1508,13 +1522,6 @@
     {
       "column": 20,
       "path": "juriscraper/opinions/united_states/state/okla.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
-      "severity": "error"
-    },
-    {
-      "column": 20,
-      "path": "juriscraper/opinions/united_states/attorney_general/oklaag.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
@@ -1671,13 +1678,6 @@
       "path": "juriscraper/opinions/united_states/state/tex.py",
       "name": "unsupported-operation",
       "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "column": 17,
-      "path": "juriscraper/opinions/united_states/attorney_general/texag.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `xpath`",
       "severity": "error"
     },
     {
