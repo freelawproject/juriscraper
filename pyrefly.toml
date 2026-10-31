@@ -97,6 +97,7 @@ not-required-key-access = true
 open-unpacking = true
 potential-bad-keyword-argument = true
 regex = true
+string-as-iterable = true
 unbound-name = true
 unknown-attribute-type = true
 unknown-name = true
