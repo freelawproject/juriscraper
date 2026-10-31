@@ -3,6 +3,8 @@ import pprint
 import sys
 import unicodedata
 
+from typing_extensions import override
+
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.network_utils import AcmsApiClient
@@ -21,7 +23,8 @@ class ACMSAttachmentPage(BaseReport):
         self._acms_json: dict | None = None
         self.api_client = AcmsApiClient(pacer_session, court_id)
 
-    def _parse_text(self, text):
+    @override
+    def _parse_text(self, text: str) -> None:
         """Store the ACMS JSON
 
         This does not, in fact, actually *parse* the data, it

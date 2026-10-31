@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- Annotate all implementations of `_parse_text()` in `pacer`.
 
 Fixes:
 -
