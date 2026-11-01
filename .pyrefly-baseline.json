@@ -2864,13 +2864,6 @@
       "severity": "error"
     },
     {
-      "column": 53,
-      "path": "juriscraper/pacer/email.py",
-      "name": "bad-typed-dict-key",
-      "concise_description": "TypedDict `DocketEntryType` does not have key `short_description`",
-      "severity": "error"
-    },
-    {
       "column": 30,
       "path": "juriscraper/pacer/email.py",
       "name": "missing-attribute",
@@ -2917,13 +2910,6 @@
       "path": "juriscraper/pacer/email.py",
       "name": "bad-assignment",
       "concise_description": "`date | None` is not assignable to TypedDict key `date_filed` with type `date`",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "juriscraper/pacer/email.py",
-      "name": "bad-typed-dict-key",
-      "concise_description": "Key `short_description` is not defined in TypedDict `DocketEntryType`",
       "severity": "error"
     },
     {

@@ -28,6 +28,7 @@ from .utils import (
 class DocketEntryType(TypedDict):
     date_filed: date
     description: str
+    short_description: str | None
     document_number: str | None
     document_url: str | None
     pacer_case_id: str | None
