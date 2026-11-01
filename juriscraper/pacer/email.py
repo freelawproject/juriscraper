@@ -1,7 +1,7 @@
 import email
 import re
 from datetime import date
-from typing import TypedDict
+from typing import Never, TypedDict
 
 from lxml.html import HtmlElement
 
@@ -45,6 +45,15 @@ class DocketType(TypedDict):
 class EmailRecipient(TypedDict):
     name: str
     email_addresses: list[str]
+
+
+class NotificationEmailData(TypedDict):
+    court_id: str
+    appellate: bool
+    acms: bool
+    dockets: list[DocketType]
+    contains_attachments: bool
+    email_recipients: list[EmailRecipient]
 
 
 class NotificationEmail(BaseDocketReport, BaseReport):
@@ -102,26 +111,36 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         super().__init__(court_id)
 
     @property
-    def data(self):
+    def data(self) -> NotificationEmailData | dict[Never, Never]:
         # Emails with attached images should be ignored.
         if self.is_valid is False or self.tree is None or self.image_attached:
             return {}
 
-        base: dict = {
-            "court_id": self.court_id,
-        }
-        parsed: dict = {
-            "appellate": self._is_appellate(),
-            "acms": self._is_acms(),
-            "dockets": self._get_dockets(),
-        }
+        # Note: Order of execution is very important for the method calls
+        # below. Instance methods modify state that will affect the behavior of
+        # later methods. In particular, `_get_email_recipients_with_links()`
+        # varies with `docket_numbers` which is accumulated independently by
+        # `_parse_docket_number()`.
+        court_id = self.court_id
+        appellate = self._is_appellate()
+        acms = self._is_acms()
+        dockets = self._get_dockets()
+
         if self.content_type == "text/plain":
-            parsed["contains_attachments"] = self._contains_attachments_plain()
-            parsed["email_recipients"] = self._get_email_recipients_plain()
+            contains_attachments = self._contains_attachments_plain()
+            email_recipients = self._get_email_recipients_plain()
         else:
-            parsed["contains_attachments"] = self._contains_attachments()
-            parsed["email_recipients"] = self._get_email_recipients()
-        return {**base, **parsed}
+            contains_attachments = self._contains_attachments()
+            email_recipients = self._get_email_recipients()
+
+        return {
+            "court_id": court_id,
+            "appellate": appellate,
+            "acms": acms,
+            "dockets": dockets,
+            "contains_attachments": contains_attachments,
+            "email_recipients": email_recipients,
+        }
 
     def _is_appellate(self) -> bool:
         """Gets the email notice type from the email text.
