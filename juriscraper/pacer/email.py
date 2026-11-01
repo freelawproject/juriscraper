@@ -42,6 +42,11 @@ class DocketType(TypedDict):
     docket_number: str
 
 
+class EmailRecipient(TypedDict):
+    name: str
+    email_addresses: list[str]
+
+
 class NotificationEmail(BaseDocketReport, BaseReport):
     """A BaseDocketReport for parsing PACER notification email parsing"""
 
@@ -851,12 +856,14 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         return clean_string(short_description)
 
-    def _get_emaiL_recipients_without_links(self, recipient_lines):
+    def _get_emaiL_recipients_without_links(
+        self, recipient_lines: str
+    ) -> list[EmailRecipient]:
         """Gets all the email recipients of the notification
 
         :returns: List of email recipients with names and email addresses
         """
-        email_recipients = []
+        email_recipients: list[EmailRecipient] = []
         for line in recipient_lines:
             if "@" in line:
                 comma_separated = list(map(clean_string, line.split(",")))
@@ -876,7 +883,9 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 )
         return email_recipients
 
-    def _get_email_recipients_with_links(self, text_content):
+    def _get_email_recipients_with_links(
+        self, text_content: str
+    ) -> list[EmailRecipient]:
         """Gets all the email recipients of the notification if their emails are in links
 
         :returns: List of email recipients with names and email addresses
@@ -910,24 +919,37 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             text_content = re.sub(replacement[0], replacement[1], text_content)
 
         recipient_parts = text_content.strip().split(" ")
-        email_recipients = []
+        email_recipients: list[EmailRecipient] = []
         for recipient_part in recipient_parts:
             if not len(email_recipients) and "@" not in recipient_part:
-                email_recipients.append({"name": recipient_part})
+                email_recipients.append(
+                    {
+                        "name": recipient_part,
+                        "email_addresses": [],
+                    }
+                )
             else:
                 if not len(email_recipients):
-                    email_recipients.append({"name": ""})
+                    email_recipients.append(
+                        {
+                            "name": "",
+                            "email_addresses": [],
+                        }
+                    )
                 last_recipient = email_recipients[-1]
                 if "@" in recipient_part:
-                    if not last_recipient.get("email_addresses"):
-                        last_recipient["email_addresses"] = []
                     last_recipient["email_addresses"].append(
                         re.sub(r",", "", recipient_part)
                     )
                 elif last_recipient.get("email_addresses") and len(
                     last_recipient["email_addresses"]
                 ):
-                    email_recipients.append({"name": recipient_part})
+                    email_recipients.append(
+                        {
+                            "name": recipient_part,
+                            "email_addresses": [],
+                        }
+                    )
                 else:
                     last_recipient["name"] += f" {recipient_part}"
         return list(
@@ -940,7 +962,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             )
         )
 
-    def _get_email_recipients(self) -> list[dict[str, str | list[str]]]:
+    def _get_email_recipients(self) -> list[EmailRecipient]:
         """Gets all the email recipients whether they come from plain text or more HTML formatting
 
         :returns: List of email recipients with names and email addresses
@@ -964,14 +986,12 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         return self._get_email_recipients_with_links(" ".join(recipient_lines))
 
-    def _get_email_recipients_plain(
-        self,
-    ) -> list[dict[str, str | list[str]]]:
+    def _get_email_recipients_plain(self) -> list[EmailRecipient]:
         """Gets all the email recipients whether they come from plain text or more HTML formatting
 
         :returns: List of email recipients with names and email addresses
         """
-        email_recipients = []
+        email_recipients: list[EmailRecipient] = []
         mail_body = self.tree.text_content()
         regex = r"^.*?Notice has been electronically mailed to:(.*?)$"
 
