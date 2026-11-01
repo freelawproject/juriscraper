@@ -26,7 +26,7 @@ from .utils import (
 
 
 class DocketEntryType(TypedDict):
-    date_filed: date
+    date_filed: date | None
     description: str
     short_description: str | None
     document_number: str | None
