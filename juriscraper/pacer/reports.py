@@ -194,7 +194,7 @@ class BaseReport:
     async def download_pdf(
         self,
         pacer_case_id: str | None = None,
-        pacer_doc_id: int | None = None,
+        pacer_doc_id: str | None = None,
         pacer_magic_num: str | None = None,
         appellate: bool = False,
         de_seq_num: str | None = None,
