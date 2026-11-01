@@ -2787,13 +2787,6 @@
       "severity": "error"
     },
     {
-      "column": 31,
-      "path": "juriscraper/pacer/email.py",
-      "name": "bad-assignment",
-      "concise_description": "`None` is not assignable to TypedDict key `date_filed` with type `date`",
-      "severity": "error"
-    },
-    {
       "column": 26,
       "path": "juriscraper/pacer/email.py",
       "name": "no-matching-overload",
@@ -2822,13 +2815,6 @@
       "severity": "error"
     },
     {
-      "column": 31,
-      "path": "juriscraper/pacer/email.py",
-      "name": "bad-assignment",
-      "concise_description": "`None` is not assignable to TypedDict key `date_filed` with type `date`",
-      "severity": "error"
-    },
-    {
       "column": 26,
       "path": "juriscraper/pacer/email.py",
       "name": "no-matching-overload",
@@ -2847,13 +2833,6 @@
       "path": "juriscraper/pacer/email.py",
       "name": "bad-assignment",
       "concise_description": "`str | None` is not assignable to TypedDict key `docket_number` with type `str`",
-      "severity": "error"
-    },
-    {
-      "column": 35,
-      "path": "juriscraper/pacer/email.py",
-      "name": "bad-assignment",
-      "concise_description": "`None` is not assignable to TypedDict key `date_filed` with type `date`",
       "severity": "error"
     },
     {

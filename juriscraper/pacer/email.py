@@ -39,7 +39,7 @@ class DocketEntryType(TypedDict):
 
 class DocketType(TypedDict):
     case_name: str
-    date_filed: date
+    date_filed: date | None
     docket_entries: list[DocketEntryType]
     docket_number: str
 
