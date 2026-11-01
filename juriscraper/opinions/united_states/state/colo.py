@@ -17,10 +17,15 @@ import re
 from datetime import date, datetime, timedelta
 from urllib.parse import urlencode
 
+import httpx
 from lxml import etree, html
 from typing_extensions import override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import (
+    MissingRequestResponseException,
+    UnexpectedRequestResponseException,
+    logger,
+)
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -172,6 +177,10 @@ class Site(OpinionSiteLinear):
                 # Full case name and docket number are only available
                 # on the detail page
                 await self._request_url_get(url)
+                if self.request["response"] is None:
+                    raise MissingRequestResponseException
+                if not isinstance(self.request["response"], httpx.Response):
+                    raise UnexpectedRequestResponseException
                 detail_json = self.request["response"].json()
 
             if (

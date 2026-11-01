@@ -1,9 +1,10 @@
 import re
 from typing import Any
 
+import httpx
 from typing_extensions import override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import UnexpectedRequestResponseException, logger
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -43,6 +44,8 @@ class Site(OpinionSiteLinear):
         :return: The cleaned html tree of the site
         """
         if self.request["response"]:
+            if not isinstance(self.request["response"], httpx.Response):
+                raise UnexpectedRequestResponseException
             payload = self.request["response"].text
             text = self._clean_text(payload)
             html_tree = self._make_html_tree(text)

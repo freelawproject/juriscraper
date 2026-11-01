@@ -10,9 +10,14 @@ import asyncio
 import re
 from datetime import datetime, timedelta
 
+import httpx
 from typing_extensions import override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import (
+    MissingRequestResponseException,
+    UnexpectedRequestResponseException,
+    logger,
+)
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -108,6 +113,10 @@ class Site(OpinionSiteLinear):
             url = f"https://cdm17027.contentdm.oclc.org/digital/api/collections/{self.court_code}/items/{item_id}/false"
             logger.debug("Getting detail JSON from %s", url)
             await self._request_url_get(url)
+            if self.request["response"] is None:
+                raise MissingRequestResponseException
+            if not isinstance(self.request["response"], httpx.Response):
+                raise UnexpectedRequestResponseException
             json = self.request["response"].json()
 
         if len(json["fields"]) == 1:
