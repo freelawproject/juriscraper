@@ -2,7 +2,10 @@
 CourtID: uscfc
 Court Short Name: Fed. Cl."""
 
+from typing_extensions import override
+
 from juriscraper.opinions.united_states.federal_special import uscfc
+from juriscraper.OpinionSite import ExtractedMetaData
 
 
 class Site(uscfc.Site):
@@ -10,7 +13,8 @@ class Site(uscfc.Site):
         super().__init__(*args, **kwargs)
         self.url = "https://ecf.cofc.uscourts.gov/cgi-bin/CFC_RecentDecisionsOfTheSpecialMasters.pl"
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract 'status' from text, if possible
 
         On the first page of the opinion, after the parties and attorneys names

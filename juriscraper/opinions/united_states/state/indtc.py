@@ -10,7 +10,10 @@ History:
 
 import re
 
+from typing_extensions import override
+
 from juriscraper.opinions.united_states.state import ind
+from juriscraper.OpinionSite import ExtractedMetaData
 
 
 class Site(ind.Site):
@@ -22,7 +25,8 @@ class Site(ind.Site):
         self.court_name = "Tax Court"
         self.status = "Unknown"
 
-    def extract_from_text(self, scraped_text: str):
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract publication status
 
         :param scraped_text: Text of scraped content
@@ -34,7 +38,7 @@ class Site(ind.Site):
             status = "Published"
         else:
             status = "Unknown"
-        metadata = {
+        metadata: ExtractedMetaData = {
             "OpinionCluster": {
                 "precedential_status": status,
             },

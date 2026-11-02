@@ -9,6 +9,7 @@ from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -100,7 +101,8 @@ class Site(OpinionSiteLinear):
 
         self.back_scrape_iterable = range(start, end)
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract the state citation from the document's text
 
         :param scraped_text: the extracted text
