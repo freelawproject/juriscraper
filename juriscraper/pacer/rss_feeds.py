@@ -8,6 +8,7 @@ from html import unescape
 
 import feedparser
 from httpx import AsyncClient, Timeout
+from typing_extensions import override
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import clean_string, harmonize
@@ -212,7 +213,8 @@ class PacerRssFeed(DocketReport):
         self.response.raise_for_status()
         self._parse_text(self.response.text)
 
-    def _parse_text(self, text):
+    @override
+    def _parse_text(self, text: str) -> None:
         """Parse the feed and set self.feed
 
         :param text: The text of the RSS feed.
