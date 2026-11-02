@@ -26,8 +26,9 @@ from .utils import (
 
 
 class DocketEntryType(TypedDict):
-    date_filed: date
+    date_filed: date | None
     description: str
+    short_description: str | None
     document_number: str | None
     document_url: str | None
     pacer_case_id: str | None
@@ -38,7 +39,7 @@ class DocketEntryType(TypedDict):
 
 class DocketType(TypedDict):
     case_name: str
-    date_filed: date
+    date_filed: date | None
     docket_entries: list[DocketEntryType]
     docket_number: str
 
@@ -515,7 +516,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             # Cache the docket number for its later use.
             self.docket_numbers.append(docket_number)
 
-            docket = {
+            docket: DocketType = {
                 "case_name": self._get_case_name_plain(),
                 "docket_number": docket_number,
                 "date_filed": None,
@@ -530,7 +531,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             )
             # Cache the docket number and case name for its later use.
             self.docket_numbers.append(docket_number)
-            docket = {
+            docket: DocketType = {
                 "case_name": self._get_case_name(self.tree),
                 "docket_number": docket_number,
                 "date_filed": None,
@@ -556,7 +557,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 docket_number = docket_number
                 # Cache the docket number and case name for its later use.
                 self.docket_numbers.append(docket_number)
-                docket = {
+                docket: DocketType = {
                     "case_name": self._get_case_name(docket_table),
                     "docket_number": docket_number,
                     "date_filed": None,
@@ -630,7 +631,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             if document_number and document_number == "doc":
                 document_number = None
 
-            entries = [
+            entries: list[DocketEntryType] = [
                 {
                     "date_filed": self._get_date_filed(),
                     "description": description,
