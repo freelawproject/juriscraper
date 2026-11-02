@@ -1,7 +1,7 @@
 import email
 import re
 from datetime import date
-from typing import TypedDict
+from typing import Never, TypedDict
 
 from lxml.html import HtmlElement
 from typing_extensions import override
@@ -41,6 +41,20 @@ class DocketType(TypedDict):
     date_filed: date
     docket_entries: list[DocketEntryType]
     docket_number: str
+
+
+class EmailRecipient(TypedDict):
+    name: str
+    email_addresses: list[str]
+
+
+class NotificationEmailData(TypedDict):
+    court_id: str
+    appellate: bool
+    acms: bool
+    dockets: list[DocketType]
+    contains_attachments: bool
+    email_recipients: list[EmailRecipient]
 
 
 class NotificationEmail(BaseDocketReport, BaseReport):
@@ -98,26 +112,36 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         super().__init__(court_id)
 
     @property
-    def data(self):
+    def data(self) -> NotificationEmailData | dict[Never, Never]:
         # Emails with attached images should be ignored.
         if self.is_valid is False or self.tree is None or self.image_attached:
             return {}
 
-        base: dict = {
-            "court_id": self.court_id,
-        }
-        parsed: dict = {
-            "appellate": self._is_appellate(),
-            "acms": self._is_acms(),
-            "dockets": self._get_dockets(),
-        }
+        # Note: Order of execution is very important for the method calls
+        # below. Instance methods modify state that will affect the behavior of
+        # later methods. In particular, `_get_email_recipients_with_links()`
+        # varies with `docket_numbers` which is accumulated independently by
+        # `_parse_docket_number()`.
+        court_id = self.court_id
+        appellate = self._is_appellate()
+        acms = self._is_acms()
+        dockets = self._get_dockets()
+
         if self.content_type == "text/plain":
-            parsed["contains_attachments"] = self._contains_attachments_plain()
-            parsed["email_recipients"] = self._get_email_recipients_plain()
+            contains_attachments = self._contains_attachments_plain()
+            email_recipients = self._get_email_recipients_plain()
         else:
-            parsed["contains_attachments"] = self._contains_attachments()
-            parsed["email_recipients"] = self._get_email_recipients()
-        return {**base, **parsed}
+            contains_attachments = self._contains_attachments()
+            email_recipients = self._get_email_recipients()
+
+        return {
+            "court_id": court_id,
+            "appellate": appellate,
+            "acms": acms,
+            "dockets": dockets,
+            "contains_attachments": contains_attachments,
+            "email_recipients": email_recipients,
+        }
 
     def _is_appellate(self) -> bool:
         """Gets the email notice type from the email text.
@@ -852,12 +876,14 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         return clean_string(short_description)
 
-    def _get_emaiL_recipients_without_links(self, recipient_lines):
+    def _get_emaiL_recipients_without_links(
+        self, recipient_lines: str
+    ) -> list[EmailRecipient]:
         """Gets all the email recipients of the notification
 
         :returns: List of email recipients with names and email addresses
         """
-        email_recipients = []
+        email_recipients: list[EmailRecipient] = []
         for line in recipient_lines:
             if "@" in line:
                 comma_separated = list(map(clean_string, line.split(",")))
@@ -877,7 +903,9 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 )
         return email_recipients
 
-    def _get_email_recipients_with_links(self, text_content):
+    def _get_email_recipients_with_links(
+        self, text_content: str
+    ) -> list[EmailRecipient]:
         """Gets all the email recipients of the notification if their emails are in links
 
         :returns: List of email recipients with names and email addresses
@@ -911,37 +939,49 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             text_content = re.sub(replacement[0], replacement[1], text_content)
 
         recipient_parts = text_content.strip().split(" ")
-        email_recipients = []
+        email_recipients: list[EmailRecipient] = []
         for recipient_part in recipient_parts:
             if not len(email_recipients) and "@" not in recipient_part:
-                email_recipients.append({"name": recipient_part})
+                email_recipients.append(
+                    {
+                        "name": recipient_part,
+                        "email_addresses": [],
+                    }
+                )
             else:
                 if not len(email_recipients):
-                    email_recipients.append({"name": ""})
+                    email_recipients.append(
+                        {
+                            "name": "",
+                            "email_addresses": [],
+                        }
+                    )
                 last_recipient = email_recipients[-1]
                 if "@" in recipient_part:
-                    if not last_recipient.get("email_addresses"):
-                        last_recipient["email_addresses"] = []
                     last_recipient["email_addresses"].append(
                         re.sub(r",", "", recipient_part)
                     )
                 elif last_recipient.get("email_addresses") and len(
                     last_recipient["email_addresses"]
                 ):
-                    email_recipients.append({"name": recipient_part})
+                    email_recipients.append(
+                        {
+                            "name": recipient_part,
+                            "email_addresses": [],
+                        }
+                    )
                 else:
                     last_recipient["name"] += f" {recipient_part}"
-        return list(
-            filter(
-                lambda recipient: (
-                    recipient.get("email_addresses", False)
-                    and len(recipient.get("email_addresses")) > 0
-                ),
-                email_recipients,
+        return [
+            recipient
+            for recipient in email_recipients
+            if (
+                recipient["email_addresses"]
+                and len(recipient["email_addresses"]) > 0
             )
-        )
+        ]
 
-    def _get_email_recipients(self) -> list[dict[str, str | list[str]]]:
+    def _get_email_recipients(self) -> list[EmailRecipient]:
         """Gets all the email recipients whether they come from plain text or more HTML formatting
 
         :returns: List of email recipients with names and email addresses
@@ -965,14 +1005,12 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         return self._get_email_recipients_with_links(" ".join(recipient_lines))
 
-    def _get_email_recipients_plain(
-        self,
-    ) -> list[dict[str, str | list[str]]]:
+    def _get_email_recipients_plain(self) -> list[EmailRecipient]:
         """Gets all the email recipients whether they come from plain text or more HTML formatting
 
         :returns: List of email recipients with names and email addresses
         """
-        email_recipients = []
+        email_recipients: list[EmailRecipient] = []
         mail_body = self.tree.text_content()
         regex = r"^.*?Notice has been electronically mailed to:(.*?)$"
 
