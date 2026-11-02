@@ -952,15 +952,14 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                     )
                 else:
                     last_recipient["name"] += f" {recipient_part}"
-        return list(
-            filter(
-                lambda recipient: (
-                    recipient.get("email_addresses", False)
-                    and len(recipient.get("email_addresses")) > 0
-                ),
-                email_recipients,
+        return [
+            recipient
+            for recipient in email_recipients
+            if (
+                recipient["email_addresses"]
+                and len(recipient["email_addresses"]) > 0
             )
-        )
+        ]
 
     def _get_email_recipients(self) -> list[EmailRecipient]:
         """Gets all the email recipients whether they come from plain text or more HTML formatting
