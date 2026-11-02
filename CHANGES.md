@@ -18,7 +18,7 @@ Features:
 -
 
 Changes:
--
+- Structure return type of `NotificationEmail.data()` and `S3NotificationEmail.data()`.
 
 Fixes:
 -
