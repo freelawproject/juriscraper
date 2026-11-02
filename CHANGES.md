@@ -19,6 +19,8 @@ Features:
 
 Changes:
 - Structure return type of `NotificationEmail.data()` and `S3NotificationEmail.data()`.
+- The return type of `OpinionSite.extract_from_text()` is given a rudimentary structure, `ExtractedMetaData`.
+- Annotate all implementations of `_parse_text()` in `pacer`.
 
 Fixes:
 -

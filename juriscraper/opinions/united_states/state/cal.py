@@ -2,6 +2,7 @@ import re
 
 from typing_extensions import override
 
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -43,7 +44,8 @@ class Site(OpinionSiteLinear):
 
             self.cases.append(case)
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract lower court and case number from the scraped text.
 
         :param scraped_text: The text to extract from.
@@ -66,7 +68,7 @@ class Site(OpinionSiteLinear):
             ).strip()
             lower_court_number = match.group("lower_court_number").strip()
 
-        result: dict[str, dict] = {}
+        result: ExtractedMetaData = {}
         if lower_court or lower_court_number:
             if lower_court:
                 result["Docket"] = {}

@@ -11,7 +11,10 @@ import re
 from datetime import datetime
 from urllib.parse import urlencode
 
+from typing_extensions import override
+
 from juriscraper.opinions.united_states.state import pa
+from juriscraper.OpinionSite import ExtractedMetaData
 
 
 class Site(pa.Site):
@@ -85,7 +88,8 @@ class Site(pa.Site):
             )
         return author_str
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Get neutral citation from the first lines in the first page
 
         Not all scraped opinions have them
