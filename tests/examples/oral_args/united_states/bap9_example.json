@@ -1,0 +1,267 @@
+[
+  {
+    "hearing_location_lc": {
+      "S": "pasadena, ca"
+    },
+    "hearing_location": {
+      "S": "Pasadena, CA"
+    },
+    "case_panel_lc": {
+      "S": "kurtz, faris, lafferty"
+    },
+    "expire": {
+      "N": "20390621120000"
+    },
+    "pk_id": {
+      "S": "34217"
+    },
+    "youtube_code": {
+      "S": "RioZ9MFz8oE"
+    },
+    "case_name_lc": {
+      "S": "in re: s. adams"
+    },
+    "hearing_date": {
+      "S": "2019-06-20"
+    },
+    "active": {
+      "S": "1"
+    },
+    "audio_file_name": {
+      "S": "2019/06/21/18-1233.mp3"
+    },
+    "case_num": {
+      "S": "18-1233"
+    },
+    "publish": {
+      "N": "20190620"
+    },
+    "pk_vid": {
+      "S": "15915"
+    },
+    "case_panel": {
+      "S": "Kurtz, Faris, Lafferty"
+    },
+    "case_name": {
+      "S": "In re: S. ADAMS"
+    }
+  },
+  {
+    "hearing_location_lc": {
+      "S": "san francisco, california"
+    },
+    "hearing_location": {
+      "S": "San Francisco, California"
+    },
+    "case_panel_lc": {
+      "S": "w. fletcher, bennett, bade"
+    },
+    "expire": {
+      "N": "20410720120000"
+    },
+    "pk_id": {
+      "S": "37006"
+    },
+    "youtube_code": {
+      "S": "C70WYdojDsw"
+    },
+    "case_name_lc": {
+      "S": "fred bowerman v. field asset services, inc."
+    },
+    "hearing_date": {
+      "S": "2021-07-20"
+    },
+    "active": {
+      "S": "1"
+    },
+    "audio_file_name": {
+      "S": "2021/07/20/18-16303.mp3"
+    },
+    "case_num": {
+      "S": "18-16303"
+    },
+    "publish": {
+      "N": "20210720"
+    },
+    "pk_vid": {
+      "S": "19612"
+    },
+    "case_panel": {
+      "S": "W. FLETCHER, BENNETT, BADE"
+    },
+    "description": {
+      "S": "Field Asset Services, Inc. appeals the district courts judgment in favor of Fred & Julie Bowerman in their diversity class action alleging that Field Asset misclassified class members as independent contractors rather than employees."
+    },
+    "case_name": {
+      "S": "Fred Bowerman v. Field Asset Services, Inc."
+    }
+  },
+  {
+    "associated_cases": {
+      "S": ""
+    },
+    "hearing_location_lc": {
+      "S": "seattle, wa"
+    },
+    "hearing_location": {
+      "S": "Seattle, WA"
+    },
+    "created_date": {
+      "S": "2026-04-23 14:06:04"
+    },
+    "cr_display": {
+      "S": "7th Floor Courtroom 2"
+    },
+    "case_panel_lc": {
+      "S": "murguia, fletcher, koh"
+    },
+    "youtube_code": {
+      "S": "ra5RhWcCbDc"
+    },
+    "case_name_lc": {
+      "S": "diemert v. city of seattle"
+    },
+    "hearing_location_code": {
+      "S": "SE"
+    },
+    "hearing_date": {
+      "S": "2026-04-23"
+    },
+    "active": {
+      "S": "1"
+    },
+    "audio_file_name": {
+      "S": "2026/04/23/25-1188.mp3"
+    },
+    "case_num": {
+      "S": "25-1188"
+    },
+    "publish": {
+      "N": "20260423"
+    },
+    "case_panel": {
+      "S": "MURGUIA, FLETCHER, KOH"
+    },
+    "description": {
+      "S": ""
+    },
+    "case_name": {
+      "S": "Diemert v. City of Seattle"
+    },
+    "record_type": {
+      "S": "ora"
+    }
+  },
+  {
+    "associated_cases": {
+      "S": ""
+    },
+    "hearing_location_lc": {
+      "S": "pasadena, ca"
+    },
+    "hearing_location": {
+      "S": "Pasadena, CA"
+    },
+    "created_date": {
+      "S": "2026-05-14 16:41:08"
+    },
+    "cr_display": {
+      "S": "1"
+    },
+    "case_panel_lc": {
+      "S": "lafferty, spraker, and gan"
+    },
+    "youtube_code": {
+      "S": "l5vVJ3fyp64"
+    },
+    "case_name_lc": {
+      "S": "in re: gilliam"
+    },
+    "hearing_location_code": {
+      "S": "PAS"
+    },
+    "hearing_date": {
+      "S": "2026-05-14"
+    },
+    "active": {
+      "S": "1"
+    },
+    "audio_file_name": {
+      "S": "2026/05/14/25-1188.mp3"
+    },
+    "case_num": {
+      "S": "25-1188"
+    },
+    "publish": {
+      "N": "20260514"
+    },
+    "case_panel": {
+      "S": "Lafferty, Spraker, and Gan"
+    },
+    "description": {
+      "S": ""
+    },
+    "case_name": {
+      "S": "In re: Gilliam"
+    },
+    "record_type": {
+      "S": "bap"
+    }
+  },
+  {
+    "associated_cases": {
+      "S": ""
+    },
+    "hearing_location_lc": {
+      "S": "san francisco, ca"
+    },
+    "hearing_location": {
+      "S": "San Francisco, CA"
+    },
+    "created_date": {
+      "S": "2026-05-20 14:39:48"
+    },
+    "cr_display": {
+      "S": "Courtroom 3, 3rd Floor Rm 307"
+    },
+    "case_panel_lc": {
+      "S": "collins, johnstone, alba"
+    },
+    "youtube_code": {
+      "S": "cIcR-eOhwJs"
+    },
+    "case_name_lc": {
+      "S": "in re: king, et al. v. wolverine endeavors viii, llc"
+    },
+    "hearing_location_code": {
+      "S": "SF"
+    },
+    "hearing_date": {
+      "S": "2026-05-20"
+    },
+    "active": {
+      "S": "1"
+    },
+    "audio_file_name": {
+      "S": "2026/05/20/25-1143.mp3"
+    },
+    "case_num": {
+      "S": "25-1143"
+    },
+    "publish": {
+      "N": "20260520"
+    },
+    "case_panel": {
+      "S": "COLLINS, JOHNSTONE, ALBA"
+    },
+    "description": {
+      "S": ""
+    },
+    "case_name": {
+      "S": "In re: King, et al. v. Wolverine Endeavors VIII, LLC"
+    },
+    "record_type": {
+      "S": "ora"
+    }
+  }
+]
