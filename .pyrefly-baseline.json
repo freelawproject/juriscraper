@@ -2780,17 +2780,10 @@
       "severity": "error"
     },
     {
-      "column": 34,
+      "column": 31,
       "path": "juriscraper/pacer/email.py",
-      "name": "bad-assignment",
-      "concise_description": "`str | None` is not assignable to TypedDict key `docket_number` with type `str`",
-      "severity": "error"
-    },
-    {
-      "column": 26,
-      "path": "juriscraper/pacer/email.py",
-      "name": "no-matching-overload",
-      "concise_description": "No matching overload found for function `DocketType.update` called with arguments: (dict[str, str | None])",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `str | None` is not assignable to parameter `docket_number` with type `str` in function `create_docket_entry`",
       "severity": "error"
     },
     {
@@ -2801,24 +2794,17 @@
       "severity": "error"
     },
     {
-      "column": 50,
+      "column": 47,
       "path": "juriscraper/pacer/email.py",
       "name": "bad-argument-type",
       "concise_description": "Argument `Unknown | None` is not assignable to parameter `current_node` with type `HtmlElement` in function `NotificationEmail._get_case_name`",
       "severity": "error"
     },
     {
-      "column": 34,
+      "column": 31,
       "path": "juriscraper/pacer/email.py",
-      "name": "bad-assignment",
-      "concise_description": "`str | None` is not assignable to TypedDict key `docket_number` with type `str`",
-      "severity": "error"
-    },
-    {
-      "column": 26,
-      "path": "juriscraper/pacer/email.py",
-      "name": "no-matching-overload",
-      "concise_description": "No matching overload found for function `DocketType.update` called with arguments: (dict[str, str | None])",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `str | None` is not assignable to parameter `docket_number` with type `str` in function `create_docket_entry`",
       "severity": "error"
     },
     {
@@ -2829,17 +2815,10 @@
       "severity": "error"
     },
     {
-      "column": 38,
+      "column": 35,
       "path": "juriscraper/pacer/email.py",
-      "name": "bad-assignment",
-      "concise_description": "`str | None` is not assignable to TypedDict key `docket_number` with type `str`",
-      "severity": "error"
-    },
-    {
-      "column": 30,
-      "path": "juriscraper/pacer/email.py",
-      "name": "no-matching-overload",
-      "concise_description": "No matching overload found for function `DocketType.update` called with arguments: (dict[str, str | None])",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `str | None` is not assignable to parameter `docket_number` with type `str` in function `create_docket_entry`",
       "severity": "error"
     },
     {

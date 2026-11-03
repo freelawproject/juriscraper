@@ -142,7 +142,21 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
             href = cells[0].xpath(".//@href")[0]
             row_data["pacer_case_id"] = get_pacer_case_id_from_nonce_url(href)
             # Include the docket_number components.
-            row_data.update(docket_number_components)
+            row_data["federal_dn_office_code"] = docket_number_components[
+                "federal_dn_office_code"
+            ]
+            row_data["federal_dn_case_type"] = docket_number_components[
+                "federal_dn_case_type"
+            ]
+            row_data["federal_dn_judge_initials_assigned"] = (
+                docket_number_components["federal_dn_judge_initials_assigned"]
+            )
+            row_data["federal_dn_judge_initials_referred"] = (
+                docket_number_components["federal_dn_judge_initials_referred"]
+            )
+            row_data["federal_defendant_number"] = docket_number_components[
+                "federal_defendant_number"
+            ]
 
             data.append(row_data)
 

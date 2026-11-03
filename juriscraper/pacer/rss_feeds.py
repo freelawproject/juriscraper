@@ -13,6 +13,7 @@ from typing_extensions import override
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.lib.utils import clean_court_object
+from juriscraper.pacer.docket_report import DocketNumberComponents
 
 from .docket_report import DocketReport
 from .utils import (
@@ -353,7 +354,7 @@ class PacerRssFeed(DocketReport):
 
     def _parse_docket_number(
         self, title_text: str | None = None
-    ) -> tuple[str | None, dict[str, str | None]]:
+    ) -> tuple[str | None, DocketNumberComponents]:
         """Parse docket numbers from a list of potential ones. Also parse
         the docket number components.
 
