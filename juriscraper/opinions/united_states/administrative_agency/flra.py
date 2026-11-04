@@ -41,14 +41,19 @@ class Site(OpinionSiteLinear):
     days_interval = 90
     citation_re = re.compile(r"^(\d+) FLRA (\d+)$")
     # Party cells of pre-2008 decisions wrap the parties in the old FLRA
-    # index code and year: "09:0381(45)AR - <parties> -- 1982 FLRAdec AR"
+    # index code and year: "09:0381(45)AR - <parties> -- 1982 FLRAdec AR".
+    # The case-type code is attached to the ")"; a word after a space is
+    # a party (29 FLRA 230: "29:0230(21) AFT v. DOD"). 50 FLRA 26 has two
+    # codes: "50:0026(7)CU and RA - - <parties>".
     name_prefix_re = re.compile(
-        r"^:?\d+:\s?[\d-]+\([^)]*\)\s?[\w/-]*(?:\s*-)*\s*"
+        r"^:?\d+:\s?[\d-]+\([^)]*\)[\w/-]*(?:\s+and\s+[A-Z]{2}\b)?"
+        r"(?:\s*-)*\s*"
     )
+    # 22 FLRA 63 misspells it "FRLAdec"
     name_suffix_re = re.compile(
-        r"(?:\s*-)*\s*(?:\d{4,5}\s*)?FLRA\s*dec\.?\s*[\w/-]*(?:\s[A-Z]{2})?"
-        r"(?:(?:\s*-)*\s*v\d+\s*p[\w.]*)?(?:\s*-)*\s*$",
-        re.I,
+        r"(?:\s*-)*\s*(?:\d{4,5}\s*)?F(?:LR|RL)Adec\b"
+        r"(?:\s+[\w/-]+(?:\s[A-Z]{2}\b)?)?"
+        r"(?:(?:\s*-)*\s*v\d+\s*p[\w.]*)?(?:\s*-)*\s*$"
     )
     # Some cells hold only the old digest section headings, not parties
     digest_re = re.compile(
@@ -100,9 +105,10 @@ class Site(OpinionSiteLinear):
                 self._cell(first_row, "ad-citation-number")
             )
             date_str = self._cell(first_row, "issuance-date")
-            # 4 decisions have no case number: 3 requests for general
-            # rulings (e.g. 9 FLRA 823) and 21 FLRA 3, so only the
-            # citation is required
+            # 4 decisions have no case number: 3 orders denying requests
+            # for general rulings (e.g. 9 FLRA 823) and 21 FLRA 3, an
+            # order dismissing an untimely negotiability petition. So
+            # only the citation is required
             # Two dockets use non-breaking hyphens (e.g. 0\u2011AR\u20115359)
             docket = self._cell(first_row, "case-number").replace(
                 "\u2011", "-"
@@ -134,10 +140,13 @@ class Site(OpinionSiteLinear):
                 self.skipped_urls.add(url)
                 continue
             if not name:
-                # About 60 decisions (e.g. 53 FLRA 1541, 11 FLRA 692) list
-                # no parties, or only digest headings
+                # As of 2026-11-04, 66 of 10,461 decisions list no parties:
+                # 12 empty cells (e.g. 53 FLRA 1541), 46 with only digest
+                # headings (e.g. 11 FLRA 692), 5 with only the index code
+                # (or "###"), and one each of "[INCOMPLETE]", "21 FLRA NO"
+                # and "Document Number" (11 FLRA 615)
                 logger.warning("flra: no parties listed for %s", citation)
-                name = f"FLRA Case No. {docket}" if docket else citation
+                name = "Unknown Case Title"
 
             self.cases.append(
                 {
@@ -204,8 +213,10 @@ class Site(OpinionSiteLinear):
             name = self.name_prefix_re.sub("", name)
             name = self.name_suffix_re.sub("", name).strip(" -")
         if (
-            self.digest_re.match(name)
-            or name == "[INCOMPLETE]"
+            # 30 FLRA 81 is "30:0081(15)CA - ### -- 1987 FLRAdec CA"
+            not re.search(r"[^\W_]", name)
+            or self.digest_re.match(name)
+            or name in ("[INCOMPLETE]", "Document Number")
             or re.fullmatch(r"\d+ FLRA NO\.?", name)
         ):
             return ""
@@ -265,8 +276,17 @@ class Site(OpinionSiteLinear):
             d.date() if isinstance(d, datetime) else d for d in dates
         )
         logger.info("Backscraping for range %s %s", start, end)
-        cases, total = await self._scrape_range(start, end)
+        # The site's total counts the stub rows we skip. Count them over
+        # every pass, since a stub may only turn up on the by-day retry.
+        skipped_before = set(self.skipped_urls)
+        cases, site_total = await self._scrape_range(start, end)
 
+        def expected() -> int | None:
+            if site_total is None:
+                return None
+            return site_total - len(self.skipped_urls - skipped_before)
+
+        total = expected()
         if total is not None and len(cases) < total and start < end:
             logger.info(
                 "flra: %s of %s decisions for %s to %s; retrying by day",
@@ -286,6 +306,7 @@ class Site(OpinionSiteLinear):
                 day += timedelta(days=1)
 
         self.cases.extend(cases)
+        total = expected()
         if total is None:
             if cases:
                 logger.error(
@@ -327,7 +348,6 @@ class Site(OpinionSiteLinear):
             "sort": "desc",
         }
         before = len(self.cases)
-        skipped_before = set(self.skipped_urls)
         total = None
         for page in range(self.max_pages):
             self.url = f"{self.base_url}?{urlencode({**params, 'page': page})}"
@@ -366,8 +386,4 @@ class Site(OpinionSiteLinear):
                 start,
                 end,
             )
-        skipped = len(self.skipped_urls - skipped_before)
-        if total is not None:
-            # The site's total counts the stub rows we skip
-            total -= skipped
         return in_range, total
