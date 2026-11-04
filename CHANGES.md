@@ -15,7 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
-- Add `cbca` scraper for Civilian Board of Contract Appeals Contract Disputes Act decisions, with a backscraper back to 2007. #<PR>
+- Add `cbca` scraper for Civilian Board of Contract Appeals Contract Disputes Act decisions, with a backscraper back to 2007. #2395
 
 Changes:
 - Structure return type of `NotificationEmail.data()` and `S3NotificationEmail.data()`.
