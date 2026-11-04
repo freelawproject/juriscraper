@@ -25,17 +25,26 @@ See mspb_p for how the manifests work. The nonprecedential ones:
   others lack (a redacted 2016 remand order), so it is the only one read.
 """
 
+from datetime import date
+
 from juriscraper.opinions.united_states.administrative_agency import mspb_p
 
 
 class Site(mspb_p.Site):
     base = "https://www.mspb.gov/decisions/nonprecedential/"
     current_manifest = "NonPrecedentialDecisions_Manifest.json"
-    backscrape_manifests = [
-        "NonPrecedentialDecisions_Manifest.json",
-        "NonPrecedentialDecisions_Manifest_Table.json",
-        "SEARCH_MANIFESTS/NonPrecedentialDecisions_Manifest_2015-2019.json",
-    ]
+    # See mspb_p.Site.backscrape_manifests
+    backscrape_manifests: dict[str, tuple[date | None, date | None]] = {
+        "NonPrecedentialDecisions_Manifest.json": (None, None),
+        "NonPrecedentialDecisions_Manifest_Table.json": (
+            date(2018, 11, 30),
+            None,
+        ),
+        "SEARCH_MANIFESTS/NonPrecedentialDecisions_Manifest_2015-2019.json": (
+            date(2015, 1, 1),
+            date(2019, 12, 31),
+        ),
+    }
     document_type = "NON-PRECEDENTIAL"
 
     def __init__(self, *args, **kwargs):

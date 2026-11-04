@@ -8,6 +8,8 @@ Type: Precedential
 History:
     2026-11-01: Read the manifest MSPB's own listing page uses instead of
         the stale _Table.json; add a backscraper.
+    2026-11-04: Normalize citations; skip manifests outside a
+        backscrape's range; log each skipped row.
 
 MSPB publishes its decisions as JSON "manifests" that its own search and
 listing pages load. Nothing else links to them, so their names come from
@@ -27,15 +29,25 @@ NonPrecedentialDecSearch.html, precdec.htm and nonprecdec.htm:
   PDF link that the files above lack, and together they are ~200 MB.
 
 Each row has a FILE_NAME relative to the decisions folder, an
-ISSUED_DATE (usually YYYY/MM/DD, sometimes MM/DD/YYYY), the docket
-number, appellant name and agency. Rows are keyed by FILE_NAME: a
-manifest can repeat a row, and the manifests overlap.
+ISSUED_DATE (YYYY/MM/DD), the docket number, appellant name and agency.
+Rows are keyed by FILE_NAME: a manifest can repeat a row, and the
+manifests overlap.
 
-The backscraper reads every manifest in ``backscrape_manifests`` in one
+Citations: DECISION_NUMBER is "2006 MSPB 245" from 2000 on and the
+older M.S.P.B. reporter ("9 M S P B  448") before that. LEGAL_CITATION
+is the M.S.P.R. cite, or "NP" when there is none. Both are normalized
+so eyecite can parse them ("9 M.S.P.B. 448", "2011 MPSB 84" to
+"2011 MSPB 84"); any other value is logged and left out, except a bare
+number. In a Nov. 2026 check of 65 sampled decisions from 2000 on, the
+DECISION_NUMBER matched the number printed on the PDF in all but the
+MPSB typo.
+
+The backscraper reads the manifests in ``backscrape_manifests`` in one
 pass, merges them by file name and keeps the rows in the requested date
-range. Problems that would otherwise drop decisions silently (a missing
-file name, an unparseable or impossible date, a manifest of the wrong
-type) are logged at ERROR level or raised.
+range. A manifest whose span is outside the range is not downloaded.
+Problems that would otherwise drop data silently (a missing file name,
+an unparseable or impossible date, an unrecognized citation) are logged
+at ERROR level, once per row; a manifest of the wrong type raises.
 """
 
 import asyncio
@@ -47,18 +59,26 @@ from urllib.parse import quote
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
-from juriscraper.lib.exceptions import InvalidDocumentError
+from juriscraper.lib.exceptions import ParsingException
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
 class Site(OpinionSiteLinear):
     base = "https://www.mspb.gov/decisions/precedential/"
     current_manifest = "PrecedentialDecisions_Manifest.json"
-    backscrape_manifests = [
-        "PrecedentialDecisions_Manifest_updMar2025.json",
-        "PrecedentialDecisions_Manifest.json",
-        "PrecedentialDecisions_Manifest_Table.json",
-    ]
+    # Manifest name: (first, last) issue dates it can hold. None means
+    # unbounded: always read on that side. Lower bounds are the earliest
+    # date in the file in Nov. 2026; upper bounds are set only where the
+    # file name fixes them, since a stale manifest could start updating
+    # again.
+    backscrape_manifests: dict[str, tuple[date | None, date | None]] = {
+        "PrecedentialDecisions_Manifest_updMar2025.json": (None, None),
+        "PrecedentialDecisions_Manifest.json": (date(2022, 3, 24), None),
+        "PrecedentialDecisions_Manifest_Table.json": (
+            date(2022, 3, 24),
+            None,
+        ),
+    }
     document_type = "PRECEDENTIAL"
     # The Board's first decisions were issued in 1979
     first_opinion_date = date(1979, 1, 1)
@@ -113,10 +133,20 @@ class Site(OpinionSiteLinear):
         start, end = (
             d.date() if isinstance(d, datetime) else d for d in dates
         )
-        for i, name in enumerate(self.backscrape_manifests):
-            if i:
+        downloaded = 0
+        for name, (first, last) in self.backscrape_manifests.items():
+            if (first and end < first) or (last and start > last):
+                logger.info(
+                    "mspb: skipping %s, which spans %s to %s",
+                    name,
+                    first or "the start",
+                    last or "today",
+                )
+                continue
+            if downloaded:
                 # Be polite between the large manifest downloads
                 await asyncio.sleep(self.request_pause)
+            downloaded += 1
             self.url = f"{self.base}{name}"
             logger.info("mspb: backscraping %s for %s to %s", name, start, end)
             manifest = await self._download()
@@ -144,22 +174,25 @@ class Site(OpinionSiteLinear):
         :return: None
         """
         if not isinstance(manifest, dict) or "data" not in manifest:
-            raise InvalidDocumentError(
+            raise ParsingException(
                 f"mspb: {url} is not a decision manifest (no 'data' key)"
             )
         if manifest.get("DOCUMENT_TYPE") != self.document_type:
-            raise InvalidDocumentError(
+            raise ParsingException(
                 f"mspb: {url} has DOCUMENT_TYPE "
                 f"{manifest.get('DOCUMENT_TYPE')!r}, expected "
                 f"{self.document_type!r}"
             )
 
-        no_file, bad_date = [], []
         for row in manifest["data"]:
             file_name = (row.get("FILE_NAME") or "").strip()
             if not file_name:
-                no_file.append(
-                    f"{row.get('DOCKET_NBR')} {row.get('ISSUED_DATE')}"
+                logger.error(
+                    "mspb: row in %s has no FILE_NAME, skipped: docket %s, "
+                    "issued %s",
+                    url,
+                    row.get("DOCKET_NBR"),
+                    row.get("ISSUED_DATE"),
                 )
                 continue
             key = file_name.lower()
@@ -168,7 +201,13 @@ class Site(OpinionSiteLinear):
 
             issued = self._parse_date(row.get("ISSUED_DATE") or "")
             if issued is None:
-                bad_date.append(f"{file_name} {row.get('ISSUED_DATE')!r}")
+                logger.error(
+                    "mspb: %s in %s has a missing or impossible "
+                    "ISSUED_DATE %r, skipped",
+                    file_name,
+                    url,
+                    row.get("ISSUED_DATE"),
+                )
                 continue
             if (start and issued < start) or (end and issued > end):
                 continue
@@ -181,31 +220,67 @@ class Site(OpinionSiteLinear):
                 "date": issued.isoformat(),
             }
             # Every case needs the same keys: the optional getters only
-            # look at the first case. Decision numbers ("2006 MSPB 10")
-            # start in 2000; older decisions only have an M.S.P.R. cite.
-            citation = (row.get("DECISION_NUMBER") or "").strip()
-            reporter = (row.get("LEGAL_CITATION") or "").strip()
+            # look at the first case
+            citation = self._decision_number(row, file_name)
+            reporter = self._mspr_citation(row, file_name)
             case["citation"] = citation or reporter
             case["parallel_citation"] = reporter if citation else ""
             self.cases.append(case)
 
-        # One message per manifest, so a format change makes one Sentry
-        # event per run rather than one per row
-        if no_file:
-            logger.error(
-                "mspb: %s rows in %s have no FILE_NAME and were skipped: %s",
-                len(no_file),
-                url,
-                no_file[:5],
-            )
-        if bad_date:
-            logger.error(
-                "mspb: %s rows in %s have a missing or impossible "
-                "ISSUED_DATE and were skipped: %s",
-                len(bad_date),
-                url,
-                bad_date[:5],
-            )
+    @staticmethod
+    def _decision_number(row: dict, file_name: str) -> str:
+        """Normalize a DECISION_NUMBER
+
+        :param row: a manifest row
+        :param file_name: the row's FILE_NAME, for log messages
+        :return: '2006 MSPB 245' or '9 M.S.P.B. 448'; '' if blank or
+            unrecognized
+        """
+        raw = row.get("DECISION_NUMBER") or ""
+        value = " ".join(raw.split())
+        # Three nonprecedential rows in the daily manifest have a bare
+        # '3' or '4', which isn't a citation; logging them would repeat
+        # every day
+        if not value or value.isdigit():
+            return ""
+        # One row reads '2011 MPSB 84'
+        if match := re.fullmatch(r"(\d{4}) M(?:SP|PS)B (\d+)", value):
+            return f"{match[1]} MSPB {match[2]}"
+        # Before 2000: '9 M S P B  448'
+        if match := re.fullmatch(
+            r"(\d{1,2}) M\.? ?S\.? ?P\.? ?B\.? ?(\d+)", value
+        ):
+            return f"{match[1]} M.S.P.B. {match[2]}"
+        logger.error(
+            "mspb: %s has an unrecognized DECISION_NUMBER %r, left out",
+            file_name,
+            raw,
+        )
+        return ""
+
+    @staticmethod
+    def _mspr_citation(row: dict, file_name: str) -> str:
+        """Normalize a LEGAL_CITATION
+
+        :param row: a manifest row
+        :param file_name: the row's FILE_NAME, for log messages
+        :return: '103 M.S.P.R. 153'; '' if blank, 'NP' (no M.S.P.R.
+            cite) or unrecognized
+        """
+        raw = row.get("LEGAL_CITATION") or ""
+        value = " ".join(raw.split())
+        if not value or value.upper().startswith("NP"):
+            return ""
+        # Also '91 M.S.P.R.609', '88 M.S.P.R.. 224', '107 M.S.P.R. 183
+        # (T)' and the pin cite '88 M.S.P.R. 319, 327'
+        if match := re.match(r"(\d+) M\.S\.P\.R\.* ?(\d+)\b", value):
+            return f"{match[1]} M.S.P.R. {match[2]}"
+        logger.error(
+            "mspb: %s has an unrecognized LEGAL_CITATION %r, left out",
+            file_name,
+            raw,
+        )
+        return ""
 
     def _parse_date(self, value: str) -> date | None:
         """Parse an ISSUED_DATE
