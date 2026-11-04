@@ -39,7 +39,23 @@ class Site(OpinionSiteLinear):
     base_url = "https://www.flra.gov/decisions/authority-decisions"
     first_opinion_date = datetime(1979, 1, 23)
     days_interval = 90
-    citation_re = re.compile(r"^\d+ FLRA \d+$")
+    citation_re = re.compile(r"^(\d+) FLRA (\d+)$")
+    # Party cells of pre-2008 decisions wrap the parties in the old FLRA
+    # index code and year: "09:0381(45)AR - <parties> -- 1982 FLRAdec AR"
+    name_prefix_re = re.compile(
+        r"^:?\d+:\s?[\d-]+\([^)]*\)\s?[\w/-]*(?:\s*-)*\s*"
+    )
+    name_suffix_re = re.compile(
+        r"(?:\s*-)*\s*(?:\d{4,5}\s*)?FLRA\s*dec\.?\s*[\w/-]*(?:\s[A-Z]{2})?"
+        r"(?:(?:\s*-)*\s*v\d+\s*p[\w.]*)?(?:\s*-)*\s*$",
+        re.I,
+    )
+    # Some cells hold only the old digest section headings, not parties
+    digest_re = re.compile(
+        r"^(?:FLRA CASE INFORMATION SHEET\s*|HEAD SHEET\s*)?"
+        r"(?:DIGEST (?:HEADINGS|NOTES)|SUBJECT MATTER INDEX)\b"
+    )
+
     total_re = re.compile(r"Displaying\s+\d+\s*-\s*\d+\s+of\s+(\d+)")
     # Safety cap on pages per backscrape range; ranges hold ~50 decisions
     max_pages = 100
@@ -64,6 +80,8 @@ class Site(OpinionSiteLinear):
 
         :return: the number of decision rows found on the page
         """
+        if self.html is None:
+            return 0
         # Match the exact class token; the pre-2025 layout used "first-row"
         first_rows = self.html.xpath(
             "//tbody/tr[contains(concat(' ', normalize-space(@class), ' '), ' first ')]"
@@ -82,7 +100,10 @@ class Site(OpinionSiteLinear):
             date_str = self._cell(first_row, "issuance-date")
             # A few requests for general rulings have no case number
             # (e.g. 21 FLRA 3), so only the citation is required
-            docket = self._cell(first_row, "case-number")
+            # Two dockets use non-breaking hyphens (e.g. 0\u2011AR\u20115359)
+            docket = self._cell(first_row, "case-number").replace(
+                "\u2011", "-"
+            )
             row_ok = bool(self.citation_re.match(citation))
             if not row_ok:
                 bad_metadata.append(f"{citation!r} {docket!r}")
@@ -99,13 +120,18 @@ class Site(OpinionSiteLinear):
             url = urljoin(self.base_url, (pdf or html_link)[0])
 
             name_cells = links_row.xpath("./td[@colspan]")
-            name = (
+            name = self._clean_name(
                 " ".join(name_cells[0].text_content().split())
                 if name_cells
                 else ""
             )
+            if name == "Decision Vacated":
+                # 56 FLRA 999 links to a stub page, not a decision
+                logger.warning("flra: skipping vacated stub %s", citation)
+                continue
             if not name:
-                # 12 decisions (e.g. 53 FLRA 1541) list no parties
+                # About 60 decisions (e.g. 53 FLRA 1541, 11 FLRA 692) list
+                # no parties, or only digest headings
                 logger.warning("flra: no parties listed for %s", citation)
                 name = f"FLRA Case No. {docket}" if docket else citation
 
@@ -115,7 +141,7 @@ class Site(OpinionSiteLinear):
                     "url": url,
                     "date": date_str,
                     "docket": docket,
-                    "citation": citation,
+                    "citation": self._reporter_citation(citation),
                 }
             )
 
@@ -137,6 +163,8 @@ class Site(OpinionSiteLinear):
 
         :return: the total number of results, or None if not found
         """
+        if self.html is None:
+            return None
         text = " ".join(self.html.xpath("//text()[contains(., 'Displaying')]"))
         match = self.total_re.search(" ".join(text.split()))
         return int(match.group(1)) if match else None
@@ -158,6 +186,37 @@ class Site(OpinionSiteLinear):
             )
         )
         return " ".join(text.split())
+
+    def _clean_name(self, name: str) -> str:
+        """Strip the old index code and year wrapped around the parties
+
+        :param name: the party cell's text
+        :return: the parties, or "" if the cell has none
+        """
+        # Some cells repeat the code and year, so strip until stable
+        previous = None
+        while name != previous:
+            previous = name
+            name = self.name_prefix_re.sub("", name)
+            name = self.name_suffix_re.sub("", name).strip(" -")
+        if (
+            self.digest_re.match(name)
+            or name == "[INCOMPLETE]"
+            or re.fullmatch(r"\d+ FLRA NO\.?", name)
+        ):
+            return ""
+        return name
+
+    def _reporter_citation(self, citation: str) -> str:
+        """Use the reporters-db abbreviation, so eyecite can parse the cite
+
+        :param citation: a validated citation such as '74 FLRA 660'
+        :return: the citation as '74 F.L.R.A. 660'
+        """
+        match = self.citation_re.match(citation)
+        if not match:
+            return citation
+        return f"{match.group(1)} F.L.R.A. {match.group(2)}"
 
     @staticmethod
     def _normalize_citation(citation: str) -> str:
