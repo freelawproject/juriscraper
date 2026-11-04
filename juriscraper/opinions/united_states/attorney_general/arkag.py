@@ -27,21 +27,33 @@ class Site(OpinionSiteLinear):
         r'"(https://[^"]+\.meilisearch\.io)"\s*,\s*'
         r'(?:[A-Za-z_$][\w$]*\s*=\s*)?"([^"\s]{20,})"'
     )
-    # Name must start the line. A leading ^.*? also matched letterhead
-    # when the closing "Sincerely" was missing (89-178).
-    _signature_re = re.compile(
-        r"(?m)^[ \t]*"
-        r"([A-Z][A-Za-z'’.\-]*(?:[ \t]+[A-Z][A-Za-z'’.\-]*){1,4})"
-        r"[ \t]*\n(?:[ \t]*\n){0,2}[ \t]*"
-        r"((?i:(?:Chief Deputy )?Attorney General))"
-        r"(?:[ \t]*$|(?=[A-Z]))"
+    _closing_candidate_re = re.compile(r"(?mi)^ *Sincer[a-z0-9]* *[,.]? *$")
+    _enclosure_re = re.compile(
+        r"(?mi)^ *(?:Enclosures?|Attachments?) *[.:]? *$"
     )
-    # fmt: off
-    _non_name_tokens = frozenset({
-        "ARKANSAS", "ATTORNEY", "DEPARTMENT", "GENERAL", "HONORABLE",
-        "OFFICE", "OF", "OPINION", "PAGE", "STATE", "THE",
-    })
-    # fmt: on
+    _signing_title_re = re.compile(
+        r"(?mi)^ *(?:[A-Z]+ ){0,4}(?:Attorney|Solicitor) General *$"
+    )
+    _byline_re = re.compile(r"(?mi)^ *(?:By|For|Signed(?: by)?) *:")
+    _reference_line_re = re.compile(
+        r"^ *[A-Z]{2}[/:](?:[A-Z. ]{1,14}[/:])?[a-z]{1,6} *$"
+    )
+    _partial_name_re = re.compile(
+        r"(?i)([A-Z]{3,}) ([A-Z]{5,})(?: [,./~_<>\-]{3,}[A-Z]?)?"
+    )
+    _docket_heading_re = re.compile(r"opinionno\.?:?(\d{2,4})-(\d{1,5})")
+    _delegation_re = re.compile(
+        r"(?i)\b(?:delegat\w*|recus\w*|acting\s+attorney\s+general|on\s+behalf)\b"
+    )
+    # Verified against the PDF signature blocks in the extraction fixtures.
+    # OCR can truncate a name or mistake handwriting for text. Prefer exact
+    # names; limited suffix recovery requires independent primary evidence.
+    _signatories = {
+        "dustinmcdaniel": ("DUSTIN McDANIEL", "Attorney General"),
+        "leslierutledge": ("LESLIE RUTLEDGE", "Attorney General"),
+        "timgriffin": ("TIM GRIFFIN", "Attorney General"),
+        "zachmayo": ("ZACH MAYO", "Chief Deputy Attorney General"),
+    }
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -140,6 +152,7 @@ class Site(OpinionSiteLinear):
                     "docket": docket,
                     "name": f"Arkansas Attorney General Opinion No. {docket}",
                     "date": hit["Date_Published"].split("T", 1)[0],
+                    "date_filed_is_approximate": True,
                     "url": hit["PDFUrl"].split("?")[0],
                     "summary": self._summary(hit),
                 }
@@ -147,35 +160,116 @@ class Site(OpinionSiteLinear):
 
     @override
     def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
-        # First name after the last Sincerely. Without that close, the
-        # only match is the letterhead (89-178).
         text = (
             scraped_text.replace("\r\n", "\n")
             .replace("\r", "\n")
             .replace("\u00a0", " ")
         )
-        sincerely = text.lower().rfind("sincerely")
-        if sincerely == -1:
+        text = re.sub(r"[ \t]+", " ", text)
+        closings = list(self._closing_candidate_re.finditer(text))
+        # Damaged or additional closings make document boundaries uncertain.
+        if len(closings) != 1:
             return {}
-        matches = [
-            match
-            for match in self._signature_re.finditer(text)
-            if match.start() > sincerely
-            and self._is_signature_name(match.group(1))
-        ]
-        if not matches:
+        closing = closings[0]
+        if self._key(closing.group()) not in {
+            "sincerely",
+            "sincerely,",
+        }:
+            return {}
+        enclosure = self._enclosure_re.search(text)
+        if enclosure and enclosure.start() < closing.start():
             return {}
 
-        name = re.sub(r"\s+", " ", matches[0].group(1)).strip(" .,")
-        title = re.sub(r"\s+", " ", matches[0].group(2)).strip().casefold()
-        office = (
-            "Chief Deputy Attorney General"
-            if title == "chief deputy attorney general"
-            else "Attorney General"
+        # One title anchors the entire closing page, including primary footnotes.
+        page = text[closing.end() :].split("\f", 1)[0]
+        titles = list(self._signing_title_re.finditer(page))
+        if len(titles) != 1 or self._byline_re.search(page):
+            return {}
+        title = titles[0]
+        if title.end() > 400 or self._enclosure_re.search(
+            page[: title.start()]
+        ):
+            return {}
+        for line in page[title.end() :].splitlines():
+            if re.match(r"^ *\d+(?: |$)", line):
+                break
+            if self._enclosure_re.fullmatch(
+                line
+            ) or self._reference_line_re.fullmatch(line):
+                continue
+            if any(character.isalnum() for character in line):
+                return {}
+
+        # The printed name must be immediately above its title (up to two blanks).
+        before = page[: title.start()]
+        trimmed = before.rstrip(" \t\n")
+        if before[len(trimmed) :].count("\n") > 3:
+            return {}
+        ink, _, name = trimmed.rpartition("\n")
+        name = name.strip(" \t")
+        role = title.group().strip().casefold()
+        signer = self._signatories.get(self._key(name))
+        if signer and signer[1].casefold() != role:
+            signer = None
+        if not signer:
+            # A header can complete a substantial suffix loss, never supply a name.
+            fragment = self._partial_name_re.fullmatch(name)
+            if (
+                not fragment
+                or role != "attorney general"
+                or any(character.isalnum() for character in ink)
+                or self._delegation_re.search(text)
+            ):
+                return {}
+            prefix = " ".join(fragment.groups()).casefold()
+            candidates = [
+                candidate
+                for candidate in self._signatories.values()
+                if candidate[1] == "Attorney General"
+                and candidate[0].casefold().startswith(prefix)
+                and len(candidate[0]) - len(prefix) <= 3
+            ]
+            if len(candidates) != 1 or not self._header_matches(
+                text, closing.start(), candidates[0][0]
+            ):
+                return {}
+            signer = candidates[0]
+        return {"OpinionCluster": {"judges": f"{signer[0]}, {signer[1]}"}}
+
+    @staticmethod
+    def _key(value: str) -> str:
+        return re.sub(r"[ \t]", "", value).casefold()
+
+    def _header_matches(
+        self, text: str, closing_start: int, name: str
+    ) -> bool:
+        """Require a complete primary header and consistent preceding headings."""
+
+        def rows(value: str) -> list[str]:
+            return [
+                self._key(line) for line in value.splitlines() if line.strip()
+            ]
+
+        first_page = rows(text.partition("\f")[0])
+        if len(first_page) < 4:
+            return False
+        header = first_page[:3]
+        docket = self._docket_heading_re.fullmatch(first_page[3])
+        if (
+            not docket
+            or header[0] != "stateofarkansas"
+            or header[1] not in {"attorneygeneral", "theattorneygeneral"}
+            or header[2] != self._key(name)
+        ):
+            return False
+        preceding = rows(text[:closing_start])
+        dockets = {
+            tuple(map(int, match.groups()))
+            for line in preceding
+            if (match := self._docket_heading_re.fullmatch(line))
+        }
+        return dockets == {tuple(map(int, docket.groups()))} and all(
+            preceding[index : index + 3] == header
+            for index, line in enumerate(preceding)
+            if line == "stateofarkansas"
         )
-        return {"OpinionCluster": {"judges": f"{name}, {office}"}}
-
-    @classmethod
-    def _is_signature_name(cls, raw_name: str) -> bool:
-        tokens = {token.strip(".").upper() for token in raw_name.split()}
-        return bool(tokens) and not tokens & cls._non_name_tokens

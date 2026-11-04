@@ -1,9 +1,15 @@
+import json
 import logging
 import unittest
 from datetime import date, datetime
+from pathlib import Path
 
 from juriscraper.lib.importer import build_module_list
 from juriscraper.OpinionSite import OpinionSite
+
+ARKAG_TEXT_DIR = (
+    Path(__file__).parent.parent / "examples/opinions/united_states/arkag_text"
+)
 
 
 class ScraperExtractFromText(unittest.TestCase):
@@ -1938,38 +1944,16 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.attorney_general.arkag": [
             (
-                "Sincerely,\r\nTIM GRIFFIN\r\nAttorney General\r\n",
-                {
-                    "OpinionCluster": {
-                        "judges": "TIM GRIFFIN, Attorney General",
-                    }
-                },
-            ),
-            (
-                "Sincerely,\nDUSTIN McDANIEL\nAttorney General\n",
-                {
-                    "OpinionCluster": {
-                        "judges": "DUSTIN McDANIEL, Attorney General",
-                    }
-                },
-            ),
-            (
-                "TIM GRIFFIN\nATTORNEY GENERAL\n\n"
-                "Sincerely,\nZACH MAYO\nChief Deputy Attorney General\n",
-                {
-                    "OpinionCluster": {
-                        "judges": "ZACH MAYO, Chief Deputy Attorney General",
-                    }
-                },
-            ),
-            (
-                "STATE OF ARKANSAS\nATTORNEY GENERAL\n\nSincerely,\n",
-                {},
-            ),
-            (
-                "STEVE CLARK\nATTORNEY GENERAL\n",
-                {},
-            ),
+                json.loads(
+                    (ARKAG_TEXT_DIR / example["response_file"]).read_text(
+                        encoding="utf-8"
+                    )
+                )["content"],
+                example["expected"],
+            )
+            for example in json.loads(
+                (ARKAG_TEXT_DIR / "manifest.json").read_text(encoding="utf-8")
+            )["examples"]
         ],
         "juriscraper.opinions.united_states.attorney_general.mdag": [
             (
