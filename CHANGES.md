@@ -18,11 +18,11 @@ Features:
 - Add backscrapers to `mspb_p` and `mspb_u`. They read MSPB's full
   decision manifests: 16,816 precedential decisions from 1979 and 10,802
   nonprecedential decisions from 2007 (as of 2026-11-01). Manifests
-  outside the requested date range are not downloaded.
+  outside the requested date range are not downloaded. #2386
 - `mspb_p` and `mspb_u` return the M.S.P.R. citation as
   `parallel_citation` (or as `citation` when there is no decision
   number), with citations normalized so eyecite can parse them, e.g.
-  `9 M S P B  448` to `9 M.S.P.B. 448`.
+  `9 M S P B  448` to `9 M.S.P.B. 448`. #2386
 
 Changes:
 -
@@ -30,7 +30,7 @@ Changes:
 Fixes:
 - `mspb_p` and `mspb_u` read the manifests MSPB's own listing pages load
   instead of the `_Table.json` files, which stopped updating in
-  September 2026. `mspb_u` no longer builds URLs with a double slash.
+  September 2026. `mspb_u` no longer builds URLs with a double slash. #2386
 
 ## 4.0.2 - 2026-10-29
 

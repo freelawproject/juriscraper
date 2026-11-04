@@ -33,14 +33,12 @@ ISSUED_DATE (YYYY/MM/DD), the docket number, appellant name and agency.
 Rows are keyed by FILE_NAME: a manifest can repeat a row, and the
 manifests overlap.
 
-Citations: DECISION_NUMBER is "2006 MSPB 245" from 2000 on and the
-older M.S.P.B. reporter ("9 M S P B  448") before that. LEGAL_CITATION
-is the M.S.P.R. cite, or "NP" when there is none. Both are normalized
-so eyecite can parse them ("9 M.S.P.B. 448", "2011 MPSB 84" to
-"2011 MSPB 84"); any other value is logged and left out, except a bare
-number. In a Nov. 2026 check of 65 sampled decisions from 2000 on, the
-DECISION_NUMBER matched the number printed on the PDF in all but the
-MPSB typo.
+Citations: DECISION_NUMBER is "2006 MSPB 245" from 2006 on, the older
+M.S.P.B. reporter ("9 M S P B  448") for 1979 to 1984, and blank in
+between. LEGAL_CITATION is the M.S.P.R. cite, or "NP" when there is
+none. Both are normalized so eyecite can parse them ("9 M.S.P.B. 448",
+"2011 MPSB 84" to "2011 MSPB 84"); any other value is logged and left
+out, except a bare number.
 
 The backscraper reads the manifests in ``backscrape_manifests`` in one
 pass, merges them by file name and keeps the rows in the requested date
@@ -285,7 +283,7 @@ class Site(OpinionSiteLinear):
     def _parse_date(self, value: str) -> date | None:
         """Parse an ISSUED_DATE
 
-        :param value: 'YYYY/MM/DD' or 'MM/DD/YYYY'
+        :param value: 'YYYY/MM/DD' (also accepts 'MM/DD/YYYY' and 'YYYY-MM-DD')
         :return: the date, or None if it is unparseable or outside
             1979 to today (two 1980s rows read 0891/01/01 and 1087/11/27)
         """
