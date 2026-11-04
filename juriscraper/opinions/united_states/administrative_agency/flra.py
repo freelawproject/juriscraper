@@ -98,8 +98,9 @@ class Site(OpinionSiteLinear):
                 self._cell(first_row, "ad-citation-number")
             )
             date_str = self._cell(first_row, "issuance-date")
-            # A few requests for general rulings have no case number
-            # (e.g. 21 FLRA 3), so only the citation is required
+            # 4 decisions have no case number: 3 requests for general
+            # rulings (e.g. 9 FLRA 823) and 21 FLRA 3, so only the
+            # citation is required
             # Two dockets use non-breaking hyphens (e.g. 0\u2011AR\u20115359)
             docket = self._cell(first_row, "case-number").replace(
                 "\u2011", "-"
