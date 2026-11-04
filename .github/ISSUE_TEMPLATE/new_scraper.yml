@@ -6,9 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for requesting a new scraper! Please fill out the sections below
-        so maintainers can assess the source and confirm the prerequisites for
-        integrating it.
+        Thanks for requesting a new scraper! Please fill out the sections below so maintainers can assess the source and confirm the prerequisites for integrating it.
 
         > [!IMPORTANT]
         > - Please search existing issues to avoid creating duplicates.
@@ -40,9 +38,7 @@ body:
     id: backscrape-estimate
     attributes:
       label: Past data available for backscraping
-      description: |
-        If there is past data in the source, estimate the amount available to
-        backscrape (e.g. date range covered and approximate number of documents).
+      description: If there is past data in the source, estimate the amount available to backscrape (e.g. date range covered and approximate number of documents).
       placeholder: e.g. Opinions from 2005 to present, ~300 per year (~6,000 total)
     validations:
       required: false
@@ -51,9 +47,7 @@ body:
     id: robots
     attributes:
       label: robots.txt
-      description: |
-        Check the site's `robots.txt` and summarize its scraping policy
-        (e.g. disallowed paths, crawl-delay). Paste the link to it.
+      description: Check the site's `robots.txt` and summarize its scraping policy (e.g. disallowed paths, crawl-delay). Paste the link to it.
       placeholder: https://example.gov/robots.txt
     validations:
       required: true
@@ -63,21 +57,10 @@ body:
       value: |
         ## Prerequisites for integrating the new scraper
 
-        - **Court assessment**: if the target court is not in our system, request
-          maintainers to assess the addition. Usually if this is a judicial system
-          court, we will want it. If it is an administrative court, we may want it,
-          especially if we already have the court it appeals to.
-        - **CourtListener**: check whether the Court object exists, using the
-          jurisdiction picker on the [search page](https://www.courtlistener.com/)
-          or the [courts API](https://www.courtlistener.com/api/rest/v4/courts/).
-          If not, request a maintainer to create it.
-        - **courts-db**: check whether the court entry exists in
-          [courts-db](https://github.com/freelawproject/courts-db). If not, create
-          an issue on that repository and, if possible, a PR.
-        - **reporters-db**: if the opinions in the source have citations, confirm
-          the reporter format exists in
-          [reporters-db](https://github.com/freelawproject/reporters-db). If not,
-          create an issue in that repository.
+        - **Court assessment**: if the target court is not in our system, request maintainers to assess the addition. Usually if this is a judicial system court, we will want it. If it is an administrative court, we may want it, especially if we already have the court it appeals to.
+        - **CourtListener**: check whether the Court object exists, using the jurisdiction picker on the [search page](https://www.courtlistener.com/) or the [courts API](https://www.courtlistener.com/api/rest/v4/courts/). If not, request a maintainer to create it.
+        - **courts-db**: check whether the court entry exists in [courts-db](https://github.com/freelawproject/courts-db). If not, create an issue on that repository and, if possible, a PR.
+        - **reporters-db**: if the opinions in the source have citations, confirm the reporter format exists in [reporters-db](https://github.com/freelawproject/reporters-db). If not, create an issue in that repository.
 
   - type: checkboxes
     id: prerequisites
@@ -94,9 +77,7 @@ body:
     id: prerequisites-details
     attributes:
       label: Prerequisites details
-      description: |
-        Provide the court ID(s) and links: CourtListener court, courts-db entry,
-        reporters-db reporter, and any issues/PRs you opened in other repositories.
+      description: "Provide the court ID(s) and links: CourtListener court, courts-db entry, reporters-db reporter, and any issues/PRs you opened in other repositories."
       placeholder: |
         - Court ID: `nev`
         - CourtListener: https://www.courtlistener.com/api/rest/v4/courts/nev/
@@ -109,9 +90,6 @@ body:
     id: notes
     attributes:
       label: Additional notes
-      description: |
-        Anything else useful for implementation: how the site is structured
-        (search form, API, PDFs/HTML), available metadata (judges, dispositions,
-        summaries, citations), different opinion types per case, related issues, etc.
+      description: "Anything else useful for implementation: how the site is structured (search form, API, PDFs/HTML), available metadata (judges, dispositions, summaries, citations), different opinion types per case, related issues, etc."
     validations:
       required: false
