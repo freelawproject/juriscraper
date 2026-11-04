@@ -40,7 +40,7 @@ class Site(OpinionSiteLinear):
     first_opinion_date = datetime(1979, 1, 23)
     days_interval = 90
     citation_re = re.compile(r"^(\d+) FLRA (\d+)$")
-    # Party cells of pre-2008 decisions wrap the parties in the old FLRA
+    # Party cells of 1982-1998 decisions wrap the parties in the old FLRA
     # index code and year: "09:0381(45)AR - <parties> -- 1982 FLRAdec AR".
     # The case-type code is attached to the ")"; a word after a space is
     # a party (29 FLRA 230: "29:0230(21) AFT v. DOD"). 50 FLRA 26 has two
@@ -105,14 +105,13 @@ class Site(OpinionSiteLinear):
                 self._cell(first_row, "ad-citation-number")
             )
             date_str = self._cell(first_row, "issuance-date")
-            # 4 decisions have no case number: 3 orders denying requests
-            # for general rulings (e.g. 9 FLRA 823) and 21 FLRA 3, an
-            # order dismissing an untimely negotiability petition. So
-            # only the citation is required
             # Two dockets use non-breaking hyphens (e.g. 0\u2011AR\u20115359)
             docket = self._cell(first_row, "case-number").replace(
                 "\u2011", "-"
             )
+            # Only the citation is required: a few decisions have no case
+            # number (e.g. 9 FLRA 823, an order denying a request for a
+            # general ruling)
             row_ok = bool(self.citation_re.match(citation))
             if not row_ok:
                 bad_metadata.append(f"{citation!r} {docket!r}")
@@ -140,11 +139,9 @@ class Site(OpinionSiteLinear):
                 self.skipped_urls.add(url)
                 continue
             if not name:
-                # As of 2026-11-04, 66 of 10,461 decisions list no parties:
-                # 12 empty cells (e.g. 53 FLRA 1541), 46 with only digest
-                # headings (e.g. 11 FLRA 692), 5 with only the index code
-                # (or "###"), and one each of "[INCOMPLETE]", "21 FLRA NO"
-                # and "Document Number" (11 FLRA 615)
+                # Some cells are empty (e.g. 53 FLRA 1541) or hold only
+                # digest headings (11 FLRA 692), the index code, or a
+                # placeholder such as "Document Number" (11 FLRA 615)
                 logger.warning("flra: no parties listed for %s", citation)
                 name = "Unknown Case Title"
 
@@ -263,10 +260,10 @@ class Site(OpinionSiteLinear):
 
         The count is checked against the site's own total. Paging through
         a range sorted only by issuance date is not stable for decisions
-        that share a date: in a full backscrape, two ranges (1985-06-20 to
-        1985-09-17 and 1987-03-12 to 1987-06-09) repeated 5 decisions and
-        skipped 5 others. When a range comes up short, it is re-scraped one
-        day at a time, which returned every decision in testing.
+        that share a date: in testing, a range sometimes repeated some
+        decisions and skipped others, and which range varied between runs.
+        When a range comes up short, it is re-scraped one day at a time,
+        which returned every decision in testing.
 
         :param dates: (start_date, end_date) tuple
         :return: None

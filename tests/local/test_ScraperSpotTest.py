@@ -5,6 +5,7 @@ import unittest
 from datetime import date
 
 from juriscraper.AbstractSite import logger
+from juriscraper.opinions.united_states.administrative_agency import flra
 from juriscraper.opinions.united_states.state import nev, nevapp
 
 
@@ -326,3 +327,31 @@ class ScraperSpotTest(unittest.TestCase):
         asyncio.run(site._download_backwards(site.back_scrape_iterable[0]))
         self.assertEqual(len(site.cases), 1)
         self.assertEqual(pages, [])
+
+    def test_flra_clean_name(self):
+        """Old index codes and years are stripped from FLRA party cells"""
+        # Party cells as they appear on flra.gov, keyed by citation
+        cells = {
+            # 29 FLRA 230: a word after a space is a party
+            "29:0230(21) AFT VS DOD, DODDS, MEDITERRANEAN REGION": "AFT VS DOD, DODDS, MEDITERRANEAN REGION",
+            # 50 FLRA 26: two case-type codes, and the "v50 p26" form
+            "50:0026(7)CU and RA - - Naval Facilities Engineering Service Center, Port Hueneme, CA and NAGE Local R12-28 - - 1994 FLRAdec RP - - v50 p26": "Naval Facilities Engineering Service Center, Port Hueneme, CA and NAGE Local R12-28",
+            # 22 FLRA 63: "FRLAdec"
+            "22:0063(7)CO AFGE, LOCAL 2369 VS HHS, SSA -- 1986 FRLAdec CO": "AFGE, LOCAL 2369 VS HHS, SSA",
+            # 21 FLRA 679: code and year repeated
+            "21:0679(87)CA 21:0679(87)CA - DOD DEPARTMENT OF THE AIR FORCE and AFGE -- 1986 FLRAdec CA -- 1986 FLRAdec CA": "DOD DEPARTMENT OF THE AIR FORCE and AFGE",
+            # 34 FLRA 521: no page in the code
+            "34:---(86)AR - DEPARTMENT OF THE ARMY ABERDEEN PROVING GROUND and I.A.M. & A.W. ABERDEEN LODGE No. 2424 -- 1990 FLRAdec CA": "DEPARTMENT OF THE ARMY ABERDEEN PROVING GROUND and I.A.M. & A.W. ABERDEEN LODGE No. 2424",
+            # 40 FLRA 1070: leading colon
+            ":40:1070(96)CA - - Dept. of Treasury, IRS and NTEU, Chapter 10 - - 1991 FLRAdec CA - - v40 p1070": "Dept. of Treasury, IRS and NTEU, Chapter 10",
+            # 01 FLRA 836: no code; a leading number is part of the name
+            "78th Division (Training), Kilmer USAR Center (Respondent) and AFGE, Local 2807 (Complainant)": "78th Division (Training), Kilmer USAR Center (Respondent) and AFGE, Local 2807 (Complainant)",
+            # No parties: 30 FLRA 81, 11 FLRA 615, 11 FLRA 692
+            "30:0081(15)CA - ### -- 1987 FLRAdec CA": "",
+            "11:0615(104)RA Document Number -- 1983 FLRAdec RA": "",
+            "11:0692(117)AR DIGEST HEADINGS STATUTE SUBJECT MATTER INDEX ENTRIES DIGEST NOTES DECISION -- 1983 FLRAdec AR": "",
+        }
+        site = flra.Site()
+        for cell, expected in cells.items():
+            with self.subTest(cell=cell):
+                self.assertEqual(site._clean_name(cell), expected)
