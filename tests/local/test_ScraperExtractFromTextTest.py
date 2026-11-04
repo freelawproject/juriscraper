@@ -1936,6 +1936,41 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
+        "juriscraper.opinions.united_states.attorney_general.arkag": [
+            (
+                "Sincerely,\r\nTIM GRIFFIN\r\nAttorney General\r\n",
+                {
+                    "OpinionCluster": {
+                        "judges": "TIM GRIFFIN, Attorney General",
+                    }
+                },
+            ),
+            (
+                "Sincerely,\nDUSTIN McDANIEL\nAttorney General\n",
+                {
+                    "OpinionCluster": {
+                        "judges": "DUSTIN McDANIEL, Attorney General",
+                    }
+                },
+            ),
+            (
+                "TIM GRIFFIN\nATTORNEY GENERAL\n\n"
+                "Sincerely,\nZACH MAYO\nChief Deputy Attorney General\n",
+                {
+                    "OpinionCluster": {
+                        "judges": "ZACH MAYO, Chief Deputy Attorney General",
+                    }
+                },
+            ),
+            (
+                "STATE OF ARKANSAS\nATTORNEY GENERAL\n\nSincerely,\n",
+                {},
+            ),
+            (
+                "STEVE CLARK\nATTORNEY GENERAL\n",
+                {},
+            ),
+        ],
         "juriscraper.opinions.united_states.attorney_general.mdag": [
             (
                 "\nGen. 225 ]                                                    225\n\n                          TAXATION\nPROPERTY TAX – APPLICABILITY OF HOMESTEAD TAX CREDIT\n    TO SPECIAL BENEFIT DISTRICT TAXES\n\n                       December 19, 2014\n",

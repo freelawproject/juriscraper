@@ -15,7 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add the Arkansas Attorney General opinions scraper (`arkag`) and a year backscraper. #2353
 
 Changes:
 - Structure return type of `NotificationEmail.data()` and `S3NotificationEmail.data()`.
