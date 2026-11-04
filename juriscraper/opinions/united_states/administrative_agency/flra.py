@@ -69,6 +69,8 @@ class Site(OpinionSiteLinear):
         # empty result means the page layout changed
         self.should_have_results = True
         self.expected_content_types = ["application/pdf", "text/html"]
+        # Stub rows skipped on purpose, so range counts can allow for them
+        self.skipped_urls: set[str] = set()
         self.make_backscrape_iterable(kwargs)
 
     @override
@@ -129,6 +131,7 @@ class Site(OpinionSiteLinear):
             if name == "Decision Vacated":
                 # 56 FLRA 999 links to a stub page, not a decision
                 logger.warning("flra: skipping vacated stub %s", citation)
+                self.skipped_urls.add(url)
                 continue
             if not name:
                 # About 60 decisions (e.g. 53 FLRA 1541, 11 FLRA 692) list
@@ -324,6 +327,7 @@ class Site(OpinionSiteLinear):
             "sort": "desc",
         }
         before = len(self.cases)
+        skipped_before = set(self.skipped_urls)
         total = None
         for page in range(self.max_pages):
             self.url = f"{self.base_url}?{urlencode({**params, 'page': page})}"
@@ -362,4 +366,8 @@ class Site(OpinionSiteLinear):
                 start,
                 end,
             )
+        skipped = len(self.skipped_urls - skipped_before)
+        if total is not None:
+            # The site's total counts the stub rows we skip
+            total -= skipped
         return in_range, total
