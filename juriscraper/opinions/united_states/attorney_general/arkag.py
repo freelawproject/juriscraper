@@ -18,7 +18,9 @@ from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 class Site(OpinionSiteLinear):
     home_url = "https://prod.opinions-search.arkansasag.gov/"
     index_name = "opinions"
-    first_opinion_year = 2012  # Columbia covers 1984-2011. See #2354.
+    # CourtListener's Columbia import covers opinions through 2011.
+    # 1984 is where the Arkansas site's data starts.
+    first_opinion_year = 2012
     _bundle_re = re.compile(r'<script[^>]+src="([^"]+\.js)"', re.I)
     # Read from that bundle. A non-meilisearch.io host needs this updated.
     _credentials_re = re.compile(
@@ -124,9 +126,9 @@ class Site(OpinionSiteLinear):
 
     @staticmethod
     def _summary(hit: dict[str, Any]) -> str:
-        return (
-            f"Requester: {hit['RequestorNameFull']}. {hit['OpinionSummary']}"
-        )
+        requester = hit["RequestorNameFull"].strip()
+        sep = "" if requester.endswith(".") else "."
+        return f"Requester: {requester}{sep} {hit['OpinionSummary']}"
 
     @override
     def _process_html(self) -> None:
