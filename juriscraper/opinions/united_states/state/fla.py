@@ -125,6 +125,7 @@ class Site(OpinionSiteLinear):
                     "disposition": self.get_disposition(disposition, note),
                     "status": self.status,
                     "per_curiam": "per curiam" in disposition.lower(),
+                    "citation": self.get_citation(note),
                 }
             )
 
@@ -146,6 +147,16 @@ class Site(OpinionSiteLinear):
         return: A clean disposition value
         """
         return titlecase(raw_disposition)
+
+    def get_citation(self, note: str) -> str:
+        """Get a citation from the raw note value
+
+        Only the 1st district puts citations in `note`; see its override
+
+        :param note: the raw note value
+        :return: the citation, or an empty string
+        """
+        return ""
 
     def set_url(
         self, start: date | None = None, end: date | None = None
