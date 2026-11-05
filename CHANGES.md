@@ -25,7 +25,10 @@ Features:
   `9 M S P B  448` to `9 M.S.P.B. 448`. #2386
 
 Changes:
--
+- Add a GitHub issue template for new scraper requests #2392
+- Structure return type of `NotificationEmail.data()` and `S3NotificationEmail.data()`.
+- The return type of `OpinionSite.extract_from_text()` is given a rudimentary structure, `ExtractedMetaData`.
+- Annotate all implementations of `_parse_text()` in `pacer`.
 
 Fixes:
 - `mspb_p` and `mspb_u` read the manifests MSPB's own listing pages load

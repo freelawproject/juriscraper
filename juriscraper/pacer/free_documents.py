@@ -5,6 +5,8 @@ which is free.
 import pprint
 import sys
 
+from typing_extensions import override
+
 from juriscraper.lib.date_utils import make_date_range_tuples
 from juriscraper.lib.html_utils import (
     clean_html,
@@ -132,7 +134,8 @@ class FreeOpinionReport(BaseReport):
             )
             self.trees.append(tree)
 
-    def _parse_text(self, text):
+    @override
+    def _parse_text(self, text: str) -> None:
         """Parse the HTML as unicode text and set self.tree
 
         This is a particularly critical method when running tests, which pull

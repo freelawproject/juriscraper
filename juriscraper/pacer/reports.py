@@ -84,7 +84,7 @@ class BaseReport:
         set_response_encoding(self.response)
         self._parse_text(self.response.text)
 
-    def _parse_text(self, text):
+    def _parse_text(self, text: str) -> None:
         """Parse the HTML as unicode text and set self.tree
 
         This is a particularly critical method when running tests, which pull

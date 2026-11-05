@@ -636,7 +636,7 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
         removes all characters that are not whitespace or alphanumeric and
         converts to lowercase.
         """
-        name = "".join(get_all_text(name_element))
+        name = get_all_text(name_element)
         return re.sub(r"[^\s\w]", "", clean_string(name)).lower()
 
     def _extract_case_data(self) -> dict[str, str] | None:
