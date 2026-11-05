@@ -1,15 +1,9 @@
-import json
 import logging
 import unittest
 from datetime import date, datetime
-from pathlib import Path
 
 from juriscraper.lib.importer import build_module_list
 from juriscraper.OpinionSite import OpinionSite
-
-ARKAG_TEXT_DIR = (
-    Path(__file__).parent.parent / "examples/opinions/united_states/arkag_text"
-)
 
 
 class ScraperExtractFromText(unittest.TestCase):
@@ -1943,17 +1937,237 @@ class ScraperExtractFromText(unittest.TestCase):
             )
         ],
         "juriscraper.opinions.united_states.attorney_general.arkag": [
+            # https://opinionstorage.blob.core.windows.net/opinions/2012-009.pdf
             (
-                json.loads(
-                    (ARKAG_TEXT_DIR / example["response_file"]).read_text(
-                        encoding="utf-8"
-                    )
-                )["content"],
-                example["expected"],
-            )
-            for example in json.loads(
-                (ARKAG_TEXT_DIR / "manifest.json").read_text(encoding="utf-8")
-            )["examples"]
+                """Sincerely,
+
+DUSTIN M&DANIEL
+Attorney General
+""",
+                {
+                    "OpinionCluster": {
+                        "judges": "DUSTIN McDANIEL, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2013-078.pdf
+            (
+                """Sincerely,
+
+BRADFORD J. PHELPS
+Chief Deputy Attorney General
+""",
+                {
+                    "OpinionCluster": {
+                        "judges": "BRADFORD J. PHELPS, Chief Deputy Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2013-001.pdf
+            (
+                """Sincerely,
+
+CEE “eA,
+
+Attorney General
+""",
+                {},
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2014-072.pdf
+            (
+                """Sincerely,
+
+
+
+DUSTIN MCDANIEL
+Attorney General
+""",
+                {
+                    "OpinionCluster": {
+                        "judges": "DUSTIN McDANIEL, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2015-124.pdf
+            (
+                """   Sincerely,
+
+__;::;::>   /:f<s?
+   LESLIE RUTLEDGE
+   Attorney General
+""",
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2015-094.pdf
+            (
+                """Sincerely,
+
+
+~~
+Attorney General
+""",
+                {},
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2016-067.pdf
+            (
+                """Sincerely,
+
+~~ L //~7
+LESLIE RUTLEDGE
+Attorney General
+""",
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2017-038.pdf
+            (
+                """Sincerely,
+
+ ~- ,._ . /~"fa
+LESLIE RUTLEDGE
+Attorney General
+""",
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2018-145.pdf
+            (
+                """Sincerely,
+
+.?:~~:;-;~:=:>-     L.   /./?17
+LESLIE RUTLEDGE
+Attorney General
+""",
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2019-001.pdf
+            (
+                """ Sincerely,
+
+~==fu :o-.
+ LESLIE RUTLEDGE
+ Attorney General
+""",
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2020-001.pdf
+            (
+                """Sincerely,
+
+~~;;;>-             L.   //?>1-'fa
+LESLIE RUTLEDGE
+Attorney General
+""",
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2021-001.pdf
+            (
+                """Sincerely,
+
+~~::;:>_           L.   //~17
+LESLIE RUTLEDGE
+Attorney General
+""",
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2022-001.pdf
+            (
+                """Sincerely,
+
+LESLIE RUTLEDGE
+Attorney General
+""",
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2023-002.pdf
+            (
+                """Sincerely,
+
+
+
+
+TIM GRIFFIN
+Attorney General
+""",
+                {
+                    "OpinionCluster": {
+                        "judges": "TIM GRIFFIN, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2024-001.pdf
+            (
+                """Sincerely,
+
+
+
+TIM GRIFFIN
+Attorney General
+""",
+                {
+                    "OpinionCluster": {
+                        "judges": "TIM GRIFFIN, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2025-001.pdf
+            (
+                """Sincerely,
+
+the 0X
+
+TIM GRIFFIN
+Attorney General
+""",
+                {
+                    "OpinionCluster": {
+                        "judges": "TIM GRIFFIN, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2026-118.pdf
+            (
+                """Sincerely,
+     ~~£
+ZACH MAYO
+Chief Deputy Attorney General
+""",
+                {
+                    "OpinionCluster": {
+                        "judges": "ZACH MAYO, Chief Deputy Attorney General"
+                    }
+                },
+            ),
         ],
         "juriscraper.opinions.united_states.attorney_general.mdag": [
             (
