@@ -1,0 +1,30 @@
+{
+  "extraction": "Local full-PDF OCR, not Doctor",
+  "poppler": "26.09.0",
+  "tesseract": "5.5.3",
+  "command": "pdftoppm -r 200 -png; tesseract PAGE stdout -l eng; page outputs joined in numeric order with form feed",
+  "examples": [
+    {
+      "docket": "2012-009",
+      "source_url": "https://opinionstorage.blob.core.windows.net/opinions/2012-009.pdf",
+      "pdf_sha256": "f721c91db501a840a1ac0eb1fb56b67662362db3533277bf19d0e635c9e74586",
+      "fixture": "2012-009.json",
+      "content_sha256": "44e62d9f607db9546cb70c2d78da9cc2c77daf4441c0bdba2c4f806332eac263",
+      "printed_primary_signer": "DUSTIN McDANIEL, Attorney General",
+      "expected": {
+        "OpinionCluster": {
+          "judges": "DUSTIN McDANIEL, Attorney General"
+        }
+      }
+    },
+    {
+      "docket": "2013-078",
+      "source_url": "https://opinionstorage.blob.core.windows.net/opinions/2013-078.pdf",
+      "pdf_sha256": "178485bc5de2f349a8ad07115fd9ff7e7c66d63824870571c6a6240288b1cb49",
+      "fixture": "2013-078.json",
+      "content_sha256": "cb586951343c80477ae7d32ab54762a2eecce725c75e16735262e3768c923bac",
+      "printed_primary_signer": "BRADFORD J. PHELPS, Chief Deputy Attorney General",
+      "expected": {}
+    }
+  ]
+}

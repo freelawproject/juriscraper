@@ -3,7 +3,6 @@ CourtID: arkag
 Court Short Name: Arkansas Attorney General
 """
 
-import difflib
 import re
 from datetime import date
 from typing import Any, cast
@@ -14,17 +13,6 @@ from typing_extensions import override
 from juriscraper.lib.exceptions import ParsingException
 from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
-
-# Letters-only keys of the people who sign, not the deputy who prepared the draft.
-_SIGNERS = {
-    "DUSTINMCDANIEL": ("DUSTIN McDANIEL", "Attorney General"),
-    "LESLIERUTLEDGE": ("LESLIE RUTLEDGE", "Attorney General"),
-    "TIMGRIFFIN": ("TIM GRIFFIN", "Attorney General"),
-    # https://opinionstorage.blob.core.windows.net/opinions/2013-078.pdf
-    "BRADFORDJPHELPS": ("BRADFORD J. PHELPS", "Chief Deputy Attorney General"),
-    # https://opinionstorage.blob.core.windows.net/opinions/2026-118.pdf
-    "ZACHMAYO": ("ZACH MAYO", "Chief Deputy Attorney General"),
-}
 
 
 class Site(OpinionSiteLinear):
@@ -39,6 +27,41 @@ class Site(OpinionSiteLinear):
         r'"(https://[^"]+\.meilisearch\.io)"\s*,\s*'
         r'(?:[A-Za-z_$][\w$]*\s*=\s*)?"([^"\s]{20,})"'
     )
+    _closing_candidate_re = re.compile(r"(?mi)^ *Sincer[a-z0-9]* *[,.]? *$")
+    _enclosure_re = re.compile(
+        r"(?mi)^ *(?:Enclosures?|Attachments?) *[.:]? *$"
+    )
+    _signing_title_re = re.compile(
+        r"(?mi)^ *(?:[A-Z]+ ){0,4}(?:Attorney|Solicitor) General *$"
+    )
+    _byline_re = re.compile(r"(?mi)^ *(?:By|For|Signed(?: by)?) *:")
+    _reference_line_re = re.compile(
+        r"^ *[A-Z]{2}[/:](?:[A-Z. ]{1,14}[/:])?[a-z]{1,6} *$"
+    )
+    _partial_name_re = re.compile(
+        r"(?i)([A-Z]{3,}) ([A-Z]{5,})(?: [,./~_<>\-]{3,}[A-Z]?)?"
+    )
+    _docket_heading_re = re.compile(r"opinionno\.?:?(\d{2,4})-(\d{1,5})")
+    _delegation_re = re.compile(
+        r"(?i)\b(?:delegat\w*|recus\w*|acting\s+attorney\s+general|on\s+behalf)\b"
+    )
+    # Verified against the PDF signature blocks in the extraction fixtures.
+    # OCR can truncate a name or mistake handwriting for text. Prefer exact
+    # names; limited suffix recovery requires independent primary evidence.
+    _signatories = {
+        "dustinmcdaniel": ("DUSTIN McDANIEL", "Attorney General"),
+        # Explicit OCR spellings of 2012-009, not approximate name matching.
+        "dustinm&daniel": ("DUSTIN McDANIEL", "Attorney General"),
+        "dustinm@&daniel": ("DUSTIN McDANIEL", "Attorney General"),
+        "leslierutledge": ("LESLIE RUTLEDGE", "Attorney General"),
+        "timgriffin": ("TIM GRIFFIN", "Attorney General"),
+        # https://opinionstorage.blob.core.windows.net/opinions/2013-078.pdf
+        "bradfordj.phelps": (
+            "BRADFORD J. PHELPS",
+            "Chief Deputy Attorney General",
+        ),
+        "zachmayo": ("ZACH MAYO", "Chief Deputy Attorney General"),
+    }
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -149,32 +172,115 @@ class Site(OpinionSiteLinear):
             scraped_text.replace("\r\n", "\n")
             .replace("\r", "\n")
             .replace("\u00a0", " ")
+            # A PDF page break need not include a newline. Make a closing at
+            # the top of an attached page visible to the ambiguity check.
+            .replace("\f", "\n\f\n")
         )
-        closing = re.search(r"(?im)^[ \t]*sincerely\b.*$", text)
-        if not closing:
+        text = re.sub(r"[ \t]+", " ", text)
+        closings = list(self._closing_candidate_re.finditer(text))
+        # Damaged or additional closings make document boundaries uncertain.
+        if len(closings) != 1:
             return {}
-        tail = text[closing.end() : closing.end() + 400]
-        title = re.search(
-            r"(?im)^[ \t]*((?:chief deputy )?attorney general)\b",
-            tail,
-        )
-        if not title:
+        closing = closings[0]
+        if self._key(closing.group()) not in {
+            "sincerely",
+            "sincerely,",
+        }:
             return {}
-        lines = [
-            line.strip()
-            for line in tail[: title.start()].splitlines()
-            if re.search(r"[A-Za-z]", line)
-        ]
-        if not lines:
+        enclosure = self._enclosure_re.search(text)
+        if enclosure and enclosure.start() < closing.start():
             return {}
-        key = "".join(ch for ch in lines[-1].upper() if ch.isalpha())
-        signer = _SIGNERS.get(key)
-        if signer is None and key:
-            near = difflib.get_close_matches(key, _SIGNERS, n=1, cutoff=0.85)
-            signer = _SIGNERS[near[0]] if near else None
+
+        # One title anchors the entire closing page, including primary footnotes.
+        page = text[closing.end() :].split("\f", 1)[0]
+        titles = list(self._signing_title_re.finditer(page))
+        if len(titles) != 1 or self._byline_re.search(page):
+            return {}
+        title = titles[0]
+        if title.end() > 400 or self._enclosure_re.search(
+            page[: title.start()]
+        ):
+            return {}
+        for line in page[title.end() :].splitlines():
+            if re.match(r"^ *\d+(?: |$)", line):
+                break
+            if self._enclosure_re.fullmatch(
+                line
+            ) or self._reference_line_re.fullmatch(line):
+                continue
+            if any(character.isalnum() for character in line):
+                return {}
+
+        # The printed name must be immediately above its title (up to two blanks).
+        before = page[: title.start()]
+        trimmed = before.rstrip(" \t\n")
+        if before[len(trimmed) :].count("\n") > 3:
+            return {}
+        ink, _, name = trimmed.rpartition("\n")
+        name = name.strip(" \t")
+        role = title.group().strip().casefold()
+        signer = self._signatories.get(self._key(name))
+        if signer and signer[1].casefold() != role:
+            signer = None
         if not signer:
-            return {}
-        role = re.sub(r"\s+", " ", title.group(1)).casefold()
-        if signer[1].casefold() != role:
-            return {}
+            # A header can complete a substantial suffix loss, never supply a name.
+            fragment = self._partial_name_re.fullmatch(name)
+            if (
+                not fragment
+                or role != "attorney general"
+                or any(character.isalnum() for character in ink)
+                or self._delegation_re.search(text)
+            ):
+                return {}
+            prefix = " ".join(fragment.groups()).casefold()
+            candidates = [
+                candidate
+                for candidate in set(self._signatories.values())
+                if candidate[1] == "Attorney General"
+                and candidate[0].casefold().startswith(prefix)
+                and len(candidate[0]) - len(prefix) <= 3
+            ]
+            if len(candidates) != 1 or not self._header_matches(
+                text, closing.start(), candidates[0][0]
+            ):
+                return {}
+            signer = candidates[0]
         return {"OpinionCluster": {"judges": f"{signer[0]}, {signer[1]}"}}
+
+    @staticmethod
+    def _key(value: str) -> str:
+        return re.sub(r"[ \t]", "", value).casefold()
+
+    def _header_matches(
+        self, text: str, closing_start: int, name: str
+    ) -> bool:
+        """Require a complete primary header and consistent preceding headings."""
+
+        def rows(value: str) -> list[str]:
+            return [
+                self._key(line) for line in value.splitlines() if line.strip()
+            ]
+
+        first_page = rows(text.partition("\f")[0])
+        if len(first_page) < 4:
+            return False
+        header = first_page[:3]
+        docket = self._docket_heading_re.fullmatch(first_page[3])
+        if (
+            not docket
+            or header[0] != "stateofarkansas"
+            or header[1] not in {"attorneygeneral", "theattorneygeneral"}
+            or header[2] != self._key(name)
+        ):
+            return False
+        preceding = rows(text[:closing_start])
+        dockets = {
+            tuple(map(int, match.groups()))
+            for line in preceding
+            if (match := self._docket_heading_re.fullmatch(line))
+        }
+        return dockets == {tuple(map(int, docket.groups()))} and all(
+            preceding[index : index + 3] == header
+            for index, line in enumerate(preceding)
+            if line == "stateofarkansas"
+        )
