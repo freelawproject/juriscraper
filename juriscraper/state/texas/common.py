@@ -3,7 +3,7 @@ from datetime import date, datetime
 from enum import Enum
 from functools import cached_property
 from itertools import chain
-from typing import TypedDict, TypeVar, final
+from typing import Never, TypedDict, TypeVar, final
 from urllib.parse import parse_qs, urlparse
 
 from lxml import html
@@ -519,7 +519,7 @@ IGNORED_DOCKET_NUMBERS: set[str] = {
 _CommonDataT = TypeVar("_CommonDataT")
 
 
-class TexasCommonScraper(AbstractParser[_CommonDataT | dict[str, None]]):
+class TexasCommonScraper(AbstractParser[_CommonDataT | dict[Never, Never]]):
     """
     A scraper for extracting data common to all Texas dockets (Supreme Court,
     Court of Criminal Appeals, and Court of Appeals).
