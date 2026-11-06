@@ -1,5 +1,5 @@
 # Scraper for California's First District Court of Appeal
-# CourtID: calctapp_1st
+# CourtID: calctapp1d
 # Court Short Name: Cal. Ct. App.
 
 import re

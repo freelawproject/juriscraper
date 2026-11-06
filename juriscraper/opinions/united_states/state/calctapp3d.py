@@ -1,10 +1,10 @@
 # Scraper for California's Third District Court of Appeal
-# CourtID: calctapp_3rd
+# CourtID: calctapp3d
 # Court Short Name: Cal. Ct. App.
 
-from juriscraper.opinions.united_states.state import calctapp_1st
+from juriscraper.opinions.united_states.state import calctapp1d
 
 
-class Site(calctapp_1st.Site):
+class Site(calctapp1d.Site):
     court_code = "C"
     division = "3rd App. Dist."
