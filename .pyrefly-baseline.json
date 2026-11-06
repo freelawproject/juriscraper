@@ -303,13 +303,6 @@
     },
     {
       "column": 20,
-      "path": "juriscraper/opinions/united_states/administrative_agency/mspb_p.py",
-      "name": "unsupported-operation",
-      "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "column": 20,
       "path": "juriscraper/opinions/united_states/administrative_agency/olc.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
