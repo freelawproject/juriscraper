@@ -4,10 +4,11 @@ Court Short Name: Arkansas Attorney General
 """
 
 import re
-from datetime import date
+from datetime import date, timedelta
 from typing import Any, cast
 from urllib.parse import urljoin
 
+from httpx import Response
 from typing_extensions import override
 
 from juriscraper.lib.exceptions import ParsingException
@@ -20,7 +21,8 @@ class Site(OpinionSiteLinear):
     index_name = "opinions"
     # CourtListener's Columbia import covers opinions through 2011.
     # 1984 is where the Arkansas site's data starts.
-    first_opinion_year = 2012
+    first_opinion_date = date(2012, 1, 1)
+    days_interval = 100
     _bundle_re = re.compile(r'<script[^>]+src="([^"]+\.js)"', re.I)
     # Read from that bundle. A non-meilisearch.io host needs this updated.
     _credentials_re = re.compile(
@@ -79,13 +81,6 @@ class Site(OpinionSiteLinear):
         self.parameters = {}
         self.make_backscrape_iterable(kwargs)
 
-    @override
-    def make_backscrape_iterable(self, kwargs: dict) -> None:
-        # Plain years, both ends inclusive: --backscrape-start 2012.
-        start = kwargs.get("backscrape_start") or self.first_opinion_year
-        end = kwargs.get("backscrape_end") or date.today().year
-        self.back_scrape_iterable = list(range(int(start), int(end) + 1))
-
     def _search_payload(self) -> dict[str, Any]:
         payload: dict[str, Any] = {
             "q": "",
@@ -104,11 +99,23 @@ class Site(OpinionSiteLinear):
         return payload
 
     async def _fetch_text(self, url: str) -> str:
-        response = await self.request["session"].get(
-            url, headers=self.request["headers"], timeout=60
-        )
-        response.raise_for_status()
-        return response.text
+        # Discovery requests must not inherit the search JSON or bearer token.
+        headers = self.request["headers"]
+        parameters = self.request["parameters"]
+        self.request["headers"] = {
+            key: value
+            for key, value in headers.items()
+            if key.lower() not in {"authorization", "accept", "content-type"}
+        }
+        self.request["parameters"] = {}
+        try:
+            await self._request_url_get(url)
+            response = cast(Response, self.request["response"])
+            response.raise_for_status()
+            return response.text
+        finally:
+            self.request["headers"] = headers
+            self.request["parameters"] = parameters
 
     async def _fetch_credentials(self) -> tuple[str, str]:
         page = await self._fetch_text(self.home_url)
@@ -127,21 +134,47 @@ class Site(OpinionSiteLinear):
 
         host, api_key = await self._fetch_credentials()
         self.url = f"{host}/indexes/{self.index_name}/search"
+        method = self.method
+        headers = self.request["headers"]
+        parameters = self.request["parameters"]
         self.method = "POST"
-        self.request["parameters"]["json"] = self._search_payload()
-        self.request["headers"]["Authorization"] = f"Bearer {api_key}"
-        self.request["headers"]["Accept"] = "application/json"
-        return await super()._download(request_dict)
+        self.request["parameters"] = {
+            **parameters,
+            "json": self._search_payload(),
+        }
+        self.request["headers"] = {
+            **headers,
+            "Authorization": f"Bearer {api_key}",
+            "Accept": "application/json",
+        }
+        try:
+            return await super()._download(request_dict)
+        finally:
+            self.method = method
+            self.request["headers"] = headers
+            self.request["parameters"] = parameters
 
     @override
-    async def _download_backwards(self, year: int) -> None:
-        # Both prefixes. The largest year is under 500, so limit 1000.
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
         self.results_limit = 1000
+        start, end = dates
+        # Framework ranges include both dates; the API's upper bound excludes it.
+        exclusive_end = end + timedelta(days=1)
         self.opinion_filter = (
-            f'OpenFileNo STARTS WITH "{year}-" OR '
-            f'OpenFileNo STARTS WITH "{year % 100:02d}-"'
+            f'Date_Published >= "{start.isoformat()}" AND '
+            f'Date_Published < "{exclusive_end.isoformat()}"'
         )
         self.html = await self._download()
+        response = cast(dict[str, Any], self.html)
+        hits = response["hits"]
+        # Meilisearch caps accessible results. Never silently accept a clipped
+        # interval; callers can reduce days_interval rather than lose opinions.
+        if len(hits) >= self.results_limit or response.get(
+            "estimatedTotalHits", len(hits)
+        ) > len(hits):
+            raise ParsingException(
+                "arkag: backscrape results may be truncated; reduce days_interval"
+            )
         self._process_html()
 
     @staticmethod

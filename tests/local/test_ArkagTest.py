@@ -1,5 +1,7 @@
 """Synthetic adversarial cases complementing the real PDF fixtures."""
 
+from datetime import date
+
 import pytest
 
 from juriscraper.opinions.united_states.attorney_general.arkag import Site
@@ -124,12 +126,14 @@ def test_vertical_title_whitespace_is_not_joined(name, title):
 
 def test_default_backfill_excludes_columbia_import_years():
     site = Site()
-    assert site.back_scrape_iterable[0] == 2012
+    assert site.back_scrape_iterable[0] == (date(2012, 1, 1), date(2012, 4, 9))
     assert Site(
-        backscrape_start=2015, backscrape_end=2016
+        backscrape_start="2015/12/31",
+        backscrape_end="2016/01/02",
+        days_interval=2,
     ).back_scrape_iterable == [
-        2015,
-        2016,
+        (date(2015, 12, 31), date(2016, 1, 1)),
+        (date(2016, 1, 2), date(2016, 1, 2)),
     ]
 
 
