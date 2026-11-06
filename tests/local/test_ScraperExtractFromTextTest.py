@@ -1,9 +1,15 @@
+import json
 import logging
 import unittest
 from datetime import date, datetime
+from pathlib import Path
 
 from juriscraper.lib.importer import build_module_list
 from juriscraper.OpinionSite import OpinionSite
+
+ARKAG_TEXT_DIR = (
+    Path(__file__).parent.parent / "examples/opinions/united_states/arkag_text"
+)
 
 
 class ScraperExtractFromText(unittest.TestCase):
@@ -1935,6 +1941,19 @@ class ScraperExtractFromText(unittest.TestCase):
                     }
                 },
             )
+        ],
+        "juriscraper.opinions.united_states.attorney_general.arkag": [
+            (
+                json.loads(
+                    (ARKAG_TEXT_DIR / example["response_file"]).read_text(
+                        encoding="utf-8"
+                    )
+                )["content"],
+                example["expected"],
+            )
+            for example in json.loads(
+                (ARKAG_TEXT_DIR / "manifest.json").read_text(encoding="utf-8")
+            )["examples"]
         ],
         "juriscraper.opinions.united_states.attorney_general.mdag": [
             (
