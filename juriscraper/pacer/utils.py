@@ -652,10 +652,14 @@ def reverse_sumDocSelected_function(s: str) -> SumDocSelectedArguments | None:
     }
 
 
-def make_doc1_url(court_id, pacer_doc_id, skip_attachment_page):
+def make_doc1_url(
+    court_id: str | None, pacer_doc_id: str, skip_attachment_page: bool
+) -> str:
     """Make a doc1 URL.
 
-    If skip_attachment_page is True, we replace the fourth digit with a 1
+    :param court_id: The court ID.
+    :param pacer_doc_id: The PACER document ID.
+    :param skip_attachment_page: if True, we replace the fourth digit with a 1
     instead of a zero, which bypasses the attachment page.
     """
     if skip_attachment_page and pacer_doc_id[3] == "0":
@@ -681,12 +685,14 @@ def make_doc1_url(court_id, pacer_doc_id, skip_attachment_page):
 
 
 def make_docs1_url(
-    court_id: str | None, pacer_doc_id: str, skip_attachment_page
+    court_id: str | None, pacer_doc_id: str, skip_attachment_page: bool
 ) -> str:
     """Make a docs1 URL for NDAs free look downloads.
 
     :param court_id: The court ID.
     :param pacer_doc_id: The PACER document ID.
+    :param skip_attachment_page: if True, we replace the fourth digit with a 1
+    instead of a zero, which bypasses the attachment page.
     """
     if skip_attachment_page and pacer_doc_id[3] == "0":
         # If the fourth digit is a 0, replace it with a 1
