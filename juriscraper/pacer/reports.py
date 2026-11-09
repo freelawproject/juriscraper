@@ -193,8 +193,8 @@ class BaseReport:
 
     async def download_pdf(
         self,
-        pacer_case_id: str | None = None,
-        pacer_doc_id: int | None = None,
+        pacer_case_id: str,
+        pacer_doc_id: str,
         pacer_magic_num: str | None = None,
         appellate: bool = False,
         de_seq_num: str | None = None,
@@ -227,7 +227,7 @@ class BaseReport:
                 url = make_acms_free_doc_url(self.court_id, pacer_magic_num)
                 params = {}
             elif appellate:
-                url = make_docs1_url(self.court_id, str(pacer_doc_id), True)
+                url = make_docs1_url(self.court_id, pacer_doc_id, True)
                 # For appellate documents the magic_number is the uid param
                 params = {
                     "uid": pacer_magic_num,
