@@ -10,6 +10,7 @@ from juriscraper.lib.string_utils import (
     harmonize,
 )
 from juriscraper.lib.utils import clean_court_object
+from juriscraper.pacer.docket_report import DocketNumberComponents
 from juriscraper.pacer.reports import BaseReport
 
 from .docket_report import BaseDocketReport
@@ -28,7 +29,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         "Security violation: You do not have access rights to this program",
     ]
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None):
         BaseDocketReport.__init__(self, court_id)
         BaseReport.__init__(self, court_id, pacer_session)
 
@@ -102,7 +103,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
 
         claim_tables = self.tree.xpath('//table[@class="complexReport"]')
         for claim_table in claim_tables:
-            meta_data = {
+            meta_data: dict = {
                 "court_id": self.court_id,
             }
             claim = {}
@@ -222,21 +223,33 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
             docket_number, docket_number_components = (
                 self._parse_docket_number(docket_number)
             )
-            meta_data["docket_number"] = docket_number
-            # Include the docket_number components.
-            meta_data.update(docket_number_components)
         else:
             docket_number = claim_table.xpath("(.//tr)[1]/td[1]/a//text()")[0]
             docket_number, docket_number_components = (
                 self._parse_docket_number(docket_number)
             )
-            meta_data["docket_number"] = docket_number
-            # Include the docket_number components.
-            meta_data.update(docket_number_components)
+
+        meta_data["docket_number"] = docket_number
+        # Include the docket_number components.
+        meta_data["federal_dn_office_code"] = docket_number_components[
+            "federal_dn_office_code"
+        ]
+        meta_data["federal_dn_case_type"] = docket_number_components[
+            "federal_dn_case_type"
+        ]
+        meta_data["federal_dn_judge_initials_assigned"] = (
+            docket_number_components["federal_dn_judge_initials_assigned"]
+        )
+        meta_data["federal_dn_judge_initials_referred"] = (
+            docket_number_components["federal_dn_judge_initials_referred"]
+        )
+        meta_data["federal_defendant_number"] = docket_number_components[
+            "federal_defendant_number"
+        ]
 
     def _parse_docket_number(
         self, docket_number: str
-    ) -> tuple[str, dict[str, str | None]]:
+    ) -> tuple[str, DocketNumberComponents]:
         """Strip the judge initials off docket numbers, and do any other
         similar cleanup.
 

@@ -8,10 +8,12 @@ from html import unescape
 
 import feedparser
 from httpx import AsyncClient, Timeout
+from typing_extensions import override
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.lib.utils import clean_court_object
+from juriscraper.pacer.docket_report import DocketNumberComponents
 
 from .docket_report import DocketReport
 from .utils import (
@@ -133,7 +135,7 @@ class PacerRssFeed(DocketReport):
 
     CACHE_ATTRS = ["data"]
 
-    def __init__(self, court_id, **kwargs):
+    def __init__(self, court_id: str, **kwargs):
         super().__init__(court_id)
         self._clear_caches()
         self._data = None
@@ -212,7 +214,8 @@ class PacerRssFeed(DocketReport):
         self.response.raise_for_status()
         self._parse_text(self.response.text)
 
-    def _parse_text(self, text):
+    @override
+    def _parse_text(self, text: str) -> None:
         """Parse the feed and set self.feed
 
         :param text: The text of the RSS feed.
@@ -351,7 +354,7 @@ class PacerRssFeed(DocketReport):
 
     def _parse_docket_number(
         self, title_text: str | None = None
-    ) -> tuple[str | None, dict[str, str | None]]:
+    ) -> tuple[str | None, DocketNumberComponents]:
         """Parse docket numbers from a list of potential ones. Also parse
         the docket number components.
 

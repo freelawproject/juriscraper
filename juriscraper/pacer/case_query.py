@@ -37,7 +37,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
         r"Control F",
     ]
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None):
         BaseDocketReport.__init__(self, court_id)
         BaseReport.__init__(self, court_id, pacer_session)
 

@@ -8,6 +8,7 @@ from juriscraper.lib.string_utils import (
     harmonize,
 )
 from juriscraper.lib.utils import clean_court_object
+from juriscraper.pacer.docket_report import DocketNumberComponents
 from juriscraper.pacer.reports import BaseReport
 
 from .docket_report import BaseDocketReport
@@ -33,7 +34,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         "No claims found for this case using selection criteria entered"
     ]
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None):
         BaseDocketReport.__init__(self, court_id)
         BaseReport.__init__(self, court_id, pacer_session)
 
@@ -61,7 +62,7 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         if self._metadata is not None:
             return self._metadata
 
-        data = {
+        data: dict = {
             "court_id": self.court_id,
         }
         field_mappings = {
@@ -120,8 +121,8 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         return data
 
     def _parse_docket_number(
-        self, docket_number
-    ) -> tuple[str, dict[str, str | None]]:
+        self, docket_number: str
+    ) -> tuple[str, DocketNumberComponents]:
         """Parse a valid docket number and its components.
 
         :param: docket_number: A string docket number to clean.

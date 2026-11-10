@@ -18,6 +18,7 @@ from typing_extensions import override
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import get_visible_text
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -46,6 +47,8 @@ class Site(OpinionSiteLinear):
         "caseType": "",
         "caseSubType": "",
         "constitutionalityOpinionsOnly": "false",
+        # Required since 2026-10-20; without it the API 404s. See #2357
+        "pageSize": "10",
     }
 
     # Map API decision types to precedential status
@@ -233,7 +236,8 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         await self._process_html()
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract lower court and judge from the scraped text.
 
         :param scraped_text: The text to extract from.
@@ -248,7 +252,7 @@ class Site(OpinionSiteLinear):
             re.X | re.MULTILINE | re.DOTALL,
         )
 
-        result = {}
+        result: ExtractedMetaData = {}
 
         if match := lower_court_pattern.search(scraped_text):
             lower_court = re.sub(

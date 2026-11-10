@@ -1,7 +1,7 @@
 import gzip
 import json
 import re
-from collections.abc import Iterator
+from collections.abc import Iterator, Mapping
 from contextvars import ContextVar
 from http.cookiejar import Cookie
 from typing import Any
@@ -181,20 +181,17 @@ class PacerSession(httpx.AsyncClient):
     async def get_anonymous(
         self, url: str | httpx.URL, *, params=None, timeout=300
     ) -> httpx.Response:
-        """GET without session headers, cookies, HTTP auth, or PACER login.
+        """GET without session cookies, HTTP auth, or PACER login.
 
-        Reuse this client's transport with fresh cookies for each call.
-        Cookies set during redirects stay local to that call.
+        Reuse this client's transport and default headers with fresh cookies
+        for each call. Cookies set during redirects stay local to that call.
         """
-        request = httpx.Request(
-            "GET",
-            url,
-            params=params,
-            extensions={"timeout": httpx.Timeout(timeout).as_dict()},
-        )
         # HTTPX reads and updates self.cookies throughout the redirect chain.
         token = self._anonymous_cookies.set(Cookies())
         try:
+            request = self.build_request(
+                "GET", url, params=params, timeout=timeout
+            )
             return await self.send(request, auth=httpx.Auth())
         finally:
             self._anonymous_cookies.reset(token)
@@ -375,17 +372,28 @@ class PacerSession(httpx.AsyncClient):
         return await super().head(url, **kwargs)
 
     @staticmethod
-    def _prepare_multipart_form_data(data):
+    def _prepare_multipart_form_data(
+        data: Mapping[str, object],
+    ) -> dict[str, tuple[None, str | bytes]]:
         """
         Transforms a data dictionary into the multi-part form data that PACER
         expects as the POST body
+
+        HTTPX only accepts str or bytes for multipart field values, so other
+        values (e.g. ints) are coerced to str. Fields whose value is None are
+        omitted, matching how requests encoded them.
+
         :param data: dict of data to transform
         :return: dict with values wrapped into tuples like:(None, <value>)
         """
-        output = {}
-        for key in data:
-            output[key] = (None, data[key])
-        return output
+        return {
+            key: (
+                None,
+                value if isinstance(value, str | bytes) else str(value),
+            )
+            for key, value in data.items()
+            if value is not None
+        }
 
     @staticmethod
     def _desecure_acms_cookies(jar: Cookies) -> None:

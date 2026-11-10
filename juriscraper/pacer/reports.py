@@ -51,7 +51,7 @@ class BaseReport:
         "Drumpf",
     ]
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None):
         self.court_id = court_id
         self.session = pacer_session
         self.tree = None
@@ -84,7 +84,7 @@ class BaseReport:
         set_response_encoding(self.response)
         self._parse_text(self.response.text)
 
-    def _parse_text(self, text):
+    def _parse_text(self, text: str) -> None:
         """Parse the HTML as unicode text and set self.tree
 
         This is a particularly critical method when running tests, which pull
@@ -193,8 +193,8 @@ class BaseReport:
 
     async def download_pdf(
         self,
-        pacer_case_id: str | None = None,
-        pacer_doc_id: int | None = None,
+        pacer_case_id: str,
+        pacer_doc_id: str,
         pacer_magic_num: str | None = None,
         appellate: bool = False,
         de_seq_num: str | None = None,
@@ -227,7 +227,7 @@ class BaseReport:
                 url = make_acms_free_doc_url(self.court_id, pacer_magic_num)
                 params = {}
             elif appellate:
-                url = make_docs1_url(self.court_id, str(pacer_doc_id), True)
+                url = make_docs1_url(self.court_id, pacer_doc_id, True)
                 # For appellate documents the magic_number is the uid param
                 params = {
                     "uid": pacer_magic_num,
@@ -420,18 +420,6 @@ class BaseReport:
             )
 
         return r, ""
-
-    async def is_pdf_sealed(
-        self, pacer_case_id, pacer_doc_id, pacer_magic_num=None
-    ):
-        """Check if a PDF is sealed without trying to actually download
-        it.
-        """
-        r, url = await self._query_pdf_download(
-            pacer_case_id, pacer_doc_id, pacer_magic_num, got_receipt="0"
-        )
-        sealed = "You do not have permission to view this document."
-        return sealed in r.content
 
     async def is_entry_sealed(
         self,

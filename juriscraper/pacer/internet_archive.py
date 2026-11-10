@@ -24,7 +24,7 @@ class InternetArchive(BaseDocketReport):
 
     CACHE_ATTRS = ["metadata", "parties", "docket_entries"]
 
-    def __init__(self, court_id, **kwargs):
+    def __init__(self, court_id: str, **kwargs):
         super().__init__(court_id)
 
         # Initialize the empty cache properties.
@@ -79,7 +79,7 @@ class InternetArchive(BaseDocketReport):
         self.response.raise_for_status()
         self._parse_text(self.response.text)
 
-    def _parse_text(self, text):
+    def _parse_text(self, text: str) -> None:
         assert isinstance(text, str), (
             f"Input must be unicode, not {type(text)}"
         )

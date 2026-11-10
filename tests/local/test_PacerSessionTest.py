@@ -20,9 +20,33 @@ class PacerSessionTest(unittest.IsolatedAsyncioTestCase):
         multi-part form data
         """
         data = {"case_id": 123, "case_type": "something"}
-        expected = {"case_id": (None, 123), "case_type": (None, "something")}
+        expected = {
+            "case_id": (None, "123"),
+            "case_type": (None, "something"),
+        }
         output = self.session._prepare_multipart_form_data(data)
         self.assertEqual(output, expected)
+
+    def test_multipart_form_data_with_non_string_values_encodes(self):
+        """Non-string values must be encodable by httpx as multipart data.
+
+        Regression test for freelawproject/juriscraper#2301.
+        """
+        data = {"case_id": 123, "all_case_ids": 0}
+        files = self.session._prepare_multipart_form_data(data)
+        request = httpx.Request("POST", "https://free.law", files=files)
+        body = request.read()
+        self.assertIn(b'name="case_id"\r\n\r\n123\r\n', body)
+        self.assertIn(b'name="all_case_ids"\r\n\r\n0\r\n', body)
+
+    def test_multipart_form_data_omits_none_values(self):
+        """None values must be left out of the form, not sent as "None"."""
+        data = {"case_num": "1:23-bk-45678", "all_case_ids": None}
+        files = self.session._prepare_multipart_form_data(data)
+        request = httpx.Request("POST", "https://free.law", files=files)
+        body = request.read()
+        self.assertIn(b'name="case_num"\r\n\r\n1:23-bk-45678\r\n', body)
+        self.assertNotIn(b'name="all_case_ids"', body)
 
     @mock.patch("juriscraper.pacer.http.httpx.AsyncClient.post")
     async def test_ignores_non_data_posts(self, mock_post):
@@ -53,7 +77,7 @@ class PacerSessionTest(unittest.IsolatedAsyncioTestCase):
         :param mock_post: mocked Session.post method
         """
         data = {"name": "dave", "age": 33}
-        expected = {"name": (None, "dave"), "age": (None, 33)}
+        expected = {"name": (None, "dave"), "age": (None, "33")}
 
         await self.session.post(
             "https://free.law", data=data, auto_login=False
@@ -95,6 +119,48 @@ class PacerSessionTest(unittest.IsolatedAsyncioTestCase):
             report.session  # noqa: B018
         except AttributeError:
             self.fail("Did not have session attribute on CaseQuery object.")
+
+
+class PacerSessionAnonymousGetTest(unittest.IsolatedAsyncioTestCase):
+    """Test the requests PacerSession.get_anonymous sends."""
+
+    def setUp(self):
+        self.sent: list[httpx.Request] = []
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            self.sent.append(request)
+            return httpx.Response(200)
+
+        self.session = PacerSession(
+            username="user",
+            password="pass",
+            transport=httpx.MockTransport(handler),
+        )
+        self.addAsyncCleanup(self.session.aclose)
+        self.session.cookies.set(
+            "NextGenCSO", "token", domain="ecf.nysd.uscourts.gov"
+        )
+
+    async def test_sends_session_default_headers(self):
+        """PACER resets connections from requests without a User-Agent.
+
+        Regression test for magic link downloads failing with ReadError.
+        """
+        await self.session.get_anonymous(
+            "https://ecf.nysd.uscourts.gov/doc1/1"
+        )
+
+        [request] = self.sent
+        self.assertEqual(request.headers.get("User-Agent"), "Juriscraper")
+        self.assertEqual(request.headers.get("Referer"), "https://external")
+
+    async def test_omits_session_cookies(self):
+        await self.session.get_anonymous(
+            "https://ecf.nysd.uscourts.gov/doc1/1"
+        )
+
+        [request] = self.sent
+        self.assertNotIn("Cookie", request.headers)
 
 
 class PacerSessionAcmsTest(unittest.IsolatedAsyncioTestCase):
