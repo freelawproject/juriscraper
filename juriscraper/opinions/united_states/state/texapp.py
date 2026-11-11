@@ -23,6 +23,7 @@ from datetime import date, datetime, timedelta
 from urllib.parse import urlparse
 
 from dateutil import parser
+from dateutil.relativedelta import relativedelta
 from lxml import html as lxmlHTML
 from typing_extensions import override
 
@@ -149,54 +150,11 @@ class Site(ClusterSite):
             self.html = await super()._download()
 
         for row in self.html.xpath(self.rows_xpath):
-            # `Document search` page returns OpinionClusters separated,
-            # each opinion in a single row. We keep track to skip if we already
-            # parsed the case
-            case_url = row.xpath(".//a")[2].get("href")
-            if case_url in self.seen_case_urls:
-                continue
-            self.seen_case_urls.add(case_url)
-
-            op_date = row.xpath("td[2]")[0].text_content()
-            case_dict = await self.parse_case_page(case_url, op_date)
-            case_dict["date"] = op_date
-            case_dict["docket"] = row.xpath("td[5]")[0].text_content().strip()
-
-            judges = [
-                op["author"]
-                for op in case_dict["sub_opinions"]
-                if op.get("author")
-            ]
-            case_dict["judge"] = "; ".join(judges)
-
-            if (
-                self.checkbox >= 2  # only checking for COA's not crim
-                and self.court_number
-                != case_dict["docket"][
-                    :2
-                ]  # first to docket numbers indicate the court (03-26-00075-CV)
-            ):
-                logger.warning(
-                    "Skipping docket %s - belongs to court %s, not %s",
-                    case_dict["docket"],
-                    case_dict["docket"][:2],
-                    self.court_number,
-                )
-                continue
-
-            if not case_dict["sub_opinions"]:
-                # Some cases have opinion documents mislabeled on the
-                # court website (e.g. labeled as "Notice" or "Judgment"
-                # instead of "Opinion"), so get_opinions() returns an
-                # empty list.  Skip to avoid an InsanityException
-                # downstream when download_urls is missing. #1852
-                logger.error(
-                    "Skipping docket %s - no opinion documents found",
-                    case_dict["docket"],
-                )
-                continue
-
-            self.cases.append(case_dict)
+            await self.add_case(
+                row.xpath(".//a")[2].get("href"),
+                row.xpath("td[2]")[0].text_content(),
+                row.xpath("td[5]")[0].text_content().strip(),
+            )
 
         # pagination
         next_page_xpath = (
@@ -207,6 +165,76 @@ class Site(ClusterSite):
             self.current_page += 1
             logger.info(f"Paginating to page {self.current_page}")
             await self._process_html()
+
+    async def add_case(self, case_url: str, op_date: str, docket: str) -> None:
+        """Parses the case page and adds the case to `self.cases`
+
+        :param case_url: url of the case page
+        :param op_date: date of the opinion, used to find the opinions
+            of the cluster
+        :param docket: docket number
+        :return: None
+        """
+        # The source pages list each opinion in its own row, so skip
+        # cases that were already parsed
+        if case_url in self.seen_case_urls:
+            return None
+        self.seen_case_urls.add(case_url)
+
+        case_dict = await self.parse_case_page(case_url, op_date)
+        case_dict["date"] = op_date
+        case_dict["docket"] = docket
+
+        judges = [
+            op["author"]
+            for op in case_dict["sub_opinions"]
+            if op.get("author")
+        ]
+        case_dict["judge"] = "; ".join(judges)
+
+        if (
+            self.checkbox >= 2  # only checking for COA's not crim
+            and self.court_number
+            != case_dict["docket"][
+                :2
+            ]  # first to docket numbers indicate the court (03-26-00075-CV)
+        ):
+            logger.warning(
+                "Skipping docket %s - belongs to court %s, not %s",
+                case_dict["docket"],
+                case_dict["docket"][:2],
+                self.court_number,
+            )
+            return None
+
+        if not case_dict["sub_opinions"]:
+            # Some cases have opinion documents mislabeled on the
+            # court website (e.g. labeled as "Notice" or "Judgment"
+            # instead of "Opinion"), so get_opinions() returns an
+            # empty list.  Skip to avoid an InsanityException
+            # downstream when download_urls is missing. #1852
+            logger.error(
+                "Skipping docket %s - no opinion documents found",
+                case_dict["docket"],
+            )
+            return None
+
+        self.cases.append(case_dict)
+
+    async def _get_page(self, link: str) -> lxmlHTML.HtmlElement:
+        """Gets the HTML of a page linked from the source
+
+        :param link: url of the page
+        :return: HTML object of the page
+        """
+        if self.test_mode_enabled():
+            self.mock_url = os.path.join(
+                os.path.dirname(self.mock_url),
+                os.path.basename(urlparse(link).path),
+            )
+            await self._request_url_mock(link)
+            return self._return_response_text_object()
+        return await self._get_html_tree_by_url(link)
 
     async def parse_case_page(self, link: str, opinion_date: str) -> dict:
         """Parses the case page
@@ -219,17 +247,7 @@ class Site(ClusterSite):
         :return: parsed case dictionary
         """
         parsed = {}
-        if self.test_mode_enabled():
-            # Support "sub" pages on test_ScraperExampleTest by modifying
-            # the href attribute of the case page, to point to the proper local file
-            self.mock_url = os.path.join(
-                os.path.dirname(self.mock_url),
-                os.path.basename(urlparse(link).path),
-            )
-            await self._request_url_mock(link)
-            html = self._return_response_text_object()
-        else:
-            html = await self._get_html_tree_by_url(link)
+        html = await self._get_page(link)
 
         parsed["name"] = self.get_name(html, link)
 
@@ -471,3 +489,121 @@ class Site(ClusterSite):
             f'"lastSetTextBoxValue":"{date_str}"'
             "}"
         )
+
+
+class ReleasedOpinionsSite(Site):
+    """Gets opinions from the court's "Released Orders/Opinions" pages,
+    for courts whose opinions the Document Search does not return
+    """
+
+    release_dates_xpath = (
+        "//table[contains(@id, 'grdDocketDates')]//a[normalize-space()]"
+    )
+    decided_rows_xpath = (
+        "//table[contains(@class, 'rgMasterTable')]"
+        "[contains(@id, '_grdDocket_') or contains(@id, '_grdDocket2_')]"
+        "/tbody/tr[not(@class='rgNoRecords')]"
+    )
+
+    @override
+    async def _process_html(self) -> None:
+        if self.html is None:
+            return None
+
+        for op_date, url in await self.get_release_dates(self.html):
+            html = await self._get_page(url)
+            for row in html.xpath(self.decided_rows_xpath):
+                case_link = row.xpath("td[1]/a")[0]
+                await self.add_case(
+                    case_link.get("href"),
+                    op_date,
+                    case_link.text_content().strip(),
+                )
+
+    async def get_release_dates(
+        self, index: lxmlHTML.HtmlElement
+    ) -> list[tuple[str, str]]:
+        """Gets the release dates in range from the index pages
+
+        :param index: HTML object of the index page
+        :return: list of (date, url of the release date page) tuples
+        """
+        shown_quarter = self.get_shown_quarter(index)
+        if self.test_mode_enabled():
+            quarters = [shown_quarter]
+        else:
+            quarters = self.get_quarters(self.start_date, self.end_date)
+
+        release_dates = []
+        for quarter in quarters:
+            if quarter == shown_quarter:
+                html = index
+            else:
+                html = await self.get_index_page(index, quarter)
+
+            for link in html.xpath(self.release_dates_xpath):
+                op_date = link.text_content().strip()
+                day = datetime.strptime(op_date, "%m/%d/%Y").date()
+                if self.test_mode_enabled() or (
+                    self.start_date <= day <= self.end_date
+                ):
+                    release_dates.append((op_date, link.get("href")))
+
+        return release_dates
+
+    async def get_index_page(
+        self, index: lxmlHTML.HtmlElement, quarter: date
+    ) -> lxmlHTML.HtmlElement:
+        """Submits the index page form to get the release dates of a quarter
+
+        :param index: HTML object of the index page
+        :param quarter: first day of the quarter
+        :return: HTML object of the index page of the quarter
+        """
+        self.parameters = {
+            hidden.get("name"): hidden.get("value", "")
+            for hidden in index.xpath("//input[@type='hidden'][@name]")
+        }
+        self.parameters.update(
+            {
+                "ctl00$ContentPlaceHolder1$ddlYear": str(quarter.year),
+                "ctl00$ContentPlaceHolder1$ddlQuarter": quarter.strftime(
+                    "%m-%d-"
+                ),
+                "ctl00$ContentPlaceHolder1$btnSearch": "Refresh",
+            }
+        )
+        self.method = "POST"
+        return await self._download()
+
+    @staticmethod
+    def get_shown_quarter(html: lxmlHTML.HtmlElement) -> date:
+        """Gets the quarter shown on the index page
+
+        :param html: HTML object of the index page
+        :return: first day of the quarter
+        """
+        year = html.xpath(
+            "string(//select[contains(@name, 'ddlYear')]/option[@selected]/@value)"
+        )
+        quarter = html.xpath(
+            "string(//select[contains(@name, 'ddlQuarter')]/option[@selected]/@value)"
+        )
+        return datetime.strptime(f"{quarter}{year}", "%m-%d-%Y").date()
+
+    @staticmethod
+    def get_quarters(start: date, end: date) -> list[date]:
+        """Gets the quarters from `start` to `end`, newest first
+
+        :param start: start date
+        :param end: end date
+        :return: first day of each quarter
+        """
+        first = date(start.year, 3 * ((start.month - 1) // 3) + 1, 1)
+        quarter = date(end.year, 3 * ((end.month - 1) // 3) + 1, 1)
+        quarters = []
+        while quarter >= first:
+            quarters.append(quarter)
+            quarter -= relativedelta(months=3)
+
+        return quarters
