@@ -1936,6 +1936,179 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
+        "juriscraper.opinions.united_states.attorney_general.arkag": [
+            # Verbatim Doctor header/closing excerpts from real opinions.
+            # Omitted body text separates excerpts with blank lines.
+            # https://opinionstorage.blob.core.windows.net/opinions/2012-001.pdf
+            (
+                "STATE OF ARKANSAS\n\nTHE ATTORNEY GENERAL\nDustin McDANIEL\n\nOpinion No. 2012-001\n\nJanuary 12, 2012\n\nMr. Jeff C. Harper, City Attorney\nCity of Springdale\n\n201 North Spring Street\n\nPost Office Box 1208\n\nSpringdale, Arkansas 72765\n\nDear Mr. Harper:\n\nYou have requested my opinion regarding the Arkansas Freedom of Information\nAct (“FOIA”). The basis for your request is A.C.A. § 25-19-105(c)(3)(B)(@) (Supp.\n2011), which authorizes the custodian, requester, or the subject of personnel or\nemployee evaluati\n\nr identities, whether these records are released as personnel records\nor as mere public records.”\n\nDeputy Attorney General Elisabeth A. Walker prepared the foregoing opinion,\nwhich I hereby approve.\n\nSincerely,\n\nDUSTIN MCDANIEL\nAttorney General\n\nDM/EA W:cyh\n\n23 The Arkansas Supreme Court has recognized that the constitutional right of privacy can supersede the\nspecific disclosure requirements of the FOIA, at least with regard to the release of documents containing\nconstitutionally protectable information. McCambridge v. City of Little Rock, 298 Ark. 219, 766 S.W.2d\n909 (1989). For a discussion of this issue, see generally Op. Att’y Gen. 2003-015.\n",
+                {
+                    "OpinionCluster": {
+                        "judges": "DUSTIN McDANIEL, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2012-150.pdf
+            (
+                "STATE OF ARKANSAS\n\nTHE ATTORNEY GENERAL\nDusTIn McDANIEL\n\nOpinion No. 2012-150\n\nApril 26, 2013\n\nThe Honorable Sue Madison\n\nState Senator\n\n573 Rock Cliff Road\n\nFayetteville, Arkansas 72701-3809\n\nDear Senator Madison:\n\nYou have requested my opinion concerning certain debts that the Higher\nEducation Subcommittee of the Legislative Council determined were owed to\nsome state institutions of higher education this past biennium. You identify the\ndebts at issue as ones owed by local businesses whose empl\n\non purposes. The foregoing should,\nhowever, offer some general guidance in addressing the matter.\n\nDeputy Attorney General Elisabeth A. Walker prepared the foregoing opinion,\nwhich I hereby approve.\n\nSincerely,\n64h“\nDUSTIN MCDANIEL\n\nAttorney General\n\nDM/EA W:cyh\n\n2 See Tex. Op. Att'y Gen. DM-382, supra n. 3 (finding “no precedent for the construction of a credit\nclause as meaning that a state or a political subdivision lends its credit when it merely extends credit to\nanother,”)\n\n'3 Cortez v. Independence County, 287 Ark. 279, 283, 698 S.W.2d 291 (1985) (citing Turner v. Woodruff,\n286 Ark. 66, 689 S.W.2d 527 (1985)).\n",
+                {
+                    "OpinionCluster": {
+                        "judges": "DUSTIN McDANIEL, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2013-001.pdf
+            (
+                "ke.\n\nAssistant Attorney General Jack Druff prepared the foregoing opinion, which I\nhereby approve.\n\nSincerely,\n\nCEE “eA,\n\nAttorney General\nDM/JHD:cyh\n\nEnclosure\n\fATTORNEY GENERAL OF ARKANSAS\nMark Pryor\n\nOpinion No. 2000-007\n\nFebruary 9, 2000\n\nThe Honorable Bill Gwatney\nState Senator\n\nP.O. Box 156\n\nJacksonville, AR 72076-0156\n\nDear Senator Gwatney:\n\nI am writing in response to your request for my opinion on \n\nne.\n\nAssistant Attorney General Jack Druff prepared the foregoing opinion, which I\nhereby approve.\n\nSincerely,\nMARK PRYOR\nAttorney General\n\nMP/JHD:cyh\n",
+                {},
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2013-149.pdf
+            (
+                "al constitution.*\n\nAssistant Attorney General J. M. Barker prepared this opinion, which I approve.\n\nSincerely\n\nDUSTIN Me\nAttorney General\n\nDM:JMB/cyh\n\nEnclosure\n\n° See Op. Att’y Gen. 95-322 and cases cited therein; see also Bates v. Mickles, 309 Ark, 551832 S.W.2d\n225 (1992).\n\n” See Op. Att’y Gen, 88-199.\n\n® My predecessor did not expressly consider an equal protection claim under the Arkansas constitution",
+                {},
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2014-137.pdf
+            (
+                '                                STATE OF ARKANSAS\n                                 THE ATTORNEY GENERAL\n                                    LESLIE RUTLEDGE\n\nOpinion No. 2014-137\n\nMarch 17, 2015\n\nThe Honorable Leon Johnson\nCircuit Judge\nSixth Judicial District, First Division\n401 West Markham Street, Room 420\nLittle Rock, Arkansas 72201\n\nDear Judge Johnson,\n\nYou have asked for an opinion on how the Arkansas Freedom of Information Act\n(FOIA) applies to data stored on the disaster recovery system (\n\n not "kept." But if a court took the second line of\nreasoning, then the answer to this question would be "yes."\n\nAssistant Attorney General Ryan Owsley prepared this opinion, which I hereby\napprove.\n\nSincerely,\n\n\n\nAttorney General\n\nLR/RO:cyh\n\f',
+                {},
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2015-141.pdf
+            (
+                "                                STATE OF ARKANSAS\n                                ATTORNEY GENERAL\n                                 LESLIE RUTLEDGE\n\nOpinion No. 2015-141\n\nJune 6, 2016\n\nThe Honorable R. Trevor Drown\nState Representative\nP. 0. Box 1182\nDover, AR 72837-1182\n\nDear Representative Drown:\n\nYou have requested my opinion on the following question:\n\n       Did [the City of] Fairfield Bay violate Arkansas law by awarding\n       volunteer EMS members a $25 gift card service recognition awar\n\nibit the gift cards, then in my\nopinion the public purpose doctrine would be satisfied in this case. It is my hope\nthat the foregoing will be of assistance in guiding the legal and factual analysis.\n\nSincerely,\n\n             /<\nLESLIE RUTLED ,......________j\nAttorney General\n\f",
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2015-094.pdf
+            (
+                "                                           STATE OF ARKANSAS\n                                            THE A TIORNEY GENERAL\n                                                LESLIE RUTLEDGE\n\n\nOpinion No. 2015-094\n\nAugust 17, 2015\n\nThe Honorable Mark Martin\nSecretary of State\n500 Woodlane Street\nState Capitol, Room 256\nLittle Rock, Arkansas 72201-1094\n\nDear Mr. Martin:\n\nThis is in response to your request for my opm10n on the effective date of\nlegislation passed during the First Extraordinary Se\n\n//www.ag.state.ar.us/\n\fThe Honorable Mark Martin\nSecretary of State\nOpinion No. 2015-094\nPage 2\n\n\n\nDeputy Attorney General Elisabeth A. Walker prepared the foregoing opinion,\nwhich I hereby approve.\n\nSincerely,\n\n\n~~\nAttorney General\n\nLR/EAW:cyh\n\f",
+                {},
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2016-128.pdf
+            (
+                "                                   STATE OF ARKANSAS\n                                   ATTORNEY GENERAL\n                                    LESLIE RUTLEDGE\n\nOpinion No. 2016-128\n\nApril 25, 2017\n\nThe Honorable Uvalde Lindsey\nState Senator\n2257 East Gentle Oaks Lane\nFayetteville, AR 72703-6142\n\nDear Senator Lindsey:\n\nThis is in response to your request for an opinion on copier leases held by county\ngovernments. Your correspondence states that it is your understanding that a\ncounty in Arkansas has\n\nly determine whether a specific agreement would meet\n       Amendment 78's definition of a short-term financing obligation. Such scrutiny is\n       beyond the scope of an Attorney General's opinion.\n\n       Sincerely,\nc::=   LESLIE\n             \"?:>~\n                RUT~E~~\n       Attorney General\n\f",
+                {},
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2017-068.pdf
+            (
+                "                                   STATE OF ARKA NSAS\n                                   ATTOR N EY GE N ERA L\n                                    LES LI E RU T LEDGE\n\nOpinion No. 2017-068\n\nJune 7, 2017\n\nMary L. Berry, BQC Officer\nTrue Grass Ballot Question Committee\nPost Office Box 511\nSummit, AR 72677\n\nDear Ms. Berry:\n\nI am writing in response to your request for certification, pursuant to Ark. Code\nAnn. § 7-9-107 (Supp. 2015), of the popular name and ballot title for a proposed\ninitiated meas\n\nesubmit your proposed act along with a\nproposed popular name and ballot title at your convenience.\n\nSincerely,\n\n~/~\nLESLIE RUTLE\nAttorney General\n\nEnclosure\n\n\n\n\n21\n     Ark. Code Ann.§ 7-9-107(c).\n\fTHE ARKANSAS ADULT RECREATION OF MARIJUANA AMENDMENT\n\n(Popular Name)\n\n\n\n\n(Ballot Title)\n\n\n\n\nAN AMENDMENT TO THE ARKANSAS CONSTITUTION CONCERNING THE CANNABIS PLANT,\nPROVIDING THAT THE CULTIVATION, PRODUCTION, DIS",
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2017-114.pdf
+            (
+                '                                  STATE OF ARKAN SAS\n                                  ATTORNEY GENERAL\n                                   LESLIE RUTLEDG E\n\nOpinion No. 2017-114\n\nAugust 14, 2018\n\nThe Honorable Mike Holcomb\nState Representative\n9108 Sulphur Springs Road\nPine Bluff, AR 71603-0904\n\nDear Representative Holcomb:\n\nThis is in response to your request for an opinion on whether certain positions in\nState and local government would be considered civil offices under Arkansas\nConstitution A\n\n to borrow money, 25 and to issue bonds, 26 among\nother various powers. Thus it is my opinion that RDA commissioners likely hold\na civil office under Article 5, section 10 and Article 7, section 53.\n\nSincerely,\n\n ~::~~-=;;=>_ <. //~"fo\nLESLIE RUTLEDGE\nAttorney General\n\n19\n     Ark. Code Ann. § 14-188-101 et seq. (Rep I. 1998).\n\n20\n     Id. at§ 14-188-109.\n21\n     Id. at§ 14-188-104(a)(2).\n22\n     Id. at§ 14-188-105(a)(2)(A).\n23\n     Id. at§ 14-188-105(c)(4).\n24\n     Ark. Code Ann.§ 14-188-109(l)(A).\n\n25\n     Id. at§ 14-188-109(2)(A).\n26\n     Id. at§ 14-188-1 lO(a)(l)(A).\n\f',
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2018-081.pdf
+            (
+                "Opinion No. 2018-081\n\nJuly 5, 2019\n\nThe Honorable Mary Bentley\nState Representative\n142 Shady Lane\nPerryville, AR 72126-8103\n\nDear Representative Bentley:\n\nThis is in response to your request for an opinion on the financing of emergency\nservices. You have posed the following two questions:\n\n       1) May a city or county impose a fee on residents in order to\n          provide emergency medical services under the Ambulance\n          Licensing Act, Arkansas Code Annotated § 14-266-105, or under\n  \n\nInterlocal Cooperation\nAgreement to jointly fund emergency medical services. But each party to the\nagreement must have the power to independently undertake whatever method of\nfunding is agreed upon.\n\nSincerely,\n\n\n\nLESLIE RUTLEDGE\nAttorney General\n\n\n\n\n15\n  See, e.g., Op. Att’y Gen. 2006-174 (addressing an agreement captioned “Interlocal Agreement\nfor Emergency Medical Services” between the Conway County Intergovernmental Cooperation-\nCouncil and Med-Tech. EMS of County County).\n16\n     Ark. Code Ann. § 25-20-103(1) (Supp. 2017) (defining “public agency”).\n17\n     Ark. Code Ann. § 25-20-104(b) (Repl. 2014).\n18\n     Id. at § 25-20-104(a) (emphasis added).\n\f",
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2019-070.pdf
+            (
+                "                                        STATE OF ARKANSAS\n                                         THE ArrotmEv GENEllAL\n                                            LESLIE RUTLEDGE\n\nOpinion No. 2019-070\n\nOctober 22, 2020\n\nThe Honorable LeAnne Burch\nState Representative\nP. 0. Box 222\nMonticello, AR 71657-0222\n\nDear Representative Burch:\n\nThis is in response to your request for an opinion on the following questions\nconcerning a multi-county corrections facility intended to house county and state\np\n\n\n\n\n\nThis provision may be responsive to your question, depending upon the particular\ncontract at issue. I cannot respond further, however, absent more information\nconcerning the referenced contract.\n\nSincerely,\n\n.=:   ~~:;J~       L.   //i>...£.-p\nLESLIE RUTLEDGE\nAttorney General\n\f",
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2020-054.pdf
+            (
+                "                                     STATE OF ARKANSAS\n                                     ATTORNEY GENERAL\n                                      LES LI E RUTLEDGE\n\nOpinion No. 2020-054\n\nAugust 4, 2021\n\nThe Honorable Mark Johnson\nState Senator\nP. 0. Box 241022\nLittle Rock, AR 72223\n\nDear Senator Johnson:\n\nThis is in response to your request for an opm1on on a number of questions\nconcerning elections, campaign activities, the powers of the county judge, the\nArkansas Freedom oflnformation Act, an\n\non\noffices, such as those discussed in my response to Questions 5 and 6. But generally\nspeaking, the commission would have a right to access its own offices in order to\nperform its statutory duties.\n\nSincerely,\n\n~:~---~- .<. //?11:'\nLESLIE RUTLEDGE\nAttorney General\n\f",
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2021-082.pdf
+            (
+                "Ra\n\nSTATE OF ARKANSAS\nTHE ATTORNEY GENERAL\nLESUE RUTLEDGE\n\nOpinion No. 2021-082\n\nAugust 4, 2022\n\nThe Honorable John Payton\nState Representative\n\nP. O. Box 181\n\nWilbur, AR 72179-0181\n\nDear Representative Payton:\n\nThis is in response to your request for an opinion from this office concerning the\nArkansas Unfair Practices Act, codified at Ark. Code Ann. § 4-75-201, et seq. (Repl.\n2011 and Supp. 2021), as it relates to pharmacy benefits managers, pharmaceutical\nmanufacturers, and insulin rebates. In\n\nat are pending before the\ncourts for resolution.’ I regret that I cannot be of assistance in this matter. Please\ndo not hesitate to contact me if I may be of future assistance in some other respect.\n\nSincerely,\n\nSe Kotla\n\nLESLIE RUTLEDGE\nAttorney General\n\n2 See, e.g., Ops. Att’y Gen, 2016-027, 2015-140 (and opinions cited therein).\n\n",
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2022-038.pdf
+            (
+                "STATE OF ARKANSAS\nATTORNEY GENERAL\nLESLIE RUTLEDGE\n\nOpinion No. 2022-038\n\nDecember 20, 2022\n\nThe Honorable Clint Penzo\nState Representative\n\nP.O. Box 7988\n\nSpringdale, AR 72762\n\nDear Representative Penzo:\nThis is in response to your request for an opinion on the following question:\n\nDoes Ark. Code Ann. § 14-42-106, or any other applicable statute,\nrequire an appointed member of the city council to execute and file a\nduplicate oath of office in the same fashion as a state officer who is\ncommissio\n\n filing of the oath. And there is no provision in the Arkansas Code directing a\ncity council member to execute and file a duplicate oath of office.’\n\nThe answer to your question, therefore, is “no.”\n\nSincerely,\n\naoe\n\nLESLIE RUTLEDGE\nAttorney General\n\n1 Ark. Code Ann. § 14-42-106(a) (Supp. 2021) (“All officers elected or appointed in any\nmunicipal corporation shall take the oath or affirmation prescribed for officers by the Arkansas\nConstitution.”).\n\n2 Id. at § 14-42-106(d) (“The council members shall have the power to declare the office of any\nelected or appointed person vacant who shall fail to take the oath of office or give the bond\nrequired in this section within ten (10) days of the first day of January after his or her election or\nwithin ten (10) days after he or she has been notified of his or her appointment.”). See also Op.\nAtt’y Gen. 2013-017.\n\n3 Compare Ark. Code Ann. § 14-42-106 (containing no duplicate oath requirement) with Ark.\nCode Ann. § 7-4-102(b) (Supp. 2021) (requiring the county clerk to notify newly selected county\nelection board members of the oath requirement and providing that “[t]he oath shall be filed in the\noffice of the county clerk and the county clerk shall forward a duplicate to the Secretary of\nState.”).\n\n",
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2022-039.pdf
+            (
+                '                                     STATE OF ARKANSAS\n                                     ATTO RNEY GENERAL\n                                      LES LIE RUTL EDGE\n\nOpinion No. 2022-039\n\nNovember 7, 2022\n\nLauren Ballard, Esq.\nDept. of Transformation & Shared Services\n501 Woodlane Street, Suite 201\nLittle Rock, AR 72201\n\nDear Ms. Ballard:\n\nYou have requested my opinion regarding the Arkansas Freedom of Information\nAct ("FOIA"). Your request, which is made as the attorney for the custodian of\nth\n\nPage 7\n\n\n\nprovide access to computerized data, and records contammg \'"personal\nidentification numbers" used for computer security functions are specifically\nexempt from disclosure under the FOIA. 23\n\nSincerely,\n\n\n ✓\n               -----.\n           _ ... ------- ~-\n  .::;--..::.:_____ - - - - --- - -\n                                      L\n                                          /~~7\n                                          /~\n\nLESLIE RUTLEDG E\nAttorney General\n\n\n\n\n23 Ark. Code Ann. § 25- 19-1OS(b )( I I). See also Op. Att \'y Gen. 20 18-064.\n\f',
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2023-121.pdf
+            (
+                "Opinion No. 2023-121\nJanuary 4, 2023\nSteven Nichols\nPost Office Box 7866\nLittle Rock, Arkansas 72217\nDear Mr. Nichols:\nI am writing in response to your request, made under A.C.A. § 7-9-107, that I certify the popular\nname and ballot title for a proposed constitutional amendment.\n\nMy decision to certify or reject a popular name and ballot title is unrelated to my view of the\nproposed measure’s merits. I am not authorized to consider the measure’s merits when considering\ncertification.\n1. Request.\n\nallot title, stating my reasons therefor, and to instruct you to “redesign” your proposed\nconstitutional amendment.\n\nDeputy Attorney General Ryan Owsley prepared this opinion, which I hereby approve.\nSincerely,\n\n\n\nTIM GRIFFIN\nAttorney General\n\f",
+                {
+                    "OpinionCluster": {
+                        "judges": "TIM GRIFFIN, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2024-080.pdf
+            (
+                "Opinion No. 2024-080\n\nJune 6, 2025\n\nThe Honorable Jon S. Eubanks\nState Representative\nPost Office Box 34\nSubiaco, Arkansas 72865\n\nDear Representative Eubanks:\n\nYou have requested my opinion regarding whether the Westark Area Council of Boy Scouts of\nAmerica (“Boy Scouts”) 1 can lawfully sell part of its real property “to raise funds for various future\nprojects and endeavors.” You report that, pursuant to Act 167 of 1973, the Boy Scouts purchased—\nsubject to certain conditions—2,840 acres in Loga\n\nl its ownership interests\nin the property to the Boy Scouts in 1991, then that deed resolved the survey issue.\n\nAssistant Attorney General Jodie Keener prepared this opinion, which I hereby approve.\n\nSincerely,\n\n\nTIM GRIFFIN\nAttorney General\n\n\n\n\n26\n  26A C.J.S. Deeds § 217 (Dec. 2023 update) (stating that courts will look to “contemporaneous documents” that are\nincorporated by reference (emphasis added)); cf. Eddleman v. Estate of Farmer, 294 Ark. 8, 10, 740 S.W.2d 141, 142\n(1987) (“Wills may validly incorporate by reference a document or paper, not witnessed as a will, if it was in existence\nat the time of the execution of the will and is identified by clear proof.” (emphasis added) (citing Montgomery v.\nBlankenship, 217 Ark. 357, 361, 230 S.W.2d 51, 54 (1950)).\n27\n     Act 38 of 1991, §§ 1, 2.\n28\n     Act 38 of 1991, § 2.\n\f",
+                {
+                    "OpinionCluster": {
+                        "judges": "TIM GRIFFIN, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2025-119.pdf
+            (
+                "                                          TIM GRIFFIN\n                                           ATTORNEY GENERAL\n\nOpinion No. 2025-119\n\nApril 22, 2026\n\nThe Honorable Ryan A. Rose\nState Representative\n819 Powderhorn Circle\nVan Buren, Arkansas 72956\n\nDear Representative Rose:\n\nI am writing in response to your request for my opinion on the Arkansas Ethics Commission’s\nRules on Gifts and items given to social workers at an event.\n\nYou note that—to show appreciation for social workers’ “critical wor\n\nnot exceed $100,\nunless it is reimbursed down to $100 or less within 10 days or returned within 30 days.19\n\nAssistant Attorney General William R. Olson prepared this opinion, which I hereby approve.\n\nSincerely,\n\n\n\nTIM GRIFFIN\nAttorney General\n\n\n\n\n18\n     See also 21 C.A.R. § 1-101(2)(B)(vii) (mirroring the statutory definition).\n19\n     A.C.A. § 21-8-402(5)(B)(iii), (vii)(b); 21 C.A.R. § 1-101(2)(B)(iii), (vii)(b).\n\f",
+                {
+                    "OpinionCluster": {
+                        "judges": "TIM GRIFFIN, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2026-084.pdf
+            (
+                "                                       TIM GRIFFIN\n                                       ATTORNEY GENERAL\n\n\nOpinion No. 2026-084\n\nOctober 30, 2026\n\nThe Honorable Scott Flippo\nState Senator\nPost Office Box 705\nBull Shoals, Arkansas 72619\n\nDear Senator Flippo:\n\nYou recently submitted a request on behalf of a constituent, seeking this Office’s “review and\noversight regarding governance actions taken involving an Arkansas nonprofit corporation,\nHospice of the Ozarks, Inc. and its sole member organi\n\nope of an Attorney General opinion. Such\nmatters must instead be addressed by private counsel or by a court. 4\n\nAssistant Attorney General Jodie Keener prepared this opinion, which I hereby approve.\n\nSincerely,\n\n\nTIM GRIFFIN\nAttorney General\n\n\n\n\n2\n    See Ark. Att’y Gen. Ops. 2018-040, 2007-322, 2003-355, 2002-120.\n3\n  Ark. Att’y Gen. Ops. 2017-032, 2012-044, 2002-340. The Attorney General is statutorily prohibited from engaging\nin the private practice of law. A.C.A. § 25-16-701.\n4\n This matter was previously the subject of a lawsuit, Joe Dillard, et al. v. Baxter Cnty. Reg. Hosp., Inc., et al., Baxter\nCounty Circuit Court No. 03CV-25-638. That lawsuit has since been dismissed.\n\f",
+                {
+                    "OpinionCluster": {
+                        "judges": "TIM GRIFFIN, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2026-118.pdf
+            (
+                "                                       TIM GRIFFIN\n                                       ATTORNEY GENERAL\n\n\nOpinion No. 2026-118\n\nNovember 2, 2026\n\nMr. Stephen Bright\nChief Taxpayer Services Officer\nArkansas Secretary of State’s Office\n500 Woodlane Avenue, Suite 256\nLittle Rock, Arkansas 72201\n\nDear Mr. Bright:\n\nYou have requested an opinion from this Office regarding the Arkansas Freedom of Information\nAct (FOIA). Your request, which is made as the subject of the records, is based on A.C.A.\n§ \n\n Op. 2026-065.\n\fStephen Bright\nOpinion No. 2026-118\nPage 7\n\n\nThis opinion was prepared by Deputy Attorney General Kelly Summerside, with the concurrence\nof Chief Deputy Attorney General Zach Mayo.36\n\nSincerely,\n     ~~£\nZACH MAYO\nChief Deputy Attorney General\n\n\n\n\n36\n Chief Deputy Zach Mayo was asked to oversee the preparation and issuance of this opinion because the Attorney\nGeneral recused from this opinion and delegated his authority to issue it.\n\f",
+                {
+                    "OpinionCluster": {
+                        "judges": "ZACH MAYO, Chief Deputy Attorney General"
+                    }
+                },
+            ),
+        ],
         "juriscraper.opinions.united_states.attorney_general.mdag": [
             (
                 "\nGen. 225 ]                                                    225\n\n                          TAXATION\nPROPERTY TAX – APPLICABILITY OF HOMESTEAD TAX CREDIT\n    TO SPECIAL BENEFIT DISTRICT TAXES\n\n                       December 19, 2014\n",

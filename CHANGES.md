@@ -15,6 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+- Add the Arkansas Attorney General opinions scraper (`arkag`) with publication-date interval backscraping and signer extraction. #2353
 - Add backscrapers to `mspb_p` and `mspb_u`. They read MSPB's full
   decision manifests: 16,816 precedential decisions from 1979 and 10,802
   nonprecedential decisions from 2007 (as of 2026-11-01). Manifests
