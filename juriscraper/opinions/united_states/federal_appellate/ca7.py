@@ -5,8 +5,10 @@
 import re
 
 import feedparser
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -17,7 +19,8 @@ class Site(OpinionSiteLinear):
         self.should_have_results = True
         self.court_id = self.__module__
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         if self.test_mode_enabled():
             self.year = 2022
         feed = feedparser.parse(self.request["response"].content)
@@ -48,7 +51,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract lower court from the scraped text.
 
         :param scraped_text: The text to extract from.

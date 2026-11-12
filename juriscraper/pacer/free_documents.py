@@ -5,6 +5,8 @@ which is free.
 import pprint
 import sys
 
+from typing_extensions import override
+
 from juriscraper.lib.date_utils import make_date_range_tuples
 from juriscraper.lib.html_utils import (
     clean_html,
@@ -37,7 +39,7 @@ class FreeOpinionReport(BaseReport):
     EXCLUDED_COURT_IDS = ["casb", "innb", "ohsb"]
     VALID_SORT_PARAMS = ("date_filed", "case_number")
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None):
         self.responses = []
         self.responses_with_params = []
         self.trees = []
@@ -52,7 +54,7 @@ class FreeOpinionReport(BaseReport):
                 f"https://ecf.{self.court_id}.uscourts.gov/cgi-bin/WrtOpRpt.pl"
             )
 
-    def query(self, start, end, sort="date_filed", day_span=7):
+    async def query(self, start, end, sort="date_filed", day_span=7):
         """Query the Free Opinions report one day at a time.
 
         :param start: a date object representing the date you want to start at.
@@ -87,7 +89,7 @@ class FreeOpinionReport(BaseReport):
             )
 
             # Get the first page, grab the nonce, and submit using that.
-            response = self.session.get(self.url)
+            response = await self.session.get(self.url)
             nonce = get_nonce_from_form(response)
             logger.info("Got nonce of %s", nonce)
 
@@ -98,7 +100,9 @@ class FreeOpinionReport(BaseReport):
                 "Key1": self._normalize_sort_param(sort),
                 "all_case_ids": "0",
             }
-            response = self.session.post(f"{self.url}?{nonce}", data=data)
+            response = await self.session.post(
+                f"{self.url}?{nonce}", data=data
+            )
             responses.append(response)
             responses_with_params.append(
                 {
@@ -125,10 +129,13 @@ class FreeOpinionReport(BaseReport):
             set_response_encoding(response)
             text = clean_html(response.text)
             tree = get_html_parsed_text(text)
-            tree.rewrite_links(fix_links_in_lxml_tree, base_href=response.url)
+            tree.rewrite_links(
+                fix_links_in_lxml_tree, base_href=str(response.url)
+            )
             self.trees.append(tree)
 
-    def _parse_text(self, text):
+    @override
+    def _parse_text(self, text: str) -> None:
         """Parse the HTML as unicode text and set self.tree
 
         This is a particularly critical method when running tests, which pull
@@ -148,16 +155,36 @@ class FreeOpinionReport(BaseReport):
         self.tree.rewrite_links(fix_links_in_lxml_tree, base_href=self.url)
         self.trees.append(self.tree)
 
+    @staticmethod
+    def _get_reported_opinion_count(tree):
+        """PACER's "Total number of opinions reported" value for one page.
+
+        :param tree: a parsed lxml tree for a single result page.
+        :return: the reported opinion count as an int.
+        """
+        return int(
+            tree.xpath(
+                '//b[contains(text(), "Total number of opinions reported")]'
+            )[0].tail
+        )
+
+    @property
+    def reported_opinion_count(self):
+        """Total opinions PACER reported across all queried pages for this scrape.
+
+        This is PACER's own count, independent of how many rows we successfully
+        parsed. Comparing it against ``len(self.data)`` surfaces silent parse
+        gaps.
+        """
+        return sum(
+            self._get_reported_opinion_count(tree) for tree in self.trees
+        )
+
     @property
     def data(self):
         results = []
         for tree in self.trees:
-            opinion_count = int(
-                tree.xpath(
-                    '//b[contains(text(), "Total number of '
-                    'opinions reported")]'
-                )[0].tail
-            )
+            opinion_count = self._get_reported_opinion_count(tree)
             if opinion_count == 0:
                 continue
             rows = tree.xpath("(//table)[1]//tr[position() > 1]")

@@ -8,15 +8,22 @@
 
 import re
 from datetime import date, datetime
+from typing import Any
 from urllib.parse import urljoin
+
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import normalize_dashes
-from juriscraper.lib.utils import backscrape_over_paginated_results
+from juriscraper.lib.utils import (
+    PaginatedHtmlBackscrapeSite,
+    backscrape_over_paginated_results,
+)
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
-class Site(OpinionSiteLinear):
+class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
     base_url = "https://www.ndcourts.gov/"
     ordered_fields = [
         "citation",
@@ -39,7 +46,8 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
         self.should_have_results = True
 
-    def _process_html(self) -> None:
+    @override
+    async def _process_html(self) -> None:
         """Most values are inside a <p>: whitespace and
         field names need to be cleaned
 
@@ -133,7 +141,8 @@ class Site(OpinionSiteLinear):
 
         return name.strip(), other_dockets
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract model fields from opinion's document text
 
         Most times, the citations are available in the HTML; sometimes, they
@@ -148,7 +157,7 @@ class Site(OpinionSiteLinear):
         :return: Dict with keys of model's names, and values as dicts
         of models field - value pairs
         """
-        metadata = {}
+        metadata: ExtractedMetaData = {}
         regex = r"20\d{2}\sND\s\d+"
         citation_match = re.search(regex, scraped_text[:1000])
 

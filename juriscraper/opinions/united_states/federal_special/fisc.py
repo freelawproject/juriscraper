@@ -1,5 +1,7 @@
 from urllib.parse import urljoin
 
+from typing_extensions import override
+
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -13,6 +15,7 @@ class Site(OpinionSiteLinear):
         self.do_backscrape = False
         self.should_have_results = True
 
+    @override
     async def _process_html(self) -> None:
         """Parse HTML into case objects
 

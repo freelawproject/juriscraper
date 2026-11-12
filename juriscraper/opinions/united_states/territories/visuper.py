@@ -18,6 +18,8 @@ import re
 from datetime import date
 from urllib.parse import urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import convert_date_string, titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -71,6 +73,7 @@ class Site(OpinionSiteLinear):
         self.should_have_results = True
         self.make_backscrape_iterable(kwargs)
 
+    @override
     async def _process_html(self) -> None:
         """Parse the publication list and fetch each publication's detail.
 

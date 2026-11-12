@@ -102,7 +102,7 @@ class ClusterSite(OpinionSiteLinear):
         """If short-hand attribute names were used, normalize them into full form
         supported by AbstractSite
 
-        :param name: an possible attribute name
+        :param name: a possible attribute name
         :return: the normalized name
         :raises: ValueError if the input name has no normalized form
         """

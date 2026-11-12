@@ -9,6 +9,8 @@ History:
 from datetime import date, datetime
 from urllib.parse import urlencode
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -25,6 +27,7 @@ class Site(OpinionSiteLinear):
         self.url = self.base_url
         self.make_backscrape_iterable(kwargs)
 
+    @override
     def _process_html(self) -> None:
         for row in self.html["results"]:
             date, docket, notes, name = list(row["data"].values())

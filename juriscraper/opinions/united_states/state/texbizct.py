@@ -9,8 +9,10 @@ import re
 from urllib.parse import urljoin
 
 from dateutil import parser
+from typing_extensions import override
 
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 logger = make_default_logger()
@@ -30,6 +32,7 @@ class Site(OpinionSiteLinear):
         self.should_have_results = True
         self.status = "Published"
 
+    @override
     async def _process_html(self) -> None:
         """Parses the HTML content
 
@@ -104,7 +107,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extracts date filed from the scraped text.
 
         :param scraped_text: The text content of the opinion.

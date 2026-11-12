@@ -3,6 +3,7 @@ from enum import Enum
 from typing import ClassVar
 
 from pydantic import UUID4, BaseModel, Field
+from typing_extensions import override
 
 from juriscraper.abstract_parser import LegacyParser
 from juriscraper.state.florida.common import FloridaPaginatedResults
@@ -113,6 +114,7 @@ class FloridaCourtsParser(LegacyParser[list[FloridaCourt]]):
     endpoint: ClassVar[str] = "/courts"
     params: ClassVar[dict[str, str]] = {"fields": "*,locations(*)"}
 
+    @override
     def _parse(self, i: str) -> list[FloridaCourt]:
         results = FloridaPaginatedResults[FloridaCourt].model_validate_json(i)
         return results.results

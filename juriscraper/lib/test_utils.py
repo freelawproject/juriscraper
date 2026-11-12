@@ -21,7 +21,9 @@ class TooSlowWarning(SlownessWarning):
     pass
 
 
-def warn_or_crash_slow_parser(duration, warn_duration=1, max_duration=15):
+def warn_or_crash_slow_parser(
+    duration: float, warn_duration: float = 1, max_duration: float = 15
+) -> str:
     msg = ""
     if duration > max_duration:
         if sys.gettrace() is None and not WARN_SLOW_SCRAPERS:
@@ -44,7 +46,7 @@ def warn_or_crash_slow_parser(duration, warn_duration=1, max_duration=15):
     return msg
 
 
-def warn_generated_compare_file(path_to_compare_file):
+def warn_generated_compare_file(path_to_compare_file: str) -> None:
     warning = f"WARNING: GENERATED COMPARE FILE: {path_to_compare_file}"
     warnings.warn(warning, CompareFileGeneratedWarning, stacklevel=2)
 

@@ -1,9 +1,10 @@
 import email
 import re
 from datetime import date
-from typing import TypedDict
+from typing import Never, TypedDict
 
 from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import (
@@ -11,6 +12,7 @@ from juriscraper.lib.string_utils import (
     convert_date_string,
     harmonize,
 )
+from juriscraper.pacer.docket_report import DocketNumberComponents
 
 from .docket_report import BaseDocketReport
 from .reports import BaseReport
@@ -25,8 +27,9 @@ from .utils import (
 
 
 class DocketEntryType(TypedDict):
-    date_filed: date
+    date_filed: date | None
     description: str
+    short_description: str | None
     document_number: str | None
     document_url: str | None
     pacer_case_id: str | None
@@ -37,9 +40,28 @@ class DocketEntryType(TypedDict):
 
 class DocketType(TypedDict):
     case_name: str
-    date_filed: date
+    date_filed: date | None
     docket_entries: list[DocketEntryType]
     docket_number: str
+    federal_dn_office_code: str | None
+    federal_dn_case_type: str | None
+    federal_dn_judge_initials_assigned: str | None
+    federal_dn_judge_initials_referred: str | None
+    federal_defendant_number: str | None
+
+
+class EmailRecipient(TypedDict):
+    name: str
+    email_addresses: list[str]
+
+
+class NotificationEmailData(TypedDict):
+    court_id: str
+    appellate: bool
+    acms: bool
+    dockets: list[DocketType]
+    contains_attachments: bool
+    email_recipients: list[EmailRecipient]
 
 
 class NotificationEmail(BaseDocketReport, BaseReport):
@@ -79,7 +101,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         "vaeb",
     ]
 
-    def __init__(self, court_id):
+    def __init__(self, court_id: str):
         self.court_id = court_id
         self.content_type = None
         self.appellate = None
@@ -97,26 +119,36 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         super().__init__(court_id)
 
     @property
-    def data(self):
+    def data(self) -> NotificationEmailData | dict[Never, Never]:
         # Emails with attached images should be ignored.
         if self.is_valid is False or self.tree is None or self.image_attached:
             return {}
 
-        base = {
-            "court_id": self.court_id,
-        }
-        parsed = {
-            "appellate": self._is_appellate(),
-            "acms": self._is_acms(),
-            "dockets": self._get_dockets(),
-        }
+        # Note: Order of execution is very important for the method calls
+        # below. Instance methods modify state that will affect the behavior of
+        # later methods. In particular, `_get_email_recipients_with_links()`
+        # varies with `docket_numbers` which is accumulated independently by
+        # `_parse_docket_number()`.
+        court_id = self.court_id
+        appellate = self._is_appellate()
+        acms = self._is_acms()
+        dockets = self._get_dockets()
+
         if self.content_type == "text/plain":
-            parsed["contains_attachments"] = self._contains_attachments_plain()
-            parsed["email_recipients"] = self._get_email_recipients_plain()
+            contains_attachments = self._contains_attachments_plain()
+            email_recipients = self._get_email_recipients_plain()
         else:
-            parsed["contains_attachments"] = self._contains_attachments()
-            parsed["email_recipients"] = self._get_email_recipients()
-        return {**base, **parsed}
+            contains_attachments = self._contains_attachments()
+            email_recipients = self._get_email_recipients()
+
+        return {
+            "court_id": court_id,
+            "appellate": appellate,
+            "acms": acms,
+            "dockets": dockets,
+            "contains_attachments": contains_attachments,
+            "email_recipients": email_recipients,
+        }
 
     def _is_appellate(self) -> bool:
         """Gets the email notice type from the email text.
@@ -224,7 +256,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
     def _parse_docket_number(
         self, current_node: HtmlElement
-    ) -> tuple[str | None, dict[str, str | None]]:
+    ) -> tuple[str | None, DocketNumberComponents]:
         """Gets a docket number from the email text and also parse the docket
         number components.
 
@@ -261,7 +293,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
     def _parse_docket_number_plain(
         self,
-    ) -> tuple[str | None, dict[str, str | None]]:
+    ) -> tuple[str | None, DocketNumberComponents]:
         """Gets a docket number from the plain email text and also parse the
         docket number components.
 
@@ -276,7 +308,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         self.raw_docket_numbers.update(set(docket_number))
         return self._parse_docket_number_strs(docket_number)
 
-    def _get_date_filed(self) -> date:
+    def _get_date_filed(self) -> date | None:
         """Gets the filing date from the email text
 
         :returns: Date filed as date object
@@ -288,7 +320,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             date_filed[0].lower().replace("filed on ", "")
         )
 
-    def _get_document_number(self, current_node: HtmlElement) -> str:
+    def _get_document_number(self, current_node: HtmlElement) -> str | None:
         """Gets the specific document number the notification is referring to
 
         :param  current_node: The relative lxml.HtmlElement
@@ -302,7 +334,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         words = re.split(r"\(|\s", text_number)
         return words[0]
 
-    def _get_document_number_plain(self) -> str:
+    def _get_document_number_plain(self) -> str | None:
         """Gets the specific document number the notification is referring to
 
         :returns: Document number, cleaned
@@ -315,7 +347,9 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         else:
             return None
 
-    def _get_doc1_anchor(self, current_node: HtmlElement) -> str:
+    def _get_doc1_anchor(
+        self, current_node: HtmlElement
+    ) -> HtmlElement | None:
         """Safely retrieves the anchor tag for the document
 
         :param  current_node: The relative lxml.HtmlElement
@@ -470,7 +504,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         return associated_documents > 1
 
-    def _get_dockets(self) -> DocketType:
+    def _get_dockets(self) -> list[DocketType]:
         """Get all the dockets mentioned in the notification.
 
         Right now multiple docket notifications are only supported for text/html
@@ -480,6 +514,40 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         :return: DocketType Dict
         """
+
+        def create_docket_entry(
+            case_name: str,
+            date_filed: date | None,
+            docket_entries: list[DocketEntryType],
+            docket_number: str,
+            docket_number_components: DocketNumberComponents,
+        ) -> DocketType:
+            return {
+                "case_name": case_name,
+                "docket_number": docket_number,
+                "date_filed": date_filed,
+                "docket_entries": docket_entries,
+                "federal_dn_office_code": (
+                    docket_number_components["federal_dn_office_code"]
+                ),
+                "federal_dn_case_type": (
+                    docket_number_components["federal_dn_case_type"]
+                ),
+                "federal_dn_judge_initials_assigned": (
+                    docket_number_components[
+                        "federal_dn_judge_initials_assigned"
+                    ]
+                ),
+                "federal_dn_judge_initials_referred": (
+                    docket_number_components[
+                        "federal_dn_judge_initials_referred"
+                    ]
+                ),
+                "federal_defendant_number": (
+                    docket_number_components["federal_defendant_number"]
+                ),
+            }
+
         dockets = []
         if self.content_type == "text/plain":
             docket_number, docket_number_components = (
@@ -488,14 +556,13 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             # Cache the docket number for its later use.
             self.docket_numbers.append(docket_number)
 
-            docket = {
-                "case_name": self._get_case_name_plain(),
-                "docket_number": docket_number,
-                "date_filed": None,
-                "docket_entries": self._get_docket_entries(),
-            }
-            # Include the docket_number components.
-            docket.update(docket_number_components)
+            docket = create_docket_entry(
+                case_name=self._get_case_name_plain(),
+                docket_number=docket_number,
+                date_filed=None,
+                docket_entries=self._get_docket_entries(),
+                docket_number_components=docket_number_components,
+            )
             dockets.append(docket)
         elif self._is_acms():
             docket_number, docket_number_components = (
@@ -503,14 +570,13 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             )
             # Cache the docket number and case name for its later use.
             self.docket_numbers.append(docket_number)
-            docket = {
-                "case_name": self._get_case_name(self.tree),
-                "docket_number": docket_number,
-                "date_filed": None,
-                "docket_entries": self._get_docket_entries(self.tree),
-            }
-            # Include the docket_number components.
-            docket.update(docket_number_components)
+            docket = create_docket_entry(
+                case_name=self._get_case_name(self.tree),
+                docket_number=docket_number,
+                date_filed=None,
+                docket_entries=self._get_docket_entries(self.tree),
+                docket_number_components=docket_number_components,
+            )
             dockets.append(docket)
         else:
             dockets_table = self.tree.xpath(
@@ -529,14 +595,13 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 docket_number = docket_number
                 # Cache the docket number and case name for its later use.
                 self.docket_numbers.append(docket_number)
-                docket = {
-                    "case_name": self._get_case_name(docket_table),
-                    "docket_number": docket_number,
-                    "date_filed": None,
-                    "docket_entries": self._get_docket_entries(docket_table),
-                }
-                # Include the docket_number components.
-                docket.update(docket_number_components)
+                docket = create_docket_entry(
+                    case_name=self._get_case_name(docket_table),
+                    docket_number=docket_number,
+                    date_filed=None,
+                    docket_entries=self._get_docket_entries(docket_table),
+                    docket_number_components=docket_number_components,
+                )
                 dockets.append(docket)
 
             if len(dockets) > 1:
@@ -603,7 +668,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             if document_number and document_number == "doc":
                 document_number = None
 
-            entries = [
+            entries: list[DocketEntryType] = [
                 {
                     "date_filed": self._get_date_filed(),
                     "description": description,
@@ -849,12 +914,14 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         return clean_string(short_description)
 
-    def _get_emaiL_recipients_without_links(self, recipient_lines):
+    def _get_emaiL_recipients_without_links(
+        self, recipient_lines: str
+    ) -> list[EmailRecipient]:
         """Gets all the email recipients of the notification
 
         :returns: List of email recipients with names and email addresses
         """
-        email_recipients = []
+        email_recipients: list[EmailRecipient] = []
         for line in recipient_lines:
             if "@" in line:
                 comma_separated = list(map(clean_string, line.split(",")))
@@ -874,7 +941,9 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 )
         return email_recipients
 
-    def _get_email_recipients_with_links(self, text_content):
+    def _get_email_recipients_with_links(
+        self, text_content: str
+    ) -> list[EmailRecipient]:
         """Gets all the email recipients of the notification if their emails are in links
 
         :returns: List of email recipients with names and email addresses
@@ -908,35 +977,49 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             text_content = re.sub(replacement[0], replacement[1], text_content)
 
         recipient_parts = text_content.strip().split(" ")
-        email_recipients = []
+        email_recipients: list[EmailRecipient] = []
         for recipient_part in recipient_parts:
             if not len(email_recipients) and "@" not in recipient_part:
-                email_recipients.append({"name": recipient_part})
+                email_recipients.append(
+                    {
+                        "name": recipient_part,
+                        "email_addresses": [],
+                    }
+                )
             else:
                 if not len(email_recipients):
-                    email_recipients.append({"name": ""})
+                    email_recipients.append(
+                        {
+                            "name": "",
+                            "email_addresses": [],
+                        }
+                    )
                 last_recipient = email_recipients[-1]
                 if "@" in recipient_part:
-                    if not last_recipient.get("email_addresses"):
-                        last_recipient["email_addresses"] = []
                     last_recipient["email_addresses"].append(
                         re.sub(r",", "", recipient_part)
                     )
                 elif last_recipient.get("email_addresses") and len(
                     last_recipient["email_addresses"]
                 ):
-                    email_recipients.append({"name": recipient_part})
+                    email_recipients.append(
+                        {
+                            "name": recipient_part,
+                            "email_addresses": [],
+                        }
+                    )
                 else:
                     last_recipient["name"] += f" {recipient_part}"
-        return list(
-            filter(
-                lambda recipient: recipient.get("email_addresses", False)
-                and len(recipient.get("email_addresses")) > 0,
-                email_recipients,
+        return [
+            recipient
+            for recipient in email_recipients
+            if (
+                recipient["email_addresses"]
+                and len(recipient["email_addresses"]) > 0
             )
-        )
+        ]
 
-    def _get_email_recipients(self) -> list[dict[str, str | list[str]]]:
+    def _get_email_recipients(self) -> list[EmailRecipient]:
         """Gets all the email recipients whether they come from plain text or more HTML formatting
 
         :returns: List of email recipients with names and email addresses
@@ -960,14 +1043,12 @@ class NotificationEmail(BaseDocketReport, BaseReport):
 
         return self._get_email_recipients_with_links(" ".join(recipient_lines))
 
-    def _get_email_recipients_plain(
-        self,
-    ) -> list[dict[str, str | list[str]]]:
+    def _get_email_recipients_plain(self) -> list[EmailRecipient]:
         """Gets all the email recipients whether they come from plain text or more HTML formatting
 
         :returns: List of email recipients with names and email addresses
         """
-        email_recipients = []
+        email_recipients: list[EmailRecipient] = []
         mail_body = self.tree.text_content()
         regex = r"^.*?Notice has been electronically mailed to:(.*?)$"
 
@@ -1030,7 +1111,8 @@ class S3NotificationEmail(NotificationEmail):
         cleaned_s3_line_ends = self._combine_lines_with_proper_spaces(text)
         return cleaned_s3_line_ends
 
-    def _parse_text(self, text):
+    @override
+    def _parse_text(self, text: str) -> None:
         """MIME Parser from file text, text/html and text/plain messages are supported.
         This obtains the email payload decoded as UTF-8.
         """

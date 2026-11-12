@@ -1,5 +1,7 @@
 from urllib.parse import urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.opinions.united_states.state import wis
 
@@ -28,7 +30,8 @@ class Site(wis.Site):
                 return True
         return False
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         """Process Wisconsin Ct of Appeals rows
 
         :return: None

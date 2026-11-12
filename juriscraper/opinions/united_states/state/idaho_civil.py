@@ -19,8 +19,11 @@ import re
 from datetime import date, datetime
 from urllib.parse import urlencode, urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -69,6 +72,7 @@ class Site(OpinionSiteLinear):
 
         return urljoin(self.base_url, f"{self.list_path}?{urlencode(params)}")
 
+    @override
     async def _process_html(self) -> None:
         if not isinstance(self.html, dict):
             logger.info("Unexpected response type %s", self.html)
@@ -166,7 +170,7 @@ class Site(OpinionSiteLinear):
         doc = self._return_response_text_object()
         return doc or {}
 
-    async def _download_backwards(self, d: tuple) -> None:
+    async def _download_backwards(self, d: tuple[date, date]) -> None:
         start, _ = d
         self._back_start = start
         self._back_done = False
@@ -210,7 +214,8 @@ class Site(OpinionSiteLinear):
         )
         self.back_scrape_iterable = [(start, end)]
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract lower court from the scraped text.
 
         :param scraped_text: The text to extract from.
@@ -229,7 +234,7 @@ class Site(OpinionSiteLinear):
             r"County[.,]\s*(?P<judge>.+?), (?:Senior )?District Judge"
         )
 
-        result = {}
+        result: ExtractedMetaData = {}
         if match := pattern.search(scraped_text):
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")

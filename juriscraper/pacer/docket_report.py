@@ -2,6 +2,8 @@ import copy
 import pprint
 import re
 import sys
+from datetime import date, datetime
+from typing import Literal, TypedDict, overload
 
 from dateutil.tz import gettz
 from lxml import etree
@@ -30,6 +32,14 @@ from .utils import (
 logger = make_default_logger()
 
 
+class DocketNumberComponents(TypedDict):
+    federal_dn_office_code: str | None
+    federal_dn_case_type: str | None
+    federal_dn_judge_initials_assigned: str | None
+    federal_dn_judge_initials_referred: str | None
+    federal_defendant_number: str | None
+
+
 class BaseDocketReport:
     """A small class to hold functions common to the InternetArchive report
     and the PACER DocketReport
@@ -55,7 +65,7 @@ class BaseDocketReport:
     docket_number_jpml = re.compile(r"(MDL No.\s+\d*)")
     docket_number_appellate_regex = re.compile(r"(\d\d-\d+)")
 
-    def __init__(self, court_id):
+    def __init__(self, court_id: str):
         self.court_id = court_id
         if self.court_id.endswith("b"):
             self.is_bankruptcy = True
@@ -114,7 +124,26 @@ class BaseDocketReport:
                     atty_cache[atty["name"]] = atty["contact"]
         return parties
 
-    def _get_value(self, regex, query_strings, cast_to_date=False):
+    @overload
+    def _get_value(
+        self,
+        regex: re.Pattern[str],
+        query_strings: list[str] | str,
+        cast_to_date: Literal[True],
+    ) -> date | None: ...
+    @overload
+    def _get_value(
+        self,
+        regex: re.Pattern[str],
+        query_strings: list[str] | str,
+        cast_to_date: Literal[False] = ...,
+    ) -> str: ...  # Note: empty string is sent instead of `None`
+    def _get_value(
+        self,
+        regex: re.Pattern[str],
+        query_strings: list[str] | str,
+        cast_to_date: bool = False,
+    ) -> str | date | None:
         """Find the matching value for a regex.
 
         Iterate over a list of values and return group(1) for the first that
@@ -161,7 +190,7 @@ class BaseDocketReport:
             return s
 
     @staticmethod
-    def _return_default_dn_components() -> dict[str, str | None]:
+    def _return_default_dn_components() -> DocketNumberComponents:
         """Return a dictionary with default values for the docket_number
         components to return on non-valid docket_numbers.
 
@@ -178,7 +207,7 @@ class BaseDocketReport:
 
     def _parse_dn_components(
         self, potential_docket_number
-    ) -> dict[str, str | None]:
+    ) -> DocketNumberComponents:
         """Parse the potential docket number into its components.
 
         :param potential_docket_number: The docket number string to be parsed.
@@ -257,7 +286,7 @@ class BaseDocketReport:
 
     def _parse_docket_number_strs(
         self, potential_docket_numbers: list[_ElementUnicodeResult]
-    ) -> tuple[str | None, dict[str, str | None]]:
+    ) -> tuple[str | None, DocketNumberComponents]:
         """Parse docket numbers from a list of potential ones. Also parse
         the docket number components.
 
@@ -289,7 +318,17 @@ class BaseDocketReport:
 
         return None, self._return_default_dn_components()
 
-    def get_datetime_from_tree(self, path, cast_to_date=False):
+    @overload
+    def get_datetime_from_tree(
+        self, path: str, cast_to_date: Literal[True]
+    ) -> date | None: ...
+    @overload
+    def get_datetime_from_tree(
+        self, path: str, cast_to_date: Literal[False] = ...
+    ) -> datetime | None: ...
+    def get_datetime_from_tree(
+        self, path: str, cast_to_date: bool = False
+    ) -> datetime | date | None:
         """Parse a datetime from the XML located at node.
 
         If cast_to_date is true, the datetime object will be converted to a
@@ -478,7 +517,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         "Submission already made, please wait for response from server",
     ]
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None):
         BaseDocketReport.__init__(self, court_id)
         BaseReport.__init__(self, court_id, pacer_session)
 
@@ -755,7 +794,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             return True
         return False
 
-    def _get_party_type(self, row, cells, party):
+    def _get_party_type(self, row, cells, party: dict) -> tuple[dict, bool]:
         """Get the party type info and return it as a dict.
 
         :param row: The tr we're currently processing.
@@ -780,6 +819,8 @@ class DocketReport(BaseDocketReport, BaseReport):
             elif len(cells) == 3:
                 # Some courts have malformed HTML that requires extra work.
                 return {"type": re.split("----*", s)[0]}, False
+            else:
+                raise ValueError("Unrecognizable party row")
         elif all(
             [self.is_bankruptcy, len(cells) == 3, cells[0].xpath(".//i/b")]
         ):
@@ -822,13 +863,13 @@ class DocketReport(BaseDocketReport, BaseReport):
         # Because criminal data spans multiple trs, the way we do this is by
         # keeping track of which party we're currently working on. Then, when
         # we get useful criminal data, we add it to that party.
-        empty_criminal_data = {
+        empty_criminal_data: dict = {
             "counts": [],
             "complaints": [],
             "highest_offense_level_opening": "",
             "highest_offense_level_terminated": "",
         }
-        section_info = {
+        section_info: dict = {
             "current_section": None,
             "header_info": None,
             "changed": False,
@@ -1339,7 +1380,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             view_multiple_documents = True
         docket_entries = []
         for row in docket_entry_rows:
-            de = {}
+            de: dict = {}
             cells = row.xpath("./td[not(./input)]")
 
             # If view_multiple_documents report, remove the "checkbox" cell on
@@ -1429,7 +1470,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         self._is_adversary_proceeding = adversary_proceeding
         return adversary_proceeding
 
-    def query(
+    async def query(
         self,
         pacer_case_id,
         date_range_type="Filed",
@@ -1542,7 +1583,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             % (pacer_case_id, query_params)
         )
 
-        self.response = self.session.post(
+        self.response = await self.session.post(
             f"{self.url}?1-L_1_0-1", data=query_params
         )
         self.parse()
@@ -1695,7 +1736,7 @@ class DocketReport(BaseDocketReport, BaseReport):
 
     def _parse_docket_number(
         self,
-    ) -> tuple[str | None, dict[str, str | None]]:
+    ) -> tuple[str | None, DocketNumberComponents]:
         """Parse a valid docket number and its components.
 
         :return: A two-tuple: the docket_number and a dict containing the

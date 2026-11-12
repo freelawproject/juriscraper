@@ -20,9 +20,12 @@ History:
 import re
 from datetime import date
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.judge_parsers import normalize_judge_names
 from juriscraper.lib.string_utils import convert_date_string, titlecase
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -40,7 +43,8 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.make_backscrape_iterable(kwargs)
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         for row in self.html.xpath(self.path_root):
             cite, name, date = row.xpath("./td")
 
@@ -61,7 +65,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract out lots of data from Maine
 
         :param scraped_text: The first page of content
@@ -98,7 +103,7 @@ class Site(OpinionSiteLinear):
             date_argued = convert_date_string(date_argued)
             date_argued_str = date_argued.strftime("%Y-%m-%d")
 
-        metadata = {
+        metadata: ExtractedMetaData = {
             "Opinion": {
                 "author_str": normalize_judge_names(author_str),
                 "per_curiam": per_curiam,

@@ -15,8 +15,11 @@ import re
 from datetime import date, datetime
 from urllib.parse import urlencode
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -37,10 +40,9 @@ class Site(OpinionSiteLinear):
         self.set_url()
         self.make_backscrape_iterable(kwargs)
         self.needs_special_headers = True
-        self.request["headers"] = {
-            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
-        }
+        self.request["headers"] = {"User-Agent": self.chrome_user_agent}
 
+    @override
     def _process_html(self) -> None:
         """Process HTML into case dictionaries
 
@@ -115,7 +117,8 @@ class Site(OpinionSiteLinear):
 
         self.url = f"{self.base_url}?{urlencode(params)}"
 
-    def extract_from_text(self, scraped_text: str):
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract a neutral citation if it exists, and update court and status
 
         Some documents have this heading:
@@ -131,7 +134,7 @@ class Site(OpinionSiteLinear):
         > This opinion is subject to motions for reargument under V.R.A.P. 40
         > as well as formal revision before publication in the Vermont Reports.
         """
-        metadata = {}
+        metadata: ExtractedMetaData = {}
         cite_regex = r"\n\s*\d{4} VT \d+\s*\n"
         match = re.search(cite_regex, scraped_text[:1000])
         if match:

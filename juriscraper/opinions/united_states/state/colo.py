@@ -18,9 +18,11 @@ from datetime import date, datetime, timedelta
 from urllib.parse import urlencode
 
 from lxml import etree, html
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -141,6 +143,7 @@ class Site(OpinionSiteLinear):
         case["status"] = "Published" if case["citation"] else "Unpublished"
         return case
 
+    @override
     async def _process_html(self) -> None:
         search_json = self.html
         total_count = search_json["count"]
@@ -289,9 +292,10 @@ class Site(OpinionSiteLinear):
         )
         return search_json
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         docket_pattern = re.compile(self.docket_number_regex)
-        metadata = {}
+        metadata: ExtractedMetaData = {}
         if match := docket_pattern.search(scraped_text):
             metadata = {"Docket": {"docket_number": match.group(0)}}
 

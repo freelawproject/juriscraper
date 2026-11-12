@@ -1,3 +1,5 @@
+from typing_extensions import override
+
 from juriscraper.opinions.united_states.state import mo
 
 
@@ -8,7 +10,8 @@ class Site(mo.Site):
         self.court = "Southern"
         self.url = self.build_url()
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         for row in self.html.xpath("//div[@class='margin-bottom-15']"):
             date = row.xpath(".//input")[0].value
             for opinion in row.xpath(".//div[@class='list-group-item-text']"):

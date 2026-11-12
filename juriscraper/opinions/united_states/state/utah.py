@@ -1,6 +1,9 @@
 import re
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -12,7 +15,8 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.should_have_results = True
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         for row in self.html.xpath(
             "//div[@id='content']//p[a[contains(@href, '.pdf')]]"
         ):
@@ -43,7 +47,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract lower court from the scraped text.
 
         :param scraped_text: The text to extract from.

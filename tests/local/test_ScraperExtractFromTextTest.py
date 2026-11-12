@@ -162,8 +162,115 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.territories.nmariana": [
             (
-                """#E-FILED\nCNMI SUPREME COURT\nE-filed: Apr 18 2022 06:53AM\nClerk Review: Apr 18 2022 06:54AM Filing ID: 67483376\nCase No.: 2021-SCC-0017-CIV\nJudy Aldan""",
-                {"Docket": {"docket_number": "2021-SCC-0017-CIV"}},
+                # 2022 MP 2: the e-filing stamp has the re-filing case number
+                """CNMI SUPREME COURT\nFiling ID: 74026455\nCase No.: ADM-2024\nJudy Aldan\n\n                       Defendant-Appellant.\n\n              Supreme Court No. 2021-SCC-0007-CIV\n""",
+                {
+                    "Docket": {
+                        "docket_number": "2021-SCC-0007-CIV",
+                        "docket_number_raw": "Supreme Court No. 2021-SCC-0007-CIV",
+                    }
+                },
+            ),
+            (
+                # 2016 MP 17: consolidated appeals
+                """                Defendants-Appellees.\n\n  Supreme Court Nos. 2013-SCC-0006-CIV & 2013-SCC-0025-CIV\n                         (Consolidated)\n""",
+                {
+                    "Docket": {
+                        "docket_number": "2013-SCC-0006-CIV & 2013-SCC-0025-CIV",
+                        "docket_number_raw": "Supreme Court Nos. 2013-SCC-0006-CIV & 2013-SCC-0025-CIV",
+                    }
+                },
+            ),
+            (
+                # 2005 MP 15: "Appeal" label, used in 2004-2007
+                """                         Supreme Court Appeal Nos. 04-012-GA & 04-013-GA\n                                     Civil Action No. 97-0486\n""",
+                {
+                    "Docket": {
+                        "docket_number": "04-012-GA & 04-013-GA",
+                        "docket_number_raw": "Supreme Court Appeal Nos. 04-012-GA & 04-013-GA",
+                    }
+                },
+            ),
+            (
+                # 2006 MP 22: "Consolidated" in the label
+                """     Supreme Court Consolidated Appeal Nos. 04-0024-GA and 05-0006-GA\n                            Superior Court Civil Case No. 02-0037\n""",
+                {
+                    "Docket": {
+                        "docket_number": "04-0024-GA and 05-0006-GA",
+                        "docket_number_raw": "Supreme Court Consolidated Appeal Nos. 04-0024-GA and 05-0006-GA",
+                    }
+                },
+            ),
+            (
+                # 1996 MP 20: older label in a pleading paper ")" column
+                """COMMONWEALTH OF THE NORTHERN             )                       APPEAL NO. 95-006\nMARIANA ISLANDS,                         )                       CRIMINAL CASE NO. 94-136\n""",
+                {
+                    "Docket": {
+                        "docket_number": "95-006",
+                        "docket_number_raw": "Appeal No. 95-006",
+                    }
+                },
+            ),
+            (
+                # 1996 MP 12
+                """                                         Original Action No. 96-001\n""",
+                {
+                    "Docket": {
+                        "docket_number": "96-001",
+                        "docket_number_raw": "Original Action No. 96-001",
+                    }
+                },
+            ),
+            (
+                # 2003 MP 8
+                """                          CERTIFIED QUESTION NO. 02-001-OA\n""",
+                {
+                    "Docket": {
+                        "docket_number": "02-001-OA",
+                        "docket_number_raw": "Certified Question No. 02-001-OA",
+                    }
+                },
+            ),
+            (
+                # A "Supreme Court No." label past `docket_text_limit` is a
+                # citation in the opinion body, not the header
+                " the judgment.\n" * 200
+                + """     Supreme Court No. 2009-SCC-0031-GA\n""",
+                {},
+            ),
+            (
+                # 2009 MP 11: the next line's superior court number is left out
+                """                     SUPREME COURT NO. 2009-SCC-0031-GA\n                         SUPERIOR COURT NO. 09-0066E\n""",
+                {
+                    "Docket": {
+                        "docket_number": "2009-SCC-0031-GA",
+                        "docket_number_raw": "Supreme Court No. 2009-SCC-0031-GA",
+                    }
+                },
+            ),
+            (
+                # 2025 MP 10: starred in the listing, but per curiam
+                """Case No.: 2024-SCC-0024-CQU\n            Supreme Court No. 2024-SCC-0024-CQU\n                         SLIP OPINION\nPER CURIAM:\n¶1      Defendant-Appellant""",
+                {
+                    "Docket": {
+                        "docket_number": "2024-SCC-0024-CQU",
+                        "docket_number_raw": "Supreme Court No. 2024-SCC-0024-CQU",
+                    },
+                    "Opinion": {"author_str": "", "per_curiam": True},
+                },
+            ),
+            (
+                # 3 N.M.I. 400: a "(per curiam)" citation isn't the heading
+                """VILLAGOMEZ, Justice:\n     See Sablan v. Iginoef, 1 N.M.I. 190 (1990) (per curiam).""",
+                {},
+            ),
+            (
+                # 2005 MP 20: a PER CURIAM order appended after an authored
+                # opinion, past `per_curiam_text_limit`
+                """     Associate Justice Castro delivered the opinion of the Court.\n"""
+                + " the judgment.\n" * 500
+                + """     PER CURIAM:""",
+                {},
             ),
         ],
         "juriscraper.opinions.united_states.federal_special.cavc": [
@@ -202,6 +309,20 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.nysupct_commercial": [
             (
+                # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50461.shtml
+                "<!DOCTYPE html><html><body><div>\n<div>\n<h1>Greason v Nahmad</h1>\n<p>2026 NY Slip Op 50461(U)</p>\n<p>April 3, 2026</p>\n<p>Supreme Court, New York County</p>\n<p>Joel M. Cohen, J.</p>\n<p>Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</p>\n<p>This opinion is uncorrected and will not be published in the printed Official Reports.</p>\n</div>\n<div><b>Digest-Index Classification: </b>Replevin—Stolen Chattel—Action to Recover Painting Seized during Nazi Era</div>\n<div>\n<p>Edward W. Greason, Plaintiff,</p>\n<p>v</p>\n<p>David Nahmad, INTERNATIONAL ART CENTER, S.A., Defendants.</p>\n</div>\n<p>Supreme Court, New York County</p>\n<p>Decided on April 3, 2026</p>\n<p>Index No. 650646/2014</p>\n<div>\n<p>Counsel for Plaintiff:</p>\n<p>PHILLIP C LANDRIGAN </p>\n<p>Landrigan &amp; Aurnou LLP </p>\n<p>235 Mamaroneck Avenue Suite 201, </p>\n<p>White Plains, NY 10605 </p>\n<p>Counsel for Defendants:</p>\n<p>Aaron Richard Golub </p>\n<p>Aaron Richard Golub, Esquire, P.C.</p>\n<p>42 E 64th Street </p>\n<p>New York, NY 10065</p>\n</div>\n<p>Joel M. Cohen, J.</p>\n",
+                {
+                    "Docket": {
+                        "docket_number": "Index No. 650646/2014",
+                        "case_name_full": "Edward W. Greason v. David Nahmad, INTERNATIONAL ART CENTER, S.A.",
+                    },
+                    "Opinion": {"author_str": "Joel M. Cohen"},
+                    "OpinionCluster": {
+                        "case_name_full": "Edward W. Greason v. David Nahmad, INTERNATIONAL ART CENTER, S.A."
+                    },
+                },
+            ),
+            (
                 # https://nycourts.gov/reporter/3dseries/2023/2023_51345.htm
                 """<table width="80%" border="1" cellspacing="2" cellpadding="5">\n<tbody><tr>\n<td align="center"><b>1125 Morris Ave. Realty LLC v Title Issues Agency\nLLC</b></td>\n</tr>\n<tr>\n<td align="center">2023 NY Slip Op 51345(U) [81 Misc 3d 1215(A)]</td>\n</tr>\n<tr>\n<td align="center">Decided on December 12, 2023</td>\n</tr>\n<tr>\n<td align="center">Supreme Court, Bronx County</td>\n</tr>\n<tr>\n<td align="center">Gomez, J.</td>\n</tr>\n<tr>\n<td align="center"><font color="#FF0000">Published by <a href="https://www.courts.state.ny.us/reporter/">New York State Law Reporting\nBureau</a> pursuant to Judiciary Law § 431.</font></td>\n</tr>\n<tr>\n<td align="center"><font color="#FF0000">This opinion is uncorrected and will not be\npublished in the printed Official Reports.</font></td></tr>\n</tbody></table><br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tbody><tr><td><br><div align="center"><b><font size="+1">1125 Morris\nAvenue Realty LLC, Plaintiff(s),\n\n<br><br>against<br><br>Title Issues Agency LLC, MARTIN E. KOFMAN,\nSTEVEN LOWENTHAL, ESQ., and LOWENTHAL PC, "JOHN DOE," "JANE DOE,"\n"ABC CORPORATION," AND "XYZ CORPORATION,"\nDefendant(s).</font></b></div><br><br>\n\n</td></tr></tbody></table><br><br>Index No. 809156/23E\n<br><br><br>\n<br>Counsel for plaintiff: Law Office of Jan V Farensbach<br><br>Counsel for\ndefendants: Rosenberg &amp; Steinmetz PC<br>\n<br>\n\n\n<br>Fidel E. Gomez, J.\n\n<p>In this action for, <i>inter alia</i>, breach of contract, defendants TITLE ISSUES""",
                 {
@@ -215,9 +336,29 @@ class ScraperExtractFromText(unittest.TestCase):
                         "case_name_full": '1125 Morris Avenue Realty LLC, Plaintiff(s), against Title Issues Agency LLC, MARTIN E. KOFMAN, STEVEN LOWENTHAL, ESQ., and LOWENTHAL PC, "JOHN DOE," "JANE DOE," "ABC CORPORATION," AND "XYZ CORPORATION," Defendant(s).'
                     },
                 },
-            )
+            ),
         ],
         "juriscraper.opinions.united_states.state.nysupct": [
+            (
+                # https://www.nycourts.gov/reporter/pdfs/2025/2025_35880.pdf
+                "FILED: DUTCHESS COUNTY CLERK 09/26/2025 04:08 PM   INDEX NO. 2023-50982\nNYSCEF DOC. NO. 80   RECEIVED NYSCEF: 09/25/2025\n",
+                {"Docket": {"docket_number": "Index No. 2023-50982"}},
+            ),
+            (
+                # https://www.nycourts.gov/reporter/pdfs/2025/2025_35882.pdf
+                "FILED: MONROE COUNTY CLERK 10/09/2025 10:11 AM   INDEX NO. E2020010270\nNYSCEF DOC. NO. 175   RECEIVED NYSCEF: 10/09/2025\n",
+                {"Docket": {"docket_number": "Index No. E2020010270"}},
+            ),
+            (
+                # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51324.shtml
+                "<!DOCTYPE html><html><body><div>\n<div>\n<h1>MJ v MJ</h1>\n<p>2026 NY Slip Op 51324(U) [89 Misc 3d 1248(A)]</p>\n<p>August 18, 2026</p>\n<p>Supreme Court, Nassau County</p>\n<p>Edmund M. Dane, J.</p>\n<p>Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</p>\n<p>This opinion is uncorrected and will not be published in the printed Official Reports.</p>\n</div>\n<div><b>Digest-Index Classification: </b>Dismissal and Nonsuit—Failure to Appear—Deliberate Violation of Court Rules. Husband and Wife and Other Domestic Relationships—Counsel Fees—Party's Obstructionist Tactics</div>\n<div>\n<p>MJ, Plaintiff,</p>\n<p>v</p>\n<p>MJ, Defendant.</p>\n</div>\n<p>Supreme Court, Nassau County</p>\n<p>Decided on August 18, 2026</p>\n<p>Index No. XXXXXX/2020</p>\n<p>Edmund M. Dane, J.</p>\n",
+                {
+                    "Citation": "89 Misc 3d 1248(A)",
+                    "Docket": {"case_name_full": "MJ v. MJ"},
+                    "Opinion": {"author_str": "Edmund M. Dane"},
+                    "OpinionCluster": {"case_name_full": "MJ v. MJ"},
+                },
+            ),
             (
                 # https://www.nycourts.gov/reporter/pdfs/2019/2019_32654.pdf
                 """Deboer v Friedman\n2019 NY Slip Op 32654(U)\nSeptember 4, 2019\nSupreme Court, New York County\nDocket Number: 654329/2018\nJudge: Arthur F. Engoron\n""",
@@ -269,6 +410,27 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.nycountyct": [
             (
+                # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51543.shtml
+                "<!DOCTYPE html><html><body><div>\n<div>\n<h1>People v J.A.</h1>\n<p>2026 NY Slip Op 51543(U)</p>\n<p>July 17, 2026</p>\n<p>County Court, Albany County</p>\n<p>Ricja Rice, J.</p>\n<p>Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</p>\n<p>This opinion is uncorrected and will not be published in the printed Official Reports.</p>\n</div>\n<div><b>Digest-Index Classification: </b>Infants—Juvenile Offenders—Removal to Family Court</div>\n<div>\n<p>The People of the State of New York,</p>\n<p>v</p>\n<p>J.A. (A Juvenile Offender), Juvenile Offender.</p>\n</div>\n<p>County Court, Albany County</p>\n<p>Decided on July 17, 2026</p>\n<p>FYC No. 70542-26/001</p>\n<div>\n<p>Nicholas Pittari, Esq., for the People</p>\n<p>Timothy Berry Esq., for the Juvenile Offender.</p>\n</div>\n<p>Ricja Rice, J.</p>\n",
+                {
+                    "Docket": {
+                        "case_name_full": "The People of the State of "
+                        "New York v. J.A. (A "
+                        "Juvenile Offender), "
+                        "Juvenile Offender.",
+                        "docket_number": "FYC No. 70542-26/001",
+                    },
+                    "Opinion": {"author_str": "Ricja Rice"},
+                    "OpinionCluster": {
+                        "case_name_full": "The People of the "
+                        "State of New York "
+                        "v. J.A. (A Juvenile "
+                        "Offender), Juvenile "
+                        "Offender."
+                    },
+                },
+            ),
+            (
                 # https://www.nycourts.gov/reporter/pdfs/2018/2018_33955.pdf
                 """People v Wiltshire\n2018 NY Slip Op 33955(U)\nAugust 15, 2018\nCounty Court, Westchester County\nDocket Number: 18-0465-01\nJudge: Larry J. Schwartz\n""",
                 {
@@ -293,6 +455,31 @@ class ScraperExtractFromText(unittest.TestCase):
             ),
         ],
         "juriscraper.opinions.united_states.state.nycivct": [
+            (
+                # https://www.nycourts.gov/reporter/pdfs/2026/2026_32217.pdf
+                "CIVIL COURT OF THE CITY OF NEW YORK\nCOUNTY OF QUEENS: HOUSING PART D\n------------------------------------------------------------------x\nFEDERAL NATIONAL MORTGAGE ASSOCIATION,   Index No. LT-300363-26/QU\n",
+                {"Docket": {"docket_number": "Index No. LT-300363-26/QU"}},
+            ),
+            (
+                # https://www.nycourts.gov/reporter/pdfs/2026/2026_32226.pdf
+                "FILED: QUEENS CIVIL COURT - L&T 09/17/2026 03:55 INDEX\n   PM NO. LT-000568-26/QU [HO]\nNYSCEF DOC. NO. 37   RECEIVED NYSCEF: 09/17/2026\n",
+                {"Docket": {"docket_number": "Index No. LT-000568-26/QU"}},
+            ),
+            (
+                # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51343.shtml
+                "<!DOCTYPE html><html><body><div>\n<div>\n<h1>State Farm Mut. Auto. Ins. Co. v Diallo</h1>\n<p>2026 NY Slip Op 51343(U) [89 Misc 3d 1250(A)]</p>\n<p>August 20, 2026</p>\n<p>Civil Court of the City of New York, Queens County</p>\n<p>Mark Kagan, J.</p>\n<p>Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</p>\n<p>This opinion is uncorrected and will not be published in the printed Official Reports.</p>\n</div>\n<div><b>Digest-Index Classification: </b>Employment Relationships—Respondeat Superior—Vicarious Liability—Independent Contract—Uber Driver</div>\n<div>\n<p>State Farm Mutual Automobile Insurance Company, As Subrogee of VICTOR GREENE, Plaintiff,</p>\n<p>v</p>\n<p>Amadou Oury Diallo A/K/A OURY DIALLO, AHMAD TURAY A/K/A SITTA TURAY, UBER USA LLC, RASIER NY LLC, RASIER CA LLC &amp; UBER TECHNOLOGIES INC., Defendants,</p>\n</div>\n<p>Civil Court of the City of New York, Queens County</p>\n<p>Decided on August 20, 2026</p>\n<p>Index No. CV-018973-24/QU</p>\n<div>\n<p>Plaintiff - </p>\n<p>Nicolini, Paradise, Ferretti &amp; Sabella </p>\n<p>114 Old Country Road, Suite 500</p>\n<p>Mineola, New York 11501 </p>\n<p>Tel (516) 741-6355</p>\n<p>Defendant —</p>\n<p>Baker, McEvoy &amp; Moskovits Firm</p>\n<p>5 Broadway, Suite 3</p>\n<p>Freeport, New York 11520 </p>\n<p>Tel (212) 857-8230 </p>\n<p>and</p>\n<p>Wilson Elser Moskowitz Edelson &amp; Dieker </p>\n<p>150 East 42 Street </p>\n<p>New York, New York 10017 </p>\n<p>Tel (212) 490-3000</p>\n</div>\n<p>Mark Kagan, J.</p>\n",
+                {
+                    "Citation": "89 Misc 3d 1250(A)",
+                    "Docket": {
+                        "docket_number": "Index No. CV-018973-24/QU",
+                        "case_name_full": "State Farm Mutual Automobile Insurance Company, As Subrogee of VICTOR GREENE v. Amadou Oury Diallo A/K/A OURY DIALLO, AHMAD TURAY A/K/A SITTA TURAY, UBER USA LLC, RASIER NY LLC, RASIER CA LLC & UBER TECHNOLOGIES INC.",
+                    },
+                    "Opinion": {"author_str": "Mark Kagan"},
+                    "OpinionCluster": {
+                        "case_name_full": "State Farm Mutual Automobile Insurance Company, As Subrogee of VICTOR GREENE v. Amadou Oury Diallo A/K/A OURY DIALLO, AHMAD TURAY A/K/A SITTA TURAY, UBER USA LLC, RASIER NY LLC, RASIER CA LLC & UBER TECHNOLOGIES INC."
+                    },
+                },
+            ),
             (
                 # https://www.nycourts.gov/reporter/3dseries/2023/2023_23397.htm
                 """<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>City of New York v "Doe"</b></td>\n</tr>\n<tr>\n<td align="center">2023 NY Slip Op 23397</td>\n</tr>\n<tr>\n<td align="center">Decided on December 18, 2023</td>\n</tr>\n<tr>\n<td align="center">Civil Court Of The City Of New York, Bronx County</td>\n</tr>\n<tr>\n<td align="center">Zellan, J.</td>\n</tr>\n<tr>\n<td align="center">Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and subject to revision before publication in the printed Official Reports.</td></tr>\n</table>\n<br><br>\nDecided on December 18, 2023\n<br><div align="center">Civil Court of the City of New York, Bronx County</div>\n\n<br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tr><td><br><div align="center"><b>City \n\tof New York, Petitioner(s),\n\n<br><br>against<br><br>"John" "Doe" et al., Respondents.</b></div><br><br>\n\n</td></tr></table><br><br>Index No. LT-300755-22/BX\n<br><br><br>Maurice Dobson, Special Assistant Corporation Counsel, New York City Department of Housing Preservation &amp; Development (Isidore Scipio, of counsel), New York, NY, for petitioner.<br><br>April Whitehead, Irvington, NY, for respondents Alexander Aqel and Aqel Sheet Metal Inc.<p></p><br>Jeffrey S. Zellan, J. <p>Recitation, as required by CPLR 2219(a), of the papers considered in the review of this motion:</p>""",
@@ -324,6 +511,26 @@ class ScraperExtractFromText(unittest.TestCase):
             ),
         ],
         "juriscraper.opinions.united_states.state.nysurct": [
+            (
+                # https://www.nycourts.gov/reporter/pdfs/2026/2026_32204.pdf
+                "   ENTERED\n   AUG 3 1 2026\nSURROGATE'S COURT OF THE STATE OF NEW YORK\nCOUNTY OF NEW YORK   DATA EN fRY DEPT\n   New YLvk C0 nt·; '.i.J• r ·,J:,to's Court\n------------------------------------------------------------------------x\nIn the Matter of the Petition for the Issuance of Letters of\nTrusteeship and Related Relief in the Estate of\n\n   EDULJI FRAMOZ DINSHAW,   DECISION and ORDER\n   File No.: 1970-1950/B\n",
+                {"Docket": {"docket_number": "File No.: 1970-1950/B"}},
+            ),
+            (
+                # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51243.shtml
+                "<!DOCTYPE html><html><body><div>\n<div>\n<h1>Matter of McWilliams</h1>\n<p>2026 NY Slip Op 51243(U) [89 Misc 3d 1243(A)]</p>\n<p>August 10, 2026</p>\n<p>Surrogate's Court, Richmond County</p>\n<p>Matthew J. Titone, S.</p>\n<p>Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</p>\n<p>This opinion is uncorrected and will not be published in the printed Official Reports.</p>\n</div>\n<div><b>Digest-Index Classification: </b>Executors and Administrators—Appointment of Administrator—Objections to Appointment-Admissible Evidence Regarding Fitness</div>\n<div>\n<p>In the Matter of the Estate of Swithin McWilliams, a/k/a SWITHIN MCWILLIAMS, SR., Deceased.</p>\n</div>\n<p>Surrogate's Court, Richmond County</p>\n<p>Decided on August 10, 2026</p>\n<p>File No. 2024-1165</p>\n<p>Matthew J. Titone, S.</p>\n",
+                {
+                    "Citation": "89 Misc 3d 1243(A)",
+                    "Docket": {
+                        "docket_number": "File No. 2024-1165",
+                        "case_name_full": "In the Matter of the Estate of Swithin McWilliams, a/k/a SWITHIN MCWILLIAMS, SR.",
+                    },
+                    "Opinion": {"author_str": "Matthew J. Titone"},
+                    "OpinionCluster": {
+                        "case_name_full": "In the Matter of the Estate of Swithin McWilliams, a/k/a SWITHIN MCWILLIAMS, SR."
+                    },
+                },
+            ),
             (
                 # https://www.nycourts.gov/reporter/3dseries/2023/2023_50144.htm
                 """<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>Matter of Pia Jeong Yoon</b></td>\n</tr>\n<tr>\n<td align="center">2023 NY Slip Op 50144(U) [78 Misc 3d 1203(A)]</td>\n</tr>\n<tr>\n<td align="center">Decided on February 28, 2023</td>\n</tr>\n<tr>\n<td align="center">Surrogate\'s Court, Queens County</td>\n</tr>\n<tr>\n<td align="center">Kelly, S.</td>\n</tr>\n<tr>\n<td align="center">Published by New York State Law Reporting\nBureau pursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and will not be\npublished in the printed Official Reports.</td></tr>\n</table>\n<br><br>\n\nDecided on February 28, 2023\n<br><div align="center">Surrogate\'s Court, Queens County</div>\n\n<br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tr><td><br><div align="center"><b>Probate\nProceeding, Will of Pia Jeong Yoon, a/k/a PIA JEONG AE YOON, \n     <br>a/k/a PIA J. YOON, a/k/a JEONG YOON, a/k/a JEONG AE YOON,\nDeceased.\n</b></div><br><br>\n</td></tr></table><br><br>File No. 2021-31/C\n<br><br>\n<br>Petitioner\'s Attorney: J. John Kim. Esq<br><br>\n<br>Petitioner's Attorney: J. John Kim. Esq.<br>Pashman Stein Walder Hayden,\nPC<br>2900 Westchester Avenue, Suite 204, Purchase, New York 10577<br>(201)\n270-5470<br><br>Respondent's Attorney: Charlotte C. Lee, Esq.<br>277\nBroadway, Suite 400<br>New York, NY 10007<br>(212) 732-3366<p></p>\n\n\nPeter J. Kelly, S.\n\n<p>Petitioner moves for summary judgment in this proceeding which seeks leave to""",
@@ -382,6 +589,53 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.nycrimct": [
             (
+                # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51511.shtml
+                "<!DOCTYPE html><html><body><div>\n<div>\n<h1>People v Miller</h1>\n<p>2026 NY Slip Op 51511(U)</p>\n<p>July 17, 2026</p>\n<p>Criminal Court of the City of New York, Kings County</p>\n<p>Juan D. Abreu, J.</p>\n<p>Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</p>\n<p>This opinion is uncorrected and will not be published in the printed Official Reports.</p>\n</div>\n<div><b>Digest-Index Classification: </b>Crimes—Disclosure—Certificate of Compliance—Due Diligence</div>\n<div>\n<p>People of the State of New York, X</p>\n<p>v</p>\n<p>Fabian Miller, Defendant.</p>\n</div>\n<p>Criminal Court of the City of New York, Kings County</p>\n<p>Decided on July 17, 2026</p>\n<p>Docket No. CR-060169-25KN</p>\n<div>\n<p>For the People: Sofia Rocher, Assistant District Attorney, Office of the Kings County District Attorney</p>\n<p>For the Defendant: Jordan Payne, Attorney at Law, The Legal Aid Society</p>\n</div>\n<p>Juan D. Abreu, J.</p>\n",
+                {
+                    "Docket": {
+                        "case_name_full": "People of the State of New "
+                        "York v. Fabian Miller",
+                        "docket_number": "Docket No. CR-060169-25KN",
+                    },
+                    "Opinion": {"author_str": "Juan D. Abreu"},
+                    "OpinionCluster": {
+                        "case_name_full": "People of the State "
+                        "of New York v. "
+                        "Fabian Miller"
+                    },
+                },
+            ),
+            (
+                # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51274.shtml with the docket changed to a bare number
+                "<!DOCTYPE html><html><body><div>\n<div>\n<h1>People v Vega</h1>\n<p>2026 NY Slip Op 51274(U) [89 Misc 3d 1246(A)]</p>\n<p>August 14, 2026</p>\n<p>Criminal Court of the City of New York, New York County</p>\n<p>Ilona B. Coleman, J.</p>\n<p>Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</p>\n<p>This opinion is uncorrected and will not be published in the printed Official Reports.</p>\n</div>\n<div><b>Digest-Index Classification: </b>Crimes—Disclosure—Automatic Discovery-Good Faith and Due Diligence</div>\n<div>\n<p>The People of the State of New York, Plaintiff,</p>\n<p>v</p>\n<p>Orlando Vega, Defendant.</p>\n</div>\n<p>Criminal Court of the City of New York, New York County</p>\n<p>Decided on August 14, 2026</p>\n<p>2017KN054132</p>\n<div>\n<p>Alvin L. Bragg, Jr., District Attorney, New York County (Hannah Hicks of counsel), for plaintiff. </p>\n<p>Twyla Carter, The Legal Aid Society, New York City (Tracey Tae, of counsel), for defendant.</p>\n</div>\n<p>Ilona B. Coleman, J.</p>\n",
+                {
+                    "Citation": "89 Misc 3d 1246(A)",
+                    "Docket": {
+                        "docket_number": "2017KN054132",
+                        "case_name_full": "The People of the State of New York v. Orlando Vega",
+                    },
+                    "Opinion": {"author_str": "Ilona B. Coleman"},
+                    "OpinionCluster": {
+                        "case_name_full": "The People of the State of New York v. Orlando Vega"
+                    },
+                },
+            ),
+            (
+                # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51274.shtml
+                "<!DOCTYPE html><html><body><div>\n<div>\n<h1>People v Vega</h1>\n<p>2026 NY Slip Op 51274(U) [89 Misc 3d 1246(A)]</p>\n<p>August 14, 2026</p>\n<p>Criminal Court of the City of New York, New York County</p>\n<p>Ilona B. Coleman, J.</p>\n<p>Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</p>\n<p>This opinion is uncorrected and will not be published in the printed Official Reports.</p>\n</div>\n<div><b>Digest-Index Classification: </b>Crimes—Disclosure—Automatic Discovery-Good Faith and Due Diligence</div>\n<div>\n<p>The People of the State of New York, Plaintiff,</p>\n<p>v</p>\n<p>Orlando Vega, Defendant.</p>\n</div>\n<p>Criminal Court of the City of New York, New York County</p>\n<p>Decided on August 14, 2026</p>\n<p>CR-004361-26NY</p>\n<div>\n<p>Alvin L. Bragg, Jr., District Attorney, New York County (Hannah Hicks of counsel), for plaintiff. </p>\n<p>Twyla Carter, The Legal Aid Society, New York City (Tracey Tae, of counsel), for defendant.</p>\n</div>\n<p>Ilona B. Coleman, J.</p>\n",
+                {
+                    "Citation": "89 Misc 3d 1246(A)",
+                    "Docket": {
+                        "docket_number": "CR-004361-26NY",
+                        "case_name_full": "The People of the State of New York v. Orlando Vega",
+                    },
+                    "Opinion": {"author_str": "Ilona B. Coleman"},
+                    "OpinionCluster": {
+                        "case_name_full": "The People of the State of New York v. Orlando Vega"
+                    },
+                },
+            ),
+            (
                 # https://www.nycourts.gov/reporter/3dseries/2018/2018_50128.htm
                 """<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>People v Hot</b></td>\n</tr>\n<tr>\n<td align="center">2018 NY Slip Op 50128(U) [58 Misc 3d 1215(A)]</td>\n</tr>\n<tr>\n<td align="center">Decided on January 18, 2018</td>\n</tr>\n<tr>\n<td align="center">Criminal Court Of The City Of New York, Kings County</td>\n</tr>\n<tr>\n<td align="center">Leo, J.</td>\n</tr>\n<tr>\n<td align="center">Published by New York State Law Reporting Bureau\npursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and will not be\npublished in the printed Official Reports.</td></tr>\n</table>\n<br><br>\n\nDecided on January 18, 2018\n<br><div align="center">Criminal Court of the City of New York, Kings County</div>\n\n<br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tr><td><br><div align="center"><b>The People of the\nState of New York\n\n<br><br>against<br><br>Amela Hot, Defendant.</b></div><br><br>\n\n</td></tr></table><br><br>2017KN054132\n<br><br><br>Labe M. Richman, 305 Broadway, Suite 100, New York, New York, 10007, attorney\nfor defendant Amela Hot<br><br>Eric Gonzalez, District Attorney, Kings County, by Sapna\nKishnani Esq., Assistant District Attorney, Brooklyn, of Counsel for the People<p></p>\n\n\n<br>Donald Leo, J.\n""",
                 {
@@ -414,6 +668,42 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.nyclaimsct": [
             (
+                # https://www.nycourts.gov/reporter/pdfs/2023/2023_35460.pdf
+                "FILED: NYS COURT OF CLAIMS 10/02/2023 11:16 AM   CLAIM NO. 136668\n",
+                {"Docket": {"docket_number": "Claim No. 136668"}},
+            ),
+            (
+                # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_50648.shtml
+                "<!DOCTYPE html><html><body><div>\n<div>\n<h1>Jones v State of New York</h1>\n<p>2026 NY Slip Op 50648(U)</p>\n<p>April 14, 2026</p>\n<p>Court of Claims</p>\n<p>Zainab A. Chaudhry, J.</p>\n<p>Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</p>\n<p>This opinion is uncorrected and will not be published in the printed Official Reports.</p>\n</div>\n<div><b>Digest-Index Classification: </b>Labor—Safe Place to Work—Road Construction Accident</div>\n<div>\n<p>Charles Jones, Claimant,</p>\n<p>v</p>\n<p>The State of New York,<sup>FN1</sup> Defendant.</p>\n</div>\n<p>Court of Claims</p>\n<p>Decided on April 14, 2026</p>\n<p>Claim No. 138592</p>\n<div>\n<p>For Claimant:</p>\n<p>HACH &amp; ROSE, LLP</p>\n<p>By: George W. Ilchert, Esq. </p>\n<p>For Defendant:</p>\n<p>ONDROVIC &amp; PLATEK, PLLC</p>\n<p>By: Daniel E. O'Neill, Esq.</p>\n</div>\n<p>Zainab A. Chaudhry, J.</p>\n",
+                {
+                    "Docket": {
+                        "case_name_full": "Charles Jones v. The State "
+                        "of New York",
+                        "docket_number": "Claim No. 138592",
+                    },
+                    "Opinion": {"author_str": "Zainab A. Chaudhry"},
+                    "OpinionCluster": {
+                        "case_name_full": "Charles Jones v. "
+                        "The State of New "
+                        "York"
+                    },
+                },
+            ),
+            (
+                # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51095.shtml
+                "<!DOCTYPE html><html><body><div>\n<div>\n<h1>Bishop v State of New York</h1>\n<p>2026 NY Slip Op 51095(U) [89 Misc 3d 1228(A)]</p>\n<p>July 10, 2026</p>\n<p>Court of Claims</p>\n<p>Linda K. Mejias-Glover, J.</p>\n<p>Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</p>\n<p>This opinion is uncorrected and will not be published in the printed Official Reports.</p>\n</div>\n<div><b>Digest-Index Classification: </b>State—Claim against State—Permission to File Late Claim—Court of Claims Act Substantive Pleading Requirements</div>\n<div>\n<p>Lance R. Bishop, Sr, Claimant,</p>\n<p>v</p>\n<p>State of New York, Defendant.</p>\n</div>\n<p>Court of Claims</p>\n<p>Decided on July 10, 2026</p>\n<p>Claim No. NONE</p>\n<div>\n<p>For Claimant:</p>\n<p>LANCE R. BISHOP, SR, Pro Se</p>\n<p>For Defendant:</p>\n<p>HON. LETITIA JAMES, NYS ATTORNEY GENERAL</p>\n<p>By: Noah T. Seabrook, Esq.</p>\n</div>\n<p>Linda K. Mejias-Glover, J.</p>\n",
+                {
+                    "Citation": "89 Misc 3d 1228(A)",
+                    "Docket": {
+                        "case_name_full": "Lance R. Bishop, Sr v. State of New York"
+                    },
+                    "Opinion": {"author_str": "Linda K. Mejias-Glover"},
+                    "OpinionCluster": {
+                        "case_name_full": "Lance R. Bishop, Sr v. State of New York"
+                    },
+                },
+            ),
+            (
                 # https://www.nycourts.gov/reporter/pdfs/2018/2018_34469.pdf
                 """Lawrence v State of N.Y. Dept. of\nCommunity Supervision\n2018 NY Slip Op 34469(U)\nJanuary 10, 2018\nCourt of Claims\nDocket Number: Index No. 2010-038-505\nJudge: W. Brooks DeBow\n""",
                 {
@@ -439,6 +729,30 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.nydistct": [
             (
+                # https://www.nycourts.gov/reporter/current/3dseries/2025/2025_25307.shtml
+                "<!DOCTYPE html><html><body><div>\n<div>\n<h1>Krinsky-Say Venture, LLC v Matt Guiliano's Play Like A Pro LLC</h1>\n<p>2025 NY Slip Op 25307 [89 Misc3d 915]</p>\n<p>May 13, 2025</p>\n<p>Paul L. Damato, J.</p>\n<p>District Court of Suffolk County, Fourth District</p>\n<p>Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</p>\n<p>As corrected through Wednesday, September 16, 2026</p>\n</div>\n<div>\n<p>Krinsky-Say Venture, LLC, Petitioner,</p>\n<p>v</p>\n<p>Matt Guiliano's Play Like A Pro LLC, Doing Business as Open State Works and Another, et al., Respondents.</p>\n</div>\n<p>District Court of Suffolk County, Fourth District, May 13, 2025</p>\n<div>\n",
+                {
+                    "Citation": "89 Misc3d 915",
+                    "Docket": {
+                        "case_name_full": "Krinsky-Say Venture, LLC v. "
+                        "Matt Guiliano's Play Like A "
+                        "Pro LLC, Doing Business as "
+                        "Open State Works and "
+                        "Another"
+                    },
+                    "Opinion": {"author_str": "Paul L. Damato"},
+                    "OpinionCluster": {
+                        "case_name_full": "Krinsky-Say "
+                        "Venture, LLC v. "
+                        "Matt Guiliano's "
+                        "Play Like A Pro "
+                        "LLC, Doing Business "
+                        "as Open State Works "
+                        "and Another"
+                    },
+                },
+            ),
+            (
                 # https://nycourts.gov/reporter/3dseries/2023/2023_51308.htm
                 """<table width="80%" border="1" cellspacing="2" cellpadding="5" align="center">\n<tr>\n<td align="center"><b>Sims v Regis</b></td>\n</tr>\n<tr>\n<td align="center">2023 NY Slip Op 51308(U) [81 Misc 3d 1210(A)]</td>\n</tr>\n<tr>\n<td align="center">Decided on November 30, 2023</td>\n</tr>\n<tr>\n<td align="center">District Court Of Nassau County, Second District</td>\n</tr>\n<tr>\n<td align="center">Montesano, J.</td>\n</tr>\n<tr>\n<td align="center">Published by New York State Law Reporting\nBureau pursuant to Judiciary Law § 431.</td>\n</tr>\n<tr>\n<td align="center">This opinion is uncorrected and will not be\npublished in the printed Official Reports.</td></tr>\n</table>\n<br><br>\n\nDecided on November 30, 2023\n<br><div align="center">District Court of Nassau County, Second District</div>\n\n<br><table width="75%" border="1" cellspacing="1" cellpadding="4" align="center"><tr><td><br><div align="center"><b>Alistair Sims,\nClaimant,\n\n<br><br>against<br><br>Lance Frantz Regis A/K/A LANCE REGIS A/K/A\nLANCE F. REGIS A/K/A FRANTZ L. REGISTRE A/K/A REGISTRE FRANTZ\nA/K/A VANCE REGIS A/K/A REGIS LANCE A/K/A REGIS L. FRANTZ,\nDefendant(s).</b></div><br><br>\n\n</td></tr></table><br><br>Index No. SC-000830-23/NA \n<br><br>\n<br>Alistair Sims; Lance Regis<br>\n\n\n<br>Michael A. Montesano, J.\n\n<p class="auto-style1">Papers Considered:</p>""",
                 {
@@ -452,7 +766,7 @@ class ScraperExtractFromText(unittest.TestCase):
                         "case_name_full": "Alistair Sims, against Lance Frantz Regis A/K/A LANCE REGIS A/K/A LANCE F. REGIS A/K/A FRANTZ L. REGISTRE A/K/A REGISTRE FRANTZ A/K/A VANCE REGIS A/K/A REGIS LANCE A/K/A REGIS L. FRANTZ, Defendant(s)."
                     },
                 },
-            )
+            ),
         ],
         "juriscraper.opinions.united_states.state.nyjustct": [
             (
@@ -1622,7 +1936,180 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
-        "juriscraper.opinions.united_states.state.mdag": [
+        "juriscraper.opinions.united_states.attorney_general.arkag": [
+            # Verbatim Doctor header/closing excerpts from real opinions.
+            # Omitted body text separates excerpts with blank lines.
+            # https://opinionstorage.blob.core.windows.net/opinions/2012-001.pdf
+            (
+                "STATE OF ARKANSAS\n\nTHE ATTORNEY GENERAL\nDustin McDANIEL\n\nOpinion No. 2012-001\n\nJanuary 12, 2012\n\nMr. Jeff C. Harper, City Attorney\nCity of Springdale\n\n201 North Spring Street\n\nPost Office Box 1208\n\nSpringdale, Arkansas 72765\n\nDear Mr. Harper:\n\nYou have requested my opinion regarding the Arkansas Freedom of Information\nAct (“FOIA”). The basis for your request is A.C.A. § 25-19-105(c)(3)(B)(@) (Supp.\n2011), which authorizes the custodian, requester, or the subject of personnel or\nemployee evaluati\n\nr identities, whether these records are released as personnel records\nor as mere public records.”\n\nDeputy Attorney General Elisabeth A. Walker prepared the foregoing opinion,\nwhich I hereby approve.\n\nSincerely,\n\nDUSTIN MCDANIEL\nAttorney General\n\nDM/EA W:cyh\n\n23 The Arkansas Supreme Court has recognized that the constitutional right of privacy can supersede the\nspecific disclosure requirements of the FOIA, at least with regard to the release of documents containing\nconstitutionally protectable information. McCambridge v. City of Little Rock, 298 Ark. 219, 766 S.W.2d\n909 (1989). For a discussion of this issue, see generally Op. Att’y Gen. 2003-015.\n",
+                {
+                    "OpinionCluster": {
+                        "judges": "DUSTIN McDANIEL, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2012-150.pdf
+            (
+                "STATE OF ARKANSAS\n\nTHE ATTORNEY GENERAL\nDusTIn McDANIEL\n\nOpinion No. 2012-150\n\nApril 26, 2013\n\nThe Honorable Sue Madison\n\nState Senator\n\n573 Rock Cliff Road\n\nFayetteville, Arkansas 72701-3809\n\nDear Senator Madison:\n\nYou have requested my opinion concerning certain debts that the Higher\nEducation Subcommittee of the Legislative Council determined were owed to\nsome state institutions of higher education this past biennium. You identify the\ndebts at issue as ones owed by local businesses whose empl\n\non purposes. The foregoing should,\nhowever, offer some general guidance in addressing the matter.\n\nDeputy Attorney General Elisabeth A. Walker prepared the foregoing opinion,\nwhich I hereby approve.\n\nSincerely,\n64h“\nDUSTIN MCDANIEL\n\nAttorney General\n\nDM/EA W:cyh\n\n2 See Tex. Op. Att'y Gen. DM-382, supra n. 3 (finding “no precedent for the construction of a credit\nclause as meaning that a state or a political subdivision lends its credit when it merely extends credit to\nanother,”)\n\n'3 Cortez v. Independence County, 287 Ark. 279, 283, 698 S.W.2d 291 (1985) (citing Turner v. Woodruff,\n286 Ark. 66, 689 S.W.2d 527 (1985)).\n",
+                {
+                    "OpinionCluster": {
+                        "judges": "DUSTIN McDANIEL, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2013-001.pdf
+            (
+                "ke.\n\nAssistant Attorney General Jack Druff prepared the foregoing opinion, which I\nhereby approve.\n\nSincerely,\n\nCEE “eA,\n\nAttorney General\nDM/JHD:cyh\n\nEnclosure\n\fATTORNEY GENERAL OF ARKANSAS\nMark Pryor\n\nOpinion No. 2000-007\n\nFebruary 9, 2000\n\nThe Honorable Bill Gwatney\nState Senator\n\nP.O. Box 156\n\nJacksonville, AR 72076-0156\n\nDear Senator Gwatney:\n\nI am writing in response to your request for my opinion on \n\nne.\n\nAssistant Attorney General Jack Druff prepared the foregoing opinion, which I\nhereby approve.\n\nSincerely,\nMARK PRYOR\nAttorney General\n\nMP/JHD:cyh\n",
+                {},
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2013-149.pdf
+            (
+                "al constitution.*\n\nAssistant Attorney General J. M. Barker prepared this opinion, which I approve.\n\nSincerely\n\nDUSTIN Me\nAttorney General\n\nDM:JMB/cyh\n\nEnclosure\n\n° See Op. Att’y Gen. 95-322 and cases cited therein; see also Bates v. Mickles, 309 Ark, 551832 S.W.2d\n225 (1992).\n\n” See Op. Att’y Gen, 88-199.\n\n® My predecessor did not expressly consider an equal protection claim under the Arkansas constitution",
+                {},
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2014-137.pdf
+            (
+                '                                STATE OF ARKANSAS\n                                 THE ATTORNEY GENERAL\n                                    LESLIE RUTLEDGE\n\nOpinion No. 2014-137\n\nMarch 17, 2015\n\nThe Honorable Leon Johnson\nCircuit Judge\nSixth Judicial District, First Division\n401 West Markham Street, Room 420\nLittle Rock, Arkansas 72201\n\nDear Judge Johnson,\n\nYou have asked for an opinion on how the Arkansas Freedom of Information Act\n(FOIA) applies to data stored on the disaster recovery system (\n\n not "kept." But if a court took the second line of\nreasoning, then the answer to this question would be "yes."\n\nAssistant Attorney General Ryan Owsley prepared this opinion, which I hereby\napprove.\n\nSincerely,\n\n\n\nAttorney General\n\nLR/RO:cyh\n\f',
+                {},
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2015-141.pdf
+            (
+                "                                STATE OF ARKANSAS\n                                ATTORNEY GENERAL\n                                 LESLIE RUTLEDGE\n\nOpinion No. 2015-141\n\nJune 6, 2016\n\nThe Honorable R. Trevor Drown\nState Representative\nP. 0. Box 1182\nDover, AR 72837-1182\n\nDear Representative Drown:\n\nYou have requested my opinion on the following question:\n\n       Did [the City of] Fairfield Bay violate Arkansas law by awarding\n       volunteer EMS members a $25 gift card service recognition awar\n\nibit the gift cards, then in my\nopinion the public purpose doctrine would be satisfied in this case. It is my hope\nthat the foregoing will be of assistance in guiding the legal and factual analysis.\n\nSincerely,\n\n             /<\nLESLIE RUTLED ,......________j\nAttorney General\n\f",
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2015-094.pdf
+            (
+                "                                           STATE OF ARKANSAS\n                                            THE A TIORNEY GENERAL\n                                                LESLIE RUTLEDGE\n\n\nOpinion No. 2015-094\n\nAugust 17, 2015\n\nThe Honorable Mark Martin\nSecretary of State\n500 Woodlane Street\nState Capitol, Room 256\nLittle Rock, Arkansas 72201-1094\n\nDear Mr. Martin:\n\nThis is in response to your request for my opm10n on the effective date of\nlegislation passed during the First Extraordinary Se\n\n//www.ag.state.ar.us/\n\fThe Honorable Mark Martin\nSecretary of State\nOpinion No. 2015-094\nPage 2\n\n\n\nDeputy Attorney General Elisabeth A. Walker prepared the foregoing opinion,\nwhich I hereby approve.\n\nSincerely,\n\n\n~~\nAttorney General\n\nLR/EAW:cyh\n\f",
+                {},
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2016-128.pdf
+            (
+                "                                   STATE OF ARKANSAS\n                                   ATTORNEY GENERAL\n                                    LESLIE RUTLEDGE\n\nOpinion No. 2016-128\n\nApril 25, 2017\n\nThe Honorable Uvalde Lindsey\nState Senator\n2257 East Gentle Oaks Lane\nFayetteville, AR 72703-6142\n\nDear Senator Lindsey:\n\nThis is in response to your request for an opinion on copier leases held by county\ngovernments. Your correspondence states that it is your understanding that a\ncounty in Arkansas has\n\nly determine whether a specific agreement would meet\n       Amendment 78's definition of a short-term financing obligation. Such scrutiny is\n       beyond the scope of an Attorney General's opinion.\n\n       Sincerely,\nc::=   LESLIE\n             \"?:>~\n                RUT~E~~\n       Attorney General\n\f",
+                {},
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2017-068.pdf
+            (
+                "                                   STATE OF ARKA NSAS\n                                   ATTOR N EY GE N ERA L\n                                    LES LI E RU T LEDGE\n\nOpinion No. 2017-068\n\nJune 7, 2017\n\nMary L. Berry, BQC Officer\nTrue Grass Ballot Question Committee\nPost Office Box 511\nSummit, AR 72677\n\nDear Ms. Berry:\n\nI am writing in response to your request for certification, pursuant to Ark. Code\nAnn. § 7-9-107 (Supp. 2015), of the popular name and ballot title for a proposed\ninitiated meas\n\nesubmit your proposed act along with a\nproposed popular name and ballot title at your convenience.\n\nSincerely,\n\n~/~\nLESLIE RUTLE\nAttorney General\n\nEnclosure\n\n\n\n\n21\n     Ark. Code Ann.§ 7-9-107(c).\n\fTHE ARKANSAS ADULT RECREATION OF MARIJUANA AMENDMENT\n\n(Popular Name)\n\n\n\n\n(Ballot Title)\n\n\n\n\nAN AMENDMENT TO THE ARKANSAS CONSTITUTION CONCERNING THE CANNABIS PLANT,\nPROVIDING THAT THE CULTIVATION, PRODUCTION, DIS",
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2017-114.pdf
+            (
+                '                                  STATE OF ARKAN SAS\n                                  ATTORNEY GENERAL\n                                   LESLIE RUTLEDG E\n\nOpinion No. 2017-114\n\nAugust 14, 2018\n\nThe Honorable Mike Holcomb\nState Representative\n9108 Sulphur Springs Road\nPine Bluff, AR 71603-0904\n\nDear Representative Holcomb:\n\nThis is in response to your request for an opinion on whether certain positions in\nState and local government would be considered civil offices under Arkansas\nConstitution A\n\n to borrow money, 25 and to issue bonds, 26 among\nother various powers. Thus it is my opinion that RDA commissioners likely hold\na civil office under Article 5, section 10 and Article 7, section 53.\n\nSincerely,\n\n ~::~~-=;;=>_ <. //~"fo\nLESLIE RUTLEDGE\nAttorney General\n\n19\n     Ark. Code Ann. § 14-188-101 et seq. (Rep I. 1998).\n\n20\n     Id. at§ 14-188-109.\n21\n     Id. at§ 14-188-104(a)(2).\n22\n     Id. at§ 14-188-105(a)(2)(A).\n23\n     Id. at§ 14-188-105(c)(4).\n24\n     Ark. Code Ann.§ 14-188-109(l)(A).\n\n25\n     Id. at§ 14-188-109(2)(A).\n26\n     Id. at§ 14-188-1 lO(a)(l)(A).\n\f',
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2018-081.pdf
+            (
+                "Opinion No. 2018-081\n\nJuly 5, 2019\n\nThe Honorable Mary Bentley\nState Representative\n142 Shady Lane\nPerryville, AR 72126-8103\n\nDear Representative Bentley:\n\nThis is in response to your request for an opinion on the financing of emergency\nservices. You have posed the following two questions:\n\n       1) May a city or county impose a fee on residents in order to\n          provide emergency medical services under the Ambulance\n          Licensing Act, Arkansas Code Annotated § 14-266-105, or under\n  \n\nInterlocal Cooperation\nAgreement to jointly fund emergency medical services. But each party to the\nagreement must have the power to independently undertake whatever method of\nfunding is agreed upon.\n\nSincerely,\n\n\n\nLESLIE RUTLEDGE\nAttorney General\n\n\n\n\n15\n  See, e.g., Op. Att’y Gen. 2006-174 (addressing an agreement captioned “Interlocal Agreement\nfor Emergency Medical Services” between the Conway County Intergovernmental Cooperation-\nCouncil and Med-Tech. EMS of County County).\n16\n     Ark. Code Ann. § 25-20-103(1) (Supp. 2017) (defining “public agency”).\n17\n     Ark. Code Ann. § 25-20-104(b) (Repl. 2014).\n18\n     Id. at § 25-20-104(a) (emphasis added).\n\f",
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2019-070.pdf
+            (
+                "                                        STATE OF ARKANSAS\n                                         THE ArrotmEv GENEllAL\n                                            LESLIE RUTLEDGE\n\nOpinion No. 2019-070\n\nOctober 22, 2020\n\nThe Honorable LeAnne Burch\nState Representative\nP. 0. Box 222\nMonticello, AR 71657-0222\n\nDear Representative Burch:\n\nThis is in response to your request for an opinion on the following questions\nconcerning a multi-county corrections facility intended to house county and state\np\n\n\n\n\n\nThis provision may be responsive to your question, depending upon the particular\ncontract at issue. I cannot respond further, however, absent more information\nconcerning the referenced contract.\n\nSincerely,\n\n.=:   ~~:;J~       L.   //i>...£.-p\nLESLIE RUTLEDGE\nAttorney General\n\f",
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2020-054.pdf
+            (
+                "                                     STATE OF ARKANSAS\n                                     ATTORNEY GENERAL\n                                      LES LI E RUTLEDGE\n\nOpinion No. 2020-054\n\nAugust 4, 2021\n\nThe Honorable Mark Johnson\nState Senator\nP. 0. Box 241022\nLittle Rock, AR 72223\n\nDear Senator Johnson:\n\nThis is in response to your request for an opm1on on a number of questions\nconcerning elections, campaign activities, the powers of the county judge, the\nArkansas Freedom oflnformation Act, an\n\non\noffices, such as those discussed in my response to Questions 5 and 6. But generally\nspeaking, the commission would have a right to access its own offices in order to\nperform its statutory duties.\n\nSincerely,\n\n~:~---~- .<. //?11:'\nLESLIE RUTLEDGE\nAttorney General\n\f",
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2021-082.pdf
+            (
+                "Ra\n\nSTATE OF ARKANSAS\nTHE ATTORNEY GENERAL\nLESUE RUTLEDGE\n\nOpinion No. 2021-082\n\nAugust 4, 2022\n\nThe Honorable John Payton\nState Representative\n\nP. O. Box 181\n\nWilbur, AR 72179-0181\n\nDear Representative Payton:\n\nThis is in response to your request for an opinion from this office concerning the\nArkansas Unfair Practices Act, codified at Ark. Code Ann. § 4-75-201, et seq. (Repl.\n2011 and Supp. 2021), as it relates to pharmacy benefits managers, pharmaceutical\nmanufacturers, and insulin rebates. In\n\nat are pending before the\ncourts for resolution.’ I regret that I cannot be of assistance in this matter. Please\ndo not hesitate to contact me if I may be of future assistance in some other respect.\n\nSincerely,\n\nSe Kotla\n\nLESLIE RUTLEDGE\nAttorney General\n\n2 See, e.g., Ops. Att’y Gen, 2016-027, 2015-140 (and opinions cited therein).\n\n",
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2022-038.pdf
+            (
+                "STATE OF ARKANSAS\nATTORNEY GENERAL\nLESLIE RUTLEDGE\n\nOpinion No. 2022-038\n\nDecember 20, 2022\n\nThe Honorable Clint Penzo\nState Representative\n\nP.O. Box 7988\n\nSpringdale, AR 72762\n\nDear Representative Penzo:\nThis is in response to your request for an opinion on the following question:\n\nDoes Ark. Code Ann. § 14-42-106, or any other applicable statute,\nrequire an appointed member of the city council to execute and file a\nduplicate oath of office in the same fashion as a state officer who is\ncommissio\n\n filing of the oath. And there is no provision in the Arkansas Code directing a\ncity council member to execute and file a duplicate oath of office.’\n\nThe answer to your question, therefore, is “no.”\n\nSincerely,\n\naoe\n\nLESLIE RUTLEDGE\nAttorney General\n\n1 Ark. Code Ann. § 14-42-106(a) (Supp. 2021) (“All officers elected or appointed in any\nmunicipal corporation shall take the oath or affirmation prescribed for officers by the Arkansas\nConstitution.”).\n\n2 Id. at § 14-42-106(d) (“The council members shall have the power to declare the office of any\nelected or appointed person vacant who shall fail to take the oath of office or give the bond\nrequired in this section within ten (10) days of the first day of January after his or her election or\nwithin ten (10) days after he or she has been notified of his or her appointment.”). See also Op.\nAtt’y Gen. 2013-017.\n\n3 Compare Ark. Code Ann. § 14-42-106 (containing no duplicate oath requirement) with Ark.\nCode Ann. § 7-4-102(b) (Supp. 2021) (requiring the county clerk to notify newly selected county\nelection board members of the oath requirement and providing that “[t]he oath shall be filed in the\noffice of the county clerk and the county clerk shall forward a duplicate to the Secretary of\nState.”).\n\n",
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2022-039.pdf
+            (
+                '                                     STATE OF ARKANSAS\n                                     ATTO RNEY GENERAL\n                                      LES LIE RUTL EDGE\n\nOpinion No. 2022-039\n\nNovember 7, 2022\n\nLauren Ballard, Esq.\nDept. of Transformation & Shared Services\n501 Woodlane Street, Suite 201\nLittle Rock, AR 72201\n\nDear Ms. Ballard:\n\nYou have requested my opinion regarding the Arkansas Freedom of Information\nAct ("FOIA"). Your request, which is made as the attorney for the custodian of\nth\n\nPage 7\n\n\n\nprovide access to computerized data, and records contammg \'"personal\nidentification numbers" used for computer security functions are specifically\nexempt from disclosure under the FOIA. 23\n\nSincerely,\n\n\n ✓\n               -----.\n           _ ... ------- ~-\n  .::;--..::.:_____ - - - - --- - -\n                                      L\n                                          /~~7\n                                          /~\n\nLESLIE RUTLEDG E\nAttorney General\n\n\n\n\n23 Ark. Code Ann. § 25- 19-1OS(b )( I I). See also Op. Att \'y Gen. 20 18-064.\n\f',
+                {
+                    "OpinionCluster": {
+                        "judges": "LESLIE RUTLEDGE, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2023-121.pdf
+            (
+                "Opinion No. 2023-121\nJanuary 4, 2023\nSteven Nichols\nPost Office Box 7866\nLittle Rock, Arkansas 72217\nDear Mr. Nichols:\nI am writing in response to your request, made under A.C.A. § 7-9-107, that I certify the popular\nname and ballot title for a proposed constitutional amendment.\n\nMy decision to certify or reject a popular name and ballot title is unrelated to my view of the\nproposed measure’s merits. I am not authorized to consider the measure’s merits when considering\ncertification.\n1. Request.\n\nallot title, stating my reasons therefor, and to instruct you to “redesign” your proposed\nconstitutional amendment.\n\nDeputy Attorney General Ryan Owsley prepared this opinion, which I hereby approve.\nSincerely,\n\n\n\nTIM GRIFFIN\nAttorney General\n\f",
+                {
+                    "OpinionCluster": {
+                        "judges": "TIM GRIFFIN, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2024-080.pdf
+            (
+                "Opinion No. 2024-080\n\nJune 6, 2025\n\nThe Honorable Jon S. Eubanks\nState Representative\nPost Office Box 34\nSubiaco, Arkansas 72865\n\nDear Representative Eubanks:\n\nYou have requested my opinion regarding whether the Westark Area Council of Boy Scouts of\nAmerica (“Boy Scouts”) 1 can lawfully sell part of its real property “to raise funds for various future\nprojects and endeavors.” You report that, pursuant to Act 167 of 1973, the Boy Scouts purchased—\nsubject to certain conditions—2,840 acres in Loga\n\nl its ownership interests\nin the property to the Boy Scouts in 1991, then that deed resolved the survey issue.\n\nAssistant Attorney General Jodie Keener prepared this opinion, which I hereby approve.\n\nSincerely,\n\n\nTIM GRIFFIN\nAttorney General\n\n\n\n\n26\n  26A C.J.S. Deeds § 217 (Dec. 2023 update) (stating that courts will look to “contemporaneous documents” that are\nincorporated by reference (emphasis added)); cf. Eddleman v. Estate of Farmer, 294 Ark. 8, 10, 740 S.W.2d 141, 142\n(1987) (“Wills may validly incorporate by reference a document or paper, not witnessed as a will, if it was in existence\nat the time of the execution of the will and is identified by clear proof.” (emphasis added) (citing Montgomery v.\nBlankenship, 217 Ark. 357, 361, 230 S.W.2d 51, 54 (1950)).\n27\n     Act 38 of 1991, §§ 1, 2.\n28\n     Act 38 of 1991, § 2.\n\f",
+                {
+                    "OpinionCluster": {
+                        "judges": "TIM GRIFFIN, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2025-119.pdf
+            (
+                "                                          TIM GRIFFIN\n                                           ATTORNEY GENERAL\n\nOpinion No. 2025-119\n\nApril 22, 2026\n\nThe Honorable Ryan A. Rose\nState Representative\n819 Powderhorn Circle\nVan Buren, Arkansas 72956\n\nDear Representative Rose:\n\nI am writing in response to your request for my opinion on the Arkansas Ethics Commission’s\nRules on Gifts and items given to social workers at an event.\n\nYou note that—to show appreciation for social workers’ “critical wor\n\nnot exceed $100,\nunless it is reimbursed down to $100 or less within 10 days or returned within 30 days.19\n\nAssistant Attorney General William R. Olson prepared this opinion, which I hereby approve.\n\nSincerely,\n\n\n\nTIM GRIFFIN\nAttorney General\n\n\n\n\n18\n     See also 21 C.A.R. § 1-101(2)(B)(vii) (mirroring the statutory definition).\n19\n     A.C.A. § 21-8-402(5)(B)(iii), (vii)(b); 21 C.A.R. § 1-101(2)(B)(iii), (vii)(b).\n\f",
+                {
+                    "OpinionCluster": {
+                        "judges": "TIM GRIFFIN, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2026-084.pdf
+            (
+                "                                       TIM GRIFFIN\n                                       ATTORNEY GENERAL\n\n\nOpinion No. 2026-084\n\nOctober 30, 2026\n\nThe Honorable Scott Flippo\nState Senator\nPost Office Box 705\nBull Shoals, Arkansas 72619\n\nDear Senator Flippo:\n\nYou recently submitted a request on behalf of a constituent, seeking this Office’s “review and\noversight regarding governance actions taken involving an Arkansas nonprofit corporation,\nHospice of the Ozarks, Inc. and its sole member organi\n\nope of an Attorney General opinion. Such\nmatters must instead be addressed by private counsel or by a court. 4\n\nAssistant Attorney General Jodie Keener prepared this opinion, which I hereby approve.\n\nSincerely,\n\n\nTIM GRIFFIN\nAttorney General\n\n\n\n\n2\n    See Ark. Att’y Gen. Ops. 2018-040, 2007-322, 2003-355, 2002-120.\n3\n  Ark. Att’y Gen. Ops. 2017-032, 2012-044, 2002-340. The Attorney General is statutorily prohibited from engaging\nin the private practice of law. A.C.A. § 25-16-701.\n4\n This matter was previously the subject of a lawsuit, Joe Dillard, et al. v. Baxter Cnty. Reg. Hosp., Inc., et al., Baxter\nCounty Circuit Court No. 03CV-25-638. That lawsuit has since been dismissed.\n\f",
+                {
+                    "OpinionCluster": {
+                        "judges": "TIM GRIFFIN, Attorney General"
+                    }
+                },
+            ),
+            # https://opinionstorage.blob.core.windows.net/opinions/2026-118.pdf
+            (
+                "                                       TIM GRIFFIN\n                                       ATTORNEY GENERAL\n\n\nOpinion No. 2026-118\n\nNovember 2, 2026\n\nMr. Stephen Bright\nChief Taxpayer Services Officer\nArkansas Secretary of State’s Office\n500 Woodlane Avenue, Suite 256\nLittle Rock, Arkansas 72201\n\nDear Mr. Bright:\n\nYou have requested an opinion from this Office regarding the Arkansas Freedom of Information\nAct (FOIA). Your request, which is made as the subject of the records, is based on A.C.A.\n§ \n\n Op. 2026-065.\n\fStephen Bright\nOpinion No. 2026-118\nPage 7\n\n\nThis opinion was prepared by Deputy Attorney General Kelly Summerside, with the concurrence\nof Chief Deputy Attorney General Zach Mayo.36\n\nSincerely,\n     ~~£\nZACH MAYO\nChief Deputy Attorney General\n\n\n\n\n36\n Chief Deputy Zach Mayo was asked to oversee the preparation and issuance of this opinion because the Attorney\nGeneral recused from this opinion and delegated his authority to issue it.\n\f",
+                {
+                    "OpinionCluster": {
+                        "judges": "ZACH MAYO, Chief Deputy Attorney General"
+                    }
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.attorney_general.mdag": [
             (
                 "\nGen. 225 ]                                                    225\n\n                          TAXATION\nPROPERTY TAX – APPLICABILITY OF HOMESTEAD TAX CREDIT\n    TO SPECIAL BENEFIT DISTRICT TAXES\n\n                       December 19, 2014\n",
                 {

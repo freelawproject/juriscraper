@@ -12,12 +12,14 @@ History:
 
 import re
 from datetime import datetime, timedelta
-from typing import Any
+
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import get_justice_dot_gov_auth_cookies
 from juriscraper.lib.exceptions import UnexpectedContentTypeError
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -30,6 +32,7 @@ class Site(OpinionSiteLinear):
         self.urls = None
         self.status = "Published"
 
+    @override
     async def _process_html(self) -> None:
         if not self.test_mode_enabled():
             # Get last volume URL
@@ -80,7 +83,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Can we extract the date filed from the text?
 
         :param scraped_text: The content of the document downloaded
@@ -97,7 +101,7 @@ class Site(OpinionSiteLinear):
         date_filed = datetime.strptime(date[0], "%B %d, %Y").strftime(
             "%Y-%m-%d"
         )
-        metadata = {
+        metadata: ExtractedMetaData = {
             "OpinionCluster": {
                 "date_filed": date_filed,
                 "date_filed_is_approximate": False,
@@ -105,20 +109,24 @@ class Site(OpinionSiteLinear):
         }
         return metadata
 
-    def download_content(
-        self, download_url, doctor_is_available=True, media_root=""
-    ):
+    @override
+    async def download_content(
+        self,
+        download_url: str,
+        doctor_is_available: bool = True,
+        media_root: str = "",
+    ) -> str | bytes:
         """Overrides regular download_content to handle the
         "I am not a robot challenge". See #1724
         """
         try:
-            return super().download_content(
+            return await super().download_content(
                 download_url, doctor_is_available, media_root
             )
         except UnexpectedContentTypeError as exc:
             # access HTML with JS variables to populate cookies
             html_text = exc.data["response"].text
             self.cookies = get_justice_dot_gov_auth_cookies(html_text)
-            return super().download_content(
+            return await super().download_content(
                 download_url, doctor_is_available, media_root
             )

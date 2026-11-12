@@ -12,7 +12,10 @@ import re
 from datetime import date, datetime
 from urllib.parse import urlencode
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -31,6 +34,7 @@ class Site(OpinionSiteLinear):
         self.make_backscrape_iterable(kwargs)
         self.status = "Published"
 
+    @override
     def _process_html(self) -> None:
         """Process HTML into case dictionaries
 
@@ -83,7 +87,9 @@ class Site(OpinionSiteLinear):
         else:
             self.url = self.api_url
 
-    async def _download_backwards(self, dates: tuple[date, date]) -> None:
+    async def _download_backwards(
+        self, dates: tuple[date | None, date]
+    ) -> None:
         """Make custom date range request
 
         :param dates: (start_date, end_date) tuple
@@ -116,13 +122,14 @@ class Site(OpinionSiteLinear):
 
         self.back_scrape_iterable = [(start, end)]
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract lower court from the scraped text.
 
         :param scraped_text: The text to extract from.
         :return: A dictionary with the metadata.
         """
-        metadata: dict = {}
+        metadata: ExtractedMetaData = {}
         lower_court_pattern = re.compile(
             r"Appeal\s+from\s+the\s+(?P<lower_court>.*?)[,\n]\s*The\s+Honorable\s+(?P<judge>.+?),\s*Judge",
             re.DOTALL,

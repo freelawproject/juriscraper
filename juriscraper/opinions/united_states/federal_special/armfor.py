@@ -2,6 +2,8 @@
 CourtID: armfor
 Court Short Name: C.A.A.F."""
 
+from typing_extensions import override
+
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -18,7 +20,8 @@ class Site(OpinionSiteLinear):
         )
         self.status = "Published"
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         for row in self.html.xpath(self.row_base_path):
             case_name, docket, date, cite = row.xpath(".//td")
             cite = "" if "xx" in cite.text_content() else cite.text_content()

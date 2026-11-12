@@ -1,5 +1,5 @@
 from datetime import date, datetime
-from typing import Annotated, Any, ClassVar
+from typing import Annotated, ClassVar
 
 from pydantic import (
     UUID4,
@@ -8,10 +8,15 @@ from pydantic import (
     BeforeValidator,
     Field,
 )
+from pydantic_core.core_schema import ValidationInfo
 from typing_extensions import override
 
 from juriscraper.lib.log_tools import make_default_logger
-from juriscraper.state.docket import DocketEntry, DocketEntryType
+from juriscraper.state.docket import (
+    DeserializableContext,
+    DocketEntry,
+    DocketEntryType,
+)
 from juriscraper.state.florida.common import (
     FloridaPaginatedResults,
     FloridaPaginatedResultsParser,
@@ -61,16 +66,24 @@ FLORIDA_DOCKET_ENTRY_TYPE_MAP: dict[str, DocketEntryType] = {
 }
 
 
-def florida_entry_type_validator(value: Any) -> DocketEntryType:
+def florida_entry_type_validator(
+    value: object, info: ValidationInfo[object | None]
+) -> DocketEntryType:
     """
     Validates and converts a Florida docket entry type string to a
     DocketEntryType enum value.
 
     :param value: The docket entry type string from the API response.
+    :param info: Pydantic validation info.
 
     :return: The corresponding DocketEntryType enum value.
     """
-    s = str(value).lower()
+    if isinstance(info.context, DeserializableContext):
+        return DocketEntryType(value)
+
+    if not isinstance(value, str):
+        raise ValueError(f"expected str, but got {type(value).__name__}.")
+    s = value.lower()
     if s not in FLORIDA_DOCKET_ENTRY_TYPE_MAP:
         logger.error("Unrecognized Florida docket entry type: %s", s)
         return DocketEntryType.UNASSIGNED
@@ -217,7 +230,8 @@ class FloridaDocketEntry(DocketEntry[FloridaDocument]):
         validation_alias=AliasPath("docketEntryHeader", "compositeSecurity")
     )
     submitted_by: list[FloridaCaseActor] = Field(
-        validation_alias="submittedBy", default=[]
+        validation_alias="submittedBy",
+        default_factory=list,
     )
     attachments: list[FloridaDocument] = []
 

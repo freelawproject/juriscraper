@@ -5,8 +5,11 @@
 import re
 from datetime import date
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -21,6 +24,7 @@ class Site(OpinionSiteLinear):
         self.status = "Published"
         self.make_backscrape_iterable(kwargs)
 
+    @override
     def _process_html(self) -> None:
         for link in self.html.xpath("//li/a[contains(@href, '.pdf')]"):
             url = link.get("href")
@@ -52,8 +56,12 @@ class Site(OpinionSiteLinear):
             # - "October 19, 2021—SUMMARIES for NOTEWORTHY OPINIONS"
             # - "July 7, 2021"
             # - "February 15, 2021 – SUMMARIES for NOTEWORTHY OPINIONS"
+            # The date heading sits right before the <ul>: a <p> in older
+            # sections, an <h3> since mid 2026. Month-only headings
+            # ("September") have no digits and are skipped.
             summary = link.xpath(
-                ".//parent::li/parent::ul/preceding-sibling::h3[1]/following-sibling::p"
+                ".//parent::li/parent::ul/preceding-sibling::*[self::p or self::h3]"
+                "[contains(translate(., '0123456789', '##########'), '#')][1]"
             )[0].text_content()
             # Character separator for dates from summary text could be:
             # - dash: "-"
@@ -93,7 +101,8 @@ class Site(OpinionSiteLinear):
 
         self.back_scrape_iterable = range(start, end)
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract the state citation from the document's text
 
         :param scraped_text: the extracted text

@@ -1,5 +1,6 @@
 from datetime import datetime
 
+from juriscraper.lasc.http import LASCSession
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.utils import clean_court_object
 
@@ -14,23 +15,23 @@ class LASCSearch:
     """
 
     def __init__(self, session):
-        self.session = session
+        self.session: LASCSession = session
         self.api_base = "media.lacourt.org/api/AzureApi/"
 
-    def get_json_from_internal_case_id(self, internal_case_id):
+    async def get_json_from_internal_case_id(self, internal_case_id):
         """Query LASC for the case json based on the internal case id
 
         :param internal_case_id: An internal ID of the form, 19STCV25157;SS;CV
         :return: The parsed docket data for the case requested
         """
-        r = self.session.get(
+        r = await self.session.get(
             f"https://{self.api_base}GetCaseDetail/{internal_case_id}"
         )
         self._check_success(r)
 
         return self._parse_case_data(r.json())
 
-    def query_cases_by_date(self, start, end):
+    async def query_cases_by_date(self, start, end):
         """Query LASC for a list of cases between two dates (inclusive)
 
         The LASC interface only allows queries of up to seven days at a time.
@@ -46,7 +47,7 @@ class LASCSearch:
         date_query_url = (
             f"https://{self.api_base}GetRecentCivilCases/{start_str}/{end_str}"
         )
-        r = self.session.get(date_query_url)
+        r = await self.session.get(date_query_url)
         cases = r.json()["ResultList"]
 
         # Normalize the date data
@@ -61,7 +62,7 @@ class LASCSearch:
 
         return normal_cases
 
-    def get_pdf_from_url(self, pdf_url):
+    async def get_pdf_from_url(self, pdf_url):
         """Get a PDF from the MAP
 
         :param pdf_url: The URL to a particular PDF you wish to download
@@ -69,7 +70,7 @@ class LASCSearch:
         """
 
         logger.info("Api ViewDocument called.  Downloading PDF ")
-        return self.session.get(pdf_url).content
+        return (await self.session.get(pdf_url)).content
 
     @staticmethod
     def _parse_case_data(case_data):

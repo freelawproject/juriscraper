@@ -33,7 +33,7 @@ class BaseCaseQueryAdvanced(BaseDocketReport, BaseReport):
 
     CACHE_ATTRS = ["metadata"]
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None):
         BaseDocketReport.__init__(self, court_id)
         BaseReport.__init__(self, court_id, pacer_session)
 
@@ -142,7 +142,21 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
             href = cells[0].xpath(".//@href")[0]
             row_data["pacer_case_id"] = get_pacer_case_id_from_nonce_url(href)
             # Include the docket_number components.
-            row_data.update(docket_number_components)
+            row_data["federal_dn_office_code"] = docket_number_components[
+                "federal_dn_office_code"
+            ]
+            row_data["federal_dn_case_type"] = docket_number_components[
+                "federal_dn_case_type"
+            ]
+            row_data["federal_dn_judge_initials_assigned"] = (
+                docket_number_components["federal_dn_judge_initials_assigned"]
+            )
+            row_data["federal_dn_judge_initials_referred"] = (
+                docket_number_components["federal_dn_judge_initials_referred"]
+            )
+            row_data["federal_defendant_number"] = docket_number_components[
+                "federal_defendant_number"
+            ]
 
             data.append(row_data)
 
@@ -151,7 +165,7 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
         self._metadata = data
         return data
 
-    def query(
+    async def query(
         self,
         name_last="",
         name_first="",
@@ -242,7 +256,9 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
             }
         )
         logger.info("Running advanced case query with params '%s'", params)
-        self.response = self.session.post(f"{self.url}?1-L_1_0-1", data=params)
+        self.response = await self.session.post(
+            f"{self.url}?1-L_1_0-1", data=params
+        )
         self.parse()
 
 
@@ -257,7 +273,7 @@ class CaseQueryAdvancedDistrict(BaseCaseQueryAdvanced):
     def __init__(self):
         raise NotImplementedError("This object is a stub.")
 
-    def query(self, *args, **kwargs):
+    async def query(self, *args, **kwargs):
         raise NotImplementedError("This object is a stub")
 
 
@@ -274,7 +290,7 @@ def _main():
     report = CaseQueryAdvancedBankruptcy("mad")
     filepath = sys.argv[1]
     print(f"Parsing HTML file at {filepath}")
-    with open(filepath) as f:
+    with open(filepath, "rb") as f:
         text = f.read().decode("utf-8")
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)

@@ -12,12 +12,9 @@ from juriscraper.opinions.united_states.state import nev_u, nevapp
 
 
 class Site(nev_u.Site):
-    # Court of Appeals UUID in the ACIS portal, shared with nevapp
+    # Court of Appeals UUID and judge mapping, shared with nevapp
     court_uuid = nevapp.Site.court_uuid
+    initials_to_judges = nevapp.Site.initials_to_judges
 
     # The Court of Appeals was seated in 2015; earliest entry in the feed
     first_opinion_date = datetime(2015, 1, 22)
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.court_id = self.__module__

@@ -9,6 +9,8 @@ History:
 import re
 from datetime import datetime
 
+from typing_extensions import override
+
 from juriscraper.opinions.united_states.state import nev
 
 
@@ -25,24 +27,25 @@ class Site(nev.Site):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.court_id = self.__module__
         self.status = "Unpublished"
 
-    def parse_description(self, description: str) -> dict:
+    @override
+    def parse_description(self, description: str, date_filed: str) -> dict:
         """Extract metadata from an unpublished order's description
 
         Unpublished orders have no Advance Opinion citation, and their
         disposition is the leading phrase (e.g. "Order of Affirmance",
         often prefixed "Filed Order of Affirmance") rather than the
         quoted boilerplate ("ORDER the judgment of the district court
-        AFFIRMED."), which is inconsistently quoted. The trailing
-        initials (e.g. "KP/RP/LB") are panel initials, not surnames, so
-        the parent's judge extraction stays empty.
+        AFFIRMED."), which is inconsistently quoted. Other metadata,
+        including dated judge-initial resolution for majority panels,
+        is handled by the parent scraper.
 
         :param description: the free-text docketEntryDescription
+        :param date_filed: the filed date, to resolve judge initials
         :return: dict with citation, disposition, author, per_curiam and judge
         """
-        metadata = super().parse_description(description)
+        metadata = super().parse_description(description, date_filed)
         first_sentence = description.split(".", 1)[0].strip()
         first_sentence = re.sub(r"^Filed\s+", "", first_sentence)
         if first_sentence:

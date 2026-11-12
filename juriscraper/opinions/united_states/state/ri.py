@@ -13,6 +13,7 @@ History:
 from urllib.parse import quote
 
 from lxml import html
+from typing_extensions import override
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -61,6 +62,7 @@ class Site(OpinionSiteLinear):
         self.request["headers"]["X-Requested-With"] = "XMLHttpRequest"
         await self._request_url_post(self.json_url)
 
+    @override
     async def _process_html(self) -> None:
         """Extract content from JSON response
 

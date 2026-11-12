@@ -1,6 +1,16 @@
 #!/usr/bin/env python
+import asyncio
 import re
 import unittest
+from datetime import date
+
+from juriscraper.AbstractSite import logger
+from juriscraper.lib.exceptions import ParsingException
+from juriscraper.opinions.united_states.administrative_agency import (
+    mspb_p,
+    mspb_u,
+)
+from juriscraper.opinions.united_states.state import nev, nevapp
 
 
 class ScraperSpotTest(unittest.TestCase):
@@ -127,3 +137,291 @@ class ScraperSpotTest(unittest.TestCase):
             m = re.search(r"(.*?) \((.*?)\)( \((.*?)\))?", s[0])
             name, docket, _, date = m.groups()
             self.assertEqual([name, docket], s[1])
+
+    def test_nytrial_build_url(self):
+        from juriscraper.opinions.united_states.state import (
+            nysupct,
+            nysupct_commercial,
+        )
+
+        root = "https://nycourts.gov/reporter"
+        expected = [
+            (nysupct, date(2026, 4, 10), "slipidx/miscolo_2026_april"),
+            (nysupct, date(2026, 5, 10), "current/index/miscolo_2026_may"),
+            (
+                nysupct_commercial,
+                date(2026, 3, 10),
+                "slipidx/com_div_idxtable_2026_march",
+            ),
+            (
+                nysupct_commercial,
+                date(2026, 4, 10),
+                "current/index/com_div_idxtable_2026_april",
+            ),
+            (nysupct, date.today(), "current/index/miscolo"),
+            (nysupct, None, "current/index/miscolo"),
+        ]
+        for module, target_date, path in expected:
+            site = module.Site()
+            self.assertEqual(
+                site.build_url(target_date), f"{root}/{path}.shtml"
+            )
+
+    def test_nytrial_page_not_found(self):
+        from lxml.html import fromstring
+
+        from juriscraper.lib.exceptions import ParsingException
+        from juriscraper.opinions.united_states.state import nysupct
+
+        site = nysupct.Site()
+        # minimal copy of the page served, with a 200 status code, for
+        # https://nycourts.gov/reporter/slipidx/miscolo_2026_may.shtml
+        site.html = fromstring(
+            b'<?xml version="1.0" encoding="utf-8"?>\n'
+            b'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN" '
+            b'"http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">\n'
+            b'<html xmlns="http://www.w3.org/1999/xhtml"><head>'
+            b"<title>404 ERROR - N.Y. State Courts</title></head><body><main>"
+            b"<h2>404 ERROR - File Not Found</h2>"
+            b"<h1>Sorry, but the page you requested cannot be found.</h1>"
+            b"</main></body></html>"
+        )
+        with self.assertRaises(ParsingException):
+            asyncio.run(site._process_html())
+
+    def test_nytrial_metadata_from_stub(self):
+        from lxml.html import fromstring
+
+        from juriscraper.opinions.united_states.state import nytrial
+
+        # minimal copies of the stub page headers of
+        # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_32223.shtml
+        # https://www.nycourts.gov/reporter/current/3dseries/2023/2023_35460.shtml
+        # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_32204.shtml
+        stub = (
+            '<main id="main"><div class="current-legal-document">'
+            '<div class="case-info"><h1>{name}</h1>'
+            "<p>{slip}</p><p>{date}</p><p>{court}</p>"
+            "<p>{docket}</p><p>{judge}</p>"
+            "<p>Published by New York State Law Reporting Bureau pursuant "
+            "to Judiciary Law &sect; 431.</p></div>"
+            '<h2 class="center"><a href="https://www.nycourts.gov/reporter/'
+            'pdfs/2026/2026_32223.pdf">Full Decision: {slip} (PDF)</a></h2>'
+            "</div></main>"
+        )
+        expected = [
+            (
+                {
+                    "name": "Harbour v Acme Mkts. Inc.",
+                    "slip": "2026 NY Slip Op 32223(U)",
+                    "date": "September 9, 2026",
+                    "court": "Supreme Court, Westchester County",
+                    "docket": "Index No. 56892/2026",
+                    "judge": "Charles D. Wood, J.",
+                },
+                ("Charles D. Wood", "Index No. 56892/2026"),
+            ),
+            (
+                {
+                    "name": "Telfair v State of New York",
+                    "slip": "2023 NY Slip Op 35460(U)",
+                    "date": "August 24, 2023",
+                    "court": "Court of Claims",
+                    "docket": "Claim No. 136668",
+                    "judge": "Catherine E. Leahy-Scott, J.",
+                },
+                ("Catherine E. Leahy-Scott", "Claim No. 136668"),
+            ),
+            (
+                {
+                    "name": "Matter of Dinshaw",
+                    "slip": "2026 NY Slip Op 32204(U)",
+                    "date": "August 31, 2026",
+                    "court": "Surrogate's Court, New York County",
+                    "docket": "Index No. 1970-1950/B",
+                    "judge": "Rita Mella, J.",
+                },
+                ("Rita Mella", "Index No. 1970-1950/B"),
+            ),
+        ]
+        for values, (judge, docket) in expected:
+            header = fromstring(stub.format(**values)).xpath(
+                "//h1/parent::div"
+            )
+            self.assertEqual(nytrial.Site.get_judge_from_header(header), judge)
+            self.assertEqual(
+                nytrial.Site.get_docket_from_header(header), docket
+            )
+
+    def test_nev_judge_initials(self):
+        """Panel initials resolve by court and filed date"""
+        supreme, appeals = nev.Site(), nevapp.Site()
+
+        self.assertEqual(
+            supreme.resolve_initials("MG", "2018-05-01"), "Mark Gibbons"
+        )
+        self.assertEqual(
+            appeals.resolve_initials("MG", "2018-05-01"), "Michael P. Gibbons"
+        )
+
+        with self.assertLogs(logger, level="ERROR"):
+            self.assertEqual(supreme.resolve_initials("MG", "2022-05-01"), "")
+        with self.assertLogs(logger, level="ERROR"):
+            metadata = supreme.parse_description(
+                "Majority: Stiglich/ZZ/Lee.", "2026-06-18"
+            )
+        self.assertEqual(metadata["judge"], "Stiglich, Lee")
+
+    def test_nev_majority_panel(self):
+        """Panel parsing tolerates a "Before:" prefix and spaced slashes"""
+        site = nev.Site()
+        tests = [
+            (
+                "Majority: Before: Parraguirre/Bell/Stiglich. 141 Nev.",
+                "Parraguirre, Bell, Stiglich",
+            ),
+            (
+                "Majority:  Parraguirre/Hardesty/ Cadish.  136 Nev.",
+                "Parraguirre, Hardesty, Cadish",
+            ),
+            (
+                "Majority: Hardesty/Parraguirre /Douglas. 124 Nev.",
+                "Hardesty, Parraguirre, Douglas",
+            ),
+            (
+                "Majority: Pickering/Gibbons/ /Hardesty. 129 Nev.",
+                "Pickering, Gibbons, Hardesty",
+            ),
+            (
+                "Majority: Herndon/Lee/Parraguirre 139 Nev. SNP23-DH/PL/RP.",
+                "Herndon, Lee, Parraguirre",
+            ),
+            ("Majority: En Banc. 141 Nev.", ""),
+        ]
+        for description, judges in tests:
+            with self.subTest(description=description):
+                metadata = site.parse_description(description, "2026-06-18")
+                self.assertEqual(metadata["judge"], judges)
+
+    def test_nev_backscrape_past_last_page(self):
+        """A backscrape stops on the empty page after the last one"""
+        result = {
+            "docketEntryHeader": {
+                "filedDate": "2000-05-08T07:00:00.000+00:00",
+                "docketEntryDescription": "Majority: Rose/Young/Maupin.",
+            },
+            "caseHeader": {
+                "caseNumber": "33018",
+                "caseTitle": "STATE VS. DOE",
+                "caseInstanceUUID": "case-uuid",
+            },
+            "documentLinkUUID": "document-uuid",
+        }
+        pages = [
+            {"_embedded": {"results": [result]}},
+            # The API leaves out "_embedded" past the last page
+            {"page": {"size": 100, "totalElements": 1, "number": 1}},
+        ]
+
+        async def download():
+            return pages.pop(0)
+
+        site = nev.Site(backscrape_start="2000/01/01")
+        site._download = download
+        asyncio.run(site._download_backwards(site.back_scrape_iterable[0]))
+        self.assertEqual(len(site.cases), 1)
+        self.assertEqual(pages, [])
+
+    def test_mspb_backscrape_skips_manifests_out_of_range(self):
+        """A backscrape downloads only the manifests that can hold the range"""
+
+        def run(site_class, start, end):
+            urls = []
+
+            async def download():
+                urls.append(site.url.rsplit("/", 1)[1])
+                return {"DOCUMENT_TYPE": site.document_type, "data": []}
+
+            site = site_class(backscrape_start=start, backscrape_end=end)
+            site._download = download
+            site.request_pause = 0
+            asyncio.run(site._download_backwards(site.back_scrape_iterable[0]))
+            return urls
+
+        self.assertEqual(
+            run(mspb_p.Site, "2005/01/01", "2006/12/31"),
+            ["PrecedentialDecisions_Manifest_updMar2025.json"],
+        )
+        self.assertEqual(
+            run(mspb_p.Site, "2021/01/01", "2023/12/31"),
+            [
+                "PrecedentialDecisions_Manifest_updMar2025.json",
+                "PrecedentialDecisions_Manifest.json",
+                "PrecedentialDecisions_Manifest_Table.json",
+            ],
+        )
+        self.assertEqual(
+            run(mspb_u.Site, "2016/01/01", "2016/12/31"),
+            [
+                "NonPrecedentialDecisions_Manifest.json",
+                "NonPrecedentialDecisions_Manifest_2015-2019.json",
+            ],
+        )
+        self.assertEqual(
+            run(mspb_u.Site, "2024/01/01", "2024/12/31"),
+            [
+                "NonPrecedentialDecisions_Manifest.json",
+                "NonPrecedentialDecisions_Manifest_Table.json",
+            ],
+        )
+
+    def test_mspb_rows(self):
+        """Bad rows are logged one at a time; citations are normalized"""
+
+        def row(file_name, issued, decision_number="", legal_citation=""):
+            return {
+                "FILE_NAME": file_name,
+                "ISSUED_DATE": issued,
+                "DECISION_NUMBER": decision_number,
+                "LEGAL_CITATION": legal_citation,
+                "DOCKET_NBR": "DC-0752-10-0001-I-1",
+                "APL_FIRST_NAME": "Jane",
+                "APL_LAST_NAME": "Doe",
+                "AGENCY": "Department of the Navy",
+            }
+
+        manifest = {
+            "DOCUMENT_TYPE": "PRECEDENTIAL",
+            "data": [
+                row("a.pdf", "2011/09/20", "2011 MPSB 84", "117 M.S.P.R. 75"),
+                row("b.pdf", "1982/02/10", "9 M S P B  448", "10 M.S.P.R.194"),
+                row("c.pdf", "1985/08/08", "", "NP"),
+                row("d.pdf", "2001/04/27", "", "88 M.S.P.R. 319, 327"),
+                row("e.pdf", "2000/02/02", "12 MSPB 1 123", ""),
+                row("", "2026/09/16"),
+                row("f.pdf", "0891/01/01"),
+                row("g.pdf", "1087/11/27"),
+            ],
+        }
+        site = mspb_p.Site()
+        with self.assertLogs(logger, level="ERROR") as logs:
+            site._parse_manifest(manifest, "test")
+        # One message per bad row: the unrecognized decision number, the
+        # missing file name and the two impossible dates
+        self.assertEqual(len(logs.records), 4)
+        cites = [(c["citation"], c["parallel_citation"]) for c in site.cases]
+        self.assertEqual(
+            cites,
+            [
+                ("2011 MSPB 84", "117 M.S.P.R. 75"),
+                ("9 M.S.P.B. 448", "10 M.S.P.R. 194"),
+                ("", ""),
+                ("88 M.S.P.R. 319", ""),
+                ("", ""),
+            ],
+        )
+
+        with self.assertRaises(ParsingException):
+            site._parse_manifest(
+                {"DOCUMENT_TYPE": "NON-PRECEDENTIAL", "data": []}, "test"
+            )

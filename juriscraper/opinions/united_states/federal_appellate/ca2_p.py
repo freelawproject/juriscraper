@@ -18,6 +18,8 @@ from datetime import date, datetime, timedelta
 from html import unescape
 from urllib.parse import urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -72,6 +74,7 @@ class Site(OpinionSiteLinear):
             "booleanConditions": "",
         }
 
+    @override
     def _process_html(self) -> None:
         for row in self.html.xpath('//table[@class="ResultsTable"]/tr'):
             anchor = row.xpath('.//td[@class="ResultsItemLeft"]/a')

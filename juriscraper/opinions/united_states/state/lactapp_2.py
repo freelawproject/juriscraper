@@ -11,12 +11,15 @@ import re
 from datetime import datetime
 from urllib.parse import urlencode, urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import (
     get_row_column_links,
     get_row_column_text,
 )
 from juriscraper.lib.judge_parsers import normalize_judge_string
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -32,7 +35,8 @@ class Site(OpinionSiteLinear):
         self.is_backscrape = False
         self.make_backscrape_iterable(kwargs)
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         """Process the HTML and extract case information"""
         rows = self.html.xpath('//table[@id="datatable"]/tbody/tr')
 
@@ -111,12 +115,13 @@ class Site(OpinionSiteLinear):
         """When backscraping, check if the case date is in
         the backscraping range
 
-        :param date_str: string date from the HTML source
+        :param case_date: string date from the HTML source
         :return: True if date is in backscrape range
         """
         return self.start_date <= case_date <= self.end_date
 
-    def extract_from_text(self, scraped_text):
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract the following values from the opinion's pdf text. The information we need is in the first page
             - appeal_from_str
             - judges
@@ -124,7 +129,7 @@ class Site(OpinionSiteLinear):
         :param scraped_text: The text content of the pdf
         :return: Dictionary containing the extracted values that matches the courtlistener model objects
         """
-        metadata = {"Docket": {}}
+        metadata: ExtractedMetaData = {"Docket": {}}
 
         appeal_from_match = re.search(
             r"Appealed from the\s*(.*?\s*),\s*Louisiana",

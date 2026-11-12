@@ -11,6 +11,8 @@ History:
 
 from datetime import date
 
+from typing_extensions import override
+
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -35,6 +37,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
+    @override
     def _process_html(self) -> None:
         """Processes the HTML content and extracts case information.
 

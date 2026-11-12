@@ -9,6 +9,7 @@ History:
 """
 
 import feedparser
+from typing_extensions import override
 
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
@@ -20,6 +21,7 @@ class Site(OralArgumentSiteLinear):
 
         self.url = "http://www.ca1.uscourts.gov/doarrss/feed"
 
+    @override
     def _process_html(self) -> None:
         """Process the RSS feed.
 

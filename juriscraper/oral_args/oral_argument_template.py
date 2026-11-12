@@ -19,7 +19,6 @@ class Site(OralArgumentSite):
         self.court_id = self.__module__
         self.url = "http://court-url.gov/some-path.html"
         self.method = "POST"
-        self.uses_selenium = False
         # Complete this variable if you create a backscraper.
         self.back_scrape_iterable = None
 

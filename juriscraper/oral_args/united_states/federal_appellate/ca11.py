@@ -6,6 +6,8 @@ Reviewer: mlr
 Date created: 28 Aug 2018
 """
 
+from typing_extensions import override
+
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
@@ -18,7 +20,8 @@ class Site(OralArgumentSiteLinear):
         self.url = self.base_url
         self.back_scrape_iterable = list(range(0, 52))
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         for row in self.html.xpath("//tr[not(th)]"):
             # normalize docket numbers
             # get rid of "consolidated with" text

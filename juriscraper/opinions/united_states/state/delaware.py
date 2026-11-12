@@ -8,6 +8,9 @@ Reviewer: mlr
 import re
 from urllib.parse import urljoin
 
+from typing_extensions import override
+
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -22,7 +25,8 @@ class Site(OpinionSiteLinear):
         self.should_have_results = True
         self.status = "Published"
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         """Process the html and extract out the opinions
 
         :return: None
@@ -44,7 +48,8 @@ class Site(OpinionSiteLinear):
 
             self.cases.append(case)
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract lower court from the scraped text.
 
         :param scraped_text: The text to extract from.
@@ -66,7 +71,7 @@ class Site(OpinionSiteLinear):
             re.IGNORECASE,
         )
 
-        result = {}
+        result: ExtractedMetaData = {}
 
         if match := pattern.search(cleaned_text):
             lower_court = re.sub(

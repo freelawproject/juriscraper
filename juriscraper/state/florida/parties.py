@@ -1,11 +1,17 @@
-from typing import Annotated, Any, ClassVar
+from typing import Annotated, ClassVar
 from uuid import UUID
 
 from pydantic import UUID4, AfterValidator, AliasPath, BeforeValidator, Field
+from pydantic_core.core_schema import ValidationInfo
 from typing_extensions import override
 
 from juriscraper.lib.log_tools import make_default_logger
-from juriscraper.state.docket import Party, PartyType, Representative
+from juriscraper.state.docket import (
+    DeserializableContext,
+    Party,
+    PartyType,
+    Representative,
+)
 from juriscraper.state.florida.common import (
     FloridaPaginatedResults,
     FloridaPaginatedResultsParser,
@@ -52,15 +58,23 @@ FLORIDA_PARTY_TYPE_MAP: dict[str, PartyType] = {
 }
 
 
-def florida_party_type_validator(value: Any) -> PartyType:
+def florida_party_type_validator(
+    value: object, info: ValidationInfo[object | None]
+) -> PartyType:
     """Validates and converts a Florida party type string to a PartyType
     enum value.
 
     :param value: The party type string from the API response.
+    :param info: Pydantic validation info.
 
     :return: The corresponding PartyType enum value.
     """
-    s = str(value).lower()
+    if isinstance(info.context, DeserializableContext):
+        return PartyType(value)
+
+    if not isinstance(value, str):
+        raise ValueError(f"expected str, but got {type(value).__name__}.")
+    s = value.lower()
     if s not in FLORIDA_PARTY_TYPE_MAP:
         logger.error("Unrecognized Florida party type: %s", s)
         return PartyType.UNASSIGNED
@@ -169,7 +183,10 @@ class FloridaParty(Party[FloridaPartyRepresentative]):
     representatives: Annotated[
         list[FloridaPartyRepresentative],
         AfterValidator(lambda rs: [r for r in rs if r.name and r.party_uuid]),
-    ] = Field(validation_alias="legalRepresentations", default=[])
+    ] = Field(
+        validation_alias="legalRepresentations",
+        default_factory=list,
+    )
     non_public_flag: bool = Field(validation_alias="nonPublicFlag")
     party_number: int = Field(validation_alias="partyNumber", default=0)
     involvement_type_id: int = Field(validation_alias="involvementTypeID")

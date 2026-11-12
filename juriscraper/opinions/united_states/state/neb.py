@@ -1,9 +1,11 @@
 import re
-from typing import Any
+
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -58,7 +60,8 @@ class Site(OpinionSiteLinear):
                 )
             return html_tree
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         for table in self.html.xpath(".//table"):
             date_tags = table.xpath("preceding::time[1]/text()")
             if not date_tags:
@@ -92,9 +95,10 @@ class Site(OpinionSiteLinear):
                     }
                 )
 
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Get the state citation and lower court info from the document's text."""
-        result = {}
+        result: ExtractedMetaData = {}
 
         match = self.citation_regex.search(scraped_text[:1000])
         if match:

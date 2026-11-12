@@ -14,6 +14,8 @@ History:
 from datetime import date, datetime, timedelta
 from urllib.parse import urlencode
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -29,6 +31,7 @@ class Site(OpinionSiteLinear):
         self.set_url()
         self.make_backscrape_iterable(kwargs)
 
+    @override
     def _process_html(self) -> None:
         for row in self.html.xpath(".//tr"):
             if not row.xpath(".//td"):

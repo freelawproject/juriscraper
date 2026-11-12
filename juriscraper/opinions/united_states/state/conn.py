@@ -17,11 +17,13 @@ import re
 from datetime import date
 
 from dateutil.parser import parse
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.ClusterSite import ClusterSite
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.lib.type_utils import OpinionType
+from juriscraper.OpinionSite import ExtractedMetaData
 
 
 class Site(ClusterSite):
@@ -109,6 +111,7 @@ class Site(ClusterSite):
 
         return match.group("dockets"), match.group("case_name"), op_type.value
 
+    @override
     def _process_html(self) -> None:
         """Process the html and extract out the opinions
 
@@ -153,7 +156,8 @@ class Site(ClusterSite):
         year_str = str(year % 2000).zfill(2)
         return self.base_url.format(self.court_abbv, year_str)
 
-    def extract_from_text(self, scraped_text: str):
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """
         If possible, extract Opinion Cluster values:
             - date_filed
@@ -164,7 +168,7 @@ class Site(ClusterSite):
         :param scraped_text: Text extracted from the PDF
         :returns: metadata object expected by Courtlistener
         """
-        metadata: dict[str, dict] = {"OpinionCluster": {}}
+        metadata: ExtractedMetaData = {"OpinionCluster": {}}
 
         # initial value for end index for judges
         judges_end = 1_000_000

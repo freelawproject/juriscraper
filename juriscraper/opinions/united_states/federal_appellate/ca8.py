@@ -2,6 +2,7 @@ import re
 from datetime import date, datetime
 
 from dateutil.rrule import MONTHLY, rrule
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -29,7 +30,8 @@ class Site(OpinionSiteLinear):
 
         self.make_backscrape_iterable(kwargs)
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         for link in self.html.xpath('//a[contains(@href, "opndir")]'):
             url = link.get("href")
             text = link.xpath("following-sibling::text()")[0].strip()

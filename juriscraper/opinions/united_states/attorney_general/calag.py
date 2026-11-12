@@ -6,6 +6,7 @@ Court Short Name: California Attorney General
 import datetime
 
 from lxml.html import HtmlElement
+from typing_extensions import override
 
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -31,6 +32,7 @@ class Site(OpinionSiteLinear):
         conclusions = row.xpath("./td[3]")[0].text_content()
         return f"QUESTIONS: {questions} CONCLUSIONS: {conclusions}"
 
+    @override
     def _process_html(self) -> None:
         """Process California AG HTML
 

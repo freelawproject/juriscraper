@@ -3,7 +3,7 @@ import argparse
 import glob
 
 from lxml import etree
-from lxml.etree import _ElementStringResult
+from lxml.etree import _Element
 
 __author__ = "mlissner"
 
@@ -13,7 +13,7 @@ def print_xpath_results(query):
     total_file_count = 0
     equalities = 0
     unique_items = set()
-    for f in glob.glob("../examples/*.xml"):
+    for f in glob.glob("../examples/**/*.xml"):
         total_file_count += 1
         indent = ""
         print(f"\n{indent}{f}:")
@@ -29,13 +29,15 @@ def print_xpath_results(query):
         elif isinstance(results, list):
             s = set()
             for result in results:
-                if isinstance(result, _ElementStringResult):
+                if isinstance(result, str):
+                    print(f"{indent}{count}.\t{result}")
+                    s.add("".join(result.split()))
+                elif isinstance(result, _Element):
+                    result = etree.tostring(result, encoding="unicode").strip()
                     print(f"{indent}{count}.\t{result}")
                     s.add("".join(result.split()))
                 else:
-                    result = etree.tostring(result).strip()
-                    print(f"{indent}{count}.\t{result}")
-                    s.add("".join(result.split()))
+                    raise ValueError(f"Unexpected type {type(result)}")
                 count += 1
             if len(s) == 1:
                 print(f"\n{indent}All items were equal!")

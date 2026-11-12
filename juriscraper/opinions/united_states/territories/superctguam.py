@@ -10,6 +10,8 @@ import re
 from datetime import date
 from urllib.parse import urljoin
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.opinions.united_states.territories import guam
 
@@ -27,6 +29,7 @@ class Site(guam.Site):
         super().__init__(*args, **kwargs)
         self.status = "Unknown"
 
+    @override
     def _process_html(self) -> None:
         """Process the current-year decisions and orders page
 

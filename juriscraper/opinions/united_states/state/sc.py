@@ -23,8 +23,11 @@ Contact information:
 import re
 from datetime import date
 
+from typing_extensions import override
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.date_utils import unique_year_month
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -55,7 +58,8 @@ class Site(OpinionSiteLinear):
         else:
             self.status = "Unpublished"
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         for row in self.html.xpath("//div[contains(@class,'case-result')]"):
             date_filed = row.xpath(
                 "preceding-sibling::div[contains(@class,'result-heading')]/h3/text()"
@@ -85,9 +89,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def make_backscrape_iterable(
-        self, kwargs: dict
-    ) -> list[tuple[date, date]]:
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Reuse base function to get a sequence of date objects for
         each month in the interval. Then, convert them to target URLs
         and replace the self.back_scrape_iterable
@@ -132,13 +134,14 @@ class Site(OpinionSiteLinear):
             str(date_obj.month).zfill(2),
         )
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract docket number from the scraped text.
 
         :param scraped_text: The text to extract from.
         :return: A dictionary with the metadata.
         """
-        results: dict[str, dict] = {}
+        results: ExtractedMetaData = {}
         if match := self.lower_court_regex.search(scraped_text):
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")

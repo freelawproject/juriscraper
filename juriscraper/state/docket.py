@@ -6,9 +6,37 @@ here in this format.
 
 from datetime import date
 from enum import Enum
-from typing import Generic, TypeVar
+from typing import Generic, TypeVar, final
 
 from pydantic import BaseModel
+
+_DeserializableT = TypeVar("_DeserializableT", bound="Deserializable")
+
+
+@final
+class DeserializableContext:
+    """
+    This is validation context provided by `Deserializable.deserialize()`.
+    Roughly, this signifies that the data being parsed has been serialized
+    previously by `model_dump_json()`. Validators may use this to vary their
+    behavior. The class is empty, because its presence is a sufficient signal.
+    """
+
+
+class Deserializable(BaseModel):
+    """Indicates a Pydantic model which can be deserialized from the output of
+    a `model_dump` method."""
+
+    @classmethod
+    def deserialize(
+        cls: type[_DeserializableT], text: str
+    ) -> _DeserializableT:
+        """Deserialize a JSON string into an instance of this model."""
+        return cls.model_validate_json(
+            text,
+            context=DeserializableContext(),
+            by_name=True,
+        )
 
 
 class Document(BaseModel):
@@ -51,7 +79,7 @@ class DocketEntryType(Enum):
 _DocketEntryDocument = TypeVar("_DocketEntryDocument", bound=Document)
 
 
-class DocketEntry(BaseModel, Generic[_DocketEntryDocument]):
+class DocketEntry(Deserializable, Generic[_DocketEntryDocument]):
     """
     Represents a single docket entry.
 
@@ -91,7 +119,7 @@ class TransferReason(Enum):
     """A transfer reason could not be determined by the parser."""
 
 
-class DocketTransfer(BaseModel):
+class DocketTransfer(Deserializable):
     """
     Represents a transfer of a docket from one court to another.
 
@@ -107,7 +135,7 @@ class DocketTransfer(BaseModel):
     docket_number: str
 
 
-class Representative(BaseModel):
+class Representative(Deserializable):
     """
     Someone representing a party in a case (e.g. an attorney).
 
@@ -139,7 +167,7 @@ class PartyType(Enum):
 _PartyRepresentative = TypeVar("_PartyRepresentative", bound=Representative)
 
 
-class Party(BaseModel, Generic[_PartyRepresentative]):
+class Party(Deserializable, Generic[_PartyRepresentative]):
     """
     A party in a case.
 
@@ -187,12 +215,13 @@ class DocketType(Enum):
 
 
 _DocketDocketTransfer = TypeVar("_DocketDocketTransfer", bound=DocketTransfer)
-_DocketDocketEntry = TypeVar("_DocketDocketEntry", bound=DocketEntry)
-_DocketParty = TypeVar("_DocketParty", bound=Party)
+_DocketDocketEntry = TypeVar("_DocketDocketEntry", bound=DocketEntry[Document])
+_DocketParty = TypeVar("_DocketParty", bound=Party[Representative])
 
 
 class Docket(
-    BaseModel, Generic[_DocketDocketTransfer, _DocketDocketEntry, _DocketParty]
+    Deserializable,
+    Generic[_DocketDocketTransfer, _DocketDocketEntry, _DocketParty],
 ):
     """
     Represents one docket in one court.

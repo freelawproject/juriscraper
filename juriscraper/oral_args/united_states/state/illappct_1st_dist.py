@@ -11,6 +11,7 @@ History:
 from datetime import timedelta
 
 from dateutil.utils import today
+from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
@@ -43,7 +44,8 @@ class Site(OralArgumentSiteLinear):
             "ctl00$ctl04$hdnSortDirection": "DESC",
         }
 
-    def _process_html(self):
+    @override
+    def _process_html(self) -> None:
         for row in self.html.xpath(
             './/table[@id="ctl04_gvArguments"]/tr[not(th)]'
         ):
