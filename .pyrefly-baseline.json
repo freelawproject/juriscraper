@@ -162,20 +162,6 @@
       "severity": "error"
     },
     {
-      "column": 26,
-      "path": "juriscraper/lib/network_utils.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `AsyncClient` has no attribute `acms_user_data`",
-      "severity": "error"
-    },
-    {
-      "column": 32,
-      "path": "juriscraper/lib/network_utils.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `AsyncClient` has no attribute `acms_user_data`",
-      "severity": "error"
-    },
-    {
       "column": 40,
       "path": "juriscraper/lib/string_utils.py",
       "name": "unbound-name",

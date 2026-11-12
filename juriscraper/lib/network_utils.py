@@ -1,13 +1,28 @@
 import asyncio
+import base64
+import json
 import random
 from datetime import datetime
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
-from httpx import AsyncClient
+import httpx
 
+from juriscraper.lib.exceptions import PacerLoginException, ParsingException
 from juriscraper.lib.log_tools import make_default_logger
 
+if TYPE_CHECKING:
+    from juriscraper.pacer.http import PacerSession
+
 logger = make_default_logger()
+
+# ACMS pages embed their data as a JavaScript assignment inside a <script>
+# tag; the object that follows this marker is plain JSON.
+ACMS_VIEW_MODEL_MARKER = "window.showDocViewModel = "
+
+# ACMS stopped reporting the account's contact type when it moved to HTMX.
+# Its API still wants one in request bodies, and this value is accepted for
+# regular PACER accounts. See freelawproject/courtlistener#6680.
+ACMS_DEFAULT_CONTACT_TYPE = "PACER Only"
 
 
 async def add_delay(delay: int = 0, deviation: int = 0) -> None:
@@ -21,6 +36,32 @@ async def add_delay(delay: int = 0, deviation: int = 0) -> None:
     duration = random.randrange(delay - deviation, delay + deviation)
     logger.info(f"Adding a delay of {duration} seconds. Please wait.")
     await asyncio.sleep(duration)
+
+
+def extract_acms_view_model(html: str) -> dict[str, Any]:
+    """Return the ``window.showDocViewModel`` object embedded in an ACMS page.
+
+    The object is decoded in place with ``raw_decode`` rather than matched
+    with a regex, so nested braces in the data cannot truncate it.
+
+    :param html: The text of an ACMS page or HTMX fragment.
+    :return: The decoded view model.
+    :raises ParsingException: if the page carries no view model, or the
+        view model is not a JSON object.
+    """
+    start = html.find(ACMS_VIEW_MODEL_MARKER)
+    if start == -1:
+        raise ParsingException("No showDocViewModel found in the ACMS page.")
+    start += len(ACMS_VIEW_MODEL_MARKER)
+    try:
+        view_model, _ = json.JSONDecoder().raw_decode(html, start)
+    except json.JSONDecodeError as exc:
+        raise ParsingException(
+            "Could not decode showDocViewModel in the ACMS page."
+        ) from exc
+    if not isinstance(view_model, dict):
+        raise ParsingException("showDocViewModel is not a JSON object.")
+    return view_model
 
 
 class AcmsApiClient:
@@ -37,11 +78,107 @@ class AcmsApiClient:
     ATTACHMENTS_ENDPOINT = "DocketEntryDocumentsByDocketId/{entry_id}"
     MERGE_PDF_ENDPOINT = "MergePDFFiles/"
     GET_PDF_ENDPOINT = "GetMergedFile/"
+    # The cookie-authenticated case page on the showdoc host, not the API.
+    INDEX_CONTENT_URL_TEMPLATE = (
+        "https://{court_id}-showdoc.azurewebsites.us/Home/IndexContent"
+    )
 
-    def __init__(self, session: AsyncClient, court_id: str):
+    def __init__(self, session: "PacerSession", court_id: str):
         self.session = session
         self.court_id = court_id
         self.base_url = self.BASE_URL_TEMPLATE.format(court_id=self.court_id)
+        self.index_content_url = self.INDEX_CONTENT_URL_TEMPLATE.format(
+            court_id=self.court_id
+        )
+
+    @staticmethod
+    def _is_login_redirect(response: httpx.Response) -> bool:
+        """Whether ACMS bounced this request to a login page.
+
+        An invalid or expired ACMS cookie session answers with a redirect to
+        ``/Auth/Login`` on the court's showdoc host, which then forwards to
+        PACER's login form.
+        """
+        urls = [str(r.url) for r in [*response.history, response]]
+        return any("/Auth/Login" in url or "login.jsf" in url for url in urls)
+
+    @staticmethod
+    def _user_data_from_token(token: str) -> dict[str, str]:
+        """Derive the ``CsoId`` and ``ContactType`` body fields the API
+        expects from its bearer token.
+
+        The token is a JWT whose payload lists the PACER account id under
+        ``showDocClaims.CSOId``. Only that claim is read; the court validates
+        the token itself on every API call.
+
+        :param token: The bearer token from ``authTokenResult.token``.
+        :return: The user data, or an empty dict when the claim is missing or
+            the token is not a JWT.
+        """
+        try:
+            payload = token.split(".")[1]
+            payload += "=" * (-len(payload) % 4)
+            claims = json.loads(base64.urlsafe_b64decode(payload))
+        except (IndexError, ValueError):
+            return {}
+        if not isinstance(claims, dict):
+            return {}
+        cso_id = (claims.get("showDocClaims") or {}).get("CSOId")
+        if not cso_id:
+            return {}
+        return {
+            "CsoId": str(cso_id),
+            "ContactType": ACMS_DEFAULT_CONTACT_TYPE,
+        }
+
+    async def get_index_content(self, case_identifier: str) -> dict[str, Any]:
+        """Load a case's IndexContent page and keep the API token it carries.
+
+        ``/Home/IndexContent`` is the cookie-authenticated HTMX fragment ACMS
+        renders for a case. Besides the case data (``caseDetails``), it embeds
+        the bearer token the ``showdocservices`` API requires, which ACMS no
+        longer returns during login. Call this before any other method of
+        this client: the token, and the user data derived from it, are stored
+        on the session through ``store_acms_token``.
+
+        Like the API calls, this request is made with the user's PACER
+        account and may incur charges.
+
+        :param case_identifier: The docket number to show, e.g. ``26-7519``.
+        :return: The decoded ``showDocViewModel`` object.
+        :raises PacerLoginException: if ACMS redirects to its login page. The
+            court's cookie jar is dropped so the next request re-establishes
+            it.
+        :raises ParsingException: if the page carries no view model.
+        """
+        logger.info(
+            f"Fetching ACMS IndexContent for {self.court_id} "
+            f"case {case_identifier}"
+        )
+        response = await self.session.get(
+            self.index_content_url,
+            params={"caseIdentifier": case_identifier},
+        )
+        if self._is_login_redirect(response):
+            self.session.acms_cookies.pop(self.court_id, None)
+            raise PacerLoginException(
+                f"ACMS redirected to its login page for {self.court_id}; "
+                "the ACMS session is no longer valid."
+            )
+        response.raise_for_status()
+        view_model = extract_acms_view_model(response.text)
+        token = (view_model.get("authTokenResult") or {}).get("token")
+        if not token:
+            logger.warning(
+                f"ACMS IndexContent for {self.court_id} carried no API token."
+            )
+            return view_model
+        self.session.store_acms_token(
+            self.court_id,
+            {"Token": token},
+            self._user_data_from_token(token),
+        )
+        return view_model
 
     def _map_case_details_response(
         self, raw_data: dict[str, Any]
