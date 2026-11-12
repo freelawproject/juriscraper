@@ -171,3 +171,75 @@ class AcmsApiClientIndexContentTest(unittest.IsolatedAsyncioTestCase):
 
         with self.assertRaises(httpx.HTTPStatusError):
             await self.client.get_index_content("26-7519")
+
+
+class AcmsApiClientAuthGuardTest(unittest.IsolatedAsyncioTestCase):
+    """Test that API calls refuse to run before IndexContent supplied auth."""
+
+    def setUp(self):
+        self.session = PacerSession(username="user", password="pass")
+        self.addAsyncCleanup(self.session.aclose)
+        # A court jar in place means no SAML handshake is attempted.
+        self.session.acms_cookies["ca9"] = httpx.Cookies()
+        self.get = mock.patch.object(httpx.AsyncClient, "get").start()
+        self.post = mock.patch.object(httpx.AsyncClient, "post").start()
+        self.addCleanup(mock.patch.stopall)
+        self.client = AcmsApiClient(self.session, "ca9")
+
+    async def test_api_calls_require_token(self):
+        """Every API method fails before any request when no token is stored."""
+        calls = {
+            "get_case_details": self.client.get_case_details("case-id"),
+            "get_docket_entries": self.client.get_docket_entries("case-id"),
+            "get_attachments": self.client.get_attachments(
+                "entry-id", False, False
+            ),
+            "download_pdf": self.client.download_pdf("doc-id", 1, "url"),
+        }
+        for name, call in calls.items():
+            with (
+                self.subTest(method=name),
+                self.assertRaisesRegex(
+                    PacerLoginException, "get_index_content"
+                ),
+            ):
+                await call
+        self.get.assert_not_awaited()
+        self.post.assert_not_awaited()
+
+    async def test_docket_entries_require_account_data(self):
+        """A token without an account id cannot build the entries request."""
+        self.session.store_acms_token("ca9", {"Token": "token"})
+
+        with self.assertRaisesRegex(PacerLoginException, "account"):
+            await self.client.get_docket_entries("case-id")
+        self.post.assert_not_awaited()
+
+    async def test_docket_entries_send_stored_auth(self):
+        """The stored token and account data make it into the request."""
+        self.session.store_acms_token(
+            "ca9",
+            {"Token": "token"},
+            {"CsoId": "1234", "ContactType": "PACER Only"},
+        )
+
+        async def post(url, **kwargs):
+            return httpx.Response(
+                200,
+                json={"isCaseSealed": False, "matchingDocketEntries": []},
+                request=httpx.Request("POST", url),
+            )
+
+        self.post.side_effect = post
+
+        docket_info = await self.client.get_docket_entries("case-id")
+
+        self.post.assert_awaited_once()
+        url, kwargs = self.post.call_args[0][0], self.post.call_args[1]
+        self.assertTrue(url.endswith("/api/DocketEntriesByCaseId/case-id"))
+        self.assertEqual(
+            kwargs["json"], {"csoId": "1234", "contactType": "PACER Only"}
+        )
+        self.assertEqual(kwargs["headers"]["Authorization"], "Bearer token")
+        self.assertEqual(docket_info["docketEntries"], [])
+        self.assertFalse(docket_info["isCaseSealed"])

@@ -333,6 +333,37 @@ class AcmsApiClient:
             "searchTransaction": raw_doc_data.get("searchTransaction"),
         }
 
+    def _require_token(self) -> None:
+        """Refuse an API call when no bearer token is stored for the court.
+
+        The API answers 401 to anonymous requests. Failing before the request
+        points the caller at ``get_index_content``, which is where the token
+        comes from.
+
+        :raises PacerLoginException: if ``get_index_content`` has not run for
+            this court on this session.
+        """
+        if not self.session.acms_tokens.get(self.court_id):
+            raise PacerLoginException(
+                f"No ACMS API token for {self.court_id}. Call "
+                "get_index_content() first to obtain one."
+            )
+
+    def _user_data(self) -> dict[str, str]:
+        """Return the account fields the API expects in request bodies.
+
+        :raises PacerLoginException: if the stored token carried no account
+            id, so no request body can be built.
+        """
+        cso_id = self.session.acms_user_data.get("CsoId")
+        contact_type = self.session.acms_user_data.get("ContactType")
+        if not cso_id or not contact_type:
+            raise PacerLoginException(
+                f"No ACMS account data for {self.court_id}; the IndexContent "
+                "token carried no account id."
+            )
+        return {"CsoId": str(cso_id), "ContactType": str(contact_type)}
+
     async def get_case_details(self, case_id: str) -> dict[str, Any]:
         """
         Fetches and maps case details for a given case ID.
@@ -340,6 +371,7 @@ class AcmsApiClient:
         :param case_id: The unique identifier of the case.
         :return: The mapped case details.
         """
+        self._require_token()
         path = self.CASE_DETAILS_ENDPOINT.format(case_id=case_id)
         url = f"{self.base_url}{path}"
         logger.info(f"Fetching case details from: {url}")
@@ -354,14 +386,16 @@ class AcmsApiClient:
         :param case_id: The unique identifier of the case.
         :return: The mapped docket entry details.
         """
+        self._require_token()
+        user_data = self._user_data()
         path = self.DOCKET_ENTRIES_ENDPOINT.format(case_id=case_id)
         url = f"{self.base_url}{path}"
         logger.info(f"Fetching docket entries from: {url}")
         response = await self.session.post(
             url,
             json={
-                "csoId": self.session.acms_user_data["CsoId"],
-                "contactType": self.session.acms_user_data["ContactType"],
+                "csoId": user_data["CsoId"],
+                "contactType": user_data["ContactType"],
             },
         )
         response.raise_for_status()
@@ -385,6 +419,7 @@ class AcmsApiClient:
         :return: A list of dictionaries, where each dictionary represents an
                  attachment.
         """
+        self._require_token()
         path = self.ATTACHMENTS_ENDPOINT.format(entry_id=docket_entry_id)
         url = f"{self.base_url}{path}"
         logger.info(f"Fetching attachment from: {url}")
@@ -427,6 +462,7 @@ class AcmsApiClient:
         :param poll_interval: Seconds to wait between polling attempts.
         :return: The HTTP response containing the merged PDF file.
         """
+        self._require_token()
         # API endpoints for merge and retrieval
         merge_pdf_path = f"{self.base_url}{self.MERGE_PDF_ENDPOINT}"
         get_pdf_path = f"{self.base_url}{self.GET_PDF_ENDPOINT}"
