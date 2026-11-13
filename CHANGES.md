@@ -15,6 +15,17 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+-
+
+Changes:
+-
+
+Fixes:
+-
+
+## 4.0.3 - 2026-11-13
+
+Features:
 - Add `nev_u` and `nevapp_u` scrapers for unpublished dispositions of the
   Nevada Supreme Court and Court of Appeals #2011
 - Add the Arkansas Attorney General opinions scraper (`arkag`) with publication-date interval backscraping and signer extraction. #2353
