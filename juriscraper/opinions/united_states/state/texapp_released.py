@@ -1,5 +1,6 @@
 import re
 from datetime import date, datetime
+from urllib.parse import parse_qs, urlparse
 
 from dateutil.relativedelta import relativedelta
 from lxml import html as lxmlHTML
@@ -32,9 +33,11 @@ class Site(texapp.Site):
         if self.html is None:
             return None
 
+        authors = {}
         for op_date, url in await self.get_release_dates(self.html):
             html = await self._get_page(url)
             for row in html.xpath(self.decided_rows_xpath):
+                authors.update(self.get_authors(row))
                 case_link = row.xpath("td[1]/a")[0]
                 await self.add_case(
                     case_link.get("href"),
@@ -43,17 +46,69 @@ class Site(texapp.Site):
                     self.get_panel(row),
                 )
 
+        # A case's opinions may be listed in later rows, so authors are
+        # matched once all rows are read
+        for case in self.cases:
+            for opinion in case["sub_opinions"]:
+                opinion.update(
+                    authors.get(self.get_media_id(opinion["url"]), {})
+                )
+
     @staticmethod
-    def get_panel(row: lxmlHTML.HtmlElement) -> str:
+    def clean_judge_name(name: str) -> str:
+        """Removes titles such as "Senior Chief Justice" from a judge name
+
+        :param name: judge name as shown on the release page
+        :return: judge name without titles
+        """
+        titles = r"(?:(?:Senior|Former|Visiting|Retired|Chief) )*(?:Justice|Judge)|Honorable|Hon\.|Retired"
+        return re.sub(
+            rf"^(?:{titles}) |, (?:{titles})$", "", " ".join(name.split())
+        )
+
+    def get_panel(self, row: lxmlHTML.HtmlElement) -> str:
         """Gets the panel of a release page row; some courts leave it empty
 
         :param row: release page row
         :return: judge names separated by "; "
         """
         return "; ".join(
-            re.sub(r"^(Chief )?Justice ", "", " ".join(name.split()))
+            self.clean_judge_name(name)
             for name in row.xpath("td[4]//text()[normalize-space()]")
         )
+
+    def get_authors(self, row: lxmlHTML.HtmlElement) -> dict[str, dict]:
+        """Gets author and per curiam of each document of a release page row
+
+        Documents are keyed by MediaID, which the case page links share
+
+        :param row: release page row
+        :return: {MediaID: {"author": ..., "per_curiam": True}}
+        """
+        authors = {}
+        for document in row.xpath(
+            "td[1]//tr[td/a[contains(@href, 'MediaID=')]]"
+        ):
+            label = " ".join(document.xpath("string(td[1])").split())
+            values = {}
+            if " by " in label:
+                values["author"] = self.clean_judge_name(
+                    label.split(" by ")[-1]
+                )
+            if "per curiam" in label.lower():
+                values["per_curiam"] = True
+            media_id = self.get_media_id(document.xpath("td/a/@href")[0])
+            authors[media_id] = values
+        return authors
+
+    @staticmethod
+    def get_media_id(url: str) -> str:
+        """Gets the MediaID that identifies an opinion document
+
+        :param url: SearchMedia.aspx url
+        :return: MediaID, or "" if missing
+        """
+        return parse_qs(urlparse(url).query).get("MediaID", [""])[0]
 
     async def get_release_dates(
         self, index: lxmlHTML.HtmlElement

@@ -5,7 +5,8 @@
     "sub_opinions": [
       {
         "download_urls": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=a509fa28-97ad-4d2a-8920-2efb5dba35a2&coa=coa12&DT=Opinion&MediaID=851a82e4-4218-4a73-9e41-fe0fc5326055",
-        "types": "020lead"
+        "types": "020lead",
+        "per_curiam": true
       }
     ],
     "dispositions": "Affirmed",
@@ -27,7 +28,8 @@
     "sub_opinions": [
       {
         "download_urls": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=ffed4fee-fa16-4e2d-9e02-e5b72587634c&coa=coa12&DT=Opinion&MediaID=1f706bd4-c3b6-4f46-8427-54c9bab55362",
-        "types": "020lead"
+        "types": "020lead",
+        "authors": "Worthen"
       }
     ],
     "dispositions": "Reversed and Remanded",

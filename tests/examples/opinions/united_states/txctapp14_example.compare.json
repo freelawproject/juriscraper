@@ -5,11 +5,13 @@
     "sub_opinions": [
       {
         "download_urls": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=175cc026-51ab-4d0e-871c-d4f8d7980a47&coa=coa14&DT=Opinion&MediaID=aa03c93d-2cbb-4ede-8b17-2600956b20f7",
-        "types": "020lead"
+        "types": "020lead",
+        "authors": "Jewell"
       },
       {
         "download_urls": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=64ab4990-979b-4967-981d-9dcb18ef7b57&coa=coa14&DT=Opinion&MediaID=0ba2e464-3cc6-4a65-a091-5f2511115baa",
-        "types": "040dissent"
+        "types": "040dissent",
+        "authors": "McLaughlin"
       }
     ],
     "dispositions": "REVERSED AND REMANDED",
@@ -31,7 +33,8 @@
     "sub_opinions": [
       {
         "download_urls": "https://search.txcourts.gov/SearchMedia.aspx?MediaVersionID=f2247b38-ae90-4fc9-a71a-d27952d09383&coa=coa14&DT=Opinion&MediaID=d57ac54a-fea3-4b87-8db1-e7d311db1b3c",
-        "types": "020lead"
+        "types": "020lead",
+        "authors": "Wise"
       }
     ],
     "dispositions": "AFFIRMED",
