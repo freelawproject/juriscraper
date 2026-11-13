@@ -264,7 +264,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         super().parse()
 
     async def download_pdf(
-        self, pacer_doc_id, pacer_case_id=None
+        self, pacer_doc_id: str, pacer_case_id: str | None = None
     ) -> tuple[Response | None, str]:
         """Download a PDF from an appellate court.
 
