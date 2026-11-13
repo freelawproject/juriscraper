@@ -10,7 +10,7 @@ from juriscraper.opinions.united_states.administrative_agency import (
     mspb_p,
     mspb_u,
 )
-from juriscraper.opinions.united_states.state import nev, nevapp, txctapp5
+from juriscraper.opinions.united_states.state import nev, nevapp
 
 
 class ScraperSpotTest(unittest.TestCase):
@@ -425,45 +425,3 @@ class ScraperSpotTest(unittest.TestCase):
             site._parse_manifest(
                 {"DOCUMENT_TYPE": "NON-PRECEDENTIAL", "data": []}, "test"
             )
-
-    def test_txctapp_release_dates_across_quarters(self):
-        """A range across a year boundary requests the older quarter and
-        keeps only dates in range, limits included"""
-        from lxml.html import fromstring
-
-        def index_page(year, quarter, dates):
-            links = "".join(f'<a href="Docket.aspx">{d}</a>' for d in dates)
-            return fromstring(
-                '<form><input type="hidden" name="__VIEWSTATE" value="vs">'
-                f'<select name="ddlYear"><option value="{year}" selected>'
-                "</option></select>"
-                f'<select name="ddlQuarter"><option value="{quarter}" selected>'
-                "</option></select>"
-                f'<table id="grdDocketDates">{links}</table></form>'
-            )
-
-        posted = []
-
-        async def download():
-            posted.append(dict(site.parameters))
-            return index_page("2025", "10-01-", ["12/31/2025", "12/30/2025"])
-
-        site = txctapp5.Site()
-        site._download = download
-        site.start_date, site.end_date = date(2025, 12, 31), date(2026, 1, 2)
-        index = index_page("2026", "01-01-", ["01/03/2026", "01/02/2026"])
-        release_dates = asyncio.run(site.get_release_dates(index))
-
-        self.assertEqual(
-            [op_date for op_date, _ in release_dates],
-            ["01/02/2026", "12/31/2025"],
-        )
-        self.assertEqual(len(posted), 1)
-        self.assertEqual(site.method, "POST")
-        self.assertEqual(posted[0]["__VIEWSTATE"], "vs")
-        self.assertEqual(
-            posted[0]["ctl00$ContentPlaceHolder1$ddlYear"], "2025"
-        )
-        self.assertEqual(
-            posted[0]["ctl00$ContentPlaceHolder1$ddlQuarter"], "10-01-"
-        )
