@@ -2,7 +2,7 @@
 Court Contact: https://www.supremecourt.gov/contact/contact_webmaster.aspx
 """
 
-from datetime import date
+from datetime import date, timedelta
 
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import InsanityException
@@ -36,8 +36,8 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.yy = self._get_current_term()
-        self.back_scrape_iterable = list(range(5, int(self.yy) + 1))
+        self.yy: int = self._get_current_term()
+        self.back_scrape_iterable = list(range(5, self.yy + 1))
         self.url_base = "https://www.supremecourt.gov/opinions"
         self.path_table = "//table[@class='table table-bordered']"
         self.path_row = f"{self.path_table}/tr[position() > 1]"
@@ -48,19 +48,20 @@ class Site(OpinionSite):
         self.cases = []
 
     @staticmethod
-    def _get_current_term():
+    def _get_current_term() -> int:
         """The URLs for SCOTUS correspond to the term, not the calendar.
 
         The terms kick off on the first Monday of October, so we use October 1st
         as our cut off date.
         """
         today = date.today()
-        term_cutoff = date(today.year, 10, 1)
-        if today < term_cutoff:
+        oct_1 = date(today.year, 10, 1)
+        first_monday = oct_1 + timedelta(days=(7 - oct_1.weekday()) % 7)
+        if today < first_monday:
             # Haven't hit the cutoff, return previous year.
             return int(today.strftime("%y")) - 1  # y3k bug!
         else:
-            return today.strftime("%y")
+            return int(today.strftime("%y"))
 
     async def _download(self, request_dict=None):
         if request_dict is None:
@@ -147,7 +148,7 @@ class Site(OpinionSite):
     def _get_precedential_statuses(self):
         return [self.precedential] * len(self.cases)
 
-    async def _download_backwards(self, d):
-        self.yy = str(d if d >= 10 else f"0{d}")
-        logger.info(f"Running backscraper for year: 20{self.yy}")
+    async def _download_backwards(self, d: int) -> None:
+        self.yy = d
+        logger.info(f"Running backscraper for year: 20{d:02d}")
         self.html = await self._download()
