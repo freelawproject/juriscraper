@@ -164,7 +164,7 @@ class AppellateAttachmentPage(BaseReport):
         :return: Attachment page count
         """
         sum_doc_selected_parts = parse_sumDocSelected_from_row(row)
-        if sum_doc_selected_parts and "page_count" in sum_doc_selected_parts:
+        if sum_doc_selected_parts:
             return sum_doc_selected_parts["page_count"]
 
         description_text_nodes = row.xpath(".//td/text()")
@@ -178,10 +178,7 @@ class AppellateAttachmentPage(BaseReport):
         as an int.
         """
         sum_doc_selected_parts = parse_sumDocSelected_from_row(row)
-        if (
-            sum_doc_selected_parts
-            and "file_size_bytes" in sum_doc_selected_parts
-        ):
+        if sum_doc_selected_parts:
             return sum_doc_selected_parts["file_size_bytes"]
         return None
 

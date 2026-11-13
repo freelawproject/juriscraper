@@ -1,4 +1,5 @@
 from lxml import etree
+from typing_extensions import override
 
 from juriscraper.lib.diff_tools import get_closest_match_index
 from juriscraper.lib.exceptions import ParsingException
@@ -40,7 +41,8 @@ class PossibleCaseNumberApi(BaseReport):
         self.response = await self.session.get(url)
         self.parse()
 
-    def _parse_text(self, text):
+    @override
+    def _parse_text(self, text: str) -> None:
         """Parse the text of the response object and put it in self.tree.
 
         Use an XML parser instead of the normal HTML one.
@@ -230,7 +232,8 @@ class ShowCaseDocApi(BaseReport):
         self.response = await self.session.get(url, follow_redirects=True)
         self.parse()
 
-    def _parse_text(self, text):
+    @override
+    def _parse_text(self, text: str) -> None:
         """Just a stub. No parsing needed here."""
         pass
 
@@ -262,7 +265,8 @@ class AcmsCaseSearch(BaseReport):
         )
         self.parse()
 
-    def _parse_text(self, text):
+    @override
+    def _parse_text(self, text: str) -> None:
         """Just a stub. No parsing needed here."""
         pass
 
