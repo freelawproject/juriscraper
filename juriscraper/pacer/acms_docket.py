@@ -59,6 +59,44 @@ class ACMSDocketReport(AppellateDocketReport):
             "docketInfo": entry_details,
         }
 
+    async def query_by_docket_number(self, docket_number: str) -> None:
+        """Look a case up by its docket number and load its docket.
+
+        This is the entry point when only the docket number is known. It
+        reads the IndexContent page, which also supplies the API token the
+        other requests need, so no call to the API has to precede it. Docket
+        entries are taken from the page when it includes them and fetched
+        from the API otherwise.
+
+        ``data`` is empty when ACMS has no case for the number.
+
+        :param docket_number: The appellate docket number, e.g. ``26-7519``.
+        """
+        assert self.session is not None, (
+            "session attribute of ACMSDocketReport cannot be None."
+        )
+        view_model = await self.api_client.get_index_content(docket_number)
+        cases = view_model.get("caseDetails") or []
+        if not cases:
+            logger.info(
+                f"No ACMS case found for {self.court_id} {docket_number}"
+            )
+            self._acms_json = None
+            self.is_valid = False
+            return
+
+        case_details = cases[0]
+        docket_info = view_model.get("docketInfo")
+        if docket_info is None:
+            docket_info = await self.api_client.get_docket_entries(
+                case_details["caseId"]
+            )
+        self._acms_json = {
+            "caseDetails": case_details,
+            "docketInfo": docket_info,
+        }
+        self.is_valid = True
+
     async def download_pdf(
         self, entry_id: str, doc_id: str
     ) -> tuple[Response | None, str]:
