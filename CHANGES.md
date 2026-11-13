@@ -15,6 +15,8 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+- Add `nev_u` and `nevapp_u` scrapers for unpublished dispositions of the
+  Nevada Supreme Court and Court of Appeals #2011
 - Add the Arkansas Attorney General opinions scraper (`arkag`) with publication-date interval backscraping and signer extraction. #2353
 - Add backscrapers to `mspb_p` and `mspb_u`. They read MSPB's full
   decision manifests: 16,816 precedential decisions from 1979 and 10,802
