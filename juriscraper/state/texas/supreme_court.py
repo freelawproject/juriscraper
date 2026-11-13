@@ -1,3 +1,5 @@
+from typing import Never
+
 from typing_extensions import override
 
 from juriscraper.lib.string_utils import clean_string
@@ -69,7 +71,7 @@ class TexasSupremeCourtScraper(TexasCommonScraper[TexasSupremeCourtDocket]):
 
     @override
     @property
-    def data(self) -> TexasSupremeCourtDocket | dict[str, None]:
+    def data(self) -> TexasSupremeCourtDocket | dict[Never, Never]:
         """
         Extract parsed data from an HTML tree. This property returns a
         `TexasSupremeCourtDocket`.

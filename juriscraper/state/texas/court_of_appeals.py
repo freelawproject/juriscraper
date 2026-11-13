@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import TypedDict
+from typing import Never, TypedDict
 
 from typing_extensions import override
 
@@ -62,7 +62,7 @@ class TexasCourtOfAppealsScraper(
 
     @override
     @property
-    def data(self) -> TexasCourtOfAppealsDocket | dict[str, None]:
+    def data(self) -> TexasCourtOfAppealsDocket | dict[Never, Never]:
         """
         Extract parsed data from a docket page.
 

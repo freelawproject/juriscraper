@@ -15,6 +15,21 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+-
+
+Changes:
+- `SCOTUSDocketReport*` interfaces are stripped down. The methods `normalize_date()` and `clean_lower_court_cases()` have been removed to a private helper module.
+- `SCOTUSDocketReport*` hierarchy is flattened. Each implementation is now an immediate subclass of `SCOTUSDocketReportBase`. What was `SCOTUSDocketReport` is renamed to `SCOTUSDocketReportJSON`; an alias from `SCOTUSDocketReport` to `SCOTUSDocketReportJSON` is established for compatibility.
+
+Fixes:
+-
+
+## 4.0.3 - 2026-11-13
+
+Features:
+- Add `nev_u` and `nevapp_u` scrapers for unpublished dispositions of the
+  Nevada Supreme Court and Court of Appeals #2011
+- Add the Arkansas Attorney General opinions scraper (`arkag`) with publication-date interval backscraping and signer extraction. #2353
 - Add backscrapers to `mspb_p` and `mspb_u`. They read MSPB's full
   decision manifests: 16,816 precedential decisions from 1979 and 10,802
   nonprecedential decisions from 2007 (as of 2026-11-01). Manifests
@@ -29,6 +44,7 @@ Changes:
 - Structure return type of `NotificationEmail.data()` and `S3NotificationEmail.data()`.
 - The return type of `OpinionSite.extract_from_text()` is given a rudimentary structure, `ExtractedMetaData`.
 - Annotate all implementations of `_parse_text()` in `pacer`.
+- Scrapers in `texas` return an empty `dict[Never, Never]` instead of an empty `dict[str, None]` in failure cases.
 
 Fixes:
 - `mspb_p` and `mspb_u` read the manifests MSPB's own listing pages load
