@@ -1,7 +1,7 @@
-from juriscraper.opinions.united_states.state import calctapp_1st
+from juriscraper.opinions.united_states.state import calctapp1d
 
 
-class Site(calctapp_1st.Site):
+class Site(calctapp1d.Site):
     court_code = "S"
     division = ""
 
