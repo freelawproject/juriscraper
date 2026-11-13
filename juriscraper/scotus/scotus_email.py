@@ -7,10 +7,10 @@ from datetime import datetime
 from email.message import Message
 from enum import Enum
 from pathlib import Path
-from typing import TypedDict
+from typing import Any, Literal, TypedDict
 from urllib.parse import ParseResult, parse_qs, urlparse
 
-import requests
+import httpx
 from lxml import html
 from lxml.html import HtmlElement
 
@@ -74,13 +74,28 @@ class SCOTUSEmailData(TypedDict):
     data: SCOTUSNotificationEmail | None
 
 
-class SCOTUSEmailHandlingResult(TypedDict):
+class SCOTUSDocketEntryEmailHandlingResult(TypedDict):
     """
-    Schema for result of handling SCOTUS emails.
+    Schema for result of handling SCOTUS docket entry emails.
     """
 
-    email_type: str
-    data: dict[str, str] | str
+    email_type: Literal["docket_entry"]
+    data: dict[str, Any]
+
+
+class SCOTUSConfirmationEmailHandlingResult(TypedDict):
+    """
+    Schema for result of handling SCOTUS confirmation emails.
+    """
+
+    email_type: Literal["confirmation"]
+    data: str
+
+
+SCOTUSEmailHandlingResult = (
+    SCOTUSDocketEntryEmailHandlingResult
+    | SCOTUSConfirmationEmailHandlingResult
+)
 
 
 class SCOTUSConfirmationResult(Enum):
@@ -193,7 +208,7 @@ class SCOTUSEmail:
     """Parse SCOTUS docket notification email."""
 
     TITLE_REGEX = re.compile(
-        r"^A new docket entry(?:, \"([^\"]+)\")? has been added"
+        r"^A new docket entry(?:, \"([\w\W]+?)\")? has been added",
     )
     DOCKET_ENTRY_SUBJECT_REGEX = re.compile(
         r"^Supreme Court Electronic Filing System$"
@@ -240,7 +255,9 @@ class SCOTUSEmail:
             data=data,
         )
 
-    def handle_email(self, timeout: float = 10.0) -> SCOTUSEmailHandlingResult:
+    async def handle_email(
+        self, timeout: float = 10.0
+    ) -> SCOTUSEmailHandlingResult:
         """
         Handle next steps in email processing.
 
@@ -259,17 +276,20 @@ class SCOTUSEmail:
 
         # The `followup_url` property is guaranteed to be present if the
         # email type is valid.
-        response = requests.get(
-            self.data["followup_url"],
-            headers={"User-Agent": "Free Law Project"},
-            timeout=timeout,
-        )
+        async with httpx.AsyncClient(
+            http2=True, follow_redirects=True
+        ) as client:
+            response = await client.get(
+                self.data["followup_url"],
+                headers={"User-Agent": "Free Law Project"},
+                timeout=timeout,
+            )
         response.raise_for_status()
 
         if self.email_type == SCOTUSEmailType.DOCKET_ENTRY:
             scotus_docket_report_html = SCOTUSDocketReportHTML(self.court_id)
             scotus_docket_report_html._parse_text(response.text)
-            return SCOTUSEmailHandlingResult(
+            return SCOTUSDocketEntryEmailHandlingResult(
                 email_type=self.email_type.value,
                 data=scotus_docket_report_html.data,
             )
@@ -279,7 +299,7 @@ class SCOTUSEmail:
             self.court_id
         )
         scotus_confirmation_page_scraper._parse_text(response.text)
-        return SCOTUSEmailHandlingResult(
+        return SCOTUSConfirmationEmailHandlingResult(
             email_type=self.email_type.value,
             data=scotus_confirmation_page_scraper.data,
         )

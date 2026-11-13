@@ -1,4 +1,5 @@
 from functools import cached_property
+from typing import Never
 
 from typing_extensions import override
 
@@ -43,7 +44,7 @@ class TexasCourtOfCriminalAppealsScraper(
     @property
     def data(
         self,
-    ) -> TexasCourtOfCriminalAppealsDocket | dict[str, None]:
+    ) -> TexasCourtOfCriminalAppealsDocket | dict[Never, Never]:
         """
         Extract parsed data from an HTML tree. This property returns a
         `TexasCourtOfCriminalAppealsDocket`.

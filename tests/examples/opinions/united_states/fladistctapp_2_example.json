@@ -2661,6 +2661,56 @@
             "oralArgUrl": null,
             "opinionTypeLabel": "PCA",
             "siteAccessLabel": "2DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2024-0481",
+                "isInNewTab": false,
+                "locationId": 2508526,
+                "url": "https://2dca.flcourts.gov/opinions/Opinions-Archive/PCAs/2024/October/16/2024-0481",
+                "isExternal": false
+            },
+            "content": {
+                "id": 2457867,
+                "url": "https://2dca.flcourts.gov/opinions/Opinions-Archive/PCAs/2024/October/16/2024-0481",
+                "typeIdentifier": "opinion",
+                "name": "2024-0481",
+                "modified": 1758054276,
+                "fields": {
+                    "case_number": "2024-0481",
+                    "opinion": null,
+                    "case_style": "REMUS v. RIVERVIEW SUNSHINE INVESTMENTS, LLC, CUSHMAN & WAKEFIELD, INC.",
+                    "disposition": "Appeal - Per Curiam Affirmed",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2024-10-16 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            1
+                        ]
+                    },
+                    "oral_argument": null,
+                    "note": "Affirmed",
+                    "remote_id": "ctrack_18683430|2024-0481",
+                    "video_external_link": null,
+                    "video_internal_links": null
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "PCA",
+            "siteAccessLabel": "2DCA"
         }
     ],
     "totalCount": 1723,

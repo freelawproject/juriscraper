@@ -9,6 +9,7 @@ from juriscraper.lib.string_utils import (
     harmonize,
 )
 from juriscraper.lib.utils import clean_court_object, previous_and_next
+from juriscraper.pacer.docket_report import DocketNumberComponents
 
 from .docket_report import DocketReport
 from .utils import (
@@ -58,7 +59,7 @@ class DocketHistoryReport(DocketReport):
 
         self._set_metadata_values()
         docket_number, docket_number_components = self._parse_docket_number()
-        data = {
+        data: dict = {
             "court_id": self.court_id,
             "docket_number": docket_number,
             "case_name": self._get_case_name(),
@@ -89,7 +90,7 @@ class DocketHistoryReport(DocketReport):
         self._metadata = data
         return data
 
-    def query(
+    async def query(
         self,
         pacer_case_id,
         query_type="History",
@@ -128,7 +129,7 @@ class DocketHistoryReport(DocketReport):
             "Getting nonce for docket history report with "
             "pacer_case_id: %s" % pacer_case_id
         )
-        r = self.session.get(f"{self.url}?{pacer_case_id}")
+        r = await self.session.get(f"{self.url}?{pacer_case_id}")
         nonce = get_nonce_from_form(r)
 
         query_params = {
@@ -143,7 +144,7 @@ class DocketHistoryReport(DocketReport):
             "params %s and nonce %s" % (pacer_case_id, query_params, nonce)
         )
 
-        self.response = self.session.post(
+        self.response = await self.session.post(
             f"{self.url}?{nonce}", data=query_params
         )
         self.parse()
@@ -267,7 +268,7 @@ class DocketHistoryReport(DocketReport):
 
     def _parse_docket_number(
         self,
-    ) -> tuple[str | None, dict[str, str | None]]:
+    ) -> tuple[str | None, DocketNumberComponents]:
         """Parse a valid docket number and its components.
 
         :param: docket_number: A string docket number to clean.

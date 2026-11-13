@@ -18,6 +18,86 @@ Features:
 -
 
 Changes:
+- `SCOTUSDocketReport*` interfaces are stripped down. The methods `normalize_date()` and `clean_lower_court_cases()` have been removed to a private helper module.
+- `SCOTUSDocketReport*` hierarchy is flattened. Each implementation is now an immediate subclass of `SCOTUSDocketReportBase`. What was `SCOTUSDocketReport` is renamed to `SCOTUSDocketReportJSON`; an alias from `SCOTUSDocketReport` to `SCOTUSDocketReportJSON` is established for compatibility.
+
+Fixes:
+-
+
+## 4.0.3 - 2026-11-13
+
+Features:
+- Add `nev_u` and `nevapp_u` scrapers for unpublished dispositions of the
+  Nevada Supreme Court and Court of Appeals #2011
+- Add the Arkansas Attorney General opinions scraper (`arkag`) with publication-date interval backscraping and signer extraction. #2353
+- Add backscrapers to `mspb_p` and `mspb_u`. They read MSPB's full
+  decision manifests: 16,816 precedential decisions from 1979 and 10,802
+  nonprecedential decisions from 2007 (as of 2026-11-01). Manifests
+  outside the requested date range are not downloaded. #2386
+- `mspb_p` and `mspb_u` return the M.S.P.R. citation as
+  `parallel_citation` (or as `citation` when there is no decision
+  number), with citations normalized so eyecite can parse them, e.g.
+  `9 M S P B  448` to `9 M.S.P.B. 448`. #2386
+
+Changes:
+- Add a GitHub issue template for new scraper requests #2392
+- Structure return type of `NotificationEmail.data()` and `S3NotificationEmail.data()`.
+- The return type of `OpinionSite.extract_from_text()` is given a rudimentary structure, `ExtractedMetaData`.
+- Annotate all implementations of `_parse_text()` in `pacer`.
+- Scrapers in `texas` return an empty `dict[Never, Never]` instead of an empty `dict[str, None]` in failure cases.
+
+Fixes:
+- `mspb_p` and `mspb_u` read the manifests MSPB's own listing pages load
+  instead of the `_Table.json` files, which stopped updating in
+  September 2026. `mspb_u` no longer builds URLs with a double slash. #2386
+
+## 4.0.2 - 2026-10-29
+
+Features:
+-
+
+Changes:
+- Document how to sign the CLA online via CLA Assistant in `CONTRIBUTING.md`. #2369
+- Move the six attorney general scrapers (`calag`, `mdag`, `minnag`, `nyag`,
+  `oklaag`, `texag`) from `opinions.united_states.state` into a new
+  `opinions.united_states.attorney_general` package. Court IDs are unchanged,
+  but crawls invoked with the `state` package path must add the
+  `attorney_general` package path to keep covering them. #168
+
+Fixes:
+- Fix `tenn`, `tennctapp`, `tenncrimapp` and `tenn_workers_comp` crash when a row's opinion link has an empty URL; those rows are now skipped. #2303
+- Fix `arizctapp_div_2` returning zero items after the court redesigned its recent opinions page. #2367
+- Fix `ariz` and `arizctapp_div_1` 404s by sending the `pageSize` parameter the opinions API now requires. #2357
+- Send the session's default headers, including `User-Agent`, on PACER magic link downloads; PACER was intermittently resetting the connection without them.
+- Fix SCOTUS email parser failing on double quotes in docket entry titles
+- Fix `ga`: read the release date from the `<h3>` heading the 2026 opinions page now uses; opinions since 2026-06-30 were all dated 2026-06-16 and dropped #2287
+- Fix `ala`: accept every document type that contains "Opinion" or "Decision", such as "Published Opinion"; the exact-match filter dropped them (also `alacivapp`, `alacrimapp`) #2287
+
+## 4.0.1 - 2026-10-15
+
+Features:
+- Drop Python 3.10 and add Python 3.15 support
+- Add a backscraper to `nmariana`. #1946
+
+Changes:
+- Define the type of the `court_id` parameter to `pacer` report initializers (type `str`).
+
+Fixes:
+- Coerce non-string multipart form values to str and omit `None` values in
+  `PacerSession` so httpx can encode them #2301
+- Fix `nmariana` judge names and authors parsed from the panel. #1946
+- Fix `nmariana` per curiam: set it from the opinion's "PER CURIAM" heading, not from a missing "*" author. #1946
+- Fix `nmariana` docket numbers: take them with their label from the opinion header, not the e-filing stamp, and leave them out when not found. #1946
+
+## 4.0.0 - 2026-10-12
+
+Features:
+-
+
+Changes:
+- **Breaking:** Migrate HTTP client from `requests` to `httpx` `AsyncClient`;
+  remaining sync calls are now async. `requests` and `tldextract` are no
+  longer dependencies. #739
 - `PacerSession` now authenticates ACMS requests with per-court cookie sessions
   instead of a bearer token, restoring ACMS auth after their HTMX refactor.
   freelawproject/courtlistener#5921
@@ -29,7 +109,7 @@ Fixes:
 - `nev`/`nevapp`: resolve panel judge initials to full names, and keep the full panel when it has a "Before:" prefix or spaced slashes #2049
 - Fix `nev`/`nevapp` backscrape crash on the empty page after the last one
 - Fix `scotus_*` handling of the first Monday in October
--
+- Fix `fla` and `fladistctapp_*` crash when a search result has no opinion file; those rows are now skipped instead of stopping the whole page. #2274 #2286
 
 ## 3.0.44 - 2026-09-30
 

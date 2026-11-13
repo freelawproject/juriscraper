@@ -2660,6 +2660,56 @@
             "oralArgUrl": null,
             "opinionTypeLabel": "PCA",
             "siteAccessLabel": "3DCA"
+        },
+        {
+            "type": "opinion",
+            "typeLabel": "Opinion",
+            "image": null,
+            "highlight": null,
+            "link": {
+                "name": "2022-0306",
+                "isInNewTab": false,
+                "locationId": 877780,
+                "url": "https://3dca.flcourts.gov/opinions/Search-Opinions/Written-Opinions/2022/September/22/2022-0306",
+                "isExternal": false
+            },
+            "content": {
+                "id": 877676,
+                "url": "https://3dca.flcourts.gov/opinions/Search-Opinions/Written-Opinions/2022/September/22/2022-0306",
+                "typeIdentifier": "opinion",
+                "name": "2022-0306",
+                "modified": 1694399099,
+                "fields": {
+                    "case_number": "2022-0306",
+                    "opinion": null,
+                    "case_style": "GRAND BAY RESIDENCES CONDOMINIUM ASSOCIATION, INC., etc., et al., VS KEY BAY CLUB, LLLP, etc., et al.,",
+                    "disposition": "Appeal - Order by Clerk",
+                    "disposition_date": {
+                        "date": {
+                            "date": "2022-09-22 00:00:00.000000",
+                            "timezone_type": 1,
+                            "timezone": "+00:00"
+                        },
+                        "stringFormat": "l d F Y"
+                    },
+                    "type": {
+                        "selection": [
+                            0
+                        ]
+                    },
+                    "oral_argument": null,
+                    "note": "Dismissed - Order by Clerk",
+                    "remote_id": "ctrack_8112301|2022-0306",
+                    "video_external_link": null,
+                    "video_internal_links": null
+                }
+            },
+            "scorePercent": 100,
+            "externalVideoLink": "",
+            "internalVideoLinks": [],
+            "oralArgUrl": null,
+            "opinionTypeLabel": "Written",
+            "siteAccessLabel": "3DCA"
         }
     ],
     "totalCount": 1285,

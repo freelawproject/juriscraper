@@ -82,7 +82,7 @@ async def get_extension(content: bytes) -> str:
     # Get the file type from the document's raw content
     doctor_host = os.environ.get("DOCTOR_HOST", "http://cl-doctor:5050")
     extension_url = MICROSERVICE_URLS["buffer-extension"].format(doctor_host)
-    async with httpx.AsyncClient() as client:
+    async with httpx.AsyncClient(http2=True) as client:
         extension_response = await client.post(
             extension_url, files={"file": ("filename", content)}, timeout=30
         )

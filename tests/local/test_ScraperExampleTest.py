@@ -208,3 +208,8 @@ class ScraperExampleTest(unittest.IsolatedAsyncioTestCase):
         await self.run_tests_on_module_str(
             "juriscraper.opinions.united_states.territories"
         )
+
+    async def test_scrape_opinion_attorney_general_example_files(self):
+        await self.run_tests_on_module_str(
+            "juriscraper.opinions.united_states.attorney_general"
+        )

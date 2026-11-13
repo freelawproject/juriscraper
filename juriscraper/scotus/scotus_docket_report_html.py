@@ -1,7 +1,6 @@
 import re
 from collections import defaultdict
-from dataclasses import dataclass
-from typing import Any
+from typing import Any, final
 
 from lxml import html
 from lxml.html import HtmlElement
@@ -10,35 +9,31 @@ from typing_extensions import override
 from juriscraper.lib.html_utils import clean_html, strip_bad_html_tags_insecure
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import clean_string, harmonize
-from juriscraper.scotus import SCOTUSDocketReport
+
+from ._scotus_docket_report_parsing import (
+    DOC_NUM_RE,
+    DOCKET_NUMBER_RE,
+    EMAIL_RE,
+    ContactAddress,
+    clean_lower_court_cases,
+    clean_whitespace,
+    map_contacts_header_to_type,
+    normalize_date,
+    parse_address_lines,
+    parse_address_title,
+    parse_description_html,
+)
+from .scotus_docket_report_base import SCOTUSDocketReportBase
 
 logger = make_default_logger()
 
 
-@dataclass
-class ContactAddress:
-    title: str | None
-    address_lines: list[str]
-    city: str | None
-    state: str | None
-    zip_code: str | None
-    email: str | None
-
-
-class SCOTUSDocketReportHTML(SCOTUSDocketReport):
+@final
+class SCOTUSDocketReportHTML(SCOTUSDocketReportBase):
     """Parse SCOTUS docket HTML."""
-
-    EMAIL_RE = re.compile(r"[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}", re.I)
-    ID_RE = re.compile(r"(?:^|[^,]\s+)#\s*[A-Za-z0-9-]+\b")
-    ADDRESS_NUMBER = re.compile(
-        r"\b(\d{1,6}(?:-\d{1,6})?(?:\s+\d+\/\d+)?[A-Za-z]?)\b"
-    )
-    ADDRESS_RE = r"([^,]+),\s*([A-Z]{2})\s+(\d{5}(?:-\d{4})?)$"
-    DOCKET_NUMBER_RE = r"No\.\s*([^\s<]+)"
 
     def __init__(self, court_id: str = "scotus"):
         """Initialize the HTML report parser."""
-        super().__init__(court_id=court_id)
         self.tree: HtmlElement | None = None
 
     @override
@@ -69,12 +64,12 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         )
         docket_number = None
         if docket_title_text:
-            m = re.search(self.DOCKET_NUMBER_RE, docket_title_text)
+            m = re.search(DOCKET_NUMBER_RE, docket_title_text)
             docket_number = m.group(1).strip() if m else None
 
         case_name = clean_string(
             harmonize(
-                self._clean_whitespace(
+                clean_whitespace(
                     self._join_nodes_content(
                         self.tree.xpath(
                             "//table[@id='docketinfo']//span[@class='title']"
@@ -85,7 +80,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         )
 
         docketed_str = self._td_value_by_label("Docketed:")
-        date_filed = self.normalize_date(docketed_str)
+        date_filed = normalize_date(docketed_str)
 
         linked_with_val = self._td_value_by_label("Linked with:")
         if not linked_with_val:
@@ -105,18 +100,16 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         lower_court_cleaned = None
         if lower_court_raw:
             lower_court_text = lower_court_raw.strip("()")
-            lower_court_cleaned = self.clean_lower_court_cases(
-                lower_court_text
-            )
+            lower_court_cleaned = clean_lower_court_cases(lower_court_text)
 
         # Decision dates
-        lower_court_decision_date = self.normalize_date(
+        lower_court_decision_date = normalize_date(
             self._td_value_by_label("Decision Date:", allow_indent=True)
         )
-        lower_court_rehearing_denied = self.normalize_date(
+        lower_court_rehearing_denied = normalize_date(
             self._td_value_by_label("Rehearing Denied:", allow_indent=True)
         )
-        discretionary_court_decision = self.normalize_date(
+        discretionary_court_decision = normalize_date(
             self._td_value_by_label(
                 "Discretionary Court Decision Date:", allow_indent=True
             )
@@ -147,36 +140,6 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
             "discretionary_court_decision": discretionary_court_decision,
         }
 
-    @staticmethod
-    def _parse_description_html(td: HtmlElement) -> str:
-        """Parse the cell content up to the first <br>, excluding
-        .documentlinks.
-
-        :param td: <td> element with the text description.
-        :return: The description_html.
-        """
-        parts = []
-        if td is None:
-            return ""
-
-        if td.text:
-            parts.append(td.text)
-
-        for child in td:
-            tag = getattr(child, "tag", "")
-            if tag and tag.lower() == "br":
-                break
-            # If a documentlinks span appears before a <br>, stop there too.
-            if "documentlinks" in (child.get("class") or ""):
-                break
-
-            parts.append(html.tostring(child, encoding="unicode"))
-            # Include its tail too.
-            if child.tail:
-                parts.append(child.tail)
-
-        return "".join(parts)
-
     def _build_docket_entry(
         self,
         date_str: str,
@@ -201,7 +164,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
             # Select content up to first <br> and excluding .documentlinks;
             # fallback to whole cell.
             description_html = (
-                self._parse_description_html(description_td).strip()
+                parse_description_html(description_td).strip()
                 or html.tostring(description_td, encoding="unicode").strip()
             )
             # Parse attachments.
@@ -211,7 +174,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
                     continue
 
                 if document_number is None and "DocketPDF" in href:
-                    match = re.search(self.DOC_NUM_RE, href)
+                    match = re.search(DOC_NUM_RE, href)
                     if match:
                         document_number = int(match.group(1))
 
@@ -221,7 +184,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
                         "This could be an opportunity to add support for it."
                     )
 
-                short_desc = self._clean_whitespace(
+                short_desc = clean_whitespace(
                     (a.text or a.get("title") or "").strip()
                 )
                 attachments.append(
@@ -233,10 +196,10 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
                 )
 
         cleaned = strip_bad_html_tags_insecure(description_html or "")
-        description = self._clean_whitespace(cleaned.text_content())
+        description = clean_whitespace(cleaned.text_content())
 
         return {
-            "date_filed": self.normalize_date(date_str),
+            "date_filed": normalize_date(date_str),
             "document_number": document_number,
             "description": description,
             "description_html": description_html,
@@ -299,7 +262,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
                 continue
 
             date_td, text_td = tds[:2]
-            date_str = self._clean_whitespace(date_td.text_content())
+            date_str = clean_whitespace(date_td.text_content())
 
             # Table layout, any link in the cell is a potential attachment.
             entries.append(
@@ -368,7 +331,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
                         ".//span[contains(@class,'partyname')]/text()"
                     )
                     party_name = (
-                        self._clean_whitespace("".join(party_name_raw)) or ""
+                        clean_whitespace("".join(party_name_raw)) or ""
                     )
                 party_name = party_name.replace("Party name:", "").strip()
                 attorneys_by_party[(type_key, party_name)].append(attorney)
@@ -400,24 +363,24 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
             if tr.xpath(
                 "./td[contains(concat(' ', normalize-space(@class), ' '), ' ContactSubHeader ')]"
             ):
-                header_text = self._clean_whitespace(
+                header_text = clean_whitespace(
                     "".join(
                         tr.xpath(
                             ".//span[contains(@class,'tableheadertext')]/text()"
                         )
                     )
                 )
-                current_type = self._map_contacts_header_to_type(header_text)
+                current_type = map_contacts_header_to_type(header_text)
                 continue
 
             # Attorney row
             tds = tr.xpath("./td")
             if current_type and len(tds) == 3:
                 name_td, addr_td, phone_td = tds
-                name_text = self._clean_whitespace(
-                    self._parse_description_html(name_td) or ""
+                name_text = clean_whitespace(
+                    parse_description_html(name_td) or ""
                 )
-                full_name_cell = self._clean_whitespace(name_td.text_content())
+                full_name_cell = clean_whitespace(name_td.text_content())
                 is_counsel_of_record = bool(
                     re.search(r"\bcounsel of record\b", full_name_cell, re.I)
                 )
@@ -429,7 +392,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
                 state = contact_data.state
                 zip_code = contact_data.zip_code
                 email = contact_data.email
-                phone = self._clean_whitespace(phone_td.text_content()) or None
+                phone = clean_whitespace(phone_td.text_content()) or None
 
                 # Party row
                 party_name = ""
@@ -439,9 +402,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
                         "./td[contains(concat(' ', normalize-space(@class), ' '), ' ContactParty ')]"
                         " | ./td[contains(normalize-space(string(.)), 'Party name:')]"
                     ):
-                        raw_party = self._clean_whitespace(
-                            next_tr.text_content()
-                        )
+                        raw_party = clean_whitespace(next_tr.text_content())
                         party_name = re.sub(
                             r"^Party name:\s*", "", raw_party, flags=re.I
                         ).strip()
@@ -470,85 +431,11 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
             for (party_type, name), attorneys in parties_by_key.items()
         ]
 
-    @staticmethod
-    def _map_contacts_header_to_type(header_text: str) -> str | None:
-        """Map table section headers to normalized types.
-
-        :param header_text: Text to be mapped.
-        :return: Normalized party type or None.
-        """
-        t = (header_text or "").strip().lower()
-        if "petitioner" in t:
-            return "Petitioner"
-        if "respondent" in t:
-            return "Respondent"
-        if "other" in t:
-            return "Other"
-        return None
-
     def _append_clean_text(self, text: str | None, lines: list[str]) -> None:
         """Clean the given text and append it to the list of lines if not empty."""
-        cleaned = self._clean_whitespace(text)
+        cleaned = clean_whitespace(text)
         if cleaned:
             lines.append(cleaned)
-
-    def _parse_address_title(self, lines: list[str]) -> tuple[str | None, int]:
-        """Extract the party title from address lines and determine where the address begins.
-
-        :param lines: A list of text lines containing the party title and address.
-        :return: A twp tuple where the first element is the concatenated title
-        string and th index where the address starts.
-        """
-        title_parts = []
-        start_add_idx = 0
-        # Parse title.
-        for j, ln in enumerate(lines):
-            if self.ID_RE.match(ln):
-                # Omit lines starting with # like #1098260
-                continue
-            if self.ADDRESS_NUMBER.search(ln):
-                # Match the start of an address by looking for a street number.
-                start_add_idx = j
-                break
-            title_parts.append(ln)
-
-        title = ", ".join(title_parts) or None
-        return title, start_add_idx
-
-    def _parse_address_lines(
-        self, lines: list[str], start_add_idx: int
-    ) -> ContactAddress:
-        """Parse the address components starting from a given index.
-
-        :param lines: A list of text lines containing the address data.
-        :param start_add_idx: Index indicating where the address lines begin.
-        :return: A ContactAddress object.
-        """
-
-        address_lines: list[str] = (
-            lines[start_add_idx:] if start_add_idx < len(lines) else []
-        )
-
-        # parse City/State/Zip
-        city = state = zip_code = None
-        if address_lines:
-            last = address_lines[-1]
-            if m := re.search(self.ADDRESS_RE, last):
-                city, state, zip_code = (
-                    m.group(1).strip(),
-                    m.group(2),
-                    m.group(3),
-                )
-                address_lines = address_lines[:-1]
-
-        return ContactAddress(
-            title=None,
-            address_lines=address_lines,
-            city=city,
-            state=state,
-            zip_code=zip_code,
-            email=None,
-        )
 
     def _parse_contacts_table_address_cell(
         self, td: HtmlElement
@@ -565,20 +452,18 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
             self._append_clean_text(child.text, raw_lines)
             self._append_clean_text(child.tail, raw_lines)
 
-        lines = [
-            ln for ln in (self._clean_whitespace(ln) for ln in raw_lines) if ln
-        ]
+        lines = [ln for ln in (clean_whitespace(ln) for ln in raw_lines) if ln]
 
         # Extract email line
         email = None
         for idx, ln in list(enumerate(lines)):
-            if m := self.EMAIL_RE.search(ln):
+            if m := EMAIL_RE.search(ln):
                 email = m.group(0)
                 del lines[idx]
                 break
 
-        title, start_add_idx = self._parse_address_title(lines)
-        partial_address = self._parse_address_lines(lines, start_add_idx)
+        title, start_add_idx = parse_address_title(lines)
+        partial_address = parse_address_lines(lines, start_add_idx)
 
         return ContactAddress(
             title=title,
@@ -616,9 +501,7 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         :param data_div: ContactData2 div.
         :return: Attorney dict matching the JSON parser shape.
         """
-        name_text = self._clean_whitespace(
-            self._parse_description_html(name_div)
-        )
+        name_text = clean_whitespace(parse_description_html(name_div))
         is_counsel_of_record = bool(
             name_div.xpath(
                 ".//span[contains(@class,'ContactTitle')][contains(., 'Counsel of Record')]"
@@ -627,12 +510,12 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
 
         title = address = city = state = zip_code = email = phone = None
         if data_div is not None:
-            email = self._clean_whitespace(
+            email = clean_whitespace(
                 self._join_nodes_content(
                     data_div.xpath(".//span[contains(@class,'emailaddress')]")
                 )
             )
-            phone = self._clean_whitespace(
+            phone = clean_whitespace(
                 self._join_nodes_content(
                     data_div.xpath(".//span[contains(@class,'phonenumber')]")
                 )
@@ -728,18 +611,9 @@ class SCOTUSDocketReportHTML(SCOTUSDocketReport):
         else:
             target_label = f"//table[@id='docketinfo']//tr[td[1]/span[normalize-space(text())='{label}']]/td[2]//span"
 
-        return self._clean_whitespace(
+        return clean_whitespace(
             self._join_nodes_content(self.tree.xpath(target_label))
         )
-
-    @staticmethod
-    def _clean_whitespace(text: str | None) -> str:
-        """Collapse whitespace to single spaces.
-
-        :param text: Raw text.
-        :return: Normalized text to a single-line.
-        """
-        return "" if not text else re.sub(r"\s+", " ", text).strip()
 
     @staticmethod
     def _join_nodes_content(nodes: list[HtmlElement]) -> str:

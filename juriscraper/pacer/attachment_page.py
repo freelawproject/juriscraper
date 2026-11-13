@@ -22,13 +22,13 @@ class AttachmentPage(BaseReport):
 
     PATH = "doc1/"
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None):
         super().__init__(court_id, pacer_session)
         # Note that parsing bankruptcy attachment pages does not reveal the
         # document number, only the attachment numbers.
         self.is_bankruptcy = self.court_id.endswith("b")
 
-    def query(self, document_number):
+    async def query(self, document_number):
         """Query the "attachment page" endpoint and set the results to self.response.
 
         :param document_number: The internal PACER document ID for the item.
@@ -42,7 +42,7 @@ class AttachmentPage(BaseReport):
         document_number = f"{document_number[:3]}0{document_number[4:]}"
         url = self.url + document_number
         logger.info("Querying the attachment page endpoint at URL: %s", url)
-        self.response = self.session.get(url)
+        self.response = await self.session.get(url)
         self.parse()
 
     @property

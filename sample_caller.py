@@ -8,6 +8,7 @@ import signal
 import sys
 import webbrowser
 from collections import defaultdict
+from contextlib import aclosing
 from datetime import datetime
 from optparse import OptionParser
 from typing import cast
@@ -121,7 +122,7 @@ async def extract_doc_content(
 
     files = {"file": (f"something.{extension}", data)}
     url = MICROSERVICE_URLS["document-extract"].format(doctor_host)
-    async with httpx.AsyncClient() as client:
+    async with httpx.AsyncClient(http2=True) as client:
         extraction__response = await client.post(url, files=files, timeout=120)
     extraction__response.raise_for_status()
     extracted_content = extraction__response.json()["content"]
@@ -537,25 +538,32 @@ async def main():
 
             site_class = cast(type[AbstractSite], mod.Site)
             if backscrape:
-                bs_iterable = site_class(
-                    backscrape_start=backscrape_start,
-                    backscrape_end=backscrape_end,
-                    days_interval=days_interval,
-                ).back_scrape_iterable
-                sites = site_yielder(bs_iterable, mod, **site_kwargs)
-                async for site in sites:
-                    await site.parse()
-                    await scrape_court(
-                        site,
-                        binaries,
-                        extract_content,
-                        doctor_host,
-                        test_hashes,
-                        limit_per_scrape,
-                    )
+                async with (
+                    site_class(
+                        backscrape_start=backscrape_start,
+                        backscrape_end=backscrape_end,
+                        days_interval=days_interval,
+                    ) as initial_site,
+                    aclosing(
+                        site_yielder(
+                            initial_site.back_scrape_iterable,
+                            mod,
+                            **site_kwargs,
+                        )
+                    ) as sites,
+                ):
+                    async for site in sites:
+                        await site.parse()
+                        await scrape_court(
+                            site,
+                            binaries,
+                            extract_content,
+                            doctor_host,
+                            test_hashes,
+                            limit_per_scrape,
+                        )
             else:
-                sites = [site_class(**site_kwargs)]
-                for site in sites:
+                async with site_class(**site_kwargs) as site:
                     await site.parse()
                     await scrape_court(
                         site,

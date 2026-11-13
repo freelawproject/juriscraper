@@ -148,6 +148,7 @@ class AbstractSite:
 
     async def __aenter__(self):
         await self.request["session"].__aenter__()
+        return self
 
     async def __aexit__(self, exc_type, exc_value, traceback):
         await self.request["session"].__aexit__(exc_type, exc_value, traceback)
