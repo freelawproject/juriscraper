@@ -1,6 +1,7 @@
 import logging
 import unittest
 from datetime import date, datetime
+from pathlib import Path
 
 from juriscraper.lib.importer import build_module_list
 from juriscraper.OpinionSite import OpinionSite
@@ -12,6 +13,19 @@ class ScraperExtractFromText(unittest.TestCase):
     """
 
     test_data = {
+        "juriscraper.opinions.united_states.attorney_general.washag": [
+            (
+                (
+                    Path(__file__).parents[1]
+                    / "examples/opinions/united_states/washag_metadata/washag-aglo.html"
+                ).read_text(),
+                {
+                    "OpinionCluster": {
+                        "judges": "Attorney General Slade Gorton"
+                    }
+                },
+            ),
+        ],
         "juriscraper.opinions.united_states.administrative_agency.bia": [
             (
                 """Matter of Emmanuel LAGUERRE, Respondent \nDecided January 20, 2022 and more """,
