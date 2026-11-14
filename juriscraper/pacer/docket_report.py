@@ -6,8 +6,6 @@ from datetime import date, datetime
 from typing import Literal, TypedDict, overload
 
 from dateutil.tz import gettz
-from lxml import etree
-from lxml.etree import _ElementUnicodeResult
 from lxml.html import HtmlElement, fromstring, tostring
 
 from juriscraper.lib.judge_parsers import normalize_judge_string
@@ -285,7 +283,7 @@ class BaseDocketReport:
         return self._return_default_dn_components()
 
     def _parse_docket_number_strs(
-        self, potential_docket_numbers: list[_ElementUnicodeResult]
+        self, potential_docket_numbers: list[str]
     ) -> tuple[str | None, DocketNumberComponents]:
         """Parse docket numbers from a list of potential ones. Also parse
         the docket number components.
@@ -1084,7 +1082,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             path = "./following-sibling::* | ./following-sibling::text()"
             for _prev, node, nxt in previous_and_next(atty_node.xpath(path)):
                 # noinspection PyProtectedMember
-                if isinstance(node, etree._ElementUnicodeResult):
+                if isinstance(node, str):
                     clean_atty = "%s\n" % " ".join(
                         n.strip() for n in node.split()
                     )
