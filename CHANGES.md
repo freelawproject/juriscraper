@@ -50,6 +50,9 @@ Fixes:
 - `mspb_p` and `mspb_u` read the manifests MSPB's own listing pages load
   instead of the `_Table.json` files, which stopped updating in
   September 2026. `mspb_u` no longer builds URLs with a double slash. #2386
+- `txctapp5`, `txctapp8`, `txctapp12` and `txctapp14` get opinions from the
+  Released Orders/Opinions pages. The Document Search returns no opinions
+  for these courts. #2396
 
 ## 4.0.2 - 2026-10-29
 
