@@ -28,7 +28,7 @@ class Site(OpinionSiteLinear):
         self.update_parameters()
         self.make_backscrape_iterable(kwargs)
 
-    def make_backscrape_iterable(self, kwargs: dict[str, str]) -> None:
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Make back scrape iterable
 
         :param kwargs: the back scraping params
