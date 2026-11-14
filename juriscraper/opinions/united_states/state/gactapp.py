@@ -64,6 +64,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Generate weekly date ranges from backscrape_start → backscrape_end."""
         start_str = kwargs.get("backscrape_start")

@@ -265,6 +265,7 @@ class Site(ClusterSite):
             op_type = OpinionType.MAJORITY
         return str(op_type.value)
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Checks if backscrape start and end arguments have been passed
 

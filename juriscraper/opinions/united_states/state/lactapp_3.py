@@ -190,6 +190,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         super().make_backscrape_iterable(kwargs)
         self.back_scrape_iterable = unique_year_month(

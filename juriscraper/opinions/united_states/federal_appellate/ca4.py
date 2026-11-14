@@ -28,6 +28,7 @@ class Site(OpinionSiteLinear):
         self.update_parameters()
         self.make_backscrape_iterable(kwargs)
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Make back scrape iterable
 

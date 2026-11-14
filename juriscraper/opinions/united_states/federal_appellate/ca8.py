@@ -82,6 +82,7 @@ class Site(OpinionSiteLinear):
 
         return "", False
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Parse the input dates, and create a tick for each month"""
         super().make_backscrape_iterable(kwargs)

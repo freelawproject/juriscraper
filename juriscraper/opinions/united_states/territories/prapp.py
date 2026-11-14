@@ -92,6 +92,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Generate backscrape iterable
 

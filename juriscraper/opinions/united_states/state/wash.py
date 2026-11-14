@@ -59,6 +59,7 @@ class Site(OpinionSiteLinear):
                 }
             )
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         start = kwargs.get("backscrape_start")
         end = kwargs.get("backscrape_end")
