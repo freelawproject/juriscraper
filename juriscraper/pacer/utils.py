@@ -456,7 +456,7 @@ def get_court_id_from_url(url):
     return host.split(".")[1]
 
 
-def get_pacer_case_id_from_nonce_url(url):
+def get_pacer_case_id_from_nonce_url(url) -> str:
     """Extract the pacer case ID from the URL.
 
     In: https://ecf.almd.uscourts.gov/cgi-bin/DktRpt.pl?56120
@@ -470,7 +470,7 @@ def get_pacer_case_id_from_nonce_url(url):
     return param
 
 
-def get_pacer_seq_no_from_doc1_url(url):
+def get_pacer_seq_no_from_doc1_url(url) -> str | None:
     """Extract the seq_no from the doc1 URL."""
     match = re.search(r"de_seq_num=(\d+)", url)
     if match:
@@ -479,7 +479,7 @@ def get_pacer_seq_no_from_doc1_url(url):
         return None
 
 
-def get_pacer_case_id_from_doc1_url(url):
+def get_pacer_case_id_from_doc1_url(url) -> str | None:
     """Extract the caseid from the doc1 URL."""
     match = re.search(r"caseid=(\d+)", url)
     if match:
@@ -725,17 +725,17 @@ def make_acms_free_doc_url(court_id: str, pacer_magic_num: str) -> str:
     return f"https://{court_id}-showdoc.azurewebsites.us/NDA/{pacer_magic_num}"
 
 
-def is_pdf(response):
+def is_pdf(response) -> bool:
     """Determines whether the item downloaded is a PDF or something else."""
     return response.headers.get("content-type") == "application/pdf"
 
 
-def is_text(response):
+def is_text(response) -> bool:
     """Determines whether the item downloaded is a text file or something else."""
     return ".txt" in response.headers.get("content-type", "")
 
 
-def get_nonce_from_form(r):
+def get_nonce_from_form(r) -> str | None:
     """Get a nonce value from a HTML response. Returns the first nonce that is
     found.
 

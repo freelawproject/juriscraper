@@ -2291,10 +2291,17 @@
       "severity": "error"
     },
     {
+      "column": 32,
+      "path": "juriscraper/pacer/claims_activity.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, str | None]`",
+      "severity": "error"
+    },
+    {
       "column": 16,
       "path": "juriscraper/pacer/claims_activity.py",
       "name": "bad-return",
-      "concise_description": "Returned type `dict[str, str | Any | None]` is not assignable to declared return type `dict[str, list[dict[str, str]] | str]`",
+      "concise_description": "Returned type `dict[str, str | None]` is not assignable to declared return type `dict[str, list[dict[str, str]] | str]`",
       "severity": "error"
     },
     {
@@ -2449,6 +2456,13 @@
       "path": "juriscraper/pacer/docket_report.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/pacer/docket_report.py",
+      "name": "no-matching-overload",
+      "concise_description": "No matching overload found for function `typing.MutableMapping.update` called with arguments: (DocketNumberComponents)",
       "severity": "error"
     },
     {
@@ -2998,6 +3012,34 @@
       "severity": "error"
     },
     {
+      "column": 44,
+      "path": "juriscraper/pacer/internet_archive.py",
+      "name": "bad-assignment",
+      "concise_description": "`date | None` is not assignable to dict key `date_terminated` with type `str`",
+      "severity": "error"
+    },
+    {
+      "column": 44,
+      "path": "juriscraper/pacer/internet_archive.py",
+      "name": "bad-assignment",
+      "concise_description": "`None` is not assignable to dict key `date_terminated` with type `str`",
+      "severity": "error"
+    },
+    {
+      "column": 34,
+      "path": "juriscraper/pacer/internet_archive.py",
+      "name": "bad-assignment",
+      "concise_description": "`list[dict[str, str]]` is not assignable to dict key `attorneys` with type `str`",
+      "severity": "error"
+    },
+    {
+      "column": 33,
+      "path": "juriscraper/pacer/internet_archive.py",
+      "name": "bad-assignment",
+      "concise_description": "`list[str]` is not assignable to dict key `roles` with type `str`",
+      "severity": "error"
+    },
+    {
       "column": 20,
       "path": "juriscraper/pacer/internet_archive.py",
       "name": "missing-attribute",
@@ -3107,6 +3149,20 @@
       "path": "juriscraper/pacer/rss_feeds.py",
       "name": "unknown-attribute-type",
       "concise_description": "This expression is implicitly inferred to be `Any`. Please provide an explicit type annotation.",
+      "severity": "error"
+    },
+    {
+      "column": 48,
+      "path": "juriscraper/pacer/rss_feeds.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, str | None]`",
+      "severity": "error"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/pacer/rss_feeds.py",
+      "name": "no-matching-overload",
+      "concise_description": "No matching overload found for function `typing.MutableMapping.update` called with arguments: (DocketNumberComponents)",
       "severity": "error"
     },
     {

@@ -169,7 +169,7 @@ class BaseDocketReport:
             return ""
 
     @staticmethod
-    def _xpath_text_0(node, xpath):
+    def _xpath_text_0(node, xpath) -> str:
         """Get the first text element from a node or return ''
 
         This is annoyingly hard with normal xpath.
@@ -179,7 +179,7 @@ class BaseDocketReport:
         except IndexError:
             return ""
 
-    def _get_str_from_tree(self, path):
+    def _get_str_from_tree(self, path) -> str:
         try:
             s = self.tree.xpath(f"{path}/text()")[0].strip()
         except IndexError:
@@ -1177,7 +1177,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         return force_unicode(description)
 
     @staticmethod
-    def _get_de_arr_de_seq_nums_sequence(td):
+    def _get_de_arr_de_seq_nums_sequence(td) -> str | None:
         """Get the docket entry row sequence number."""
         try:
             input = td.xpath(".//input[@name='arr_de_seq_nums']")[0]
@@ -1196,7 +1196,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             return value
 
     @staticmethod
-    def _get_attachment_id_value_from_tr(tr, idx):
+    def _get_attachment_id_value_from_tr(tr, idx) -> str | None:
         """Take a row from the attachment table and return the id value by
         index.
         """
@@ -1288,7 +1288,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         return f"{self.doc_id_prefix}0{pacer_doc_suffix}"
 
     @staticmethod
-    def _get_pacer_seq_no_from_tr(row):
+    def _get_pacer_seq_no_from_tr(row) -> str | None:
         """Take a row of the attachment table, and return the sequence number
         from the name attribute.
         """
@@ -1335,7 +1335,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         return result
 
     @staticmethod
-    def _de_matches_attachment(de, attachment):
+    def _de_matches_attachment(de, attachment) -> bool:
         return (
             de["pacer_doc_id"] == attachment["pacer_doc_id"]
             and de["pacer_seq_no"] == attachment["pacer_seq_no"]
@@ -1680,7 +1680,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         # noinspection PyUnboundLocalVariable
         return desc
 
-    def _get_case_name(self):
+    def _get_case_name(self) -> str:
         if self.is_bankruptcy:
             # Check if there is somebody described as a debtor
             try:
