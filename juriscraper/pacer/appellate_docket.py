@@ -92,17 +92,17 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
     async def query(
         self,
-        docket_number,
-        show_docket_entries=False,
-        show_orig_docket=False,
-        show_prior_cases=False,
-        show_associated_cases=False,
-        show_panel_info=False,
-        show_party_atty_info=False,
-        show_caption=False,
-        date_start=None,
-        date_end=None,
-        output_format="html",
+        docket_number: str,
+        show_docket_entries: bool = False,
+        show_orig_docket: bool = False,
+        show_prior_cases: bool = False,
+        show_associated_cases: bool = False,
+        show_panel_info: bool = False,
+        show_party_atty_info: bool = False,
+        show_caption: bool = False,
+        date_start: datetime.date | None = None,
+        date_end: datetime.date | None = None,
+        output_format: Literal["html", "xml"] = "html",
     ):
         """
         Query PACER to get a docket report.
