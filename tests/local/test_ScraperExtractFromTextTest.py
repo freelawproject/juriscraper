@@ -1497,7 +1497,27 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.calctapp1d_u": [
+            (
+                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of Los Angeles County",
+                    },
+                },
+            ),
+        ],
         "juriscraper.opinions.united_states.state.calctapp2d": [
+            (
+                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of Los Angeles County",
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.calctapp2d_u": [
             (
                 "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
                 {
@@ -1517,7 +1537,27 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.calctapp3d_u": [
+            (
+                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of Los Angeles County",
+                    },
+                },
+            ),
+        ],
         "juriscraper.opinions.united_states.state.calctapp4d1": [
+            (
+                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of Los Angeles County",
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.calctapp4d1_u": [
             (
                 "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
                 {
@@ -1537,7 +1577,27 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.calctapp4d2_u": [
+            (
+                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of Los Angeles County",
+                    },
+                },
+            ),
+        ],
         "juriscraper.opinions.united_states.state.calctapp4d3": [
+            (
+                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of Los Angeles County",
+                    },
+                },
+            ),
+        ],
+        "juriscraper.opinions.united_states.state.calctapp4d3_u": [
             (
                 "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
                 {
@@ -1557,6 +1617,16 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
+        "juriscraper.opinions.united_states.state.calctapp5d_u": [
+            (
+                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
+                {
+                    "Docket": {
+                        "appeal_from_str": "Superior Court of Los Angeles County",
+                    },
+                },
+            ),
+        ],
         "juriscraper.opinions.united_states.state.calctapp6d": [
             (
                 "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
@@ -1567,7 +1637,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
-        "juriscraper.opinions.united_states.state.calctapp_app_div": [
+        "juriscraper.opinions.united_states.state.calctapp6d_u": [
             (
                 "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
                 {
@@ -1577,7 +1647,7 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             ),
         ],
-        "juriscraper.opinions.united_states.state.calctapp_u": [
+        "juriscraper.opinions.united_states.state.calctapp_app_div": [
             (
                 "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
                 {
