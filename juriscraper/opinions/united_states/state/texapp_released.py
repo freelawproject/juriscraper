@@ -90,7 +90,7 @@ class Site(texapp.Site):
             "td[1]//tr[td/a[contains(@href, 'MediaID=')]]"
         ):
             label = " ".join(document.xpath("string(td[1])").split())
-            values = {}
+            values: dict[str, str | bool] = {}
             if " by " in label:
                 values["author"] = self.clean_judge_name(
                     label.split(" by ")[-1]
