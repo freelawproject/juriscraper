@@ -2,7 +2,7 @@ import re
 from collections import defaultdict
 from datetime import date
 from enum import Enum
-from typing import Any, TypedDict, final
+from typing import Never, TypedDict, final
 
 from lxml import html
 from lxml.html import HtmlElement
@@ -28,7 +28,13 @@ from ._scotus_docket_report_parsing import (
     parse_address_title,
     parse_description_html,
 )
-from .scotus_docket_report_base import SCOTUSDocketReportBase
+from .scotus_docket_report_base import (
+    Attorney,
+    DocketEntry,
+    Metadata,
+    Party,
+    SCOTUSDocketReportBase,
+)
 
 logger = make_default_logger()
 
@@ -44,18 +50,6 @@ class _CurrentAttorney(TypedDict):
     phone: str | None
     _raw_lines: list[str]
     _email: str | None
-
-
-class _Attorney(TypedDict):
-    name: str | None
-    is_counsel_of_record: bool
-    phone: str | None
-    title: str | None
-    address: str | None
-    city: str | None
-    state: str | None
-    zip: str | None
-    email: str | None
 
 
 @final
@@ -96,7 +90,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportBase):
 
     @override
     @property
-    def metadata(self) -> dict[str, Any]:
+    def metadata(self) -> Metadata | dict[Never, Never]:
         """Return normalized metadata extracted from the HTM docket.
 
         :return: A dict with the SCOTUS docket metadata.
@@ -277,7 +271,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportBase):
         description_td: list[HtmlElement],
         attachment_path: str,
         table_layout: bool = False,
-    ) -> dict[str, Any]:
+    ) -> DocketEntry:
         """Build a normalized docket entry dict.
 
         :param date_str: Raw date string from the date cell.
@@ -322,7 +316,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportBase):
 
     @override
     @property
-    def docket_entries(self) -> list[dict[str, Any]]:
+    def docket_entries(self) -> list[DocketEntry]:
         """Return docket entries from the HTM 'Proceedings and Orders' table.
 
         :return: List of dicts with date_filed, description, description_html, attachments.
@@ -370,7 +364,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportBase):
     def _build_htm_attorney(
         self,
         current_attorney: _CurrentAttorney,
-    ) -> _Attorney:
+    ) -> Attorney:
         """Complete an attorney dict from the HTM Contacts table.
 
         :param current_attorney: The in-progress attorney dict with initial values.
@@ -411,7 +405,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportBase):
 
     @override
     @property
-    def parties(self) -> list[dict[str, Any]]:
+    def parties(self) -> list[Party]:
         """Return parties grouped by type for HTM pages.
 
         :return: List of dicts containing parties data.
@@ -430,7 +424,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportBase):
         if header_tr is None:
             return []
 
-        parties_by_key: dict[tuple[str, str], list[_Attorney]] = defaultdict(
+        parties_by_key: dict[tuple[str, str], list[Attorney]] = defaultdict(
             list
         )
         current_type = None

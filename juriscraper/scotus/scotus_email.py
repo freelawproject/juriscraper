@@ -7,7 +7,7 @@ from datetime import datetime
 from email.message import Message
 from enum import Enum
 from pathlib import Path
-from typing import Any, Literal, TypedDict
+from typing import Literal, Never, TypedDict
 from urllib.parse import ParseResult, parse_qs, urlparse
 
 import httpx
@@ -22,7 +22,9 @@ from juriscraper.lib.string_utils import (
     harmonize,
     normalize_dashes,
 )
-from juriscraper.scotus import SCOTUSDocketReportHTML
+
+from .scotus_docket_report_base import Docket
+from .scotus_docket_report_html import SCOTUSDocketReportHTML
 
 logger = make_default_logger()
 
@@ -80,7 +82,7 @@ class SCOTUSDocketEntryEmailHandlingResult(TypedDict):
     """
 
     email_type: Literal["docket_entry"]
-    data: dict[str, Any]
+    data: Docket | dict[Never, Never]
 
 
 class SCOTUSConfirmationEmailHandlingResult(TypedDict):
