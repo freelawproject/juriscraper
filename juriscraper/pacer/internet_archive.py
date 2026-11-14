@@ -133,7 +133,7 @@ class InternetArchive(BaseDocketReport):
             if not name.strip():
                 # Happens in adversary proceedings? See cacb_1669936.xml.
                 continue
-            party = {
+            party: dict = {
                 "type": normalize_party_types(pt),
                 "name": name,
                 "extra_info": extra_info,
@@ -158,7 +158,7 @@ class InternetArchive(BaseDocketReport):
     def _get_attorneys(self, party_node):
         attorneys = []
         for atty_node in party_node.xpath("./attorney_list/attorney"):
-            attorney = {
+            attorney: dict = {
                 "name": self._xpath_text_0(atty_node, "./attorney_name"),
                 "contact": self._xpath_text_0(atty_node, "./contact"),
             }

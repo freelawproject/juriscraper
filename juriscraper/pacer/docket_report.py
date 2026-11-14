@@ -596,7 +596,7 @@ class DocketReport(BaseDocketReport, BaseReport):
 
         self._set_metadata_values()
         docket_number, docket_number_components = self._parse_docket_number()
-        data = {
+        data: dict = {
             "court_id": self.court_id,
             "docket_number": docket_number,
             "case_name": self._get_case_name(),
