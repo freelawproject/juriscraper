@@ -167,7 +167,7 @@ class Site(OpinionSiteLinear):
                 logger.warning("Unable to find date %s", text)
                 pass
 
-    def make_backscrape_iterable(self, kwargs) -> None:
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
         super().make_backscrape_iterable(kwargs)
 
         # keep unique years
