@@ -93,9 +93,9 @@ class ACMSDocketReport(AppellateDocketReport):
 
         :param docket_number: The appellate docket number, e.g. ``26-7519``.
         """
-        assert self.session is not None, (
-            "session attribute of ACMSDocketReport cannot be None."
-        )
+        if self.api_client is None:
+            raise AssertionError("session attribute cannot be None.")
+
         view_model = await self.api_client.get_index_content(docket_number)
         cases = view_model.get("caseDetails") or []
         case_details = self._find_case(cases, docket_number)
