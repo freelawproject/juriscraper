@@ -1920,13 +1920,6 @@
       "severity": "error"
     },
     {
-      "column": 41,
-      "path": "juriscraper/pacer/acms_attachment_page.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `Unknown | None` is not assignable to parameter `session` with type `AsyncClient` in function `juriscraper.lib.network_utils.AcmsApiClient.__init__`",
-      "severity": "error"
-    },
-    {
       "column": 15,
       "path": "juriscraper/pacer/acms_attachment_page.py",
       "name": "bad-override",
@@ -1937,42 +1930,14 @@
       "column": 16,
       "path": "juriscraper/pacer/acms_attachment_page.py",
       "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `acms_user_data`",
+      "concise_description": "Object of class `AsyncClient` has no attribute `acms_user_data`",
       "severity": "error"
     },
     {
       "column": 19,
       "path": "juriscraper/pacer/acms_attachment_page.py",
       "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `get_acms_auth_object`",
-      "severity": "error"
-    },
-    {
-      "column": 24,
-      "path": "juriscraper/pacer/acms_attachment_page.py",
-      "name": "unsupported-operation",
-      "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "column": 24,
-      "path": "juriscraper/pacer/acms_attachment_page.py",
-      "name": "unsupported-operation",
-      "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "column": 20,
-      "path": "juriscraper/pacer/acms_attachment_page.py",
-      "name": "unsupported-operation",
-      "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "column": 41,
-      "path": "juriscraper/pacer/acms_docket.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `Unknown | None` is not assignable to parameter `session` with type `AsyncClient` in function `juriscraper.lib.network_utils.AcmsApiClient.__init__`",
+      "concise_description": "Object of class `AsyncClient` has no attribute `get_acms_auth_object`",
       "severity": "error"
     },
     {
@@ -1980,20 +1945,6 @@
       "path": "juriscraper/pacer/acms_docket.py",
       "name": "bad-override",
       "concise_description": "Class member `ACMSDocketReport.query` overrides parent class `AppellateDocketReport` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "column": 23,
-      "path": "juriscraper/pacer/acms_docket.py",
-      "name": "unsupported-operation",
-      "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "column": 24,
-      "path": "juriscraper/pacer/acms_docket.py",
-      "name": "unsupported-operation",
-      "concise_description": "`None` is not subscriptable",
       "severity": "error"
     },
     {
@@ -2008,13 +1959,6 @@
       "path": "juriscraper/pacer/acms_docket.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `str` has no attribute `get`",
-      "severity": "error"
-    },
-    {
-      "column": 20,
-      "path": "juriscraper/pacer/acms_docket.py",
-      "name": "unsupported-operation",
-      "concise_description": "`None` is not subscriptable",
       "severity": "error"
     },
     {
