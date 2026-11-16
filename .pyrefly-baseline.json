@@ -2277,13 +2277,6 @@
       "severity": "error"
     },
     {
-      "column": 21,
-      "path": "juriscraper/pacer/case_query_advanced.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `list[str]` is not assignable to parameter `potential_docket_numbers` with type `list[_ElementUnicodeResult]` in function `juriscraper.pacer.docket_report.BaseDocketReport._parse_docket_number_strs`",
-      "severity": "error"
-    },
-    {
       "column": 15,
       "path": "juriscraper/pacer/case_query_advanced.py",
       "name": "bad-override",
