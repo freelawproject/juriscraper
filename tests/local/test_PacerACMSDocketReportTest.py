@@ -87,6 +87,47 @@ class ACMSDocketReportQueryByDocketNumberTest(
         )
         self.assertEqual(len(self.report.data["docket_entries"]), 1)
 
+    async def test_picks_the_case_carrying_the_docket_number(self):
+        """Among several listed cases, only the exact number match is used,
+        and its entries come from the API rather than the page."""
+        other = {
+            **self.CASE_DETAILS,
+            "caseId": "other",
+            "caseNumber": "26-7520",
+        }
+        self.index_content.return_value = {
+            "caseDetails": [other, self.CASE_DETAILS],
+            "docketInfo": self.DOCKET_INFO,
+        }
+        self.docket_entries.return_value = self.DOCKET_INFO
+
+        await self.report.query_by_docket_number("26-7519")
+
+        self.docket_entries.assert_awaited_once_with(
+            self.CASE_DETAILS["caseId"]
+        )
+        data = self.report.data
+        self.assertEqual(data["pacer_case_id"], self.CASE_DETAILS["caseId"])
+        self.assertEqual(data["docket_number"], "26-7519")
+
+    async def test_listed_cases_without_the_number_give_empty_data(self):
+        """Cases that only resemble the number are not the one asked for."""
+        other = {
+            **self.CASE_DETAILS,
+            "caseId": "other",
+            "caseNumber": "26-7520",
+        }
+        self.index_content.return_value = {
+            "caseDetails": [other],
+            "docketInfo": self.DOCKET_INFO,
+        }
+
+        await self.report.query_by_docket_number("26-7519")
+
+        self.docket_entries.assert_not_awaited()
+        self.assertFalse(self.report.is_valid)
+        self.assertEqual(self.report.data, {})
+
     async def test_unknown_docket_number_gives_empty_data(self):
         """No case for the number means empty data and no further requests."""
         self.index_content.return_value = {"caseDetails": []}
