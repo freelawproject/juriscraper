@@ -1913,20 +1913,6 @@
       "severity": "error"
     },
     {
-      "column": 16,
-      "path": "juriscraper/pacer/acms_attachment_page.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `AsyncClient` has no attribute `acms_user_data`",
-      "severity": "error"
-    },
-    {
-      "column": 19,
-      "path": "juriscraper/pacer/acms_attachment_page.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `AsyncClient` has no attribute `get_acms_auth_object`",
-      "severity": "error"
-    },
-    {
       "column": 15,
       "path": "juriscraper/pacer/acms_docket.py",
       "name": "bad-override",

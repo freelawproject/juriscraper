@@ -15,7 +15,12 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add `AcmsApiClient.get_index_content()`, which loads an ACMS case's
+  IndexContent page and keeps the API bearer token it carries, since ACMS
+  no longer returns one during login. `ACMSDocketReport.query_by_docket_number()`
+  builds on it to look a case up by docket number and load its docket,
+  taking entries from the page when present and from the API otherwise.
+  freelawproject/courtlistener#6680
 
 Changes:
 - `SCOTUSDocketReport*` interfaces are stripped down. The methods `normalize_date()` and `clean_lower_court_cases()` have been removed to a private helper module.
@@ -25,7 +30,10 @@ Changes:
 - `SCOTUSDocketReport*` return values are structured; failure cases yield a `dict[Never, Never]`.
 
 Fixes:
--
+- `AcmsApiClient` raises `PacerLoginException` when an API call is made
+  before a token or account data is stored, instead of sending an
+  anonymous request or crashing with `KeyError`.
+  freelawproject/courtlistener#6680
 
 ## 4.0.3 - 2026-11-13
 
@@ -41,12 +49,6 @@ Features:
   `parallel_citation` (or as `citation` when there is no decision
   number), with citations normalized so eyecite can parse them, e.g.
   `9 M S P B  448` to `9 M.S.P.B. 448`. #2386
-- Add `AcmsApiClient.get_index_content()`, which loads an ACMS case's
-  IndexContent page and keeps the API bearer token it carries, since ACMS
-  no longer returns one during login. `ACMSDocketReport.query_by_docket_number()`
-  builds on it to look a case up by docket number and load its docket,
-  taking entries from the page when present and from the API otherwise.
-  freelawproject/courtlistener#6680
 
 Changes:
 - Add a GitHub issue template for new scraper requests #2392
@@ -59,10 +61,9 @@ Fixes:
 - `mspb_p` and `mspb_u` read the manifests MSPB's own listing pages load
   instead of the `_Table.json` files, which stopped updating in
   September 2026. `mspb_u` no longer builds URLs with a double slash. #2386
-- `AcmsApiClient` raises `PacerLoginException` when an API call is made
-  before a token or account data is stored, instead of sending an
-  anonymous request or crashing with `KeyError`.
-  freelawproject/courtlistener#6680
+- `txctapp5`, `txctapp8`, `txctapp12` and `txctapp14` get opinions from the
+  Released Orders/Opinions pages. The Document Search returns no opinions
+  for these courts. #2396
 
 ## 4.0.2 - 2026-10-29
 
