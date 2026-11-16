@@ -1472,19 +1472,19 @@ class DocketReport(BaseDocketReport, BaseReport):
 
     async def query(
         self,
-        pacer_case_id,
-        date_range_type="Filed",
-        date_start=None,
-        date_end=None,
-        doc_num_start="",
-        doc_num_end="",
-        show_parties_and_counsel=False,
-        show_terminated_parties=False,
-        show_list_of_member_cases=False,
-        include_pdf_headers=True,
-        show_multiple_docs=False,
-        output_format="html",
-        order_by="date",
+        pacer_case_id: str,
+        date_range_type: Literal["Filed", "Entered"] = "Filed",
+        date_start: date | None = None,
+        date_end: date | None = None,
+        doc_num_start: str | int | None = None,
+        doc_num_end: str | int | None = None,
+        show_parties_and_counsel: bool = False,
+        show_terminated_parties: bool = False,
+        show_list_of_member_cases: bool = False,
+        include_pdf_headers: bool = True,
+        show_multiple_docs: bool = False,
+        output_format: Literal["html", "pdf"] = "html",
+        order_by: Literal["date", "-date", "document_number"] = "date",
     ):
         """Query the docket report and return the results.
 
@@ -1524,11 +1524,11 @@ class DocketReport(BaseDocketReport, BaseReport):
         if output_format not in ["html", "pdf"]:
             raise ValueError("Invalid value for 'output_format' parameter.")
         if order_by == "date":
-            order_by = "oldest date first"
+            order_by_arg = "oldest date first"
         elif order_by == "-date":
-            order_by = "most recent date first"
+            order_by_arg = "most recent date first"
         elif order_by == "document_number":
-            order_by = "document number"
+            order_by_arg = "document number"
         else:
             raise ValueError("Invalid value for 'order_by' parameter.")
 
@@ -1538,9 +1538,9 @@ class DocketReport(BaseDocketReport, BaseReport):
                 "counsel are not also requested."
             )
 
-        query_params = {
+        query_params: dict[str, str] = {
             "all_case_ids": pacer_case_id,
-            "sort1": order_by,
+            "sort1": order_by_arg,
             "date_range_type": date_range_type,
             "output_format": output_format,
             # Any value works in this parameter, but it cannot be blank.
