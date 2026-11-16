@@ -81,7 +81,6 @@ class SCOTUSDocketReportBase(ABC):
         metadata = self.metadata
         if not metadata:
             return {}
-        metadata = cast(Metadata, metadata)  # TODO[Pyrefly 1.4.0]: drop cast
         case_name = metadata["case_name"]
         if not case_name:
             logger.error("Failed to extract SCOTUS case name.")
