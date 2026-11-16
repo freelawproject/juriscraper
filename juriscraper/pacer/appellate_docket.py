@@ -7,7 +7,6 @@ from typing import Any, Literal, overload
 
 from httpx import Response
 from lxml import html
-from lxml.etree import _ElementUnicodeResult
 from lxml.html import HtmlElement
 
 from juriscraper.lib.judge_parsers import normalize_judge_string
@@ -92,17 +91,17 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
 
     async def query(
         self,
-        docket_number,
-        show_docket_entries=False,
-        show_orig_docket=False,
-        show_prior_cases=False,
-        show_associated_cases=False,
-        show_panel_info=False,
-        show_party_atty_info=False,
-        show_caption=False,
-        date_start=None,
-        date_end=None,
-        output_format="html",
+        docket_number: str,
+        show_docket_entries: bool = False,
+        show_orig_docket: bool = False,
+        show_prior_cases: bool = False,
+        show_associated_cases: bool = False,
+        show_panel_info: bool = False,
+        show_party_atty_info: bool = False,
+        show_caption: bool = False,
+        date_start: datetime.date | None = None,
+        date_end: datetime.date | None = None,
+        output_format: Literal["html", "xml"] = "html",
     ):
         """
         Query PACER to get a docket report.
@@ -747,7 +746,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             de["pacer_doc_id"] = self._get_pacer_doc_id(cells[1])
             pacer_seq_no = self._get_pacer_seq_no(cells[1])
             if pacer_seq_no is not None:
-                de["pacer_seq_no"] = str(pacer_seq_no)
+                de["pacer_seq_no"] = pacer_seq_no
             if not de["document_number"]:
                 if de["pacer_doc_id"]:
                     # If we lack the document number, but have
@@ -768,7 +767,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         return docket_entries
 
     @staticmethod
-    def _get_document_number(cell):
+    def _get_document_number(cell) -> str | None:
         """Get the document number"""
         text_nodes = cell.xpath(".//text()[not(parent::font)]")
         text_nodes = list(map(clean_string, text_nodes))
@@ -778,7 +777,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         return None
 
     @staticmethod
-    def _get_pacer_doc_id(cell):
+    def _get_pacer_doc_id(cell) -> str | None:
         urls = cell.xpath(".//a")
         if not urls:
             # Entry exists but lacks a URL. Probably a minute order or similar.
@@ -790,7 +789,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
     @staticmethod
     def _get_pacer_seq_no(
         cell: html.HtmlElement,
-    ) -> _ElementUnicodeResult | None:
+    ) -> str | None:
         """Take a row from the attachment table and return the input value by
         index.
         """
