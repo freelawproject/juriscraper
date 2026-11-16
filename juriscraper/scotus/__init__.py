@@ -1,3 +1,4 @@
+from .scotus_docket_report_base import Docket
 from .scotus_docket_report_htm import SCOTUSDocketReportHTM
 from .scotus_docket_report_html import SCOTUSDocketReportHTML
 from .scotus_docket_report_json import SCOTUSDocketReportJSON
@@ -7,6 +8,7 @@ from .scotus_email import SCOTUSEmail
 SCOTUSDocketReport = SCOTUSDocketReportJSON
 
 __all__ = [
+    "Docket",
     "SCOTUSDocketReport",
     "SCOTUSDocketReportHTML",
     "SCOTUSDocketReportHTM",
