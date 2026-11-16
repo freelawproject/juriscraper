@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from datetime import date
-from typing import Never, TypedDict, cast, final
+from typing import Never, TypedDict, final
 
 from juriscraper.lib.log_tools import make_default_logger
 
