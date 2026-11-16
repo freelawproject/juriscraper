@@ -3,6 +3,8 @@ import pprint
 import sys
 import unicodedata
 
+from typing_extensions import override
+
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.network_utils import AcmsApiClient
@@ -19,9 +21,12 @@ class ACMSAttachmentPage(BaseReport):
     def __init__(self, court_id: str, pacer_session=None) -> None:
         super().__init__(court_id, pacer_session)
         self._acms_json: dict | None = None
-        self.api_client = AcmsApiClient(pacer_session, court_id)
+        self.api_client: AcmsApiClient | None = None
+        if pacer_session is not None:
+            self.api_client = AcmsApiClient(pacer_session, court_id)
 
-    def _parse_text(self, text):
+    @override
+    def _parse_text(self, text: str) -> None:
         """Store the ACMS JSON
 
         This does not, in fact, actually *parse* the data, it
@@ -120,12 +125,15 @@ class ACMSAttachmentPage(BaseReport):
         :param entry_id: The unique identifier of the specific docket entry to
                          retrieve.
         """
+        if self.api_client is None:
+            raise AssertionError("session attribute cannot be None.")
+
         # Ensure ACMS user data is available before fetching attachments.
         # Attachment requests include user-specific data in the request body,
         # so the session must have the necessary authentication data
         # initialized beforehand.
-        if not self.session.acms_user_data:
-            await self.session.get_acms_auth_object(self.court_id)
+        if not self.api_client.session.acms_user_data:
+            await self.api_client.session.get_acms_auth_object(self.court_id)
 
         # Fetch Docket Entry Details
         docket_info = await self.api_client.get_docket_entries(case_id)
@@ -184,6 +192,8 @@ class ACMSAttachmentPage(BaseReport):
         """
         if not self.is_valid:
             return {}
+        if self._acms_json is None:
+            raise AssertionError("_acms_json is absent.")
 
         case_details = self._acms_json["caseDetails"]
         docket_entry = self._acms_json["docketEntry"]

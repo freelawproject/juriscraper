@@ -12,7 +12,6 @@ History:
 
 import re
 from datetime import datetime, timedelta
-from typing import Any
 
 from typing_extensions import override
 
@@ -20,6 +19,7 @@ from juriscraper.AbstractSite import logger
 from juriscraper.lib.auth_utils import get_justice_dot_gov_auth_cookies
 from juriscraper.lib.exceptions import UnexpectedContentTypeError
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -83,7 +83,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Can we extract the date filed from the text?
 
         :param scraped_text: The content of the document downloaded
@@ -100,7 +101,7 @@ class Site(OpinionSiteLinear):
         date_filed = datetime.strptime(date[0], "%B %d, %Y").strftime(
             "%Y-%m-%d"
         )
-        metadata = {
+        metadata: ExtractedMetaData = {
             "OpinionCluster": {
                 "date_filed": date_filed,
                 "date_filed_is_approximate": False,

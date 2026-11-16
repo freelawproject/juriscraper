@@ -7,7 +7,7 @@ from datetime import datetime
 from email.message import Message
 from enum import Enum
 from pathlib import Path
-from typing import Any, Literal, TypedDict
+from typing import Literal, Never, TypedDict
 from urllib.parse import ParseResult, parse_qs, urlparse
 
 import httpx
@@ -22,7 +22,9 @@ from juriscraper.lib.string_utils import (
     harmonize,
     normalize_dashes,
 )
-from juriscraper.scotus import SCOTUSDocketReportHTML
+
+from .scotus_docket_report_base import Docket
+from .scotus_docket_report_html import SCOTUSDocketReportHTML
 
 logger = make_default_logger()
 
@@ -80,7 +82,7 @@ class SCOTUSDocketEntryEmailHandlingResult(TypedDict):
     """
 
     email_type: Literal["docket_entry"]
-    data: dict[str, Any]
+    data: Docket | dict[Never, Never]
 
 
 class SCOTUSConfirmationEmailHandlingResult(TypedDict):
@@ -208,7 +210,7 @@ class SCOTUSEmail:
     """Parse SCOTUS docket notification email."""
 
     TITLE_REGEX = re.compile(
-        r"^A new docket entry(?:, \"([^\"]+)\")? has been added"
+        r"^A new docket entry(?:, \"([\w\W]+?)\")? has been added",
     )
     DOCKET_ENTRY_SUBJECT_REGEX = re.compile(
         r"^Supreme Court Electronic Filing System$"

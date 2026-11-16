@@ -9,6 +9,7 @@ from datetime import date
 from dateutil import parser
 from typing_extensions import override
 
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -56,7 +57,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract the exact date(s) from the scraped text."""
         pattern = r"([A-Z][a-z]+ \d{1,2}, \d{4})"
 

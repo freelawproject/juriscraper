@@ -3,11 +3,9 @@ import pprint
 import re
 import sys
 from datetime import date, datetime
-from typing import Literal, overload
+from typing import Literal, TypedDict, overload
 
 from dateutil.tz import gettz
-from lxml import etree
-from lxml.etree import _ElementUnicodeResult
 from lxml.html import HtmlElement, fromstring, tostring
 
 from juriscraper.lib.judge_parsers import normalize_judge_string
@@ -30,6 +28,14 @@ from .utils import (
 )
 
 logger = make_default_logger()
+
+
+class DocketNumberComponents(TypedDict):
+    federal_dn_office_code: str | None
+    federal_dn_case_type: str | None
+    federal_dn_judge_initials_assigned: str | None
+    federal_dn_judge_initials_referred: str | None
+    federal_defendant_number: str | None
 
 
 class BaseDocketReport:
@@ -182,7 +188,7 @@ class BaseDocketReport:
             return s
 
     @staticmethod
-    def _return_default_dn_components() -> dict[str, str | None]:
+    def _return_default_dn_components() -> DocketNumberComponents:
         """Return a dictionary with default values for the docket_number
         components to return on non-valid docket_numbers.
 
@@ -199,7 +205,7 @@ class BaseDocketReport:
 
     def _parse_dn_components(
         self, potential_docket_number
-    ) -> dict[str, str | None]:
+    ) -> DocketNumberComponents:
         """Parse the potential docket number into its components.
 
         :param potential_docket_number: The docket number string to be parsed.
@@ -277,8 +283,8 @@ class BaseDocketReport:
         return self._return_default_dn_components()
 
     def _parse_docket_number_strs(
-        self, potential_docket_numbers: list[_ElementUnicodeResult]
-    ) -> tuple[str | None, dict[str, str | None]]:
+        self, potential_docket_numbers: list[str]
+    ) -> tuple[str | None, DocketNumberComponents]:
         """Parse docket numbers from a list of potential ones. Also parse
         the docket number components.
 
@@ -1076,7 +1082,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             path = "./following-sibling::* | ./following-sibling::text()"
             for _prev, node, nxt in previous_and_next(atty_node.xpath(path)):
                 # noinspection PyProtectedMember
-                if isinstance(node, etree._ElementUnicodeResult):
+                if isinstance(node, str):
                     clean_atty = "%s\n" % " ".join(
                         n.strip() for n in node.split()
                     )
@@ -1464,19 +1470,19 @@ class DocketReport(BaseDocketReport, BaseReport):
 
     async def query(
         self,
-        pacer_case_id,
-        date_range_type="Filed",
-        date_start=None,
-        date_end=None,
-        doc_num_start="",
-        doc_num_end="",
-        show_parties_and_counsel=False,
-        show_terminated_parties=False,
-        show_list_of_member_cases=False,
-        include_pdf_headers=True,
-        show_multiple_docs=False,
-        output_format="html",
-        order_by="date",
+        pacer_case_id: str,
+        date_range_type: Literal["Filed", "Entered"] = "Filed",
+        date_start: date | None = None,
+        date_end: date | None = None,
+        doc_num_start: str | int | None = None,
+        doc_num_end: str | int | None = None,
+        show_parties_and_counsel: bool = False,
+        show_terminated_parties: bool = False,
+        show_list_of_member_cases: bool = False,
+        include_pdf_headers: bool = True,
+        show_multiple_docs: bool = False,
+        output_format: Literal["html", "pdf"] = "html",
+        order_by: Literal["date", "-date", "document_number"] = "date",
     ):
         """Query the docket report and return the results.
 
@@ -1516,11 +1522,11 @@ class DocketReport(BaseDocketReport, BaseReport):
         if output_format not in ["html", "pdf"]:
             raise ValueError("Invalid value for 'output_format' parameter.")
         if order_by == "date":
-            order_by = "oldest date first"
+            order_by_arg = "oldest date first"
         elif order_by == "-date":
-            order_by = "most recent date first"
+            order_by_arg = "most recent date first"
         elif order_by == "document_number":
-            order_by = "document number"
+            order_by_arg = "document number"
         else:
             raise ValueError("Invalid value for 'order_by' parameter.")
 
@@ -1530,9 +1536,9 @@ class DocketReport(BaseDocketReport, BaseReport):
                 "counsel are not also requested."
             )
 
-        query_params = {
+        query_params: dict[str, str] = {
             "all_case_ids": pacer_case_id,
-            "sort1": order_by,
+            "sort1": order_by_arg,
             "date_range_type": date_range_type,
             "output_format": output_format,
             # Any value works in this parameter, but it cannot be blank.
@@ -1728,7 +1734,7 @@ class DocketReport(BaseDocketReport, BaseReport):
 
     def _parse_docket_number(
         self,
-    ) -> tuple[str | None, dict[str, str | None]]:
+    ) -> tuple[str | None, DocketNumberComponents]:
         """Parse a valid docket number and its components.
 
         :return: A two-tuple: the docket_number and a dict containing the

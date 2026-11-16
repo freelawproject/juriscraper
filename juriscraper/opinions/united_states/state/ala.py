@@ -63,11 +63,14 @@ class Site(OpinionSiteLinear):
             if not publicationItem.get("documents", []):
                 continue
 
-            # Only process actual opinions, skip orders
-            if publicationItem["documents"][0]["documentName"] not in [
-                "Opinion",
-                "Decision",
-            ]:
+            # Only process actual opinions, skip orders. The document name
+            # has several forms. "Opinion", "Published Opinion" and
+            # "Decision" are all in use, so match the word instead of the
+            # exact string.
+            if not re.search(
+                r"\b(Opinion|Decision)\b",
+                publicationItem["documents"][0]["documentName"],
+            ):
                 continue
 
             name = publicationItem["title"]

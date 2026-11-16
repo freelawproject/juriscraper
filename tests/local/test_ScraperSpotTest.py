@@ -5,6 +5,11 @@ import unittest
 from datetime import date
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.exceptions import ParsingException
+from juriscraper.opinions.united_states.administrative_agency import (
+    mspb_p,
+    mspb_u,
+)
 from juriscraper.opinions.united_states.state import nev, nevapp
 
 
@@ -326,3 +331,97 @@ class ScraperSpotTest(unittest.TestCase):
         asyncio.run(site._download_backwards(site.back_scrape_iterable[0]))
         self.assertEqual(len(site.cases), 1)
         self.assertEqual(pages, [])
+
+    def test_mspb_backscrape_skips_manifests_out_of_range(self):
+        """A backscrape downloads only the manifests that can hold the range"""
+
+        def run(site_class, start, end):
+            urls = []
+
+            async def download():
+                urls.append(site.url.rsplit("/", 1)[1])
+                return {"DOCUMENT_TYPE": site.document_type, "data": []}
+
+            site = site_class(backscrape_start=start, backscrape_end=end)
+            site._download = download
+            site.request_pause = 0
+            asyncio.run(site._download_backwards(site.back_scrape_iterable[0]))
+            return urls
+
+        self.assertEqual(
+            run(mspb_p.Site, "2005/01/01", "2006/12/31"),
+            ["PrecedentialDecisions_Manifest_updMar2025.json"],
+        )
+        self.assertEqual(
+            run(mspb_p.Site, "2021/01/01", "2023/12/31"),
+            [
+                "PrecedentialDecisions_Manifest_updMar2025.json",
+                "PrecedentialDecisions_Manifest.json",
+                "PrecedentialDecisions_Manifest_Table.json",
+            ],
+        )
+        self.assertEqual(
+            run(mspb_u.Site, "2016/01/01", "2016/12/31"),
+            [
+                "NonPrecedentialDecisions_Manifest.json",
+                "NonPrecedentialDecisions_Manifest_2015-2019.json",
+            ],
+        )
+        self.assertEqual(
+            run(mspb_u.Site, "2024/01/01", "2024/12/31"),
+            [
+                "NonPrecedentialDecisions_Manifest.json",
+                "NonPrecedentialDecisions_Manifest_Table.json",
+            ],
+        )
+
+    def test_mspb_rows(self):
+        """Bad rows are logged one at a time; citations are normalized"""
+
+        def row(file_name, issued, decision_number="", legal_citation=""):
+            return {
+                "FILE_NAME": file_name,
+                "ISSUED_DATE": issued,
+                "DECISION_NUMBER": decision_number,
+                "LEGAL_CITATION": legal_citation,
+                "DOCKET_NBR": "DC-0752-10-0001-I-1",
+                "APL_FIRST_NAME": "Jane",
+                "APL_LAST_NAME": "Doe",
+                "AGENCY": "Department of the Navy",
+            }
+
+        manifest = {
+            "DOCUMENT_TYPE": "PRECEDENTIAL",
+            "data": [
+                row("a.pdf", "2011/09/20", "2011 MPSB 84", "117 M.S.P.R. 75"),
+                row("b.pdf", "1982/02/10", "9 M S P B  448", "10 M.S.P.R.194"),
+                row("c.pdf", "1985/08/08", "", "NP"),
+                row("d.pdf", "2001/04/27", "", "88 M.S.P.R. 319, 327"),
+                row("e.pdf", "2000/02/02", "12 MSPB 1 123", ""),
+                row("", "2026/09/16"),
+                row("f.pdf", "0891/01/01"),
+                row("g.pdf", "1087/11/27"),
+            ],
+        }
+        site = mspb_p.Site()
+        with self.assertLogs(logger, level="ERROR") as logs:
+            site._parse_manifest(manifest, "test")
+        # One message per bad row: the unrecognized decision number, the
+        # missing file name and the two impossible dates
+        self.assertEqual(len(logs.records), 4)
+        cites = [(c["citation"], c["parallel_citation"]) for c in site.cases]
+        self.assertEqual(
+            cites,
+            [
+                ("2011 MSPB 84", "117 M.S.P.R. 75"),
+                ("9 M.S.P.B. 448", "10 M.S.P.R. 194"),
+                ("", ""),
+                ("88 M.S.P.R. 319", ""),
+                ("", ""),
+            ],
+        )
+
+        with self.assertRaises(ParsingException):
+            site._parse_manifest(
+                {"DOCUMENT_TYPE": "NON-PRECEDENTIAL", "data": []}, "test"
+            )

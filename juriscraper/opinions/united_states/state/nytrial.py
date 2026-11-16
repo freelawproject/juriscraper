@@ -11,7 +11,6 @@ History:
 
 import re
 from datetime import date
-from typing import Any
 from urllib.parse import urljoin
 
 import httpx
@@ -26,6 +25,7 @@ from juriscraper.lib.exceptions import ParsingException
 from juriscraper.lib.judge_parsers import normalize_judge_string
 from juriscraper.lib.string_utils import clean_string, harmonize
 from juriscraper.opinions.united_states.state import ny
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 # "[111 Misc 3d 222]"; corrected, officially reported opinions use
@@ -247,7 +247,8 @@ class Site(OpinionSiteLinear):
         self.is_backscrape = True
         self.url = self.build_url(target_date)
 
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract values from opinion's text
 
         The document may be a HTML or a PDF. We use different regexes for each
@@ -255,7 +256,7 @@ class Site(OpinionSiteLinear):
         :param scraped_text: pdf or html string contents
         :return: dict where keys match courtlistener model objects
         """
-        metadata: dict[str, Any] = {
+        metadata: ExtractedMetaData = {
             "Citation": {},
             "Docket": {},
             "Opinion": {},
@@ -372,7 +373,7 @@ class Site(OpinionSiteLinear):
         return {k: v for k, v in metadata.items() if v}
 
     @staticmethod
-    def extract_from_current_template(scraped_text: str) -> dict[str, Any]:
+    def extract_from_current_template(scraped_text: str) -> ExtractedMetaData:
         """Extract values from the opinion template used since April 2026
 
         The header is a <div> with the <h1> case name, the slip opinion and
@@ -385,7 +386,7 @@ class Site(OpinionSiteLinear):
         :param scraped_text: html string contents, after cleanup_content
         :return: dict where keys match courtlistener model objects
         """
-        metadata: dict[str, Any] = {
+        metadata: ExtractedMetaData = {
             "Citation": {},
             "Docket": {},
             "Opinion": {},

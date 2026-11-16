@@ -1,12 +1,13 @@
 import re
 from datetime import datetime
-from typing import Any, TypedDict
+from typing import TypedDict
 
 from dateutil import parser
 from lxml.html import fromstring
 from typing_extensions import override
 
 from juriscraper.lib.string_utils import clean_string
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -92,7 +93,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extracts docket number from downloaded opinion HTML
 
         Possible on SJC. since `Records And Briefs` section cites

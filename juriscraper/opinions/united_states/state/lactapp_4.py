@@ -15,6 +15,7 @@ from typing_extensions import override
 from juriscraper.lib.date_utils import unique_year_month
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.lib.type_utils import OpinionType
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -128,13 +129,14 @@ class Site(OpinionSiteLinear):
             self.method = "POST"
         return await super()._download()
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extracts structured metadata from the provided opinion text.
 
         :param scraped_text: The content of the document downloaded
         :return Metadata to be added to the case
         """
-        metadata: dict[str, dict] = {
+        metadata: ExtractedMetaData = {
             "OpinionCluster": {},
             "Opinion": {},
             "Docket": {},
