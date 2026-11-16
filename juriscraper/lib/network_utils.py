@@ -112,8 +112,8 @@ class AcmsApiClient:
         the token itself on every API call.
 
         :param token: The bearer token from ``authTokenResult.token``.
-        :return: The user data, or an empty dict when the claim is missing or
-            the token is not a JWT.
+        :return: The user data, or an empty dict when the token is not a JWT
+            or carries no usable ``showDocClaims.CSOId`` claim.
         """
         try:
             payload = token.split(".")[1]
@@ -123,7 +123,15 @@ class AcmsApiClient:
             return {}
         if not isinstance(claims, dict):
             return {}
-        cso_id = (claims.get("showDocClaims") or {}).get("CSOId")
+        show_doc_claims = claims.get("showDocClaims")
+        if isinstance(show_doc_claims, str):
+            try:
+                show_doc_claims = json.loads(show_doc_claims)
+            except ValueError:
+                return {}
+        if not isinstance(show_doc_claims, dict):
+            return {}
+        cso_id = show_doc_claims.get("CSOId")
         if not cso_id:
             return {}
         return {
@@ -168,9 +176,10 @@ class AcmsApiClient:
         response.raise_for_status()
         view_model = extract_acms_view_model(response.text)
         token = (view_model.get("authTokenResult") or {}).get("token")
-        if not token:
+        if not token or not isinstance(token, str):
             logger.warning(
-                f"ACMS IndexContent for {self.court_id} carried no API token."
+                f"ACMS IndexContent for {self.court_id} carried no usable "
+                "API token."
             )
             return view_model
         self.session.store_acms_token(

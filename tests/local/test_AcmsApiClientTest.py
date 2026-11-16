@@ -134,6 +134,69 @@ class AcmsApiClientIndexContentTest(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(self.session.acms_tokens["ca9"], {"Token": token})
         self.assertEqual(self.session.acms_user_data, {})
 
+    async def test_string_encoded_claims_still_yield_user_data(self):
+        """A showDocClaims claim serialized as a JSON string is decoded."""
+        token = self._token(
+            {"showDocClaims": json.dumps({"CSOId": 1234, "Role": "user"})}
+        )
+        self._respond(
+            self._page(
+                {
+                    "caseDetails": [self.CASE],
+                    "authTokenResult": {"token": token},
+                }
+            )
+        )
+
+        await self.client.get_index_content("26-7519")
+
+        self.assertEqual(self.session.acms_tokens["ca9"], {"Token": token})
+        self.assertEqual(
+            self.session.acms_user_data,
+            {"CsoId": "1234", "ContactType": "PACER Only"},
+        )
+
+    async def test_unusable_claims_keep_token_without_user_data(self):
+        """A claim that is not an object is ignored, and the token is kept."""
+        for claims in (["CSOId", 1234], "not json", 1234):
+            with self.subTest(show_doc_claims=claims):
+                self.session.acms_user_data = {}
+                token = self._token({"showDocClaims": claims})
+                self._respond(
+                    self._page(
+                        {
+                            "caseDetails": [self.CASE],
+                            "authTokenResult": {"token": token},
+                        }
+                    )
+                )
+
+                await self.client.get_index_content("26-7519")
+
+                self.assertEqual(
+                    self.session.acms_tokens["ca9"], {"Token": token}
+                )
+                self.assertEqual(self.session.acms_user_data, {})
+
+    async def test_non_string_token_is_not_stored(self):
+        """A token that is not a string cannot go in a header; store nothing."""
+        self._respond(
+            self._page(
+                {
+                    "caseDetails": [self.CASE],
+                    "authTokenResult": {"token": {"value": "token"}},
+                }
+            )
+        )
+
+        with self.assertLogs("juriscraper", level="WARNING") as logs:
+            view_model = await self.client.get_index_content("26-7519")
+
+        self.assertEqual(view_model["caseDetails"], [self.CASE])
+        self.assertNotIn("ca9", self.session.acms_tokens)
+        self.assertEqual(self.session.acms_user_data, {})
+        self.assertTrue(any("no usable API token" in m for m in logs.output))
+
     async def test_page_without_token_changes_no_auth_state(self):
         """A page with no token still returns its data and stores nothing."""
         self._respond(self._page({"caseDetails": []}))
