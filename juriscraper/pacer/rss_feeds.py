@@ -258,7 +258,7 @@ class PacerRssFeed(DocketReport):
         docket_number, docket_number_components = self._parse_docket_number(
             entry.title
         )
-        data = {
+        data: dict = {
             "court_id": self.court_id,
             "pacer_case_id": (
                 get_pacer_case_id_from_nonce_url(entry.link)

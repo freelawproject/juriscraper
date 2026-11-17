@@ -317,7 +317,7 @@ class AttachmentPage(BaseReport):
         return file_size
 
     @staticmethod
-    def _get_pacer_doc_id(row):
+    def _get_pacer_doc_id(row) -> str | None:
         """Take in a row from the attachment table and return the pacer_doc_id
         for the item in that row. Return None if the ID cannot be found.
         """
@@ -333,7 +333,7 @@ class AttachmentPage(BaseReport):
             doc1_url = url.xpath("./@href")[0]
             return get_pacer_doc_id_from_doc1_url(doc1_url)
 
-    def _get_pacer_seq_no_from_tr(self, row):
+    def _get_pacer_seq_no_from_tr(self, row) -> str | None:
         """Take a row of the attachment page, and return the sequence number
         from the goDLS function.
         """
@@ -362,7 +362,7 @@ class AttachmentPage(BaseReport):
         # 3. No goDLS in the onclick
         return None
 
-    def _get_pacer_case_id(self):
+    def _get_pacer_case_id(self) -> str | None:
         """Get the pacer_case_id value by inspecting the HTML
 
         :returns str: The pacer_case_id value

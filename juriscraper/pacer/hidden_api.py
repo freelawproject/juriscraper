@@ -102,7 +102,7 @@ class PossibleCaseNumberApi(BaseReport):
             if office_number is not None:
                 # Remove items by docket number, if they lead with something
                 # other than the correct office number.
-                def correct_office_number(node):
+                def correct_office_number(node) -> bool:
                     try:
                         number = node.xpath("./@number")[0].split(":")[0]
                     except IndexError:

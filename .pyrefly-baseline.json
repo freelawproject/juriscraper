@@ -2333,10 +2333,17 @@
       "severity": "error"
     },
     {
+      "column": 32,
+      "path": "juriscraper/pacer/claims_activity.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, str | None]`",
+      "severity": "error"
+    },
+    {
       "column": 16,
       "path": "juriscraper/pacer/claims_activity.py",
       "name": "bad-return",
-      "concise_description": "Returned type `dict[str, str | Any | None]` is not assignable to declared return type `dict[str, list[dict[str, str]] | str]`",
+      "concise_description": "Returned type `dict[str, str | None]` is not assignable to declared return type `dict[str, list[dict[str, str]] | str]`",
       "severity": "error"
     },
     {
