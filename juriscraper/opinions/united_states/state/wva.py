@@ -216,6 +216,7 @@ class Site(ClusterSite):
             "name": name,
         }
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """The prior-terms page only filters by year. We iterate
         by year and paginate through all pages for each year.

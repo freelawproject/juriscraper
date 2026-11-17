@@ -155,6 +155,7 @@ class Site(OpinionSiteLinear):
                     }
                 )
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """The API only filters by year. We iterate by year but
         filter available dates to the backscrape date range, to

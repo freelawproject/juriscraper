@@ -194,6 +194,7 @@ class Site(OpinionSiteLinear):
                 logger.info("No cursor")
                 break
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Build a single (start, end) tuple from kwargs.
 
