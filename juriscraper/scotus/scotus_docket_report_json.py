@@ -4,7 +4,7 @@ import re
 import sys
 from collections import defaultdict
 from collections.abc import Hashable
-from typing import Any, final
+from typing import Any, Never, final
 
 from typing_extensions import override
 
@@ -16,7 +16,14 @@ from ._scotus_docket_report_parsing import (
     clean_lower_court_cases,
     normalize_date,
 )
-from .scotus_docket_report_base import SCOTUSDocketReportBase
+from .scotus_docket_report_base import (
+    Attachment,
+    Attorney,
+    DocketEntry,
+    Metadata,
+    Party,
+    SCOTUSDocketReportBase,
+)
 
 logger = make_default_logger()
 
@@ -45,7 +52,7 @@ class SCOTUSDocketReportJSON(SCOTUSDocketReportBase):
 
     @override
     @property
-    def metadata(self) -> dict[str, Any]:
+    def metadata(self) -> Metadata | dict[Never, Never]:
         """Return normalized docket metadata.
         That function then supplements it with parties and docket entries.
 
@@ -113,7 +120,7 @@ class SCOTUSDocketReportJSON(SCOTUSDocketReportBase):
 
     @override
     @property
-    def docket_entries(self) -> list[dict[str, Any]]:
+    def docket_entries(self) -> list[DocketEntry]:
         """Return a dictionary of docket entries from ProceedingsandOrder
 
         [
@@ -146,7 +153,7 @@ class SCOTUSDocketReportJSON(SCOTUSDocketReportBase):
                 )
             ):
                 document_number = int(match.group(1))
-            attachments = [
+            attachments: list[Attachment] = [
                 {
                     "description": link.get("Description", "").strip(),
                     "document_url": link.get("DocumentUrl"),
@@ -157,7 +164,7 @@ class SCOTUSDocketReportJSON(SCOTUSDocketReportBase):
 
             description_html = row.get("Text", "")
             description = strip_bad_html_tags_insecure(description_html)
-            de = {
+            de: DocketEntry = {
                 "date_filed": normalize_date(row.get("Date")),
                 "document_number": document_number,
                 "description": description.text_content(),
@@ -168,7 +175,7 @@ class SCOTUSDocketReportJSON(SCOTUSDocketReportBase):
         return entries
 
     @staticmethod
-    def _build_attorney(att: dict[str, Any]) -> dict[str, Any]:
+    def _build_attorney(att: dict[str, Any]) -> Attorney:
         """Build a normalized attorney dictionary from a raw SCOTUS JSON record.
 
         :param att: dictionary containing attorney information from the SCOTUS JSON.
@@ -187,7 +194,7 @@ class SCOTUSDocketReportJSON(SCOTUSDocketReportBase):
             "email": att.get("Email"),
         }
 
-    def _build_parties_for_type(self, type_key: str) -> list[dict[str, Any]]:
+    def _build_parties_for_type(self, type_key: str) -> list[Party]:
         """Group attorneys by party name for a party type.
 
         Preserves the order of first appearance of each party name and assigns all
@@ -208,7 +215,7 @@ class SCOTUSDocketReportJSON(SCOTUSDocketReportBase):
         if not type_parties:
             return []
 
-        grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
+        grouped: dict[str, list[Attorney]] = defaultdict(list)
         for party in type_parties:
             party_name = party.get("PartyName", "").strip()
             grouped[party_name].append(self._build_attorney(party))
@@ -224,7 +231,7 @@ class SCOTUSDocketReportJSON(SCOTUSDocketReportBase):
 
     @override
     @property
-    def parties(self) -> list[dict[str, Any]]:
+    def parties(self) -> list[Party]:
         """Return parties with their attorneys from Petitioner/Respondent arrays.
 
             [
