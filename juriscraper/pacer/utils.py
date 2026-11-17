@@ -431,7 +431,9 @@ def get_doc_id_prefix_from_court_id(court_id):
     return cid_to_prefix_map[court_id]
 
 
-async def get_pacer_court_info(**kwargs):
+async def get_pacer_court_info(
+    **kwargs,
+) -> dict[str, dict[str, list[dict[str, str]]]]:
     kwargs.setdefault("http2", True)
     kwargs.setdefault("follow_redirects", True)
     async with httpx.AsyncClient(**kwargs) as client:
@@ -441,7 +443,9 @@ async def get_pacer_court_info(**kwargs):
         return r.json()
 
 
-def get_courts_from_json(j):
+def get_courts_from_json(
+    j: dict[str, dict[str, list[dict[str, str]]]],
+) -> list[dict[str, str]]:
     courts = []
     for k, v in j.items():
         for court in v["courts"]:
