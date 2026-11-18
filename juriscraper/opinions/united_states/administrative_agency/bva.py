@@ -198,7 +198,8 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         await self._process_html()
 
-    def make_backscrape_iterable(self, kwargs):
+    @override
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Convert the parent's date-range tuples into 2-digit year ints.
 
         The parent creates (start_date, end_date) tuples based on

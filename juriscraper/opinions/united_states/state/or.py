@@ -13,6 +13,7 @@ from datetime import datetime, timedelta
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -156,7 +157,8 @@ class Site(OpinionSiteLinear):
         end = datetime.strftime(end_date, "%Y%m%d")
         return self.base_url.format(self.court_code, start, end)
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract citations from text
 
         Be careful with citations referring to other opinions that are
@@ -178,7 +180,7 @@ class Site(OpinionSiteLinear):
         )
         regex = r"\n\s+(?P<cite>\d+ P3d \d+)\s+\n"
 
-        result = {}
+        result: ExtractedMetaData = {}
         if match := pattern.search(scraped_text):
             lower_court = re.sub(
                 r"\s+", " ", match.group("lower_court")

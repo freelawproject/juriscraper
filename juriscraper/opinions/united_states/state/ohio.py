@@ -188,6 +188,7 @@ class Site(OpinionSiteLinear, PaginatedHtmlBackscrapeSite[Any]):
             return
         site.set_parameters(str(page))
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         super().make_backscrape_iterable(kwargs)
         start_date = self.back_scrape_iterable[0][0]

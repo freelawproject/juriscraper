@@ -19,7 +19,7 @@ class DownloadConfirmationPage(BaseReport):
     download page.
     """
 
-    def __init__(self, court_id, pacer_session=None):
+    def __init__(self, court_id: str, pacer_session=None):
         super().__init__(court_id, pacer_session)
 
         self.is_appellate = False

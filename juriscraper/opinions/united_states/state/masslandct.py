@@ -14,7 +14,7 @@ Notes:
 import datetime
 
 from juriscraper.lib.string_utils import convert_date_string, titlecase
-from juriscraper.OpinionSiteLinear import OpinionSite
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
