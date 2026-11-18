@@ -11,6 +11,7 @@ from dateutil.relativedelta import relativedelta
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.log_tools import log_error
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -41,7 +42,15 @@ class Site(OpinionSiteLinear):
             docket, name, date_el, disposition, _, url_el = row.xpath(".//td")
             url = url_el.xpath(".//a")[0].get("href")
             if url == "https://efast.gaappeals.gov/download?filingId=":
-                logger.error("Skipping doc with empty filingId: %s", url)
+                log_error(
+                    logger,
+                    "empty-filing-id",
+                    "%s: skipping doc with empty filingId: %s",
+                    self.court_id,
+                    url,
+                    court_id=self.court_id,
+                    url=url,
+                )
                 continue
             self.cases.append(
                 {

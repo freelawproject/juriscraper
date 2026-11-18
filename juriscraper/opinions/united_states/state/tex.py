@@ -28,6 +28,7 @@ from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
 from juriscraper.ClusterSite import ClusterSite
+from juriscraper.lib.log_tools import log_error
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.lib.type_utils import OpinionType
 
@@ -70,7 +71,14 @@ class Site(ClusterSite):
             if not links:
                 # No orders posted yet (common in early January)
                 self.html = None
-                logger.error("tex: no date list on opinions page")
+                log_error(
+                    logger,
+                    "date-list-missing",
+                    "%s: no date list on opinions page",
+                    self.court_id,
+                    court_id=self.court_id,
+                    url=self.url,
+                )
                 return None
             self.url = links[-1]
 
@@ -88,12 +96,24 @@ class Site(ClusterSite):
 
         date_strings = self.html.xpath(self.date_xp)
         if not date_strings:
-            logger.error("tex: no 'Orders Pronounced' header on order page")
+            log_error(
+                logger,
+                "orders-header-missing",
+                "%s: no 'Orders Pronounced' header on order page",
+                self.court_id,
+                court_id=self.court_id,
+                url=self.url,
+            )
             return
         date_match = re.search(self.date_regex, date_strings[0])
         if not date_match:
-            logger.error(
-                "tex: unable to parse date from 'Orders Pronounced' header"
+            log_error(
+                logger,
+                "orders-date-parse",
+                "%s: unable to parse date from 'Orders Pronounced' header",
+                self.court_id,
+                court_id=self.court_id,
+                url=self.url,
             )
             return
         date = date_match.group("date").strip()

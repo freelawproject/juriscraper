@@ -19,7 +19,7 @@ Features:
   `fingerprint`, `court_id` and `url` extras that CourtListener uses to group
   Sentry events. Framework errors (`no_results_warning`, future dates, PACER
   PDF downloads, RECAP and SCOTUS email parsing, the Doctor extension check)
-  now log through it.
+  and the opinion and oral argument scrapers now log through it.
 - Add `juriscraper.lib.exceptions.attach_error_context` and the optional
   `court_id`, `url`, `sentry_fingerprint` and `sentry_owner` attributes on
   `AutoLoggingException`, `InsanityException`, `ParsingException`,

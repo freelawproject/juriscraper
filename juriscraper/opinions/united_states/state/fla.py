@@ -10,6 +10,7 @@ from urllib.parse import urljoin
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.log_tools import log_error
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -65,12 +66,16 @@ class Site(OpinionSiteLinear):
                 break
 
         if len(results) < total_count:
-            logger.error(
+            log_error(
+                logger,
+                "results-incomplete",
                 "%s: got %s of %s results reported by the source for %s. Some opinions were not scraped",
                 self.court_id,
                 len(results),
                 total_count,
                 first_page_url,
+                court_id=self.court_id,
+                url=first_page_url,
             )
 
         self.url = first_page_url

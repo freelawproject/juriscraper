@@ -14,6 +14,7 @@ from datetime import datetime
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.log_tools import log_error
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -28,7 +29,13 @@ class Site(OpinionSiteLinear):
         self.should_have_results = True
 
         if datetime.now().year != 2026:
-            logger.error("Update lactapp_1 parameters from 2026 parameters")
+            log_error(
+                logger,
+                "stale-parameters",
+                "%s: update parameters from 2026 parameters",
+                self.court_id,
+                court_id=self.court_id,
+            )
 
         # This payload is specific for 2026
         self.payload = {

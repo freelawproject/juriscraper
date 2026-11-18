@@ -21,6 +21,7 @@ from urllib.parse import urljoin
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.log_tools import log_error
 from juriscraper.lib.string_utils import convert_date_string, titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -98,9 +99,13 @@ class Site(OpinionSiteLinear):
             )
             first = items[0]
             if not first.get("documents"):
-                logger.error(
-                    "visuper: no document for publication %s",
+                log_error(
+                    logger,
+                    "publication-without-document",
+                    "%s: no document for publication %s",
+                    self.court_id,
                     pub["publicationUUID"],
+                    court_id=self.court_id,
                 )
                 continue
 

@@ -6,6 +6,7 @@ from typing_extensions import override
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.bot_challenge import bot_challenge_error
 from juriscraper.lib.exceptions import ParsingException
+from juriscraper.lib.log_tools import log_error
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -84,13 +85,16 @@ class Site(OpinionSiteLinear):
                         )
 
                 if not case_date:
-                    logger.error(
+                    log_error(
+                        logger,
+                        "disposition-date-missing",
                         "%s: no date in disposition %r for docket %s; "
                         "skipping document %s",
                         self.court_id,
                         disposition,
                         fixed_values.get("docket"),
                         anchor.get("href"),
+                        court_id=self.court_id,
                     )
                     continue
 
