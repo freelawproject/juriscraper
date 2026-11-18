@@ -2,7 +2,7 @@ from httpx import AsyncClient, Timeout
 from lxml import etree
 
 from juriscraper.lib.judge_parsers import normalize_judge_string
-from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.log_tools import log_error, make_default_logger
 from juriscraper.lib.string_utils import (
     clean_string,
     convert_date_string,
@@ -59,7 +59,15 @@ class InternetArchive(BaseDocketReport):
         r = await self.session.get(url, timeout=timeout)
         r.raise_for_status()
         if not is_pdf(r):
-            logger.error(f"Got non-PDF data, but expected a PDF at: {url}")
+            log_error(
+                logger,
+                "ia-non-pdf",
+                "Got non-PDF data, but expected a PDF at: %s",
+                url,
+                group_by="shared",
+                court_id=self.court_id,
+                url=url,
+            )
             return None
         else:
             return r

@@ -7,6 +7,7 @@ from lxml.html import HtmlElement
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
+from juriscraper.lib.log_tools import log_error
 from juriscraper.lib.string_utils import (
     clean_string,
     convert_date_string,
@@ -763,8 +764,11 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         if self.court_id in ["nhb"]:
             subject = re.sub(chapter_regex, " ", subject, count=1)
         elif len(re.findall(chapter_regex, subject)) > 1:
-            logger.error(
-                "Trying to parse a RECAP email with more than 1 'Chapter...' string"
+            log_error(
+                logger,
+                "recap-email-multiple-chapters",
+                "Trying to parse a RECAP email with more than 1 'Chapter...' string",
+                court_id=self.court_id,
             )
 
         subject = subject.strip(" ;:,-")
@@ -772,9 +776,12 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         short_description = re.sub("( Re$)|(^Re:? )", "", subject)
 
         if self.court_id not in self.bankruptcy_courts_with_tests:
-            logger.error(
+            log_error(
+                logger,
+                "recap-email-untested",
                 "Parsing a RECAP email from court %s without tests",
                 self.court_id,
+                court_id=self.court_id,
             )
 
         return short_description

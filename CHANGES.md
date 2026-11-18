@@ -15,9 +15,24 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add `juriscraper.lib.log_tools.log_error`, which logs an error with the
+  `fingerprint`, `court_id` and `url` extras that CourtListener uses to group
+  Sentry events. Framework errors (`no_results_warning`, future dates, PACER
+  PDF downloads, RECAP and SCOTUS email parsing, the Doctor extension check)
+  now log through it.
+- Add `juriscraper.lib.exceptions.attach_error_context` and the optional
+  `court_id`, `url`, `sentry_fingerprint` and `sentry_owner` attributes on
+  `AutoLoggingException`, `InsanityException`, `ParsingException`,
+  `InvalidDocumentError` and `PacerLoginException`. `Site.parse()` and
+  `Site.download_content()` set `court_id` and `url` on any exception that
+  escapes them.
 
 Changes:
+- `site_yielder` logs a failed backscrape window at ERROR instead of DEBUG
+  and still continues with the next window.
+  `backscrape_over_paginated_results` logs a failed page at ERROR instead of
+  INFO.
+- `NoDownloadUrlError` now has a message instead of the empty URL.
 - `SCOTUSDocketReport*` interfaces are stripped down. The methods `normalize_date()` and `clean_lower_court_cases()` have been removed to a private helper module.
 - `SCOTUSDocketReport*` hierarchy is flattened. Each implementation is now an immediate subclass of `SCOTUSDocketReportBase`. What was `SCOTUSDocketReport` is renamed to `SCOTUSDocketReportJSON`; an alias from `SCOTUSDocketReport` to `SCOTUSDocketReportJSON` is established for compatibility.
 - `DocketReport.query()` and `AppellateDocketReport.query()` parameters are annotated.

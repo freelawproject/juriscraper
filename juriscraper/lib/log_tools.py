@@ -63,3 +63,32 @@ def make_default_logger(file_path: str = LOG_FILENAME) -> logging.Logger:
         )
         logger.addHandler(handler)
     return logger
+
+
+def log_error(
+    logger: logging.Logger,
+    key: str,
+    msg: str,
+    *args: object,
+    court_id: str | None = None,
+    url: str | None = None,
+    group_by: str = "court",
+    exc_info: bool | BaseException | None = False,
+    **extra: object,
+) -> None:
+    """Log an error with the `extra` keys that group it in Sentry
+
+    CourtListener uses `extra["fingerprint"]` as the Sentry fingerprint, so
+    every call with the same key (and court) lands in one issue. Use "%s"
+    placeholders in `msg`, not f-strings, so the message stays stable too.
+
+    :param key: short stable name for the error, e.g. "zero-results"
+    :param group_by: "court" groups by key and court; "shared" by key only
+    :param extra: more values to show on the Sentry event
+    """
+    fingerprint = [key] if group_by == "shared" else [key, court_id or ""]
+    extra.update(
+        {"fingerprint": fingerprint, "court_id": court_id, "url": url}
+    )
+    # stacklevel=2 keeps the caller's file and line on the log record
+    logger.error(msg, *args, extra=extra, exc_info=exc_info, stacklevel=2)

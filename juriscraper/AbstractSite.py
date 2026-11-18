@@ -20,6 +20,7 @@ from juriscraper.lib.date_utils import (
 )
 from juriscraper.lib.exceptions import (
     InsanityException,
+    attach_error_context,
 )
 from juriscraper.lib.html_utils import (
     clean_html,
@@ -28,7 +29,7 @@ from juriscraper.lib.html_utils import (
     get_html_parsed_text,
     set_response_encoding,
 )
-from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.log_tools import log_error, make_default_logger
 from juriscraper.lib.microservices_utils import follow_redirections
 from juriscraper.lib.string_utils import (
     CaseNameTweaker,
@@ -211,6 +212,15 @@ class AbstractSite:
         )
 
     async def parse(self):
+        """Download and parse the site; escaping exceptions carry `court_id`
+        and `url`"""
+        try:
+            return await self._parse()
+        except Exception as exc:
+            attach_error_context(exc, court_id=self.court_id, url=self.url)
+            raise
+
+    async def _parse(self):
         if not self.downloader_executed:
             # Run the downloader if it hasn't been run already
             self.html = await self._download()
@@ -273,8 +283,13 @@ class AbstractSite:
 
     def no_results_warning(self) -> None:
         if self.should_have_results:
-            logger.error(
-                f"{self.court_id}: Returned with zero items, but should have results."
+            log_error(
+                logger,
+                "zero-results",
+                "%s: Returned with zero items, but should have results.",
+                self.court_id,
+                court_id=self.court_id,
+                url=self.url,
             )
         else:
             logger.warning(f"{self.court_id}: Returned with zero items.")
@@ -447,6 +462,20 @@ class AbstractSite:
         :return: The downloaded and cleaned content
         :raises: NoDownloadUrlError, UnexpectedContentTypeError, EmptyFileError
         """
+        try:
+            return await self._download_content(
+                download_url, doctor_is_available, media_root
+            )
+        except Exception as exc:
+            attach_error_context(exc, court_id=self.court_id, url=download_url)
+            raise
+
+    async def _download_content(
+        self,
+        download_url: str,
+        doctor_is_available: bool,
+        media_root: str,
+    ) -> str | bytes:
         check_download_url(download_url)
 
         # noinspection PyBroadException

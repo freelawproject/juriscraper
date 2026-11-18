@@ -5,7 +5,7 @@ import httpx
 from httpx import AsyncClient, Response, TimeoutException
 from lxml import html
 
-from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.log_tools import log_error, make_default_logger
 
 MICROSERVICE_URLS = {
     "document-extract": "{}/extract/doc/text/",
@@ -34,7 +34,13 @@ async def test_for_meta_redirections(
         extension = ""
     except Exception:
         # blanket exception until we get more error information
-        logger.error("Error getting extension on juriscraper", exc_info=True)
+        log_error(
+            logger,
+            "doctor-extension",
+            "Error getting extension on juriscraper",
+            group_by="shared",
+            exc_info=True,
+        )
         extension = ""
 
     if extension != ".html":
