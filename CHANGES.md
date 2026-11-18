@@ -15,7 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add `RateLimited` mixin class for site-wide rate limiting with working hours support #1530
 
 Changes:
 -
