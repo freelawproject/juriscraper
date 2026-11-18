@@ -5,6 +5,7 @@ import inspect
 import json
 import os
 import ssl
+import urllib.error
 import urllib.parse
 import urllib.request
 from collections.abc import Awaitable
@@ -14,6 +15,10 @@ import certifi
 import httpx
 from charset_normalizer import from_bytes
 
+from juriscraper.lib.bot_challenge import (
+    INSPECTED_BYTES,
+    raise_if_bot_challenge,
+)
 from juriscraper.lib.date_utils import (
     json_date_handler,
     make_date_range_tuples,
@@ -437,7 +442,17 @@ class AbstractSite:
         :return: A response object with a `content` field
         """
         req = urllib.request.Request(download_url, headers=headers)
-        response = self.urllib_opener.open(req, timeout=90)
+        try:
+            response = self.urllib_opener.open(req, timeout=90)
+        except urllib.error.HTTPError as exc:
+            # a blocked download is served as an HTML challenge page
+            raise_if_bot_challenge(
+                exc.read(INSPECTED_BYTES),
+                download_url,
+                self.court_id,
+                exc.headers,
+            )
+            raise
         response.content = response.read()
 
         return response
@@ -460,7 +475,8 @@ class AbstractSite:
             used in test mode
 
         :return: The downloaded and cleaned content
-        :raises: NoDownloadUrlError, UnexpectedContentTypeError, EmptyFileError
+        :raises: NoDownloadUrlError, UnexpectedContentTypeError, EmptyFileError,
+            BotChallengeError
         """
         try:
             return await self._download_content(
@@ -520,6 +536,10 @@ class AbstractSite:
                 timeout=300,
             )
 
+        # a blocked download arrives as an HTML challenge page
+        raise_if_bot_challenge(
+            r.content, download_url, self.court_id, r.headers
+        )
         check_empty_downloaded_file(r, download_url)
         check_expected_content_types(self, r, download_url)
 
@@ -587,12 +607,19 @@ class AbstractSite:
         if headers is None:
             headers = dict(self.request["headers"])
         req = urllib.request.Request(url, data=data, headers=headers)
-        response = self.urllib_opener.open(req, timeout=60)
+        try:
+            response = self.urllib_opener.open(req, timeout=60)
+        except urllib.error.HTTPError as exc:
+            raise_if_bot_challenge(
+                exc.read(INSPECTED_BYTES), url, self.court_id, exc.headers
+            )
+            raise
         raw = response.read()
         # Gzip decompression - currently only needed for lactapp_3
         # whose server returns gzip-encoded responses
         if raw[:2] == b"\x1f\x8b":
             raw = gzip.decompress(raw)
+        raise_if_bot_challenge(raw, url, self.court_id, response.headers)
 
         # Populate request dict for save_response compatibility.
         # Currently only needed for lactapp_3 which uses urllib
@@ -662,10 +689,21 @@ class AbstractSite:
         return self.request["response"]
 
     def _post_process_response(self):
-        """Cleanup to response object"""
+        """Cleanup to response object
+
+        :raises BotChallengeError: when the response is a bot challenge page,
+            whatever its status code
+        """
         self.tweak_response_object()
-        self.request["response"].raise_for_status()
-        set_response_encoding(self.request["response"])
+        response = self.request["response"]
+        raise_if_bot_challenge(
+            response.content,
+            self.request["url"] or self.url,
+            self.court_id,
+            response.headers,
+        )
+        response.raise_for_status()
+        set_response_encoding(response)
 
     def _return_response_text_object(self):
         if self.request["response"]:

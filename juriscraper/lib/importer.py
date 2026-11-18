@@ -6,6 +6,7 @@ from typing import cast
 from httpx import HTTPError
 
 from juriscraper.AbstractSite import AbstractSite
+from juriscraper.lib.exceptions import BotChallengeError
 from juriscraper.lib.log_tools import log_error, make_default_logger
 
 logger = make_default_logger()
@@ -101,7 +102,7 @@ async def site_yielder(
             site.should_have_results = False
             try:
                 await site._download_backwards(i)
-            except HTTPError:
+            except (HTTPError, BotChallengeError):
                 # keep going so one failed window does not stop the backscrape
                 log_error(
                     logger,

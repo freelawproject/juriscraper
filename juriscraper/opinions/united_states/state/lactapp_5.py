@@ -4,7 +4,8 @@ from datetime import datetime
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
-from juriscraper.lib.exceptions import BotChallengeError, ParsingException
+from juriscraper.lib.bot_challenge import bot_challenge_error
+from juriscraper.lib.exceptions import ParsingException
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -165,9 +166,10 @@ class Site(OpinionSiteLinear):
         if self.html.xpath(
             "//*[contains(@class, 'h-captcha')]"
         ) or self.html.xpath("//title[contains(., 'Bot Manager Captcha')]"):
-            raise BotChallengeError(
+            raise bot_challenge_error(
                 f"{self.court_id}: served a captcha challenge instead of the homepage",
-                fingerprint=[f"{self.court_id}-bot-challenge"],
+                self.url,
+                self.court_id,
             )
 
         count = self.html.xpath(self.count_xpath)

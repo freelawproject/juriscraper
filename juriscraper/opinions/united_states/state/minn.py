@@ -15,7 +15,7 @@ from urllib.parse import urljoin
 from typing_extensions import override
 
 from juriscraper.AbstractSite import logger
-from juriscraper.lib.exceptions import BotChallengeError
+from juriscraper.lib.bot_challenge import bot_challenge_error
 from juriscraper.lib.network_utils import add_delay
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
@@ -209,7 +209,8 @@ class Site(OpinionSiteLinear):
         if "Bot Manager Captcha" in title or self.html.xpath(
             "//div[contains(@class, 'h-captcha')]"
         ):
-            raise BotChallengeError(
+            raise bot_challenge_error(
                 f"{self.court_id}: blocked by Radware Bot Manager captcha",
-                fingerprint=[f"{self.court_id}-bot-challenge"],
+                self.url,
+                self.court_id,
             )

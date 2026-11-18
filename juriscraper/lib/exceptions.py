@@ -163,12 +163,13 @@ class MergingError(AutoLoggingException):
     logging_level = logging.ERROR
 
 
-class BotChallengeError(AutoLoggingException):
+class BotChallengeError(BadContentError):
     """Raised when the source serves a bot/captcha challenge page instead
     of the expected content (e.g. Radware Bot Manager, Cloudflare).
 
     Raising loudly prevents silently ingesting zero results, which would
-    otherwise look like a successful scrape with no new opinions.
+    otherwise look like a successful scrape with no new opinions. As a
+    `BadContentError`, a blocked document is skipped like any bad download.
     """
 
     logging_level = logging.ERROR

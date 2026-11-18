@@ -26,6 +26,12 @@ Features:
   `InvalidDocumentError` and `PacerLoginException`. `Site.parse()` and
   `Site.download_content()` set `court_id` and `url` on any exception that
   escapes them.
+- Detect Cloudflare, Imperva and Radware challenge pages on every page and
+  document download and raise `BotChallengeError`, grouped by host. `minn`
+  and `lactapp_5` use the same grouping. `BotChallengeError` is now a
+  `BadContentError`, so a challenge served for one document is skipped like
+  any other bad download. Backscrape windows and paginated backscrapes treat
+  it like an HTTP error and continue.
 
 Changes:
 - `site_yielder` logs a failed backscrape window at ERROR instead of DEBUG
