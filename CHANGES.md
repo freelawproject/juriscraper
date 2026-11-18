@@ -54,6 +54,12 @@ Features:
   `9 M S P B  448` to `9 M.S.P.B. 448`. #2386
 
 Changes:
+- Rename the `calctapp_*` district scrapers to the CourtListener court ids
+  of their districts and divisions, e.g. `calctapp_1st` to `calctapp1d` and
+  `calctapp_4th_div1` to `calctapp4d1` #2375
+- Replace `calctapp_u` with one unpublished scraper per district and
+  division, e.g. `calctapp1d_u` and `calctapp4d1_u`, so unpublished
+  opinions go to the same court as published ones #2375
 - Add a GitHub issue template for new scraper requests #2392
 - Structure return type of `NotificationEmail.data()` and `S3NotificationEmail.data()`.
 - The return type of `OpinionSite.extract_from_text()` is given a rudimentary structure, `ExtractedMetaData`.

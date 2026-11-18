@@ -10,13 +10,21 @@ class Site(OpinionSiteLinear):
     court_code = "S"
     division = ""
     date_regex = re.compile(r" \d\d?/\d\d?/\d\d| filed")
+    # Unpublished titles end with the district and division, e.g. "CA4/1"
+    court_suffix_regex = re.compile(r"\s+CA\d(/\d)?$")
 
     def __init__(self, *args, **kwargs):
         kwargs.setdefault("verify", False)
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = f"https://www.courts.ca.gov/cms/opinions.htm?Courts={self.court_code}"
-        self.status = "Published"
+        # Unpublished opinions have their own page, scraped by the `_u` modules
+        if self.court_id.endswith("_u"):
+            self.status = "Unpublished"
+            page = "npopinions"
+        else:
+            self.status = "Published"
+            page = "opinions"
+        self.url = f"https://www.courts.ca.gov/cms/{page}.htm?Courts={self.court_code}"
         self.should_have_results = True
 
     @override
@@ -24,7 +32,9 @@ class Site(OpinionSiteLinear):
         for row in self.html.xpath("//table/tr[not(th)]"):
             name = row.xpath(".//*[@class='op-title']/text()")[0]
 
-            split = self.date_regex.split(name)[0]
+            split = self.court_suffix_regex.sub(
+                "", self.date_regex.split(name)[0]
+            )
             if "P. v. " in split:
                 case_name = split.replace("P. ", "People ")
             else:
