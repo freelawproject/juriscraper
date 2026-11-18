@@ -62,14 +62,14 @@ class ErrorContextTest(unittest.TestCase):
     def test_auto_logging_exception_keeps_fingerprint(self):
         """The fingerprint is stored and the log stays at the class level"""
         logger = make_default_logger()
-        with self.assertLogs(logger, level="ERROR") as logs:
+        with self.assertLogs(logger, level="WARNING") as logs:
             exc = UnexpectedContentTypeError(
                 "bad", fingerprint=["test-unexpected-content-type"]
             )
         self.assertEqual(
             exc.sentry_fingerprint, ["test-unexpected-content-type"]
         )
-        self.assertEqual(logs.records[0].levelno, logging.ERROR)
+        self.assertEqual(logs.records[0].levelno, logging.WARNING)
         self.assertEqual(
             logs.records[0].fingerprint, ["test-unexpected-content-type"]
         )

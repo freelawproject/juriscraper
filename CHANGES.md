@@ -34,6 +34,10 @@ Features:
   it like an HTTP error and continue.
 
 Changes:
+- `UnexpectedContentTypeError`, `EmptyFileError`, `NoDownloadUrlError` and
+  `BotChallengeError` log at WARNING instead of ERROR when raised, because
+  CourtListener reports them itself. Do not release this before the matching
+  CourtListener change is deployed.
 - `site_yielder` logs a failed backscrape window at ERROR instead of DEBUG
   and still continues with the next window.
   `backscrape_over_paginated_results` logs a failed page at ERROR instead of

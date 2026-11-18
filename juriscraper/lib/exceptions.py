@@ -89,11 +89,10 @@ class InvalidDocumentError(ErrorContextMixin, Exception):
 class AutoLoggingException(ErrorContextMixin, Exception):
     """Exception with defaults for logging, to be subclassed
 
-    We log expected exceptions to better understand what went wrong
-    Logger calls with level `logging.ERROR` are sent to Sentry, and
-    it's useful to send a `fingerprint` to force a specific grouping by court.
-    The `fingerprint` is kept on `self.sentry_fingerprint` so CourtListener
-    can report the exception with the same grouping.
+    We log expected exceptions to better understand what went wrong.
+    Subclasses that CourtListener reports itself log at WARNING, since ERROR
+    logs reach Sentry too. The `fingerprint` is kept on
+    `self.sentry_fingerprint` for that report.
 
     Other `logger` calls are just printed on the console when using a
     VerboseCommand with proper verbosity levels
@@ -142,19 +141,19 @@ class UnexpectedContentTypeError(BadContentError):
     site.expected_content_types
     """
 
-    logging_level = logging.ERROR
+    logging_level = logging.WARNING
 
 
 class NoDownloadUrlError(BadContentError):
     """Occurs when a DeferredList fetcher fails."""
 
-    logging_level = logging.ERROR
+    logging_level = logging.WARNING
 
 
 class EmptyFileError(BadContentError):
     """Occurs when the content of the response has lenght 0"""
 
-    logging_level = logging.ERROR
+    logging_level = logging.WARNING
 
 
 class MergingError(AutoLoggingException):
@@ -172,4 +171,4 @@ class BotChallengeError(BadContentError):
     `BadContentError`, a blocked document is skipped like any bad download.
     """
 
-    logging_level = logging.ERROR
+    logging_level = logging.WARNING
