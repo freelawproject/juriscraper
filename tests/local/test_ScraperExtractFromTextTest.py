@@ -1499,12 +1499,8 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.calctapp1d_u": [
             (
-                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
-                {
-                    "Docket": {
-                        "appeal_from_str": "Superior Court of Los Angeles County",
-                    },
-                },
+                "Filed 11/12/26 P. v. Neal CA1/1\n                  NOT TO BE PUBLISHED IN OFFICIAL REPORTS\nCalifornia Rules of Court, rule 8.1115(a), prohibits courts and parties from citing or relying on opinions not certified for\npublication or ordered published, except as specified by rule 8.1115(b). This opinion has not been certified for publication or\nordered published for purposes of rule 8.1115.\n\n\n          IN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                                      FIRST APPELLATE DISTRICT\n\n                                                   DIVISION ONE\n\n\n THE PEOPLE,\n\n           Plaintiff and Respondent,                                    A173222\n v.\n                                                                        (Contra Costa County Super.\n LARRY DARYL NEAL, JR.,                                                 Ct. Nos. 02-24-00110,\n                                                                        01-24-04721)\n           Defendant and Appellant.\n\n\n\n         After a jury convicted appellant Larry Daryl Neal, Jr. of felony firearm\npossession offenses, the trial court sentenced him to state prison and imposed\nvarious fines and fees. On appeal, and in light of new guidance from the\nCalifornia Supreme Court, the parties agree the case should be remanded to\nallow Neal the opportunity to have the trial court consider his ability to pay\nthe fines and fees. We will reverse those orders, remand the matter for an\nability-to-pay determination, and affirm the balance of the judgment.",
+                {},
             ),
         ],
         "juriscraper.opinions.united_states.state.calctapp2d": [
@@ -1519,7 +1515,7 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.calctapp2d_u": [
             (
-                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
+                "Filed 11/13/26 Underwood v. Hertz Corp. CA2/7\n   NOT TO BE PUBLISHED IN THE OFFICIAL REPORTS\n\nCalifornia Rules of Court, rule 8.1115(a), prohibits courts and parties from citing or relying on opinions\nnot certified for publication or ordered published, except as specified by rule 8.1115(b). This opinion\nhas not been certified for publication or ordered published for purposes of rule 8.1115.\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                         SECOND APPELLATE DISTRICT\n\n                                      DIVISION SEVEN\n\n DONALD UNDERWOOD,                                             B354062\n\n           Plaintiff and Appellant,                            (Los Angeles County\n                                                               Super. Ct.\n           v.                                                  No. 23STCV26175)\n\n HERTZ CORPORATION,\n\n           Defendant and Respondent.\n\n\n      APPEAL from a judgment of the Superior Court of\nLos Angeles County, Gary D. Roberts, Judge. Reversed with\ndirections.\n      Donald Underwood, in pro per., for Plaintiff and Appellant.\n      Kahana & Feld, Shayne L. Wulterin, Mitchell J.\nSteinberger and Mark. P Nelson for Defendant and Respondent.",
                 {
                     "Docket": {
                         "appeal_from_str": "Superior Court of Los Angeles County",
@@ -1539,12 +1535,8 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.calctapp3d_u": [
             (
-                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
-                {
-                    "Docket": {
-                        "appeal_from_str": "Superior Court of Los Angeles County",
-                    },
-                },
+                "Filed 11/12/26 P. v. Thornburg CA3\n                                           NOT TO BE PUBLISHED\n\nCalifornia Rules of Court, rule 8.1115(a), prohibits courts and parties from citing or relying on opinions not certified for\npublication or ordered published, except as specified by rule 8.1115(b). This opinion has not been certified for publication\nor ordered published for purposes of rule 8.1115.\n\n\n\n              IN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n                                      THIRD APPELLATE DISTRICT\n                                                         (Butte)\n\n\nTHE PEOPLE,                                                                      C104561\n     Plaintiff and Respondent,\n                                                                                 (Super. Ct. Nos. 22CF00420,\n         v.                                                                      22CF00885, 25CF01500)\n\nJEDEDIAH LEE THORNBURG,\n     Defendant and Appellant.\n\n\n\n         Appointed counsel for defendant Jedediah Lee Thornburg asked this court to\nindependently review the record to determine whether there are any arguable issues on\nappeal. (People v. Wende (1979) 25 Cal.3d 436.) After reviewing the record, we shall\norder corrections to errors in the sentencing minute orders and the abstract of judgment.\nThe judgment is otherwise affirmed.",
+                {},
             ),
         ],
         "juriscraper.opinions.united_states.state.calctapp4d1": [
@@ -1559,10 +1551,10 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.calctapp4d1_u": [
             (
-                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
+                "Filed 11/12/26 P. v. Williams CA4/1\n\n\n                 NOT TO BE PUBLISHED IN OFFICIAL REPORTS\n\n\nCalifornia Rules of Court, rule 8.1115(a), prohibits courts and parties from citing or relying on opinions\nnot certified for publication or ordered published, except as specified by rule 8.1115(b). This opinion\nhas not been certified for publication or ordered published for purposes of rule 8.1115.\n\n\n\n\n             COURT OF APPEAL, FOURTH APPELLATE DISTRICT\n\n                                          DIVISION ONE\n\n                                   STATE OF CALIFORNIA\n\nTHE PEOPLE,                                                  D087241\n\n        Plaintiff and Respondent,                            (Super. Ct. No. SCD304600)\n\n        v.\n\nJOHN TURNER WILLIAMS,\n\n        Defendant and Appellant.\n\n        APPEAL from a judgment of the Superior Court of San Diego County,\nTheodore M. Weathers, Judge. Affirmed.\n        Michelle C. Rogers, under appointment by the Court of Appeal, for\nDefendant and Appellant.\n        No appearance for Plaintiff and Respondent.",
                 {
                     "Docket": {
-                        "appeal_from_str": "Superior Court of Los Angeles County",
+                        "appeal_from_str": "Superior Court of San Diego County",
                     },
                 },
             ),
@@ -1579,10 +1571,10 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.calctapp4d2_u": [
             (
-                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
+                "Filed 11/13/26 In re D.H. CA4/2\n                   NOT TO BE PUBLISHED IN OFFICIAL REPORTS\n\n\nCalifornia Rules of Court, rule 8.1115(a), prohibits courts and parties from citing or relying on opinions\nnot certified for publication or ordered published, except as specified by rule 8.1115(b). This opinion\nhas not been certified for publication or or dered published for purposes of rule 8.1115.\n\n\n\n\n          IN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                              FOURTH APPELLATE DISTRICT\n\n                                          DIVISION TWO\n\n\n\nIn re D.H., a Person Coming Under the\nJuvenile Court Law.\n\nTHE PEOPLE,                                                         E088336\n\n        Plaintiff and Respondent,                                   (Super.Ct.No. DLRI2300165)\n\n        v.                                                          OPINION\n\nD.H.,\n\n        Defendant and Appellant.\n\n\n\n        APPEAL from the Superior Court of Riverside County. Mark E. Petersen, Judge.",
                 {
                     "Docket": {
-                        "appeal_from_str": "Superior Court of Los Angeles County",
+                        "appeal_from_str": "Superior Court of Riverside County",
                     },
                 },
             ),
@@ -1599,10 +1591,10 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.calctapp4d3_u": [
             (
-                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
+                "Filed 11/12/26 T.G. v. M.D. CA4/3\n\n\n\n\n                 NOT TO BE PUBLISHED IN OFFICIAL REPORTS\n\nCalifornia Rules of Court, rule 8.1115(a), prohibits courts and parties from citing or relying on opinions not certified for\npublication or ordered published, except as specified by rule 8.1115(b). This opinion has not been certified for publication\nor ordered published for purposes of rule 8.1115.\n\n\n         IN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                                  FOURTH APPELLATE DISTRICT\n\n                                               DIVISION THREE\n\n\n T.G.,\n\n       Plaintiff and Respondent,                                        G065713\n\n           v.                                                           (Super. Ct. No. 24P000142)\n\n M.D.,                                                                  OPINION\n\n       Defendants and Appellants.\n\n\n\n                   Appeal from a judgment of the Superior Court of Orange County,\nMary Kreber-Varipapa, Judge. Affirmed.\n                   T.G., in pro. per., for Defendant and Appellant.\n                   M.D., in pro. per., for Plaintiff and Respondent.",
                 {
                     "Docket": {
-                        "appeal_from_str": "Superior Court of Los Angeles County",
+                        "appeal_from_str": "Superior Court of Orange County",
                     },
                 },
             ),
@@ -1619,10 +1611,10 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.calctapp5d_u": [
             (
-                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
+                "Filed 11/12/26 P. v. Uribe CA5\n\n\n\n\n                NOT TO BE PUBLISHED IN THE OFFICIAL REPORTS\n\nCalifornia Rules of Court, rule 8.1115(a), prohibits courts and parties from citing or relying on opinions\nnot certified for publication or ordered published, except as specified by rule 8.1115(b). This opinion\nhas not been certified for publication or or dered published for purposes of rule 8.1115.\n\n\n\n          IN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n                                 FIFTH APPELLATE DISTRICT\n\nTHE PEOPLE,\n                                                                                F089722\n         Plaintiff and Respondent,\n                                                                    (Super. Ct. No. CF96555873)\n                v.\n\nALFONSO URIBE,                                                                OPINION\n         Defendant and Appellant.\n\n\n\n\n                                            THE COURT*\n         APPEAL from a judgment of the Superior Court of Fresno County. James Kelley,\nJudge.\n         Theresa Osterman Stevenson, under appointment by the Court of Appeal, for\nDefendant and Appellant.\n         Office of the State Attorney General, Sacramento, California, for Plaintiff and\nRespondent.\n                                                -ooOoo-",
                 {
                     "Docket": {
-                        "appeal_from_str": "Superior Court of Los Angeles County",
+                        "appeal_from_str": "Superior Court of Fresno County",
                     },
                 },
             ),
@@ -1639,12 +1631,8 @@ class ScraperExtractFromText(unittest.TestCase):
         ],
         "juriscraper.opinions.united_states.state.calctapp6d_u": [
             (
-                "Filed 7/31/25; Certified for Publication 8/27/25 (order attached)\n\n\n\n\nIN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                       SECOND APPELLATE DISTRICT\n\n                                     DIVISION ONE\n\n\n O.B.,                                                    B339555\n\n          Plaintiff and Appellant,                        (Los Angeles County\n                                                          Super. Ct. No. 21STCV05971)\n          v.\n\n LOS ANGELES UNIFIED\n SCHOOL DISTRICT,\n\n          Defendant and\n          Respondent.\n\n\n      APPEAL from an order of the Superior Court of Los\nAngeles County, John J. Kralik, Judge. Reversed and remanded\nwith directions.\n      Herman Law and Allegra P. Rineer for Plaintiff and\nAppellant.\n      Artiano Shinoff, Paul V. Carelli IV, and Jeffrey P. Wade for\nDefendant and Respondent.",
-                {
-                    "Docket": {
-                        "appeal_from_str": "Superior Court of Los Angeles County",
-                    },
-                },
+                "Filed 11/12/26 Velazquez v. Vander-Bend Manufacturing CA6\n                      NOT TO BE PUBLISHED IN OFFICIAL REPORTS\nCalifornia Rules of Court, rule 8.1115(a), prohibits courts and parties from citing or relying on opinions not certified for\npublication or ordered published, except as specified by rule 8.1115(b). This opinion has not been certified for publication\nor ordered published for purposes of rule 8.1115.\n\n\n                  IN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                                       SIXTH APPELLATE DISTRICT\n\n\n LETICIA VALLEJO VELAZQUEZ,                                              H053736\n                                                                         (Santa Clara County\n             Plaintiff and Respondent,                                   Super. Ct. No. 24CV444394)\n\n             v.\n\n VANDER-BEND MANUFACTURING,\n INC.,\n\n             Defendant and Appellant.\n\n         Leticia Vallejo Velazquez sued Vander-Bend Manufacturing, Inc., alleging wage\nand hour violations.1 When Vander-Bend petitioned to compel arbitration, the trial court\ndeclined, reasoning that any arbitration agreement between the parties was\nunconscionable. Because Vallejo did not show any substantive unconscionability in the\nalleged agreement, we will reverse the order and remand for further proceedings.",
+                {},
             ),
         ],
         "juriscraper.opinions.united_states.state.calctapp_app_div": [
