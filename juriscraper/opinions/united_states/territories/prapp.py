@@ -92,7 +92,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def make_backscrape_iterable(self, kwargs):
+    @override
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Generate backscrape iterable
 
         Generate spanish language year month slug to be used in scraping

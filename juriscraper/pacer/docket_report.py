@@ -6,8 +6,6 @@ from datetime import date, datetime
 from typing import Literal, TypedDict, overload
 
 from dateutil.tz import gettz
-from lxml import etree
-from lxml.etree import _ElementUnicodeResult
 from lxml.html import HtmlElement, fromstring, tostring
 
 from juriscraper.lib.judge_parsers import normalize_judge_string
@@ -171,7 +169,7 @@ class BaseDocketReport:
             return ""
 
     @staticmethod
-    def _xpath_text_0(node, xpath):
+    def _xpath_text_0(node, xpath) -> str:
         """Get the first text element from a node or return ''
 
         This is annoyingly hard with normal xpath.
@@ -181,7 +179,7 @@ class BaseDocketReport:
         except IndexError:
             return ""
 
-    def _get_str_from_tree(self, path):
+    def _get_str_from_tree(self, path) -> str:
         try:
             s = self.tree.xpath(f"{path}/text()")[0].strip()
         except IndexError:
@@ -285,7 +283,7 @@ class BaseDocketReport:
         return self._return_default_dn_components()
 
     def _parse_docket_number_strs(
-        self, potential_docket_numbers: list[_ElementUnicodeResult]
+        self, potential_docket_numbers: list[str]
     ) -> tuple[str | None, DocketNumberComponents]:
         """Parse docket numbers from a list of potential ones. Also parse
         the docket number components.
@@ -598,7 +596,7 @@ class DocketReport(BaseDocketReport, BaseReport):
 
         self._set_metadata_values()
         docket_number, docket_number_components = self._parse_docket_number()
-        data = {
+        data: dict = {
             "court_id": self.court_id,
             "docket_number": docket_number,
             "case_name": self._get_case_name(),
@@ -1084,7 +1082,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             path = "./following-sibling::* | ./following-sibling::text()"
             for _prev, node, nxt in previous_and_next(atty_node.xpath(path)):
                 # noinspection PyProtectedMember
-                if isinstance(node, etree._ElementUnicodeResult):
+                if isinstance(node, str):
                     clean_atty = "%s\n" % " ".join(
                         n.strip() for n in node.split()
                     )
@@ -1179,7 +1177,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         return force_unicode(description)
 
     @staticmethod
-    def _get_de_arr_de_seq_nums_sequence(td):
+    def _get_de_arr_de_seq_nums_sequence(td) -> str | None:
         """Get the docket entry row sequence number."""
         try:
             input = td.xpath(".//input[@name='arr_de_seq_nums']")[0]
@@ -1198,7 +1196,7 @@ class DocketReport(BaseDocketReport, BaseReport):
             return value
 
     @staticmethod
-    def _get_attachment_id_value_from_tr(tr, idx):
+    def _get_attachment_id_value_from_tr(tr, idx) -> str | None:
         """Take a row from the attachment table and return the id value by
         index.
         """
@@ -1290,7 +1288,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         return f"{self.doc_id_prefix}0{pacer_doc_suffix}"
 
     @staticmethod
-    def _get_pacer_seq_no_from_tr(row):
+    def _get_pacer_seq_no_from_tr(row) -> str | None:
         """Take a row of the attachment table, and return the sequence number
         from the name attribute.
         """
@@ -1337,7 +1335,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         return result
 
     @staticmethod
-    def _de_matches_attachment(de, attachment):
+    def _de_matches_attachment(de, attachment) -> bool:
         return (
             de["pacer_doc_id"] == attachment["pacer_doc_id"]
             and de["pacer_seq_no"] == attachment["pacer_seq_no"]
@@ -1472,19 +1470,19 @@ class DocketReport(BaseDocketReport, BaseReport):
 
     async def query(
         self,
-        pacer_case_id,
-        date_range_type="Filed",
-        date_start=None,
-        date_end=None,
-        doc_num_start="",
-        doc_num_end="",
-        show_parties_and_counsel=False,
-        show_terminated_parties=False,
-        show_list_of_member_cases=False,
-        include_pdf_headers=True,
-        show_multiple_docs=False,
-        output_format="html",
-        order_by="date",
+        pacer_case_id: str,
+        date_range_type: Literal["Filed", "Entered"] = "Filed",
+        date_start: date | None = None,
+        date_end: date | None = None,
+        doc_num_start: str | int | None = None,
+        doc_num_end: str | int | None = None,
+        show_parties_and_counsel: bool = False,
+        show_terminated_parties: bool = False,
+        show_list_of_member_cases: bool = False,
+        include_pdf_headers: bool = True,
+        show_multiple_docs: bool = False,
+        output_format: Literal["html", "pdf"] = "html",
+        order_by: Literal["date", "-date", "document_number"] = "date",
     ):
         """Query the docket report and return the results.
 
@@ -1524,11 +1522,11 @@ class DocketReport(BaseDocketReport, BaseReport):
         if output_format not in ["html", "pdf"]:
             raise ValueError("Invalid value for 'output_format' parameter.")
         if order_by == "date":
-            order_by = "oldest date first"
+            order_by_arg = "oldest date first"
         elif order_by == "-date":
-            order_by = "most recent date first"
+            order_by_arg = "most recent date first"
         elif order_by == "document_number":
-            order_by = "document number"
+            order_by_arg = "document number"
         else:
             raise ValueError("Invalid value for 'order_by' parameter.")
 
@@ -1538,9 +1536,9 @@ class DocketReport(BaseDocketReport, BaseReport):
                 "counsel are not also requested."
             )
 
-        query_params = {
+        query_params: dict[str, str] = {
             "all_case_ids": pacer_case_id,
-            "sort1": order_by,
+            "sort1": order_by_arg,
             "date_range_type": date_range_type,
             "output_format": output_format,
             # Any value works in this parameter, but it cannot be blank.
@@ -1682,7 +1680,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         # noinspection PyUnboundLocalVariable
         return desc
 
-    def _get_case_name(self):
+    def _get_case_name(self) -> str:
         if self.is_bankruptcy:
             # Check if there is somebody described as a debtor
             try:

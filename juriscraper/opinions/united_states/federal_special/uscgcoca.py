@@ -139,6 +139,7 @@ class Site(OpinionSiteLinear):
         case["name"] = titlecase(name.strip(" -:"))
         return case
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Checks if backscrape start and end arguments have been passed"""
 

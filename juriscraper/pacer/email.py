@@ -1082,7 +1082,7 @@ class S3NotificationEmail(NotificationEmail):
     SES emails automatically archived in S3.
     """
 
-    def _combine_lines_with_proper_spaces(self, text):
+    def _combine_lines_with_proper_spaces(self, text) -> str:
         """Re-composes S3 line breaks to have proper spacing depending on line ending character
 
         :returns: String with spacing as read normally

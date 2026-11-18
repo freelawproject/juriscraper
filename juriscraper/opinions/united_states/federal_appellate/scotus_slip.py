@@ -95,6 +95,7 @@ class Site(OpinionSiteLinear):
             return citation.strip()
         return ""
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Use the default make_backscrape_iterable to parse input
         and create date objects. Then, use the dates to get the terms

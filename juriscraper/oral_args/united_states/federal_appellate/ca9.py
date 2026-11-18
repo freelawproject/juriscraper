@@ -259,6 +259,7 @@ class Site(OralArgumentSiteLinear):
         self.html = await self._download()
         self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """
         Prepare a single (start, end) tuple, defaulting to __init__’s range
