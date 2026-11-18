@@ -10,11 +10,11 @@ History:
 import datetime
 import re
 from datetime import date
-from typing import Any
 
 from typing_extensions import override
 
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -53,7 +53,8 @@ class Site(OpinionSiteLinear):
                 # The table has a malformed row
                 continue
 
-    def extract_from_text(self, scraped_text: str) -> dict[str, Any]:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Can we extract the case name and clean it up?
 
         This method is a bit ... ugly.  Mostly due to bad PDFs that occur
@@ -86,7 +87,7 @@ class Site(OpinionSiteLinear):
         if not case_name:
             # Do not overwrite the scraped case name with an empty one. #2310
             return {}
-        metadata = {
+        metadata: ExtractedMetaData = {
             "OpinionCluster": {
                 "case_name": case_name,
             },

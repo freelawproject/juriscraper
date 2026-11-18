@@ -71,9 +71,12 @@ Templates for scrapers:
 4. Update CHANGES.md file
 5. Push your changes to your fork.
 6. Submit a pull request.
+
 ### Contributor License Agreement (CLA)
 
-Before we can accept your contribution, you must sign the Contributor License Agreement found at the root of this repository. It protects both your rights and those of the Free Law Project.
+Before we can accept your contribution, you must sign our Contributor License Agreement. It protects both your rights and those of the Free Law Project.
+
+You sign it online; there's nothing to print or email. When you open your first pull request, the CLA Assistant bot will comment with a link. Follow it, sign in with GitHub, and agree to the CLA. The `license/cla` check on your pull request turns green once you've signed, and you only need to sign once.
 
 ---
 

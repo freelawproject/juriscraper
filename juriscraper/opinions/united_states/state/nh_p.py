@@ -197,6 +197,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         await self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """The API exposes no date filter, so we must query a year
         and then paginate the results.

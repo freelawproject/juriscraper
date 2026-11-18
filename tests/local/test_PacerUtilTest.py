@@ -15,6 +15,7 @@ from juriscraper.pacer.utils import (
     make_doc1_url,
     parse_datetime_for_us_timezone,
     reverse_goDLS_function,
+    reverse_sumDocSelected_function,
 )
 
 
@@ -113,6 +114,19 @@ class PacerUtilTest(unittest.TestCase):
         """Can we parse the javascript correctly to get a good dict?"""
         qa_pairs = (
             (
+                "goDLS('/doc1/01712427473','56121','69','','','1','');return(false);",
+                {
+                    "form_post_url": "/doc1/01712427473",
+                    "caseid": "56121",
+                    "de_seq_num": "69",
+                    "got_receipt": "",
+                    "pdf_header": "",
+                    "pdf_toggle_possible": "1",
+                    "magic_num": "",
+                    "hdr": None,
+                },
+            ),
+            (
                 "goDLS('/doc1/01712427473','56121','69','','','1','','');return(false);",
                 {
                     "form_post_url": "/doc1/01712427473",
@@ -128,6 +142,21 @@ class PacerUtilTest(unittest.TestCase):
         )
         for q, a in qa_pairs:
             self.assertEqual(reverse_goDLS_function(q), a)
+
+    def test_reverse_sumDocSelected_function(self):
+        """Can we parse the javascript correctly to get a good dict?"""
+        qa_pairs = (
+            (
+                "sumDocSelected(this,1,13481, 7548050)",
+                {
+                    "page_count": 1,
+                    "file_size_bytes": 13481,
+                    "doc_id": 7548050,
+                },
+            ),
+        )
+        for q, a in qa_pairs:
+            self.assertEqual(reverse_sumDocSelected_function(q), a)
 
     def test_make_doc1_url(self):
         """Can we make good doc1 urls?"""

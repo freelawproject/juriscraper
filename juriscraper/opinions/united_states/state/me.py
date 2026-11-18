@@ -25,6 +25,7 @@ from typing_extensions import override
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.judge_parsers import normalize_judge_names
 from juriscraper.lib.string_utils import convert_date_string, titlecase
+from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
 
 
@@ -64,7 +65,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def extract_from_text(self, scraped_text: str) -> dict:
+    @override
+    def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
         """Extract out lots of data from Maine
 
         :param scraped_text: The first page of content
@@ -81,7 +83,7 @@ class Site(OpinionSiteLinear):
 
         # Leave out any value that is not found, so that an empty value
         # does not overwrite good data downstream. #2310
-        opinion = {}
+        opinion: dict[str, str | bool] = {}
         author = r"(?P<author_str>.*)\n+(\s+)?\[¶1\]"
         m = re.search(author, scraped_text, re.MULTILINE)
         if m:
@@ -93,16 +95,14 @@ class Site(OpinionSiteLinear):
                 opinion["per_curiam"] = False
                 opinion["author_str"] = author_str
 
-        docket = {}
+        docket: dict[str, str] = {}
         date_argued = extracted.get("On Briefs") or extracted.get("Argued")
-        if date_argued:
-            docket["date_argued"] = convert_date_string(date_argued).strftime(
-                "%Y-%m-%d"
-            )
+        if date_argued and (parsed := convert_date_string(date_argued)):
+            docket["date_argued"] = parsed.strftime("%Y-%m-%d")
         if docket_number := extracted.get("Docket"):
             docket["docket_number"] = docket_number
 
-        metadata = {}
+        metadata: ExtractedMetaData = {}
         if opinion:
             metadata["Opinion"] = opinion
         if judges := extracted.get("Panel"):
@@ -118,7 +118,8 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs: dict):
+    @override
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
         if kwargs.get("backscrape_start"):
             start = int(kwargs["backscrape_start"])
         else:
