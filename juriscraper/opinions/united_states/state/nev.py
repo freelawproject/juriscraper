@@ -265,6 +265,7 @@ class Site(OpinionSiteLinear):
             )
         return ""
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Collapse the default per-interval windows into a single range
 

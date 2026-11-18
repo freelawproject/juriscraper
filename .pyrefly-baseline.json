@@ -261,6 +261,20 @@
       "severity": "error"
     },
     {
+      "column": 22,
+      "path": "juriscraper/opinions/united_states/administrative_agency/bva.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/opinions/united_states/administrative_agency/bva.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
       "column": 23,
       "path": "juriscraper/opinions/united_states/administrative_agency/mspb_p.py",
       "name": "missing-attribute",
@@ -944,6 +958,13 @@
       "path": "juriscraper/opinions/united_states/state/lactapp_3.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 13,
+      "path": "juriscraper/opinions/united_states/state/lactapp_3.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `date_list` with type `list[tuple[Unknown]] | list[Unknown]` in function `juriscraper.lib.date_utils.unique_year_month`",
       "severity": "error"
     },
     {
@@ -1724,6 +1745,13 @@
       "severity": "error"
     },
     {
+      "column": 21,
+      "path": "juriscraper/opinions/united_states/territories/guam.py",
+      "name": "not-iterable",
+      "concise_description": "Type `None` is not iterable",
+      "severity": "error"
+    },
+    {
       "column": 18,
       "path": "juriscraper/opinions/united_states/territories/nmariana.py",
       "name": "missing-attribute",
@@ -1745,10 +1773,24 @@
       "severity": "error"
     },
     {
+      "column": 58,
+      "path": "juriscraper/opinions/united_states/territories/prapp.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `date` is not assignable to parameter `datetime_obj` with type `datetime` in function `Site.format_spanish_month_year`",
+      "severity": "error"
+    },
+    {
       "column": 21,
       "path": "juriscraper/opinions/united_states/territories/prsupreme.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 38,
+      "path": "juriscraper/opinions/united_states/territories/prsupreme.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `date_string` with type `str` in function `datetime.datetime.strptime`",
       "severity": "error"
     },
     {
@@ -2263,10 +2305,17 @@
       "severity": "error"
     },
     {
+      "column": 32,
+      "path": "juriscraper/pacer/claims_activity.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, str | None]`",
+      "severity": "error"
+    },
+    {
       "column": 16,
       "path": "juriscraper/pacer/claims_activity.py",
       "name": "bad-return",
-      "concise_description": "Returned type `dict[str, str | Any | None]` is not assignable to declared return type `dict[str, list[dict[str, str]] | str]`",
+      "concise_description": "Returned type `dict[str, str | None]` is not assignable to declared return type `dict[str, list[dict[str, str]] | str]`",
       "severity": "error"
     },
     {

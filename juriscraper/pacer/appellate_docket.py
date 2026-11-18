@@ -818,7 +818,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         case_name = self.tree.xpath(path)[0].text_content()
         return clean_string(harmonize(case_name))
 
-    def _get_panel(self):
+    def _get_panel(self) -> list[str]:
         """Get the panel information"""
         path = '//*[re:match(text(), "Panel Assignment")]/ancestor::td[1]'
         try:
@@ -833,7 +833,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         else:
             return panel_string.split()
 
-    def _get_case_type_info(self):
+    def _get_case_type_info(self) -> str:
         """Get the case type information and return it as a csv string"""
         path = (
             '//*[re:match(text(), "Case Type Information")]/'

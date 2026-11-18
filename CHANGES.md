@@ -23,6 +23,17 @@ Features:
   freelawproject/courtlistener#6680
 
 Changes:
+-
+
+Fixes:
+-
+
+## 4.0.4 - 2026-11-18
+
+Features:
+-
+
+Changes:
 - `SCOTUSDocketReport*` interfaces are stripped down. The methods `normalize_date()` and `clean_lower_court_cases()` have been removed to a private helper module.
 - `SCOTUSDocketReport*` hierarchy is flattened. Each implementation is now an immediate subclass of `SCOTUSDocketReportBase`. What was `SCOTUSDocketReport` is renamed to `SCOTUSDocketReportJSON`; an alias from `SCOTUSDocketReport` to `SCOTUSDocketReportJSON` is established for compatibility.
 - `DocketReport.query()` and `AppellateDocketReport.query()` parameters are annotated.
@@ -51,6 +62,12 @@ Features:
   `9 M S P B  448` to `9 M.S.P.B. 448`. #2386
 
 Changes:
+- Rename the `calctapp_*` district scrapers to the CourtListener court ids
+  of their districts and divisions, e.g. `calctapp_1st` to `calctapp1d` and
+  `calctapp_4th_div1` to `calctapp4d1` #2375
+- Replace `calctapp_u` with one unpublished scraper per district and
+  division, e.g. `calctapp1d_u` and `calctapp4d1_u`, so unpublished
+  opinions go to the same court as published ones #2375
 - Add a GitHub issue template for new scraper requests #2392
 - Structure return type of `NotificationEmail.data()` and `S3NotificationEmail.data()`.
 - The return type of `OpinionSite.extract_from_text()` is given a rudimentary structure, `ExtractedMetaData`.

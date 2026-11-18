@@ -169,7 +169,7 @@ class FreeOpinionReport(BaseReport):
         )
 
     @property
-    def reported_opinion_count(self):
+    def reported_opinion_count(self) -> int:
         """Total opinions PACER reported across all queried pages for this scrape.
 
         This is PACER's own count, independent of how many rows we successfully
@@ -355,7 +355,7 @@ class FreeOpinionRow(BaseDocketReport):
             href = self.element.xpath("./td[2]//@href")[0]
         return get_pacer_case_id_from_nonce_url(href), None
 
-    def get_docket_number(self):
+    def get_docket_number(self) -> str:
         try:
             if self._sort_order == "case_number":
                 cell = self.element.xpath("./td[1]//a")[0]
@@ -421,13 +421,13 @@ class FreeOpinionRow(BaseDocketReport):
         doc1_url = self.element.xpath("./td[3]//@href")[0]
         return get_pacer_doc_id_from_doc1_url(doc1_url)
 
-    def get_document_number(self):
+    def get_document_number(self) -> str:
         return self.element.xpath("./td[3]//text()")[0]
 
-    def get_description(self):
+    def get_description(self) -> str:
         return self.element.xpath("./td[4]")[0].text_content()
 
-    def get_nos(self):
+    def get_nos(self) -> str:
         if self._column_count == 4:
             return ""
         try:
@@ -437,7 +437,7 @@ class FreeOpinionRow(BaseDocketReport):
         except IndexError:
             return ""
 
-    def get_cause(self):
+    def get_cause(self) -> str:
         if self._column_count == 4:
             return ""
         try:
