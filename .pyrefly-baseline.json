@@ -2991,13 +2991,6 @@
       "severity": "error"
     },
     {
-      "column": 21,
-      "path": "juriscraper/pacer/hidden_api.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `json`",
-      "severity": "error"
-    },
-    {
       "column": 9,
       "path": "juriscraper/pacer/internet_archive.py",
       "name": "missing-attribute",

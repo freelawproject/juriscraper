@@ -44,7 +44,9 @@ Changes:
 Fixes:
 - `AcmsApiClient` raises `PacerLoginException` when an API call is made
   before a token or account data is stored, instead of sending an
-  anonymous request or crashing with `KeyError`.
+  anonymous request or crashing with `KeyError`. `AcmsCaseSearch` now
+  sends its request through the new `AcmsApiClient.search_cases()`, so it
+  raises the same exception instead of an `HTTPStatusError`.
   freelawproject/courtlistener#6680
 
 ## 4.0.3 - 2026-11-13
