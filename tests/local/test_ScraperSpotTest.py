@@ -4,12 +4,15 @@ import re
 import unittest
 from datetime import date
 
+from lxml import html as lxml_html
+
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.exceptions import ParsingException
 from juriscraper.opinions.united_states.administrative_agency import (
     mspb_p,
     mspb_u,
 )
+from juriscraper.opinions.united_states.attorney_general import kanag
 from juriscraper.opinions.united_states.state import nev, nevapp
 
 
@@ -302,6 +305,20 @@ class ScraperSpotTest(unittest.TestCase):
             with self.subTest(description=description):
                 metadata = site.parse_description(description, "2026-06-18")
                 self.assertEqual(metadata["judge"], judges)
+
+    def test_kanag_skips_links_from_other_years(self):
+        """Links whose year differs from the page's year are broken"""
+        site = kanag.Site()
+        html = lxml_html.fromstring(
+            '<html><body><p id="listofopinions">'
+            '<a href="2026-011.pdf">011</a> | <a href="2026-012a.pdf">012a</a>'
+            ' | <a href="2025-013.pdf">013</a></p>'
+            '<p><a href="../2025/">2025</a></p></body></html>'
+        )
+        site._parse_year_page(html, 2026)
+        self.assertEqual(
+            [case["docket"] for case in site.cases], ["2026-011", "2026-012a"]
+        )
 
     def test_nev_backscrape_past_last_page(self):
         """A backscrape stops on the empty page after the last one"""
