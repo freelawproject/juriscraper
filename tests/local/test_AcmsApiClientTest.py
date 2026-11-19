@@ -1,4 +1,3 @@
-import base64
 import json
 import unittest
 from unittest import mock
@@ -55,6 +54,12 @@ class AcmsApiClientIndexContentTest(unittest.IsolatedAsyncioTestCase):
         "caseId": "481e75a0-8940-46d4-bb54-1135c0b4b34b",
         "caseNumber": "26-7519",
     }
+    USER = {
+        "isAuthenticated": True,
+        "csoId": "1234",
+        "loginId": "user",
+        "contactType": "PACER Only",
+    }
 
     def setUp(self):
         self.session = PacerSession(username="user", password="pass")
@@ -64,12 +69,6 @@ class AcmsApiClientIndexContentTest(unittest.IsolatedAsyncioTestCase):
         self.get = mock.patch.object(httpx.AsyncClient, "get").start()
         self.addCleanup(mock.patch.stopall)
         self.client = AcmsApiClient(self.session, "ca9")
-
-    @staticmethod
-    def _token(claims: dict) -> str:
-        """Build a JWT-shaped string carrying `claims`; it is never verified."""
-        payload = base64.urlsafe_b64encode(json.dumps(claims).encode())
-        return f"header.{payload.decode().rstrip('=')}.signature"
 
     @staticmethod
     def _page(view_model: dict) -> str:
@@ -93,12 +92,12 @@ class AcmsApiClientIndexContentTest(unittest.IsolatedAsyncioTestCase):
 
     async def test_returns_view_model_and_stores_token(self):
         """The view model comes back and the token plus user data are kept."""
-        token = self._token({"showDocClaims": {"CSOId": 1234}})
         self._respond(
             self._page(
                 {
                     "caseDetails": [self.CASE],
-                    "authTokenResult": {"token": token},
+                    "showDocUser": self.USER,
+                    "authTokenResult": {"token": "token"},
                 }
             )
         )
@@ -106,7 +105,7 @@ class AcmsApiClientIndexContentTest(unittest.IsolatedAsyncioTestCase):
         view_model = await self.client.get_index_content("26-7519")
 
         self.assertEqual(view_model["caseDetails"], [self.CASE])
-        self.assertEqual(self.session.acms_tokens["ca9"], {"Token": token})
+        self.assertEqual(self.session.acms_tokens["ca9"], {"Token": "token"})
         self.assertEqual(
             self.session.acms_user_data,
             {"CsoId": "1234", "ContactType": "PACER Only"},
@@ -117,56 +116,41 @@ class AcmsApiClientIndexContentTest(unittest.IsolatedAsyncioTestCase):
             self.get.call_args[1]["params"], {"caseIdentifier": "26-7519"}
         )
 
-    async def test_token_without_account_claim_leaves_user_data_empty(self):
-        """A token with no account id is kept, but no user data is derived."""
-        token = self._token({"exp": 1})
+    async def test_page_without_account_data_keeps_token_only(self):
+        """A page with a token but no user object stores the token alone."""
         self._respond(
             self._page(
                 {
                     "caseDetails": [self.CASE],
-                    "authTokenResult": {"token": token},
+                    "authTokenResult": {"token": "token"},
                 }
             )
         )
 
-        await self.client.get_index_content("26-7519")
+        with self.assertLogs("juriscraper", level="WARNING") as logs:
+            await self.client.get_index_content("26-7519")
 
-        self.assertEqual(self.session.acms_tokens["ca9"], {"Token": token})
+        self.assertEqual(self.session.acms_tokens["ca9"], {"Token": "token"})
         self.assertEqual(self.session.acms_user_data, {})
+        self.assertTrue(any("no account data" in m for m in logs.output))
 
-    async def test_string_encoded_claims_still_yield_user_data(self):
-        """A showDocClaims claim serialized as a JSON string is decoded."""
-        token = self._token(
-            {"showDocClaims": json.dumps({"CSOId": 1234, "Role": "user"})}
-        )
-        self._respond(
-            self._page(
-                {
-                    "caseDetails": [self.CASE],
-                    "authTokenResult": {"token": token},
-                }
-            )
-        )
-
-        await self.client.get_index_content("26-7519")
-
-        self.assertEqual(self.session.acms_tokens["ca9"], {"Token": token})
-        self.assertEqual(
-            self.session.acms_user_data,
-            {"CsoId": "1234", "ContactType": "PACER Only"},
-        )
-
-    async def test_unusable_claims_keep_token_without_user_data(self):
-        """A claim that is not an object is ignored, and the token is kept."""
-        for claims in (["CSOId", 1234], "not json", 1234):
-            with self.subTest(show_doc_claims=claims):
+    async def test_incomplete_account_data_keeps_token_only(self):
+        """Both the account id and the contact type are needed."""
+        users = {
+            "not an object": "user",
+            "no account id": {"contactType": "PACER Only"},
+            "empty account id": {"csoId": "", "contactType": "PACER Only"},
+            "no contact type": {"csoId": "1234"},
+        }
+        for label, user in users.items():
+            with self.subTest(user=label):
                 self.session.acms_user_data = {}
-                token = self._token({"showDocClaims": claims})
                 self._respond(
                     self._page(
                         {
                             "caseDetails": [self.CASE],
-                            "authTokenResult": {"token": token},
+                            "showDocUser": user,
+                            "authTokenResult": {"token": "token"},
                         }
                     )
                 )
@@ -174,7 +158,7 @@ class AcmsApiClientIndexContentTest(unittest.IsolatedAsyncioTestCase):
                 await self.client.get_index_content("26-7519")
 
                 self.assertEqual(
-                    self.session.acms_tokens["ca9"], {"Token": token}
+                    self.session.acms_tokens["ca9"], {"Token": "token"}
                 )
                 self.assertEqual(self.session.acms_user_data, {})
 

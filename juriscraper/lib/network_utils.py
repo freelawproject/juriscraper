@@ -1,5 +1,4 @@
 import asyncio
-import base64
 import json
 import random
 from datetime import datetime
@@ -18,11 +17,6 @@ logger = make_default_logger()
 # ACMS pages embed their data as a JavaScript assignment inside a <script>
 # tag; the object that follows this marker is plain JSON.
 ACMS_VIEW_MODEL_MARKER = "window.showDocViewModel = "
-
-# ACMS stopped reporting the account's contact type when it moved to HTMX.
-# Its API still wants one in request bodies, and this value is accepted for
-# regular PACER accounts. See freelawproject/courtlistener#6680.
-ACMS_DEFAULT_CONTACT_TYPE = "PACER Only"
 
 
 async def add_delay(delay: int = 0, deviation: int = 0) -> None:
@@ -104,41 +98,24 @@ class AcmsApiClient:
         return any("/Auth/Login" in url or "login.jsf" in url for url in urls)
 
     @staticmethod
-    def _user_data_from_token(token: str) -> dict[str, str]:
-        """Derive the ``CsoId`` and ``ContactType`` body fields the API
-        expects from its bearer token.
+    def _user_data_from_view_model(
+        view_model: dict[str, Any],
+    ) -> dict[str, str]:
+        """Read the ``CsoId`` and ``ContactType`` body fields the API expects
+        from the page's ``showDocUser`` object.
 
-        The token is a JWT whose payload lists the PACER account id under
-        ``showDocClaims.CSOId``. Only that claim is read; the court validates
-        the token itself on every API call.
-
-        :param token: The bearer token from ``authTokenResult.token``.
-        :return: The user data, or an empty dict when the token is not a JWT
-            or carries no usable ``showDocClaims.CSOId`` claim.
+        :param view_model: The decoded ``showDocViewModel`` object.
+        :return: The user data, or an empty dict when the page does not
+            report both the account id and the contact type.
         """
-        try:
-            payload = token.split(".")[1]
-            payload += "=" * (-len(payload) % 4)
-            claims = json.loads(base64.urlsafe_b64decode(payload))
-        except (IndexError, ValueError):
+        user = view_model.get("showDocUser")
+        if not isinstance(user, dict):
             return {}
-        if not isinstance(claims, dict):
+        cso_id = user.get("csoId")
+        contact_type = user.get("contactType")
+        if not cso_id or not contact_type:
             return {}
-        show_doc_claims = claims.get("showDocClaims")
-        if isinstance(show_doc_claims, str):
-            try:
-                show_doc_claims = json.loads(show_doc_claims)
-            except ValueError:
-                return {}
-        if not isinstance(show_doc_claims, dict):
-            return {}
-        cso_id = show_doc_claims.get("CSOId")
-        if not cso_id:
-            return {}
-        return {
-            "CsoId": str(cso_id),
-            "ContactType": ACMS_DEFAULT_CONTACT_TYPE,
-        }
+        return {"CsoId": str(cso_id), "ContactType": str(contact_type)}
 
     async def get_index_content(self, case_identifier: str) -> dict[str, Any]:
         """Load a case's IndexContent page and keep the API token it carries.
@@ -146,9 +123,10 @@ class AcmsApiClient:
         ``/Home/IndexContent`` is the cookie-authenticated HTMX fragment ACMS
         renders for a case. Besides the case data (``caseDetails``), it embeds
         the bearer token the ``showdocservices`` API requires, which ACMS no
-        longer returns during login. Call this before any other method of
-        this client: the token, and the user data derived from it, are stored
-        on the session through ``store_acms_token``.
+        longer returns during login, and the account data (``showDocUser``)
+        the API wants in request bodies. Call this before any other method
+        of this client: both are stored on the session through
+        ``store_acms_token``.
 
         Like the API calls, this request is made with the user's PACER
         account and may incur charges.
@@ -183,10 +161,14 @@ class AcmsApiClient:
                 "API token."
             )
             return view_model
+        user_data = self._user_data_from_view_model(view_model)
+        if not user_data:
+            logger.warning(
+                f"ACMS IndexContent for {self.court_id} carried no account "
+                "data; API calls that need it will fail."
+            )
         self.session.store_acms_token(
-            self.court_id,
-            {"Token": token},
-            self._user_data_from_token(token),
+            self.court_id, {"Token": token}, user_data
         )
         return view_model
 
@@ -362,15 +344,15 @@ class AcmsApiClient:
     def _user_data(self) -> dict[str, str]:
         """Return the account fields the API expects in request bodies.
 
-        :raises PacerLoginException: if the stored token carried no account
-            id, so no request body can be built.
+        :raises PacerLoginException: if the IndexContent page reported no
+            account data, so no request body can be built.
         """
         cso_id = self.session.acms_user_data.get("CsoId")
         contact_type = self.session.acms_user_data.get("ContactType")
         if not cso_id or not contact_type:
             raise PacerLoginException(
                 f"No ACMS account data for {self.court_id}; the IndexContent "
-                "token carried no account id."
+                "page reported none."
             )
         return {"CsoId": str(cso_id), "ContactType": str(contact_type)}
 
