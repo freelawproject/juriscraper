@@ -265,7 +265,8 @@ class Site(ClusterSite):
             op_type = OpinionType.MAJORITY
         return str(op_type.value)
 
-    def make_backscrape_iterable(self, kwargs) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Checks if backscrape start and end arguments have been passed
 
         Texas opinions page returns all opinions for a year (pagination is not needed),

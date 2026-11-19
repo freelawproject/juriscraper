@@ -146,7 +146,8 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Make back scrape iterable
 
         :param kwargs: the back scraping params

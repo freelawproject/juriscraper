@@ -157,7 +157,8 @@ class Site(OpinionSiteLinear):
         ]
         return lines[1] if len(lines) > 1 else lines[0]
 
-    def make_backscrape_iterable(self, kwargs) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Build the year range iterable used for back-scraping
 
         :param kwargs: Keyword arguments optionally containing backscrape_start
