@@ -253,6 +253,7 @@ class AcmsApiClientAuthGuardTest(unittest.IsolatedAsyncioTestCase):
         """Every API method fails before any request when no token is stored."""
         calls = {
             "get_case_details": self.client.get_case_details("case-id"),
+            "search_cases": self.client.search_cases("26-7519"),
             "get_docket_entries": self.client.get_docket_entries("case-id"),
             "get_attachments": self.client.get_attachments(
                 "entry-id", False, False
@@ -306,3 +307,39 @@ class AcmsApiClientAuthGuardTest(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(kwargs["headers"]["Authorization"], "Bearer token")
         self.assertEqual(docket_info["docketEntries"], [])
         self.assertFalse(docket_info["isCaseSealed"])
+
+    async def test_case_search_sends_stored_auth(self):
+        """The case search reuses the stored token and asks for exact matches."""
+        self.session.store_acms_token("ca9", {"Token": "token"})
+
+        async def get(url, **kwargs):
+            return httpx.Response(
+                200,
+                json=[{"pcx_caseid": "case-id", "pcx_casenumber": "26-7519"}],
+                request=httpx.Request("GET", url),
+            )
+
+        self.get.side_effect = get
+
+        cases = await self.client.search_cases("26-7519")
+
+        self.get.assert_awaited_once()
+        url, kwargs = self.get.call_args[0][0], self.get.call_args[1]
+        self.assertTrue(url.endswith("/api/CaseSearch/26-7519"))
+        self.assertEqual(kwargs["params"], {"exactMatch": True})
+        self.assertEqual(kwargs["headers"]["Authorization"], "Bearer token")
+        self.assertEqual(cases[0]["pcx_caseid"], "case-id")
+
+    async def test_case_search_rejects_non_list_answer(self):
+        """An answer that is not a list of cases is a parsing failure."""
+        self.session.store_acms_token("ca9", {"Token": "token"})
+
+        async def get(url, **kwargs):
+            return httpx.Response(
+                200, json={"error": "nope"}, request=httpx.Request("GET", url)
+            )
+
+        self.get.side_effect = get
+
+        with self.assertRaises(ParsingException):
+            await self.client.search_cases("26-7519")

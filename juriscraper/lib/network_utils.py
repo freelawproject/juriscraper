@@ -76,6 +76,7 @@ class AcmsApiClient:
     CASE_DETAILS_ENDPOINT = "CaseDetailsByCaseId/{case_id}"
     DOCKET_ENTRIES_ENDPOINT = "DocketEntriesByCaseId/{case_id}"
     ATTACHMENTS_ENDPOINT = "DocketEntryDocumentsByDocketId/{entry_id}"
+    CASE_SEARCH_ENDPOINT = "CaseSearch/{docket_number}"
     MERGE_PDF_ENDPOINT = "MergePDFFiles/"
     GET_PDF_ENDPOINT = "GetMergedFile/"
     # The cookie-authenticated case page on the showdoc host, not the API.
@@ -372,6 +373,32 @@ class AcmsApiClient:
                 "token carried no account id."
             )
         return {"CsoId": str(cso_id), "ContactType": str(contact_type)}
+
+    async def search_cases(self, docket_number: str) -> list[dict[str, Any]]:
+        """Look cases up by docket number through the CaseSearch endpoint.
+
+        This reuses the stored token rather than fetching one, so it stays
+        free of the charge an IndexContent page may incur.
+
+        :param docket_number: The appellate docket number, e.g. ``26-7519``.
+        :return: The matching cases as the API returns them, each carrying
+            ``pcx_caseid``, ``pcx_casenumber`` and ``pcx_name``.
+        :raises PacerLoginException: if no token is stored for the court.
+        :raises ParsingException: if the API answers with something other
+            than a list of cases.
+        """
+        self._require_token()
+        path = self.CASE_SEARCH_ENDPOINT.format(docket_number=docket_number)
+        url = f"{self.base_url}{path}"
+        logger.info(f"Querying the CaseSearch endpoint with URL: {url}")
+        response = await self.session.get(url, params={"exactMatch": True})
+        response.raise_for_status()
+        cases = response.json()
+        if not isinstance(cases, list):
+            raise ParsingException(
+                "Unexpected CaseSearch response; expected a list of cases."
+            )
+        return cases
 
     async def get_case_details(self, case_id: str) -> dict[str, Any]:
         """
