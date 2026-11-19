@@ -23,6 +23,7 @@ Features:
   freelawproject/courtlistener#6680
 
 Changes:
+- CI: Publish to PyPI with trusted publishing instead of an API token.
 -
 
 Fixes:
