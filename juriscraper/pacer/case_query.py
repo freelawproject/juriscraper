@@ -313,8 +313,7 @@ class CaseQuery(BaseDocketReport, BaseReport):
         if self.is_valid is False:
             return {}
 
-        data = self.metadata.copy()
-        return data
+        return self.metadata.copy()
 
 
 def _main():

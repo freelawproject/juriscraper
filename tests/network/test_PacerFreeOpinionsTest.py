@@ -88,9 +88,8 @@ class PacerFreeOpinionsTest(unittest.IsolatedAsyncioTestCase):
                         )  # Give the server a moment of rest.
                         retry_count += 1
                         continue
-                    else:
-                        print(f"{e}: Repeated errors at this court.")
-                        raise e
+                    print(f"{e}: Repeated errors at this court.")
+                    raise e
                 if not report.responses:
                     break  # Not a supported court.
                 some_date += timedelta(days=1)

@@ -135,8 +135,7 @@ class AppellateAttachmentPage(BaseReport):
         :param row: Table row as an lxml element
         :return: Attachment number for row
         """
-        number = int(row.xpath(".//td/text()")[0].strip())
-        return number
+        return int(row.xpath(".//td/text()")[0].strip())
 
     def _get_description_from_tr(self, row: html.HtmlElement) -> str:
         """Get the description from the row
@@ -211,8 +210,7 @@ class AppellateAttachmentPage(BaseReport):
         m = re.search(r"[?&]caseid=(\d+)", script_html, flags=re.I)
         if m:
             return m.group(1)
-        else:
-            return None
+        return None
 
     def _get_pacer_seq_no(self) -> str | None:
         """Get pacer sequence number.
@@ -224,8 +222,7 @@ class AppellateAttachmentPage(BaseReport):
         m = re.search(r"[?&]d=(\d+)&outputForm", script_html, flags=re.I)
         if m:
             return m.group(1)
-        else:
-            return None
+        return None
 
 
 def main():

@@ -640,13 +640,12 @@ class PacerSession(httpx.AsyncClient):
             )
             await self.login()
             return True
-        else:
-            if self._do_additional_request(r):
-                return True
-            raise PacerLoginException(
-                "Invalid/expired PACER session and do not have credentials "
-                "for re-login."
-            )
+        if self._do_additional_request(r):
+            return True
+        raise PacerLoginException(
+            "Invalid/expired PACER session and do not have credentials "
+            "for re-login."
+        )
 
     def _get_docket_sheet_url(self, court_id: str) -> str:
         """
@@ -658,12 +657,11 @@ class PacerSession(httpx.AsyncClient):
         """
         if court_id == "ca9":
             return "https://ca9-showdoc.azurewebsites.us/"
-        elif court_id == "ca2":
+        if court_id == "ca2":
             return "https://ca2-showdoc.azurewebsites.us/"
-        else:
-            raise NotImplementedError(
-                f"Docket sheet URL not implemented for court_id: {court_id}"
-            )
+        raise NotImplementedError(
+            f"Docket sheet URL not implemented for court_id: {court_id}"
+        )
 
     async def _get_saml_auth_request_parameters(
         self, court_id: str

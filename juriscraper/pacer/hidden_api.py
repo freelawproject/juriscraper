@@ -94,7 +94,7 @@ class PossibleCaseNumberApi(BaseReport):
             raise ParsingException(
                 "Unknown XML content in PossibleCaseNumberApi result."
             )
-        elif case_count == 1:
+        if case_count == 1:
             # Only one node, all set to go.
             pass
         elif case_count > 1:
@@ -183,8 +183,7 @@ class PossibleCaseNumberApi(BaseReport):
                 # and a cleaner title.
                 "title": force_unicode(node.xpath("./@title")[0]),
             }
-        else:
-            raise ParsingException("Unable to identify case.")
+        raise ParsingException("Unable to identify case.")
 
 
 class ShowCaseDocApi(BaseReport):
@@ -244,10 +243,9 @@ class ShowCaseDocApi(BaseReport):
         url = str(self.response.url)
         if "doc1" in url:
             return get_pacer_doc_id_from_doc1_url(url)
-        else:
-            raise ParsingException(
-                f"Unable to get doc1-style URL. Instead got {url}"
-            )
+        raise ParsingException(
+            f"Unable to get doc1-style URL. Instead got {url}"
+        )
 
 
 class AcmsCaseSearch(BaseReport):

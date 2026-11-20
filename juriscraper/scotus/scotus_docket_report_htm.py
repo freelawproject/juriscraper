@@ -262,8 +262,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportBase):
             ]
         name = harmonize(clean_string(" ".join(p for p in title_parts if p)))
         # Strip trailing dangling "v." when there is no respondent name.
-        name = re.sub(r",?\s*v\.\s*$", "", name).strip()
-        return name
+        return re.sub(r",?\s*v\.\s*$", "", name).strip()
 
     def _build_docket_entry(
         self,

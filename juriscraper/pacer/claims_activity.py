@@ -46,8 +46,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         if self.is_valid is False:
             return {}
 
-        data = self.metadata.copy()
-        return data
+        return self.metadata.copy()
 
     @property
     def metadata(self):
@@ -330,8 +329,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         match = re.search(r"claim_id=(\d+)", url)
         if match:
             return match.group(1)
-        else:
-            return None
+        return None
 
     @staticmethod
     def get_claim_number_from_claim_url(url: str) -> str | None:
@@ -339,8 +337,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         match = re.search(r"claim_num=(\d+-\d+)", url)
         if match:
             return match.group(1)
-        else:
-            return None
+        return None
 
     @staticmethod
     def get_claim_doc_seq_from_claim_url(url: str) -> str | None:
@@ -348,8 +345,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         match = re.search(r"claim_doc_seq=(\d+)", url)
         if match:
             return match.group(1)
-        else:
-            return None
+        return None
 
     @staticmethod
     def _get_label_value_pair_from_string(

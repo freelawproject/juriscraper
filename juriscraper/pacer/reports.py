@@ -66,8 +66,7 @@ class BaseReport:
     def url(self):
         if self.court_id == "psc":
             return f"https://dcecf.psc.uscourts.gov/{self.PATH}"
-        else:
-            return f"https://ecf.{self.court_id}.uscourts.gov/{self.PATH}"
+        return f"https://ecf.{self.court_id}.uscourts.gov/{self.PATH}"
 
     async def query(self, *args, **kwargs):
         """Query PACER and set self.response with the response."""

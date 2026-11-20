@@ -41,7 +41,7 @@ class Site(cit.Site):
             s = html.tostring(e, method="text", encoding="unicode")
             if "confidential" in s:
                 continue
-            elif "Errata" in s:
+            if "Errata" in s:
                 index = s.find("Errata")
             elif "Public version" in s:
                 index = s.find("Public version")

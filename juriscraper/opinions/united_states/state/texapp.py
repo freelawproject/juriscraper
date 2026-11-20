@@ -180,7 +180,7 @@ class Site(ClusterSite):
         # The source pages list each opinion in its own row, so skip
         # cases that were already parsed
         if case_url in self.seen_case_urls:
-            return None
+            return
         self.seen_case_urls.add(case_url)
 
         case_dict = await self.parse_case_page(case_url, op_date)
@@ -207,7 +207,7 @@ class Site(ClusterSite):
                 case_dict["docket"][:2],
                 self.court_number,
             )
-            return None
+            return
 
         if not case_dict["sub_opinions"]:
             # Some cases have opinion documents mislabeled on the
@@ -219,7 +219,7 @@ class Site(ClusterSite):
                 "Skipping docket %s - no opinion documents found",
                 case_dict["docket"],
             )
-            return None
+            return
 
         self.cases.append(case_dict)
 
@@ -350,10 +350,9 @@ class Site(ClusterSite):
             # add the state of texas in some cases but not others.
             if defendant:
                 return titlecase(f"{plaintiff} v. {defendant}")
-            elif "WR-" not in link:
+            if "WR-" not in link:
                 return titlecase(f"{plaintiff} v. The State of Texas")
-            else:
-                return titlecase(f"{plaintiff}")
+            return titlecase(f"{plaintiff}")
         except IndexError:
             logger.warning(f"No title or defendant found for {self.url}")
             return ""

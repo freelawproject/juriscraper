@@ -59,6 +59,7 @@ class Site(OpinionSiteLinear):
                     fix_links_in_lxml_tree, base_href=self.request["url"]
                 )
             return html_tree
+        return None
 
     @override
     def _process_html(self) -> None:

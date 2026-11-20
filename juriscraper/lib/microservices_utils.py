@@ -87,6 +87,5 @@ async def get_extension(content: bytes) -> str:
             extension_url, files={"file": ("filename", content)}, timeout=30
         )
     extension_response.raise_for_status()
-    extension = extension_response.text
+    return extension_response.text
 
-    return extension

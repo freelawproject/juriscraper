@@ -218,6 +218,7 @@ class DocketHistoryReport(DocketReport):
             m = regex.search(s)
             if m:
                 return convert_date_string(m.group(1))
+        return None
 
     def _get_date_entered(self, cell):
         s = clean_string(cell.text_content())
@@ -226,6 +227,7 @@ class DocketHistoryReport(DocketReport):
             m = regex.search(s)
             if m:
                 return convert_date_string(m.group(1))
+        return None
 
     def _set_metadata_values(self):
         text_nodes = self.tree.xpath("//center[not(.//table)]//text()")
@@ -309,3 +311,4 @@ class DocketHistoryReport(DocketReport):
         else:
             # Look for string like "Michael J. Fox, presiding"
             return self._get_judge(self.assigned_to_regex)
+        return None

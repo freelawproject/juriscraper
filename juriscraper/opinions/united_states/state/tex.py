@@ -221,7 +221,7 @@ class Site(ClusterSite):
             )
             return lower_court, lower_court_number, "texapp"
 
-        elif match := re.search(other_courts_regex, title):
+        if match := re.search(other_courts_regex, title):
             lower_court = match.group("lower_court")
             lower_court_number = match.group("lower_number")
 

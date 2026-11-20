@@ -34,8 +34,7 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
         if self.is_valid is False:
             return {}
 
-        data = self.metadata.copy()
-        return data
+        return self.metadata.copy()
 
     @property
     def metadata(self):
@@ -67,8 +66,7 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
         """
 
         action_value = self.tree.xpath('//form[@method="POST"]/@action')[0]
-        param = action_value.split("?")[1]
-        return param
+        return action_value.split("?")[1]
 
     async def download_file(self) -> Response | None:
         """Downloads the formated pipe-limited file using the

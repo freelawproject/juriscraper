@@ -107,8 +107,7 @@ class Site(OpinionSiteLinear):
             return self.url
 
         html = await super()._download()
-        pdf_url = html["url"]
-        return pdf_url
+        return html["url"]
 
     async def _download_backwards(self, dates: tuple[date, date]) -> None:
         """Make custom date range request to the API

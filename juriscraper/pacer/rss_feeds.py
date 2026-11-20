@@ -173,16 +173,15 @@ class PacerRssFeed(DocketReport):
             # But that had stopped happening by 2020.
             # Special case it for now, but EDNY/AOUSC follow is required:
             return "https://ecf.nyed.uscourts.gov/cgi-bin/readyDockets.pl"
-        elif self.court_id == "ared":
+        if self.court_id == "ared":
             # In response to requests from their bar association, the Eastern
             # District of Arkansas has a bunch of RSS feeds that you can see
             # from their homepage. Their default one is limited to orders and
             # opinions, but this one has "All Docket Entries".
             return "https://ecf.ared.uscourts.gov/cgi-bin/rss_outside4.pl"
-        elif self.is_appellate:
+        if self.is_appellate:
             return f"https://ecf.{self.court_id}.uscourts.gov/n/beam/servlet/TransportRoom?servlet=RSSGenerator"
-        else:
-            return f"https://ecf.{self.court_id}.uscourts.gov/{self.PATH}"
+        return f"https://ecf.{self.court_id}.uscourts.gov/{self.PATH}"
 
     async def query(self):
         """Query the RSS feed for a given court ID
@@ -288,8 +287,7 @@ class PacerRssFeed(DocketReport):
         data.update(self._parse_get_trustee_type_office_chapter(entry.summary))
         # Include the docket_number components.
         data.update(docket_number_components)
-        data = clean_court_object(data)
-        return data
+        return clean_court_object(data)
 
     @property
     def parties(self):
@@ -391,8 +389,7 @@ class PacerRssFeed(DocketReport):
         except IndexError:
             return "Unknown Case Title"
         case_name = unescape(case_name)
-        case_name = clean_string(harmonize(case_name))
-        return case_name
+        return clean_string(harmonize(case_name))
 
 
 async def _main():

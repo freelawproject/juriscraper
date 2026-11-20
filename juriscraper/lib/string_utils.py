@@ -78,10 +78,9 @@ def titlecase(text: str, DEBUG: bool = False) -> str:
                         print(f"  UC_INITIALS match for: {word}")
                     tc_line.append(word)
                     continue
-                else:
-                    if DEBUG:
-                        print(f"  Not initials. Lowercasing: {word}")
-                    word = word.lower()
+                if DEBUG:
+                    print(f"  Not initials. Lowercasing: {word}")
+                word = word.lower()
 
             if APOS_SECOND.match(word):
                 # O'Reiley, L'Oreal, D'Angelo
@@ -192,9 +191,8 @@ def titlecase(text: str, DEBUG: bool = False) -> str:
         text = "\n".join(processed)
 
     # replace V. with v.
-    text = re.sub(re.compile(r"\WV\.\W"), " v. ", text)
+    return re.sub(re.compile(r"\WV\.\W"), " v. ", text)
 
-    return text
 
 
 def _uppercase_word(word: str) -> str:
@@ -404,9 +402,8 @@ def clean_string(s) -> str:
     s = " ".join(s.split())
 
     # Convert non-breaking spaces to regular spaces
-    s = s.replace("\u00a0", " ")
+    return s.replace("\u00a0", " ")
 
-    return s
 
 
 def force_unicode(
@@ -449,18 +446,17 @@ def force_unicode(
     except UnicodeDecodeError:
         if not isinstance(s, Exception):
             raise
-        else:
-            # If we get to here, the caller has passed in an Exception
-            # subclass populated with non-ASCII bytestring data without a
-            # working unicode method. Try to handle this without raising a
-            # further exception by individually forcing the exception args
-            # to unicode.
-            s = " ".join(
-                [
-                    force_unicode(arg, encoding, strings_only, errors)
-                    for arg in s
-                ]
-            )
+        # If we get to here, the caller has passed in an Exception
+        # subclass populated with non-ASCII bytestring data without a
+        # working unicode method. Try to handle this without raising a
+        # further exception by individually forcing the exception args
+        # to unicode.
+        s = " ".join(
+            [
+                force_unicode(arg, encoding, strings_only, errors)
+                for arg in s
+            ]
+        )
     return s
 
 
@@ -481,18 +477,17 @@ def trunc(s: str, length: int, ellipsis: str | None = None) -> str:
     if len(s) <= length:
         # Do not ellipsize if the item is not truncated.
         return s
-    else:
-        # find the rightmost space using a zero-indexed (+1) length minus the
-        # length of the ellipsis.
-        rightmost_space_index = length - ellipsis_length + 1
-        end = s.rfind(" ", 0, rightmost_space_index)
-        if end == -1:
-            # no spaces found, just use max position
-            end = length - ellipsis_length
-        s = s[0:end]
-        if ellipsis:
-            s = f"{s}{ellipsis}"
-        return s
+    # find the rightmost space using a zero-indexed (+1) length minus the
+    # length of the ellipsis.
+    rightmost_space_index = length - ellipsis_length + 1
+    end = s.rfind(" ", 0, rightmost_space_index)
+    if end == -1:
+        # no spaces found, just use max position
+        end = length - ellipsis_length
+    s = s[0:end]
+    if ellipsis:
+        s = f"{s}{ellipsis}"
+    return s
 
 
 @overload
@@ -528,8 +523,7 @@ def convert_date_string(
     dt = parser.parse(date_string, fuzzy=fuzzy)
     if datetime:
         return dt
-    else:
-        return dt.date()
+    return dt.date()
 
 
 def split_date_range_string(date_range_string: str) -> date:
@@ -768,18 +762,17 @@ class CaseNameTweaker:
             if len(parts[0]) <= 3:
                 # Good length for a shortened case name.
                 return s
-            else:
-                # Too long; too weird. Punt.
-                return ""
+            # Too long; too weird. Punt.
+            return ""
 
-        elif len(parts) == 2:
+        if len(parts) == 2:
             # X v. Y --> [['X'], ['Y']]
             # X Y Z v. A B --> [['X', 'Y', 'Z'], ['A', 'B']]
             if len(parts[0]) == 1:
                 if parts[0][0].lower() not in self.bad_words:
                     # Simple case: Langley v. Google
                     return parts[0][0]
-                elif (
+                if (
                     len(parts[1]) == 1
                     # Plaintiff was a bad_word. Try the defendant.
                     # Dallas v. Lissner

@@ -30,8 +30,7 @@ class Site(OpinionSite):
             s = html.tostring(e, method="text", encoding="unicode").strip()
             if s == "03-59":
                 continue
-            else:
-                neutral_citations.append(s)
+            neutral_citations.append(s)
         return neutral_citations
 
     def _get_case_names(self):
@@ -56,7 +55,7 @@ class Site(OpinionSite):
             s = html.tostring(e, method="text", encoding="unicode").strip()
             if s == "11/18/2003":
                 continue
-            elif s == "08//08/2003":
+            if s == "08//08/2003":
                 case_dates.append(
                     date.fromtimestamp(
                         time.mktime(time.strptime("08/08/2003", "%m/%d/%Y"))
@@ -77,6 +76,5 @@ class Site(OpinionSite):
             s = html.tostring(e, method="text", encoding="unicode").strip()
             if s == "01-00745":
                 continue
-            else:
-                docket_numbers.append(s.replace("\r\n", " &"))
+            docket_numbers.append(s.replace("\r\n", " &"))
         return docket_numbers

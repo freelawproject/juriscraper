@@ -250,9 +250,8 @@ class LASCSearch:
 
             clean_data["TentativeRuling"].append(tentative_ruling)
 
-        clean_data = clean_court_object(clean_data)
+        return clean_court_object(clean_data)
 
-        return clean_data
 
     def _check_success(self, r):
         if r.json()["IsSuccess"]:

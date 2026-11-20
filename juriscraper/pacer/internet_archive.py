@@ -61,8 +61,7 @@ class InternetArchive(BaseDocketReport):
         if not is_pdf(r):
             logger.error("Got non-PDF data, but expected a PDF at: %s", url)
             return None
-        else:
-            return r
+        return r
 
     async def query(self, pacer_case_id):
         """Download a docket XML page from the Internet Archive"""
@@ -247,6 +246,7 @@ class InternetArchive(BaseDocketReport):
         judge_str = self._get_str_from_tree(path)
         if judge_str is not None:
             return normalize_judge_string(judge_str)[0]
+        return None
 
     def _get_case_name(self):
         case_name = self._get_str_from_tree("//case_name")

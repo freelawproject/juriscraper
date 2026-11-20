@@ -165,8 +165,7 @@ class BaseDocketReport:
 
         if cast_to_date:
             return None
-        else:
-            return ""
+        return ""
 
     @staticmethod
     def _xpath_text_0(node, xpath) -> str:
@@ -808,28 +807,26 @@ class DocketReport(BaseDocketReport, BaseReport):
             # Regular docket - party type value.
             s = force_unicode(cells[0].text_content())
             return {"type": normalize_party_types(s)}, True
-        elif "------" in row_text:
+        if "------" in row_text:
             # Adversary proceeding
             s = force_unicode(cells[0].text_content().strip())
             if len(cells) == 1:
                 s = re.sub("----*", "", s)
                 return {"type": normalize_party_types(s)}, True
-            elif len(cells) == 3:
+            if len(cells) == 3:
                 # Some courts have malformed HTML that requires extra work.
                 return {"type": re.split("----*", s)[0]}, False
-            else:
-                raise ValueError("Unrecognizable party row")
-        elif all(
+            raise ValueError("Unrecognizable party row")
+        if all(
             [self.is_bankruptcy, len(cells) == 3, cells[0].xpath(".//i/b")]
         ):
             # Bankruptcy - party type value.
             s = force_unicode(cells[0].xpath(".//i")[0].text_content())
             return {"type": normalize_party_types(s)}, False
-        elif len(cells) == 3 and "service list" in row_text:
+        if len(cells) == 3 and "service list" in row_text:
             # Special case to handle the service list.
             return {"type": "Service List"}, False
-        else:
-            return party, False
+        return party, False
 
     def _add_criminal_data_to_parties(self, parties, party_rows):
         """Iterate over the party rows, identify criminal data, and add it.
@@ -1138,14 +1135,13 @@ class DocketReport(BaseDocketReport, BaseReport):
             'selected documents")])'
         )
         footer_multi_doc = 'not(.//text()[contains(., "Footer format:")])'
-        docket_entry_all_rows = self.tree.xpath(
+        return self.tree.xpath(
             "//table"
             f"[preceding-sibling::table[{docket_header}] or {docket_header}]"
             f"[{bankr_multi_doc}]"
             f"[{footer_multi_doc}]"
             "/tbody/tr"
         )
-        return docket_entry_all_rows
 
     def _get_attachment_number(self, row):
         """Return the attachment number for an item.
@@ -1154,8 +1150,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         you must extract it, then subtract 1 from the value since these are
         tallied and include the main document.
         """
-        number = int(row.xpath(".//td/text()")[0].strip())
-        return number
+        return int(row.xpath(".//td/text()")[0].strip())
 
     def _get_description_from_tr(self, row):
         """Get the description from the row"""
@@ -1221,6 +1216,7 @@ class DocketReport(BaseDocketReport, BaseReport):
         count = get_input_value_from_tr(tr, 2, 3, "-")
         if count is not None:
             return int(count)
+        return None
 
     @staticmethod
     def _get_page_count_from_tr(tr):
@@ -1244,6 +1240,7 @@ class DocketReport(BaseDocketReport, BaseReport):
                 # word "page" and gets caught by the xpath. Just
                 # press on.
                 continue
+        return None
 
     @staticmethod
     def _get_file_size_bytes_from_tr(tr):
@@ -1610,21 +1607,20 @@ class DocketReport(BaseDocketReport, BaseReport):
     def _get_pacer_doc_id_and_seq_no(cell, document_number):
         if not document_number:
             return None, None
-        else:
-            # We find the first link having the document number as text.
-            # This is needed because txnb combines the second and third
-            # column in their docket report.
-            anchors = cell.xpath(".//a")
-            if len(anchors) == 0:
-                # Docket entry exists, but cannot download document (it's
-                # sealed, a minute entry, or otherwise unavailable in PACER).
-                return None, None
-            for anchor in anchors:
-                if anchor.text_content().strip() == document_number:
-                    doc1_url = anchor.xpath("./@href")[0]
-                    pacer_doc_id = get_pacer_doc_id_from_doc1_url(doc1_url)
-                    pacer_seq_no = get_pacer_seq_no_from_doc1_anchor(anchor)
-                    return pacer_doc_id, pacer_seq_no
+        # We find the first link having the document number as text.
+        # This is needed because txnb combines the second and third
+        # column in their docket report.
+        anchors = cell.xpath(".//a")
+        if len(anchors) == 0:
+            # Docket entry exists, but cannot download document (it's
+            # sealed, a minute entry, or otherwise unavailable in PACER).
+            return None, None
+        for anchor in anchors:
+            if anchor.text_content().strip() == document_number:
+                doc1_url = anchor.xpath("./@href")[0]
+                pacer_doc_id = get_pacer_doc_id_from_doc1_url(doc1_url)
+                pacer_seq_no = get_pacer_seq_no_from_doc1_anchor(anchor)
+                return pacer_doc_id, pacer_seq_no
 
         # In case none of our URLs can be parsed.
         return None, None
@@ -1766,21 +1762,19 @@ class DocketReport(BaseDocketReport, BaseReport):
                 if len(cell_texts) > 1:
                     nos.append(" ".join(cell_texts))
             return "; ".join(nos) or ""
-        else:
-            return self._get_value(self.nos_regex, self.metadata_values)
+        return self._get_value(self.nos_regex, self.metadata_values)
 
     def _get_judge(self, regex):
         judge_regex = re.compile(regex, flags=re.DOTALL | re.IGNORECASE)
         judge_str = self._get_value(judge_regex, self.metadata_values)
         if judge_str:
             return normalize_judge_string(judge_str)[0]
-        else:
-            # No luck getting it in the metadata_values attribute. Broaden
-            # the search to look in the entire docket HTML.
-            text_nodes = self.tree.xpath("//text()")
-            text_nodes = [t for t in text_nodes if t and not t.isspace()]
-            judge_str = self._get_value(judge_regex, text_nodes)
-            return normalize_judge_string(judge_str)[0]
+        # No luck getting it in the metadata_values attribute. Broaden
+        # the search to look in the entire docket HTML.
+        text_nodes = self.tree.xpath("//text()")
+        text_nodes = [t for t in text_nodes if t and not t.isspace()]
+        judge_str = self._get_value(judge_regex, text_nodes)
+        return normalize_judge_string(judge_str)[0]
 
 
 if __name__ == "__main__":

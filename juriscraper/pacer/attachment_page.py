@@ -279,6 +279,7 @@ class AttachmentPage(BaseReport):
         count = get_input_value_from_tr(tr, 2, 3, "-")
         if count is not None:
             return int(count)
+        return None
 
     @staticmethod
     def _get_page_count_from_tr(tr):
@@ -302,6 +303,7 @@ class AttachmentPage(BaseReport):
                 # word "page" and gets caught by the xpath. Just
                 # press on.
                 continue
+        return None
 
     @staticmethod
     def _get_file_size_bytes_from_tr(tr):
@@ -392,6 +394,7 @@ class AttachmentPage(BaseReport):
                 m = re.search(r"[?&]caseid=(\d+)", onclick, flags=re.I)
                 if m:
                     return m.group(1)
+        return None
 
 
 def _main():

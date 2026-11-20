@@ -78,16 +78,15 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
             return (
                 "https://dcecf.psc.uscourts.gov/n/beam/servlet/TransportRoom"
             )
-        elif self.court_id in ["ca5", "ca7", "ca11"]:
+        if self.court_id in ["ca5", "ca7", "ca11"]:
             return (
                 "https://ecf.%s.uscourts.gov/"
                 "cmecf/servlet/TransportRoom" % self.court_id
             )
-        else:
-            return (
-                "https://ecf.%s.uscourts.gov/"
-                "n/beam/servlet/TransportRoom" % self.court_id
-            )
+        return (
+            "https://ecf.%s.uscourts.gov/"
+            "n/beam/servlet/TransportRoom" % self.court_id
+        )
 
     async def query(
         self,
@@ -635,6 +634,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         count = get_input_value_from_tr(tr, 2, 4, " ")
         if count is not None:
             return int(count)
+        return None
 
     @staticmethod
     def _get_file_size_bytes_from_tr(tr: html.HtmlElement) -> int | None:
@@ -782,9 +782,8 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         if not urls:
             # Entry exists but lacks a URL. Probably a minute order or similar.
             return None
-        else:
-            doc1_url = urls[0].xpath("./@href")[0]
-            return get_pacer_doc_id_from_doc1_url(doc1_url)
+        doc1_url = urls[0].xpath("./@href")[0]
+        return get_pacer_doc_id_from_doc1_url(doc1_url)
 
     @staticmethod
     def _get_pacer_seq_no(
@@ -830,8 +829,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         panel_string = self._get_tail_by_regex("Panel:", node=panel_table)
         if panel_string in ["", "Not available"]:
             return []
-        else:
-            return panel_string.split()
+        return panel_string.split()
 
     def _get_case_type_info(self) -> str:
         """Get the case type information and return it as a csv string"""
@@ -970,8 +968,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         except (IndexError, AttributeError):
             if cast_to_date:
                 return None
-            else:
-                return ""
+            return ""
         else:
             if cast_to_date:
                 return convert_date_string(tail)

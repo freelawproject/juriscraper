@@ -243,6 +243,5 @@ class Site(ClusterSite):
             summary = summary_container[-2].xpath("string(.)")
 
         # text inside may be separated by <br> tags
-        summary = re.sub(r"\s+", " ", summary)
+        return re.sub(r"\s+", " ", summary)
 
-        return summary

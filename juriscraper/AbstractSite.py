@@ -402,9 +402,9 @@ class AbstractSite:
             await self._request_url_mock(self.url)
             self._post_process_response()
             return self._return_response_text_object()
-        elif self.use_urllib:
+        if self.use_urllib:
             return self._download_urllib()
-        elif self.method == "GET":
+        if self.method == "GET":
             await self._request_url_get(self.url)
         elif self.method == "POST":
             await self._request_url_post(self.url)
@@ -501,9 +501,8 @@ class AbstractSite:
             r = await follow_redirections(r, s)
             r.raise_for_status()
 
-        content = self.cleanup_content(r.content)
+        return self.cleanup_content(r.content)
 
-        return content
 
     def _process_html(self) -> None | Awaitable[None]:
         """Hook for processing available self.html after it's been downloaded.
@@ -540,8 +539,7 @@ class AbstractSite:
             return json.loads(text)
 
         text = self._clean_text(text)
-        html_tree = self._make_html_tree(text)
-        return html_tree
+        return self._make_html_tree(text)
 
     def _urllib_fetch(self, url, data=None, headers=None):
         """Fetch a URL using urllib to bypass Cloudflare TLS fingerprinting.
@@ -644,19 +642,19 @@ class AbstractSite:
                 "content-type", ""
             ):
                 return self.request["response"].json()
-            else:
-                try:
-                    payload = self.request["response"].content.decode("utf8")
-                except Exception:
-                    payload = self.request["response"].text
+            try:
+                payload = self.request["response"].content.decode("utf8")
+            except Exception:
+                payload = self.request["response"].text
 
-                text = self._clean_text(payload)
-                html_tree = self._make_html_tree(text)
-                if hasattr(html_tree, "rewrite_links"):
-                    html_tree.rewrite_links(
-                        fix_links_in_lxml_tree, base_href=self.request["url"]
-                    )
-                return html_tree
+            text = self._clean_text(payload)
+            html_tree = self._make_html_tree(text)
+            if hasattr(html_tree, "rewrite_links"):
+                html_tree.rewrite_links(
+                    fix_links_in_lxml_tree, base_href=self.request["url"]
+                )
+            return html_tree
+        return None
 
     async def _get_html_tree_by_url(self, url, parameters=None):
         if parameters is None:
