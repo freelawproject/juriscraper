@@ -265,11 +265,7 @@ class DocketHistoryReport(DocketReport):
                         cn_match = cn_regex.match(v)
                         if cn_match:
                             matches.add(cn_match.group(1))
-        if len(matches) == 1:
-            case_name = list(matches)[0]
-        else:
-            case_name = "Unknown Case Title"
-        return harmonize(case_name)
+        return harmonize(next(iter(matches), "Unknown Case Title"))
 
     def _parse_docket_number(
         self,

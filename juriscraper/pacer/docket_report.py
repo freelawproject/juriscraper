@@ -1681,13 +1681,13 @@ class DocketReport(BaseDocketReport, BaseReport):
         if self.is_bankruptcy:
             # Check if there is somebody described as a debtor
             try:
-                return [
+                return next(
                     p
                     for p in self.parties
                     if p["type"] == "Debtor"
                     or p["type"] == "Debtor In Possession"
-                ][0]["name"]
-            except IndexError:
+                )["name"]
+            except StopIteration:
                 pass
 
             # This is probably a sub docket to a larger case. Use that title.
