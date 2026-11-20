@@ -32,6 +32,8 @@ lint.select = [
   "RET",
   # flake8-slots
   "SLOT",
+  # pygrep-hooks
+  "PGH",
 ]
 lint.ignore = [
   # flake8-bugbear opinionated rules

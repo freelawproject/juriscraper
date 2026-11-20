@@ -58,7 +58,7 @@ class PacerParseAppellateDocketTest(PacerParseTestCase):
             ]
           }
         }
-"""  # noqa
+"""
 
         indented_padded_correct_repr_old = """
         {'court_id': 'flp',
@@ -82,7 +82,7 @@ class PacerParseAppellateDocketTest(PacerParseTestCase):
              'date_entered': datetime.datetime(2023, 10, 26, 18, 18),
              'date_filed': datetime.datetime(2023, 10, 28, 0, 0),
              'pacer_doc_id': '19b65316-744e-11ee-a0a4-13890013fe63',
-             'page_count': 1}]}"""  # noqa
+             'page_count': 1}]}"""
 
         indented_padded_correct_repr = """
         {'court_id': 'flp',
@@ -106,7 +106,7 @@ class PacerParseAppellateDocketTest(PacerParseTestCase):
              'date_entered': datetime.datetime(2023, 10, 26, 18, 18),
              'date_filed': datetime.datetime(2023, 10, 28, 0, 0),
              'pacer_doc_id': '19b65316-744e-11ee-a0a4-13890013fe63',
-             'page_count': 1}]}"""  # noqa
+             'page_count': 1}]}"""
 
         # Python 3.12 changed the format of OrderedDict so pick the appropriate
         # repr here.

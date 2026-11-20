@@ -851,7 +851,7 @@ class AppellateDocketReport(BaseDocketReport, BaseReport):
         """Get all of the originating type information as a dict."""
         try:
             ogc_table = self.tree.re_xpath(
-                '//*[re:match(text(), "Originating Court Information")]/ancestor::table[1]'  # noqa
+                '//*[re:match(text(), "Originating Court Information")]/ancestor::table[1]'
             )[0]
         except IndexError:
             # No originating court info.
