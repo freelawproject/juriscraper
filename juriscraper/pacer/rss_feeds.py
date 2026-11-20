@@ -1,6 +1,6 @@
 import argparse
 import asyncio
-import os
+import pathlib
 import pprint
 import re
 import sys
@@ -395,8 +395,7 @@ class PacerRssFeed(DocketReport):
 async def _main():
     # For help: python -m juriscraper.pacer.rss_feeds -h
     parser = argparse.ArgumentParser(
-        prog="python -m %s.%s"
-        % (__package__, os.path.splitext(os.path.basename(sys.argv[0]))[0])
+        prog="python -m %s.%s" % (__package__, pathlib.Path(sys.argv[0]).stem)
     )
     parser.add_argument(
         "-b",
@@ -439,7 +438,7 @@ sorry if that was your filename.""",
                 "Reading RSS feed from %s as %s"
                 % (args.court_or_file, feed.court_id)
             )
-            f = open(args.court_or_file)  # noqa: SIM115
+            f = pathlib.Path(args.court_or_file).open()  # noqa: SIM115
         feed._parse_text(f.read().decode("utf-8"))
 
     print(f"Got {len(feed.data)} items")

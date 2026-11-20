@@ -4,6 +4,7 @@ This is pretty limited metadata about the case, although it
 presents some more information for BK cases.
 """
 
+import pathlib
 import pprint
 import re
 import sys
@@ -327,7 +328,7 @@ def _main():
     report = CaseQuery("mad")
     filepath = sys.argv[1]
     print(f"Parsing HTML file at {filepath}")
-    with open(filepath, "rb") as f:
+    with pathlib.Path(filepath).open("rb") as f:
         text = f.read().decode("utf-8")
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)

@@ -502,7 +502,7 @@ def _main():
     report = SCOTUSEmail()
     filepath = sys.argv[1]
     print(f"Parsing email file at {filepath}")
-    with open(filepath, encoding="utf-8") as f:
+    with Path(filepath).open(encoding="utf-8") as f:
         text = f.read()
 
     report._parse_text(text)

@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import argparse
-import glob
 import json
+import pathlib
 import pprint
 
 from lxml import etree
@@ -82,7 +82,7 @@ def get_documents(tree):
 
 
 def print_xpath_results():
-    for f in glob.glob("../examples/*.xml"):
+    for f in pathlib.Path("../examples").glob("*.xml"):
         tree = etree.parse(f)
         rough_data = {
             "download_url": xpath(
@@ -110,7 +110,9 @@ def main():
 
 
 def get_fdsys_court_names():
-    response = glob.glob("../examples/2015_USCOURTS_sitemap.xml")
+    response = list(
+        pathlib.Path("../examples").glob("2015_USCOURTS_sitemap.xml")
+    )
     tree = etree.parse(response[0])
     # print(etree.tostring(tree, pretty_print=True))
     data = {}
@@ -126,7 +128,7 @@ def get_fdsys_court_names():
         # if pre not in data and url:
         data[pre] = url
 
-    with open("./fdsys_court_names.json", "w") as f:
+    with pathlib.Path("./fdsys_court_names.json").open("w") as f:
         json.dump(data, f)
 
 

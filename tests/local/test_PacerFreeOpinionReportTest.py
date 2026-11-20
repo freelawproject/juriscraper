@@ -1,11 +1,9 @@
-import os
-
 from juriscraper.pacer.free_documents import FreeOpinionReport
 from tests import TESTS_ROOT_EXAMPLES_PACER
 from tests.local.PacerParseTestCase import PacerParseTestCase
 
-TESTS_ROOT_EXAMPLES_PACER_FREE_OPINION_REPORT = os.path.join(
-    TESTS_ROOT_EXAMPLES_PACER, "free_opinion_report"
+TESTS_ROOT_EXAMPLES_PACER_FREE_OPINION_REPORT = (
+    TESTS_ROOT_EXAMPLES_PACER / "free_opinion_report"
 )
 
 
@@ -37,11 +35,11 @@ class PacerFreeOpinionReportTest(PacerParseTestCase):
             with self.subTest(fixture=fixture):
                 court = fixture.rsplit("_", 1)[0]
                 report = FreeOpinionReport(court)
-                path = os.path.join(
-                    TESTS_ROOT_EXAMPLES_PACER_FREE_OPINION_REPORT,
-                    f"{fixture}.html",
+                path = (
+                    TESTS_ROOT_EXAMPLES_PACER_FREE_OPINION_REPORT
+                    / f"{fixture}.html"
                 )
-                with open(path, encoding="utf-8") as f:
+                with path.open(encoding="utf-8") as f:
                     report._parse_text(f.read())
                 self.assertEqual(report.reported_opinion_count, reported)
                 self.assertEqual(len(report.data), parsed)

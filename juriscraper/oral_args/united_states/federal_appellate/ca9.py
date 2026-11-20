@@ -8,6 +8,7 @@ History:
 """
 
 import json
+import pathlib
 from datetime import datetime, timedelta
 from urllib.parse import urljoin
 
@@ -117,7 +118,7 @@ class Site(OralArgumentSiteLinear):
         self.downloader_executed = True
 
         if self.test_mode_enabled():
-            return json.load(open(self.mock_url))
+            return json.load(pathlib.Path(self.mock_url).open())
 
         sess = self.request["session"]
 

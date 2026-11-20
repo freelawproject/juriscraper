@@ -7,6 +7,7 @@ returns a menu of options as a result.
 In the cases, we look up search results by name, date, etc.
 """
 
+import pathlib
 import pprint
 import sys
 
@@ -290,7 +291,7 @@ def _main():
     report = CaseQueryAdvancedBankruptcy("mad")
     filepath = sys.argv[1]
     print(f"Parsing HTML file at {filepath}")
-    with open(filepath, "rb") as f:
+    with pathlib.Path(filepath).open("rb") as f:
         text = f.read().decode("utf-8")
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)

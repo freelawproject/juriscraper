@@ -1,3 +1,4 @@
+import pathlib
 import re
 from collections import defaultdict
 from datetime import date
@@ -592,7 +593,7 @@ def _main():
         sys.exit(1)
 
     parser = SCOTUSDocketReportHTM()
-    with open(sys.argv[1], encoding="utf-8") as f:
+    with pathlib.Path(sys.argv[1]).open(encoding="utf-8") as f:
         parser._parse_text(f.read())
     pprint.pprint(parser.data, indent=2)
 

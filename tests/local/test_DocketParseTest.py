@@ -1,5 +1,4 @@
-import fnmatch
-import os
+import pathlib
 import sys
 import time
 import unittest
@@ -10,9 +9,7 @@ from juriscraper.lib.test_utils import warn_or_crash_slow_parser
 from juriscraper.pacer import DocketReport
 from tests import TESTS_ROOT_EXAMPLES_PACER
 
-TESTS_ROOT_EXAMPLES_PACER_DOCKET = os.path.join(
-    TESTS_ROOT_EXAMPLES_PACER, "dockets"
-)
+TESTS_ROOT_EXAMPLES_PACER_DOCKET = TESTS_ROOT_EXAMPLES_PACER / "dockets"
 
 
 class DocketParseTest(unittest.TestCase):
@@ -27,25 +24,18 @@ class DocketParseTest(unittest.TestCase):
         required_fields=("date_filed", "case_name", "docket_number"),
     ):
         """Test all the parsers, faking the network query."""
-        paths = []
-        for root, _, filenames in os.walk(path_root):
-            paths.extend(
-                os.path.join(root, filename)
-                for filename in fnmatch.filter(filenames, "*.html")
-            )
-        paths.sort()
-        path_max_len = max(len(path) for path in paths) + 2
+        paths = sorted(pathlib.Path(path_root).rglob("*.html"))
+        path_max_len = max(len(str(path)) for path in paths) + 2
         for i, path in enumerate(paths):
             with self.subTest("Checking parsers", path=path):
-                sys.stdout.write(f"{i}. Doing {path.ljust(path_max_len)}")
+                sys.stdout.write(f"{i}. Doing {str(path).ljust(path_max_len)}")
                 t1 = time.time()
-                dirname, filename = os.path.split(path)
-                filename_sans_ext = filename.split(".")[0]
-                json_path = os.path.join(dirname, f"{filename_sans_ext}.json")
+                filename_sans_ext = path.name.split(".")[0]
+                json_path = path.parent / f"{filename_sans_ext}.json"
                 court = filename_sans_ext.split("_")[0]
 
                 report = DocketReport(court)
-                with open(path, "rb") as f:
+                with path.open("rb") as f:
                     report._parse_text(f.read().decode("utf-8"))
                 data = report.data
 
@@ -72,7 +62,7 @@ class DocketParseTest(unittest.TestCase):
                         # don't parse properly. See: cacb, 2:08-ap-01570-BB
                         self.assertNotIn("----", party["name"])
 
-                if not os.path.isfile(json_path):
+                if not json_path.is_file():
                     bar = "*" * 50
                     print(
                         "\n\n%s\nJSON FILE DID NOT EXIST. CREATING IT AT:"
@@ -80,12 +70,12 @@ class DocketParseTest(unittest.TestCase):
                         "Please test the data in this file before assuming "
                         "everything worked.\n%s\n" % (bar, json_path, bar)
                     )
-                    with open(json_path, "w") as f:
+                    with json_path.open("w") as f:
                         json.dump(data, f, indent=2, sort_keys=True)
                         # self.assertFalse(True)
                         continue
 
-                with open(json_path) as f:
+                with json_path.open() as f:
                     j = json.load(f)
                     if j != {}:
                         # Compare docket entries and parties first, for easier
@@ -102,17 +92,15 @@ class DocketParseTest(unittest.TestCase):
                 sys.stdout.write(f"✓ - {t2 - t1:0.1f}s\n")
 
     def test_bankruptcy_court_dockets(self):
-        path_root = os.path.join(
-            TESTS_ROOT_EXAMPLES_PACER_DOCKET, "bankruptcy"
-        )
+        path_root = TESTS_ROOT_EXAMPLES_PACER_DOCKET / "bankruptcy"
         self.run_parsers_on_path(path_root)
 
     def test_district_court_dockets(self):
-        path_root = os.path.join(TESTS_ROOT_EXAMPLES_PACER_DOCKET, "district")
+        path_root = TESTS_ROOT_EXAMPLES_PACER_DOCKET / "district"
         self.run_parsers_on_path(path_root)
 
     def test_fakerss_court_dockets(self):
-        path_root = os.path.join(TESTS_ROOT_EXAMPLES_PACER_DOCKET, "fake-rss")
+        path_root = TESTS_ROOT_EXAMPLES_PACER_DOCKET / "fake-rss"
         self.run_parsers_on_path(
             path_root,
             required_fields=[
@@ -122,13 +110,11 @@ class DocketParseTest(unittest.TestCase):
         )
 
     def test_specialty_court_dockets(self):
-        path_root = os.path.join(TESTS_ROOT_EXAMPLES_PACER_DOCKET, "special")
+        path_root = TESTS_ROOT_EXAMPLES_PACER_DOCKET / "special"
         self.run_parsers_on_path(path_root)
 
     def test_not_docket_dockets(self):
-        path_root = os.path.join(
-            TESTS_ROOT_EXAMPLES_PACER_DOCKET, "not_dockets"
-        )
+        path_root = TESTS_ROOT_EXAMPLES_PACER_DOCKET / "not_dockets"
         self.run_parsers_on_path(path_root)
 
 
@@ -136,10 +122,10 @@ class DocketAnonymizeTest(unittest.TestCase):
     """Does our docket anonymizer work?"""
 
     def assert_anonymized(
-        self, path: str, skip_pre_test: bool = False
+        self, path: pathlib.Path, skip_pre_test: bool = False
     ) -> None:
         report = DocketReport("akd")
-        with open(path, "rb") as f:
+        with path.open("rb") as f:
             text = f.read().decode("utf-8")
 
         if not skip_pre_test:
@@ -149,34 +135,22 @@ class DocketAnonymizeTest(unittest.TestCase):
         self.assertNotIn("LOGIN REMOVED", anon_text)
 
     def test_anonymize_district(self) -> None:
-        path = os.path.join(
-            TESTS_ROOT_EXAMPLES_PACER_DOCKET,
-            "district",
-            "akd.html",
-        )
+        path = TESTS_ROOT_EXAMPLES_PACER_DOCKET / "district" / "akd.html"
         self.assert_anonymized(path)
 
     def test_anonymize_bankruptcy(self) -> None:
-        path = os.path.join(
-            TESTS_ROOT_EXAMPLES_PACER_DOCKET,
-            "bankruptcy",
-            "akb.html",
-        )
+        path = TESTS_ROOT_EXAMPLES_PACER_DOCKET / "bankruptcy" / "akb.html"
         self.assert_anonymized(path)
 
     def test_anonymize_specialty(self) -> None:
-        path = os.path.join(
-            TESTS_ROOT_EXAMPLES_PACER_DOCKET,
-            "special",
-            "cit.html",
-        )
+        path = TESTS_ROOT_EXAMPLES_PACER_DOCKET / "special" / "cit.html"
         self.assert_anonymized(path)
 
     def test_not_docket_dockets(self) -> None:
-        path = os.path.join(
-            TESTS_ROOT_EXAMPLES_PACER_DOCKET,
-            "not_dockets",
-            "cacd_628915.html",
+        path = (
+            TESTS_ROOT_EXAMPLES_PACER_DOCKET
+            / "not_dockets"
+            / "cacd_628915.html"
         )
         # Some things we get back from RECAP are not actually dockets. Normally
         # the assert_anonymized method checks that the username is there before

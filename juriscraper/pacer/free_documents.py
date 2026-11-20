@@ -2,6 +2,7 @@
 which is free.
 """
 
+import pathlib
 import pprint
 import sys
 
@@ -49,9 +50,7 @@ class FreeOpinionReport(BaseReport):
     def url(self):
         if self.court_id == "ohnd":
             return "https://ecf.ohnd.uscourts.gov/cgi-bin/OHND_WrtOpRpt.pl"
-        return (
-            f"https://ecf.{self.court_id}.uscourts.gov/cgi-bin/WrtOpRpt.pl"
-        )
+        return f"https://ecf.{self.court_id}.uscourts.gov/cgi-bin/WrtOpRpt.pl"
 
     async def query(self, start, end, sort="date_filed", day_span=7):
         """Query the Free Opinions report one day at a time.
@@ -452,7 +451,7 @@ def _main():
     )  # Court ID is only needed for querying.
     filepath = sys.argv[1]
     print(f"Parsing HTML file at {filepath}")
-    with open(filepath) as f:
+    with pathlib.Path(filepath).open() as f:
         text = f.read()
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)

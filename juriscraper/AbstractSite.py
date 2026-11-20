@@ -3,7 +3,7 @@ import hashlib
 import http.cookiejar
 import inspect
 import json
-import os
+import pathlib
 import ssl
 import urllib.parse
 import urllib.request
@@ -456,14 +456,14 @@ class AbstractSite:
             def handler(request: httpx.Request):
                 r = httpx.Response(status_code=404, request=request)
                 try:
-                    url = os.path.join(media_root, download_url)
-                    with open(url, mode="rb") as stream:
+                    url = pathlib.Path(media_root) / download_url
+                    with url.open(mode="rb") as stream:
                         r = httpx.Response(
                             status_code=200,
                             request=request,
                             content=stream.read(),
                         )
-                        if url.endswith("json"):
+                        if url.name.endswith("json"):
                             r.headers["content-type"] = "application/json"
                 except OSError as e:
                     raise httpx.ConnectError(message=str(e), request=request)
@@ -607,7 +607,7 @@ class AbstractSite:
 
         def handler(request: httpx.Request):
             try:
-                with open(self.mock_url, mode="rb") as stream:
+                with pathlib.Path(self.mock_url).open(mode="rb") as stream:
                     content = stream.read()
                     try:
                         text = content.decode("utf-8")

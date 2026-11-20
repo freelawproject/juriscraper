@@ -1,3 +1,4 @@
+import pathlib
 import pprint
 import re
 import sys
@@ -237,7 +238,7 @@ def main():
     )  # Court ID is only needed for querying.
     filepath = sys.argv[1]
     print(f"Parsing HTML file at {filepath}")
-    with open(filepath) as f:
+    with pathlib.Path(filepath).open() as f:
         text = f.read()
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)

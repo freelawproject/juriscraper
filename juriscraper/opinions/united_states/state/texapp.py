@@ -17,7 +17,7 @@
 #  - 2021-12-28: Updated by flooie to remove selenium.
 #  - 2024-02-21; Updated by grossir: handle dynamic backscrapes
 
-import os
+import pathlib
 import re
 from datetime import date, datetime, timedelta
 from urllib.parse import urlparse
@@ -230,9 +230,9 @@ class Site(ClusterSite):
         :return: HTML object of the page
         """
         if self.test_mode_enabled():
-            self.mock_url = os.path.join(
-                os.path.dirname(self.mock_url),
-                os.path.basename(urlparse(link).path),
+            self.mock_url = str(
+                pathlib.Path(self.mock_url).parent
+                / pathlib.Path(urlparse(link).path).name
             )
             await self._request_url_mock(link)
             return self._return_response_text_object()

@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import asyncio
-import os
 import unittest
 from datetime import date, timedelta
 from unittest import mock
@@ -34,13 +33,15 @@ class PacerFreeOpinionsTest(unittest.IsolatedAsyncioTestCase):
         if pacer_credentials_are_defined():
             await pacer_session.login()
 
-        with open(os.path.join(JURISCRAPER_ROOT, "pacer/courts.json")) as j:
+        with (JURISCRAPER_ROOT / "pacer" / "courts.json").open() as j:
             self.courts = get_courts_from_json(json.load(j))
 
-        path = os.path.join(
-            TESTS_ROOT_EXAMPLES_PACER, "dates/valid_free_opinion_dates.json"
+        path = (
+            TESTS_ROOT_EXAMPLES_PACER
+            / "dates"
+            / "valid_free_opinion_dates.json"
         )
-        with open(path) as j:
+        with path.open() as j:
             self.valid_dates = json.load(j)
 
         self.reports = {}

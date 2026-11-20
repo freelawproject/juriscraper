@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 
 
-import fnmatch
 import json
-import os
 import sys
 import unittest
 
@@ -42,35 +40,26 @@ class PacerPossibleCaseNumbersTest(unittest.TestCase):
 
     def test_parsing_results(self):
         """Can we do a simple query and parse?"""
-        paths = []
-        path_root = os.path.join(
-            TESTS_ROOT_EXAMPLES_PACER, "possible_case_numbers"
-        )
-        for root, _, filenames in os.walk(path_root):
-            paths.extend(
-                os.path.join(root, filename)
-                for filename in fnmatch.filter(filenames, "*.xml")
-            )
-        paths.sort()
-        path_max_len = max(len(path) for path in paths) + 2
+        path_root = TESTS_ROOT_EXAMPLES_PACER / "possible_case_numbers"
+        paths = sorted(path_root.rglob("*.xml"))
+        path_max_len = max(len(str(path)) for path in paths) + 2
         for i, path in enumerate(paths):
-            sys.stdout.write(f"{i}. Doing {path.ljust(path_max_len)}")
-            dirname, filename = os.path.split(path)
-            filename_sans_ext = filename.split(".")[0]
-            json_path = os.path.join(dirname, f"{filename_sans_ext}.json")
+            sys.stdout.write(f"{i}. Doing {str(path).ljust(path_max_len)}")
+            filename_sans_ext = path.name.split(".")[0]
+            json_path = path.parent / f"{filename_sans_ext}.json"
 
             report = PossibleCaseNumberApi("anything")
-            with open(path, "rb") as f:
+            with path.open("rb") as f:
                 report._parse_text(f.read().decode("utf-8"))
             data = report.data(case_name=filename_sans_ext)
-            if os.path.exists(json_path):
-                with open(json_path) as f:
+            if json_path.exists():
+                with json_path.open() as f:
                     j = json.load(f)
                     self.assertEqual(j, data)
             else:
                 # If no json file, data should be None.
                 if data is not None:
-                    with open(json_path, "w") as f:
+                    with json_path.open("w") as f:
                         print(f"Creating new file at {json_path}")
                         json.dump(data, f, indent=2, sort_keys=True)
                 else:

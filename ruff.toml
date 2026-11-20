@@ -36,6 +36,8 @@ lint.select = [
   "PGH",
   # perflint
   "PERF",
+  # flake8-use-pathlib
+  "PTH",
   # unnecessary-iterable-allocation-for-first-element
   "RUF015",
 ]
