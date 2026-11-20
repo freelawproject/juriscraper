@@ -2816,6 +2816,13 @@
       "severity": "error"
     },
     {
+      "column": 32,
+      "path": "juriscraper/pacer/email.py",
+      "name": "unbound-name",
+      "concise_description": "`subject_split_case_name` may be uninitialized",
+      "severity": "error"
+    },
+    {
       "column": 31,
       "path": "juriscraper/pacer/email.py",
       "name": "missing-attribute",
@@ -3187,6 +3194,13 @@
       "severity": "error"
     },
     {
+      "column": 20,
+      "path": "juriscraper/scotus/_scotus_docket_report_parsing.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `QName` has no attribute `lower`",
+      "severity": "error"
+    },
+    {
       "column": 33,
       "path": "juriscraper/scotus/_scotus_docket_report_parsing.py",
       "name": "missing-attribute",
@@ -3229,16 +3243,23 @@
       "severity": "error"
     },
     {
+      "column": 19,
+      "path": "juriscraper/state/florida/cases.py",
+      "name": "bad-specialization",
+      "concise_description": "`FloridaDocketEntry` is not assignable to upper bound `DocketEntry[Document]` of type variable `_DocketDocketEntry`",
+      "severity": "error"
+    },
+    {
       "column": 5,
       "path": "juriscraper/state/texas/supreme_court.py",
-      "name": "bad-override-mutable-attribute",
+      "name": "bad-override",
       "concise_description": "Class member `TexasSupremeCourtDocket.case_events` overrides parent class `TexasCommonData` in an inconsistent manner",
       "severity": "error"
     },
     {
       "column": 5,
       "path": "juriscraper/state/texas/supreme_court.py",
-      "name": "bad-override-mutable-attribute",
+      "name": "bad-override",
       "concise_description": "Class member `TexasSupremeCourtDocket.appellate_briefs` overrides parent class `TexasCommonData` in an inconsistent manner",
       "severity": "error"
     },
