@@ -41,7 +41,7 @@ class Site(OpinionSite):
 
     def _get_precedential_statuses(self):
         statuses = []
-        for _ in range(0, len(self.case_names)):
+        for _ in range(len(self.case_names)):
             if "recprec" in self.url:
                 statuses.append("Published")
             elif "recnonprec" in self.url:

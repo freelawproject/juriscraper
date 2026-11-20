@@ -237,7 +237,6 @@ class ShowCaseDocApi(BaseReport):
     @override
     def _parse_text(self, text: str) -> None:
         """Just a stub. No parsing needed here."""
-        pass
 
     @property
     def data(self):
@@ -270,7 +269,6 @@ class AcmsCaseSearch(BaseReport):
     @override
     def _parse_text(self, text: str) -> None:
         """Just a stub. No parsing needed here."""
-        pass
 
     @property
     def data(self):

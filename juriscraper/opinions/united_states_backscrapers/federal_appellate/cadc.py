@@ -54,7 +54,7 @@ class Site(OpinionSite):
         )
 
     def _get_precedential_statuses(self):
-        return ["Published" for _ in range(0, len(self.case_names))]
+        return ["Published" for _ in range(len(self.case_names))]
 
     async def _download_backwards(self, d):
         self.url = "https://www.cadc.uscourts.gov/internet/opinions.nsf/OpinionsByRDate?OpenView&count=100&SKey={}".format(

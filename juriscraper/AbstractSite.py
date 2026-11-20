@@ -160,7 +160,7 @@ class AbstractSite:
         return "\n".join(out)
 
     def __iter__(self):
-        for i in range(0, len(self.case_names)):
+        for i in range(len(self.case_names)):
             yield self._make_item(i)
 
     def __getitem__(self, i):
@@ -246,7 +246,6 @@ class AbstractSite:
         Does nothing, but provides a hook that allows inheriting objects to
         tweak the requests object if necessary.
         """
-        pass
 
     def _clean_text(self, text):
         """A hook for subclasses to override if needed."""
@@ -269,7 +268,6 @@ class AbstractSite:
         """This provides an hook for subclasses to do custom work on the data
         after the parsing is complete.
         """
-        pass
 
     def no_results_warning(self) -> None:
         if self.should_have_results:
@@ -514,7 +512,6 @@ class AbstractSite:
         extract the cases form the html in a linear function (here) as opposed
         to using separate data getters.  See sc.py for example.
         """
-        pass
 
     def _process_request_parameters(self, parameters=None):
         """Hook for processing injected parameter overrides"""

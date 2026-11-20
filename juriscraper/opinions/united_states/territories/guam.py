@@ -165,7 +165,6 @@ class Site(OpinionSiteLinear):
                 return date_match.group()
             except ParserError:
                 logger.warning("Unable to find date %s", text)
-                pass
 
     @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:

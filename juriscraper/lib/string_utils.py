@@ -343,7 +343,7 @@ def harmonize(text) -> str:
     result = re.sub(ET_AL, "", result)
 
     # Fix the No. and Nos.
-    if result.startswith("No.") or result.startswith("Nos."):
+    if result.startswith(("No.", "Nos.")):
         result = re.sub(r"^Nos?\.\s+", "", result)
 
     return clean_string(result)

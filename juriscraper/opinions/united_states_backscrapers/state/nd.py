@@ -141,7 +141,7 @@ class Site(nd.Site):
         # Remove any information that applies to non-appellate cases.
         if self.neutral_citations:
             delete_items = []
-            for i in range(0, len(self.neutral_citations)):
+            for i in range(len(self.neutral_citations)):
                 if "App" in self.neutral_citations[i]:
                     delete_items.append(i)
 

@@ -199,7 +199,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
 
         for value in field_mappings.values():
             if value not in meta_data:
-                if value.startswith("date_") or value.startswith("last_date_"):
+                if value.startswith(("date_", "last_date_")):
                     meta_data[value] = None
                 else:
                     meta_data[value] = ""
@@ -388,7 +388,7 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
 
         value = value.strip()
         value = value.lstrip(":").strip()
-        if label.startswith("date_") or label.startswith("last_date_"):
+        if label.startswith(("date_", "last_date_")):
             if value:
                 data = {label: convert_date_string(value)}
             else:

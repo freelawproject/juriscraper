@@ -252,7 +252,6 @@ class TAMESScraper(BaseStateScraper):
                         logger.warning(
                             "Missing/malformed filing date from case: %s", case
                         )
-                        pass
                 if case["case_url"] in last_seen_case_urls:
                     redundant_cases += 1
                 elif case["case_url"] in current_seen_case_urls:
