@@ -40,10 +40,7 @@ class Site(nd.Site):
         else:
             path = "//ul//a[text()]/@href"
             seed = list(self.html.xpath(path))
-        case_names = []
-        for case in seed:
-            case_names.append(await fetcher(case))
-        return case_names
+        return [await fetcher(case) for case in seed]
 
     def _get_case_names(self):
         if self.crawl_date >= date(1998, 10, 1):
@@ -137,10 +134,11 @@ class Site(nd.Site):
     def _post_parse(self):
         # Remove any information that applies to non-appellate cases.
         if self.neutral_citations:
-            delete_items = []
-            for i in range(len(self.neutral_citations)):
-                if "App" in self.neutral_citations[i]:
-                    delete_items.append(i)
+            delete_items = [
+                i
+                for i in range(len(self.neutral_citations))
+                if "App" in self.neutral_citations[i]
+            ]
 
             for i in sorted(delete_items, reverse=True):
                 del self.download_urls[i]

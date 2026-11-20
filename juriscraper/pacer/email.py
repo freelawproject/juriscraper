@@ -963,13 +963,13 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 "",
             ),
         ]
-        for end_point in self.docket_numbers:
-            replacements.append(
-                (
-                    f"{re.escape(end_point)}.*$",
-                    "",
-                )
+        replacements.extend(
+            (
+                f"{re.escape(end_point)}.*$",
+                "",
             )
+            for end_point in self.docket_numbers
+        )
 
         for replacement in replacements:
             text_content = re.sub(replacement[0], replacement[1], text_content)

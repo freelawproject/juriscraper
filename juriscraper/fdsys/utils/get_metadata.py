@@ -56,34 +56,29 @@ def get_parties(tree):
     party_nodes = xpath(tree, "//m:party")
     party_nodes = get_unique_nodes(party_nodes)
 
-    parties = []
-    for party_node in party_nodes:
-        parties.append(
-            {
-                "name_first": xpath(party_node, "@m:firstName"),
-                "name_last": xpath(party_node, "@m:lastName"),
-                "name_middle": xpath(party_node, "@m:middleName"),
-                "name_suffix": xpath(party_node, "@m:generation"),
-                "role": xpath(party_node, "@m:role"),
-            }
-        )
-    return parties
+    return [
+        {
+            "name_first": xpath(party_node, "@m:firstName"),
+            "name_last": xpath(party_node, "@m:lastName"),
+            "name_middle": xpath(party_node, "@m:middleName"),
+            "name_suffix": xpath(party_node, "@m:generation"),
+            "role": xpath(party_node, "@m:role"),
+        }
+        for party_node in party_nodes
+    ]
 
 
 def get_documents(tree):
     """Get the documents from the XML into a nice object."""
     document_nodes = xpath(tree, "//m:mods/m:relatedItem")
-    documents = []
-    for document_node in document_nodes:
-        documents.append(
-            {
-                "download_url": xpath(
-                    document_node, "m:relatedItem/@xlink:href"
-                ),
-                "description": xpath(document_node, "//m:subTitle"),
-                "date_filed": xpath(document_node, "XXX"),
-            }
-        )
+    return [
+        {
+            "download_url": xpath(document_node, "m:relatedItem/@xlink:href"),
+            "description": xpath(document_node, "//m:subTitle"),
+            "date_filed": xpath(document_node, "XXX"),
+        }
+        for document_node in document_nodes
+    ]
 
 
 def print_xpath_results():

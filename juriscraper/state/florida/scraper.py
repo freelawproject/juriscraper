@@ -694,10 +694,8 @@ async def get_cases(
 ) -> tuple[dict[FloridaCourtID, CourtMetadata], list[FloridaCase]]:
     """Run the scraper on a given date range"""
     scraper = FloridaScraper(rps=2.5)
-    cases = []
 
-    async for case in scraper.backfill(start, end):
-        cases.append(case)
+    cases = [case async for case in scraper.backfill(start, end)]
 
     return (await scraper.courts), cases
 

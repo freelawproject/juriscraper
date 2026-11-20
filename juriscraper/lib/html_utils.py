@@ -235,7 +235,6 @@ def clean_html(text: str) -> str:
     )
 
 
-
 def fix_links_but_keep_anchors(link: str) -> str:
     # Wrap the function below so that we have one that can be passed to
     # lxml's rewrite_links method, which doesn't accept any parameters.
@@ -298,11 +297,7 @@ def table_to_array2d(table: HtmlElement) -> list[list[HtmlElement]]:
     # Use direct children only to avoid picking up nested tables.
     rows = table.findall("./tr") or table.findall("./tbody/tr")
 
-    out = []
-    for row in rows:
-        out.append(list(row.findall("./td")))
-
-    return out
+    return [list(row.findall("./td")) for row in rows]
 
 
 def parse_table(table: HtmlElement) -> dict[str, list[HtmlElement]]:

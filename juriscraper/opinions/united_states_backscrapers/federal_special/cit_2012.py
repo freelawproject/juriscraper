@@ -53,14 +53,12 @@ class Site(cit.Site):
         return dates
 
     def _get_docket_numbers(self):
-        docket_numbers = []
-        for e in self.html.xpath(
-            "//table[4]//tr[position() > 1]/td[4][../td//a]"
-        ):
-            docket_numbers.append(
-                html.tostring(e, method="text", encoding="unicode").strip()
+        return [
+            html.tostring(e, method="text", encoding="unicode").strip()
+            for e in self.html.xpath(
+                "//table[4]//tr[position() > 1]/td[4][../td//a]"
             )
-        return docket_numbers
+        ]
 
     def _get_judges(self):
         judges = []

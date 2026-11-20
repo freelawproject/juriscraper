@@ -122,9 +122,9 @@ class AppellateAttachmentPage(BaseReport):
         """
         try:
             rows = self.tree.xpath("//tbody/tr/td/a/@href")
-            pacer_doc_ids = []
-            for url_row in rows:
-                pacer_doc_ids.append(get_pacer_doc_id_from_doc1_url(url_row))
+            pacer_doc_ids = [
+                get_pacer_doc_id_from_doc1_url(url_row) for url_row in rows
+            ]
             return sorted(pacer_doc_ids)[0]
         except IndexError:
             return None

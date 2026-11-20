@@ -280,9 +280,10 @@ class Site(ClusterSite):
         start = self.back_scrape_iterable[0][0]
         end = self.back_scrape_iterable[-1][-1]
 
-        dates = []
-        for year in list(range(start.year, end.year + 1)):
-            dates.append((year, start, end))
+        dates = [
+            (year, start, end)
+            for year in list(range(start.year, end.year + 1))
+        ]
         self.back_scrape_iterable = dates
 
     async def _download_backwards(

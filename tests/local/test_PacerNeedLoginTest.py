@@ -23,8 +23,10 @@ class PacerNeedLoginTest(unittest.IsolatedAsyncioTestCase):
     def parse_files(self, path_root, file_ext):
         paths = []
         for root, _, filenames in os.walk(path_root):
-            for filename in fnmatch.filter(filenames, file_ext):
-                paths.append(os.path.join(root, filename))
+            paths.extend(
+                os.path.join(root, filename)
+                for filename in fnmatch.filter(filenames, file_ext)
+            )
         paths.sort()
         path_max_len = max(len(path) for path in paths) + 2
         for i, path in enumerate(paths):

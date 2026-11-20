@@ -34,6 +34,8 @@ lint.select = [
   "SLOT",
   # pygrep-hooks
   "PGH",
+  # perflint
+  "PERF",
 ]
 lint.ignore = [
   # flake8-bugbear opinionated rules

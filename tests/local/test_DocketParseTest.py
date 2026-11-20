@@ -29,8 +29,10 @@ class DocketParseTest(unittest.TestCase):
         """Test all the parsers, faking the network query."""
         paths = []
         for root, _, filenames in os.walk(path_root):
-            for filename in fnmatch.filter(filenames, "*.html"):
-                paths.append(os.path.join(root, filename))
+            paths.extend(
+                os.path.join(root, filename)
+                for filename in fnmatch.filter(filenames, "*.html")
+            )
         paths.sort()
         path_max_len = max(len(path) for path in paths) + 2
         for i, path in enumerate(paths):

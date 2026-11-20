@@ -51,10 +51,9 @@ class Site(OpinionSite):
         return case_names
 
     def _get_download_urls(self):
-        download_urls = []
-        for e in self.html.xpath('//li[@class="MsoNormal"]/span/a[1]/@href'):
-            download_urls.append(e)
-        return download_urls
+        return list(
+            self.html.xpath('//li[@class="MsoNormal"]/span/a[1]/@href')
+        )
 
     def _get_case_dates(self):
         case_dates = []

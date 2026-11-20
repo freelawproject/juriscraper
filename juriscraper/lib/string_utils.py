@@ -169,9 +169,7 @@ def titlecase(text: str, DEBUG: bool = False) -> str:
                 )
                 continue
 
-            hyphenated = []
-            for item in word.split("-"):
-                hyphenated.append(_uppercase_word(item))
+            hyphenated = [_uppercase_word(item) for item in word.split("-")]
             tc_line.append("-".join(hyphenated))
 
         result = " ".join(tc_line)
@@ -192,7 +190,6 @@ def titlecase(text: str, DEBUG: bool = False) -> str:
 
     # replace V. with v.
     return re.sub(re.compile(r"\WV\.\W"), " v. ", text)
-
 
 
 def _uppercase_word(word: str) -> str:
@@ -405,7 +402,6 @@ def clean_string(s) -> str:
     return s.replace("\u00a0", " ")
 
 
-
 def force_unicode(
     s, encoding="utf-8", strings_only=False, errors="strict"
 ) -> str:
@@ -452,10 +448,7 @@ def force_unicode(
         # further exception by individually forcing the exception args
         # to unicode.
         s = " ".join(
-            [
-                force_unicode(arg, encoding, strings_only, errors)
-                for arg in s
-            ]
+            [force_unicode(arg, encoding, strings_only, errors) for arg in s]
         )
     return s
 
@@ -727,9 +720,11 @@ class CaseNameTweaker:
         # Add variations with punctuation
         punctuation_bad_words = []
         for word in bad_words:
-            for punctuation in string.punctuation:
-                if not word.endswith(punctuation):
-                    punctuation_bad_words.append(f"{word}{punctuation}")
+            punctuation_bad_words.extend(
+                f"{word}{punctuation}"
+                for punctuation in string.punctuation
+                if not word.endswith(punctuation)
+            )
         bad_words = bad_words + punctuation_bad_words
 
         bad_words = [s.lower() for s in bad_words]

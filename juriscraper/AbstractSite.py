@@ -503,7 +503,6 @@ class AbstractSite:
 
         return self.cleanup_content(r.content)
 
-
     def _process_html(self) -> None | Awaitable[None]:
         """Hook for processing available self.html after it's been downloaded.
         This step is completely optional, but is useful if you want to transform
@@ -753,10 +752,10 @@ class AbstractSite:
 
     def _get_case_name_shorts(self):
         """Generates short case names for all the case names that we scrape."""
-        case_name_shorts = []
-        for case_name in self.case_names:
-            case_name_shorts.append(self.cnt.make_case_name_short(case_name))
-        return case_name_shorts
+        return [
+            self.cnt.make_case_name_short(case_name)
+            for case_name in self.case_names
+        ]
 
     def _get_blocked_statuses(self):
         """Should these items be blocked by search engines? Default is False for
