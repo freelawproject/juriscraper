@@ -101,7 +101,7 @@ class Site(ClusterSite, mich.Site):
                 extra={"search_items": search_items},
             )
             return "Placeholder name", docket_number
-        elif len(search_items) > 1:
+        if len(search_items) > 1:
             logger.error(
                 "michctapp: more than 1 from search API for docket %s "
                 % docket_number,

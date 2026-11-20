@@ -1,3 +1,4 @@
+import pathlib
 import pprint
 import re
 import sys
@@ -122,9 +123,9 @@ class AppellateAttachmentPage(BaseReport):
         """
         try:
             rows = self.tree.xpath("//tbody/tr/td/a/@href")
-            pacer_doc_ids = []
-            for url_row in rows:
-                pacer_doc_ids.append(get_pacer_doc_id_from_doc1_url(url_row))
+            pacer_doc_ids = [
+                get_pacer_doc_id_from_doc1_url(url_row) for url_row in rows
+            ]
             return sorted(pacer_doc_ids)[0]
         except IndexError:
             return None
@@ -135,8 +136,7 @@ class AppellateAttachmentPage(BaseReport):
         :param row: Table row as an lxml element
         :return: Attachment number for row
         """
-        number = int(row.xpath(".//td/text()")[0].strip())
-        return number
+        return int(row.xpath(".//td/text()")[0].strip())
 
     def _get_description_from_tr(self, row: html.HtmlElement) -> str:
         """Get the description from the row
@@ -211,8 +211,7 @@ class AppellateAttachmentPage(BaseReport):
         m = re.search(r"[?&]caseid=(\d+)", script_html, flags=re.I)
         if m:
             return m.group(1)
-        else:
-            return None
+        return None
 
     def _get_pacer_seq_no(self) -> str | None:
         """Get pacer sequence number.
@@ -224,8 +223,7 @@ class AppellateAttachmentPage(BaseReport):
         m = re.search(r"[?&]d=(\d+)&outputForm", script_html, flags=re.I)
         if m:
             return m.group(1)
-        else:
-            return None
+        return None
 
 
 def main():
@@ -240,7 +238,7 @@ def main():
     )  # Court ID is only needed for querying.
     filepath = sys.argv[1]
     print(f"Parsing HTML file at {filepath}")
-    with open(filepath) as f:
+    with pathlib.Path(filepath).open() as f:
         text = f.read()
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)

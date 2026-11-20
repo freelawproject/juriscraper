@@ -126,8 +126,8 @@ class DocketHistoryReport(DocketReport):
             raise ValueError("Invalid value for 'order_by' parameter.")
 
         logger.info(
-            "Getting nonce for docket history report with "
-            "pacer_case_id: %s" % pacer_case_id
+            "Getting nonce for docket history report with pacer_case_id: %s",
+            pacer_case_id,
         )
         r = await self.session.get(f"{self.url}?{pacer_case_id}")
         nonce = get_nonce_from_form(r)
@@ -141,7 +141,10 @@ class DocketHistoryReport(DocketReport):
 
         logger.info(
             "Querying docket history report for case ID '%s' with "
-            "params %s and nonce %s" % (pacer_case_id, query_params, nonce)
+            "params %s and nonce %s",
+            pacer_case_id,
+            query_params,
+            nonce,
         )
 
         self.response = await self.session.post(
@@ -215,6 +218,7 @@ class DocketHistoryReport(DocketReport):
             m = regex.search(s)
             if m:
                 return convert_date_string(m.group(1))
+        return None
 
     def _get_date_entered(self, cell):
         s = clean_string(cell.text_content())
@@ -223,6 +227,7 @@ class DocketHistoryReport(DocketReport):
             m = regex.search(s)
             if m:
                 return convert_date_string(m.group(1))
+        return None
 
     def _set_metadata_values(self):
         text_nodes = self.tree.xpath("//center[not(.//table)]//text()")
@@ -261,10 +266,8 @@ class DocketHistoryReport(DocketReport):
                         if cn_match:
                             matches.add(cn_match.group(1))
         if len(matches) == 1:
-            case_name = list(matches)[0]
-        else:
-            case_name = "Unknown Case Title"
-        return harmonize(case_name)
+            return harmonize(next(iter(matches)))
+        return harmonize("Unknown Case Title")
 
     def _parse_docket_number(
         self,
@@ -306,3 +309,4 @@ class DocketHistoryReport(DocketReport):
         else:
             # Look for string like "Michael J. Fox, presiding"
             return self._get_judge(self.assigned_to_regex)
+        return None

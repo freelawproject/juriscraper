@@ -17,7 +17,7 @@
 #  - 2021-12-28: Updated by flooie to remove selenium.
 #  - 2024-02-21; Updated by grossir: handle dynamic backscrapes
 
-import os
+import pathlib
 import re
 from datetime import date, datetime, timedelta
 from urllib.parse import urlparse
@@ -180,7 +180,7 @@ class Site(ClusterSite):
         # The source pages list each opinion in its own row, so skip
         # cases that were already parsed
         if case_url in self.seen_case_urls:
-            return None
+            return
         self.seen_case_urls.add(case_url)
 
         case_dict = await self.parse_case_page(case_url, op_date)
@@ -207,7 +207,7 @@ class Site(ClusterSite):
                 case_dict["docket"][:2],
                 self.court_number,
             )
-            return None
+            return
 
         if not case_dict["sub_opinions"]:
             # Some cases have opinion documents mislabeled on the
@@ -219,7 +219,7 @@ class Site(ClusterSite):
                 "Skipping docket %s - no opinion documents found",
                 case_dict["docket"],
             )
-            return None
+            return
 
         self.cases.append(case_dict)
 
@@ -230,9 +230,9 @@ class Site(ClusterSite):
         :return: HTML object of the page
         """
         if self.test_mode_enabled():
-            self.mock_url = os.path.join(
-                os.path.dirname(self.mock_url),
-                os.path.basename(urlparse(link).path),
+            self.mock_url = str(
+                pathlib.Path(self.mock_url).parent
+                / pathlib.Path(urlparse(link).path).name
             )
             await self._request_url_mock(link)
             return self._return_response_text_object()
@@ -350,10 +350,9 @@ class Site(ClusterSite):
             # add the state of texas in some cases but not others.
             if defendant:
                 return titlecase(f"{plaintiff} v. {defendant}")
-            elif "WR-" not in link:
+            if "WR-" not in link:
                 return titlecase(f"{plaintiff} v. The State of Texas")
-            else:
-                return titlecase(f"{plaintiff}")
+            return titlecase(f"{plaintiff}")
         except IndexError:
             logger.warning(f"No title or defendant found for {self.url}")
             return ""

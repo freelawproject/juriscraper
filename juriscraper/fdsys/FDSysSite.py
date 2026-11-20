@@ -1,5 +1,5 @@
-import glob
 import json
+import pathlib
 import re
 from collections import defaultdict
 from datetime import date
@@ -163,7 +163,7 @@ class FDSysSite(AbstractSite):
     async def save_mods_file(self, url, **kwargs):
         mods_url = FDSysModsContent._get_mods_file_url(url)
         name = "-".join(mods_url.split("/")[-2].split("-")[1:])
-        with open(f"./examples/2006/{name}.xml", "wb") as handle:
+        with pathlib.Path(f"./examples/2006/{name}.xml").open("wb") as handle:
             kwargs.setdefault("http2", True)
             async with (
                 httpx.AsyncClient(**kwargs) as client,
@@ -202,8 +202,8 @@ def get_court_locations_list():
     """
     court_locations_list = defaultdict(set)
     # parse all the example files
-    for f in glob.glob("./examples/*/*.xml"):
-        fm = FDSysModsContent(f)
+    for f in pathlib.Path("examples").glob("*/*.xml"):
+        fm = FDSysModsContent(str(f))
         print(f, fm.court_id, fm.court_location)
         court_locations_list[fm.court_id].add(fm.court_location)
 
@@ -213,7 +213,7 @@ def get_court_locations_list():
         cl[k] = list(v)
 
     # save as json
-    with open("court_locations.json", "w") as j:
+    with pathlib.Path("court_locations.json").open("w") as j:
         json.dump(cl, j)
 
 
@@ -221,8 +221,8 @@ def get_the_first_5_words():
     l = defaultdict(list)  # noqa: E741
     p = defaultdict(list)
     word_counter = defaultdict(int)
-    for f in glob.glob("./examples/*/*.xml"):
-        fm = FDSysModsContent(f)
+    for f in pathlib.Path("examples").glob("*/*.xml"):
+        fm = FDSysModsContent(str(f))
         print(f, fm.court_id, fm.court_location)
         for document in fm.documents:
             try:
@@ -242,13 +242,13 @@ def get_the_first_5_words():
             l[f.__repr__()].append(ws)
             p[f.__repr__()].append(" ".join(words_to_use))
 
-    with open("first_8_words_string.json", "w") as pc:
+    with pathlib.Path("first_8_words_string.json").open("w") as pc:
         json.dump(p, pc)
 
-    with open("first_five_words.json", "w") as j:
+    with pathlib.Path("first_five_words.json").open("w") as j:
         json.dump(l, j)
 
-    with open("first_five_words_counter.json", "w") as c:
+    with pathlib.Path("first_five_words_counter.json").open("w") as c:
         json.dump(word_counter, c)
 
 

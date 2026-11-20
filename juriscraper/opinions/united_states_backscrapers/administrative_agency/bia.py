@@ -12,7 +12,7 @@ class Site(bia.Site):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.back_scrape_iterable = range(0, 21)
+        self.back_scrape_iterable = range(21)
 
     async def _download_backwards(self, volume: int) -> None:
         """Download backwards over the volume links in the DOJ BIA website.

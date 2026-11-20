@@ -1,6 +1,6 @@
 # !/usr/bin/python
 import argparse
-import glob
+import pathlib
 
 from lxml import etree
 from lxml.etree import _Element
@@ -13,7 +13,7 @@ def print_xpath_results(query):
     total_file_count = 0
     equalities = 0
     unique_items = set()
-    for f in glob.glob("../examples/**/*.xml"):
+    for f in pathlib.Path("../examples").glob("*/*.xml"):
         total_file_count += 1
         indent = ""
         print(f"\n{indent}{f}:")

@@ -5,8 +5,6 @@ from typing import Generic, TypeVar, final
 class ParserValidationError(Exception):
     """Exception raised when a parser fails the validation step."""
 
-    pass
-
 
 _ParserInput = TypeVar("_ParserInput")
 _ParserOutput = TypeVar("_ParserOutput")

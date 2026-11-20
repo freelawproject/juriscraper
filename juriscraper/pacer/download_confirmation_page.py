@@ -225,8 +225,4 @@ class DownloadConfirmationPage(BaseReport):
             transaction_date_str = transaction_date_str.split("-")[-1]
 
         transaction_date_str = force_unicode(transaction_date_str)
-        transaction_date = convert_date_string(
-            transaction_date_str, datetime=True
-        )
-
-        return transaction_date
+        return convert_date_string(transaction_date_str, datetime=True)

@@ -3,7 +3,7 @@ import hashlib
 import http.cookiejar
 import inspect
 import json
-import os
+import pathlib
 import ssl
 import urllib.parse
 import urllib.request
@@ -160,7 +160,7 @@ class AbstractSite:
         return "\n".join(out)
 
     def __iter__(self):
-        for i in range(0, len(self.case_names)):
+        for i in range(len(self.case_names)):
             yield self._make_item(i)
 
     def __getitem__(self, i):
@@ -246,7 +246,6 @@ class AbstractSite:
         Does nothing, but provides a hook that allows inheriting objects to
         tweak the requests object if necessary.
         """
-        pass
 
     def _clean_text(self, text):
         """A hook for subclasses to override if needed."""
@@ -269,15 +268,15 @@ class AbstractSite:
         """This provides an hook for subclasses to do custom work on the data
         after the parsing is complete.
         """
-        pass
 
     def no_results_warning(self) -> None:
         if self.should_have_results:
             logger.error(
-                f"{self.court_id}: Returned with zero items, but should have results."
+                "%s: Returned with zero items, but should have results.",
+                self.court_id,
             )
         else:
-            logger.warning(f"{self.court_id}: Returned with zero items.")
+            logger.warning("%s: Returned with zero items.", self.court_id)
 
     def _check_sanity(self):
         """Check that the objects attributes make sense:
@@ -342,8 +341,9 @@ class AbstractSite:
         )
 
         logger.info(
-            "%s: Successfully found %s items."
-            % (self.court_id, len(self.case_names))
+            "%s: Successfully found %s items.",
+            self.court_id,
+            len(self.case_names),
         )
 
     def _date_sort(self):
@@ -389,11 +389,12 @@ class AbstractSite:
             for k, v in self.parameters.items():
                 truncated_params[k] = trunc(v, 50, ellipsis="...[truncated]")
             logger.info(
-                "Now downloading case page at: %s (params: %s)"
-                % (self.url, truncated_params)
+                "Now downloading case page at: %s (params: %s)",
+                self.url,
+                truncated_params,
             )
         else:
-            logger.info(f"Now downloading case page at: {self.url}")
+            logger.info("Now downloading case page at: %s", self.url)
 
         self._process_request_parameters(request_dict)
 
@@ -401,9 +402,9 @@ class AbstractSite:
             await self._request_url_mock(self.url)
             self._post_process_response()
             return self._return_response_text_object()
-        elif self.use_urllib:
+        if self.use_urllib:
             return self._download_urllib()
-        elif self.method == "GET":
+        if self.method == "GET":
             await self._request_url_get(self.url)
         elif self.method == "POST":
             await self._request_url_post(self.url)
@@ -455,14 +456,14 @@ class AbstractSite:
             def handler(request: httpx.Request):
                 r = httpx.Response(status_code=404, request=request)
                 try:
-                    url = os.path.join(media_root, download_url)
-                    with open(url, mode="rb") as stream:
+                    url = pathlib.Path(media_root) / download_url
+                    with url.open(mode="rb") as stream:
                         r = httpx.Response(
                             status_code=200,
                             request=request,
                             content=stream.read(),
                         )
-                        if url.endswith("json"):
+                        if url.name.endswith("json"):
                             r.headers["content-type"] = "application/json"
                 except OSError as e:
                     raise httpx.ConnectError(message=str(e), request=request)
@@ -500,9 +501,7 @@ class AbstractSite:
             r = await follow_redirections(r, s)
             r.raise_for_status()
 
-        content = self.cleanup_content(r.content)
-
-        return content
+        return self.cleanup_content(r.content)
 
     def _process_html(self) -> None | Awaitable[None]:
         """Hook for processing available self.html after it's been downloaded.
@@ -511,7 +510,6 @@ class AbstractSite:
         extract the cases form the html in a linear function (here) as opposed
         to using separate data getters.  See sc.py for example.
         """
-        pass
 
     def _process_request_parameters(self, parameters=None):
         """Hook for processing injected parameter overrides"""
@@ -540,8 +538,7 @@ class AbstractSite:
             return json.loads(text)
 
         text = self._clean_text(text)
-        html_tree = self._make_html_tree(text)
-        return html_tree
+        return self._make_html_tree(text)
 
     def _urllib_fetch(self, url, data=None, headers=None):
         """Fetch a URL using urllib to bypass Cloudflare TLS fingerprinting.
@@ -610,7 +607,7 @@ class AbstractSite:
 
         def handler(request: httpx.Request):
             try:
-                with open(self.mock_url, mode="rb") as stream:
+                with pathlib.Path(self.mock_url).open(mode="rb") as stream:
                     content = stream.read()
                     try:
                         text = content.decode("utf-8")
@@ -644,19 +641,19 @@ class AbstractSite:
                 "content-type", ""
             ):
                 return self.request["response"].json()
-            else:
-                try:
-                    payload = self.request["response"].content.decode("utf8")
-                except Exception:
-                    payload = self.request["response"].text
+            try:
+                payload = self.request["response"].content.decode("utf8")
+            except Exception:
+                payload = self.request["response"].text
 
-                text = self._clean_text(payload)
-                html_tree = self._make_html_tree(text)
-                if hasattr(html_tree, "rewrite_links"):
-                    html_tree.rewrite_links(
-                        fix_links_in_lxml_tree, base_href=self.request["url"]
-                    )
-                return html_tree
+            text = self._clean_text(payload)
+            html_tree = self._make_html_tree(text)
+            if hasattr(html_tree, "rewrite_links"):
+                html_tree.rewrite_links(
+                    fix_links_in_lxml_tree, base_href=self.request["url"]
+                )
+            return html_tree
+        return None
 
     async def _get_html_tree_by_url(self, url, parameters=None):
         if parameters is None:
@@ -755,10 +752,10 @@ class AbstractSite:
 
     def _get_case_name_shorts(self):
         """Generates short case names for all the case names that we scrape."""
-        case_name_shorts = []
-        for case_name in self.case_names:
-            case_name_shorts.append(self.cnt.make_case_name_short(case_name))
-        return case_name_shorts
+        return [
+            self.cnt.make_case_name_short(case_name)
+            for case_name in self.case_names
+        ]
 
     def _get_blocked_statuses(self):
         """Should these items be blocked by search engines? Default is False for

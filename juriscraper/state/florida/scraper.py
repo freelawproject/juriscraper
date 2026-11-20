@@ -24,6 +24,7 @@ yielded to the caller which is responsible for storage.
 from __future__ import annotations
 
 import asyncio
+import pathlib
 from collections.abc import AsyncGenerator, Awaitable, Mapping
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta
@@ -694,10 +695,8 @@ async def get_cases(
 ) -> tuple[dict[FloridaCourtID, CourtMetadata], list[FloridaCase]]:
     """Run the scraper on a given date range"""
     scraper = FloridaScraper(rps=2.5)
-    cases = []
 
-    async for case in scraper.backfill(start, end):
-        cases.append(case)
+    cases = [case async for case in scraper.backfill(start, end)]
 
     return (await scraper.courts), cases
 
@@ -725,7 +724,7 @@ def _main():
     courts, cases = asyncio.run(get_cases(args.start, args.end))
 
     if args.output:
-        with open(args.output, "wb") as f:
+        with pathlib.Path(args.output).open("wb") as f:
             f.write(
                 pydantic_core.to_json(
                     {

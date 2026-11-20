@@ -316,7 +316,7 @@ class SCOTUSEmail:
 
         if self.DOCKET_ENTRY_SUBJECT_REGEX.match(subject) is not None:
             return SCOTUSEmailType.DOCKET_ENTRY
-        elif self.CONFIRMATION_SUBJECT_REGEX.match(subject) is not None:
+        if self.CONFIRMATION_SUBJECT_REGEX.match(subject) is not None:
             return SCOTUSEmailType.CONFIRMATION
         logger.error(
             "Email subject did not match known patterns. Subject: %s", subject
@@ -502,7 +502,7 @@ def _main():
     report = SCOTUSEmail()
     filepath = sys.argv[1]
     print(f"Parsing email file at {filepath}")
-    with open(filepath, encoding="utf-8") as f:
+    with Path(filepath).open(encoding="utf-8") as f:
         text = f.read()
 
     report._parse_text(text)

@@ -1,4 +1,5 @@
 import json
+import pathlib
 import pprint
 import sys
 import unicodedata
@@ -149,8 +150,9 @@ class ACMSAttachmentPage(BaseReport):
         )
         if not entry_data:
             logger.warning(
-                "Docket entry with ID '%s' not found in case '%s'."
-                % (entry_id, case_id)
+                "Docket entry with ID '%s' not found in case '%s'.",
+                entry_id,
+                case_id,
             )
             self.is_valid = False
             self._acms_json = {}
@@ -243,7 +245,7 @@ def main():
     report = ACMSAttachmentPage("cand")
     filepath = sys.argv[1]
     print(f"Parsing JSON file at {filepath}")
-    with open(filepath) as f:
+    with pathlib.Path(filepath).open() as f:
         text = f.read()
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)
