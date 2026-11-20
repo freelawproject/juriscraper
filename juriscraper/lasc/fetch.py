@@ -252,7 +252,6 @@ class LASCSearch:
 
         return clean_court_object(clean_data)
 
-
     def _check_success(self, r):
         if r.json()["IsSuccess"]:
             self.case_data = r.text

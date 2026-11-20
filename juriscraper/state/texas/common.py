@@ -329,7 +329,6 @@ def _clean_court_name(name: str) -> str:
     return name.replace("1-a", "1a")
 
 
-
 def _originating_court_name_to_type(name: str) -> CourtType:
     """Takes in a normalized trial court name from TAMES and returns a
     standardized type.

@@ -73,7 +73,6 @@ class Site(OpinionSiteLinear):
         match = self.docket_document_number_regex.search(url)
         return match.group(6) if match else url
 
-
     async def _download_backwards(self, year: int) -> None:
         """Build URL with year input and scrape
 

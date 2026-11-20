@@ -88,4 +88,3 @@ async def get_extension(content: bytes) -> str:
         )
     extension_response.raise_for_status()
     return extension_response.text
-

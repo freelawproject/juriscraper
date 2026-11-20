@@ -244,4 +244,3 @@ class Site(ClusterSite):
 
         # text inside may be separated by <br> tags
         return re.sub(r"\s+", " ", summary)
-

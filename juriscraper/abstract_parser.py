@@ -6,7 +6,6 @@ class ParserValidationError(Exception):
     """Exception raised when a parser fails the validation step."""
 
 
-
 _ParserInput = TypeVar("_ParserInput")
 _ParserOutput = TypeVar("_ParserOutput")
 
