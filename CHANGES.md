@@ -12,6 +12,8 @@ Releases are also tagged in git, if that's helpful.
 
 ## Coming up
 
+- Add Washington Attorney General AGO/AGLO opinion scraper with paginated historical coverage.
+
 The following changes are not yet released, but are code complete:
 
 Features:
