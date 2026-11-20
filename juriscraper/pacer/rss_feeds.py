@@ -201,7 +201,7 @@ class PacerRssFeed(DocketReport):
         https://github.com/freelawproject/juriscraper/issues/195#issuecomment-385848344
         """
         assert self.session is not None
-        logger.info(f"Querying the RSS feed for {self.court_id}")
+        logger.info("Querying the RSS feed for %s", self.court_id)
         # The timeout here is a bit tricky. Too long, and national PACER
         # outages cause us grief. Too short and slow courts don't get done.
         # Previously, this value has been (60, 300), then 5. Hopefully the

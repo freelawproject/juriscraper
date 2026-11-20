@@ -274,10 +274,11 @@ class AbstractSite:
     def no_results_warning(self) -> None:
         if self.should_have_results:
             logger.error(
-                f"{self.court_id}: Returned with zero items, but should have results."
+                "%s: Returned with zero items, but should have results.",
+                self.court_id,
             )
         else:
-            logger.warning(f"{self.court_id}: Returned with zero items.")
+            logger.warning("%s: Returned with zero items.", self.court_id)
 
     def _check_sanity(self):
         """Check that the objects attributes make sense:
@@ -342,8 +343,9 @@ class AbstractSite:
         )
 
         logger.info(
-            "%s: Successfully found %s items."
-            % (self.court_id, len(self.case_names))
+            "%s: Successfully found %s items.",
+            self.court_id,
+            len(self.case_names),
         )
 
     def _date_sort(self):
@@ -389,11 +391,12 @@ class AbstractSite:
             for k, v in self.parameters.items():
                 truncated_params[k] = trunc(v, 50, ellipsis="...[truncated]")
             logger.info(
-                "Now downloading case page at: %s (params: %s)"
-                % (self.url, truncated_params)
+                "Now downloading case page at: %s (params: %s)",
+                self.url,
+                truncated_params,
             )
         else:
-            logger.info(f"Now downloading case page at: {self.url}")
+            logger.info("Now downloading case page at: %s", self.url)
 
         self._process_request_parameters(request_dict)
 

@@ -683,7 +683,7 @@ class PacerSession(httpx.AsyncClient):
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
             "Accept-Encoding": "gzip, deflate, br",
         }
-        logger.info(f"Attempting to get SAML credentials for {court_id}")
+        logger.info("Attempting to get SAML credentials for %s", court_id)
         # Base URL for retrieving SAML credentials.
         url = self._get_docket_sheet_url(court_id)
         response = await self._prepare_login_request(
@@ -737,7 +737,7 @@ class PacerSession(httpx.AsyncClient):
                 "probably invalid."
             )
 
-        logger.info(f"Establishing ACMS session for {court_id}")
+        logger.info("Establishing ACMS session for %s", court_id)
         saml_url = f"https://{court_id}-showdoc.azurewebsites.us/Saml2/Acs"
         response = await self._prepare_login_request(
             saml_url,
@@ -761,7 +761,7 @@ class PacerSession(httpx.AsyncClient):
             )
         self._desecure_acms_cookies(acms_jar)
         self.acms_cookies[court_id] = acms_jar
-        logger.info(f"ACMS session established for {court_id}")
+        logger.info("ACMS session established for %s", court_id)
 
     # Kept so existing callers don't break on the old name. Unlike the old
     # method, this no longer sets acms_tokens or acms_user_data: ACMS doesn't

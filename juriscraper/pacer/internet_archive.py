@@ -59,7 +59,7 @@ class InternetArchive(BaseDocketReport):
         r = await self.session.get(url, timeout=timeout)
         r.raise_for_status()
         if not is_pdf(r):
-            logger.error(f"Got non-PDF data, but expected a PDF at: {url}")
+            logger.error("Got non-PDF data, but expected a PDF at: %s", url)
             return None
         else:
             return r

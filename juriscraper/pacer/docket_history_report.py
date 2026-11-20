@@ -126,8 +126,8 @@ class DocketHistoryReport(DocketReport):
             raise ValueError("Invalid value for 'order_by' parameter.")
 
         logger.info(
-            "Getting nonce for docket history report with "
-            "pacer_case_id: %s" % pacer_case_id
+            "Getting nonce for docket history report with pacer_case_id: %s",
+            pacer_case_id,
         )
         r = await self.session.get(f"{self.url}?{pacer_case_id}")
         nonce = get_nonce_from_form(r)
@@ -141,7 +141,10 @@ class DocketHistoryReport(DocketReport):
 
         logger.info(
             "Querying docket history report for case ID '%s' with "
-            "params %s and nonce %s" % (pacer_case_id, query_params, nonce)
+            "params %s and nonce %s",
+            pacer_case_id,
+            query_params,
+            nonce,
         )
 
         self.response = await self.session.post(

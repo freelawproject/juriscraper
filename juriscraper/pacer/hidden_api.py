@@ -36,7 +36,7 @@ class PossibleCaseNumberApi(BaseReport):
         )
         url = f"{self.url}?{docket_number.lower()}"
         logger.info(
-            f"Querying the possible case number endpoint at URL: {url}"
+            "Querying the possible case number endpoint at URL: %s", url
         )
         self.response = await self.session.get(url)
         self.parse()
@@ -160,7 +160,9 @@ class PossibleCaseNumberApi(BaseReport):
                 if case_index is None:
                     logger.warning(
                         "Got %s candidates, but unable to find good "
-                        "match to '%s'" % (len(nodes), case_name)
+                        "match to '%s'",
+                        len(nodes),
+                        case_name,
                     )
                 else:
                     nodes = [nodes[case_index]]
@@ -226,7 +228,7 @@ class ShowCaseDocApi(BaseReport):
             f"{pacer_case_id},"
             f"{attachment_number},,"
         )
-        logger.info(f"Querying the show_doc_url endpoint with URL: {url}")
+        logger.info("Querying the show_doc_url endpoint with URL: %s", url)
         # we use get request because nysd court disabled all head requests
         # and bans by IP in case head request is made
         self.response = await self.session.get(url, follow_redirects=True)
@@ -259,7 +261,7 @@ class AcmsCaseSearch(BaseReport):
             "session attribute of AcmsCaseSearch cannot be None."
         )
         url = f"https://{self.court_id}-showdocservices.azurewebsites.us/api/CaseSearch/{docket_number}"
-        logger.info(f"Querying the CaseSearch endpoint with URL: {url}")
+        logger.info("Querying the CaseSearch endpoint with URL: %s", url)
         self.response = await self.session.get(
             url, params={"exactMatch": True}
         )

@@ -109,7 +109,7 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
             "session attribute of ListOfCreditors cannot be None."
         )
 
-        logger.info(f"Getting a valid POST param for '{self.court_id}'")
+        logger.info("Getting a valid POST param for %r", self.court_id)
         self.response = await self.session.get(self.url)
         self.parse()
         return self._get_valid_post_param()

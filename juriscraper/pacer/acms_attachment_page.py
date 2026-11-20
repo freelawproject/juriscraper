@@ -149,8 +149,9 @@ class ACMSAttachmentPage(BaseReport):
         )
         if not entry_data:
             logger.warning(
-                "Docket entry with ID '%s' not found in case '%s'."
-                % (entry_id, case_id)
+                "Docket entry with ID '%s' not found in case '%s'.",
+                entry_id,
+                case_id,
             )
             self.is_valid = False
             self._acms_json = {}

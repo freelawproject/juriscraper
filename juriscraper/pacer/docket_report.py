@@ -341,7 +341,7 @@ class BaseDocketReport:
             try:
                 d = convert_date_string(s, datetime=True)
             except ValueError:
-                logger.debug(f"Couldn't parse date: {s}")
+                logger.debug("Couldn't parse date: %s", s)
                 return None
             else:
                 # Set it to UTC.
@@ -1577,8 +1577,9 @@ class DocketReport(BaseDocketReport, BaseReport):
             query_params["view_multi_docs"] = "on"
 
         logger.info(
-            "Querying docket report for case ID '%s' with params %s"
-            % (pacer_case_id, query_params)
+            "Querying docket report for case ID '%s' with params %s",
+            pacer_case_id,
+            query_params,
         )
 
         self.response = await self.session.post(
