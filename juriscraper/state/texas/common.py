@@ -988,38 +988,46 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[Never, Never]]):
             punishment=fields.get("Punishment", ""),
         )
 
-        if court_type == CourtType.APPELLATE:
-            court_id = coa_name_to_court_id(court_name).value
-            originating_court_details = TexasOriginatingAppellateCourt(
-                name=court_details["name"],
-                court_type=court_details["court_type"],
-                county=court_details["county"],
-                judge=court_details["judge"],
-                case=court_details["case"],
-                reporter=court_details["reporter"],
-                punishment=court_details["punishment"],
-                court_id=court_id,
-            )
-        elif court_type == CourtType.DISTRICT:
-            district = district_court_number_from_name(court_name)
-            if district is None:
-                logger.error(
-                    "[court=%s] Unable to find district number", self.court_id
+        match court_type:
+            case CourtType.APPELLATE:
+                court_id = coa_name_to_court_id(court_name).value
+                return TexasOriginatingAppellateCourt(
+                    name=court_details["name"],
+                    court_type=court_details["court_type"],
+                    county=court_details["county"],
+                    judge=court_details["judge"],
+                    case=court_details["case"],
+                    reporter=court_details["reporter"],
+                    punishment=court_details["punishment"],
+                    court_id=court_id,
                 )
-            originating_court_details = TexasOriginatingDistrictCourt(
-                name=court_details["name"],
-                court_type=court_details["court_type"],
-                county=court_details["county"],
-                judge=court_details["judge"],
-                case=court_details["case"],
-                reporter=court_details["reporter"],
-                punishment=court_details["punishment"],
-                district=district,
-            )
-        else:
-            originating_court_details = court_details
-
-        return originating_court_details
+            case CourtType.DISTRICT:
+                district = district_court_number_from_name(court_name)
+                if district is None:
+                    logger.error(
+                        "[court=%s] Unable to find district number",
+                        self.court_id,
+                    )
+                return TexasOriginatingDistrictCourt(
+                    name=court_details["name"],
+                    court_type=court_details["court_type"],
+                    county=court_details["county"],
+                    judge=court_details["judge"],
+                    case=court_details["case"],
+                    reporter=court_details["reporter"],
+                    punishment=court_details["punishment"],
+                    district=district,
+                )
+            case (
+                CourtType.SUPREME
+                | CourtType.PROBATE
+                | CourtType.BUSINESS
+                | CourtType.COUNTY
+                | CourtType.MUNICIPAL
+                | CourtType.JUSTICE
+                | CourtType.UNKNOWN
+            ):
+                return court_details
 
     @staticmethod
     def _parse_case_documents(cell: HtmlElement) -> list[TexasCaseDocument]:
