@@ -1101,13 +1101,6 @@
       "severity": "error"
     },
     {
-      "column": 31,
-      "path": "juriscraper/opinions/united_states/state/me.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `strftime`",
-      "severity": "error"
-    },
-    {
       "column": 20,
       "path": "juriscraper/opinions/united_states/state/mesuperct.py",
       "name": "missing-attribute",
