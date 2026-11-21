@@ -9,8 +9,13 @@ History:
 """
 
 import feedparser
+import httpx
 from typing_extensions import override
 
+from juriscraper.AbstractSite import (
+    MissingRequestResponseException,
+    UnexpectedRequestResponseException,
+)
 from juriscraper.OralArgumentSiteLinear import OralArgumentSiteLinear
 
 
@@ -29,6 +34,10 @@ class Site(OralArgumentSiteLinear):
         the date, case name, docket number, and status and pdf URL.
         Return: None
         """
+        if self.request["response"] is None:
+            raise MissingRequestResponseException
+        if not isinstance(self.request["response"], httpx.Response):
+            raise UnexpectedRequestResponseException
         feed = feedparser.parse(self.request["response"].content)
         for item in feed["entries"]:
             self.cases.append(
