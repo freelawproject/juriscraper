@@ -1,6 +1,6 @@
 import re
 from datetime import date, datetime
-from enum import Enum
+from enum import StrEnum
 from functools import cached_property
 from itertools import chain
 from typing import Never, TypedDict, TypeVar, final
@@ -29,7 +29,7 @@ from juriscraper.lib.string_utils import (
 logger = make_default_logger()
 
 
-class CourtType(Enum):
+class CourtType(StrEnum):
     """Standardized IDs for Texas court types."""
 
     SUPREME = "texas_final"
@@ -43,7 +43,7 @@ class CourtType(Enum):
     UNKNOWN = "texas_unknown"
 
 
-class CourtID(Enum):
+class CourtID(StrEnum):
     """
     Standardized IDs for Texas courts. Created by prefixing "texas_" to the ID
     that TAMES uses. Used by consumers to deterministically identify courts.
