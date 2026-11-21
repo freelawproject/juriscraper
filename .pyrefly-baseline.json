@@ -142,20 +142,6 @@
       "severity": "error"
     },
     {
-      "column": 26,
-      "path": "juriscraper/lib/network_utils.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `AsyncClient` has no attribute `acms_user_data`",
-      "severity": "error"
-    },
-    {
-      "column": 32,
-      "path": "juriscraper/lib/network_utils.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `AsyncClient` has no attribute `acms_user_data`",
-      "severity": "error"
-    },
-    {
       "column": 40,
       "path": "juriscraper/lib/string_utils.py",
       "name": "unbound-name",
@@ -1906,20 +1892,6 @@
       "severity": "error"
     },
     {
-      "column": 16,
-      "path": "juriscraper/pacer/acms_attachment_page.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `AsyncClient` has no attribute `acms_user_data`",
-      "severity": "error"
-    },
-    {
-      "column": 19,
-      "path": "juriscraper/pacer/acms_attachment_page.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `AsyncClient` has no attribute `get_acms_auth_object`",
-      "severity": "error"
-    },
-    {
       "column": 15,
       "path": "juriscraper/pacer/acms_docket.py",
       "name": "bad-override",
@@ -2960,13 +2932,6 @@
       "path": "juriscraper/pacer/hidden_api.py",
       "name": "bad-override",
       "concise_description": "Class member `AcmsCaseSearch.query` overrides parent class `BaseReport` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "juriscraper/pacer/hidden_api.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `json`",
       "severity": "error"
     },
     {
