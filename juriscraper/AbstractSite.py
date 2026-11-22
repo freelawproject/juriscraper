@@ -7,7 +7,7 @@ import os
 import ssl
 import urllib.parse
 import urllib.request
-from collections.abc import Awaitable
+from collections.abc import Awaitable, Callable
 from datetime import datetime
 from http.client import HTTPResponse
 from typing import TypedDict
@@ -116,7 +116,9 @@ class AbstractSite:
         # which takes a single argument, the Site object, after
         # each GET or POST request. Intended for saving the response for
         # debugging purposes.
-        self.save_response = kwargs.pop("save_response_fn", None)
+        self.save_response: Callable[[AbstractSite], None] | None = kwargs.pop(
+            "save_response_fn", None
+        )
 
         # Won't affect the values of the child scraper as these only get
         # passed to httpx at this stage.
