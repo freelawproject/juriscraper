@@ -21,6 +21,7 @@ Changes:
 -
 
 Fixes:
+- `nev_u`/`nevapp_u`: fill `judges` for unpublished orders that list the panel only as initials, such as `DH/KP/RP` or `COA-BB/MG/DW` #2423
 -
 
 ## 4.0.5 - 2026-11-23
