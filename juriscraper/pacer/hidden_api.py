@@ -207,7 +207,10 @@ class ShowCaseDocApi(BaseReport):
         super().__init__(court_id, pacer_session)
 
     async def query(
-        self, pacer_case_id, document_number, attachment_number=""
+        self,
+        pacer_case_id: str,
+        document_number: str,
+        attachment_number: int | None = None,
     ):
         """Query the show_case_doc endpoint and return the normalized doc1
         number.
@@ -225,6 +228,8 @@ class ShowCaseDocApi(BaseReport):
             f"{document_number},"
             f"{pacer_case_id},"
             f"{attachment_number},,"
+            if attachment_number is not None
+            else ",,"
         )
         logger.info(f"Querying the show_doc_url endpoint with URL: {url}")
         # we use get request because nysd court disabled all head requests
