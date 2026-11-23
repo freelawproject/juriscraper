@@ -33,6 +33,19 @@ class Site(OpinionSiteLinear):
         re.MULTILINE,
     )
 
+    filed_regex = re.compile(r"^\s*Filed\s.+\d{4}\..*$", re.MULTILINE)
+    headnote_start_regex = re.compile(r"^\s*(?P<number>\d+)\.\s+(?P<text>.+)")
+    # Running headers of the pages, which may split the list of headnotes
+    page_header_regex = re.compile(
+        r"""
+        ^\s*-\s\d+\s-\s*$  # - 869 -
+        |Nebraska\s(Supreme\sCourt|Court\sof\sAppeals)\sAdvance\sSheets
+        |\d+\sNebraska\s(Appellate\s)?Reports
+        """,
+        re.X | re.I,
+    )
+    cite_as_regex = re.compile(r"^\s*Cite\s+as\s+\d+\s+Neb\.")
+
     # The Online Library lists every opinion of the bound volumes it holds.
     # Volumes are paginated, most recent first. Older volumes are only
     # available as a single PDF, and can't be backscraped
@@ -258,6 +271,9 @@ class Site(OpinionSiteLinear):
         elif match := self.citation_regex.search(scraped_text[:1000]):
             result["Citation"] = match.group("citation")
 
+        if headnotes := self.extract_headnotes(scraped_text):
+            result["OpinionCluster"] = {"headnotes": headnotes}
+
         match = self.lower_court_regex.search(scraped_text)
         if match:
             result["Docket"] = {
@@ -272,3 +288,56 @@ class Site(OpinionSiteLinear):
             }
 
         return result
+
+    def extract_headnotes(self, scraped_text: str) -> str:
+        """Get the numbered headnotes that follow the "Filed" line
+
+        Each headnote is a list of topics and a point of law, such as
+        "1. Judgments: Appeal and Error. When reviewing questions of law..."
+
+        :param scraped_text: the document's text
+        :return: the headnotes, one per line; or an empty string
+        """
+        filed = self.filed_regex.search(scraped_text[:10000])
+        if not filed:
+            return ""
+
+        lines = scraped_text[filed.end() :].splitlines()
+        headnotes: list[str] = []
+        after_blank_line = False
+
+        for index, line in enumerate(lines):
+            if not line.strip():
+                after_blank_line = True
+                continue
+
+            next_line = next((n for n in lines[index + 1 :] if n.strip()), "")
+            if (
+                self.page_header_regex.search(line)
+                or self.cite_as_regex.search(line)
+                # the short case name is printed above the "Cite as" line
+                or self.cite_as_regex.search(next_line)
+            ):
+                continue
+
+            match = self.headnote_start_regex.search(line)
+            if match and int(match.group("number")) == len(headnotes) + 1:
+                headnotes.append(
+                    f"{match.group('number')}. {match.group('text').strip()}"
+                )
+            elif not headnotes:
+                # no headnotes in this document
+                break
+            elif after_blank_line and headnotes[-1].endswith(
+                (".", ".”", '."')
+            ):
+                # a new paragraph after a finished headnote: the list is over
+                break
+            elif headnotes[-1].endswith("-") and line.strip()[0].islower():
+                # word split across lines
+                headnotes[-1] = headnotes[-1][:-1] + line.strip()
+            else:
+                headnotes[-1] = f"{headnotes[-1]} {line.strip()}"
+            after_blank_line = False
+
+        return "\n".join(headnotes)
