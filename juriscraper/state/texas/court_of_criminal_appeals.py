@@ -1,5 +1,5 @@
 from functools import cached_property
-from typing import Never
+from typing import Literal, Never
 
 from typing_extensions import override
 
@@ -21,6 +21,9 @@ class TexasCourtOfCriminalAppealsDocket(TexasCommonData):
     :ivar appeals_court: Information about the appeals court which heard this
     case.
     """
+
+    court_id: Literal[CourtID.COURT_OF_CRIMINAL_APPEALS]
+    court_type: Literal[CourtType.SUPREME]
 
     appeals_court: TexasAppealsCourt
 
@@ -59,8 +62,8 @@ class TexasCourtOfCriminalAppealsScraper(
             raise ValueError("_parse_text() must called first.")
 
         return TexasCourtOfCriminalAppealsDocket(
-            court_id=CourtID.COURT_OF_CRIMINAL_APPEALS.value,
-            court_type=CourtType.SUPREME.value,
+            court_id=CourtID.COURT_OF_CRIMINAL_APPEALS,
+            court_type=CourtType.SUPREME,
             appeals_court=_parse_appeals_court(self.tree),
             case_events=common_data["case_events"],
             appellate_briefs=common_data["appellate_briefs"],

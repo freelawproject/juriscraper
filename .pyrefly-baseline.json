@@ -2,13 +2,6 @@
   "min_severity": "warn",
   "errors": [
     {
-      "column": 30,
-      "path": "juriscraper/AbstractSite.py",
-      "name": "unknown-attribute-type",
-      "concise_description": "This expression is implicitly inferred to be `Any`. Please provide an explicit type annotation.",
-      "severity": "error"
-    },
-    {
       "column": 33,
       "path": "juriscraper/AbstractSite.py",
       "name": "bad-argument-type",
