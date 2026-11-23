@@ -8,7 +8,6 @@ History:
 """
 
 import json
-import pathlib
 from datetime import datetime, timedelta
 from urllib.parse import urljoin
 

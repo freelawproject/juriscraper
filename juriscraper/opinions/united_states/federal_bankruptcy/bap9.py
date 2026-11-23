@@ -5,7 +5,6 @@ Court Short Name: 9th Cir. BAP
 """
 
 import json
-import pathlib
 import re
 from datetime import date, datetime, timedelta
 from urllib.parse import urljoin

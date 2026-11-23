@@ -17,7 +17,6 @@
 #  - 2021-12-28: Updated by flooie to remove selenium.
 #  - 2024-02-21; Updated by grossir: handle dynamic backscrapes
 
-import pathlib
 import re
 from datetime import date, datetime, timedelta
 from urllib.parse import urlparse
