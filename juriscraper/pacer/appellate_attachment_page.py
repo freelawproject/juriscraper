@@ -1,6 +1,7 @@
 import pprint
 import re
 import sys
+from typing import Never, NotRequired, TypedDict
 
 from lxml import html
 
@@ -15,6 +16,21 @@ from juriscraper.pacer.utils import (
 from .reports import BaseReport
 
 logger = make_default_logger()
+
+
+class AppellateAttachmentPageDataAttachment(TypedDict):
+    attachment_number: int
+    description: str
+    page_count: int | None
+    pacer_doc_id: str | None
+    file_size_bytes: NotRequired[int]
+
+
+class AppellateAttachmentPageData(TypedDict):
+    pacer_doc_id: str | None
+    pacer_case_id: str | None
+    pacer_seq_no: str | None
+    attachments: list[AppellateAttachmentPageDataAttachment]
 
 
 class AppellateAttachmentPage(BaseReport):
@@ -58,7 +74,7 @@ class AppellateAttachmentPage(BaseReport):
         self.tree = strip_bad_html_tags_insecure(text, remove_scripts=False)
 
     @property
-    def data(self) -> dict:
+    def data(self) -> AppellateAttachmentPageData | dict[Never, Never]:
         """Get data back from the query for the matching document entry.
 
         Appellate attachments is different than the district court.  We have
@@ -91,7 +107,7 @@ class AppellateAttachmentPage(BaseReport):
             logger.info("No documents found on attachment page.")
             return {}
 
-        result = {
+        result: AppellateAttachmentPageData = {
             "pacer_doc_id": self._get_main_pacer_doc_id(),
             "pacer_case_id": self._get_pacer_case_id(),
             "pacer_seq_no": self._get_pacer_seq_no(),
@@ -99,7 +115,7 @@ class AppellateAttachmentPage(BaseReport):
         }
 
         for row in rows:
-            attachment = {
+            attachment: AppellateAttachmentPageDataAttachment = {
                 "attachment_number": self._get_attachment_number(row),
                 "description": self._get_description_from_tr(row),
                 "page_count": self._get_page_count_from_tr(row),
