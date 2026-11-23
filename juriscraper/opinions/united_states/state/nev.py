@@ -74,6 +74,15 @@ class Site(OpinionSiteLinear):
     )
     # Judge initials in a panel, e.g. "Majority: MG/BB/DW"
     initials_regex = re.compile(r"[A-Z]{2,3}")
+    # Panel given only as initials, usually near the end of the description,
+    # e.g. "DH/KP/RP. (SC)", "A26 - KP/RP/LB (SC)", "COA-BB/MG/DW. (COA)"
+    initials_panel_regex = re.compile(
+        r"(?<![A-Za-z/])[A-Z]{2,3}(?:\s*/\s*[A-Z]{2,3})+(?![A-Za-z/])"
+    )
+    # The same panel when it sits right before the closing court tag
+    trailing_panel_regex = re.compile(
+        r"(?<![A-Za-z/])([A-Z]{2,3}(?:\s*/\s*[A-Z]{2,3})+)\.?\s*\((?:SC|COA)\)\.?\s*$"
+    )
     # Consolidated cases, e.g. "... C/W 85175" or "... C/W 88016/88190"
     consolidated_regex = re.compile(r"\s*\bC/W\s+([\d/,\s]+)")
     # Parentheticals that mark the case type rather than a party; these are
@@ -235,8 +244,37 @@ class Site(OpinionSiteLinear):
                     judges.append(name)
             if judges:
                 metadata["judge"] = ", ".join(judges)
+        elif panel := self.get_initials_panel(description):
+            judges = [
+                judge
+                for initials in panel
+                if (judge := self.resolve_initials(initials, date_filed))
+            ]
+            metadata["judge"] = ", ".join(judges)
 
         return metadata
+
+    def get_initials_panel(self, description: str) -> list[str]:
+        """Get the panel from a description that lists it only as initials
+
+        Unpublished orders have no "Majority:" field; the panel is given as
+        initials, e.g. "DH/KP/RP" or "COA-BB/MG/DW", usually right before
+        the closing "(SC)" or "(COA)". That group is preferred. Otherwise
+        the last group with at least one known judge is used, so that
+        uppercase words such as "AND/OR" are not taken for a panel, while
+        a new judge's initials still reach `resolve_initials` and are
+        reported there.
+
+        :param description: the free-text docketEntryDescription
+        :return: the panel's initials, or [] if none is found
+        """
+        if match := self.trailing_panel_regex.search(description.strip()):
+            return re.split(r"\s*/\s*", match.group(1))
+        for match in reversed(self.initials_panel_regex.findall(description)):
+            panel = re.split(r"\s*/\s*", match)
+            if any(initials in self.initials_to_judges for initials in panel):
+                return panel
+        return []
 
     def resolve_initials(self, initials: str, date_filed: str) -> str:
         """Get the judge with these initials in office on the filed date
