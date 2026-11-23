@@ -2,13 +2,6 @@
   "min_severity": "warn",
   "errors": [
     {
-      "column": 30,
-      "path": "juriscraper/AbstractSite.py",
-      "name": "unknown-attribute-type",
-      "concise_description": "This expression is implicitly inferred to be `Any`. Please provide an explicit type annotation.",
-      "severity": "error"
-    },
-    {
       "column": 33,
       "path": "juriscraper/AbstractSite.py",
       "name": "bad-argument-type",
@@ -261,13 +254,6 @@
       "severity": "error"
     },
     {
-      "column": 44,
-      "path": "juriscraper/opinions/united_states/administrative_agency/bva.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `Site` has no attribute `mock_url`",
-      "severity": "error"
-    },
-    {
       "column": 19,
       "path": "juriscraper/opinions/united_states/administrative_agency/bva.py",
       "name": "missing-attribute",
@@ -286,13 +272,6 @@
       "path": "juriscraper/opinions/united_states/administrative_agency/bva.py",
       "name": "unsupported-operation",
       "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "column": 23,
-      "path": "juriscraper/opinions/united_states/administrative_agency/mspb_p.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `Site` has no attribute `mock_url`",
       "severity": "error"
     },
     {
