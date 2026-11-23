@@ -43,20 +43,24 @@ docket_regex = re.compile(
 )
 # NYSCEF stamp on top of each PDF page: "INDEX NO. 2023-50982",
 # "INDEX NO. E2020010270", "CLAIM NO. 136668". The PDF layout may split it,
-# as in "INDEX\n PM NO. LT-000568-26/QU"
+# as in "INDEX\n PM NO. LT-000568-26/QU". OCR text may change the
+# punctuation, as in "INDEX NO: 605580/2022" or "INDEX NO.: 601403/2016"
 pdf_stamp_regex = re.compile(
-    r"\b(?P<kind>INDEX|CLAIM)\s+([AP]M\s+)?NO\.\s*(?P<number>[A-Z]*-?\d[\w/-]*)"
+    r"\b(?P<kind>INDEX|CLAIM)\s+([AP]M\s+)?NO\.?:?\s*(?P<number>[A-Z]*-?\d[\w/-]*)"
 )
 # docket in the PDF caption, used when there is no NYSCEF stamp
 pdf_caption_regex = re.compile(
     r"\b(Index|Claim|File|Docket) No\.:?\s*(L&T )?[A-Z]*-?\d[\w/-]*"
 )
-# The PDF layout may mix up overlapping stamps, leaving the number right after an "INDEX".
-# Some Monroe County PDFs have an "Index #: E2019012159" stamp on top of the NYSCEF stamp,
-# as in "INDEX     : E2019012159" or "INDEX  #: E2019012159".
-# Some PDFs have two NYSCEF stamps, as in "INDEX NO.\n INDEX     605773/2023\n NO. 605773/2023"
-pdf_mixed_stamp_regex = re.compile(
-    r"\bINDEX\s+((#\s*:?|:)\s*)?(?P<number>[A-Z]*-?\d[\w/-]*)"
+# Monroe County "Index #:" stamp mixed up with the NYSCEF stamp, as in:
+# "INDEX     : E2019012159" or "INDEX  #: E2019012159"
+pdf_county_stamp_regex = re.compile(
+    r"\bINDEX\s+#?\s*:\s*(?P<number>[A-Z]*-?\d[\w/-]*)"
+)
+# two overlapping NYSCEF stamps, as in:
+# "INDEX NO.\n INDEX     605773/2023\n NO. 605773/2023"
+pdf_double_stamp_regex = re.compile(
+    r"\bINDEX\s+(?P<number>[A-Z]*-?\d[\w/-]*)\s+NO\.\s*(?P=number)"
 )
 
 
@@ -291,7 +295,10 @@ class Site(OpinionSiteLinear):
                 metadata["Docket"]["docket_number"] = f"{kind} No. {number}"
             elif pdf_docket := pdf_caption_regex.search(target_text):
                 metadata["Docket"]["docket_number"] = pdf_docket.group()
-            elif pdf_docket := pdf_mixed_stamp_regex.search(target_text):
+            elif pdf_docket := (
+                pdf_county_stamp_regex.search(target_text)
+                or pdf_double_stamp_regex.search(target_text)
+            ):
                 number = pdf_docket.group("number")
                 metadata["Docket"]["docket_number"] = f"Index No. {number}"
             else:

@@ -368,6 +368,23 @@ class ScraperExtractFromText(unittest.TestCase):
                 {"Docket": {"docket_number": "Index No. 605773/2023"}},
             ),
             (
+                # https://www.nycourts.gov/reporter/pdfs/2023/2023_35769.pdf
+                # OCR text, as extracted by CourtListener. See #2273
+                "(FILED: NASSAU COUNTY CLERK 11/21/2023 10:28 AM INDEX NO.\n\nNYSCEF DOC. NO. 82 RECEIVED NYSCEF: 11/21/2023\n\nSUPREME COURT OF THE STATE OF NEW YORK\nCOUNTY OF NASSAU - CIVIL TERM PART 46\n\nPresent! HON. RHONDA E. FISCHER\nActing Justice of the Supreme Court\n\nAMY STRACK,\nPlaintiff, INDEX NO: 605580/2022\n-against-\n",
+                {"Docket": {"docket_number": "Index No. 605580/2022"}},
+            ),
+            (
+                # https://www.nycourts.gov/reporter/pdfs/2018/2018_34617.pdf
+                # OCR text, as extracted by CourtListener
+                "(FILED: SUFFOLK COUNTY CLERK 02/¥472018°03:>20' Pn\n\nNYSCEF DOC.\nSHORT FORM ORDER\n\nNO. 24 RECEIVED NYSCEF: 02/14/2018\nINDEX NO.: 601403/2016\n\nSUPREME COURT - STATE OF NEW YORK\n",
+                {"Docket": {"docket_number": "Index No. 601403/2016"}},
+            ),
+            (
+                # A date right after an "INDEX" is not a docket number
+                "FILED: MONROE COUNTY CLERK   INDEX\n   04/01/2022 03:26 PM\nNYSCEF DOC. NO. 197\n",
+                {},
+            ),
+            (
                 # https://www.nycourts.gov/reporter/current/3dseries/2026/2026_51324.shtml
                 "<!DOCTYPE html><html><body><div>\n<div>\n<h1>MJ v MJ</h1>\n<p>2026 NY Slip Op 51324(U) [89 Misc 3d 1248(A)]</p>\n<p>August 18, 2026</p>\n<p>Supreme Court, Nassau County</p>\n<p>Edmund M. Dane, J.</p>\n<p>Published by New York State Law Reporting Bureau pursuant to Judiciary Law § 431.</p>\n<p>This opinion is uncorrected and will not be published in the printed Official Reports.</p>\n</div>\n<div><b>Digest-Index Classification: </b>Dismissal and Nonsuit—Failure to Appear—Deliberate Violation of Court Rules. Husband and Wife and Other Domestic Relationships—Counsel Fees—Party's Obstructionist Tactics</div>\n<div>\n<p>MJ, Plaintiff,</p>\n<p>v</p>\n<p>MJ, Defendant.</p>\n</div>\n<p>Supreme Court, Nassau County</p>\n<p>Decided on August 18, 2026</p>\n<p>Index No. XXXXXX/2020</p>\n<p>Edmund M. Dane, J.</p>\n",
                 {

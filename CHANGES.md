@@ -33,6 +33,7 @@ Fixes:
   sends its request through the new `AcmsApiClient.search_cases()`, so it
   raises the same exception instead of an `HTTPStatusError`.
   freelawproject/courtlistener#6680
+- Fix `nytrial` docket number extraction for some PDFs. #2273
 
 ## 4.0.5 - 2026-11-23
 
@@ -118,7 +119,6 @@ Changes:
   `attorney_general` package path to keep covering them. #168
 
 Fixes:
-- Fix `nytrial` docket number extraction from PDFs with mixed-up overlapping stamps, such as a Monroe County "Index #" stamp on top of the NYSCEF stamp, or two NYSCEF stamps. #2273
 - Fix `tenn`, `tennctapp`, `tenncrimapp` and `tenn_workers_comp` crash when a row's opinion link has an empty URL; those rows are now skipped. #2303
 - Fix `arizctapp_div_2` returning zero items after the court redesigned its recent opinions page. #2367
 - Fix `ariz` and `arizctapp_div_1` 404s by sending the `pageSize` parameter the opinions API now requires. #2357
