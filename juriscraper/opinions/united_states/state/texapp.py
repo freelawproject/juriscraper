@@ -19,6 +19,7 @@
 
 import re
 from datetime import date, datetime, timedelta
+from pathlib import Path
 from urllib.parse import urlparse
 
 from dateutil import parser
@@ -230,9 +231,8 @@ class Site(ClusterSite):
         """
         if self.test_mode_enabled():
             assert self.mock_url is not None
-            self.mock_url = os.path.join(
-                os.path.dirname(self.mock_url),
-                os.path.basename(urlparse(link).path),
+            self.mock_url = str(
+                Path(self.mock_url).with_name(Path(urlparse(link).path).name)
             )
             await self._request_url_mock(link)
             return self._return_response_text_object()

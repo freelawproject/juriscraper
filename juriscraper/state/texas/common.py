@@ -647,7 +647,7 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[Never, Never]]):
         if originating_court is None:
             return None
 
-        data = TexasCommonData(
+        return TexasCommonData(
             docket_number=docket_number,
             date_filed=self._parse_date_filed(),
             case_type=self._parse_case_type(),
