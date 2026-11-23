@@ -1379,6 +1379,9 @@ class ScraperExtractFromText(unittest.TestCase):
                 "\nNebraska Supreme Court Online Library\nwww.nebraska.gov/apps-courts-epub/\n09/01/2025 01:32 PM CDT\n\n\n\n\n                                                         - 182 -\n                               Nebraska Supreme Court Advance Sheets\n                                        319 Nebraska Reports\n                                                GENTELE V. GENTELE\n                                                 Cite as 319 Neb. 182\n\n\n\n\n                                         Tara Gentele, appellant, v.\n                                        Christopher Gentele, appellee.\n                                                     ___ N.W.3d ___\n\n                                           Filed June 13, 2025.    No. S-24-472.\n\n                 1. Waiver: Appeal and Error. Whether a party waived his or her right to\n                    appellate review is a question of law.\n                 2. Judgments: Appeal and Error. When reviewing questions of law, an\n                    appellate court resolves the questions independently of the lower court’s\n                    conclusions.\n                 3. ____: ____. Generally, under the acceptance of benefits rule, an appel-\n                    lant may not voluntarily accept the benefits of part of a judgment in the\n                    appellant’s favor and afterward prosecute an appeal or error proceeding\n                    from the part that is against the appellant.\n\n                 Appeal from the District Court for Lancaster County:\n               Andrew R. Jacobsen, Judge. Appeal dismissed.",
                 {
                     "Citation": "319 Neb. 182",
+                    "OpinionCluster": {
+                        "headnotes": "1. Waiver: Appeal and Error. Whether a party waived his or her right to appellate review is a question of law.\n2. Judgments: Appeal and Error. When reviewing questions of law, an appellate court resolves the questions independently of the lower court’s conclusions.\n3. ____: ____. Generally, under the acceptance of benefits rule, an appellant may not voluntarily accept the benefits of part of a judgment in the appellant’s favor and afterward prosecute an appeal or error proceeding from the part that is against the appellant."
+                    },
                     "Docket": {
                         "appeal_from_str": "District Court for Lancaster County"
                     },
@@ -1386,7 +1389,35 @@ class ScraperExtractFromText(unittest.TestCase):
                         "assigned_to_str": "Andrew R. Jacobsen"
                     },
                 },
-            )
+            ),
+            (
+                # Older certified opinions start with the tail of the
+                # previous opinion, which may cite other cases
+                "\nNebraska Supreme Court Online Library\nwww.nebraska.gov/apps-courts-epub/\n11/23/2026 09:42 AM CST\n\n\n\n\n               12                             283 nebraska reports\n\n\n\n               did not abuse its discretion in overruling her motion. The dis-\n               trict court's order is affirmed.\n                                                                   Affirmed.\n                  Wright, J., not participating.\n\n               38\n                    See Strickland, supra note 21. See, also, State v. Yos-Chiguil,\n                    281 Neb. 618, 798 N.W.2d 832 (2011).\n\n\n\n\n                          Ronald Lovelace, appellee, v.\n                         City of Lincoln, Nebraska, appellant.\n                                                    809 N.W.2d 505\n\n                                        Filed January 13, 2012.   No. S-10-1241.\n\n                1. Workers' Compensation: Appeal and Error.\n\n   Appeal from the Workers' Compensation Court. Affirmed.",
+                {
+                    "Citation": "809 N.W.2d 505",
+                    "OpinionCluster": {
+                        "headnotes": "1. Workers' Compensation: Appeal and Error."
+                    },
+                },
+            ),
+            (
+                # A page break after a line that ends with a period does not
+                # end the headnote; the list ends at the procedural paragraph
+                "\n                                    State of Nebraska, appellee, v.\n                                      John Doe, appellant.\n                                                    902 N.W.2d 140\n\n                                        Filed September 29, 2017.   No. S-15-610.\n\n                 1. Trial: Courts. A trial court has broad discretion.\n\n                              - 869 -\n\n                     297 Nebraska Reports\n                           STATE v. DOE\n                        Cite as 297 Neb. 868\n\n                    It may make discovery and evidentiary rulings.\n                 2. Courts. Nebraska courts have inherent judicial power.\n\n                              - 870 -\n\n                     297 Nebraska Reports\n                           STATE v. DOE\n                        Cite as 297 Neb. 868\n\n                 Appeal from the District Court for Douglas County:\n               Thomas A. Otepka, Judge. Affirmed.\n\n   Jane Roe for appellant.",
+                {
+                    "Citation": "902 N.W.2d 140",
+                    "OpinionCluster": {
+                        "headnotes": "1. Trial: Courts. A trial court has broad discretion. It may make discovery and evidentiary rulings.\n2. Courts. Nebraska courts have inherent judicial power."
+                    },
+                    "Docket": {
+                        "appeal_from_str": "District Court for Douglas County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Thomas A. Otepka"
+                    },
+                },
+            ),
         ],
         # https://www.courtlistener.com/api/rest/v4/opinions/2810802/
         "juriscraper.opinions.united_states.state.nebctapp": [
@@ -1394,6 +1425,9 @@ class ScraperExtractFromText(unittest.TestCase):
                 "\nNebraska Supreme Court Online Library\nwww.nebraska.gov/apps-courts-epub/\n09/01/2025 01:32 PM CDT\n\n\n\n\n                                                         - 182 -\n                               Nebraska Supreme Court Advance Sheets\n                                        319 Nebraska Reports\n                                                GENTELE V. GENTELE\n                                                 Cite as 319 Neb. 182\n\n\n\n\n                                         Tara Gentele, appellant, v.\n                                        Christopher Gentele, appellee.\n                                                     ___ N.W.3d ___\n\n                                           Filed June 13, 2025.    No. S-24-472.\n\n                 1. Waiver: Appeal and Error. Whether a party waived his or her right to\n                    appellate review is a question of law.\n                 2. Judgments: Appeal and Error. When reviewing questions of law, an\n                    appellate court resolves the questions independently of the lower court’s\n                    conclusions.\n                 3. ____: ____. Generally, under the acceptance of benefits rule, an appel-\n                    lant may not voluntarily accept the benefits of part of a judgment in the\n                    appellant’s favor and afterward prosecute an appeal or error proceeding\n                    from the part that is against the appellant.\n\n                 Appeal from the District Court for Lancaster County:\n               Andrew R. Jacobsen, Judge. Appeal dismissed.",
                 {
                     "Citation": "319 Neb. 182",
+                    "OpinionCluster": {
+                        "headnotes": "1. Waiver: Appeal and Error. Whether a party waived his or her right to appellate review is a question of law.\n2. Judgments: Appeal and Error. When reviewing questions of law, an appellate court resolves the questions independently of the lower court’s conclusions.\n3. ____: ____. Generally, under the acceptance of benefits rule, an appellant may not voluntarily accept the benefits of part of a judgment in the appellant’s favor and afterward prosecute an appeal or error proceeding from the part that is against the appellant."
+                    },
                     "Docket": {
                         "appeal_from_str": "District Court for Lancaster County"
                     },

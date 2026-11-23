@@ -18,11 +18,26 @@ Features:
 -
 
 Changes:
+-
+
+Fixes:
+-
+
+## 4.0.5 - 2026-11-23
+
+Features:
+- Add a backscraper to `neb` and `nebctapp`. It reads the Nebraska Appellate
+  Courts Online Library volume listings, which cover 275 Neb. (2008) and
+  16 Neb. App. (2007) onwards. `extract_from_text` now returns the N.W.2d /
+  N.W.3d parallel citation when the certified opinion has one, and the
+  numbered headnotes as `OpinionCluster.headnotes`.
+  freelawproject/courtlistener#8501
+
+Changes:
 - CI: Publish to PyPI with trusted publishing instead of an API token.
 - Adopt tagged dictionary approach for `TexasCourt*Docket` and `TexasOriginating*Court`.
 - Adopt `StrEnum` for enumerations in `state.texas`.
 - Structure return type of `*AttachmentPage.data()`.
--
 
 Fixes:
 -
