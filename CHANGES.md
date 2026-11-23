@@ -19,6 +19,7 @@ Features:
 
 Changes:
 - CI: Publish to PyPI with trusted publishing instead of an API token.
+- Structure return type of `*AttachmentPage.data()`.
 -
 
 Fixes:
