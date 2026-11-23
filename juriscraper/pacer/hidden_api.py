@@ -29,7 +29,8 @@ class PossibleCaseNumberApi(BaseReport):
         """Query the "possible case numbers" endpoint and return the results.
 
         :param docket_number: A string representing a docket number
-        :return: a request response object
+        :return None: Instead, sets self.response attribute and runs
+        self.parse()
         """
         assert self.session is not None, (
             "session attribute of PossibleCaseNUmberApi cannot be None."

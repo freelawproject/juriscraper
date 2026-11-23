@@ -416,7 +416,8 @@ class ClaimsActivity(BaseDocketReport, BaseReport):
         :param date_end: The latest claim entry you with to have. Default is
         tomorrow.
 
-        :return: request response object
+        :return None: Instead, sets self.response attribute and runs
+        self.parse()
         """
         assert self.session is not None, (
             "session attribute of ClaimsActivity cannot be None."
