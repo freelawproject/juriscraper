@@ -1,3 +1,5 @@
+from typing import Never
+
 from typing_extensions import override
 
 from juriscraper.state.texas.common import TexasCommonData, TexasCommonScraper
@@ -19,7 +21,7 @@ class _TexasCommonTestScraper(TexasCommonScraper[TexasCommonData]):
 
     @override
     @property
-    def data(self) -> TexasCommonData | dict[str, None]:
+    def data(self) -> TexasCommonData | dict[Never, Never]:
         commmon_data = self._common_data
         if commmon_data is None:
             return {}
