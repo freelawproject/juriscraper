@@ -261,13 +261,6 @@
       "severity": "error"
     },
     {
-      "column": 41,
-      "path": "juriscraper/opinions/united_states/administrative_agency/bva.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `Site` has no attribute `mock_url`",
-      "severity": "error"
-    },
-    {
       "column": 19,
       "path": "juriscraper/opinions/united_states/administrative_agency/bva.py",
       "name": "missing-attribute",
@@ -286,13 +279,6 @@
       "path": "juriscraper/opinions/united_states/administrative_agency/bva.py",
       "name": "unsupported-operation",
       "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "column": 31,
-      "path": "juriscraper/opinions/united_states/administrative_agency/mspb_p.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `Site` has no attribute `mock_url`",
       "severity": "error"
     },
     {
