@@ -1386,7 +1386,15 @@ class ScraperExtractFromText(unittest.TestCase):
                         "assigned_to_str": "Andrew R. Jacobsen"
                     },
                 },
-            )
+            ),
+            (
+                # Older certified opinions start with the tail of the
+                # previous opinion, which may cite other cases
+                "\nNebraska Supreme Court Online Library\nwww.nebraska.gov/apps-courts-epub/\n11/23/2026 09:42 AM CST\n\n\n\n\n               12                             283 nebraska reports\n\n\n\n               did not abuse its discretion in overruling her motion. The dis-\n               trict court's order is affirmed.\n                                                                   Affirmed.\n                  Wright, J., not participating.\n\n               38\n                    See Strickland, supra note 21. See, also, State v. Yos-Chiguil,\n                    281 Neb. 618, 798 N.W.2d 832 (2011).\n\n\n\n\n                          Ronald Lovelace, appellee, v.\n                         City of Lincoln, Nebraska, appellant.\n                                                    809 N.W.2d 505\n\n                                        Filed January 13, 2012.   No. S-10-1241.\n\n                1. Workers' Compensation: Appeal and Error.\n\n   Appeal from the Workers' Compensation Court. Affirmed.",
+                {
+                    "Citation": "809 N.W.2d 505",
+                },
+            ),
         ],
         # https://www.courtlistener.com/api/rest/v4/opinions/2810802/
         "juriscraper.opinions.united_states.state.nebctapp": [
