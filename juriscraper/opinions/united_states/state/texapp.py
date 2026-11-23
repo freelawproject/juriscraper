@@ -230,9 +230,10 @@ class Site(ClusterSite):
         :return: HTML object of the page
         """
         if self.test_mode_enabled():
-            self.mock_url = str(
-                pathlib.Path(self.mock_url).parent
-                / pathlib.Path(urlparse(link).path).name
+            assert self.mock_url is not None
+            self.mock_url = os.path.join(
+                os.path.dirname(self.mock_url),
+                os.path.basename(urlparse(link).path),
             )
             await self._request_url_mock(link)
             return self._return_response_text_object()

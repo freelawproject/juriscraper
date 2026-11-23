@@ -1,4 +1,5 @@
 import re
+from typing import Literal
 
 from juriscraper.lib.judge_parsers import normalize_judge_string
 from juriscraper.lib.log_tools import make_default_logger
@@ -92,10 +93,10 @@ class DocketHistoryReport(DocketReport):
 
     async def query(
         self,
-        pacer_case_id,
-        query_type="History",
-        order_by="asc",
-        show_de_descriptions=False,
+        pacer_case_id: str,
+        query_type: Literal["History", "Documents"] = "History",
+        order_by: Literal["asc", "desc"] = "asc",
+        show_de_descriptions: bool = False,
     ):
         """Query the docket history report and return the results. Because of
         the way this works, you have to hit PACER twice. Once to get a nonce,
@@ -108,7 +109,8 @@ class DocketHistoryReport(DocketReport):
         in the report.
         :param order_by: The ordering desired for the results, either 'asc' or
         'desc'.
-        :return: request response object
+        :return None: Instead, sets self.response attribute and runs
+        self.parse()
         """
         # Set up and sanity tests
         assert self.session is not None, (
@@ -117,10 +119,7 @@ class DocketHistoryReport(DocketReport):
 
         if query_type not in ["History", "Documents"]:
             raise ValueError("Invalid value for 'query_type' parameter.")
-        if (
-            show_de_descriptions is not True
-            and show_de_descriptions is not False
-        ):
+        if not isinstance(show_de_descriptions, bool):
             raise ValueError("")
         if order_by not in ["asc", "desc"]:
             raise ValueError("Invalid value for 'order_by' parameter.")

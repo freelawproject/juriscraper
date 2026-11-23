@@ -7,8 +7,10 @@ import pathlib
 import ssl
 import urllib.parse
 import urllib.request
-from collections.abc import Awaitable
+from collections.abc import Awaitable, Callable
 from datetime import datetime
+from http.client import HTTPResponse
+from typing import Literal, TypedDict
 
 import certifi
 import httpx
@@ -20,6 +22,7 @@ from juriscraper.lib.date_utils import (
 )
 from juriscraper.lib.exceptions import (
     InsanityException,
+    JuriscraperException,
 )
 from juriscraper.lib.html_utils import (
     clean_html,
@@ -44,6 +47,24 @@ from juriscraper.lib.utils import (
 )
 
 logger = make_default_logger()
+
+
+class SiteRequest(TypedDict):
+    session: httpx.AsyncClient
+    headers: dict[str, str]
+    parameters: dict  # TODO: use a stricter type.
+    request: None  # TODO: Probably unused; remove
+    response: httpx.Response | HTTPResponse | None
+    status: None  # TODO: Probably unused; remove
+    url: str | None
+
+
+class MissingRequestResponseException(JuriscraperException):
+    """Raised when `request["response"]` is needed but unavailable."""
+
+
+class UnexpectedRequestResponseException(JuriscraperException):
+    """Raised when `request["response"]` is the wrong type - use_urllib is misconfigured."""
 
 
 class AbstractSite:
@@ -82,20 +103,22 @@ class AbstractSite:
         super().__init__()
 
         # Computed metadata
-        self.hash = None
+        self.hash: str | None = None
         self.html = None
-        self.method = "GET"
+        self.method: Literal["GET", "POST", "LOCAL"] = "GET"
         self.back_scrape_iterable = None
-        self.downloader_executed = False
-        self.cookies = {}
-        self.cnt = cnt or CaseNameTweaker()
-        self.user_agent = user_agent
+        self.downloader_executed: bool = False
+        self.cookies: dict[str, str] = {}
+        self.cnt: CaseNameTweaker = cnt or CaseNameTweaker()
+        self.user_agent: str = user_agent
 
         # Attribute to reference a function passed by the caller,
         # which takes a single argument, the Site object, after
         # each GET or POST request. Intended for saving the response for
         # debugging purposes.
-        self.save_response = kwargs.pop("save_response_fn", None)
+        self.save_response: Callable[[AbstractSite], None] | None = kwargs.pop(
+            "save_response_fn", None
+        )
 
         # Won't affect the values of the child scraper as these only get
         # passed to httpx at this stage.
@@ -105,7 +128,7 @@ class AbstractSite:
         kwargs.setdefault("follow_redirects", True)
         kwargs.setdefault("http2", True)
         kwargs.setdefault("verify", True)
-        self.request = {
+        self.request: SiteRequest = {
             "session": httpx.AsyncClient(**kwargs),
             "headers": {
                 "User-Agent": self.user_agent,
@@ -116,6 +139,7 @@ class AbstractSite:
             },
             "parameters": {},
             "request": None,
+            "response": None,
             "status": None,
             "url": None,
         }
@@ -123,7 +147,7 @@ class AbstractSite:
         # Some courts will block Juriscraper or Courtlistener's user-agent
         # or may need special headers. This flag let's the caller know it
         # should use the modified `self.request["headers"]`
-        self.needs_special_headers = False
+        self.needs_special_headers: bool = False
 
         # urllib opener for sites that need TLS fingerprint bypass
         if self.use_urllib:
@@ -133,18 +157,19 @@ class AbstractSite:
             )
 
         # indicates whether the scraper should have results or not to raise an error
-        self.should_have_results = False
+        self.should_have_results: bool = False
 
-        # has defaults in OpinionSite and OralArgumentSite
-        self.expected_content_types = []
+        # has defaults in OpinionSite and OralArgumentSite. Empty means "expect any"
+        self.expected_content_types: list[str] = []
 
         # Sub-classed metadata
         self.court_id = None
         self.url = None
+        self.mock_url: str | None = None
         self.parameters = None
-        self._opt_attrs = []
-        self._req_attrs = []
-        self._all_attrs = []
+        self._opt_attrs: list[str] = []
+        self._req_attrs: list[str] = []
+        self._all_attrs: list[str] = []
 
     async def __aenter__(self):
         await self.request["session"].__aenter__()
@@ -606,6 +631,7 @@ class AbstractSite:
         self.request["url"] = url
 
         def handler(request: httpx.Request):
+            assert self.mock_url is not None
             try:
                 with pathlib.Path(self.mock_url).open(mode="rb") as stream:
                     content = stream.read()
@@ -632,11 +658,17 @@ class AbstractSite:
     def _post_process_response(self):
         """Cleanup to response object"""
         self.tweak_response_object()
+        if self.request["response"] is None:
+            raise MissingRequestResponseException
+        if not isinstance(self.request["response"], httpx.Response):
+            raise UnexpectedRequestResponseException
         self.request["response"].raise_for_status()
         set_response_encoding(self.request["response"])
 
     def _return_response_text_object(self):
         if self.request["response"]:
+            if not isinstance(self.request["response"], httpx.Response):
+                raise UnexpectedRequestResponseException
             if "json" in self.request["response"].headers.get(
                 "content-type", ""
             ):

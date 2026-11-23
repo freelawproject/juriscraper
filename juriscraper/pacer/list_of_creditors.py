@@ -123,8 +123,10 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
         :param pacer_case_id: The internal PACER ID for the case.
         :param docket_number: A docket number to look up. Something like
         2:17-bk-39239.
+        :param post_param: a string added to the query portion of the URL.
 
-        :return: request response object
+        :return None: Instead, sets self.response attribute and runs
+        self.parse()
         """
         assert self.session is not None, (
             "session attribute of ListOfCreditors cannot be None."

@@ -2,6 +2,7 @@ import pathlib
 import pprint
 import re
 import sys
+from typing import Never, NotRequired, TypedDict
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import force_unicode
@@ -16,6 +17,27 @@ from .utils import (
 )
 
 logger = make_default_logger()
+
+
+class AttachmentPageDataAttachment(TypedDict):
+    attachment_number: int
+    description: str
+    page_count: int | None
+    pacer_doc_id: str | None
+    pacer_seq_no: str | None
+    file_size_str: str
+    file_size_bytes: NotRequired[int]
+
+
+class AttachmentPageData(TypedDict):
+    document_number: int | None
+    pacer_doc_id: str | None
+    pacer_case_id: str | None
+    pacer_seq_no: str | None
+    page_count: int | None
+    file_size_str: str | None
+    file_size_bytes: NotRequired[int]
+    attachments: list[AttachmentPageDataAttachment]
 
 
 class AttachmentPage(BaseReport):
@@ -33,7 +55,8 @@ class AttachmentPage(BaseReport):
         """Query the "attachment page" endpoint and set the results to self.response.
 
         :param document_number: The internal PACER document ID for the item.
-        :return: a request response object
+        :return None: Instead, sets self.response attribute and runs
+        self.parse()
         """
         assert self.session is not None, (
             "session attribute of DocketReport cannot be None."
@@ -47,7 +70,7 @@ class AttachmentPage(BaseReport):
         self.parse()
 
     @property
-    def data(self):
+    def data(self) -> AttachmentPageData | dict[Never, Never]:
         """Get data back from the query for the matching document entry.
 
         :return: If lookup fails, an empty dict. Else, a dict containing the
@@ -82,24 +105,23 @@ class AttachmentPage(BaseReport):
         else:
             first_row = rows.pop(0)
             first_row_attachment = False
-        result = {
+        result: AttachmentPageData = {
             "document_number": self._get_document_number(),
             "pacer_doc_id": self._get_pacer_doc_id(first_row),
             "pacer_case_id": self._get_pacer_case_id(),
             "pacer_seq_no": self._get_pacer_seq_no_from_tr(first_row),
+            "page_count": None,
+            "file_size_str": "",
             "attachments": [],
         }
-        if first_row_attachment:
-            result["page_count"] = None
-            result["file_size_str"] = ""
-        else:
+        if not first_row_attachment:
             result["page_count"] = self._get_page_count_from_tr(first_row)
             file_size_bytes = self._get_file_size_bytes_from_tr(first_row)
             if file_size_bytes is not None:
                 result["file_size_bytes"] = file_size_bytes
             result["file_size_str"] = get_file_size_str_from_tr(first_row)
         for row in rows:
-            attachment = {
+            attachment: AttachmentPageDataAttachment = {
                 "attachment_number": self._get_attachment_number(row),
                 "description": self._get_description_from_tr(row),
                 "page_count": self._get_page_count_from_tr(row),

@@ -1,9 +1,9 @@
 import re
 from datetime import date, datetime
-from enum import Enum
+from enum import StrEnum
 from functools import cached_property
 from itertools import chain
-from typing import Never, TypedDict, TypeVar, final
+from typing import Literal, Never, TypedDict, TypeVar, final
 from urllib.parse import parse_qs, urlparse
 
 from lxml import html
@@ -29,7 +29,7 @@ from juriscraper.lib.string_utils import (
 logger = make_default_logger()
 
 
-class CourtType(Enum):
+class CourtType(StrEnum):
     """Standardized IDs for Texas court types."""
 
     SUPREME = "texas_final"
@@ -43,7 +43,7 @@ class CourtType(Enum):
     UNKNOWN = "texas_unknown"
 
 
-class CourtID(Enum):
+class CourtID(StrEnum):
     """
     Standardized IDs for Texas courts. Created by prefixing "texas_" to the ID
     that TAMES uses. Used by consumers to deterministically identify courts.
@@ -69,41 +69,61 @@ class CourtID(Enum):
     FIFTEENTH_COURT_OF_APPEALS = "texas_coa15"
 
 
-COA_ORDINAL_MAP = {
-    "first": CourtID.FIRST_COURT_OF_APPEALS,
-    "second": CourtID.SECOND_COURT_OF_APPEALS,
-    "third": CourtID.THIRD_COURT_OF_APPEALS,
-    "fourth": CourtID.FOURTH_COURT_OF_APPEALS,
-    "fifth": CourtID.FIFTH_COURT_OF_APPEALS,
-    "sixth": CourtID.SIXTH_COURT_OF_APPEALS,
-    "seventh": CourtID.SEVENTH_COURT_OF_APPEALS,
-    "eighth": CourtID.EIGHTH_COURT_OF_APPEALS,
-    "ninth": CourtID.NINTH_COURT_OF_APPEALS,
-    "tenth": CourtID.TENTH_COURT_OF_APPEALS,
-    "eleventh": CourtID.ELEVENTH_COURT_OF_APPEALS,
-    "twelfth": CourtID.TWELFTH_COURT_OF_APPEALS,
-    "thirteenth": CourtID.THIRTEENTH_COURT_OF_APPEALS,
-    "fourteenth": CourtID.FOURTEENTH_COURT_OF_APPEALS,
-    "fifteenth": CourtID.FIFTEENTH_COURT_OF_APPEALS,
-    "1st": CourtID.FIRST_COURT_OF_APPEALS,
-    "2nd": CourtID.SECOND_COURT_OF_APPEALS,
-    "3rd": CourtID.THIRD_COURT_OF_APPEALS,
-    "4th": CourtID.FOURTH_COURT_OF_APPEALS,
-    "5th": CourtID.FIFTH_COURT_OF_APPEALS,
-    "6th": CourtID.SIXTH_COURT_OF_APPEALS,
-    "7th": CourtID.SEVENTH_COURT_OF_APPEALS,
-    "8th": CourtID.EIGHTH_COURT_OF_APPEALS,
-    "9th": CourtID.NINTH_COURT_OF_APPEALS,
-    "10th": CourtID.TENTH_COURT_OF_APPEALS,
-    "11th": CourtID.ELEVENTH_COURT_OF_APPEALS,
-    "12th": CourtID.TWELFTH_COURT_OF_APPEALS,
-    "13th": CourtID.THIRTEENTH_COURT_OF_APPEALS,
-    "14th": CourtID.FOURTEENTH_COURT_OF_APPEALS,
-    "15th": CourtID.FIFTEENTH_COURT_OF_APPEALS,
+# This is a subset of CourtID (ex-SUPREME_COURT, COURT_OF_CRIMINAL_APPEALS)
+class CourtOfAppealsID(StrEnum):
+    UNKNOWN = CourtID.UNKNOWN
+    FIRST_COURT_OF_APPEALS = CourtID.FIRST_COURT_OF_APPEALS
+    SECOND_COURT_OF_APPEALS = CourtID.SECOND_COURT_OF_APPEALS
+    THIRD_COURT_OF_APPEALS = CourtID.THIRD_COURT_OF_APPEALS
+    FOURTH_COURT_OF_APPEALS = CourtID.FOURTH_COURT_OF_APPEALS
+    FIFTH_COURT_OF_APPEALS = CourtID.FIFTH_COURT_OF_APPEALS
+    SIXTH_COURT_OF_APPEALS = CourtID.SIXTH_COURT_OF_APPEALS
+    SEVENTH_COURT_OF_APPEALS = CourtID.SEVENTH_COURT_OF_APPEALS
+    EIGHTH_COURT_OF_APPEALS = CourtID.EIGHTH_COURT_OF_APPEALS
+    NINTH_COURT_OF_APPEALS = CourtID.NINTH_COURT_OF_APPEALS
+    TENTH_COURT_OF_APPEALS = CourtID.TENTH_COURT_OF_APPEALS
+    ELEVENTH_COURT_OF_APPEALS = CourtID.ELEVENTH_COURT_OF_APPEALS
+    TWELFTH_COURT_OF_APPEALS = CourtID.TWELFTH_COURT_OF_APPEALS
+    THIRTEENTH_COURT_OF_APPEALS = CourtID.THIRTEENTH_COURT_OF_APPEALS
+    FOURTEENTH_COURT_OF_APPEALS = CourtID.FOURTEENTH_COURT_OF_APPEALS
+    FIFTEENTH_COURT_OF_APPEALS = CourtID.FIFTEENTH_COURT_OF_APPEALS
+
+
+COA_ORDINAL_MAP: dict[str, CourtOfAppealsID] = {
+    "first": CourtOfAppealsID.FIRST_COURT_OF_APPEALS,
+    "second": CourtOfAppealsID.SECOND_COURT_OF_APPEALS,
+    "third": CourtOfAppealsID.THIRD_COURT_OF_APPEALS,
+    "fourth": CourtOfAppealsID.FOURTH_COURT_OF_APPEALS,
+    "fifth": CourtOfAppealsID.FIFTH_COURT_OF_APPEALS,
+    "sixth": CourtOfAppealsID.SIXTH_COURT_OF_APPEALS,
+    "seventh": CourtOfAppealsID.SEVENTH_COURT_OF_APPEALS,
+    "eighth": CourtOfAppealsID.EIGHTH_COURT_OF_APPEALS,
+    "ninth": CourtOfAppealsID.NINTH_COURT_OF_APPEALS,
+    "tenth": CourtOfAppealsID.TENTH_COURT_OF_APPEALS,
+    "eleventh": CourtOfAppealsID.ELEVENTH_COURT_OF_APPEALS,
+    "twelfth": CourtOfAppealsID.TWELFTH_COURT_OF_APPEALS,
+    "thirteenth": CourtOfAppealsID.THIRTEENTH_COURT_OF_APPEALS,
+    "fourteenth": CourtOfAppealsID.FOURTEENTH_COURT_OF_APPEALS,
+    "fifteenth": CourtOfAppealsID.FIFTEENTH_COURT_OF_APPEALS,
+    "1st": CourtOfAppealsID.FIRST_COURT_OF_APPEALS,
+    "2nd": CourtOfAppealsID.SECOND_COURT_OF_APPEALS,
+    "3rd": CourtOfAppealsID.THIRD_COURT_OF_APPEALS,
+    "4th": CourtOfAppealsID.FOURTH_COURT_OF_APPEALS,
+    "5th": CourtOfAppealsID.FIFTH_COURT_OF_APPEALS,
+    "6th": CourtOfAppealsID.SIXTH_COURT_OF_APPEALS,
+    "7th": CourtOfAppealsID.SEVENTH_COURT_OF_APPEALS,
+    "8th": CourtOfAppealsID.EIGHTH_COURT_OF_APPEALS,
+    "9th": CourtOfAppealsID.NINTH_COURT_OF_APPEALS,
+    "10th": CourtOfAppealsID.TENTH_COURT_OF_APPEALS,
+    "11th": CourtOfAppealsID.ELEVENTH_COURT_OF_APPEALS,
+    "12th": CourtOfAppealsID.TWELFTH_COURT_OF_APPEALS,
+    "13th": CourtOfAppealsID.THIRTEENTH_COURT_OF_APPEALS,
+    "14th": CourtOfAppealsID.FOURTEENTH_COURT_OF_APPEALS,
+    "15th": CourtOfAppealsID.FIFTEENTH_COURT_OF_APPEALS,
 }
 
 
-def coa_name_to_court_id(coa_name: str) -> CourtID:
+def coa_name_to_court_id(coa_name: str) -> CourtOfAppealsID:
     """
     Takes in the name of a Texas Court of Appeals and returns the corresponding
     CourtID.
@@ -111,12 +131,14 @@ def coa_name_to_court_id(coa_name: str) -> CourtID:
     :param coa_name: The name of the Court of Appeals, extracted from the
     docket page.
 
-    :return: The CourtID corresponding to the given Court of Appeals name.
+    :return: The CourtOfAppealsID corresponding to the given Court of Appeals name.
     """
     coa_name_parts = coa_name.split()
     if not coa_name_parts:
-        return CourtID.UNKNOWN
-    return COA_ORDINAL_MAP.get(coa_name_parts[0].lower(), CourtID.UNKNOWN)
+        return CourtOfAppealsID.UNKNOWN
+    return COA_ORDINAL_MAP.get(
+        coa_name_parts[0].lower(), CourtOfAppealsID.UNKNOWN
+    )
 
 
 class TexasAppealsCourt(TypedDict):
@@ -136,7 +158,7 @@ class TexasAppealsCourt(TypedDict):
     disposition: str
     opinion_cite: str
     district: str
-    court_id: str
+    court_id: CourtOfAppealsID
     justice: str
 
 
@@ -190,7 +212,7 @@ def _parse_appeals_court(tree: HtmlElement) -> TexasAppealsCourt:
         disposition=clean_string(case_info["Disposition"].text_content()),
         opinion_cite=clean_string(case_info["Opinion Cite"].text_content()),
         district=district,
-        court_id=coa_name_to_court_id(district).value,
+        court_id=coa_name_to_court_id(district),
         justice=clean_string(
             justice_node.text_content() if justice_node is not None else ""
         ),
@@ -214,7 +236,7 @@ class TexasCaseParty(TypedDict):
     representatives: list[str]
 
 
-class TexasOriginatingCourt(TypedDict):
+class _TexasOriginatingCourtBase(TypedDict):
     """
     Schema for Texas Originating Court details.
 
@@ -227,7 +249,6 @@ class TexasOriginatingCourt(TypedDict):
     the consumer to handle those cases.
 
     :ivar name: The name of the court.
-    :ivar court_type: The type of the court.
     :ivar county: The county where the court is located.
     :ivar judge: The name of the presiding judge in the court.
     :ivar case: Specific case identification or name handled by this court.
@@ -237,7 +258,6 @@ class TexasOriginatingCourt(TypedDict):
     """
 
     name: str
-    court_type: str
     county: str
     judge: str
     case: str
@@ -245,29 +265,56 @@ class TexasOriginatingCourt(TypedDict):
     punishment: str
 
 
-class TexasOriginatingAppellateCourt(TexasOriginatingCourt):
+class TexasOriginatingAppellateCourt(_TexasOriginatingCourtBase):
     """
     Schema for Texas Originating Court details when that court is an appellate
     court.
 
     Includes the court ID for convenience.
 
+    :ivar court_type: The type of court.
     :ivar court_id: The ID of the appellate court.
     """
 
-    court_id: str
+    court_type: Literal[CourtType.APPELLATE]
+    court_id: CourtOfAppealsID  # TODO: Match handling of `TexasOriginatingDistrictCourt.district` and replace `UNKNOWN` with `None`
 
 
-class TexasOriginatingDistrictCourt(TexasOriginatingCourt):
+class TexasOriginatingDistrictCourt(_TexasOriginatingCourtBase):
     """
     Schema for Texas Originating Court details when that court is a district
     court.
 
+    :ivar court_type: The type of court.
     :ivar district: The district where the court is located. Will be `None` if
     the district could not be determined.
     """
 
+    court_type: Literal[CourtType.DISTRICT]
     district: int | None
+
+
+class TexasOriginatingOtherCourt(_TexasOriginatingCourtBase):
+    """
+    :ivar court_type: The type of court.
+    """
+
+    court_type: Literal[
+        CourtType.SUPREME,
+        CourtType.PROBATE,
+        CourtType.BUSINESS,
+        CourtType.COUNTY,
+        CourtType.MUNICIPAL,
+        CourtType.JUSTICE,
+        CourtType.UNKNOWN,
+    ]
+
+
+TexasOriginatingCourt = (
+    TexasOriginatingAppellateCourt
+    | TexasOriginatingDistrictCourt
+    | TexasOriginatingOtherCourt
+)
 
 
 SPACES_RE = re.compile(r"\s+")
@@ -452,8 +499,6 @@ class TexasCommonData(TypedDict):
     common to all Texas dockets. It is used as a utility for safety and type
     hints.
 
-    :ivar court_id: The ID of the court this docket is from.
-    :ivar court_type: Indicates the type of court this docket is from. The
     Supreme Court and Court of Criminal Appeals both have unique data and this
     will indicate if that data is present.
     :ivar docket_number: The docket number of the case.
@@ -469,8 +514,6 @@ class TexasCommonData(TypedDict):
     :ivar appellate_briefs: A list of briefs filed in the case.
     """
 
-    court_id: str
-    court_type: str
     docket_number: str
     case_name: str
     case_name_full: str
@@ -604,9 +647,7 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[Never, Never]]):
         if originating_court is None:
             return None
 
-        return TexasCommonData(
-            court_id=CourtID.UNKNOWN.value,
-            court_type=CourtType.UNKNOWN.value,
+        data = TexasCommonData(
             docket_number=docket_number,
             date_filed=self._parse_date_filed(),
             case_type=self._parse_case_type(),
@@ -940,14 +981,7 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[Never, Never]]):
             for i in range(n_parties)
         ]
 
-    def _parse_originating_court(
-        self,
-    ) -> (
-        TexasOriginatingCourt
-        | TexasOriginatingAppellateCourt
-        | TexasOriginatingDistrictCourt
-        | None
-    ):
+    def _parse_originating_court(self) -> TexasOriginatingCourt | None:
         """
         Extracts the trial court info from the HTML tree. Will fail if
         `_parse_text` has not yet been called.
@@ -975,9 +1009,8 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[Never, Never]]):
         county = fields.get("County", "")
         court_type = _originating_court_name_to_type(court_name)
 
-        court_details = TexasOriginatingCourt(
+        court_details = _TexasOriginatingCourtBase(
             name=court_name,
-            court_type=court_type.value,
             county=county,
             judge=fields.get("Court Judge", ""),
             case=fields.get("Court Case", ""),
@@ -985,38 +1018,54 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[Never, Never]]):
             punishment=fields.get("Punishment", ""),
         )
 
-        if court_type == CourtType.APPELLATE:
-            court_id = coa_name_to_court_id(court_name).value
-            originating_court_details = TexasOriginatingAppellateCourt(
-                name=court_details["name"],
-                court_type=court_details["court_type"],
-                county=court_details["county"],
-                judge=court_details["judge"],
-                case=court_details["case"],
-                reporter=court_details["reporter"],
-                punishment=court_details["punishment"],
-                court_id=court_id,
-            )
-        elif court_type == CourtType.DISTRICT:
-            district = district_court_number_from_name(court_name)
-            if district is None:
-                logger.error(
-                    "[court=%s] Unable to find district number", self.court_id
+        match court_type:
+            case CourtType.APPELLATE:
+                court_id = coa_name_to_court_id(court_name)
+                return TexasOriginatingAppellateCourt(
+                    name=court_details["name"],
+                    court_type=court_type,
+                    county=court_details["county"],
+                    judge=court_details["judge"],
+                    case=court_details["case"],
+                    reporter=court_details["reporter"],
+                    punishment=court_details["punishment"],
+                    court_id=court_id,
                 )
-            originating_court_details = TexasOriginatingDistrictCourt(
-                name=court_details["name"],
-                court_type=court_details["court_type"],
-                county=court_details["county"],
-                judge=court_details["judge"],
-                case=court_details["case"],
-                reporter=court_details["reporter"],
-                punishment=court_details["punishment"],
-                district=district,
-            )
-        else:
-            originating_court_details = court_details
-
-        return originating_court_details
+            case CourtType.DISTRICT:
+                district = district_court_number_from_name(court_name)
+                if district is None:
+                    logger.error(
+                        "[court=%s] Unable to find district number",
+                        self.court_id,
+                    )
+                return TexasOriginatingDistrictCourt(
+                    name=court_details["name"],
+                    court_type=court_type,
+                    county=court_details["county"],
+                    judge=court_details["judge"],
+                    case=court_details["case"],
+                    reporter=court_details["reporter"],
+                    punishment=court_details["punishment"],
+                    district=district,
+                )
+            case (
+                CourtType.SUPREME
+                | CourtType.PROBATE
+                | CourtType.BUSINESS
+                | CourtType.COUNTY
+                | CourtType.MUNICIPAL
+                | CourtType.JUSTICE
+                | CourtType.UNKNOWN
+            ):
+                return TexasOriginatingOtherCourt(
+                    name=court_details["name"],
+                    court_type=court_type,
+                    county=court_details["county"],
+                    judge=court_details["judge"],
+                    case=court_details["case"],
+                    reporter=court_details["reporter"],
+                    punishment=court_details["punishment"],
+                )
 
     @staticmethod
     def _parse_case_documents(cell: HtmlElement) -> list[TexasCaseDocument]:

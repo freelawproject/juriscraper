@@ -305,7 +305,7 @@ async def scrape_court(
     return {"count": len(site), "exceptions": exceptions}
 
 
-def save_response(site):
+def save_response(site: AbstractSite) -> None:
     """
     Save response content and headers into /tmp/
 
@@ -532,10 +532,6 @@ async def main():
                 f"{package}.{module}", globals(), locals(), [module]
             )
 
-            site_kwargs = {}
-            if save_responses:
-                site_kwargs = {"save_response_fn": save_response}
-
             site_class = cast(type[AbstractSite], mod.Site)
             if backscrape:
                 async with (
@@ -548,7 +544,9 @@ async def main():
                         site_yielder(
                             initial_site.back_scrape_iterable,
                             mod,
-                            **site_kwargs,
+                            save_response_fn=save_response
+                            if save_responses
+                            else None,
                         )
                     ) as sites,
                 ):
@@ -563,7 +561,9 @@ async def main():
                             limit_per_scrape,
                         )
             else:
-                async with site_class(**site_kwargs) as site:
+                async with site_class(
+                    save_response_fn=save_response if save_responses else None,
+                ) as site:
                     await site.parse()
                     await scrape_court(
                         site,

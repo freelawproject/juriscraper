@@ -1,7 +1,7 @@
 import os
 import pathlib
 import traceback
-from collections.abc import AsyncGenerator, Iterable
+from collections.abc import AsyncGenerator, Callable, Iterable
 from logging import getLogger
 from types import ModuleType
 from typing import cast
@@ -85,7 +85,7 @@ def get_module_by_name(name: str) -> AbstractSite | None:
 async def site_yielder(
     iterable: Iterable[object],
     mod: ModuleType,
-    save_response_fn=None,
+    save_response_fn: Callable[[AbstractSite], None] | None = None,
 ) -> AsyncGenerator[AbstractSite, None]:
     """Yield sites whose sessions stay open until iteration advances.
 

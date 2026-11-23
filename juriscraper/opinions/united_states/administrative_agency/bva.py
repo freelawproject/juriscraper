@@ -144,6 +144,7 @@ class Site(OpinionSiteLinear):
         # characters like § (section sign).  download_content
         # returns bytes; we decode after.
         if self.test_mode_enabled():
+            assert self.mock_url is not None
             raw = await self.download_content(
                 download_url=url,
                 doctor_is_available=False,
