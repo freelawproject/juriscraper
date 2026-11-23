@@ -45,6 +45,12 @@ class Site(OpinionSiteLinear):
         re.X | re.I,
     )
     cite_as_regex = re.compile(r"^\s*Cite\s+as\s+\d+\s+Neb\.")
+    # First words of the paragraph that follows the headnotes
+    procedural_regex = re.compile(
+        r"^\s*(Appeals?\s+from|Petitions?\s|Original\s+(action|proceeding)"
+        r"|Certified\s+Question|Error\s+to)",
+        re.I,
+    )
 
     # The Online Library lists every opinion of the bound volumes it holds.
     # Volumes are paginated, most recent first. Older volumes are only
@@ -305,10 +311,13 @@ class Site(OpinionSiteLinear):
         lines = scraped_text[filed.end() :].splitlines()
         headnotes: list[str] = []
         after_blank_line = False
+        # A page break is a running header surrounded by blank lines. It is
+        # not a paragraph break: the headnote may go on in the next page
+        in_page_break = False
 
         for index, line in enumerate(lines):
             if not line.strip():
-                after_blank_line = True
+                after_blank_line = not in_page_break
                 continue
 
             next_line = next((n for n in lines[index + 1 :] if n.strip()), "")
@@ -318,6 +327,8 @@ class Site(OpinionSiteLinear):
                 # the short case name is printed above the "Cite as" line
                 or self.cite_as_regex.search(next_line)
             ):
+                in_page_break = True
+                after_blank_line = False
                 continue
 
             match = self.headnote_start_regex.search(line)
@@ -333,11 +344,15 @@ class Site(OpinionSiteLinear):
             ):
                 # a new paragraph after a finished headnote: the list is over
                 break
+            elif in_page_break and self.procedural_regex.search(line):
+                # the list ended with the previous page
+                break
             elif headnotes[-1].endswith("-") and line.strip()[0].islower():
                 # word split across lines
                 headnotes[-1] = headnotes[-1][:-1] + line.strip()
             else:
                 headnotes[-1] = f"{headnotes[-1]} {line.strip()}"
             after_blank_line = False
+            in_page_break = False
 
         return "\n".join(headnotes)

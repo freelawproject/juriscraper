@@ -1401,6 +1401,23 @@ class ScraperExtractFromText(unittest.TestCase):
                     },
                 },
             ),
+            (
+                # A page break after a line that ends with a period does not
+                # end the headnote; the list ends at the procedural paragraph
+                "\n                                    State of Nebraska, appellee, v.\n                                      John Doe, appellant.\n                                                    902 N.W.2d 140\n\n                                        Filed September 29, 2017.   No. S-15-610.\n\n                 1. Trial: Courts. A trial court has broad discretion.\n\n                              - 869 -\n\n                     297 Nebraska Reports\n                           STATE v. DOE\n                        Cite as 297 Neb. 868\n\n                    It may make discovery and evidentiary rulings.\n                 2. Courts. Nebraska courts have inherent judicial power.\n\n                              - 870 -\n\n                     297 Nebraska Reports\n                           STATE v. DOE\n                        Cite as 297 Neb. 868\n\n                 Appeal from the District Court for Douglas County:\n               Thomas A. Otepka, Judge. Affirmed.\n\n   Jane Roe for appellant.",
+                {
+                    "Citation": "902 N.W.2d 140",
+                    "OpinionCluster": {
+                        "headnotes": "1. Trial: Courts. A trial court has broad discretion. It may make discovery and evidentiary rulings.\n2. Courts. Nebraska courts have inherent judicial power."
+                    },
+                    "Docket": {
+                        "appeal_from_str": "District Court for Douglas County"
+                    },
+                    "OriginatingCourtInformation": {
+                        "assigned_to_str": "Thomas A. Otepka"
+                    },
+                },
+            ),
         ],
         # https://www.courtlistener.com/api/rest/v4/opinions/2810802/
         "juriscraper.opinions.united_states.state.nebctapp": [
