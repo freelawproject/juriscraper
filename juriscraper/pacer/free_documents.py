@@ -4,6 +4,8 @@ which is free.
 
 import pprint
 import sys
+from datetime import date
+from typing import Literal, assert_never
 
 from typing_extensions import override
 
@@ -54,7 +56,13 @@ class FreeOpinionReport(BaseReport):
                 f"https://ecf.{self.court_id}.uscourts.gov/cgi-bin/WrtOpRpt.pl"
             )
 
-    async def query(self, start, end, sort="date_filed", day_span=7):
+    async def query(
+        self,
+        start: date,
+        end: date,
+        sort: Literal["date_filed", "case_number"] = "date_filed",
+        day_span: int = 7,
+    ):
         """Query the Free Opinions report one day at a time.
 
         :param start: a date object representing the date you want to start at.
@@ -203,16 +211,20 @@ class FreeOpinionReport(BaseReport):
         )
         return results
 
-    def _normalize_sort_param(self, sort):
-        if sort == "date_filed":
-            return "de_date_filed"
-        elif sort == "case_number":
-            return "cs_sort_case_numb"
-        else:
-            raise ValueError(
-                "Invalid sort parameter. Value must be one of: %s"
-                % ", ".join(self.VALID_SORT_PARAMS)
-            )
+    def _normalize_sort_param(
+        self, sort: Literal["date_filed", "case_number"]
+    ) -> str:
+        match sort:
+            case "date_filed":
+                return "de_date_filed"
+            case "case_number":
+                return "cs_sort_case_numb"
+            case _:
+                assert_never(sort)
+                raise ValueError(
+                    "Invalid sort parameter. Value must be one of: %s"
+                    % ", ".join(self.VALID_SORT_PARAMS)
+                )
 
 
 class FreeOpinionRow(BaseDocketReport):

@@ -230,6 +230,7 @@ class Site(ClusterSite):
         :return: HTML object of the page
         """
         if self.test_mode_enabled():
+            assert self.mock_url is not None
             self.mock_url = os.path.join(
                 os.path.dirname(self.mock_url),
                 os.path.basename(urlparse(link).path),

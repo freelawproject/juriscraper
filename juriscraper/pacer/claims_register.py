@@ -1,5 +1,6 @@
 import re
 import urllib.parse
+from datetime import date
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import (
@@ -361,22 +362,23 @@ class ClaimsRegister(BaseDocketReport, BaseReport):
         return history_rows
 
     async def query(
-        self, pacer_case_id, docket_number, date_start=None, date_end=None
+        self,
+        pacer_case_id: str | None,
+        docket_number: str | None,
+        date_start: date | None = None,
+        date_end: date | None = None,
     ):
         """Query the claims register and return the results.
 
         :param pacer_case_id: The internal PACER ID for the case
-        :type pacer_case_id: str
         :param date_start: The earliest claim entry you wish to have. Default
         is 1960-01-01 (before anything was put in PACER)
-        :type date_start: date
         :param date_end: The latest claim entry you with to have. Default is
         tomorrow.
-        :type date_end: date
         :param docket_number: A docket number to look up. Something like
         2:17-bk-39239.
-        :type: str
-        :return: request response object
+        :return None: Instead, sets self.response attribute and runs
+        self.parse()
         """
         assert self.session is not None, (
             "session attribute of ClaimsRegister cannot be None."

@@ -22,7 +22,7 @@ class Site(OpinionSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = f"{self.base_url}/getDailyOrders"
-        self.expected_content_types = None
+        self.expected_content_types = []
         self.should_have_results = True
 
     @override

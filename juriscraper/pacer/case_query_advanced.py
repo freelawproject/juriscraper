@@ -9,6 +9,7 @@ In the cases, we look up search results by name, date, etc.
 
 import pprint
 import sys
+from datetime import date
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import (
@@ -167,15 +168,15 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
 
     async def query(
         self,
-        name_last="",
-        name_first="",
-        name_middle="",
-        person_type="",
-        filed_from=None,
-        filed_to=None,
-        last_entry_from=None,
-        last_entry_to=None,
-        natures_of_suit="",
+        name_last: str = "",
+        name_first: str = "",
+        name_middle: str = "",
+        person_type: str = "",
+        filed_from: date | None = None,
+        filed_to: date | None = None,
+        last_entry_from: date | None = None,
+        last_entry_to: date | None = None,
+        natures_of_suit: object = "",  # TODO: This is unused and could be removed.
     ):
         """Use a bankruptcy court's PACER query function to look up cases
 
@@ -196,16 +197,12 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
         entries.
         :param filed_from: The date filed entry for the earliest possible
         filing (inclusive).
-        :type filed_from: datetime.date
         :param filed_to: The date filed value for the latest possible filing
         (inclusive).
-        :type filed_to: datetime.date
         :param last_entry_from: The earliest date that the last entry on the
         docket can be from. I think.
-        :type last_entry_from: datetime.date
         :param last_entry_to: The latest date that the last entry on the docket
         can be from. I think.
-        :type last_entry_to: datetime.date
         :param natures_of_suit: A Python list of nature of suit numbers that to
         use for filtering. (See PACER for values.)
 
@@ -215,12 +212,6 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
         assert self.session is not None, (
             "session attribute of DocketReport cannot be None."
         )
-        assert all([filed_from, filed_to]) or not any(
-            [filed_from, filed_to]
-        ), "Both or neither of filing date fields must be complete."
-        assert all([last_entry_from, last_entry_to]) or not any(
-            [last_entry_from, last_entry_to]
-        ), "Both or neither of last entry date fields must be complete."
 
         # PACER only allows so many days per query. Exceed this threshold and
         # you get an error message and zero results.
@@ -229,12 +220,19 @@ class CaseQueryAdvancedBankruptcy(BaseCaseQueryAdvanced):
             "PACER has a %s day limit on date filters. "
             "Narrow your search." % max_days
         )
-        if filed_from:
-            assert (filed_to - filed_from).days + 1 < max_days, max_days_msg
-        if last_entry_from:
-            assert (last_entry_to - last_entry_from).days + 1 < max_days, (
-                max_days_msg
-            )
+        match filed_from, filed_to, last_entry_from, last_entry_to:
+            case date(), date(), None, None:
+                assert (filed_to - filed_from).days + 1 < max_days, (
+                    max_days_msg
+                )
+            case None, None, date(), date():
+                assert (last_entry_to - last_entry_from).days + 1 < max_days, (
+                    max_days_msg
+                )
+            case _:
+                raise AssertionError(
+                    "Both or neither of last entry date fields must be complete."
+                )
 
         params = {}
         if filed_from:
