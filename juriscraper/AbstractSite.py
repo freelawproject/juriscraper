@@ -159,8 +159,8 @@ class AbstractSite:
         # indicates whether the scraper should have results or not to raise an error
         self.should_have_results: bool = False
 
-        # has defaults in OpinionSite and OralArgumentSite
-        self.expected_content_types = []
+        # has defaults in OpinionSite and OralArgumentSite. Empty means "expect any"
+        self.expected_content_types: list[str] = []
 
         # Sub-classed metadata
         self.court_id = None

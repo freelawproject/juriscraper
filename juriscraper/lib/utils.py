@@ -340,7 +340,7 @@ def check_expected_content_types(
     expected_content_types = site.expected_content_types
     court_id = site.court_id
 
-    # test for expected content type (thanks mont for nil)
+    # test for expected content type (pass all that have *no* types specified - see `mont`)
     if not expected_content_types:
         return
 
