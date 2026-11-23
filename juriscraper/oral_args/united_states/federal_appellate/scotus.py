@@ -27,8 +27,7 @@ class Site(OralArgumentSite):
     @staticmethod
     def _return_download_url(d):
         file_type = "mp3"  # or 'wma' is also available for any case.
-        download_url = f"http://www.supremecourt.gov/media/audio/{file_type}files/{d}.{file_type}"
-        return download_url
+        return f"http://www.supremecourt.gov/media/audio/{file_type}files/{d}.{file_type}"
 
     def _get_case_names(self):
         path = "id('list')//tr/td/span/text()"

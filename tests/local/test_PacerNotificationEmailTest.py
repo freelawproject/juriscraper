@@ -1,16 +1,10 @@
-import os
-
 from juriscraper.pacer.email import NotificationEmail, S3NotificationEmail
 from tests import TESTS_ROOT_EXAMPLES_PACER
 from tests.local.PacerParseTestCase import PacerParseTestCase
 
-TESTS_ROOT_EXAMPLES_PACER_NEF = os.path.join(TESTS_ROOT_EXAMPLES_PACER, "nef")
-TESTS_ROOT_EXAMPLES_PACER_NEF_S3 = os.path.join(
-    TESTS_ROOT_EXAMPLES_PACER, "nef/s3"
-)
-TESTS_ROOT_EXAMPLES_PACER_NDA_S3 = os.path.join(
-    TESTS_ROOT_EXAMPLES_PACER, "nda"
-)
+TESTS_ROOT_EXAMPLES_PACER_NEF = TESTS_ROOT_EXAMPLES_PACER / "nef"
+TESTS_ROOT_EXAMPLES_PACER_NEF_S3 = TESTS_ROOT_EXAMPLES_PACER / "nef" / "s3"
+TESTS_ROOT_EXAMPLES_PACER_NDA_S3 = TESTS_ROOT_EXAMPLES_PACER / "nda"
 
 
 class PacerNotificationEmailTest(PacerParseTestCase):

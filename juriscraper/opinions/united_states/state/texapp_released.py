@@ -31,7 +31,7 @@ class Site(texapp.Site):
     @override
     async def _process_html(self) -> None:
         if self.html is None:
-            return None
+            return
 
         authors = {}
         for op_date, url in await self.get_release_dates(self.html):

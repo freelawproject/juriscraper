@@ -32,8 +32,7 @@ class Site(nd.Site):
             )
             if r.status_code == 200:
                 return wpd_link
-            else:
-                return html_link
+            return html_link
 
         if self.crawl_date >= date(1998, 10, 1):
             path = '//a/@href[contains(., "/court/opinions/")]'
@@ -41,27 +40,22 @@ class Site(nd.Site):
         else:
             path = "//ul//a[text()]/@href"
             seed = list(self.html.xpath(path))
-        case_names = []
-        for case in seed:
-            case_names.append(await fetcher(case))
-        return case_names
+        return [await fetcher(case) for case in seed]
 
     def _get_case_names(self):
         if self.crawl_date >= date(1998, 10, 1):
             path = '//a[contains(@href, "/court/opinions/")]/text()'
             return list(self.html.xpath(path))
-        else:
-            path = "//ul//a/text()"
-            names = self.html.xpath(path)
-            case_names = []
-            if self.crawl_date < date(1996, 11, 1):
-                # A bad time.
-                for name in names:
-                    name = name.rsplit("-")[0]
-                    case_names.append(name)
-                return case_names
-            else:
-                return list(names)
+        path = "//ul//a/text()"
+        names = self.html.xpath(path)
+        case_names = []
+        if self.crawl_date < date(1996, 11, 1):
+            # A bad time.
+            for name in names:
+                name = name.rsplit("-")[0]
+                case_names.append(name)
+            return case_names
+        return list(names)
 
     def _get_case_dates(self):
         # A tricky one. We get the case dates, but each can have different number of cases below it, so we have to
@@ -119,7 +113,7 @@ class Site(nd.Site):
         if self.crawl_date < date(1997, 2, 1):
             # Old format, but no neutral cites, thus short circuit the function.
             return None
-        elif self.crawl_date < date(1998, 10, 1):
+        if self.crawl_date < date(1998, 10, 1):
             # Old format with: 1997 ND 30 - Civil No. 960157 or 1997 ND 30
             path = "//li/text()"
         elif self.crawl_date >= date(1998, 10, 1):
@@ -140,10 +134,11 @@ class Site(nd.Site):
     def _post_parse(self):
         # Remove any information that applies to non-appellate cases.
         if self.neutral_citations:
-            delete_items = []
-            for i in range(0, len(self.neutral_citations)):
-                if "App" in self.neutral_citations[i]:
-                    delete_items.append(i)
+            delete_items = [
+                i
+                for i in range(len(self.neutral_citations))
+                if "App" in self.neutral_citations[i]
+            ]
 
             for i in sorted(delete_items, reverse=True):
                 del self.download_urls[i]

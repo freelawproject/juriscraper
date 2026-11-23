@@ -37,7 +37,7 @@ class PossibleCaseNumberApi(BaseReport):
         )
         url = f"{self.url}?{docket_number.lower()}"
         logger.info(
-            f"Querying the possible case number endpoint at URL: {url}"
+            "Querying the possible case number endpoint at URL: %s", url
         )
         self.response = await self.session.get(url)
         self.parse()
@@ -95,7 +95,7 @@ class PossibleCaseNumberApi(BaseReport):
             raise ParsingException(
                 "Unknown XML content in PossibleCaseNumberApi result."
             )
-        elif case_count == 1:
+        if case_count == 1:
             # Only one node, all set to go.
             pass
         elif case_count > 1:
@@ -161,7 +161,9 @@ class PossibleCaseNumberApi(BaseReport):
                 if case_index is None:
                     logger.warning(
                         "Got %s candidates, but unable to find good "
-                        "match to '%s'" % (len(nodes), case_name)
+                        "match to '%s'",
+                        len(nodes),
+                        case_name,
                     )
                 else:
                     nodes = [nodes[case_index]]
@@ -182,8 +184,7 @@ class PossibleCaseNumberApi(BaseReport):
                 # and a cleaner title.
                 "title": force_unicode(node.xpath("./@title")[0]),
             }
-        else:
-            raise ParsingException("Unable to identify case.")
+        raise ParsingException("Unable to identify case.")
 
 
 class ShowCaseDocApi(BaseReport):
@@ -232,7 +233,7 @@ class ShowCaseDocApi(BaseReport):
             if attachment_number is not None
             else ",,"
         )
-        logger.info(f"Querying the show_doc_url endpoint with URL: {url}")
+        logger.info("Querying the show_doc_url endpoint with URL: %s", url)
         # we use get request because nysd court disabled all head requests
         # and bans by IP in case head request is made
         self.response = await self.session.get(url, follow_redirects=True)
@@ -241,7 +242,6 @@ class ShowCaseDocApi(BaseReport):
     @override
     def _parse_text(self, text: str) -> None:
         """Just a stub. No parsing needed here."""
-        pass
 
     @property
     def data(self):
@@ -249,10 +249,9 @@ class ShowCaseDocApi(BaseReport):
         url = str(self.response.url)
         if "doc1" in url:
             return get_pacer_doc_id_from_doc1_url(url)
-        else:
-            raise ParsingException(
-                f"Unable to get doc1-style URL. Instead got {url}"
-            )
+        raise ParsingException(
+            f"Unable to get doc1-style URL. Instead got {url}"
+        )
 
 
 class AcmsCaseSearch(BaseReport):
@@ -265,7 +264,7 @@ class AcmsCaseSearch(BaseReport):
             "session attribute of AcmsCaseSearch cannot be None."
         )
         url = f"https://{self.court_id}-showdocservices.azurewebsites.us/api/CaseSearch/{docket_number}"
-        logger.info(f"Querying the CaseSearch endpoint with URL: {url}")
+        logger.info("Querying the CaseSearch endpoint with URL: %s", url)
         self.response = await self.session.get(
             url, params={"exactMatch": True}
         )
@@ -274,7 +273,6 @@ class AcmsCaseSearch(BaseReport):
     @override
     def _parse_text(self, text: str) -> None:
         """Just a stub. No parsing needed here."""
-        pass
 
     @property
     def data(self):

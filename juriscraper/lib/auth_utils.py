@@ -93,7 +93,6 @@ def generate_aws_sigv4_headers(
     host = f"{service}.{region}.amazonaws.com"
 
     # Canonical headers
-    canonical_headers = []
     headers_dict = {
         "content-type": "application/x-amz-json-1.0",
         "host": host,
@@ -102,8 +101,9 @@ def generate_aws_sigv4_headers(
         "x-amz-security-token": creds["SessionToken"],
         "x-amz-target": target,
     }
-    for h in sorted(signed_headers.split(";")):
-        canonical_headers.append(f"{h}:{headers_dict[h]}\n")
+    canonical_headers = [
+        f"{h}:{headers_dict[h]}\n" for h in sorted(signed_headers.split(";"))
+    ]
     canonical_headers_str = "".join(canonical_headers)
 
     # Create canonical request

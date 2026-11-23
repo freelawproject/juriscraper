@@ -34,8 +34,7 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
         if self.is_valid is False:
             return {}
 
-        data = self.metadata.copy()
-        return data
+        return self.metadata.copy()
 
     @property
     def metadata(self):
@@ -67,8 +66,7 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
         """
 
         action_value = self.tree.xpath('//form[@method="POST"]/@action')[0]
-        param = action_value.split("?")[1]
-        return param
+        return action_value.split("?")[1]
 
     async def download_file(self) -> Response | None:
         """Downloads the formated pipe-limited file using the
@@ -109,7 +107,7 @@ class ListOfCreditors(BaseDocketReport, BaseReport):
             "session attribute of ListOfCreditors cannot be None."
         )
 
-        logger.info(f"Getting a valid POST param for '{self.court_id}'")
+        logger.info("Getting a valid POST param for %r", self.court_id)
         self.response = await self.session.get(self.url)
         self.parse()
         return self._get_valid_post_param()

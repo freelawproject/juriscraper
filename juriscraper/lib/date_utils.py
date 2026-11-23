@@ -151,8 +151,7 @@ def make_date_range_tuples(
         if all(isinstance(d, datetime.datetime) for d in (start, end)):
             # both start and end are `datetime`-> `_SomeDateT` is `datetime`
             return cast(_SomeDateT, dt)
-        else:
-            return cast(_SomeDateT, dt.date())
+        return cast(_SomeDateT, dt.date())
 
     # We create a list of start dates and a list of end dates, then zip them
     # together. If end_dates is shorter than start_dates, fill the last value

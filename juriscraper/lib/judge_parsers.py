@@ -183,7 +183,7 @@ def normalize_judge_string(judge: str) -> tuple[str, str]:
     name_words = []
     for w in words:
         contains_parens = "(" in w or ")" in w
-        starts_poorly = w.startswith("-") or w.startswith("~")
+        starts_poorly = w.startswith(("-", "~"))
         blacklisted = w in blacklist
         long_abbrev = len(w) > 2 and "." in w and w not in ["jr.", "sr."]
         if any([contains_parens, starts_poorly, blacklisted, long_abbrev]):

@@ -1,4 +1,5 @@
 import json
+import pathlib
 import pprint
 import re
 import sys
@@ -272,7 +273,7 @@ def _main():
     report = SCOTUSDocketReportJSON()
     filepath = sys.argv[1]
     print(f"Parsing JSON file at {filepath}")
-    with open(filepath, encoding="utf-8") as f:
+    with pathlib.Path(filepath).open(encoding="utf-8") as f:
         text = f.read()
 
     report._parse_text(text)

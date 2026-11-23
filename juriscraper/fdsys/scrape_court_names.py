@@ -1,5 +1,6 @@
 import asyncio
 import json
+import pathlib
 
 import httpx
 from lxml import etree, html
@@ -21,7 +22,7 @@ async def get_court_names(**kwargs):
         if pre and name:
             data[pre[0].strip()] = name[0].strip()
 
-    with open("./court_names.json", "w") as f:
+    with pathlib.Path("./court_names.json").open("w") as f:
         json.dump(data, f)
 
 
@@ -46,7 +47,7 @@ async def get_fdsys_court_names(**kwargs):
         # if pre not in data and url:
         data[pre] = url
 
-    with open("./fdsys_court_names_2014.json", "w") as f:
+    with pathlib.Path("./fdsys_court_names_2014.json").open("w") as f:
         json.dump(data, f)
 
 

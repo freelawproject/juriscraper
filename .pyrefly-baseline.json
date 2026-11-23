@@ -121,7 +121,7 @@
       "severity": "error"
     },
     {
-      "column": 57,
+      "column": 60,
       "path": "juriscraper/lib/microservices_utils.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `encode`",
@@ -177,7 +177,7 @@
       "severity": "error"
     },
     {
-      "column": 32,
+      "column": 76,
       "path": "juriscraper/lib/string_utils.py",
       "name": "not-iterable",
       "concise_description": "Type `Exception` is not iterable",
@@ -251,6 +251,13 @@
       "path": "juriscraper/opinions/united_states/administrative_agency/bva.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 28,
+      "path": "juriscraper/opinions/united_states/administrative_agency/bva.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Path` is not assignable to parameter `media_root` with type `str` in function `juriscraper.AbstractSite.AbstractSite.download_content`",
       "severity": "error"
     },
     {
@@ -2424,7 +2431,7 @@
       "severity": "error"
     },
     {
-      "column": 33,
+      "column": 16,
       "path": "juriscraper/pacer/docket_report.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -2494,7 +2501,7 @@
       "severity": "error"
     },
     {
-      "column": 26,
+      "column": 22,
       "path": "juriscraper/pacer/docket_report.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
