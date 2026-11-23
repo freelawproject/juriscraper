@@ -19,6 +19,9 @@ Features:
 
 Changes:
 - CI: Publish to PyPI with trusted publishing instead of an API token.
+- Adopt tagged dictionary approach for `TexasCourt*Docket` and `TexasOriginating*Court`.
+- Adopt `StrEnum` for enumerations in `state.texas`.
+- Structure return type of `*AttachmentPage.data()`.
 -
 
 Fixes:

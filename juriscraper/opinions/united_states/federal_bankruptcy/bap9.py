@@ -78,6 +78,7 @@ class Site(OpinionSiteLinear):
         :return: The JSON response from DynamoDB containing oral argument records.
         """
         if self.test_mode_enabled():
+            assert self.mock_url is not None
             return json.load(open(self.mock_url))
 
         sess = self.request["session"]
