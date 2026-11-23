@@ -10,7 +10,7 @@ import urllib.request
 from collections.abc import Awaitable
 from datetime import datetime
 from http.client import HTTPResponse
-from typing import TypedDict
+from typing import Literal, TypedDict
 
 import certifi
 import httpx
@@ -103,14 +103,14 @@ class AbstractSite:
         super().__init__()
 
         # Computed metadata
-        self.hash = None
+        self.hash: str | None = None
         self.html = None
-        self.method = "GET"
+        self.method: Literal["GET", "POST", "LOCAL"] = "GET"
         self.back_scrape_iterable = None
-        self.downloader_executed = False
-        self.cookies = {}
-        self.cnt = cnt or CaseNameTweaker()
-        self.user_agent = user_agent
+        self.downloader_executed: bool = False
+        self.cookies: dict[str, str] = {}
+        self.cnt: CaseNameTweaker = cnt or CaseNameTweaker()
+        self.user_agent: str = user_agent
 
         # Attribute to reference a function passed by the caller,
         # which takes a single argument, the Site object, after
@@ -145,7 +145,7 @@ class AbstractSite:
         # Some courts will block Juriscraper or Courtlistener's user-agent
         # or may need special headers. This flag let's the caller know it
         # should use the modified `self.request["headers"]`
-        self.needs_special_headers = False
+        self.needs_special_headers: bool = False
 
         # urllib opener for sites that need TLS fingerprint bypass
         if self.use_urllib:
@@ -155,7 +155,7 @@ class AbstractSite:
             )
 
         # indicates whether the scraper should have results or not to raise an error
-        self.should_have_results = False
+        self.should_have_results: bool = False
 
         # has defaults in OpinionSite and OralArgumentSite
         self.expected_content_types = []
@@ -164,9 +164,9 @@ class AbstractSite:
         self.court_id = None
         self.url = None
         self.parameters = None
-        self._opt_attrs = []
-        self._req_attrs = []
-        self._all_attrs = []
+        self._opt_attrs: list[str] = []
+        self._req_attrs: list[str] = []
+        self._all_attrs: list[str] = []
 
     async def __aenter__(self):
         await self.request["session"].__aenter__()
