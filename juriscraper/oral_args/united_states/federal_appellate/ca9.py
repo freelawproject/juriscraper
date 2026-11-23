@@ -9,6 +9,7 @@ History:
 
 import json
 from datetime import datetime, timedelta
+from pathlib import Path
 from urllib.parse import urljoin
 
 from typing_extensions import override
@@ -118,7 +119,7 @@ class Site(OralArgumentSiteLinear):
 
         if self.test_mode_enabled():
             assert self.mock_url is not None
-            return json.load(open(self.mock_url))
+            return json.loads(Path(self.mock_url).read_text())
 
         sess = self.request["session"]
 
