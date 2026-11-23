@@ -116,6 +116,7 @@ class Site(OpinionSiteLinear):
     @override
     def _process_html(self) -> None:
         if self.test_mode_enabled():
+            assert self.mock_url is not None
             # Example files end in .html, so the mock response isn't
             # decoded as JSON
             with open(self.mock_url) as file:

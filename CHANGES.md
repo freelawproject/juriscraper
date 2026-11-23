@@ -24,6 +24,8 @@ Features:
 
 Changes:
 - CI: Publish to PyPI with trusted publishing instead of an API token.
+- Adopt tagged dictionary approach for `TexasCourt*Docket` and `TexasOriginating*Court`.
+- Adopt `StrEnum` for enumerations in `state.texas`.
 - Structure return type of `*AttachmentPage.data()`.
 -
 
@@ -38,7 +40,7 @@ Features:
 Changes:
 - `SCOTUSDocketReport*` interfaces are stripped down. The methods `normalize_date()` and `clean_lower_court_cases()` have been removed to a private helper module.
 - `SCOTUSDocketReport*` hierarchy is flattened. Each implementation is now an immediate subclass of `SCOTUSDocketReportBase`. What was `SCOTUSDocketReport` is renamed to `SCOTUSDocketReportJSON`; an alias from `SCOTUSDocketReport` to `SCOTUSDocketReportJSON` is established for compatibility.
-- `DocketReport.query()` and `AppellateDocketReport.query()` parameters are annotated.
+- `CaseQueryAdvanced.query()`, `ClaimsRegister.query()`, `DocketHistoryReport.query()`, `DocketReport.query()`, `ShowCaseDocApi.query()`, `FreeOpinionReport.query()` and `AppellateDocketReport.query()` parameters are annotated.
 - Upgrade Pyrefly to v1.4.0
 - `SCOTUSDocketReport*` return values are structured; failure cases yield a `dict[Never, Never]`.
 
