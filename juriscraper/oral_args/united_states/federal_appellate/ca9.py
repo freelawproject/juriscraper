@@ -117,6 +117,7 @@ class Site(OralArgumentSiteLinear):
         self.downloader_executed = True
 
         if self.test_mode_enabled():
+            assert self.mock_url is not None
             return json.load(open(self.mock_url))
 
         sess = self.request["session"]

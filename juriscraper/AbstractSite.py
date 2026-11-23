@@ -165,6 +165,7 @@ class AbstractSite:
         # Sub-classed metadata
         self.court_id = None
         self.url = None
+        self.mock_url: str | None = None
         self.parameters = None
         self._opt_attrs: list[str] = []
         self._req_attrs: list[str] = []
@@ -633,6 +634,7 @@ class AbstractSite:
         self.request["url"] = url
 
         def handler(request: httpx.Request):
+            assert self.mock_url is not None
             try:
                 with open(self.mock_url, mode="rb") as stream:
                     content = stream.read()
