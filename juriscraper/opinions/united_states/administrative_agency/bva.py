@@ -29,7 +29,7 @@ processing only the tail of the current year's sitemap; the
 backscraper iterates over all years (1992-present).
 """
 
-import os
+import pathlib
 import re
 from datetime import datetime
 
@@ -144,10 +144,11 @@ class Site(OpinionSiteLinear):
         # characters like § (section sign).  download_content
         # returns bytes; we decode after.
         if self.test_mode_enabled():
+            assert self.mock_url is not None
             raw = await self.download_content(
                 download_url=url,
                 doctor_is_available=False,
-                media_root=os.path.dirname(self.mock_url),
+                media_root=pathlib.Path(self.mock_url).parent,
             )
         else:
             raw = await self.download_content(

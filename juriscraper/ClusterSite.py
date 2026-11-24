@@ -253,8 +253,7 @@ class ClusterSite(OpinionSiteLinear):
             dt1 = parser.parse(datestring1)
             dt2 = parser.parse(datestring2)
             return abs((dt1 - dt2).days) < self.cluster_by_date_max_days
-        else:
-            return datestring1 == datestring2
+        return datestring1 == datestring2
 
     def cluster_opinions(
         self, case_dict: dict, possible_clusters: list[dict]
@@ -276,7 +275,7 @@ class ClusterSite(OpinionSiteLinear):
             the cluster dict if the current case dict was clustered
         """
         if not possible_clusters:
-            return
+            return None
 
         opinion_fields = ["type", "url", "per_curiam", "author", "joined_by"]
 
@@ -314,4 +313,4 @@ class ClusterSite(OpinionSiteLinear):
 
             return candidate_cluster
 
-        return
+        return None

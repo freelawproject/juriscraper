@@ -7,6 +7,7 @@ Court Short Name: 9th Cir. BAP
 import json
 import re
 from datetime import date, datetime, timedelta
+from pathlib import Path
 from urllib.parse import urljoin
 
 from typing_extensions import override
@@ -78,7 +79,8 @@ class Site(OpinionSiteLinear):
         :return: The JSON response from DynamoDB containing oral argument records.
         """
         if self.test_mode_enabled():
-            return json.load(open(self.mock_url))
+            assert self.mock_url is not None
+            return json.loads(Path(self.mock_url).read_text())
 
         sess = self.request["session"]
 

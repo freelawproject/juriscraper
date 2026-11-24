@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 
 
-import os
-
 from juriscraper.pacer import InternetArchive
 from tests import TESTS_ROOT_EXAMPLES_PACER
 from tests.local.PacerParseTestCase import PacerParseTestCase
@@ -15,7 +13,5 @@ class PacerParseInternetArchiveReportTest(PacerParseTestCase):
         self.maxDiff = 200000
 
     def test_parsing_ia_xml_files(self):
-        path_root = os.path.join(
-            TESTS_ROOT_EXAMPLES_PACER, "dockets_internet_archive"
-        )
+        path_root = TESTS_ROOT_EXAMPLES_PACER / "dockets_internet_archive"
         self.parse_files(path_root, "*.xml", InternetArchive)

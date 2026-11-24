@@ -1,8 +1,17 @@
-import re
+"""Scraper for the Nebraska Supreme Court
+CourtID: neb
+Court Short Name: Neb.
+History:
+ - 2026-11-23: backscraper over the Nebraska Appellate Courts Online Library
+"""
 
+import re
+from datetime import date, datetime
+
+import httpx
 from typing_extensions import override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import UnexpectedRequestResponseException, logger
 from juriscraper.lib.html_utils import fix_links_in_lxml_tree
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSite import ExtractedMetaData
@@ -13,6 +22,43 @@ class Site(OpinionSiteLinear):
     citation_regex = re.compile(
         r"Cite\s+as\s+(?P<citation>\d+ +Neb\.( App\.)? \d+)"
     )
+
+    # Parallel citation printed on its own line under the caption of
+    # certified opinions, right above the "Filed" line. Anchoring on that
+    # layout matters: older PDFs start with the last page of the previous
+    # opinion, which may cite other cases. Advance sheets have a
+    # "___ N.W.3d ___" placeholder, which won't match
+    parallel_citation_regex = re.compile(
+        r"^\s*(?P<citation>\d+ +N\.W\.(?:2d|3d) +\d+)\s*\n\s*Filed\s",
+        re.MULTILINE,
+    )
+
+    filed_regex = re.compile(r"^\s*Filed\s.+\d{4}\..*$", re.MULTILINE)
+    headnote_start_regex = re.compile(r"^\s*(?P<number>\d+)\.\s+(?P<text>.+)")
+    # Running headers of the pages, which may split the list of headnotes
+    page_header_regex = re.compile(
+        r"""
+        ^\s*-\s\d+\s-\s*$  # - 869 -
+        |Nebraska\s(Supreme\sCourt|Court\sof\sAppeals)\sAdvance\sSheets
+        |\d+\sNebraska\s(Appellate\s)?Reports
+        """,
+        re.X | re.I,
+    )
+    cite_as_regex = re.compile(r"^\s*Cite\s+as\s+\d+\s+Neb\.")
+    # First words of the paragraph that follows the headnotes
+    procedural_regex = re.compile(
+        r"^\s*(Appeals?\s+from|Petitions?\s|Original\s+(action|proceeding)"
+        r"|Certified\s+Question|Error\s+to)",
+        re.I,
+    )
+
+    # The Online Library lists every opinion of the bound volumes it holds.
+    # Volumes are paginated, most recent first. Older volumes are only
+    # available as a single PDF, and can't be backscraped
+    backscrape_url = "https://www.nebraska.gov/apps-courts-epub/public/supreme"
+    volumes_per_page = 25
+    # opening date of 275 Neb., first volume with an opinions list
+    first_opinion_date = date(2008, 2, 8)
 
     lower_court_regex = re.compile(
         r"""
@@ -29,6 +75,7 @@ class Site(OpinionSiteLinear):
             "https://supremecourt.nebraska.gov/courts/supreme-court/opinions"
         )
         self.should_have_results = True
+        self.make_backscrape_iterable(kwargs)
 
     def _return_response_text_object(self):
         """Remove faulty URLs from HTML
@@ -43,6 +90,8 @@ class Site(OpinionSiteLinear):
         :return: The cleaned html tree of the site
         """
         if self.request["response"]:
+            if not isinstance(self.request["response"], httpx.Response):
+                raise UnexpectedRequestResponseException
             payload = self.request["response"].text
             text = self._clean_text(payload)
             html_tree = self._make_html_tree(text)
@@ -59,6 +108,7 @@ class Site(OpinionSiteLinear):
                     fix_links_in_lxml_tree, base_href=self.request["url"]
                 )
             return html_tree
+        return None
 
     @override
     def _process_html(self) -> None:
@@ -96,13 +146,140 @@ class Site(OpinionSiteLinear):
                 )
 
     @override
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
+        """Build a single (start, end) date tuple
+
+        The source can't be queried by date, so a single element is used to
+        walk the volume pages only once
+
+        :param kwargs: may contain `backscrape_start` and `backscrape_end`
+            in "%Y/%m/%d" format. Defaults to all the available volumes
+        :return: None; sets self.back_scrape_iterable in place
+        """
+        start = kwargs.get("backscrape_start")
+        end = kwargs.get("backscrape_end")
+
+        start = (
+            datetime.strptime(start, "%Y/%m/%d").date()
+            if start
+            else self.first_opinion_date
+        )
+        end = (
+            datetime.strptime(end, "%Y/%m/%d").date() if end else date.today()
+        )
+        self.back_scrape_iterable = [(start, end)]
+
+    @override
+    async def _download_backwards(self, dates: tuple[date, date]) -> None:
+        """Walk the volume pages collecting the opinions filed in the range
+
+        :param dates: (start, end) tuple, both inclusive
+        :return: None
+        """
+        start, end = dates
+        logger.info("Backscraping for range %s %s", start, end)
+
+        offset = 0
+        while True:
+            self.url = (
+                f"{self.backscrape_url}?offset={offset}"
+                f"&max={self.volumes_per_page}"
+            )
+            self.html = await self._download()
+            if not self._process_backscrape_html(start, end):
+                break
+            offset += self.volumes_per_page
+
+    def _process_backscrape_html(self, start: date, end: date) -> bool:
+        """Parse a page of volumes of the Online Library
+
+        :param start: first filing date to collect
+        :param end: last filing date to collect
+        :return: True if older volumes on the next page may be in the range
+        """
+        html = self.html
+        if html is None:
+            return False
+
+        has_opinions = False
+        oldest_opening = None
+
+        for volume in html.xpath("//div[contains(@class, 'volume-item')]"):
+            header = volume.xpath("./div[contains(@class, 'row')]/div")
+            volume_name = " ".join(header[0].text_content().split())
+            # "06/22/2012 - 01/10/2013"; the current volume has no closing date
+            opening = re.search(r"\d{2}/\d{2}/\d{4}", header[2].text_content())
+            if opening:
+                oldest_opening = datetime.strptime(
+                    opening.group(0), "%m/%d/%Y"
+                ).date()
+
+            rows = volume.xpath(".//table/tbody/tr[td]")
+            if not rows:
+                logger.info("No opinions list for volume %s", volume_name)
+                continue
+            has_opinions = True
+
+            count = len(self.cases)
+            for row in rows:
+                c_date, c_docket, c_name, c_citation, c_link = row.xpath("td")
+                date_filed = c_date.text_content().strip()
+                filed = datetime.strptime(date_filed, "%m/%d/%Y").date()
+                if not start <= filed <= end:
+                    continue
+
+                urls = c_link.xpath(".//a/@href")
+                if not urls:
+                    logger.info("Skip row %s", row.text_content())
+                    continue
+
+                # consolidated cases have a docket number per line
+                dockets = [
+                    d.strip() for d in c_docket.xpath(".//text()") if d.strip()
+                ]
+                self.cases.append(
+                    {
+                        "date": date_filed,
+                        "docket": ", ".join(dockets),
+                        "name": " ".join(c_name.text_content().split()),
+                        "citation": " ".join(
+                            c_citation.text_content().split()
+                        ),
+                        "url": urls[0],
+                        "status": "Published",
+                    }
+                )
+            if len(self.cases) > count:
+                logger.info(
+                    "Volume %s: %s opinions in range",
+                    volume_name,
+                    len(self.cases) - count,
+                )
+
+        has_next_page = bool(html.xpath("//a[@class='nextLink']"))
+        return bool(
+            has_opinions
+            and has_next_page
+            and oldest_opening
+            and oldest_opening > start
+        )
+
+    @override
     def extract_from_text(self, scraped_text: str) -> ExtractedMetaData:
-        """Get the state citation and lower court info from the document's text."""
+        """Get the citation and lower court info from the document's text.
+
+        The listings already have the state citation, so the regional
+        reporter one is preferred when the document has it
+        """
         result: ExtractedMetaData = {}
 
-        match = self.citation_regex.search(scraped_text[:1000])
-        if match:
+        if match := self.parallel_citation_regex.search(scraped_text[:10000]):
+            result["Citation"] = re.sub(r"\s+", " ", match.group("citation"))
+        elif match := self.citation_regex.search(scraped_text[:1000]):
             result["Citation"] = match.group("citation")
+
+        if headnotes := self.extract_headnotes(scraped_text):
+            result["OpinionCluster"] = {"headnotes": headnotes}
 
         match = self.lower_court_regex.search(scraped_text)
         if match:
@@ -118,3 +295,65 @@ class Site(OpinionSiteLinear):
             }
 
         return result
+
+    def extract_headnotes(self, scraped_text: str) -> str:
+        """Get the numbered headnotes that follow the "Filed" line
+
+        Each headnote is a list of topics and a point of law, such as
+        "1. Judgments: Appeal and Error. When reviewing questions of law..."
+
+        :param scraped_text: the document's text
+        :return: the headnotes, one per line; or an empty string
+        """
+        filed = self.filed_regex.search(scraped_text[:10000])
+        if not filed:
+            return ""
+
+        lines = scraped_text[filed.end() :].splitlines()
+        headnotes: list[str] = []
+        after_blank_line = False
+        # A page break is a running header surrounded by blank lines. It is
+        # not a paragraph break: the headnote may go on in the next page
+        in_page_break = False
+
+        for index, line in enumerate(lines):
+            if not line.strip():
+                after_blank_line = not in_page_break
+                continue
+
+            next_line = next((n for n in lines[index + 1 :] if n.strip()), "")
+            if (
+                self.page_header_regex.search(line)
+                or self.cite_as_regex.search(line)
+                # the short case name is printed above the "Cite as" line
+                or self.cite_as_regex.search(next_line)
+            ):
+                in_page_break = True
+                after_blank_line = False
+                continue
+
+            match = self.headnote_start_regex.search(line)
+            if match and int(match.group("number")) == len(headnotes) + 1:
+                headnotes.append(
+                    f"{match.group('number')}. {match.group('text').strip()}"
+                )
+            elif not headnotes:
+                # no headnotes in this document
+                break
+            elif after_blank_line and headnotes[-1].endswith(
+                (".", ".”", '."')
+            ):
+                # a new paragraph after a finished headnote: the list is over
+                break
+            elif in_page_break and self.procedural_regex.search(line):
+                # the list ended with the previous page
+                break
+            elif headnotes[-1].endswith("-") and line.strip()[0].islower():
+                # word split across lines
+                headnotes[-1] = headnotes[-1][:-1] + line.strip()
+            else:
+                headnotes[-1] = f"{headnotes[-1]} {line.strip()}"
+            after_blank_line = False
+            in_page_break = False
+
+        return "\n".join(headnotes)

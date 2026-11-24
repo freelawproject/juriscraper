@@ -750,14 +750,15 @@ class BackfillTest(unittest.IsolatedAsyncioTestCase):
         )
 
         async with _make_scraper(recorder) as scraper:
-            cases = []
-            async for case in scraper.backfill(
-                date(2026, 3, 1),
-                date(2026, 3, 31),
-                court_ids=[FloridaCourtID.FOURTH_COA],
-                full_scrape=False,
-            ):
-                cases.append(case)
+            cases = [
+                case
+                async for case in scraper.backfill(
+                    date(2026, 3, 1),
+                    date(2026, 3, 31),
+                    court_ids=[FloridaCourtID.FOURTH_COA],
+                    full_scrape=False,
+                )
+            ]
 
         self.assertEqual(len(cases), 1)
         self.assertIsInstance(cases[0], FloridaCase)
@@ -801,14 +802,15 @@ class BackfillTest(unittest.IsolatedAsyncioTestCase):
         )
 
         async with _make_scraper(recorder) as scraper:
-            cases = []
-            async for case in scraper.backfill(
-                date(2026, 3, 1),
-                date(2026, 3, 31),
-                court_ids=[FloridaCourtID.FOURTH_COA],
-                full_scrape=False,
-            ):
-                cases.append(case)
+            cases = [
+                case
+                async for case in scraper.backfill(
+                    date(2026, 3, 1),
+                    date(2026, 3, 31),
+                    court_ids=[FloridaCourtID.FOURTH_COA],
+                    full_scrape=False,
+                )
+            ]
 
         self.assertEqual(len(cases), 1)
         self.assertEqual(cases[0].docket_number, "4D2026-0606")

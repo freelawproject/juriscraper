@@ -1,4 +1,4 @@
-from typing import Never
+from typing import Literal, Never
 
 from typing_extensions import override
 
@@ -51,6 +51,9 @@ class TexasSupremeCourtDocket(TexasCommonData):
     :ivar appellate_briefs: A list of `TexasSupremeCourtAppellateBrief` objects
     representing the appellate briefs.
     """
+
+    court_id: Literal[CourtID.SUPREME_COURT]
+    court_type: Literal[CourtType.SUPREME]
 
     appeals_court: TexasAppealsCourt
     case_events: list[TexasSupremeCourtCaseEvent]
@@ -111,8 +114,8 @@ class TexasSupremeCourtScraper(TexasCommonScraper[TexasSupremeCourtDocket]):
         ]
 
         return TexasSupremeCourtDocket(
-            court_id=CourtID.SUPREME_COURT.value,
-            court_type=CourtType.SUPREME.value,
+            court_id=CourtID.SUPREME_COURT,
+            court_type=CourtType.SUPREME,
             appeals_court=_parse_appeals_court(self.tree),
             case_events=case_events,
             appellate_briefs=appellate_briefs,

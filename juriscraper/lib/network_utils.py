@@ -392,7 +392,7 @@ class AcmsApiClient:
         self._require_token()
         path = self.CASE_DETAILS_ENDPOINT.format(case_id=case_id)
         url = f"{self.base_url}{path}"
-        logger.info(f"Fetching case details from: {url}")
+        logger.info("Fetching case details from: %s", url)
         response = await self.session.get(url)
         response.raise_for_status()
         return self._map_case_details_response(response.json())
@@ -408,7 +408,7 @@ class AcmsApiClient:
         user_data = self._user_data()
         path = self.DOCKET_ENTRIES_ENDPOINT.format(case_id=case_id)
         url = f"{self.base_url}{path}"
-        logger.info(f"Fetching docket entries from: {url}")
+        logger.info("Fetching docket entries from: %s", url)
         response = await self.session.post(
             url,
             json={
@@ -440,7 +440,7 @@ class AcmsApiClient:
         self._require_token()
         path = self.ATTACHMENTS_ENDPOINT.format(entry_id=docket_entry_id)
         url = f"{self.base_url}{path}"
-        logger.info(f"Fetching attachment from: {url}")
+        logger.info("Fetching attachment from: %s", url)
         response = await self.session.post(
             url,
             json={

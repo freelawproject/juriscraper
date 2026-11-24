@@ -1,7 +1,10 @@
 import json
+import pathlib
 import pprint
 import sys
 import unicodedata
+from datetime import date
+from typing import Never, TypedDict
 
 from typing_extensions import override
 
@@ -13,6 +16,28 @@ from juriscraper.lib.string_utils import convert_date_string
 from .reports import BaseReport
 
 logger = make_default_logger()
+
+
+class ACMSAttachmentPageDataAttachment(TypedDict):
+    attachment_number: int
+    description: str
+    page_count: int | None
+    pacer_doc_id: str | None
+    acms_document_guid: str | None
+    cost: float | None
+    date_filed: date | None
+    permission: str | None
+    file_size: int | None
+
+
+class ACMSAttachmentPageData(TypedDict):
+    pacer_doc_id: str | None
+    pacer_case_id: str | None
+    entry_number: str | None
+    description: str | None
+    date_filed: date | None
+    date_end: date | None
+    attachments: list[ACMSAttachmentPageDataAttachment]
 
 
 class ACMSAttachmentPage(BaseReport):
@@ -149,8 +174,9 @@ class ACMSAttachmentPage(BaseReport):
         )
         if not entry_data:
             logger.warning(
-                "Docket entry with ID '%s' not found in case '%s'."
-                % (entry_id, case_id)
+                "Docket entry with ID '%s' not found in case '%s'.",
+                entry_id,
+                case_id,
             )
             self.is_valid = False
             self._acms_json = {}
@@ -174,7 +200,7 @@ class ACMSAttachmentPage(BaseReport):
         }
 
     @property
-    def data(self) -> dict:
+    def data(self) -> ACMSAttachmentPageData | dict[Never, Never]:
         """Extract relevant information from the JSON payload
         provided by the extension.
 
@@ -198,7 +224,7 @@ class ACMSAttachmentPage(BaseReport):
         case_details = self._acms_json["caseDetails"]
         docket_entry = self._acms_json["docketEntry"]
         de_text = strip_bad_html_tags_insecure(docket_entry["docketEntryText"])
-        result = {
+        result: ACMSAttachmentPageData = {
             "pacer_doc_id": docket_entry["docketEntryId"],
             "pacer_case_id": case_details["caseId"],
             "entry_number": docket_entry["entryNumber"],
@@ -243,7 +269,7 @@ def main():
     report = ACMSAttachmentPage("cand")
     filepath = sys.argv[1]
     print(f"Parsing JSON file at {filepath}")
-    with open(filepath) as f:
+    with pathlib.Path(filepath).open() as f:
         text = f.read()
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)

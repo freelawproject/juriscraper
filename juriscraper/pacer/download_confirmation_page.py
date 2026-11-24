@@ -35,7 +35,8 @@ class DownloadConfirmationPage(BaseReport):
         to self.response.
 
         :param pacer_doc_id: The internal PACER document ID for the item.
-        :return: a request response object
+        :return None: Instead, sets self.response attribute and runs
+        self.parse()
         """
 
         assert self.session is not None, (
@@ -225,8 +226,4 @@ class DownloadConfirmationPage(BaseReport):
             transaction_date_str = transaction_date_str.split("-")[-1]
 
         transaction_date_str = force_unicode(transaction_date_str)
-        transaction_date = convert_date_string(
-            transaction_date_str, datetime=True
-        )
-
-        return transaction_date
+        return convert_date_string(transaction_date_str, datetime=True)

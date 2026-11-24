@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 
 
-import fnmatch
 import json
-import os
+import pathlib
 import sys
 import time
 import unittest
@@ -21,30 +20,25 @@ class PacerNeedLoginTest(unittest.IsolatedAsyncioTestCase):
     """Test if different pages require a log in."""
 
     def parse_files(self, path_root, file_ext):
-        paths = []
-        for root, _, filenames in os.walk(path_root):
-            for filename in fnmatch.filter(filenames, file_ext):
-                paths.append(os.path.join(root, filename))
-        paths.sort()
-        path_max_len = max(len(path) for path in paths) + 2
+        paths = sorted(pathlib.Path(path_root).rglob(file_ext))
+        path_max_len = max(len(str(path)) for path in paths) + 2
         for i, path in enumerate(paths):
             t1 = time.time()
-            sys.stdout.write(f"{i}. Doing {path.ljust(path_max_len)}")
-            dirname, filename = os.path.split(path)
-            filename_sans_ext = filename.split(".")[0]
-            json_path = os.path.join(dirname, f"{filename_sans_ext}.json")
+            sys.stdout.write(f"{i}. Doing {str(path).ljust(path_max_len)}")
+            filename_sans_ext = path.name.split(".")[0]
+            json_path = path.parent / f"{filename_sans_ext}.json"
 
-            with open(path, "rb") as f:
+            with path.open("rb") as f:
                 content = f.read()
 
             result = check_if_logged_in_page(content)
 
-            if not os.path.exists(json_path):
-                with open(json_path, "w") as f:
+            if not json_path.exists():
+                with json_path.open("w") as f:
                     print(f"Creating new file at {json_path}")
                     json.dump(result, f, indent=2, sort_keys=True)
                 continue
-            with open(json_path) as f:
+            with json_path.open() as f:
                 j = json.load(f)
                 self.assertEqual(j, result)
             t2 = time.time()
@@ -54,9 +48,7 @@ class PacerNeedLoginTest(unittest.IsolatedAsyncioTestCase):
             sys.stdout.write("✓\n")
 
     def test_parsing_auth_samples(self):
-        path_root = os.path.join(
-            TESTS_ROOT_EXAMPLES_PACER, "authentication_samples"
-        )
+        path_root = TESTS_ROOT_EXAMPLES_PACER / "authentication_samples"
         self.parse_files(path_root, "*.html")
 
     @mock.patch(

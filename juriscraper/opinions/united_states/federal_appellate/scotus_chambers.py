@@ -59,8 +59,7 @@ class Site(OpinionSite):
         if today < term_cutoff:
             # Haven't hit the cutoff, return previous year.
             return int(today.strftime("%y")) - 1  # y3k bug!
-        else:
-            return today.strftime("%y")
+        return today.strftime("%y")
 
     async def _download(self, request_dict=None):
         if request_dict is None:

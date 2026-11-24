@@ -17,7 +17,7 @@ Court has started publishing something new.
 """
 
 from dataclasses import dataclass
-from enum import Enum
+from enum import StrEnum
 
 __all__ = [
     "COURT_GENERATED_DOCTYPES",
@@ -36,7 +36,7 @@ __all__ = [
 ]
 
 
-class CourtVocabulary(str, Enum):
+class CourtVocabulary(StrEnum):
     """Base for the vocabularies below.
 
     A member is the string Court-PASS prints, so it compares and serializes as

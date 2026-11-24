@@ -1,4 +1,5 @@
 import json
+import pathlib
 import pprint
 import re
 import sys
@@ -540,7 +541,7 @@ def _main():
     report = ACMSDocketReport("ca9")
     filepath = sys.argv[1]
     print(f"Parsing JSON file at {filepath}")
-    with open(filepath) as f:
+    with pathlib.Path(filepath).open() as f:
         text = f.read()
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)

@@ -40,6 +40,7 @@ class Site(OpinionSite):
                 self.extract_cases(html)
             else:
                 proceed = False
+        return None
 
     def _get_case_names(self):
         return [case["name"] for case in self.cases]

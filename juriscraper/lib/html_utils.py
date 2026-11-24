@@ -227,14 +227,12 @@ def clean_html(text: str) -> str:
         text = re.sub(r"&#0[1-8]\b|&#[1-8]\b", "", text)
 
     # Fix invalid bytes in XML (http://stackoverflow.com/questions/8733233/)
-    text = re.sub(
+    return re.sub(
         "[^\u0020-\ud7ff\u0009\u000a\u000d\ue000-\ufffd"
         "\U00010000-\U0010ffff]+",
         "",
         text,
     )
-
-    return text
 
 
 def fix_links_but_keep_anchors(link: str) -> str:
@@ -278,8 +276,7 @@ def fix_links_in_lxml_tree(link: str, keep_anchors: bool = False) -> str:
     )
     if keep_anchors:
         return url
-    else:
-        return url.split("#")[0]
+    return url.split("#")[0]
 
 
 def is_html(response: Response) -> bool:
@@ -300,11 +297,7 @@ def table_to_array2d(table: HtmlElement) -> list[list[HtmlElement]]:
     # Use direct children only to avoid picking up nested tables.
     rows = table.findall("./tr") or table.findall("./tbody/tr")
 
-    out = []
-    for row in rows:
-        out.append(list(row.findall("./td")))
-
-    return out
+    return [list(row.findall("./td")) for row in rows]
 
 
 def parse_table(table: HtmlElement) -> dict[str, list[HtmlElement]]:

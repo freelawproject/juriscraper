@@ -1,5 +1,4 @@
-import fnmatch
-import os
+import pathlib
 import sys
 import time
 import unittest
@@ -16,18 +15,14 @@ class PacerParseTestCase(unittest.TestCase):
 
     def parse_files(self, path_root, file_ext, test_class):
         """Can we do a simple query and parse?"""
-        paths = []
-        for root, _, filenames in os.walk(path_root):
-            for filename in fnmatch.filter(filenames, file_ext):
-                paths.append(os.path.join(root, filename))
-        paths.sort()
-        path_max_len = max(len(path) for path in paths) + 2
+        paths = sorted(pathlib.Path(path_root).rglob(file_ext))
+        path_max_len = max(len(str(path)) for path in paths) + 2
         for i, path in enumerate(paths):
             t1 = time.time()
-            sys.stdout.write(f"{i}. Doing {path.ljust(path_max_len)}")
-            dirname, filename = os.path.split(path)
+            sys.stdout.write(f"{i}. Doing {str(path).ljust(path_max_len)}")
+            filename = path.name
             filename_sans_ext = filename.split(".")[0]
-            json_path = os.path.join(dirname, f"{filename_sans_ext}.json")
+            json_path = path.parent / f"{filename_sans_ext}.json"
 
             court = filename_sans_ext.split("_")[0]
             report = test_class(court)
@@ -35,10 +30,10 @@ class PacerParseTestCase(unittest.TestCase):
             # Try to read the file using utf-8.
             # If it fails fallback on iso-8859-1
             try:
-                with open(path, "rb") as f:
+                with path.open("rb") as f:
                     report._parse_text(f.read().decode("utf-8"))
             except UnicodeDecodeError:
-                with open(path, "rb") as f:
+                with path.open("rb") as f:
                     report._parse_text(f.read().decode("iso-8859-1"))
 
             # Does the metadata function work too? It usually, but not always,
@@ -55,13 +50,13 @@ class PacerParseTestCase(unittest.TestCase):
                 and isinstance(data[0], BaseModel)
             ):
                 data = pydantic_core.to_jsonable_python(data)
-            if not os.path.exists(json_path):
-                with open(json_path, "w") as f:
+            if not json_path.exists():
+                with json_path.open("w") as f:
                     print(f"Creating new file at {json_path}")
                     json.dump(data, f, indent=2, sort_keys=True)
                 continue
             data = json.loads(json.dumps(data, sort_keys=True))
-            with open(json_path) as f:
+            with json_path.open() as f:
                 j = json.load(f)
                 with self.subTest(
                     "Parsing PACER", file=filename, klass=test_class

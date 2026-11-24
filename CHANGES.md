@@ -23,8 +23,26 @@ Features:
   freelawproject/courtlistener#6680
 
 Changes:
-- CI: Publish to PyPI with trusted publishing instead of an API token.
 -
+
+Fixes:
+- Incorrectly applied ternary in leading to blank URL in "Possible case numbers" API
+
+## 4.0.5 - 2026-11-23
+
+Features:
+- Add a backscraper to `neb` and `nebctapp`. It reads the Nebraska Appellate
+  Courts Online Library volume listings, which cover 275 Neb. (2008) and
+  16 Neb. App. (2007) onwards. `extract_from_text` now returns the N.W.2d /
+  N.W.3d parallel citation when the certified opinion has one, and the
+  numbered headnotes as `OpinionCluster.headnotes`.
+  freelawproject/courtlistener#8501
+
+Changes:
+- CI: Publish to PyPI with trusted publishing instead of an API token.
+- Adopt tagged dictionary approach for `TexasCourt*Docket` and `TexasOriginating*Court`.
+- Adopt `StrEnum` for enumerations in `state.texas`.
+- Structure return type of `*AttachmentPage.data()`.
 
 Fixes:
 -
@@ -37,7 +55,7 @@ Features:
 Changes:
 - `SCOTUSDocketReport*` interfaces are stripped down. The methods `normalize_date()` and `clean_lower_court_cases()` have been removed to a private helper module.
 - `SCOTUSDocketReport*` hierarchy is flattened. Each implementation is now an immediate subclass of `SCOTUSDocketReportBase`. What was `SCOTUSDocketReport` is renamed to `SCOTUSDocketReportJSON`; an alias from `SCOTUSDocketReport` to `SCOTUSDocketReportJSON` is established for compatibility.
-- `DocketReport.query()` and `AppellateDocketReport.query()` parameters are annotated.
+- `CaseQueryAdvanced.query()`, `ClaimsRegister.query()`, `DocketHistoryReport.query()`, `DocketReport.query()`, `ShowCaseDocApi.query()`, `FreeOpinionReport.query()` and `AppellateDocketReport.query()` parameters are annotated.
 - Upgrade Pyrefly to v1.4.0
 - `SCOTUSDocketReport*` return values are structured; failure cases yield a `dict[Never, Never]`.
 

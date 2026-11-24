@@ -1,3 +1,4 @@
+import pathlib
 import re
 from collections import defaultdict
 from datetime import date
@@ -262,8 +263,7 @@ class SCOTUSDocketReportHTM(SCOTUSDocketReportBase):
             ]
         name = harmonize(clean_string(" ".join(p for p in title_parts if p)))
         # Strip trailing dangling "v." when there is no respondent name.
-        name = re.sub(r",?\s*v\.\s*$", "", name).strip()
-        return name
+        return re.sub(r",?\s*v\.\s*$", "", name).strip()
 
     def _build_docket_entry(
         self,
@@ -593,7 +593,7 @@ def _main():
         sys.exit(1)
 
     parser = SCOTUSDocketReportHTM()
-    with open(sys.argv[1], encoding="utf-8") as f:
+    with pathlib.Path(sys.argv[1]).open(encoding="utf-8") as f:
         parser._parse_text(f.read())
     pprint.pprint(parser.data, indent=2)
 
