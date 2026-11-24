@@ -61,6 +61,68 @@ class ACMSDocketReport(AppellateDocketReport):
             "caseDetails": case_data,
             "docketInfo": entry_details,
         }
+        self.is_valid = True
+
+    @staticmethod
+    def _find_case(cases: list[dict], docket_number: str) -> dict | None:
+        """Find the case whose number exactly matches ``docket_number``.
+
+        IndexContent may return multiple cases matching the identifier,
+        including related cases or near-matches.
+
+        :param cases: The ``caseDetails`` list from the view model.
+        :param docket_number: The requested docket number.
+        :return: The matching case, or None if no exact match is found.
+        """
+        requested_number = docket_number.strip()
+
+        for case in cases:
+            case_number = str(case.get("caseNumber") or "").strip()
+            if case_number == requested_number:
+                return case
+
+        return None
+
+    async def query_by_docket_number(self, docket_number: str) -> None:
+        """Look a case up by its docket number and load its docket.
+
+        This is the entry point when only the docket number is known. It
+        reads the IndexContent page, which also supplies the API token the
+        other requests need, so no call to the API has to precede it. Docket
+        entries are taken from the page when it includes them and fetched
+        from the API otherwise.
+
+        ``data`` is empty when none of the cases ACMS lists for the number
+        carries it exactly.
+
+        :param docket_number: The appellate docket number, e.g. ``26-7519``.
+        """
+        if self.api_client is None:
+            raise AssertionError("session attribute cannot be None.")
+
+        view_model = await self.api_client.get_index_content(docket_number)
+        cases = view_model.get("caseDetails") or []
+        case_details = self._find_case(cases, docket_number)
+        if case_details is None:
+            logger.info(
+                "No ACMS case found for %s %s", self.court_id, docket_number
+            )
+            self._acms_json = None
+            self.is_valid = False
+            return
+
+        # Entries embedded in the page can only be trusted to belong to the
+        # matched case when it is the only one listed.
+        docket_info = view_model.get("docketInfo")
+        if docket_info is None or len(cases) > 1:
+            docket_info = await self.api_client.get_docket_entries(
+                case_details["caseId"]
+            )
+        self._acms_json = {
+            "caseDetails": case_details,
+            "docketInfo": docket_info,
+        }
+        self.is_valid = True
 
     async def download_pdf(
         self, entry_id: str, doc_id: str
