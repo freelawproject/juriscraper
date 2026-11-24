@@ -21,7 +21,7 @@ Changes:
 -
 
 Fixes:
--
+- Incorrectly applied ternary in leading to blank URL in "Possible case numbers" API
 
 ## 4.0.5 - 2026-11-23
 
