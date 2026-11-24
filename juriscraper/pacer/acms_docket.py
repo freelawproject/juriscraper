@@ -104,7 +104,7 @@ class ACMSDocketReport(AppellateDocketReport):
         case_details = self._find_case(cases, docket_number)
         if case_details is None:
             logger.info(
-                f"No ACMS case found for {self.court_id} {docket_number}"
+                "No ACMS case found for %s %s", self.court_id, docket_number
             )
             self._acms_json = None
             self.is_valid = False

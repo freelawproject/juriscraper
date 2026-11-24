@@ -139,8 +139,9 @@ class AcmsApiClient:
         :raises ParsingException: if the page carries no view model.
         """
         logger.info(
-            f"Fetching ACMS IndexContent for {self.court_id} "
-            f"case {case_identifier}"
+            "Fetching ACMS IndexContent for %s case %s",
+            self.court_id,
+            case_identifier,
         )
         response = await self.session.get(
             self.index_content_url,
@@ -157,15 +158,16 @@ class AcmsApiClient:
         token = (view_model.get("authTokenResult") or {}).get("token")
         if not token or not isinstance(token, str):
             logger.warning(
-                f"ACMS IndexContent for {self.court_id} carried no usable "
-                "API token."
+                "ACMS IndexContent for %s carried no usable API token.",
+                self.court_id,
             )
             return view_model
         user_data = self._user_data_from_view_model(view_model)
         if not user_data:
             logger.warning(
-                f"ACMS IndexContent for {self.court_id} carried no account "
-                "data; API calls that need it will fail."
+                "ACMS IndexContent for %s carried no account data; API calls "
+                "that need it will fail.",
+                self.court_id,
             )
         self.session.store_acms_token(
             self.court_id, {"Token": token}, user_data
@@ -372,7 +374,7 @@ class AcmsApiClient:
         self._require_token()
         path = self.CASE_SEARCH_ENDPOINT.format(docket_number=docket_number)
         url = f"{self.base_url}{path}"
-        logger.info(f"Querying the CaseSearch endpoint with URL: {url}")
+        logger.info("Querying the CaseSearch endpoint with URL: %s", url)
         response = await self.session.get(url, params={"exactMatch": True})
         response.raise_for_status()
         cases = response.json()
