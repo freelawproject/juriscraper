@@ -85,7 +85,8 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs: dict):
+    @override
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
         if kwargs.get("backscrape_start"):
             start = int(kwargs["backscrape_start"])
         else:
@@ -110,5 +111,4 @@ class Site(OpinionSiteLinear):
         """
         if match := re.search(r"\d+ Ga. \d+", scraped_text[:50]):
             return {"Citation": match.group(0)}
-        else:
-            return {}
+        return {}

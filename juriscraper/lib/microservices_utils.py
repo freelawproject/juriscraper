@@ -34,7 +34,7 @@ async def test_for_meta_redirections(
         extension = ""
     except Exception:
         # blanket exception until we get more error information
-        logger.error("Error getting extension on juriscraper", exc_info=True)
+        logger.exception("Error getting extension on juriscraper")
         extension = ""
 
     if extension != ".html":
@@ -67,7 +67,7 @@ async def follow_redirections(r: Response, s: AsyncClient) -> Response:
     """
     redirected, url = await test_for_meta_redirections(r)
     if redirected:
-        logger.info(f"Following a meta redirection to: {url.encode()}")
+        logger.info("Following a meta redirection to: %s", url.encode())
         r = await follow_redirections(await s.get(url), s)
     return r
 
@@ -87,6 +87,4 @@ async def get_extension(content: bytes) -> str:
             extension_url, files={"file": ("filename", content)}, timeout=30
         )
     extension_response.raise_for_status()
-    extension = extension_response.text
-
-    return extension
+    return extension_response.text

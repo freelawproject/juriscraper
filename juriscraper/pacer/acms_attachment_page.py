@@ -1,7 +1,10 @@
 import json
+import pathlib
 import pprint
 import sys
 import unicodedata
+from datetime import date
+from typing import Never, TypedDict
 
 from typing_extensions import override
 
@@ -15,13 +18,37 @@ from .reports import BaseReport
 logger = make_default_logger()
 
 
+class ACMSAttachmentPageDataAttachment(TypedDict):
+    attachment_number: int
+    description: str
+    page_count: int | None
+    pacer_doc_id: str | None
+    acms_document_guid: str | None
+    cost: float | None
+    date_filed: date | None
+    permission: str | None
+    file_size: int | None
+
+
+class ACMSAttachmentPageData(TypedDict):
+    pacer_doc_id: str | None
+    pacer_case_id: str | None
+    entry_number: str | None
+    description: str | None
+    date_filed: date | None
+    date_end: date | None
+    attachments: list[ACMSAttachmentPageDataAttachment]
+
+
 class ACMSAttachmentPage(BaseReport):
     """Parse ACMS attachment pages' JSON."""
 
     def __init__(self, court_id: str, pacer_session=None) -> None:
         super().__init__(court_id, pacer_session)
         self._acms_json: dict | None = None
-        self.api_client = AcmsApiClient(pacer_session, court_id)
+        self.api_client: AcmsApiClient | None = None
+        if pacer_session is not None:
+            self.api_client = AcmsApiClient(pacer_session, court_id)
 
     @override
     def _parse_text(self, text: str) -> None:
@@ -123,12 +150,15 @@ class ACMSAttachmentPage(BaseReport):
         :param entry_id: The unique identifier of the specific docket entry to
                          retrieve.
         """
+        if self.api_client is None:
+            raise AssertionError("session attribute cannot be None.")
+
         # Ensure ACMS user data is available before fetching attachments.
         # Attachment requests include user-specific data in the request body,
         # so the session must have the necessary authentication data
         # initialized beforehand.
-        if not self.session.acms_user_data:
-            await self.session.get_acms_auth_object(self.court_id)
+        if not self.api_client.session.acms_user_data:
+            await self.api_client.session.get_acms_auth_object(self.court_id)
 
         # Fetch Docket Entry Details
         docket_info = await self.api_client.get_docket_entries(case_id)
@@ -144,8 +174,9 @@ class ACMSAttachmentPage(BaseReport):
         )
         if not entry_data:
             logger.warning(
-                "Docket entry with ID '%s' not found in case '%s'."
-                % (entry_id, case_id)
+                "Docket entry with ID '%s' not found in case '%s'.",
+                entry_id,
+                case_id,
             )
             self.is_valid = False
             self._acms_json = {}
@@ -169,7 +200,7 @@ class ACMSAttachmentPage(BaseReport):
         }
 
     @property
-    def data(self) -> dict:
+    def data(self) -> ACMSAttachmentPageData | dict[Never, Never]:
         """Extract relevant information from the JSON payload
         provided by the extension.
 
@@ -187,11 +218,13 @@ class ACMSAttachmentPage(BaseReport):
         """
         if not self.is_valid:
             return {}
+        if self._acms_json is None:
+            raise AssertionError("_acms_json is absent.")
 
         case_details = self._acms_json["caseDetails"]
         docket_entry = self._acms_json["docketEntry"]
         de_text = strip_bad_html_tags_insecure(docket_entry["docketEntryText"])
-        result = {
+        result: ACMSAttachmentPageData = {
             "pacer_doc_id": docket_entry["docketEntryId"],
             "pacer_case_id": case_details["caseId"],
             "entry_number": docket_entry["entryNumber"],
@@ -236,7 +269,7 @@ def main():
     report = ACMSAttachmentPage("cand")
     filepath = sys.argv[1]
     print(f"Parsing JSON file at {filepath}")
-    with open(filepath) as f:
+    with pathlib.Path(filepath).open() as f:
         text = f.read()
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)

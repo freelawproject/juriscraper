@@ -1,6 +1,8 @@
+import pathlib
 import pprint
 import re
 import sys
+from typing import Never, NotRequired, TypedDict
 
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import force_unicode
@@ -15,6 +17,27 @@ from .utils import (
 )
 
 logger = make_default_logger()
+
+
+class AttachmentPageDataAttachment(TypedDict):
+    attachment_number: int
+    description: str
+    page_count: int | None
+    pacer_doc_id: str | None
+    pacer_seq_no: str | None
+    file_size_str: str
+    file_size_bytes: NotRequired[int]
+
+
+class AttachmentPageData(TypedDict):
+    document_number: int | None
+    pacer_doc_id: str | None
+    pacer_case_id: str | None
+    pacer_seq_no: str | None
+    page_count: int | None
+    file_size_str: str | None
+    file_size_bytes: NotRequired[int]
+    attachments: list[AttachmentPageDataAttachment]
 
 
 class AttachmentPage(BaseReport):
@@ -32,7 +55,8 @@ class AttachmentPage(BaseReport):
         """Query the "attachment page" endpoint and set the results to self.response.
 
         :param document_number: The internal PACER document ID for the item.
-        :return: a request response object
+        :return None: Instead, sets self.response attribute and runs
+        self.parse()
         """
         assert self.session is not None, (
             "session attribute of DocketReport cannot be None."
@@ -46,7 +70,7 @@ class AttachmentPage(BaseReport):
         self.parse()
 
     @property
-    def data(self):
+    def data(self) -> AttachmentPageData | dict[Never, Never]:
         """Get data back from the query for the matching document entry.
 
         :return: If lookup fails, an empty dict. Else, a dict containing the
@@ -81,24 +105,23 @@ class AttachmentPage(BaseReport):
         else:
             first_row = rows.pop(0)
             first_row_attachment = False
-        result = {
+        result: AttachmentPageData = {
             "document_number": self._get_document_number(),
             "pacer_doc_id": self._get_pacer_doc_id(first_row),
             "pacer_case_id": self._get_pacer_case_id(),
             "pacer_seq_no": self._get_pacer_seq_no_from_tr(first_row),
+            "page_count": None,
+            "file_size_str": "",
             "attachments": [],
         }
-        if first_row_attachment:
-            result["page_count"] = None
-            result["file_size_str"] = ""
-        else:
+        if not first_row_attachment:
             result["page_count"] = self._get_page_count_from_tr(first_row)
             file_size_bytes = self._get_file_size_bytes_from_tr(first_row)
             if file_size_bytes is not None:
                 result["file_size_bytes"] = file_size_bytes
             result["file_size_str"] = get_file_size_str_from_tr(first_row)
         for row in rows:
-            attachment = {
+            attachment: AttachmentPageDataAttachment = {
                 "attachment_number": self._get_attachment_number(row),
                 "description": self._get_description_from_tr(row),
                 "page_count": self._get_page_count_from_tr(row),
@@ -279,6 +302,7 @@ class AttachmentPage(BaseReport):
         count = get_input_value_from_tr(tr, 2, 3, "-")
         if count is not None:
             return int(count)
+        return None
 
     @staticmethod
     def _get_page_count_from_tr(tr):
@@ -302,6 +326,7 @@ class AttachmentPage(BaseReport):
                 # word "page" and gets caught by the xpath. Just
                 # press on.
                 continue
+        return None
 
     @staticmethod
     def _get_file_size_bytes_from_tr(tr):
@@ -317,7 +342,7 @@ class AttachmentPage(BaseReport):
         return file_size
 
     @staticmethod
-    def _get_pacer_doc_id(row):
+    def _get_pacer_doc_id(row) -> str | None:
         """Take in a row from the attachment table and return the pacer_doc_id
         for the item in that row. Return None if the ID cannot be found.
         """
@@ -333,7 +358,7 @@ class AttachmentPage(BaseReport):
             doc1_url = url.xpath("./@href")[0]
             return get_pacer_doc_id_from_doc1_url(doc1_url)
 
-    def _get_pacer_seq_no_from_tr(self, row):
+    def _get_pacer_seq_no_from_tr(self, row) -> str | None:
         """Take a row of the attachment page, and return the sequence number
         from the goDLS function.
         """
@@ -362,7 +387,7 @@ class AttachmentPage(BaseReport):
         # 3. No goDLS in the onclick
         return None
 
-    def _get_pacer_case_id(self):
+    def _get_pacer_case_id(self) -> str | None:
         """Get the pacer_case_id value by inspecting the HTML
 
         :returns str: The pacer_case_id value
@@ -392,6 +417,7 @@ class AttachmentPage(BaseReport):
                 m = re.search(r"[?&]caseid=(\d+)", onclick, flags=re.I)
                 if m:
                     return m.group(1)
+        return None
 
 
 def _main():
@@ -402,7 +428,7 @@ def _main():
     report = AttachmentPage("cand")  # Court ID is only needed for querying.
     filepath = sys.argv[1]
     print(f"Parsing HTML file at {filepath}")
-    with open(filepath, "rb") as f:
+    with pathlib.Path(filepath).open("rb") as f:
         text = f.read().decode("utf-8")
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)

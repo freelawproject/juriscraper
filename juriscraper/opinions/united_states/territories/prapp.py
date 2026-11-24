@@ -54,7 +54,7 @@ class Site(OpinionSiteLinear):
             if not latest_url:
                 logger.debug(f"No opinions posted for {self.year}")
                 self.html = None
-                return
+                return None
 
             self.url = latest_url[0]
         if self.current_month not in self.url:
@@ -92,7 +92,8 @@ class Site(OpinionSiteLinear):
                 }
             )
 
-    def make_backscrape_iterable(self, kwargs):
+    @override
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Generate backscrape iterable
 
         Generate spanish language year month slug to be used in scraping

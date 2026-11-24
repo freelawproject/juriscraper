@@ -75,6 +75,7 @@ class Site(OralArgumentSiteLinear):
         self.html = await self._download()
         self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Use base function to generate a range, then pick
         unique year-month combinations to build the backscrape

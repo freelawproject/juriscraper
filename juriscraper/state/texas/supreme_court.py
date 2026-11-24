@@ -1,3 +1,5 @@
+from typing import Literal, Never
+
 from typing_extensions import override
 
 from juriscraper.lib.string_utils import clean_string
@@ -50,6 +52,9 @@ class TexasSupremeCourtDocket(TexasCommonData):
     representing the appellate briefs.
     """
 
+    court_id: Literal[CourtID.SUPREME_COURT]
+    court_type: Literal[CourtType.SUPREME]
+
     appeals_court: TexasAppealsCourt
     case_events: list[TexasSupremeCourtCaseEvent]
     appellate_briefs: list[TexasSupremeCourtAppellateBrief]
@@ -69,7 +74,7 @@ class TexasSupremeCourtScraper(TexasCommonScraper[TexasSupremeCourtDocket]):
 
     @override
     @property
-    def data(self) -> TexasSupremeCourtDocket | dict[str, None]:
+    def data(self) -> TexasSupremeCourtDocket | dict[Never, Never]:
         """
         Extract parsed data from an HTML tree. This property returns a
         `TexasSupremeCourtDocket`.
@@ -109,8 +114,8 @@ class TexasSupremeCourtScraper(TexasCommonScraper[TexasSupremeCourtDocket]):
         ]
 
         return TexasSupremeCourtDocket(
-            court_id=CourtID.SUPREME_COURT.value,
-            court_type=CourtType.SUPREME.value,
+            court_id=CourtID.SUPREME_COURT,
+            court_type=CourtType.SUPREME,
             appeals_court=_parse_appeals_court(self.tree),
             case_events=case_events,
             appellate_briefs=appellate_briefs,

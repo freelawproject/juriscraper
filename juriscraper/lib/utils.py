@@ -127,7 +127,7 @@ def clean_attribute(name: str, value: Any) -> Any:
     """
     if name == "download_urls":
         return value.strip()
-    elif name == "case_dates" and not isinstance(value, datetime | date):
+    if name == "case_dates" and not isinstance(value, datetime | date):
         value = convert_date_string(value)
 
     if isinstance(value, str):
@@ -199,21 +199,20 @@ def clean_court_object(obj: _CourtObjectT) -> _CourtObjectT:
         obj_list: list[object] = obj
         cleaned_list = [clean_court_object(i) for i in obj_list]
         return cast(_CourtObjectT, cleaned_list)
-    elif isinstance(obj, dict):
+    if isinstance(obj, dict):
         # type checker cannot infer correctness, so we help it along with
         # erasure here and a `cast` below
         obj_dict: dict[Hashable, object] = obj
         cleaned_dict = {k: clean_court_object(v) for k, v in obj_dict.items()}
         return cast(_CourtObjectT, cleaned_dict)
-    elif isinstance(obj, str):
+    if isinstance(obj, str):
         s = " ".join(obj.strip().split())
         s = force_unicode(s)
         s = re.sub(r"\s+,", ",", s)
         # type checker cannot infer correctness, so we help it along with
         # this `cast`.
         return cast(_CourtObjectT, s)
-    else:
-        return obj
+    return obj
 
 
 _DownloadT = TypeVar("_DownloadT")
@@ -340,7 +339,7 @@ def check_expected_content_types(
     expected_content_types = site.expected_content_types
     court_id = site.court_id
 
-    # test for expected content type (thanks mont for nil)
+    # test for expected content type (pass all that have *no* types specified - see `mont`)
     if not expected_content_types:
         return
 

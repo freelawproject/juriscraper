@@ -149,6 +149,7 @@ class Site(OpinionSiteLinear):
         self.html = await super()._download()
         await self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Creates backscrape iterable from kwargs or defaults
 

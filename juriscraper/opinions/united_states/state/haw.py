@@ -177,13 +177,15 @@ class Site(ClusterSite):
             "mo": f"{search_date.month:02d}",
         }
         logger.info(
-            "Now downloading case page at: %s (params: %s)"
-            % (self.url, self.request["parameters"]["params"])
+            "Now downloading case page at: %s (params: %s)",
+            self.url,
+            self.request["parameters"]["params"],
         )
         self.html = await self._download()
         self._process_html()
 
-    def make_backscrape_iterable(self, kwargs) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Make back scrape iterable
 
         :param kwargs: the back scraping params

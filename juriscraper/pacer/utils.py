@@ -431,7 +431,9 @@ def get_doc_id_prefix_from_court_id(court_id):
     return cid_to_prefix_map[court_id]
 
 
-async def get_pacer_court_info(**kwargs):
+async def get_pacer_court_info(
+    **kwargs,
+) -> dict[str, dict[str, list[dict[str, str]]]]:
     kwargs.setdefault("http2", True)
     kwargs.setdefault("follow_redirects", True)
     async with httpx.AsyncClient(**kwargs) as client:
@@ -441,7 +443,9 @@ async def get_pacer_court_info(**kwargs):
         return r.json()
 
 
-def get_courts_from_json(j):
+def get_courts_from_json(
+    j: dict[str, dict[str, list[dict[str, str]]]],
+) -> list[dict[str, str]]:
     courts = []
     for k, v in j.items():
         for court in v["courts"]:
@@ -456,7 +460,7 @@ def get_court_id_from_url(url):
     return host.split(".")[1]
 
 
-def get_pacer_case_id_from_nonce_url(url):
+def get_pacer_case_id_from_nonce_url(url) -> str:
     """Extract the pacer case ID from the URL.
 
     In: https://ecf.almd.uscourts.gov/cgi-bin/DktRpt.pl?56120
@@ -470,22 +474,20 @@ def get_pacer_case_id_from_nonce_url(url):
     return param
 
 
-def get_pacer_seq_no_from_doc1_url(url):
+def get_pacer_seq_no_from_doc1_url(url) -> str | None:
     """Extract the seq_no from the doc1 URL."""
     match = re.search(r"de_seq_num=(\d+)", url)
     if match:
         return match.group(1)
-    else:
-        return None
+    return None
 
 
-def get_pacer_case_id_from_doc1_url(url):
+def get_pacer_case_id_from_doc1_url(url) -> str | None:
     """Extract the caseid from the doc1 URL."""
     match = re.search(r"caseid=(\d+)", url)
     if match:
         return match.group(1)
-    else:
-        return None
+    return None
 
 
 def get_pacer_magic_num_from_doc1_url(
@@ -503,8 +505,7 @@ def get_pacer_magic_num_from_doc1_url(
         match = re.search(r"magic_num=(\d+)", url)
     if match:
         return match.group(1)
-    else:
-        return None
+    return None
 
 
 def get_pacer_magic_num_from_acms_url(
@@ -535,8 +536,7 @@ def get_pacer_doc_id_from_doc1_url(url: str) -> str:
         "Cannot get doc1 ID from show_case_doc URL"
     )
     url = url.rsplit("/", 1)[1].split("?")[0]
-    url = f"{url[:3]}0{url[4:]}"
-    return url
+    return f"{url[:3]}0{url[4:]}"
 
 
 def get_pacer_seq_no_from_doc1_anchor(anchor):
@@ -672,7 +672,7 @@ def make_doc1_url(
             f"pacer_doc_id {pacer_doc_id} prefix has court_id cadc or cavc, "
             f"correct court_id must be passed explicitly"
         )
-    elif court_id is None:
+    if court_id is None:
         court_id = doc_id_cid
     elif court_id == "cavc" and doc_id_cid == "cadc":
         pass
@@ -704,7 +704,7 @@ def make_docs1_url(
             f"pacer_doc_id {pacer_doc_id} prefix has court_id cadc or cavc, "
             f"correct court_id must be passed explicitly"
         )
-    elif court_id is None:
+    if court_id is None:
         court_id = doc_id_cid
     elif court_id == "cavc" and doc_id_cid == "cadc":
         pass
@@ -725,17 +725,17 @@ def make_acms_free_doc_url(court_id: str, pacer_magic_num: str) -> str:
     return f"https://{court_id}-showdoc.azurewebsites.us/NDA/{pacer_magic_num}"
 
 
-def is_pdf(response):
+def is_pdf(response) -> bool:
     """Determines whether the item downloaded is a PDF or something else."""
     return response.headers.get("content-type") == "application/pdf"
 
 
-def is_text(response):
+def is_text(response) -> bool:
     """Determines whether the item downloaded is a text file or something else."""
     return ".txt" in response.headers.get("content-type", "")
 
 
-def get_nonce_from_form(r):
+def get_nonce_from_form(r) -> str | None:
     """Get a nonce value from a HTML response. Returns the first nonce that is
     found.
 

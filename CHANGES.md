@@ -15,6 +15,65 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+- Add `AcmsApiClient.get_index_content()`, which loads an ACMS case's
+  IndexContent page and keeps the API bearer token it carries, since ACMS
+  no longer returns one during login. `ACMSDocketReport.query_by_docket_number()`
+  builds on it to look a case up by docket number and load its docket,
+  taking entries from the page when present and from the API otherwise.
+  freelawproject/courtlistener#6680
+
+Changes:
+-
+
+Fixes:
+- Incorrectly applied ternary in leading to blank URL in "Possible case numbers" API
+- `AcmsApiClient` raises `PacerLoginException` when an API call is made
+  before a token or account data is stored, instead of sending an
+  anonymous request or crashing with `KeyError`. `AcmsCaseSearch` now
+  sends its request through the new `AcmsApiClient.search_cases()`, so it
+  raises the same exception instead of an `HTTPStatusError`.
+  freelawproject/courtlistener#6680
+
+## 4.0.5 - 2026-11-23
+
+Features:
+- Add a backscraper to `neb` and `nebctapp`. It reads the Nebraska Appellate
+  Courts Online Library volume listings, which cover 275 Neb. (2008) and
+  16 Neb. App. (2007) onwards. `extract_from_text` now returns the N.W.2d /
+  N.W.3d parallel citation when the certified opinion has one, and the
+  numbered headnotes as `OpinionCluster.headnotes`.
+  freelawproject/courtlistener#8501
+
+Changes:
+- CI: Publish to PyPI with trusted publishing instead of an API token.
+- Adopt tagged dictionary approach for `TexasCourt*Docket` and `TexasOriginating*Court`.
+- Adopt `StrEnum` for enumerations in `state.texas`.
+- Structure return type of `*AttachmentPage.data()`.
+
+Fixes:
+-
+
+## 4.0.4 - 2026-11-18
+
+Features:
+-
+
+Changes:
+- `SCOTUSDocketReport*` interfaces are stripped down. The methods `normalize_date()` and `clean_lower_court_cases()` have been removed to a private helper module.
+- `SCOTUSDocketReport*` hierarchy is flattened. Each implementation is now an immediate subclass of `SCOTUSDocketReportBase`. What was `SCOTUSDocketReport` is renamed to `SCOTUSDocketReportJSON`; an alias from `SCOTUSDocketReport` to `SCOTUSDocketReportJSON` is established for compatibility.
+- `CaseQueryAdvanced.query()`, `ClaimsRegister.query()`, `DocketHistoryReport.query()`, `DocketReport.query()`, `ShowCaseDocApi.query()`, `FreeOpinionReport.query()` and `AppellateDocketReport.query()` parameters are annotated.
+- Upgrade Pyrefly to v1.4.0
+- `SCOTUSDocketReport*` return values are structured; failure cases yield a `dict[Never, Never]`.
+
+Fixes:
+-
+
+## 4.0.3 - 2026-11-13
+
+Features:
+- Add `nev_u` and `nevapp_u` scrapers for unpublished dispositions of the
+  Nevada Supreme Court and Court of Appeals #2011
+- Add the Arkansas Attorney General opinions scraper (`arkag`) with publication-date interval backscraping and signer extraction. #2353
 - Add backscrapers to `mspb_p` and `mspb_u`. They read MSPB's full
   decision manifests: 16,816 precedential decisions from 1979 and 10,802
   nonprecedential decisions from 2007 (as of 2026-11-01). Manifests
@@ -25,15 +84,25 @@ Features:
   `9 M S P B  448` to `9 M.S.P.B. 448`. #2386
 
 Changes:
+- Rename the `calctapp_*` district scrapers to the CourtListener court ids
+  of their districts and divisions, e.g. `calctapp_1st` to `calctapp1d` and
+  `calctapp_4th_div1` to `calctapp4d1` #2375
+- Replace `calctapp_u` with one unpublished scraper per district and
+  division, e.g. `calctapp1d_u` and `calctapp4d1_u`, so unpublished
+  opinions go to the same court as published ones #2375
 - Add a GitHub issue template for new scraper requests #2392
 - Structure return type of `NotificationEmail.data()` and `S3NotificationEmail.data()`.
 - The return type of `OpinionSite.extract_from_text()` is given a rudimentary structure, `ExtractedMetaData`.
 - Annotate all implementations of `_parse_text()` in `pacer`.
+- Scrapers in `texas` return an empty `dict[Never, Never]` instead of an empty `dict[str, None]` in failure cases.
 
 Fixes:
 - `mspb_p` and `mspb_u` read the manifests MSPB's own listing pages load
   instead of the `_Table.json` files, which stopped updating in
   September 2026. `mspb_u` no longer builds URLs with a double slash. #2386
+- `txctapp5`, `txctapp8`, `txctapp12` and `txctapp14` get opinions from the
+  Released Orders/Opinions pages. The Document Search returns no opinions
+  for these courts. #2396
 
 ## 4.0.2 - 2026-10-29
 

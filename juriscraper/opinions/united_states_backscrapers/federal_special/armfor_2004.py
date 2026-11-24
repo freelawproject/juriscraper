@@ -18,12 +18,11 @@ class Site(OpinionSite):
         return list(self.html.xpath("//table//tr/td[1]/font/text()"))
 
     def _get_download_urls(self):
-        download_urls = []
-        for t in self.html.xpath(
-            "//table//table//tr[position() > 1]/td[2]/div/font/a[2]/@href"
-        ):
-            download_urls.append(t)
-        return download_urls
+        return list(
+            self.html.xpath(
+                "//table//table//tr[position() > 1]/td[2]/div/font/a[2]/@href"
+            )
+        )
 
     def _get_case_dates(self):
         dates = []
@@ -39,12 +38,11 @@ class Site(OpinionSite):
         return dates
 
     def _get_docket_numbers(self):
-        docket_numbers = []
-        for t in self.html.xpath(
-            "//table/tr[3]/td[2]/blockquote/table/tbody/tr/td[2]/div/font/a[1]/text()"
-        ):
-            docket_numbers.append(t)
-        return docket_numbers
+        return list(
+            self.html.xpath(
+                "//table/tr[3]/td[2]/blockquote/table/tbody/tr/td[2]/div/font/a[1]/text()"
+            )
+        )
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)

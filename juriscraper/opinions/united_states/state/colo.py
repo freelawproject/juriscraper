@@ -17,10 +17,15 @@ import re
 from datetime import date, datetime, timedelta
 from urllib.parse import urlencode
 
+import httpx
 from lxml import etree, html
 from typing_extensions import override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import (
+    MissingRequestResponseException,
+    UnexpectedRequestResponseException,
+    logger,
+)
 from juriscraper.lib.html_utils import strip_bad_html_tags_insecure
 from juriscraper.OpinionSite import ExtractedMetaData
 from juriscraper.OpinionSiteLinear import OpinionSiteLinear
@@ -110,10 +115,9 @@ class Site(OpinionSiteLinear):
         # Return first citation as main, second as parallel
         if len(citations) >= 2:
             return citations[0], citations[1]
-        elif len(citations) == 1:
+        if len(citations) == 1:
             return citations[0], ""
-        else:
-            return "", ""
+        return "", ""
 
     def update_case(self, case: dict, detail_json: dict) -> dict:
         """Update case dictionary with nested properties
@@ -173,6 +177,10 @@ class Site(OpinionSiteLinear):
                 # Full case name and docket number are only available
                 # on the detail page
                 await self._request_url_get(url)
+                if self.request["response"] is None:
+                    raise MissingRequestResponseException
+                if not isinstance(self.request["response"], httpx.Response):
+                    raise UnexpectedRequestResponseException
                 detail_json = self.request["response"].json()
 
             if (

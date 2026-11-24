@@ -14,7 +14,7 @@ class SCOTUSFollowupTest(IsolatedAsyncioTestCase):
         self.test_root = Path(TESTS_ROOT_EXAMPLES_SCOTUS) / "email"
 
     async def run_test_on_email(self, email_path: Path):
-        with open(email_path) as f:
+        with Path(email_path).open() as f:
             scotus_email_scraper = SCOTUSEmail()
             scotus_email_scraper._parse_text(f.read())
             try:

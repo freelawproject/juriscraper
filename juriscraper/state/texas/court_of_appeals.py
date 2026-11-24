@@ -1,10 +1,11 @@
 from datetime import datetime
-from typing import TypedDict
+from typing import Literal, Never, TypedDict
 
 from typing_extensions import override
 
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.state.texas.common import (
+    CourtOfAppealsID,
     CourtType,
     TexasCommonData,
     TexasCommonScraper,
@@ -23,7 +24,7 @@ class TexasAppealsCourtTransfer(TypedDict):
     the transfer.
     """
 
-    court_id: str
+    court_id: CourtOfAppealsID
     date: datetime | None
     origin_docket: str | None
 
@@ -40,6 +41,9 @@ class TexasCourtOfAppealsDocket(TexasCommonData):
     :ivar transfer_to: Details about the transfer to another court of appeals,
     if available.
     """
+
+    court_id: CourtOfAppealsID
+    court_type: Literal[CourtType.APPELLATE]
 
     publication_service: str | None
     transfer_from: TexasAppealsCourtTransfer | None
@@ -62,7 +66,7 @@ class TexasCourtOfAppealsScraper(
 
     @override
     @property
-    def data(self) -> TexasCourtOfAppealsDocket | dict[str, None]:
+    def data(self) -> TexasCourtOfAppealsDocket | dict[Never, Never]:
         """
         Extract parsed data from a docket page.
 
@@ -83,8 +87,8 @@ class TexasCourtOfAppealsScraper(
         transfer_from, transfer_to = self._parse_transfers()
 
         return TexasCourtOfAppealsDocket(
-            court_id=coa_name_to_court_id(court_name).value,
-            court_type=CourtType.APPELLATE.value,
+            court_id=coa_name_to_court_id(court_name),
+            court_type=CourtType.APPELLATE,
             case_events=common_data["case_events"],
             appellate_briefs=common_data["appellate_briefs"],
             docket_number=common_data["docket_number"],
@@ -127,7 +131,7 @@ class TexasCourtOfAppealsScraper(
 
         if transfer_from_court:
             transfer_from = TexasAppealsCourtTransfer(
-                court_id=coa_name_to_court_id(transfer_from_court).value,
+                court_id=coa_name_to_court_id(transfer_from_court),
                 date=datetime.strptime(transfer_from_date, "%m/%d/%Y")
                 if transfer_from_date
                 else None,
@@ -135,7 +139,7 @@ class TexasCourtOfAppealsScraper(
             )
         if transfer_to_court:
             transfer_to = TexasAppealsCourtTransfer(
-                court_id=coa_name_to_court_id(transfer_to_court).value,
+                court_id=coa_name_to_court_id(transfer_to_court),
                 date=datetime.strptime(transfer_to_date, "%m/%d/%Y")
                 if transfer_to_date
                 else None,

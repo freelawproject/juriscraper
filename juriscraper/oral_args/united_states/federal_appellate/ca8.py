@@ -31,7 +31,7 @@ class Site(OralArgumentSite):
                 self.items.append(item)
 
         # Set self.html to None so it can't be misused.
-        return None
+        return
 
     def _get_download_urls(self):
         return [item.xpath("./enclosure/@url")[0] for item in self.items]

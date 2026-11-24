@@ -35,17 +35,15 @@ class Site(OpinionSite):
         return list(self.html.xpath(f"{self.base}/td[@class='link']/a/@href"))
 
     def _get_case_dates(self):
-        dates = []
-        for date_string in self.html.xpath(
-            f"{self.base}/td[@class='publish-date']/text()"
-        ):
-            # ex: Nov-02-1995
-            dates.append(
-                date.fromtimestamp(
-                    time.mktime(time.strptime(date_string, "%b-%d-%Y"))
-                )
+        # ex: Nov-02-1995
+        return [
+            date.fromtimestamp(
+                time.mktime(time.strptime(date_string, "%b-%d-%Y"))
             )
-        return dates
+            for date_string in self.html.xpath(
+                f"{self.base}/td[@class='publish-date']/text()"
+            )
+        ]
 
     def _get_docket_numbers(self):
         return list(

@@ -9,6 +9,7 @@ History:
 
 import json
 from datetime import datetime, timedelta
+from pathlib import Path
 from urllib.parse import urljoin
 
 from typing_extensions import override
@@ -117,7 +118,8 @@ class Site(OralArgumentSiteLinear):
         self.downloader_executed = True
 
         if self.test_mode_enabled():
-            return json.load(open(self.mock_url))
+            assert self.mock_url is not None
+            return json.loads(Path(self.mock_url).read_text())
 
         sess = self.request["session"]
 
@@ -259,6 +261,7 @@ class Site(OralArgumentSiteLinear):
         self.html = await self._download()
         self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """
         Prepare a single (start, end) tuple, defaulting to __init__’s range

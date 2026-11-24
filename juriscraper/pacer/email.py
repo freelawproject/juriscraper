@@ -344,8 +344,7 @@ class NotificationEmail(BaseDocketReport, BaseReport):
         document_number = re.findall(regex, email_body)
         if document_number:
             return clean_string(document_number[0])
-        else:
-            return None
+        return None
 
     def _get_doc1_anchor(
         self, current_node: HtmlElement
@@ -813,10 +812,9 @@ class NotificationEmail(BaseDocketReport, BaseReport):
             short_description_subject = match.group(1)
 
         # Select the longer short description, either from the subject or footer
-        longer_short_description = max(
+        return max(
             short_description_subject, short_description_footer, key=len
         )
-        return longer_short_description
 
     @staticmethod
     def _parse_acms_subject(
@@ -965,13 +963,13 @@ class NotificationEmail(BaseDocketReport, BaseReport):
                 "",
             ),
         ]
-        for end_point in self.docket_numbers:
-            replacements.append(
-                (
-                    f"{re.escape(end_point)}.*$",
-                    "",
-                )
+        replacements.extend(
+            (
+                f"{re.escape(end_point)}.*$",
+                "",
             )
+            for end_point in self.docket_numbers
+        )
 
         for replacement in replacements:
             text_content = re.sub(replacement[0], replacement[1], text_content)
@@ -1082,7 +1080,7 @@ class S3NotificationEmail(NotificationEmail):
     SES emails automatically archived in S3.
     """
 
-    def _combine_lines_with_proper_spaces(self, text):
+    def _combine_lines_with_proper_spaces(self, text) -> str:
         """Re-composes S3 line breaks to have proper spacing depending on line ending character
 
         :returns: String with spacing as read normally
@@ -1108,8 +1106,7 @@ class S3NotificationEmail(NotificationEmail):
         :returns: String with proper replacements for normal HTML parsing
         """
         # Remove line ends form S3 content
-        cleaned_s3_line_ends = self._combine_lines_with_proper_spaces(text)
-        return cleaned_s3_line_ends
+        return self._combine_lines_with_proper_spaces(text)
 
     @override
     def _parse_text(self, text: str) -> None:
@@ -1134,7 +1131,7 @@ class S3NotificationEmail(NotificationEmail):
                     self.content_type = "text/html"
                     break
 
-                elif c_type == "text/plain":
+                if c_type == "text/plain":
                     body = part.get_payload(decode=True)
                     self.content_type = "text/plain"
                     break
@@ -1149,7 +1146,7 @@ class S3NotificationEmail(NotificationEmail):
                     self.content_type = "text/html"
                     break
 
-                elif c_type == "text/plain" and "attachment" not in c_dispo:
+                if c_type == "text/plain" and "attachment" not in c_dispo:
                     body = message.get_payload(decode=True)
                     self.content_type = "text/plain"
                     break
@@ -1162,6 +1159,7 @@ class S3NotificationEmail(NotificationEmail):
             email_body = body.decode("iso-8859-1")
         if self.content_type == "text/plain":
             return super()._parse_text(email_body)
-        elif self.content_type == "text/html":
+        if self.content_type == "text/html":
             html_only = self._html_from_s3_email(email_body)
             return super()._parse_text(html_only)
+        return None

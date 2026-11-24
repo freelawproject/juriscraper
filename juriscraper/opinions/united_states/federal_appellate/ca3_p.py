@@ -24,10 +24,9 @@ class Site(OpinionSite):
         for text_string in self.html.xpath("//text()"):
             if not text_string.lower().startswith("filed"):
                 continue
-            else:
-                date_string = text_string.split(" ")[1]
-                date_string = date_string.strip().strip(",")
-                dates.append(convert_date_string(date_string))
+            date_string = text_string.split(" ")[1]
+            date_string = date_string.strip().strip(",")
+            dates.append(convert_date_string(date_string))
         return dates
 
     def _get_docket_numbers(self):
@@ -35,13 +34,12 @@ class Site(OpinionSite):
         for text_string in self.html.xpath("//text()"):
             if not text_string.lower().startswith("filed"):
                 continue
-            else:
-                docket_numbers.append(text_string.split(" ")[3])
+            docket_numbers.append(text_string.split(" ")[3])
         return docket_numbers
 
     def _get_precedential_statuses(self):
         statuses = []
-        for _ in range(0, len(self.case_names)):
+        for _ in range(len(self.case_names)):
             if "recprec" in self.url:
                 statuses.append("Published")
             elif "recnonprec" in self.url:

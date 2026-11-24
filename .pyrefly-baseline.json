@@ -1,12 +1,6 @@
 {
+  "min_severity": "warn",
   "errors": [
-    {
-      "column": 30,
-      "path": "juriscraper/AbstractSite.py",
-      "name": "unknown-attribute-type",
-      "concise_description": "This expression is implicitly inferred to be `Any`. Please provide an explicit type annotation.",
-      "severity": "error"
-    },
     {
       "column": 33,
       "path": "juriscraper/AbstractSite.py",
@@ -61,13 +55,6 @@
       "path": "juriscraper/lib/auth_utils.py",
       "name": "implicit-any-type-argument",
       "concise_description": "Cannot determine the type parameter `_KT` for generic class `dict[_KT, _VT]`",
-      "severity": "error"
-    },
-    {
-      "column": 12,
-      "path": "juriscraper/lib/auth_utils.py",
-      "name": "implicit-any-type-argument",
-      "concise_description": "Cannot determine the type parameter `_VT` for generic class `dict[_KT, _VT]`",
       "severity": "error"
     },
     {
@@ -127,20 +114,6 @@
       "severity": "error"
     },
     {
-      "column": 15,
-      "path": "juriscraper/lib/exceptions.py",
-      "name": "implicit-any-type-argument",
-      "concise_description": "Cannot determine the type parameter `_VT` for generic class `dict[_KT, _VT]`",
-      "severity": "error"
-    },
-    {
-      "column": 12,
-      "path": "juriscraper/lib/html_utils.py",
-      "name": "no-any-return-implicit",
-      "concise_description": "Returning implicit Any from function declared to return \"bool\"",
-      "severity": "error"
-    },
-    {
       "column": 32,
       "path": "juriscraper/lib/html_utils.py",
       "name": "missing-attribute",
@@ -148,7 +121,7 @@
       "severity": "error"
     },
     {
-      "column": 57,
+      "column": 60,
       "path": "juriscraper/lib/microservices_utils.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `encode`",
@@ -159,20 +132,6 @@
       "path": "juriscraper/lib/microservices_utils.py",
       "name": "bad-argument-type",
       "concise_description": "Argument `str | None` is not assignable to parameter `url` with type `URL | str` in function `httpx._client.AsyncClient.get`",
-      "severity": "error"
-    },
-    {
-      "column": 26,
-      "path": "juriscraper/lib/network_utils.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `AsyncClient` has no attribute `acms_user_data`",
-      "severity": "error"
-    },
-    {
-      "column": 32,
-      "path": "juriscraper/lib/network_utils.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `AsyncClient` has no attribute `acms_user_data`",
       "severity": "error"
     },
     {
@@ -204,7 +163,7 @@
       "severity": "error"
     },
     {
-      "column": 32,
+      "column": 76,
       "path": "juriscraper/lib/string_utils.py",
       "name": "not-iterable",
       "concise_description": "Type `Exception` is not iterable",
@@ -281,10 +240,10 @@
       "severity": "error"
     },
     {
-      "column": 44,
+      "column": 28,
       "path": "juriscraper/opinions/united_states/administrative_agency/bva.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `Site` has no attribute `mock_url`",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Path` is not assignable to parameter `media_root` with type `str` in function `juriscraper.AbstractSite.AbstractSite.download_content`",
       "severity": "error"
     },
     {
@@ -295,10 +254,17 @@
       "severity": "error"
     },
     {
-      "column": 23,
-      "path": "juriscraper/opinions/united_states/administrative_agency/mspb_p.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `Site` has no attribute `mock_url`",
+      "column": 22,
+      "path": "juriscraper/opinions/united_states/administrative_agency/bva.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
+      "severity": "error"
+    },
+    {
+      "column": 20,
+      "path": "juriscraper/opinions/united_states/administrative_agency/bva.py",
+      "name": "unsupported-operation",
+      "concise_description": "`None` is not subscriptable",
       "severity": "error"
     },
     {
@@ -421,13 +387,6 @@
       "severity": "error"
     },
     {
-      "column": 33,
-      "path": "juriscraper/opinions/united_states/federal_appellate/ca7.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of type `AsyncClient | dict[Unknown, Unknown] | dict[str, str] | None` has no attribute `content`",
-      "severity": "error"
-    },
-    {
       "column": 21,
       "path": "juriscraper/opinions/united_states/federal_appellate/ca8.py",
       "name": "missing-attribute",
@@ -460,13 +419,6 @@
       "path": "juriscraper/opinions/united_states/federal_appellate/cadc.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
-      "severity": "error"
-    },
-    {
-      "column": 33,
-      "path": "juriscraper/opinions/united_states/federal_appellate/cafc.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of type `AsyncClient | dict[Unknown, Unknown] | dict[str, str] | None` has no attribute `content`",
       "severity": "error"
     },
     {
@@ -771,13 +723,6 @@
       "severity": "error"
     },
     {
-      "column": 31,
-      "path": "juriscraper/opinions/united_states/state/colo.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of type `AsyncClient | dict[Unknown, Unknown] | dict[str, str] | None` has no attribute `json`",
-      "severity": "error"
-    },
-    {
       "column": 38,
       "path": "juriscraper/opinions/united_states/state/colo.py",
       "name": "bad-argument-type",
@@ -953,13 +898,6 @@
       "severity": "error"
     },
     {
-      "column": 36,
-      "path": "juriscraper/opinions/united_states/state/la.py",
-      "name": "bad-assignment",
-      "concise_description": "`Response` is not assignable to dict key `response` with type `AsyncClient | dict[Unknown, Unknown] | dict[str, str] | None`",
-      "severity": "error"
-    },
-    {
       "column": 21,
       "path": "juriscraper/opinions/united_states/state/lactapp_1.py",
       "name": "unsupported-operation",
@@ -978,6 +916,13 @@
       "path": "juriscraper/opinions/united_states/state/lactapp_3.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 13,
+      "path": "juriscraper/opinions/united_states/state/lactapp_3.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `date_list` with type `list[tuple[Unknown]] | list[Unknown]` in function `juriscraper.lib.date_utils.unique_year_month`",
       "severity": "error"
     },
     {
@@ -1153,13 +1098,6 @@
       "path": "juriscraper/opinions/united_states/state/michctapp.py",
       "name": "unsupported-operation",
       "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "column": 20,
-      "path": "juriscraper/opinions/united_states/state/michctapp.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of type `AsyncClient | dict[Unknown, Unknown] | dict[str, str] | None` has no attribute `json`",
       "severity": "error"
     },
     {
@@ -1450,13 +1388,6 @@
       "severity": "error"
     },
     {
-      "column": 20,
-      "path": "juriscraper/opinions/united_states/state/or.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of type `AsyncClient | dict[Unknown, Unknown] | dict[str, str] | None` has no attribute `json`",
-      "severity": "error"
-    },
-    {
       "column": 24,
       "path": "juriscraper/opinions/united_states/state/pa.py",
       "name": "unsupported-operation",
@@ -1482,13 +1413,6 @@
       "path": "juriscraper/opinions/united_states/state/ri.py",
       "name": "bad-argument-type",
       "concise_description": "Argument `Unknown | None` is not assignable to parameter `doc` with type `HtmlElement | _ElementTree[HtmlElement]` in function `lxml.html._funcs.tostring`",
-      "severity": "error"
-    },
-    {
-      "column": 16,
-      "path": "juriscraper/opinions/united_states/state/ri.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of type `AsyncClient | dict[Unknown, Unknown] | dict[str, str] | None` has no attribute `json`",
       "severity": "error"
     },
     {
@@ -1758,6 +1682,13 @@
       "severity": "error"
     },
     {
+      "column": 21,
+      "path": "juriscraper/opinions/united_states/territories/guam.py",
+      "name": "not-iterable",
+      "concise_description": "Type `None` is not iterable",
+      "severity": "error"
+    },
+    {
       "column": 18,
       "path": "juriscraper/opinions/united_states/territories/nmariana.py",
       "name": "missing-attribute",
@@ -1779,10 +1710,24 @@
       "severity": "error"
     },
     {
+      "column": 58,
+      "path": "juriscraper/opinions/united_states/territories/prapp.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `date` is not assignable to parameter `datetime_obj` with type `datetime` in function `Site.format_spanish_month_year`",
+      "severity": "error"
+    },
+    {
       "column": 21,
       "path": "juriscraper/opinions/united_states/territories/prsupreme.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 38,
+      "path": "juriscraper/opinions/united_states/territories/prsupreme.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Unknown | None` is not assignable to parameter `date_string` with type `str` in function `datetime.datetime.strptime`",
       "severity": "error"
     },
     {
@@ -1842,13 +1787,6 @@
       "severity": "error"
     },
     {
-      "column": 33,
-      "path": "juriscraper/oral_args/united_states/federal_appellate/ca1.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of type `AsyncClient | dict[Unknown, Unknown] | dict[str, str] | None` has no attribute `content`",
-      "severity": "error"
-    },
-    {
       "column": 20,
       "path": "juriscraper/oral_args/united_states/federal_appellate/ca2.py",
       "name": "missing-attribute",
@@ -1905,13 +1843,6 @@
       "severity": "error"
     },
     {
-      "column": 20,
-      "path": "juriscraper/oral_args/united_states/federal_appellate/cafc.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of type `AsyncClient | dict[Unknown, Unknown] | dict[str, str] | None` has no attribute `json`",
-      "severity": "error"
-    },
-    {
       "column": 21,
       "path": "juriscraper/oral_args/united_states/federal_appellate/cafc.py",
       "name": "missing-attribute",
@@ -1940,13 +1871,6 @@
       "severity": "error"
     },
     {
-      "column": 41,
-      "path": "juriscraper/pacer/acms_attachment_page.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `Unknown | None` is not assignable to parameter `session` with type `AsyncClient` in function `juriscraper.lib.network_utils.AcmsApiClient.__init__`",
-      "severity": "error"
-    },
-    {
       "column": 15,
       "path": "juriscraper/pacer/acms_attachment_page.py",
       "name": "bad-override",
@@ -1954,66 +1878,10 @@
       "severity": "error"
     },
     {
-      "column": 16,
-      "path": "juriscraper/pacer/acms_attachment_page.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `acms_user_data`",
-      "severity": "error"
-    },
-    {
-      "column": 19,
-      "path": "juriscraper/pacer/acms_attachment_page.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `get_acms_auth_object`",
-      "severity": "error"
-    },
-    {
-      "column": 24,
-      "path": "juriscraper/pacer/acms_attachment_page.py",
-      "name": "unsupported-operation",
-      "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "column": 24,
-      "path": "juriscraper/pacer/acms_attachment_page.py",
-      "name": "unsupported-operation",
-      "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "column": 20,
-      "path": "juriscraper/pacer/acms_attachment_page.py",
-      "name": "unsupported-operation",
-      "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "column": 41,
-      "path": "juriscraper/pacer/acms_docket.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `Unknown | None` is not assignable to parameter `session` with type `AsyncClient` in function `juriscraper.lib.network_utils.AcmsApiClient.__init__`",
-      "severity": "error"
-    },
-    {
       "column": 15,
       "path": "juriscraper/pacer/acms_docket.py",
       "name": "bad-override",
       "concise_description": "Class member `ACMSDocketReport.query` overrides parent class `AppellateDocketReport` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "column": 23,
-      "path": "juriscraper/pacer/acms_docket.py",
-      "name": "unsupported-operation",
-      "concise_description": "`None` is not subscriptable",
-      "severity": "error"
-    },
-    {
-      "column": 24,
-      "path": "juriscraper/pacer/acms_docket.py",
-      "name": "unsupported-operation",
-      "concise_description": "`None` is not subscriptable",
       "severity": "error"
     },
     {
@@ -2028,13 +1896,6 @@
       "path": "juriscraper/pacer/acms_docket.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `str` has no attribute `get`",
-      "severity": "error"
-    },
-    {
-      "column": 20,
-      "path": "juriscraper/pacer/acms_docket.py",
-      "name": "unsupported-operation",
-      "concise_description": "`None` is not subscriptable",
       "severity": "error"
     },
     {
@@ -2297,13 +2158,6 @@
       "severity": "error"
     },
     {
-      "column": 21,
-      "path": "juriscraper/pacer/case_query_advanced.py",
-      "name": "bad-argument-type",
-      "concise_description": "Argument `list[str]` is not assignable to parameter `potential_docket_numbers` with type `list[_ElementUnicodeResult]` in function `juriscraper.pacer.docket_report.BaseDocketReport._parse_docket_number_strs`",
-      "severity": "error"
-    },
-    {
       "column": 15,
       "path": "juriscraper/pacer/case_query_advanced.py",
       "name": "bad-override",
@@ -2342,42 +2196,49 @@
       "column": 21,
       "path": "juriscraper/pacer/claims_activity.py",
       "name": "bad-argument-type",
-      "concise_description": "Argument `Unknown | None` is not assignable to parameter `url` with type `str` in function `ClaimsActivity.get_pacer_claim_id_from_claim_url`",
+      "concise_description": "Argument `Any | None` is not assignable to parameter `url` with type `str` in function `ClaimsActivity.get_pacer_claim_id_from_claim_url`",
       "severity": "error"
     },
     {
       "column": 21,
       "path": "juriscraper/pacer/claims_activity.py",
       "name": "bad-argument-type",
-      "concise_description": "Argument `Unknown | None` is not assignable to parameter `url` with type `str` in function `ClaimsActivity.get_claim_number_from_claim_url`",
+      "concise_description": "Argument `Any | None` is not assignable to parameter `url` with type `str` in function `ClaimsActivity.get_claim_number_from_claim_url`",
       "severity": "error"
     },
     {
       "column": 21,
       "path": "juriscraper/pacer/claims_activity.py",
       "name": "bad-argument-type",
-      "concise_description": "Argument `Unknown | None` is not assignable to parameter `url` with type `str` in function `ClaimsActivity.get_pacer_claim_id_from_claim_url`",
+      "concise_description": "Argument `Any | None` is not assignable to parameter `url` with type `str` in function `ClaimsActivity.get_pacer_claim_id_from_claim_url`",
       "severity": "error"
     },
     {
       "column": 58,
       "path": "juriscraper/pacer/claims_activity.py",
       "name": "bad-argument-type",
-      "concise_description": "Argument `Unknown | None` is not assignable to parameter `url` with type `str` in function `ClaimsActivity.get_claim_number_from_claim_url`",
+      "concise_description": "Argument `Any | None` is not assignable to parameter `url` with type `str` in function `ClaimsActivity.get_claim_number_from_claim_url`",
       "severity": "error"
     },
     {
       "column": 59,
       "path": "juriscraper/pacer/claims_activity.py",
       "name": "bad-argument-type",
-      "concise_description": "Argument `Unknown | None` is not assignable to parameter `url` with type `str` in function `ClaimsActivity.get_claim_doc_seq_from_claim_url`",
+      "concise_description": "Argument `Any | None` is not assignable to parameter `url` with type `str` in function `ClaimsActivity.get_claim_doc_seq_from_claim_url`",
+      "severity": "error"
+    },
+    {
+      "column": 32,
+      "path": "juriscraper/pacer/claims_activity.py",
+      "name": "unsupported-operation",
+      "concise_description": "Cannot set item in `dict[str, str | None]`",
       "severity": "error"
     },
     {
       "column": 16,
       "path": "juriscraper/pacer/claims_activity.py",
       "name": "bad-return",
-      "concise_description": "Returned type `dict[str, str | Any | None]` is not assignable to declared return type `dict[str, list[dict[str, str]] | str]`",
+      "concise_description": "Returned type `dict[str, str | None]` is not assignable to declared return type `dict[str, list[dict[str, str]] | str]`",
       "severity": "error"
     },
     {
@@ -2542,7 +2403,7 @@
       "severity": "error"
     },
     {
-      "column": 33,
+      "column": 16,
       "path": "juriscraper/pacer/docket_report.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -2556,11 +2417,11 @@
       "severity": "error"
     },
     {
-      "column": 41,
+      "column": 9,
       "path": "juriscraper/pacer/docket_report.py",
-      "name": "bad-assignment",
-      "concise_description": "`bool` is not assignable to attribute `_is_adversary_proceeding` with type `Never`",
-      "severity": "error"
+      "name": "attribute-assign-on-never",
+      "concise_description": "Assigning to attribute `_is_adversary_proceeding` on an object with type `Never`",
+      "severity": "warn"
     },
     {
       "column": 15,
@@ -2612,7 +2473,7 @@
       "severity": "error"
     },
     {
-      "column": 26,
+      "column": 22,
       "path": "juriscraper/pacer/docket_report.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -2878,6 +2739,13 @@
       "severity": "error"
     },
     {
+      "column": 32,
+      "path": "juriscraper/pacer/email.py",
+      "name": "unbound-name",
+      "concise_description": "`subject_split_case_name` may be uninitialized",
+      "severity": "error"
+    },
+    {
       "column": 31,
       "path": "juriscraper/pacer/email.py",
       "name": "missing-attribute",
@@ -3050,13 +2918,6 @@
       "path": "juriscraper/pacer/hidden_api.py",
       "name": "bad-override",
       "concise_description": "Class member `AcmsCaseSearch.query` overrides parent class `BaseReport` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "juriscraper/pacer/hidden_api.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `json`",
       "severity": "error"
     },
     {
@@ -3256,24 +3117,24 @@
       "severity": "error"
     },
     {
-      "column": 37,
-      "path": "juriscraper/scotus/scotus_docket_report.py",
+      "column": 20,
+      "path": "juriscraper/scotus/_scotus_docket_report_parsing.py",
+      "name": "missing-attribute",
+      "concise_description": "Object of class `QName` has no attribute `lower`",
+      "severity": "error"
+    },
+    {
+      "column": 33,
+      "path": "juriscraper/scotus/_scotus_docket_report_parsing.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `groups`",
       "severity": "error"
     },
     {
-      "column": 35,
-      "path": "juriscraper/scotus/scotus_docket_report.py",
+      "column": 31,
+      "path": "juriscraper/scotus/_scotus_docket_report_parsing.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `groups`",
-      "severity": "error"
-    },
-    {
-      "column": 9,
-      "path": "juriscraper/scotus/scotus_docket_report_htm.py",
-      "name": "bad-override",
-      "concise_description": "Class member `SCOTUSDocketReportHTM._build_docket_entry` overrides parent class `SCOTUSDocketReportHTML` in an inconsistent manner",
       "severity": "error"
     },
     {
@@ -3291,16 +3152,37 @@
       "severity": "error"
     },
     {
+      "column": 43,
+      "path": "juriscraper/state/florida/cases.py",
+      "name": "unknown-variable-type",
+      "concise_description": "The type of `e` is unknown; it is inferred as an implicit `Any`",
+      "severity": "error"
+    },
+    {
+      "column": 43,
+      "path": "juriscraper/state/florida/cases.py",
+      "name": "unknown-variable-type",
+      "concise_description": "The type of `e` is unknown; it is inferred as an implicit `Any`",
+      "severity": "error"
+    },
+    {
+      "column": 19,
+      "path": "juriscraper/state/florida/cases.py",
+      "name": "bad-specialization",
+      "concise_description": "`FloridaDocketEntry` is not assignable to upper bound `DocketEntry[Document]` of type variable `_DocketDocketEntry`",
+      "severity": "error"
+    },
+    {
       "column": 5,
       "path": "juriscraper/state/texas/supreme_court.py",
-      "name": "bad-override-mutable-attribute",
+      "name": "bad-override",
       "concise_description": "Class member `TexasSupremeCourtDocket.case_events` overrides parent class `TexasCommonData` in an inconsistent manner",
       "severity": "error"
     },
     {
       "column": 5,
       "path": "juriscraper/state/texas/supreme_court.py",
-      "name": "bad-override-mutable-attribute",
+      "name": "bad-override",
       "concise_description": "Class member `TexasSupremeCourtDocket.appellate_briefs` overrides parent class `TexasCommonData` in an inconsistent manner",
       "severity": "error"
     },

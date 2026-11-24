@@ -78,12 +78,10 @@ class Site(OpinionSite):
         return dates
 
     def _get_docket_numbers(self):
-        docket_numbers = []
-        for e in self.html.xpath(f"{self.base}/td[4][../td/a]"):
-            docket_numbers.append(
-                html.tostring(e, method="text", encoding="unicode").strip()
-            )
-        return docket_numbers
+        return [
+            html.tostring(e, method="text", encoding="unicode").strip()
+            for e in self.html.xpath(f"{self.base}/td[4][../td/a]")
+        ]
 
     def _get_judges(self):
         judges = []

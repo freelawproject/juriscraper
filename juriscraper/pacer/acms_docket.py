@@ -1,4 +1,5 @@
 import json
+import pathlib
 import pprint
 import re
 import sys
@@ -23,7 +24,9 @@ class ACMSDocketReport(AppellateDocketReport):
     def __init__(self, court_id: str, pacer_session=None):
         super().__init__(court_id, pacer_session)
         self._acms_json: dict | None = None
-        self.api_client = AcmsApiClient(pacer_session, court_id)
+        self.api_client: AcmsApiClient | None = None
+        if pacer_session is not None:
+            self.api_client = AcmsApiClient(pacer_session, court_id)
 
     @override
     def _parse_text(self, text: str) -> None:
@@ -44,9 +47,9 @@ class ACMSDocketReport(AppellateDocketReport):
 
         :param case_id: The unique identifier of the case to query.
         """
-        assert self.session is not None, (
-            "session attribute of AppellateDocketReport cannot be None."
-        )
+        if self.api_client is None:
+            raise AssertionError("session attribute cannot be None.")
+
         # Fetch Case Details
         case_data = await self.api_client.get_case_details(case_id)
 
@@ -58,6 +61,68 @@ class ACMSDocketReport(AppellateDocketReport):
             "caseDetails": case_data,
             "docketInfo": entry_details,
         }
+        self.is_valid = True
+
+    @staticmethod
+    def _find_case(cases: list[dict], docket_number: str) -> dict | None:
+        """Find the case whose number exactly matches ``docket_number``.
+
+        IndexContent may return multiple cases matching the identifier,
+        including related cases or near-matches.
+
+        :param cases: The ``caseDetails`` list from the view model.
+        :param docket_number: The requested docket number.
+        :return: The matching case, or None if no exact match is found.
+        """
+        requested_number = docket_number.strip()
+
+        for case in cases:
+            case_number = str(case.get("caseNumber") or "").strip()
+            if case_number == requested_number:
+                return case
+
+        return None
+
+    async def query_by_docket_number(self, docket_number: str) -> None:
+        """Look a case up by its docket number and load its docket.
+
+        This is the entry point when only the docket number is known. It
+        reads the IndexContent page, which also supplies the API token the
+        other requests need, so no call to the API has to precede it. Docket
+        entries are taken from the page when it includes them and fetched
+        from the API otherwise.
+
+        ``data`` is empty when none of the cases ACMS lists for the number
+        carries it exactly.
+
+        :param docket_number: The appellate docket number, e.g. ``26-7519``.
+        """
+        if self.api_client is None:
+            raise AssertionError("session attribute cannot be None.")
+
+        view_model = await self.api_client.get_index_content(docket_number)
+        cases = view_model.get("caseDetails") or []
+        case_details = self._find_case(cases, docket_number)
+        if case_details is None:
+            logger.info(
+                "No ACMS case found for %s %s", self.court_id, docket_number
+            )
+            self._acms_json = None
+            self.is_valid = False
+            return
+
+        # Entries embedded in the page can only be trusted to belong to the
+        # matched case when it is the only one listed.
+        docket_info = view_model.get("docketInfo")
+        if docket_info is None or len(cases) > 1:
+            docket_info = await self.api_client.get_docket_entries(
+                case_details["caseId"]
+            )
+        self._acms_json = {
+            "caseDetails": case_details,
+            "docketInfo": docket_info,
+        }
+        self.is_valid = True
 
     async def download_pdf(
         self, entry_id: str, doc_id: str
@@ -79,6 +144,9 @@ class ACMSDocketReport(AppellateDocketReport):
                 - An error message string if an issue occurred, otherwise an
                  empty string.
         """
+        if self.api_client is None:
+            raise AssertionError("session attribute cannot be None.")
+
         # Fetch all documents for given entry
         attachment_list = await self.api_client.get_attachments(
             entry_id, False, False
@@ -121,6 +189,8 @@ class ACMSDocketReport(AppellateDocketReport):
 
         That function then supplements it with parties and docket entries.
         """
+        if self._acms_json is None:
+            raise AssertionError("_acms_json is absent.")
 
         caseDetails = self._acms_json["caseDetails"]
 
@@ -336,6 +406,8 @@ class ACMSDocketReport(AppellateDocketReport):
         # Within that, the first <td> is the party name.
         # The second <td> is the atty list.
         # Within the atty list, there is one <div> per attorney.
+        if self._acms_json is None:
+            raise AssertionError("_acms_json is absent.")
 
         parties_html = self._acms_json["caseDetails"]["partyAttorneyList"]
         tree = strip_bad_html_tags_insecure(parties_html)
@@ -388,6 +460,8 @@ class ACMSDocketReport(AppellateDocketReport):
         to the HTML markup we would otherwise lose.
 
         """
+        if self._acms_json is None:
+            raise AssertionError("_acms_json is absent.")
 
         docket_entries = []
         for row in self._acms_json["docketInfo"]["docketEntries"]:
@@ -468,7 +542,7 @@ def _main():
     report = ACMSDocketReport("ca9")
     filepath = sys.argv[1]
     print(f"Parsing JSON file at {filepath}")
-    with open(filepath) as f:
+    with pathlib.Path(filepath).open() as f:
         text = f.read()
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)

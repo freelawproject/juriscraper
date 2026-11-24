@@ -71,9 +71,7 @@ class Site(OpinionSiteLinear):
         """
         # In 2012 (and perhaps elsewhere) they have a few weird urls.
         match = self.docket_document_number_regex.search(url)
-        doc_number = match.group(6) if match else url
-
-        return doc_number
+        return match.group(6) if match else url
 
     async def _download_backwards(self, year: int) -> None:
         """Build URL with year input and scrape
@@ -85,6 +83,7 @@ class Site(OpinionSiteLinear):
         self.html = await self._download()
         self._process_html()
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Checks if backscrape start and end arguments have been passed
         by caller, and parses them accordingly

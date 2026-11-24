@@ -1,6 +1,7 @@
 """Tests for TAMES search result parsing."""
 
 import base64
+import pathlib
 import re
 import unittest
 from datetime import date
@@ -217,7 +218,7 @@ class TamesBarNumberTest(unittest.IsolatedAsyncioTestCase):
         fixture_path = (
             TESTS_ROOT_EXAMPLES_STATES / "texas" / "CaseSearch.aspx.html"
         )
-        with open(fixture_path, "rb") as f:
+        with pathlib.Path(fixture_path).open("rb") as f:
             tree = html.fromstring(f.read())
 
         self.assertEqual(TAMESScraper._bar_number_value(tree), "")
@@ -235,7 +236,7 @@ class TamesSearchParseTest(unittest.TestCase):
         fixture_path = (
             TESTS_ROOT_EXAMPLES_STATES / "texas" / "CaseSearch.aspx.html"
         )
-        with open(fixture_path, "rb") as f:
+        with pathlib.Path(fixture_path).open("rb") as f:
             content = f.read()
 
         tree = html.fromstring(content)
@@ -300,7 +301,7 @@ class TamesSearchParseTest(unittest.TestCase):
         fixture_path = (
             TESTS_ROOT_EXAMPLES_STATES / "texas" / "CaseSearch.aspx.html"
         )
-        with open(fixture_path, "rb") as f:
+        with pathlib.Path(fixture_path).open("rb") as f:
             content = f.read()
 
         tree = html.fromstring(content)
@@ -319,7 +320,7 @@ class TamesSearchParseTest(unittest.TestCase):
             / "texas"
             / "CaseSearch_LastPage.aspx.html"
         )
-        with open(fixture_path, "rb") as f:
+        with pathlib.Path(fixture_path).open("rb") as f:
             content = f.read()
 
         tree = html.fromstring(content)
@@ -338,7 +339,7 @@ class TamesSearchParseTest(unittest.TestCase):
             / "texas"
             / "CaseSearch_MiddlePage.aspx.html"
         )
-        with open(fixture_path, "rb") as f:
+        with pathlib.Path(fixture_path).open("rb") as f:
             content = f.read()
 
         tree = html.fromstring(content)

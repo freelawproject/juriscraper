@@ -452,7 +452,8 @@ class Site(OpinionSiteLinear):
     def cleanup_content(content: bytes) -> bytes:
         return ny.Site.cleanup_content(content)
 
-    def make_backscrape_iterable(self, kwargs) -> None:
+    @override
+    def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Make back scrape iterable
 
         :param kwargs: the back scraping params

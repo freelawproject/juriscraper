@@ -7,7 +7,7 @@ from datetime import datetime
 from email.message import Message
 from enum import Enum
 from pathlib import Path
-from typing import Any, Literal, TypedDict
+from typing import Literal, Never, TypedDict
 from urllib.parse import ParseResult, parse_qs, urlparse
 
 import httpx
@@ -22,7 +22,9 @@ from juriscraper.lib.string_utils import (
     harmonize,
     normalize_dashes,
 )
-from juriscraper.scotus import SCOTUSDocketReportHTML
+
+from .scotus_docket_report_base import Docket
+from .scotus_docket_report_html import SCOTUSDocketReportHTML
 
 logger = make_default_logger()
 
@@ -80,7 +82,7 @@ class SCOTUSDocketEntryEmailHandlingResult(TypedDict):
     """
 
     email_type: Literal["docket_entry"]
-    data: dict[str, Any]
+    data: Docket | dict[Never, Never]
 
 
 class SCOTUSConfirmationEmailHandlingResult(TypedDict):
@@ -314,7 +316,7 @@ class SCOTUSEmail:
 
         if self.DOCKET_ENTRY_SUBJECT_REGEX.match(subject) is not None:
             return SCOTUSEmailType.DOCKET_ENTRY
-        elif self.CONFIRMATION_SUBJECT_REGEX.match(subject) is not None:
+        if self.CONFIRMATION_SUBJECT_REGEX.match(subject) is not None:
             return SCOTUSEmailType.CONFIRMATION
         logger.error(
             "Email subject did not match known patterns. Subject: %s", subject
@@ -500,7 +502,7 @@ def _main():
     report = SCOTUSEmail()
     filepath = sys.argv[1]
     print(f"Parsing email file at {filepath}")
-    with open(filepath, encoding="utf-8") as f:
+    with Path(filepath).open(encoding="utf-8") as f:
         text = f.read()
 
     report._parse_text(text)

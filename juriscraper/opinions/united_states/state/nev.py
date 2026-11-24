@@ -254,15 +254,18 @@ class Site(OpinionSiteLinear):
             ):
                 return name
 
-        # Catch updates
-        logger.error(
-            "%s: judge initials not mapped to full name %s on %s",
-            self.court_id,
-            initials,
-            date_filed,
-        )
+        # Historical panels may predate the mapping. Keep reporting missing
+        # judges in regular scrapes so current roster changes are noticed.
+        if self.start_date is None:
+            logger.error(
+                "%s: judge initials not mapped to full name %s on %s",
+                self.court_id,
+                initials,
+                date_filed,
+            )
         return ""
 
+    @override
     def make_backscrape_iterable(self, kwargs: dict) -> None:
         """Collapse the default per-interval windows into a single range
 

@@ -2,8 +2,11 @@
 which is free.
 """
 
+import pathlib
 import pprint
 import sys
+from datetime import date
+from typing import Literal, assert_never
 
 from typing_extensions import override
 
@@ -49,12 +52,15 @@ class FreeOpinionReport(BaseReport):
     def url(self):
         if self.court_id == "ohnd":
             return "https://ecf.ohnd.uscourts.gov/cgi-bin/OHND_WrtOpRpt.pl"
-        else:
-            return (
-                f"https://ecf.{self.court_id}.uscourts.gov/cgi-bin/WrtOpRpt.pl"
-            )
+        return f"https://ecf.{self.court_id}.uscourts.gov/cgi-bin/WrtOpRpt.pl"
 
-    async def query(self, start, end, sort="date_filed", day_span=7):
+    async def query(
+        self,
+        start: date,
+        end: date,
+        sort: Literal["date_filed", "case_number"] = "date_filed",
+        day_span: int = 7,
+    ):
         """Query the Free Opinions report one day at a time.
 
         :param start: a date object representing the date you want to start at.
@@ -169,7 +175,7 @@ class FreeOpinionReport(BaseReport):
         )
 
     @property
-    def reported_opinion_count(self):
+    def reported_opinion_count(self) -> int:
         """Total opinions PACER reported across all queried pages for this scrape.
 
         This is PACER's own count, independent of how many rows we successfully
@@ -203,16 +209,20 @@ class FreeOpinionReport(BaseReport):
         )
         return results
 
-    def _normalize_sort_param(self, sort):
-        if sort == "date_filed":
-            return "de_date_filed"
-        elif sort == "case_number":
-            return "cs_sort_case_numb"
-        else:
-            raise ValueError(
-                "Invalid sort parameter. Value must be one of: %s"
-                % ", ".join(self.VALID_SORT_PARAMS)
-            )
+    def _normalize_sort_param(
+        self, sort: Literal["date_filed", "case_number"]
+    ) -> str:
+        match sort:
+            case "date_filed":
+                return "de_date_filed"
+            case "case_number":
+                return "cs_sort_case_numb"
+            case _:
+                assert_never(sort)
+                raise ValueError(
+                    "Invalid sort parameter. Value must be one of: %s"
+                    % ", ".join(self.VALID_SORT_PARAMS)
+                )
 
 
 class FreeOpinionRow(BaseDocketReport):
@@ -290,8 +300,7 @@ class FreeOpinionRow(BaseDocketReport):
     @property
     def data(self):
         """Get all the data back from this endpoint."""
-        data = self.metadata.copy()
-        return data
+        return self.metadata.copy()
 
     def _get_column_count(self):
         return len(self.element.xpath("./td"))
@@ -314,8 +323,7 @@ class FreeOpinionRow(BaseDocketReport):
         """
         if len(self.element.xpath("./td[2]//@href")) > 0:
             return "date_filed"
-        else:
-            return "case_number"
+        return "case_number"
 
     def get_pacer_case_id_and_pacer_seq_no(self):
         """Get the pacer_case_id and pacer_seq_no values for a document.
@@ -355,7 +363,7 @@ class FreeOpinionRow(BaseDocketReport):
             href = self.element.xpath("./td[2]//@href")[0]
         return get_pacer_case_id_from_nonce_url(href), None
 
-    def get_docket_number(self):
+    def get_docket_number(self) -> str:
         try:
             if self._sort_order == "case_number":
                 cell = self.element.xpath("./td[1]//a")[0]
@@ -373,8 +381,7 @@ class FreeOpinionRow(BaseDocketReport):
             # Split on the first space, left is docket number, right
             # is case name.
             return s.split(" ", 1)[0]
-        else:
-            return s
+        return s
 
     def get_case_name(self):
         if self._sort_order == "case_number":
@@ -414,20 +421,19 @@ class FreeOpinionRow(BaseDocketReport):
         if not s.strip() and self._sort_order == "date_filed":
             # Empty cell, return the previous value.
             return self.last_good_row["date_filed"]
-        else:
-            return convert_date_string(s)
+        return convert_date_string(s)
 
     def get_pacer_doc_id(self):
         doc1_url = self.element.xpath("./td[3]//@href")[0]
         return get_pacer_doc_id_from_doc1_url(doc1_url)
 
-    def get_document_number(self):
+    def get_document_number(self) -> str:
         return self.element.xpath("./td[3]//text()")[0]
 
-    def get_description(self):
+    def get_description(self) -> str:
         return self.element.xpath("./td[4]")[0].text_content()
 
-    def get_nos(self):
+    def get_nos(self) -> str:
         if self._column_count == 4:
             return ""
         try:
@@ -437,7 +443,7 @@ class FreeOpinionRow(BaseDocketReport):
         except IndexError:
             return ""
 
-    def get_cause(self):
+    def get_cause(self) -> str:
         if self._column_count == 4:
             return ""
         try:
@@ -458,7 +464,7 @@ def _main():
     )  # Court ID is only needed for querying.
     filepath = sys.argv[1]
     print(f"Parsing HTML file at {filepath}")
-    with open(filepath) as f:
+    with pathlib.Path(filepath).open() as f:
         text = f.read()
     report._parse_text(text)
     pprint.pprint(report.data, indent=2)

@@ -14,9 +14,14 @@ import re
 from datetime import datetime
 from urllib.parse import urlencode
 
+import httpx
 from typing_extensions import override
 
-from juriscraper.AbstractSite import logger
+from juriscraper.AbstractSite import (
+    MissingRequestResponseException,
+    UnexpectedRequestResponseException,
+    logger,
+)
 from juriscraper.ClusterSite import ClusterSite
 from juriscraper.lib.type_utils import OpinionType
 from juriscraper.opinions.united_states.state import mich
@@ -90,6 +95,10 @@ class Site(ClusterSite, mich.Site):
 
         url = f"https://www.courts.michigan.gov/api/CaseSearch/SearchCaseSearchContent?searchQuery={docket_number}"
         await self._request_url_get(url)
+        if self.request["response"] is None:
+            raise MissingRequestResponseException
+        if not isinstance(self.request["response"], httpx.Response):
+            raise UnexpectedRequestResponseException
         response = self.request["response"].json()
         search_items = response.get("caseDetailResults", {}).get(
             "searchItems", []
@@ -101,7 +110,7 @@ class Site(ClusterSite, mich.Site):
                 extra={"search_items": search_items},
             )
             return "Placeholder name", docket_number
-        elif len(search_items) > 1:
+        if len(search_items) > 1:
             logger.error(
                 "michctapp: more than 1 from search API for docket %s "
                 % docket_number,

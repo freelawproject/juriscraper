@@ -41,6 +41,7 @@ class OralArgumentSiteLinear(OralArgumentSite):
     def _get_optional_field_by_id(self, id):
         if self.cases and id in self.cases[0]:
             return [case[id] for case in self.cases]
+        return None
 
     def _get_judges(self):
         return self._get_optional_field_by_id("judge")

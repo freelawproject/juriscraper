@@ -3,6 +3,7 @@ import hashlib
 import json
 import logging
 import os
+import pathlib
 import re
 import signal
 import sys
@@ -51,8 +52,7 @@ def force_bytes(s, encoding="utf-8", strings_only=False, errors="strict"):
     if isinstance(s, bytes):
         if encoding == "utf-8":
             return s
-        else:
-            return s.decode("utf-8", errors).encode(encoding, errors)
+        return s.decode("utf-8", errors).encode(encoding, errors)
     if isinstance(s, memoryview):
         return bytes(s)
     return str(s).encode(encoding, errors)
@@ -132,7 +132,7 @@ async def extract_doc_content(
     # inspect it your browser by going into f'file://tmp/juriscraper/{filename}.html'
     court_id = site.court_id.split(".")[-1]
     directory = "/tmp/juriscraper/"
-    os.makedirs(directory, exist_ok=True)
+    pathlib.Path(directory).mkdir(exist_ok=True, parents=True)
     # remove illegal characters
     illegal_chars = r'[\/:*?"<>|]'
     filename = re.sub(illegal_chars, "_", filename)
@@ -143,7 +143,7 @@ async def extract_doc_content(
     filepath_raw_data = (
         f"{directory}{court_id}_{filename}_downloaded.{extension}"
     )
-    with open(filepath_raw_data, "wb") as f:
+    with pathlib.Path(filepath_raw_data).open("wb") as f:
         f.write(data)
 
     logger.info(
@@ -151,7 +151,7 @@ async def extract_doc_content(
     )
 
     filepath = f"{directory}{court_id}_{filename}.html"
-    with open(filepath, "w") as f:
+    with pathlib.Path(filepath).open("w") as f:
         if extension != ".html":
             f.write(f"<pre>{extracted_content}</pre>")
         else:
@@ -305,7 +305,7 @@ async def scrape_court(
     return {"count": len(site), "exceptions": exceptions}
 
 
-def save_response(site):
+def save_response(site: AbstractSite) -> None:
     """
     Save response content and headers into /tmp/
 
@@ -317,10 +317,10 @@ def save_response(site):
     court = site.court_id.split(".")[-1]
     response = site.request["response"]
     directory = "/tmp/juriscraper/"
-    os.makedirs(directory, exist_ok=True)
+    pathlib.Path(directory).mkdir(exist_ok=True, parents=True)
 
     headers_filename = f"{directory}{court}_headers_{now_str}.json"
-    with open(headers_filename, "w") as f:
+    with pathlib.Path(headers_filename).open("w") as f:
         json.dump(dict(response.headers), f, indent=4)
     logger.debug("Saved headers to %s", headers_filename)
 
@@ -332,11 +332,11 @@ def save_response(site):
 
     if json_data:
         filename = f"{directory}{court}_content_{now_str}.json"
-        with open(filename, "w") as f:
+        with pathlib.Path(filename).open("w") as f:
             json.dump(json_data, f, indent=4)
     else:
         filename = f"{directory}{court}_content_{now_str}.html"
-        with open(filename, "w") as f:
+        with pathlib.Path(filename).open("w") as f:
             f.write(response.text)
 
     logger.info("Saved response to %s", filename)
@@ -532,10 +532,6 @@ async def main():
                 f"{package}.{module}", globals(), locals(), [module]
             )
 
-            site_kwargs = {}
-            if save_responses:
-                site_kwargs = {"save_response_fn": save_response}
-
             site_class = cast(type[AbstractSite], mod.Site)
             if backscrape:
                 async with (
@@ -548,7 +544,9 @@ async def main():
                         site_yielder(
                             initial_site.back_scrape_iterable,
                             mod,
-                            **site_kwargs,
+                            save_response_fn=save_response
+                            if save_responses
+                            else None,
                         )
                     ) as sites,
                 ):
@@ -563,7 +561,9 @@ async def main():
                             limit_per_scrape,
                         )
             else:
-                async with site_class(**site_kwargs) as site:
+                async with site_class(
+                    save_response_fn=save_response if save_responses else None,
+                ) as site:
                     await site.parse()
                     await scrape_court(
                         site,
