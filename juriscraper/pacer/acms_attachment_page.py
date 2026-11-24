@@ -33,7 +33,7 @@ class ACMSAttachmentPageDataAttachment(TypedDict):
 class ACMSAttachmentPageData(TypedDict):
     pacer_doc_id: str | None
     pacer_case_id: str | None
-    entry_number: str | None
+    entry_number: int | None
     description: str | None
     date_filed: date | None
     date_end: date | None

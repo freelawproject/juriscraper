@@ -22,6 +22,7 @@ Changes:
 
 Fixes:
 - Incorrectly applied ternary in leading to blank URL in "Possible case numbers" API
+- Correct type annotation for `ACMSAttachmentPageData.entry_number`
 
 ## 4.0.5 - 2026-11-23
 
