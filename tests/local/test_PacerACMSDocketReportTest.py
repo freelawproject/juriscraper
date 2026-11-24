@@ -128,6 +128,26 @@ class ACMSDocketReportQueryByDocketNumberTest(
         self.assertFalse(self.report.is_valid)
         self.assertEqual(self.report.data, {})
 
+    async def test_query_by_case_id_after_a_miss_reports_data(self):
+        """A miss by docket number does not poison a later lookup by id."""
+        self.index_content.return_value = {"caseDetails": []}
+        await self.report.query_by_docket_number("99-9999")
+        self.assertEqual(self.report.data, {})
+
+        self.docket_entries.return_value = self.DOCKET_INFO
+        with mock.patch.object(
+            self.report.api_client,
+            "get_case_details",
+            return_value=self.CASE_DETAILS,
+        ) as case_details:
+            await self.report.query(self.CASE_DETAILS["caseId"])
+
+        case_details.assert_awaited_once_with(self.CASE_DETAILS["caseId"])
+        self.assertTrue(self.report.is_valid)
+        self.assertEqual(
+            self.report.data["pacer_case_id"], self.CASE_DETAILS["caseId"]
+        )
+
     async def test_unknown_docket_number_gives_empty_data(self):
         """No case for the number means empty data and no further requests."""
         self.index_content.return_value = {"caseDetails": []}

@@ -61,6 +61,7 @@ class ACMSDocketReport(AppellateDocketReport):
             "caseDetails": case_data,
             "docketInfo": entry_details,
         }
+        self.is_valid = True
 
     @staticmethod
     def _find_case(cases: list[dict], docket_number: str) -> dict | None:
