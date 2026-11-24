@@ -27,6 +27,7 @@ Changes:
 
 Fixes:
 - Incorrectly applied ternary in leading to blank URL in "Possible case numbers" API
+- Correct type annotation for `ACMSAttachmentPageData.entry_number`
 - `AcmsApiClient` raises `PacerLoginException` when an API call is made
   before a token or account data is stored, instead of sending an
   anonymous request or crashing with `KeyError`. `AcmsCaseSearch` now
