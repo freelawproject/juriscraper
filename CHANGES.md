@@ -15,7 +15,7 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add `kanag` scraper for Kansas Attorney General opinions (1974 to present), with year backscraper. Closes #2401
 
 Changes:
 -

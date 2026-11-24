@@ -2212,6 +2212,41 @@ class ScraperExtractFromText(unittest.TestCase):
                 },
             )
         ],
+        "juriscraper.opinions.united_states.attorney_general.kanag": [
+            (
+                "\n \nOctober 21, 2026 \n \n \nATTORNEY GENERAL OPINION NO. 2026-12 \n \nDouglas G. Ott \n815 Union Street \nCoffeyville, Kansas 67337 \n \nRe: Schools\u2014Community Colleges\u2014Organization, Powers and Finances of \nBoards of Trustees \n \nSynopsis: K.S.A. 71-1403(d) prevents any member of the board of trustees of a \ncommunity college from being an employee of the community college. \nCited herein: K.S.A. 71-201; K.S.A. 71-1403. \n \n* * * \n \nDear Mr. Ott: \n \nSincerely, \n \n \n/s/ Kris W. Kobach \n \nKris W. Kobach \nAttorney General \n \n      /s/ Ryan J. Ott \n \nRyan J. Ott \nAssistant Solicitor General \n",
+                {
+                    "OpinionCluster": {
+                        "date_filed": "2026-10-21",
+                        "date_filed_is_approximate": False,
+                        "summary": "K.S.A. 71-1403(d) prevents any member of the board of trustees of a community college from being an employee of the community college. Cited herein: K.S.A. 71-201; K.S.A. 71-1403.",
+                        "judges": "Kris W. Kobach",
+                    }
+                },
+            ),
+            # Older format: two asterisks, upper case name, "of Kansas"
+            (
+                "January 2, 1980 \nATTORNEY GENERAL OPINION NO. 80 -1 \nGary Girard, President \nRe: \t Schools--Board of Education \nSynopsis: Absent express statutory authority a board of \neducation may not donate school funds for the \npurpose of helping a municipal govern- \nment pay for repairs. \n* * \nDear Mr. Girard: \nVery truly yours, \nROBERT T. STEPHAN \nAttorney General of Kansas \nJeffrey S. Southard \nAssistant Attorney General \n",
+                {
+                    "OpinionCluster": {
+                        "date_filed": "1980-01-02",
+                        "date_filed_is_approximate": False,
+                        "summary": "Absent express statutory authority a board of education may not donate school funds for the purpose of helping a municipal govern- ment pay for repairs.",
+                        "judges": "Robert T. Stephan",
+                    }
+                },
+            ),
+            # htm version, without "Sincerely" in the text
+            (
+                "\n\nJanuary 13, 2005\n\n\n\nATTORNEY GENERAL OPINION NO. 2005-1\n\n\n\nThe Honorable Joann Lee Freeborn\n",
+                {
+                    "OpinionCluster": {
+                        "date_filed": "2005-01-13",
+                        "date_filed_is_approximate": False,
+                    }
+                },
+            ),
+        ],
         "juriscraper.opinions.united_states.state.pa": [
             (
                 "\n                          [J-62-2024] [MO: McCaffery, J.]\n                   IN THE SUPREME COURT OF PENNSYLVANIA\n                               WESTERN DISTRICT\n\n\n IN THE INTEREST OF: S.W., A MINOR               :     No. 14 WAP 2024\n                                                 :\n                                                 :     Appeal from the Order of the\n APPEAL OF: S.W., MINOR, AND                     :     Superior Court entered March 13,\n ALLEGHENY COUNTY OFFICE OF                      :     2024, at No. 22 WDA 2023,\n CHILDREN, YOUTH AND FAMILIES                    :     Vacating and Remanding the\n                                                 :     Order of the Court of Common Pleas\n                                                 :     Allegheny County Juvenile Division\n                                                 :     entered November 8, 2022, at\n                                                 :     No. CP-02-DP-0000729-2020.\n                                                 :\n                                                 :     ARGUED: October 8, 2024\n\n\n                                CONCURRING OPINION\n\n\nJUSTICE BROBSON                                                DECIDED: APRIL 25, 2025\n       I agree with the Majority insofar as it concludes that the General Assembly’s\n",
