@@ -27,6 +27,12 @@ Changes:
 
 Fixes:
 - Incorrectly applied ternary in leading to blank URL in "Possible case numbers" API
+- `AcmsApiClient` raises `PacerLoginException` when an API call is made
+  before a token or account data is stored, instead of sending an
+  anonymous request or crashing with `KeyError`. `AcmsCaseSearch` now
+  sends its request through the new `AcmsApiClient.search_cases()`, so it
+  raises the same exception instead of an `HTTPStatusError`.
+  freelawproject/courtlistener#6680
 
 ## 4.0.5 - 2026-11-23
 
@@ -60,12 +66,7 @@ Changes:
 - `SCOTUSDocketReport*` return values are structured; failure cases yield a `dict[Never, Never]`.
 
 Fixes:
-- `AcmsApiClient` raises `PacerLoginException` when an API call is made
-  before a token or account data is stored, instead of sending an
-  anonymous request or crashing with `KeyError`. `AcmsCaseSearch` now
-  sends its request through the new `AcmsApiClient.search_cases()`, so it
-  raises the same exception instead of an `HTTPStatusError`.
-  freelawproject/courtlistener#6680
+-
 
 ## 4.0.3 - 2026-11-13
 
