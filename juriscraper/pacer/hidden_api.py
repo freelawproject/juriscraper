@@ -229,9 +229,7 @@ class ShowCaseDocApi(BaseReport):
             f"{self.url}?"
             f"{document_number},"
             f"{pacer_case_id},"
-            f"{attachment_number},,"
-            if attachment_number is not None
-            else ",,"
+            f"{attachment_number if attachment_number is not None else ''},,"
         )
         logger.info("Querying the show_doc_url endpoint with URL: %s", url)
         # we use get request because nysd court disabled all head requests
