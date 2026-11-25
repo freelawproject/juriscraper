@@ -45,6 +45,11 @@ class NevadaInitialsPanelTest(unittest.TestCase):
                 "Douglas Herndon, Patricia Lee, Ron D. Parraguirre",
             ),
             (supreme, "ORDER the motion GRANTED AND/OR DENIED. (SC)", ""),
+            (
+                supreme,
+                "ORDER AFFIRMED. DH/KP/RP. AND/OR.",
+                "Douglas Herndon, Kristina Pickering, Ron D. Parraguirre",
+            ),
         ]
         for site, description, judges in tests:
             with self.subTest(description=description):
