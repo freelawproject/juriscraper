@@ -1,7 +1,7 @@
-"""Scraper for the Vermont Environmental
+"""Scraper for Vermont Supreme Court decisions filed under the Criminal Division
 CourtID: vt
 Court Short Name: VT
-Court Contact: submit form here https://www.vermontjudiciary.org/website-feedback-form
+Court Contact: submit form here https://www.vtcourts.gov/website-feedback-form
 """
 
 from . import vt
