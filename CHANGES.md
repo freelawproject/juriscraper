@@ -34,6 +34,7 @@ Fixes:
   sends its request through the new `AcmsApiClient.search_cases()`, so it
   raises the same exception instead of an `HTTPStatusError`.
   freelawproject/courtlistener#6680
+- Fix `nytrial` docket number extraction for some PDFs. #2273
 
 ## 4.0.5 - 2026-11-23
 
