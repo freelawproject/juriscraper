@@ -34,6 +34,7 @@ Fixes:
   sends its request through the new `AcmsApiClient.search_cases()`, so it
   raises the same exception instead of an `HTTPStatusError`.
   freelawproject/courtlistener#6680
+- `nev_u`/`nevapp_u`: fill `judges` for unpublished orders that list the panel only as initials, such as `DH/KP/RP` or `COA-BB/MG/DW` #2423
 
 ## 4.0.5 - 2026-11-23
 
