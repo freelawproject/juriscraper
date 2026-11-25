@@ -1,4 +1,5 @@
 import os
+import pathlib
 import traceback
 from collections.abc import AsyncGenerator, Callable, Iterable
 from logging import getLogger
@@ -62,9 +63,7 @@ def build_module_list(court_id: str) -> list[str]:
 
 
 def get_module_by_name(name: str) -> AbstractSite | None:
-    db_root = os.path.abspath(
-        os.path.join(os.path.dirname(__file__), "..", "opinions")
-    )
+    db_root = (pathlib.Path(__file__).parent.parent / "opinions").resolve()
     for dirName, _subdirList, fileList in os.walk(db_root):
         for fname in fileList:
             if f"{name}.py" == fname:

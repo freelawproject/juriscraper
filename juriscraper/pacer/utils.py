@@ -479,8 +479,7 @@ def get_pacer_seq_no_from_doc1_url(url) -> str | None:
     match = re.search(r"de_seq_num=(\d+)", url)
     if match:
         return match.group(1)
-    else:
-        return None
+    return None
 
 
 def get_pacer_case_id_from_doc1_url(url) -> str | None:
@@ -488,8 +487,7 @@ def get_pacer_case_id_from_doc1_url(url) -> str | None:
     match = re.search(r"caseid=(\d+)", url)
     if match:
         return match.group(1)
-    else:
-        return None
+    return None
 
 
 def get_pacer_magic_num_from_doc1_url(
@@ -507,8 +505,7 @@ def get_pacer_magic_num_from_doc1_url(
         match = re.search(r"magic_num=(\d+)", url)
     if match:
         return match.group(1)
-    else:
-        return None
+    return None
 
 
 def get_pacer_magic_num_from_acms_url(
@@ -539,8 +536,7 @@ def get_pacer_doc_id_from_doc1_url(url: str) -> str:
         "Cannot get doc1 ID from show_case_doc URL"
     )
     url = url.rsplit("/", 1)[1].split("?")[0]
-    url = f"{url[:3]}0{url[4:]}"
-    return url
+    return f"{url[:3]}0{url[4:]}"
 
 
 def get_pacer_seq_no_from_doc1_anchor(anchor):
@@ -676,7 +672,7 @@ def make_doc1_url(
             f"pacer_doc_id {pacer_doc_id} prefix has court_id cadc or cavc, "
             f"correct court_id must be passed explicitly"
         )
-    elif court_id is None:
+    if court_id is None:
         court_id = doc_id_cid
     elif court_id == "cavc" and doc_id_cid == "cadc":
         pass
@@ -708,7 +704,7 @@ def make_docs1_url(
             f"pacer_doc_id {pacer_doc_id} prefix has court_id cadc or cavc, "
             f"correct court_id must be passed explicitly"
         )
-    elif court_id is None:
+    if court_id is None:
         court_id = doc_id_cid
     elif court_id == "cavc" and doc_id_cid == "cadc":
         pass

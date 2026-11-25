@@ -373,9 +373,7 @@ def _clean_court_name(name: str) -> str:
 
     name = DISTRICT_COURT_RE.sub(r"\1 district court", name)
 
-    name = name.replace("1-a", "1a")
-
-    return name
+    return name.replace("1-a", "1a")
 
 
 def _originating_court_name_to_type(name: str) -> CourtType:
@@ -649,7 +647,7 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[Never, Never]]):
         if originating_court is None:
             return None
 
-        data = TexasCommonData(
+        return TexasCommonData(
             docket_number=docket_number,
             date_filed=self._parse_date_filed(),
             case_type=self._parse_case_type(),
@@ -660,7 +658,6 @@ class TexasCommonScraper(AbstractParser[_CommonDataT | dict[Never, Never]]):
             case_name=self.case_name,
             case_name_full=self.case_name_full,
         )
-        return data
 
     @cached_property
     def docket_number(self) -> str | None:

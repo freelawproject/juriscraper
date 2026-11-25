@@ -172,9 +172,8 @@ class Site(OpinionSiteLinear):
                 "OpinionCluster": {"case_name": name},
                 "Docket": {"case_name": name, "docket_number": docket_number},
             }
-        else:
-            logger.error(
-                "mich: extract_from_text failed",
-                extra={"opinion_text": scraped_text[:1024].strip()},
-            )
-            return {}
+        logger.error(
+            "mich: extract_from_text failed",
+            extra={"opinion_text": scraped_text[:1024].strip()},
+        )
+        return {}

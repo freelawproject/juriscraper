@@ -1,9 +1,13 @@
+import json
+from typing import Any
+
 from lxml import etree
 from typing_extensions import override
 
 from juriscraper.lib.diff_tools import get_closest_match_index
 from juriscraper.lib.exceptions import ParsingException
 from juriscraper.lib.log_tools import make_default_logger
+from juriscraper.lib.network_utils import AcmsApiClient
 from juriscraper.lib.string_utils import force_unicode
 
 from .reports import BaseReport
@@ -37,7 +41,7 @@ class PossibleCaseNumberApi(BaseReport):
         )
         url = f"{self.url}?{docket_number.lower()}"
         logger.info(
-            f"Querying the possible case number endpoint at URL: {url}"
+            "Querying the possible case number endpoint at URL: %s", url
         )
         self.response = await self.session.get(url)
         self.parse()
@@ -95,7 +99,7 @@ class PossibleCaseNumberApi(BaseReport):
             raise ParsingException(
                 "Unknown XML content in PossibleCaseNumberApi result."
             )
-        elif case_count == 1:
+        if case_count == 1:
             # Only one node, all set to go.
             pass
         elif case_count > 1:
@@ -161,7 +165,9 @@ class PossibleCaseNumberApi(BaseReport):
                 if case_index is None:
                     logger.warning(
                         "Got %s candidates, but unable to find good "
-                        "match to '%s'" % (len(nodes), case_name)
+                        "match to '%s'",
+                        len(nodes),
+                        case_name,
                     )
                 else:
                     nodes = [nodes[case_index]]
@@ -182,8 +188,7 @@ class PossibleCaseNumberApi(BaseReport):
                 # and a cleaner title.
                 "title": force_unicode(node.xpath("./@title")[0]),
             }
-        else:
-            raise ParsingException("Unable to identify case.")
+        raise ParsingException("Unable to identify case.")
 
 
 class ShowCaseDocApi(BaseReport):
@@ -228,11 +233,9 @@ class ShowCaseDocApi(BaseReport):
             f"{self.url}?"
             f"{document_number},"
             f"{pacer_case_id},"
-            f"{attachment_number},,"
-            if attachment_number is not None
-            else ",,"
+            f"{attachment_number if attachment_number is not None else ''},,"
         )
-        logger.info(f"Querying the show_doc_url endpoint with URL: {url}")
+        logger.info("Querying the show_doc_url endpoint with URL: %s", url)
         # we use get request because nysd court disabled all head requests
         # and bans by IP in case head request is made
         self.response = await self.session.get(url, follow_redirects=True)
@@ -241,7 +244,6 @@ class ShowCaseDocApi(BaseReport):
     @override
     def _parse_text(self, text: str) -> None:
         """Just a stub. No parsing needed here."""
-        pass
 
     @property
     def data(self):
@@ -249,35 +251,43 @@ class ShowCaseDocApi(BaseReport):
         url = str(self.response.url)
         if "doc1" in url:
             return get_pacer_doc_id_from_doc1_url(url)
-        else:
-            raise ParsingException(
-                f"Unable to get doc1-style URL. Instead got {url}"
-            )
+        raise ParsingException(
+            f"Unable to get doc1-style URL. Instead got {url}"
+        )
 
 
 class AcmsCaseSearch(BaseReport):
-    """
-    Looks up an ACMS case by its docket number using the CaseSearch API.
+    """Look an ACMS case up by its docket number through the CaseSearch API.
+
+    The request goes through ``AcmsApiClient``, so it needs the API token
+    that ``AcmsApiClient.get_index_content`` stores on the session. It does
+    not fetch one itself.
     """
 
-    async def query(self, docket_number):
-        assert self.session is not None, (
-            "session attribute of AcmsCaseSearch cannot be None."
-        )
-        url = f"https://{self.court_id}-showdocservices.azurewebsites.us/api/CaseSearch/{docket_number}"
-        logger.info(f"Querying the CaseSearch endpoint with URL: {url}")
-        self.response = await self.session.get(
-            url, params={"exactMatch": True}
-        )
-        self.parse()
+    def __init__(self, court_id: str, pacer_session=None) -> None:
+        super().__init__(court_id, pacer_session)
+        self._acms_json: list[dict[str, Any]] | None = None
+        self.api_client: AcmsApiClient | None = None
+        if pacer_session is not None:
+            self.api_client = AcmsApiClient(pacer_session, court_id)
+
+    async def query(self, docket_number: str) -> None:
+        """Search for the case and keep the API's answer for ``data``.
+
+        :param docket_number: The appellate docket number, e.g. ``26-7519``.
+        :raises PacerLoginException: if no API token is stored for the court.
+        """
+        if self.api_client is None:
+            raise AssertionError("session attribute cannot be None.")
+        self._acms_json = await self.api_client.search_cases(docket_number)
 
     @override
     def _parse_text(self, text: str) -> None:
-        """Just a stub. No parsing needed here."""
-        pass
+        """Store the CaseSearch JSON for ``data``."""
+        self._acms_json = json.loads(text)
 
     @property
-    def data(self):
+    def data(self) -> dict[str, Any]:
         """
         Retrieves the parsed case data from the API response.
 
@@ -288,11 +298,9 @@ class AcmsCaseSearch(BaseReport):
             - 'pcx_name'
             - 'pcx_istestcase'
 
-        :return: A dictionary containing the case data, or an empty dictionary
-                 if no data is found, the response is malformed, or an error
-                 occurred.
+        :return: The first matching case, or an empty dictionary when the
+                 search matched nothing.
         """
-        case_data = self.response.json()
-        if not case_data:
+        if not self._acms_json:
             return {}
-        return case_data[0]
+        return self._acms_json[0]

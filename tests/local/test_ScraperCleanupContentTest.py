@@ -1,14 +1,13 @@
 #!/usr/bin/env python
 
-import glob
-import os
+import pathlib
 import unittest
 
 from juriscraper.lib.importer import build_module_list
 from juriscraper.lib.string_utils import CaseNameTweaker
 from juriscraper.lib.test_utils import warn_generated_compare_file
 
-FIXTURE_DIR = os.path.join("tests", "examples", "opinions", "cleanup_content")
+FIXTURE_DIR = pathlib.Path("tests", "examples", "opinions", "cleanup_content")
 COMPARE_EXTENSION = ".compare.html"
 
 
@@ -34,14 +33,14 @@ class ScraperCleanupContentTest(unittest.TestCase):
         }
         paths = sorted(
             path
-            for path in glob.glob(os.path.join(FIXTURE_DIR, "*.html"))
-            if not path.endswith(COMPARE_EXTENSION)
+            for path in FIXTURE_DIR.glob("*.html")
+            if not path.name.endswith(COMPARE_EXTENSION)
         )
         self.assertTrue(paths, f"No fixture files found in {FIXTURE_DIR}")
 
         compare_files_generated = []
         for path in paths:
-            fixture_name = os.path.basename(path).rsplit(".", 1)[0]
+            fixture_name = path.stem
             # A module name may itself contain underscores (nyappdiv_1st),
             # so match the longest module name prefixing the fixture name
             matches = [
@@ -59,16 +58,16 @@ class ScraperCleanupContentTest(unittest.TestCase):
             )
             site = mod.Site(cnt=CaseNameTweaker())
 
-            with open(path, "rb") as fixture_file:
+            with path.open("rb") as fixture_file:
                 content = fixture_file.read()
             cleaned = site.cleanup_content(content)
             if isinstance(cleaned, str):
                 cleaned = cleaned.encode()
 
-            compare_path = f"{path.rsplit('.', 1)[0]}{COMPARE_EXTENSION}"
-            if os.path.isfile(compare_path):
+            compare_path = path.with_name(f"{path.stem}{COMPARE_EXTENSION}")
+            if compare_path.is_file():
                 with (
-                    open(compare_path, "rb") as compare_file,
+                    compare_path.open("rb") as compare_file,
                     self.subTest(
                         "Testing cleanup_content fixtures",
                         fixture=path,
@@ -78,8 +77,8 @@ class ScraperCleanupContentTest(unittest.TestCase):
                     self.assertEqual(compare_file.read(), cleaned)
             else:
                 warn_generated_compare_file(compare_path)
-                compare_files_generated.append(compare_path)
-                with open(compare_path, "wb") as compare_file:
+                compare_files_generated.append(str(compare_path))
+                with compare_path.open("wb") as compare_file:
                     compare_file.write(cleaned)
 
         if compare_files_generated:

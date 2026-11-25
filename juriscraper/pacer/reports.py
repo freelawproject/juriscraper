@@ -66,8 +66,7 @@ class BaseReport:
     def url(self):
         if self.court_id == "psc":
             return f"https://dcecf.psc.uscourts.gov/{self.PATH}"
-        else:
-            return f"https://ecf.{self.court_id}.uscourts.gov/{self.PATH}"
+        return f"https://ecf.{self.court_id}.uscourts.gov/{self.PATH}"
 
     async def query(self, *args, **kwargs):
         """Query PACER and set self.response with the response."""
@@ -187,7 +186,7 @@ class BaseReport:
             data["de_seq_num"] = de_seq_num
 
         timeout = Timeout(60, read=300)
-        logger.info(f"POSTing URL: {url} with params: {data}")
+        logger.info("POSTing URL: %s with params: %r", url, data)
         r = await self.session.post(url, data=data, timeout=timeout)
         return r, url
 
@@ -380,7 +379,7 @@ class BaseReport:
         # the pdf.
         r.raise_for_status()
         if is_pdf(r):
-            logger.info(f"Got PDF binary data for case at {url}")
+            logger.info("Got PDF binary data for case at %s", url)
             return r, ""
 
         text = clean_html(r.text)
@@ -416,7 +415,7 @@ class BaseReport:
             r = await self.session.get(iframe_src)
         if is_pdf(r):
             logger.info(
-                f"Got iframed PDF data for case {url} at: {iframe_src}"
+                "Got iframed PDF data for case %s at: %s", url, iframe_src
             )
 
         return r, ""

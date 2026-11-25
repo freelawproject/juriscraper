@@ -18,7 +18,7 @@ class Site(OralArgumentSiteLinear):
         super().__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = self.base_url
-        self.back_scrape_iterable = list(range(0, 52))
+        self.back_scrape_iterable = list(range(52))
 
     @override
     def _process_html(self) -> None:

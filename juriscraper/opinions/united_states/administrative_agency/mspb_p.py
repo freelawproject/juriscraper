@@ -50,6 +50,7 @@ at ERROR level, once per row; a manifest of the wrong type raises.
 
 import asyncio
 import json
+import pathlib
 import re
 from datetime import date, datetime
 from urllib.parse import quote
@@ -119,7 +120,7 @@ class Site(OpinionSiteLinear):
             assert self.mock_url is not None
             # Example files end in .html, so the mock response isn't
             # decoded as JSON
-            with open(self.mock_url) as file:
+            with pathlib.Path(self.mock_url).open() as file:
                 self.html = json.load(file)
         self._parse_manifest(self.html, self.url)
 

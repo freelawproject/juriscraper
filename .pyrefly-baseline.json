@@ -121,7 +121,7 @@
       "severity": "error"
     },
     {
-      "column": 57,
+      "column": 60,
       "path": "juriscraper/lib/microservices_utils.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `encode`",
@@ -132,20 +132,6 @@
       "path": "juriscraper/lib/microservices_utils.py",
       "name": "bad-argument-type",
       "concise_description": "Argument `str | None` is not assignable to parameter `url` with type `URL | str` in function `httpx._client.AsyncClient.get`",
-      "severity": "error"
-    },
-    {
-      "column": 26,
-      "path": "juriscraper/lib/network_utils.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `AsyncClient` has no attribute `acms_user_data`",
-      "severity": "error"
-    },
-    {
-      "column": 32,
-      "path": "juriscraper/lib/network_utils.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `AsyncClient` has no attribute `acms_user_data`",
       "severity": "error"
     },
     {
@@ -177,7 +163,7 @@
       "severity": "error"
     },
     {
-      "column": 32,
+      "column": 76,
       "path": "juriscraper/lib/string_utils.py",
       "name": "not-iterable",
       "concise_description": "Type `Exception` is not iterable",
@@ -251,6 +237,13 @@
       "path": "juriscraper/opinions/united_states/administrative_agency/bva.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
+      "severity": "error"
+    },
+    {
+      "column": 28,
+      "path": "juriscraper/opinions/united_states/administrative_agency/bva.py",
+      "name": "bad-argument-type",
+      "concise_description": "Argument `Path` is not assignable to parameter `media_root` with type `str` in function `juriscraper.AbstractSite.AbstractSite.download_content`",
       "severity": "error"
     },
     {
@@ -1885,20 +1878,6 @@
       "severity": "error"
     },
     {
-      "column": 16,
-      "path": "juriscraper/pacer/acms_attachment_page.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `AsyncClient` has no attribute `acms_user_data`",
-      "severity": "error"
-    },
-    {
-      "column": 19,
-      "path": "juriscraper/pacer/acms_attachment_page.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `AsyncClient` has no attribute `get_acms_auth_object`",
-      "severity": "error"
-    },
-    {
       "column": 15,
       "path": "juriscraper/pacer/acms_docket.py",
       "name": "bad-override",
@@ -2424,7 +2403,7 @@
       "severity": "error"
     },
     {
-      "column": 33,
+      "column": 16,
       "path": "juriscraper/pacer/docket_report.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -2494,7 +2473,7 @@
       "severity": "error"
     },
     {
-      "column": 26,
+      "column": 22,
       "path": "juriscraper/pacer/docket_report.py",
       "name": "missing-attribute",
       "concise_description": "Object of class `NoneType` has no attribute `xpath`",
@@ -2939,13 +2918,6 @@
       "path": "juriscraper/pacer/hidden_api.py",
       "name": "bad-override",
       "concise_description": "Class member `AcmsCaseSearch.query` overrides parent class `BaseReport` in an inconsistent manner",
-      "severity": "error"
-    },
-    {
-      "column": 21,
-      "path": "juriscraper/pacer/hidden_api.py",
-      "name": "missing-attribute",
-      "concise_description": "Object of class `NoneType` has no attribute `json`",
       "severity": "error"
     },
     {

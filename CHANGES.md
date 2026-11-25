@@ -15,14 +15,26 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
--
+- Add `AcmsApiClient.get_index_content()`, which loads an ACMS case's
+  IndexContent page and keeps the API bearer token it carries, since ACMS
+  no longer returns one during login. `ACMSDocketReport.query_by_docket_number()`
+  builds on it to look a case up by docket number and load its docket,
+  taking entries from the page when present and from the API otherwise.
+  freelawproject/courtlistener#6680
 
 Changes:
 -
 
 Fixes:
+- Incorrectly applied ternary in leading to blank URL in "Possible case numbers" API
+- Correct type annotation for `ACMSAttachmentPageData.entry_number`
+- `AcmsApiClient` raises `PacerLoginException` when an API call is made
+  before a token or account data is stored, instead of sending an
+  anonymous request or crashing with `KeyError`. `AcmsCaseSearch` now
+  sends its request through the new `AcmsApiClient.search_cases()`, so it
+  raises the same exception instead of an `HTTPStatusError`.
+  freelawproject/courtlistener#6680
 - `nev_u`/`nevapp_u`: fill `judges` for unpublished orders that list the panel only as initials, such as `DH/KP/RP` or `COA-BB/MG/DW` #2423
--
 
 ## 4.0.5 - 2026-11-23
 

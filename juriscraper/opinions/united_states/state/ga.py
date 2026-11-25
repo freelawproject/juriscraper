@@ -111,5 +111,4 @@ class Site(OpinionSiteLinear):
         """
         if match := re.search(r"\d+ Ga. \d+", scraped_text[:50]):
             return {"Citation": match.group(0)}
-        else:
-            return {}
+        return {}

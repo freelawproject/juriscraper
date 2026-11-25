@@ -82,13 +82,13 @@ class Site(OralArgumentSite):
         """
         This is typically of the form ##-####
         """
-        return None
+        return
 
     def _get_judges(self):
         """
         For the name of the judge authoring the lead opinion
         """
-        return None
+        return
 
     """
       Optional method used for downloading multiple pages of a court site.

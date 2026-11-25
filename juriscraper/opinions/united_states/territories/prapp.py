@@ -54,7 +54,7 @@ class Site(OpinionSiteLinear):
             if not latest_url:
                 logger.debug(f"No opinions posted for {self.year}")
                 self.html = None
-                return
+                return None
 
             self.url = latest_url[0]
         if self.current_month not in self.url:

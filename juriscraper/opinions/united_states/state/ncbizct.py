@@ -66,8 +66,9 @@ class Site(OpinionSiteLinear):
 
                 if len(parts) > 0:
                     lower_court_parts = parts[0].strip().split(",")
-                    for court in lower_court_parts:
-                        lower_courts.append(f"{court} County Court")
+                    lower_courts.extend(
+                        f"{court} County Court" for court in lower_court_parts
+                    )
 
                 if len(parts) > 1:
                     author_str = parts[1].strip()

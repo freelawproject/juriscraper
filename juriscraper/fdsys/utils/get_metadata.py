@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import argparse
-import glob
 import json
+import pathlib
 import pprint
 
 from lxml import etree
@@ -56,38 +56,33 @@ def get_parties(tree):
     party_nodes = xpath(tree, "//m:party")
     party_nodes = get_unique_nodes(party_nodes)
 
-    parties = []
-    for party_node in party_nodes:
-        parties.append(
-            {
-                "name_first": xpath(party_node, "@m:firstName"),
-                "name_last": xpath(party_node, "@m:lastName"),
-                "name_middle": xpath(party_node, "@m:middleName"),
-                "name_suffix": xpath(party_node, "@m:generation"),
-                "role": xpath(party_node, "@m:role"),
-            }
-        )
-    return parties
+    return [
+        {
+            "name_first": xpath(party_node, "@m:firstName"),
+            "name_last": xpath(party_node, "@m:lastName"),
+            "name_middle": xpath(party_node, "@m:middleName"),
+            "name_suffix": xpath(party_node, "@m:generation"),
+            "role": xpath(party_node, "@m:role"),
+        }
+        for party_node in party_nodes
+    ]
 
 
 def get_documents(tree):
     """Get the documents from the XML into a nice object."""
     document_nodes = xpath(tree, "//m:mods/m:relatedItem")
-    documents = []
-    for document_node in document_nodes:
-        documents.append(
-            {
-                "download_url": xpath(
-                    document_node, "m:relatedItem/@xlink:href"
-                ),
-                "description": xpath(document_node, "//m:subTitle"),
-                "date_filed": xpath(document_node, "XXX"),
-            }
-        )
+    return [
+        {
+            "download_url": xpath(document_node, "m:relatedItem/@xlink:href"),
+            "description": xpath(document_node, "//m:subTitle"),
+            "date_filed": xpath(document_node, "XXX"),
+        }
+        for document_node in document_nodes
+    ]
 
 
 def print_xpath_results():
-    for f in glob.glob("../examples/*.xml"):
+    for f in pathlib.Path("../examples").glob("*.xml"):
         tree = etree.parse(f)
         rough_data = {
             "download_url": xpath(
@@ -115,7 +110,9 @@ def main():
 
 
 def get_fdsys_court_names():
-    response = glob.glob("../examples/2015_USCOURTS_sitemap.xml")
+    response = list(
+        pathlib.Path("../examples").glob("2015_USCOURTS_sitemap.xml")
+    )
     tree = etree.parse(response[0])
     # print(etree.tostring(tree, pretty_print=True))
     data = {}
@@ -131,7 +128,7 @@ def get_fdsys_court_names():
         # if pre not in data and url:
         data[pre] = url
 
-    with open("./fdsys_court_names.json", "w") as f:
+    with pathlib.Path("./fdsys_court_names.json").open("w") as f:
         json.dump(data, f)
 
 

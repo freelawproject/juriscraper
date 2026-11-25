@@ -34,7 +34,7 @@ def warn_or_crash_slow_parser(
                 f"the allowed speed of {max_duration}s. Please speed it up for "
                 "tests to pass."
             )
-        elif WARN_SLOW_SCRAPERS:
+        if WARN_SLOW_SCRAPERS:
             msg = " - WARNING: SLOW SCRAPER"
             wmsg = "WARNING: VERY SLOW SCRAPER (potential Error)"
             warnings.warn(wmsg, TooSlowWarning, stacklevel=2)

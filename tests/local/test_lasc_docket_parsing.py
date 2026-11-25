@@ -1,5 +1,4 @@
-import glob
-import os
+import pathlib
 import sys
 import time
 import unittest
@@ -17,29 +16,26 @@ class LASCParseTest(unittest.TestCase):
     def setUp(self):
         self.maxDiff = 200000
 
-    def run_parsers_on_path(self, path):
+    def run_parsers_on_path(self, directory, pattern):
         """Test all the parsers on a given local path
 
-        :param path: The path where you can find the files
+        :param directory: The directory where you can find the files
+        :param pattern: Glob pattern matching the files to parse
         """
-        file_paths = glob.glob(path)
-        file_paths.sort()
-        path_max_len = max(len(path) for path in file_paths) + 2
+        file_paths = sorted(pathlib.Path(directory).glob(pattern))
+        path_max_len = max(len(str(path)) for path in file_paths) + 2
         for i, path in enumerate(file_paths):
-            sys.stdout.write(f"{i}. Doing {path.ljust(path_max_len)}")
+            sys.stdout.write(f"{i}. Doing {str(path).ljust(path_max_len)}")
             t1 = time.time()
-            dirname, filename = os.path.split(path)
-            filename_sans_ext = filename.split(".")[0]
-            json_path = os.path.join(
-                dirname, f"{filename_sans_ext}_result.json"
-            )
+            filename_sans_ext = path.name.split(".")[0]
+            json_path = path.parent / f"{filename_sans_ext}_result.json"
 
             lasc = LASCSearch(session=None)
-            with open(path, "rb") as f:
+            with path.open("rb") as f:
                 data = json.load(f)
                 clean_data = lasc._parse_case_data(data)
 
-            if not os.path.isfile(json_path):
+            if not json_path.is_file():
                 # First time testing this docket
                 bar = "*" * 50
                 print(
@@ -48,11 +44,11 @@ class LASCParseTest(unittest.TestCase):
                     "Please test the data in this file before assuming "
                     "everything worked.\n%s\n" % (bar, json_path, bar)
                 )
-                with open(json_path, "w") as f:
+                with json_path.open("w") as f:
                     json.dump(clean_data, f, indent=2, sort_keys=True)
                     continue
 
-            with open(json_path) as f:
+            with json_path.open() as f:
                 j = json.load(f)
                 self.assertEqual(j, clean_data)
 
@@ -62,5 +58,6 @@ class LASCParseTest(unittest.TestCase):
             sys.stdout.write(f"✓ - {t2 - t1:0.1f}s\n")
 
     def test_dockets(self):
-        path = os.path.join(TESTS_ROOT_EXAMPLES_LASC, "dockets", "*CV.json")
-        self.run_parsers_on_path(path)
+        self.run_parsers_on_path(
+            TESTS_ROOT_EXAMPLES_LASC / "dockets", "*CV.json"
+        )

@@ -1,4 +1,3 @@
-import os
 import unittest
 
 from juriscraper.scotus import (
@@ -20,15 +19,15 @@ class ScotusParseDocketTest(PacerParseTestCase):
         self.maxDiff = 200000
 
     def test_parsing_scotus_json_dockets(self):
-        path_root = os.path.join(TESTS_ROOT_EXAMPLES_SCOTUS, "dockets", "json")
+        path_root = TESTS_ROOT_EXAMPLES_SCOTUS / "dockets" / "json"
         self.parse_files(path_root, "*.compare.json", SCOTUSDocketReportJSON)
 
     def test_parsing_scotus_html_dockets(self):
-        path_root = os.path.join(TESTS_ROOT_EXAMPLES_SCOTUS, "dockets", "html")
+        path_root = TESTS_ROOT_EXAMPLES_SCOTUS / "dockets" / "html"
         self.parse_files(path_root, "*.html", SCOTUSDocketReportHTML)
 
     def test_parsing_scotus_htm_dockets(self):
-        path_root = os.path.join(TESTS_ROOT_EXAMPLES_SCOTUS, "dockets", "htm")
+        path_root = TESTS_ROOT_EXAMPLES_SCOTUS / "dockets" / "htm"
         self.parse_files(path_root, "*.htm", SCOTUSDocketReportHTM)
 
 

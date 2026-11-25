@@ -115,10 +115,9 @@ class Site(OpinionSiteLinear):
         # Return first citation as main, second as parallel
         if len(citations) >= 2:
             return citations[0], citations[1]
-        elif len(citations) == 1:
+        if len(citations) == 1:
             return citations[0], ""
-        else:
-            return "", ""
+        return "", ""
 
     def update_case(self, case: dict, detail_json: dict) -> dict:
         """Update case dictionary with nested properties
