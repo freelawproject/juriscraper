@@ -32,6 +32,10 @@ Features:
   builds on it to look a case up by docket number and load its docket,
   taking entries from the page when present and from the API otherwise.
   freelawproject/courtlistener#6680
+- Add `wisag`, a scraper and backscraper for Wisconsin Attorney General
+  opinions from the Wisconsin Legislature's site, from 1995 on. Dates, the
+  Attorney General and the summary come from each opinion's HTML page.
+  #2398
 
 Changes:
 -

@@ -425,3 +425,131 @@ class ScraperSpotTest(unittest.TestCase):
             site._parse_manifest(
                 {"DOCUMENT_TYPE": "NON-PRECEDENTIAL", "data": []}, "test"
             )
+
+    def test_wisag_opinion_page(self):
+        """Dates are read from the letterhead; bad or missing dates are
+        replaced by an approximate date in the year of the opinion number"""
+        from lxml.html import fromstring
+
+        from juriscraper.opinions.united_states.attorney_general import wisag
+
+        def page(*paragraphs: str):
+            divs = "".join(
+                f'<div class="qs_Normal____" data-path="/_{i}">{text}</div>'
+                for i, text in enumerate(paragraphs)
+            )
+            return fromstring(f'<html><div id="document">{divs}</div></html>')
+
+        site = wisag.Site()
+        tests = [
+            (
+                # https://docs.legis.wisconsin.gov/misc/oag/recent/oag1_08
+                page(
+                    "J.B. VAN HOLLEN",
+                    "ATTORNEY GENERAL",
+                    "Raymond P. Taffora",
+                    "Deputy Attorney General",
+                    "February 1 4 , 2008 OAG—1—08",
+                    "Dear Mr. Fuge:",
+                    "You ask whether gifts, grants, and donations to a "
+                    "county human services department created under Wis. "
+                    "Stat. § 46.23 may be accepted.",
+                ),
+                "OAG 1-08",
+                2008,
+                ("2008-02-14", False, "J.B. Van Hollen"),
+            ),
+            (
+                # https://docs.legis.wisconsin.gov/misc/oag/recent/oag1_11
+                # is dated with the day the source rendered it
+                page(
+                    "J.B. VAN HOLLEN ATTORNEY GENERAL",
+                    "June 10, 2025 OAG—01—11",
+                    "Dear Mr. Lawrence:",
+                ),
+                "OAG 1-11",
+                2011,
+                ("2011-07-01", True, "J.B. Van Hollen"),
+            ),
+            (
+                # https://docs.legis.wisconsin.gov/misc/oag/recent/oag1_06
+                page(
+                    "PEGGY A. LAUTENSCHLAGER ATTORNEY GENERAL",
+                    "Dear Mr. Warren:",
+                    "On March 3, 2006 you were asked to respond to requests "
+                    "under the public records law.",
+                ),
+                "OAG 1-06",
+                2006,
+                ("2006-07-01", True, "Peggy A. Lautenschlager"),
+            ),
+            (
+                # https://docs.legis.wisconsin.gov/misc/oag/recent/oag4_12
+                # is empty
+                page(),
+                "OAG 4-12",
+                2012,
+                ("2012-07-01", True, ""),
+            ),
+        ]
+        for opinion_page, docket, year, expected in tests:
+            with self.subTest(docket=docket):
+                metadata = site._parse_opinion_page(opinion_page, docket, year)
+                self.assertEqual(
+                    (
+                        metadata["date"],
+                        metadata["date_filed_is_approximate"],
+                        metadata["judge"],
+                    ),
+                    expected,
+                )
+
+    def test_wisag_backscrape(self):
+        """The backscraper reads the listings that may hold the years and
+        keeps the opinions whose number is in the range"""
+        import pathlib
+
+        from lxml.html import fromstring
+
+        from juriscraper.opinions.united_states.attorney_general import wisag
+
+        examples = pathlib.Path("tests/examples/opinions/united_states")
+        listings = {
+            wisag.Site.recent_url: examples / "wisag_example.html",
+            wisag.Site.archival_url: examples / "wisag_example_2.html",
+        }
+
+        def run(start, end):
+            site = wisag.Site(backscrape_start=start, backscrape_end=end)
+            downloaded = []
+
+            async def download():
+                downloaded.append(site.url)
+                return fromstring(listings[site.url].read_bytes())
+
+            async def get_opinion_page(url):
+                return None
+
+            site._download = download
+            site._get_opinion_page = get_opinion_page
+            asyncio.run(site._download_backwards(site.back_scrape_iterable[0]))
+            return downloaded, [case["docket"] for case in site.cases]
+
+        self.assertEqual(
+            run("1999/01/01", "2000/12/31"),
+            (
+                [wisag.Site.recent_url, wisag.Site.archival_url],
+                ["OAG 4-00", "OAG 3-00", "OAG 2-00", "OAG 1-00"]
+                + [f"OAG {n}-99" for n in range(5, 0, -1)],
+            ),
+        )
+        self.assertEqual(
+            run("2020/01/01", "2020/12/31"),
+            (
+                [wisag.Site.recent_url],
+                ["OAG 4-20", "OAG 3-20", "OAG 2-20", "OAG 1-20"],
+            ),
+        )
+        downloaded, dockets = run("1995/01/01", "1995/12/31")
+        self.assertEqual(downloaded, [wisag.Site.archival_url])
+        self.assertEqual(dockets, ["OAG 2-95", "OAG 1-95"])
