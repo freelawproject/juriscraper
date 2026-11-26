@@ -15,6 +15,17 @@ Releases are also tagged in git, if that's helpful.
 The following changes are not yet released, but are code complete:
 
 Features:
+-
+
+Changes:
+-
+
+Fixes:
+-
+
+## 4.0.6 - 2026-11-26
+
+Features:
 - Add `AcmsApiClient.get_index_content()`, which loads an ACMS case's
   IndexContent page and keeps the API bearer token it carries, since ACMS
   no longer returns one during login. `ACMSDocketReport.query_by_docket_number()`
