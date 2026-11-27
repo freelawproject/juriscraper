@@ -79,7 +79,7 @@ Changes:
 - `SCOTUSDocketReport*` return values are structured; failure cases yield a `dict[Never, Never]`.
 
 Fixes:
--
+- `me` and `cavc` `extract_from_text`: leave out values that are not found instead of returning `""`, and add a test that fails on any empty value not listed as an intentional clear. #2310
 
 ## 4.0.3 - 2026-11-13
 
