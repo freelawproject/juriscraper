@@ -27,7 +27,6 @@ class PacerShowCaseDocApiTest(unittest.IsolatedAsyncioTestCase):
                 {
                     "pacer_case_id": "191424",  # English v. Trump
                     "document_number": "25",
-                    "attachment_number": "",
                 },
                 "04506336643",
             ),
@@ -36,7 +35,7 @@ class PacerShowCaseDocApiTest(unittest.IsolatedAsyncioTestCase):
                 {
                     "pacer_case_id": "191424",
                     "document_number": "24",
-                    "attachment_number": "1",
+                    "attachment_number": 1,
                 },
                 "04506336563",
             ),
